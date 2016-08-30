@@ -1,0 +1,225 @@
+{
+"issues":  [
+{
+"id":  "S2357",
+"message":  "Make \"ProtocolVersion\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\BuildProtocol.cs",
+"region":  {
+"startLine":  43,
+"startColumn":  30,
+"endLine":  43,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Language\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\BuildProtocol.cs",
+"region":  {
+"startLine":  44,
+"startColumn":  41,
+"endLine":  44,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Arguments\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\BuildProtocol.cs",
+"region":  {
+"startLine":  45,
+"startColumn":  50,
+"endLine":  45,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ArgumentId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\BuildProtocol.cs",
+"region":  {
+"startLine":  210,
+"startColumn":  40,
+"endLine":  210,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ArgumentIndex\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\BuildProtocol.cs",
+"region":  {
+"startLine":  211,
+"startColumn":  33,
+"endLine":  211,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Value\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\BuildProtocol.cs",
+"region":  {
+"startLine":  212,
+"startColumn":  36,
+"endLine":  212,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ReturnCode\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\BuildProtocol.cs",
+"region":  {
+"startLine":  376,
+"startColumn":  29,
+"endLine":  376,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Utf8Output\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\BuildProtocol.cs",
+"region":  {
+"startLine":  377,
+"startColumn":  30,
+"endLine":  377,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Output\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\BuildProtocol.cs",
+"region":  {
+"startLine":  378,
+"startColumn":  32,
+"endLine":  378,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ErrorOutput\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\BuildProtocol.cs",
+"region":  {
+"startLine":  379,
+"startColumn":  32,
+"endLine":  379,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ServerProcessId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\BuildProtocol.cs",
+"region":  {
+"startLine":  422,
+"startColumn":  29,
+"endLine":  422,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"hProcess\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\NativeMethods.cs",
+"region":  {
+"startLine":  35,
+"startColumn":  23,
+"endLine":  35,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"hThread\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\NativeMethods.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  23,
+"endLine":  36,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"dwProcessId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\NativeMethods.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  20,
+"endLine":  37,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"dwThreadId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\NativeMethods.cs",
+"region":  {
+"startLine":  38,
+"startColumn":  20,
+"endLine":  38,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"CompletionReason\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Server\\ServerShared\\Connection.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  42,
+"endLine":  16,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"KeepAlive\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Server\\ServerShared\\Connection.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  35,
+"endLine":  17,
+"endColumn":  44
+}
+}
+}
+]
+}

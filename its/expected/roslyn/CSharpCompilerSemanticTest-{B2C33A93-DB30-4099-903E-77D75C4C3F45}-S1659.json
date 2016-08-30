@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1659",
+"message":  "Declare \"completedCompilationUnits\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Diagnostics\\GetDiagnosticsTests.cs",
+"region":  {
+"startLine":  164,
+"startColumn":  50,
+"endLine":  164,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"completedCompilationUnits\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Diagnostics\\GetDiagnosticsTests.cs",
+"region":  {
+"startLine":  213,
+"startColumn":  50,
+"endLine":  213,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"lastStatement\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\FlowAnalysis\\FlowTestBase.cs",
+"region":  {
+"startLine":  119,
+"startColumn":  52,
+"endLine":  119,
+"endColumn":  65
+}
+}
+}
+]
+}

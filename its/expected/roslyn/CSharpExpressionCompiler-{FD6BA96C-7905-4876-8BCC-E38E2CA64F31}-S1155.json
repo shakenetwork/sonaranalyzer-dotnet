@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1155",
+"message":  "Use \".Any()\" to test whether this \"IEnumerable\u003cMicrosoft.CodeAnalysis.CSharp.Symbols.FieldSymbol\u003e\" is empty or not.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\CompilationContext.cs",
+"region":  {
+"startLine":  1437,
+"startColumn":  50,
+"endLine":  1437,
+"endColumn":  55
+}
+}
+}
+]
+}

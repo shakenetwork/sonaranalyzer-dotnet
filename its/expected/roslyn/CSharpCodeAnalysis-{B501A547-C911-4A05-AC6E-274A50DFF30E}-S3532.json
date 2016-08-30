@@ -1,0 +1,225 @@
+{
+"issues":  [
+{
+"id":  "S3532",
+"message":  "Remove this empty \"default\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\LocalScopeBinder.cs",
+"region":  {
+"startLine":  222,
+"startColumn":  21,
+"endLine":  224,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3532",
+"message":  "Remove this empty \"default\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\SwitchBinder.cs",
+"region":  {
+"startLine":  226,
+"startColumn":  21,
+"endLine":  228,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3532",
+"message":  "Remove this empty \"default\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Compilation\\CSharpDiagnosticFilter.cs",
+"region":  {
+"startLine":  157,
+"startColumn":  21,
+"endLine":  158,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3532",
+"message":  "Remove this empty \"default\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\FlowAnalysis\\ControlFlowPass.cs",
+"region":  {
+"startLine":  206,
+"startColumn":  21,
+"endLine":  207,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3532",
+"message":  "Remove this empty \"default\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\FlowAnalysis\\DataFlowPass.cs",
+"region":  {
+"startLine":  1235,
+"startColumn":  17,
+"endLine":  1238,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S3532",
+"message":  "Remove this empty \"default\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\FlowAnalysis\\DataFlowPass.cs",
+"region":  {
+"startLine":  1471,
+"startColumn":  17,
+"endLine":  1472,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S3532",
+"message":  "Remove this empty \"default\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\FlowAnalysis\\DataFlowPass.cs",
+"region":  {
+"startLine":  1566,
+"startColumn":  17,
+"endLine":  1568,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S3532",
+"message":  "Remove this empty \"default\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\DiagnosticsPass_ExpressionTrees.cs",
+"region":  {
+"startLine":  396,
+"startColumn":  21,
+"endLine":  398,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3532",
+"message":  "Remove this empty \"default\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\DiagnosticsPass_ExpressionTrees.cs",
+"region":  {
+"startLine":  537,
+"startColumn":  17,
+"endLine":  538,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S3532",
+"message":  "Remove this empty \"default\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_BinaryOperator.cs",
+"region":  {
+"startLine":  452,
+"startColumn":  21,
+"endLine":  453,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3532",
+"message":  "Remove this empty \"default\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_Conversion.cs",
+"region":  {
+"startLine":  328,
+"startColumn":  17,
+"endLine":  329,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S3532",
+"message":  "Remove this empty \"default\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\LanguageParser.cs",
+"region":  {
+"startLine":  1811,
+"startColumn":  25,
+"endLine":  1812,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3532",
+"message":  "Remove this empty \"default\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\LanguageParser_Patterns.cs",
+"region":  {
+"startLine":  27,
+"startColumn":  17,
+"endLine":  29,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S3532",
+"message":  "Remove this empty \"default\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\BaseTypeAnalysis.cs",
+"region":  {
+"startLine":  234,
+"startColumn":  17,
+"endLine":  237,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S3532",
+"message":  "Remove this empty \"default\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceMemberContainerSymbol.cs",
+"region":  {
+"startLine":  2259,
+"startColumn":  17,
+"endLine":  2260,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S3532",
+"message":  "Remove this empty \"default\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\LambdaUtilities.cs",
+"region":  {
+"startLine":  405,
+"startColumn":  17,
+"endLine":  406,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S3532",
+"message":  "Remove this empty \"default\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\SyntaxExtensions.cs",
+"region":  {
+"startLine":  286,
+"startColumn":  21,
+"endLine":  287,
+"endColumn":  31
+}
+}
+}
+]
+}

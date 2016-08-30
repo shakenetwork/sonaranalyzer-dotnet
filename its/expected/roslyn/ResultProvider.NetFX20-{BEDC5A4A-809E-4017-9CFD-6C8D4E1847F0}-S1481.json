@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1481",
+"message":  "Remove this unused \"inspectionContext\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\ResultProvider.cs",
+"region":  {
+"startLine":  211,
+"startColumn":  17,
+"endLine":  211,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"runtimeLmrType\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\ResultProvider.cs",
+"region":  {
+"startLine":  472,
+"startColumn":  17,
+"endLine":  472,
+"endColumn":  31
+}
+}
+}
+]
+}

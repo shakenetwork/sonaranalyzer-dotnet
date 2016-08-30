@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"documents\".",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\EditorFeatures\\Core\\Extensibility\\Interactive\\InteractiveEvaluator.cs",
+"region":  {
+"startLine":  405,
+"startColumn":  21,
+"endLine":  405,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"projectReferences\".",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\EditorFeatures\\Core\\Extensibility\\Interactive\\InteractiveEvaluator.cs",
+"region":  {
+"startLine":  406,
+"startColumn":  21,
+"endLine":  406,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"initialize\".",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\EditorFeatures\\Core\\Extensibility\\Interactive\\ResetInteractive.cs",
+"region":  {
+"startLine":  101,
+"startColumn":  59,
+"endLine":  101,
+"endColumn":  75
+}
+}
+}
+]
+}

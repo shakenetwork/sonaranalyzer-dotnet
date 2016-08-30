@@ -1,0 +1,108 @@
+{
+"issues":  [
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ArrayMembers.cs",
+"region":  {
+"startLine":  359,
+"startColumn":  25,
+"endLine":  359,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\PrivateImplementationDetails.cs",
+"region":  {
+"startLine":  316,
+"startColumn":  31,
+"endLine":  316,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CommandLine\\CommonCompiler.cs",
+"region":  {
+"startLine":  846,
+"startColumn":  82,
+"endLine":  846,
+"endColumn":  93
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalysisContextInfo.cs",
+"region":  {
+"startLine":  126,
+"startColumn":  22,
+"endLine":  126,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\Units.cs",
+"region":  {
+"startLine":  50,
+"startColumn":  32,
+"endLine":  50,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Serialization\\ConcurrentRecordingObjectBinder.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  41,
+"endLine":  37,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Serialization\\SimpleRecordingObjectBinder.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  41,
+"endLine":  37,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\GreenNode.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  74,
+"endLine":  20,
+"endColumn":  85
+}
+}
+}
+]
+}

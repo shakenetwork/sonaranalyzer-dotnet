@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"expr\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\StatementTests.vb",
+"region":  {
+"startLine":  823,
+"startColumn":  17,
+"endLine":  823,
+"endColumn":  21
+}
+}
+}
+]
+}

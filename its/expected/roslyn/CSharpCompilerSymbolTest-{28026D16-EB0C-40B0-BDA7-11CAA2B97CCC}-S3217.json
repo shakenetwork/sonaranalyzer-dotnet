@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S3217",
+"message":  "Either change the type of \"m\" to \"Symbol\" or iterate on a generic collection of type \"MethodSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\AccessorOverriddenOrHiddenMembersTests.cs",
+"region":  {
+"startLine":  844,
+"startColumn":  22,
+"endLine":  844,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S3217",
+"message":  "Either change the type of \"child\" to \"Symbol\" or iterate on a generic collection of type \"IMockSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\MockSymbolTests.cs",
+"region":  {
+"startLine":  120,
+"startColumn":  22,
+"endLine":  120,
+"endColumn":  33
+}
+}
+}
+]
+}

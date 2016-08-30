@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"VerticalRuleBrush\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Adornments\\GraphicsTag.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  42,
+"endLine":  14,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"VerticalRuleColor\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Adornments\\GraphicsTag.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  32,
+"endLine":  15,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"Definition\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\EditAndContinue\\EditAndContinueErrorTypeDefinition.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  45,
+"endLine":  20,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"DiagnosticDescriptor\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\RenameTracking\\RenameTrackingDiagnosticAnalyzer.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  44,
+"endLine":  13,
+"endColumn":  64
+}
+}
+}
+]
+}

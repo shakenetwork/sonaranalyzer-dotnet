@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S101",
+"message":  "Rename class \"ITypeSymbolExtensions\" to match camel case naming rules, consider using \"TypeSymbolExtensions\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ITypeSymbolExtensions.ExpressionSyntaxGeneratorVisitor.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  28,
+"endLine":  15,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"ITypeSymbolExtensions\" to match camel case naming rules, consider using \"TypeSymbolExtensions\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ITypeSymbolExtensions.TypeSyntaxGeneratorVisitor.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  28,
+"endLine":  14,
+"endColumn":  49
+}
+}
+}
+]
+}

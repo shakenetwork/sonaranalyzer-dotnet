@@ -1,0 +1,82 @@
+{
+"issues":  [
+{
+"id":  "S100",
+"message":  "Rename property \"MSBuildNamespace\" to match camel case naming rules, consider using \"MsBuildNamespace\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\RepoUtil\\GenerateUtil.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  36,
+"endLine":  19,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"WriteMSBuildContent\" to match camel case naming rules, consider using \"WriteMsBuildContent\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\RepoUtil\\GenerateUtil.cs",
+"region":  {
+"startLine":  47,
+"startColumn":  30,
+"endLine":  47,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"WriteMSBuildContent\" to match camel case naming rules, consider using \"WriteMsBuildContent\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\RepoUtil\\GenerateUtil.cs",
+"region":  {
+"startLine":  56,
+"startColumn":  29,
+"endLine":  56,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"GenerateMSBuildContent\" to match camel case naming rules, consider using \"GenerateMsBuildContent\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\RepoUtil\\GenerateUtil.cs",
+"region":  {
+"startLine":  65,
+"startColumn":  32,
+"endLine":  65,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"GenerateMSBuildXml\" to match camel case naming rules, consider using \"GenerateMsBuildXml\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\RepoUtil\\GenerateUtil.cs",
+"region":  {
+"startLine":  82,
+"startColumn":  35,
+"endLine":  82,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename property \"MSBuildGenerateData\" to match camel case naming rules, consider using \"MsBuildGenerateData\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\RepoUtil\\RepoConfig.cs",
+"region":  {
+"startLine":  45,
+"startColumn":  32,
+"endLine":  45,
+"endColumn":  51
+}
+}
+}
+]
+}

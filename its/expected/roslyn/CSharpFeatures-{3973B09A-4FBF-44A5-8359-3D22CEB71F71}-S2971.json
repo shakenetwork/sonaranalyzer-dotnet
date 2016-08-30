@@ -1,0 +1,108 @@
+{
+"issues":  [
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"FirstOrDefault\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeFixes\\AddImport\\CSharpAddImportCodeFixProvider.cs",
+"region":  {
+"startLine":  704,
+"startColumn":  32,
+"endLine":  704,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"FirstOrDefault\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\SyntaxUtilities.cs",
+"region":  {
+"startLine":  188,
+"startColumn":  44,
+"endLine":  188,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Any\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpMethodExtractor.Analyzer.cs",
+"region":  {
+"startLine":  124,
+"startColumn":  50,
+"endLine":  124,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Any\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionValidator.cs",
+"region":  {
+"startLine":  363,
+"startColumn":  37,
+"endLine":  363,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"FirstOrDefault\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionValidator.cs",
+"region":  {
+"startLine":  370,
+"startColumn":  73,
+"endLine":  370,
+"endColumn":  78
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"FirstOrDefault\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionValidator.cs",
+"region":  {
+"startLine":  376,
+"startColumn":  118,
+"endLine":  376,
+"endColumn":  123
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"LastOrDefault\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateMember\\GenerateConstructor\\CSharpGenerateConstructorService.cs",
+"region":  {
+"startLine":  259,
+"startColumn":  22,
+"endLine":  259,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"LastOrDefault\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateType\\CSharpGenerateTypeService.cs",
+"region":  {
+"startLine":  936,
+"startColumn":  22,
+"endLine":  936,
+"endColumn":  27
+}
+}
+}
+]
+}

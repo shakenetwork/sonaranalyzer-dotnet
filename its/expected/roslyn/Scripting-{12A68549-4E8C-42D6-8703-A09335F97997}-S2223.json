@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"s_rootLocations\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Shared\\GlobalAssemblyCacheHelpers\\GlobalAssemblyCacheLocation.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  46,
+"endLine":  26,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"AssemblyExtensions\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\Core\\Hosting\\Resolvers\\RuntimeMetadataReferenceResolver.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  48,
+"endLine":  33,
+"endColumn":  66
+}
+}
+}
+]
+}

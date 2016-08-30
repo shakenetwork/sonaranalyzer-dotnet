@@ -1,0 +1,251 @@
+{
+"issues":  [
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"i\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Binder_Invocation.cs",
+"region":  {
+"startLine":  352,
+"startColumn":  25,
+"endLine":  352,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"n\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Compilation\\MemberSemanticModel.cs",
+"region":  {
+"startLine":  1404,
+"startColumn":  25,
+"endLine":  1404,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"n\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Compilation\\MemberSemanticModel.cs",
+"region":  {
+"startLine":  1413,
+"startColumn":  33,
+"endLine":  1413,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"n\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Compilation\\MemberSemanticModel.cs",
+"region":  {
+"startLine":  1435,
+"startColumn":  29,
+"endLine":  1435,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"n\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Compilation\\MemberSemanticModel.cs",
+"region":  {
+"startLine":  1440,
+"startColumn":  25,
+"endLine":  1440,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"n\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Compilation\\MemberSemanticModel.cs",
+"region":  {
+"startLine":  1443,
+"startColumn":  25,
+"endLine":  1443,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"start\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Compiler\\DocumentationCommentCompiler.cs",
+"region":  {
+"startLine":  791,
+"startColumn":  17,
+"endLine":  791,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"start\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Compiler\\DocumentationCommentCompiler.cs",
+"region":  {
+"startLine":  802,
+"startColumn":  17,
+"endLine":  802,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"stmt\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LambdaRewriter\\ExpressionLambdaRewriter.cs",
+"region":  {
+"startLine":  143,
+"startColumn":  29,
+"endLine":  143,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"stmt\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LambdaRewriter\\ExpressionLambdaRewriter.cs",
+"region":  {
+"startLine":  148,
+"startColumn":  29,
+"endLine":  148,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"stmt\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LambdaRewriter\\ExpressionLambdaRewriter.cs",
+"region":  {
+"startLine":  151,
+"startColumn":  29,
+"endLine":  151,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"i\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_StringInterpolation.cs",
+"region":  {
+"startLine":  106,
+"startColumn":  25,
+"endLine":  106,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"i\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\Blender.cs",
+"region":  {
+"startLine":  141,
+"startColumn":  21,
+"endLine":  141,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"current\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\Directives.cs",
+"region":  {
+"startLine":  168,
+"startColumn":  29,
+"endLine":  168,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"i\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\AbstractTypeMap.cs",
+"region":  {
+"startLine":  199,
+"startColumn":  26,
+"endLine":  199,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"i\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\AbstractTypeMap.cs",
+"region":  {
+"startLine":  199,
+"startColumn":  59,
+"endLine":  199,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"j\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Attributes\\SourceAttributeData.cs",
+"region":  {
+"startLine":  240,
+"startColumn":  25,
+"endLine":  240,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"i\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\MethodSymbolExtensions.cs",
+"region":  {
+"startLine":  87,
+"startColumn":  68,
+"endLine":  87,
+"endColumn":  69
+}
+}
+},
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"j\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Retargeting\\RetargetingModuleSymbol.cs",
+"region":  {
+"startLine":  197,
+"startColumn":  21,
+"endLine":  197,
+"endColumn":  22
+}
+}
+}
+]
+}

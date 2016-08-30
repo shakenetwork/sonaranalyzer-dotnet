@@ -1,0 +1,95 @@
+{
+"issues":  [
+{
+"id":  "S2486",
+"message":  "Handle the exception or explain in a comment why it can be ignored.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\AssemblyIdentityUtils.cs",
+"region":  {
+"startLine":  40,
+"startColumn":  13,
+"endLine":  40,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2486",
+"message":  "Handle the exception or explain in a comment why it can be ignored.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\SyntaxTree\\SyntaxTreeContextInfo.cs",
+"region":  {
+"startLine":  178,
+"startColumn":  13,
+"endLine":  180,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S2486",
+"message":  "Handle the exception or explain in a comment why it can be ignored.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\SyntaxTree\\SyntaxTreeDeclarationInfo.cs",
+"region":  {
+"startLine":  71,
+"startColumn":  13,
+"endLine":  73,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S2486",
+"message":  "Handle the exception or explain in a comment why it can be ignored.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\SyntaxTree\\SyntaxTreeIdentifierInfo.cs",
+"region":  {
+"startLine":  105,
+"startColumn":  13,
+"endLine":  107,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S2486",
+"message":  "Handle the exception or explain in a comment why it can be ignored.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\Documentation\\XmlDocumentationProvider.cs",
+"region":  {
+"startLine":  60,
+"startColumn":  21,
+"endLine":  62,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2486",
+"message":  "Handle the exception or explain in a comment why it can be ignored.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\PrimaryWorkspace.cs",
+"region":  {
+"startLine":  54,
+"startColumn":  21,
+"endLine":  56,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2486",
+"message":  "Handle the exception or explain in a comment why it can be ignored.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\PrimaryWorkspace.cs",
+"region":  {
+"startLine":  89,
+"startColumn":  25,
+"endLine":  91,
+"endColumn":  26
+}
+}
+}
+]
+}

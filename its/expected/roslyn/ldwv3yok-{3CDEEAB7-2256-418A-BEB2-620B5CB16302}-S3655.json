@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S3655",
+"message":  "\"cachedTaggedSpan\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Classification\\SemanticClassificationBufferTaggerProvider.Tagger.cs",
+"region":  {
+"startLine":  135,
+"startColumn":  21,
+"endLine":  135,
+"endColumn":  43
+}
+}
+}
+]
+}

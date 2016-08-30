@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\CompilationExtensions.cs",
+"region":  {
+"startLine":  46,
+"startColumn":  29,
+"endLine":  46,
+"endColumn":  31
+}
+}
+}
+]
+}

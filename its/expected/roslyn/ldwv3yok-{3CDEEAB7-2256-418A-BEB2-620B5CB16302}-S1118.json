@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1118",
+"message":  "Add a \"private\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Extensibility\\VersionSelector.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  27,
+"endLine":  10,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\InlineRename\\Dashboard\\RenameShortcutKeys.cs",
+"region":  {
+"startLine":  7,
+"startColumn":  20,
+"endLine":  7,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Options\\ExtensionManagerOptions.cs",
+"region":  {
+"startLine":  7,
+"startColumn":  28,
+"endLine":  7,
+"endColumn":  51
+}
+}
+}
+]
+}

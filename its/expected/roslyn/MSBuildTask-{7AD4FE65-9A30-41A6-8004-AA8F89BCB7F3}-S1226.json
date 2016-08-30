@@ -1,0 +1,95 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"textWriter\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\BuildClient.cs",
+"region":  {
+"startLine":  76,
+"startColumn":  13,
+"endLine":  76,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"e\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\CompilerServerLogger.cs",
+"region":  {
+"startLine":  82,
+"startColumn":  17,
+"endLine":  82,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"e\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\CompilerServerLogger.cs",
+"region":  {
+"startLine":  86,
+"startColumn":  21,
+"endLine":  86,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"message\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\MSBuildTask\\CanonicalError.cs",
+"region":  {
+"startLine":  276,
+"startColumn":  17,
+"endLine":  276,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"pathToTool\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\MSBuildTask\\ManagedCompiler.cs",
+"region":  {
+"startLine":  414,
+"startColumn":  21,
+"endLine":  414,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"path\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\MSBuildTask\\Utilities.cs",
+"region":  {
+"startLine":  114,
+"startColumn":  17,
+"endLine":  114,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"compilerExeDirectory\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Shared\\DesktopBuildClient.cs",
+"region":  {
+"startLine":  511,
+"startColumn":  13,
+"endLine":  511,
+"endColumn":  33
+}
+}
+}
+]
+}

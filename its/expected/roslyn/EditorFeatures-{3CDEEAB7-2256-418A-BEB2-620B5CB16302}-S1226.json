@@ -1,0 +1,524 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"navigableItems\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Extensibility\\Navigation\\NavigableItemFactory.cs",
+"region":  {
+"startLine":  73,
+"startColumn":  13,
+"endLine":  73,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"symbol\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\CallHierarchy\\CallHierarchyProvider.cs",
+"region":  {
+"startLine":  44,
+"startColumn":  17,
+"endLine":  44,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"updatedSolution\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\CodeActions\\CodeActionEditHandlerService.cs",
+"region":  {
+"startLine":  213,
+"startColumn":  21,
+"endLine":  213,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"result\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\CodeFixes\\CodeFixService.cs",
+"region":  {
+"startLine":  302,
+"startColumn":  17,
+"endLine":  302,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"snapshotSpan\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Diagnostics\\DiagnosticsSuggestionTaggerProvider.cs",
+"region":  {
+"startLine":  49,
+"startColumn":  13,
+"endLine":  49,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"snapshotSpan\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Diagnostics\\DiagnosticsSuggestionTaggerProvider.cs",
+"region":  {
+"startLine":  53,
+"startColumn":  13,
+"endLine":  53,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"symbol\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\GoToDefinition\\GoToDefinitionHelpers.cs",
+"region":  {
+"startLine":  47,
+"startColumn":  17,
+"endLine":  47,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"symbol\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\GoToDefinition\\GoToDefinitionHelpers.cs",
+"region":  {
+"startLine":  53,
+"startColumn":  13,
+"endLine":  53,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"symbol\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\GoToDefinition\\GoToDefinitionHelpers.cs",
+"region":  {
+"startLine":  64,
+"startColumn":  17,
+"endLine":  64,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"optionSet\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\InlineRename\\AbstractEditorInlineRenameService.SymbolRenameInfo.cs",
+"region":  {
+"startLine":  221,
+"startColumn":  25,
+"endLine":  221,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"previewChanges\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\InlineRename\\InlineRenameSession.cs",
+"region":  {
+"startLine":  545,
+"startColumn":  13,
+"endLine":  545,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"name\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\AbstractController.cs",
+"region":  {
+"startLine":  83,
+"startColumn":  13,
+"endLine":  83,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"model\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\Controller.Session_FilterModel.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  29,
+"endLine":  42,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"model\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\Controller.Session_FilterModel.cs",
+"region":  {
+"startLine":  179,
+"startColumn":  17,
+"endLine":  179,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"model\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\Controller.Session_FilterModel.cs",
+"region":  {
+"startLine":  296,
+"startColumn":  17,
+"endLine":  296,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"position\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\FileSystem\\PathCompletionUtilities.cs",
+"region":  {
+"startLine":  96,
+"startColumn":  13,
+"endLine":  96,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"updateController\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\ModelComputation.cs",
+"region":  {
+"startLine":  156,
+"startColumn":  29,
+"endLine":  156,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"symbol\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\MetadataAsSource\\MetadataAsSourceFileService.cs",
+"region":  {
+"startLine":  86,
+"startColumn":  13,
+"endLine":  86,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"regions\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Outlining\\OutliningTaggerProvider.cs",
+"region":  {
+"startLine":  174,
+"startColumn":  17,
+"endLine":  174,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"span\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Outlining\\OutliningTaggerProvider.Tag.cs",
+"region":  {
+"startLine":  136,
+"startColumn":  21,
+"endLine":  136,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"project\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Peek\\PeekableItemFactory.cs",
+"region":  {
+"startLine":  55,
+"startColumn":  17,
+"endLine":  55,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"leftWorkspace\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Preview\\PreviewFactoryService.cs",
+"region":  {
+"startLine":  577,
+"startColumn":  21,
+"endLine":  577,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"rightWorkspace\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Preview\\PreviewFactoryService.cs",
+"region":  {
+"startLine":  583,
+"startColumn":  21,
+"endLine":  583,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"nextLineSpan\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Preview\\PreviewFactoryService.cs",
+"region":  {
+"startLine":  683,
+"startColumn":  21,
+"endLine":  683,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"references\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\ReferenceHighlighting\\AbstractDocumentHighlightsService.cs",
+"region":  {
+"startLine":  101,
+"startColumn":  13,
+"endLine":  101,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"references\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\ReferenceHighlighting\\AbstractDocumentHighlightsService.cs",
+"region":  {
+"startLine":  102,
+"startColumn":  13,
+"endLine":  102,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"references\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\ReferenceHighlighting\\AbstractDocumentHighlightsService.cs",
+"region":  {
+"startLine":  103,
+"startColumn":  13,
+"endLine":  103,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"references\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\ReferenceHighlighting\\AbstractDocumentHighlightsService.cs",
+"region":  {
+"startLine":  107,
+"startColumn":  17,
+"endLine":  107,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"position\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\TextStructureNavigation\\AbstractTextStructureNavigatorProvider.TextStructureNavigator.cs",
+"region":  {
+"startLine":  75,
+"startColumn":  21,
+"endLine":  75,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"node\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\TextStructureNavigation\\AbstractTextStructureNavigatorProvider.TextStructureNavigator.cs",
+"region":  {
+"startLine":  343,
+"startColumn":  21,
+"endLine":  343,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"defaultEncoding\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Workspaces\\EditorTextFactoryService.cs",
+"region":  {
+"startLine":  51,
+"startColumn":  21,
+"endLine":  51,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"glyph\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\DefaultImageMonikerService.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  21,
+"endLine":  18,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"contentType\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Extensions\\IProjectionBufferFactoryServiceExtensions.cs",
+"region":  {
+"startLine":  63,
+"startColumn":  13,
+"endLine":  63,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"rules\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Extensions\\ITextSnapshotExtensions.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  13,
+"endLine":  36,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"classificationFormatMap\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Extensions\\TaggedTextExtensions.cs",
+"region":  {
+"startLine":  41,
+"startColumn":  13,
+"endLine":  41,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"classificationFormatMap\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Extensions\\TaggedTextExtensions.cs",
+"region":  {
+"startLine":  65,
+"startColumn":  13,
+"endLine":  65,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"classificationFormatMap\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Extensions\\TaggedTextExtensions.cs",
+"region":  {
+"startLine":  76,
+"startColumn":  13,
+"endLine":  76,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"currentLine\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Utilities\\CommonFormattingHelpers.cs",
+"region":  {
+"startLine":  58,
+"startColumn":  21,
+"endLine":  58,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"normalizedSpans\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Tagging\\AbstractAsynchronousTaggerProvider.BatchChangeNotifier.cs",
+"region":  {
+"startLine":  214,
+"startColumn":  21,
+"endLine":  214,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"normalizedSpans\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Tagging\\AbstractAsynchronousTaggerProvider.BatchChangeNotifier.cs",
+"region":  {
+"startLine":  233,
+"startColumn":  21,
+"endLine":  233,
+"endColumn":  36
+}
+}
+}
+]
+}

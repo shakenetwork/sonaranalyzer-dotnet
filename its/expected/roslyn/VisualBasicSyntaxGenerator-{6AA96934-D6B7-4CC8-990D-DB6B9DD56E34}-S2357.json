@@ -1,0 +1,927 @@
+{
+"issues":  [
+{
+"id":  "S2357",
+"message":  "Make \"kind\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\Util\\XmlRenamer.vb",
+"region":  {
+"startLine":  167,
+"startColumn":  12,
+"endLine":  167,
+"endColumn":  16
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"typeName\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\Util\\XmlRenamer.vb",
+"region":  {
+"startLine":  168,
+"startColumn":  12,
+"endLine":  168,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"memberName\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\Util\\XmlRenamer.vb",
+"region":  {
+"startLine":  169,
+"startColumn":  12,
+"endLine":  169,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"newName\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\Util\\XmlRenamer.vb",
+"region":  {
+"startLine":  170,
+"startColumn":  12,
+"endLine":  170,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"FileName\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  17,
+"startColumn":  12,
+"endLine":  17,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NamespaceName\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  19,
+"startColumn":  12,
+"endLine":  19,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"VisitorName\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  21,
+"startColumn":  12,
+"endLine":  21,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"RewriteVisitorName\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  23,
+"startColumn":  12,
+"endLine":  23,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"FactoryClassName\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  25,
+"startColumn":  12,
+"endLine":  25,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ContextualFactoryClassName\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  27,
+"startColumn":  12,
+"endLine":  27,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NodeStructures\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  30,
+"startColumn":  12,
+"endLine":  30,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NodeKinds\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  33,
+"startColumn":  12,
+"endLine":  33,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Enumerations\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  36,
+"startColumn":  12,
+"endLine":  36,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Aliases\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  39,
+"startColumn":  12,
+"endLine":  39,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsAbstract\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  42,
+"startColumn":  12,
+"endLine":  42,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"RootStructure\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  45,
+"startColumn":  12,
+"endLine":  45,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"RootToken\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  48,
+"startColumn":  12,
+"endLine":  48,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"RootTrivia\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  48,
+"startColumn":  23,
+"endLine":  48,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Element\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  243,
+"startColumn":  12,
+"endLine":  243,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  251,
+"startColumn":  12,
+"endLine":  251,
+"endColumn":  16
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ParentStructureId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  254,
+"startColumn":  12,
+"endLine":  254,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Description\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  272,
+"startColumn":  12,
+"endLine":  272,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Abstract\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  274,
+"startColumn":  12,
+"endLine":  274,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"PartialClass\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  276,
+"startColumn":  12,
+"endLine":  276,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsPredefined\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  278,
+"startColumn":  12,
+"endLine":  278,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsRoot\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  280,
+"startColumn":  12,
+"endLine":  280,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsTokenRoot\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  282,
+"startColumn":  12,
+"endLine":  282,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsTriviaRoot\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  282,
+"startColumn":  25,
+"endLine":  282,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NoFactory\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  284,
+"startColumn":  12,
+"endLine":  284,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NodeKinds\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  286,
+"startColumn":  12,
+"endLine":  286,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Fields\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  288,
+"startColumn":  12,
+"endLine":  288,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Children\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  290,
+"startColumn":  12,
+"endLine":  290,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"HasDerivedStructure\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  292,
+"startColumn":  12,
+"endLine":  292,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"InternalSyntaxFacts\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  294,
+"startColumn":  21,
+"endLine":  294,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"HasDefaultFactory\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  296,
+"startColumn":  21,
+"endLine":  296,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsToken\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  298,
+"startColumn":  12,
+"endLine":  298,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsTrivia\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  299,
+"startColumn":  12,
+"endLine":  299,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"DefaultTrailingTrivia\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  307,
+"startColumn":  12,
+"endLine":  307,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  366,
+"startColumn":  12,
+"endLine":  366,
+"endColumn":  16
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"StructureId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  368,
+"startColumn":  12,
+"endLine":  368,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TokenText\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  370,
+"startColumn":  12,
+"endLine":  370,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NoFactory\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  372,
+"startColumn":  12,
+"endLine":  372,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Description\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  388,
+"startColumn":  12,
+"endLine":  388,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  406,
+"startColumn":  12,
+"endLine":  406,
+"endColumn":  16
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"AliasKinds\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  408,
+"startColumn":  12,
+"endLine":  408,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Description\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  410,
+"startColumn":  12,
+"endLine":  410,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  427,
+"startColumn":  21,
+"endLine":  427,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ContainingStructure\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  429,
+"startColumn":  21,
+"endLine":  429,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsOptional\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  431,
+"startColumn":  21,
+"endLine":  431,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"FieldTypeId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  433,
+"startColumn":  21,
+"endLine":  433,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Description\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  435,
+"startColumn":  21,
+"endLine":  435,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  492,
+"startColumn":  21,
+"endLine":  492,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ContainingStructure\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  494,
+"startColumn":  21,
+"endLine":  494,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsOptional\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  496,
+"startColumn":  21,
+"endLine":  496,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsList\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  498,
+"startColumn":  21,
+"endLine":  498,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsSeparated\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  500,
+"startColumn":  21,
+"endLine":  500,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SeparatorsName\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  502,
+"startColumn":  21,
+"endLine":  502,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SeparatorsTypeId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  507,
+"startColumn":  21,
+"endLine":  507,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Description\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  509,
+"startColumn":  21,
+"endLine":  509,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Order\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  511,
+"startColumn":  21,
+"endLine":  511,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NotInFactory\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  513,
+"startColumn":  21,
+"endLine":  513,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"GenerateWith\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  515,
+"startColumn":  21,
+"endLine":  515,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"InternalSyntaxFacts\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  517,
+"startColumn":  21,
+"endLine":  517,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"KindForNodeKind\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  519,
+"startColumn":  12,
+"endLine":  519,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  644,
+"startColumn":  12,
+"endLine":  644,
+"endColumn":  16
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsFlags\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  646,
+"startColumn":  12,
+"endLine":  646,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Description\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  648,
+"startColumn":  12,
+"endLine":  648,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Enumerators\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  650,
+"startColumn":  12,
+"endLine":  650,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  666,
+"startColumn":  12,
+"endLine":  666,
+"endColumn":  16
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ValueString\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  668,
+"startColumn":  12,
+"endLine":  668,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Description\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  670,
+"startColumn":  12,
+"endLine":  670,
+"endColumn":  23
+}
+}
+}
+]
+}

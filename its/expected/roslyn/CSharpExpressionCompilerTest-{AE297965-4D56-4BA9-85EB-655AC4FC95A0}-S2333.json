@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S2333",
+"message":  "\"unsafe\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Test\\ExpressionCompiler\\MissingAssemblyTests.cs",
+"region":  {
+"startLine":  370,
+"startColumn":  16,
+"endLine":  370,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"unsafe\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Test\\ExpressionCompiler\\MissingAssemblyTests.cs",
+"region":  {
+"startLine":  393,
+"startColumn":  16,
+"endLine":  393,
+"endColumn":  22
+}
+}
+}
+]
+}

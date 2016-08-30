@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1994",
+"message":  "This loop\u0027s stop condition tests \"dots\" but the incrementer updates \"i\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\MetadataHelpers.cs",
+"region":  {
+"startLine":  566,
+"startColumn":  29,
+"endLine":  566,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1994",
+"message":  "This loop\u0027s stop incrementer updates \"slot\" but the stop condition doesn\u0027t test any variables.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\ChildSyntaxList.cs",
+"region":  {
+"startLine":  187,
+"startColumn":  13,
+"endLine":  187,
+"endColumn":  16
+}
+}
+},
+{
+"id":  "S1994",
+"message":  "This loop\u0027s stop incrementer updates \"i\" but the stop condition doesn\u0027t test any variables.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\GreenNode.cs",
+"region":  {
+"startLine":  232,
+"startColumn":  13,
+"endLine":  232,
+"endColumn":  16
+}
+}
+}
+]
+}

@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\LanguageServices\\SymbolDisplayService\\AbstractSymbolDisplayService.AnonymousTypes.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  25,
+"endLine":  33,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\LanguageServices\\SymbolDisplayService\\AbstractSymbolDisplayService.AnonymousTypes.cs",
+"region":  {
+"startLine":  62,
+"startColumn":  29,
+"endLine":  62,
+"endColumn":  33
+}
+}
+}
+]
+}

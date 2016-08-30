@@ -1,0 +1,121 @@
+{
+"issues":  [
+{
+"id":  "S2259",
+"message":  "\"workspace\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\Analyzers\\NamingStyles\\NamingStyleDiagnosticAnalyzerBase.cs",
+"region":  {
+"startLine":  46,
+"startColumn":  41,
+"endLine":  46,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"optionSet\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\Analyzers\\NamingStyles\\NamingStyleDiagnosticAnalyzerBase.cs",
+"region":  {
+"startLine":  49,
+"startColumn":  32,
+"endLine":  49,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"newExceptionRegionsOpt\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  736,
+"startColumn":  21,
+"endLine":  736,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"trackingService\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  764,
+"startColumn":  17,
+"endLine":  764,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"oldNodes\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1775,
+"startColumn":  45,
+"endLine":  1775,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"parameter\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\ExtractMethod\\MethodExtractor.CodeGenerator.cs",
+"region":  {
+"startLine":  280,
+"startColumn":  25,
+"endLine":  280,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"left\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\ExtractMethod\\MethodExtractor.VariableSymbol.cs",
+"region":  {
+"startLine":  136,
+"startColumn":  21,
+"endLine":  136,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"definition\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\ReplaceMethodWithProperty\\ReplaceMethodWithPropertyCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  418,
+"startColumn":  40,
+"endLine":  418,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"definition\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\ReplacePropertyWithMethods\\ReplacePropertyWithMethodsCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  305,
+"startColumn":  40,
+"endLine":  305,
+"endColumn":  50
+}
+}
+}
+]
+}

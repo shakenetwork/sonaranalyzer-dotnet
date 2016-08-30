@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\EditorFeatures\\Core\\Completion\\CompletionProviders\\ReplCommandCompletionProvider.cs",
+"region":  {
+"startLine":  39,
+"startColumn":  25,
+"endLine":  39,
+"endColumn":  27
+}
+}
+}
+]
+}

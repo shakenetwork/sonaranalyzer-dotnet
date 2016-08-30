@@ -1,0 +1,823 @@
+{
+"issues":  [
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\BasicBlock.cs",
+"region":  {
+"startLine":  637,
+"startColumn":  13,
+"endLine":  649,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ILBuilder.cs",
+"region":  {
+"startLine":  1254,
+"startColumn":  9,
+"endLine":  1266,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\LocalOrParameter.cs",
+"region":  {
+"startLine":  29,
+"startColumn":  9,
+"endLine":  32,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\RawSequencePoint.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  9,
+"endLine":  31,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CorLightup.cs",
+"region":  {
+"startLine":  185,
+"startColumn":  17,
+"endLine":  191,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Desktop\\DesktopAssemblyIdentityComparer.Fx.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  13,
+"endLine":  43,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Desktop\\DesktopAssemblyIdentityComparer.Fx.cs",
+"region":  {
+"startLine":  106,
+"startColumn":  13,
+"endLine":  123,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Desktop\\DesktopAssemblyIdentityComparer.Fx.cs",
+"region":  {
+"startLine":  125,
+"startColumn":  13,
+"endLine":  143,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Desktop\\DesktopAssemblyIdentityComparer.Fx.cs",
+"region":  {
+"startLine":  189,
+"startColumn":  9,
+"endLine":  189,
+"endColumn":  128
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Diagnostic\\Diagnostic.cs",
+"region":  {
+"startLine":  382,
+"startColumn":  9,
+"endLine":  400,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Diagnostic\\DiagnosticBag.cs",
+"region":  {
+"startLine":  360,
+"startColumn":  9,
+"endLine":  363,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Diagnostic\\DiagnosticInfo.cs",
+"region":  {
+"startLine":  452,
+"startColumn":  9,
+"endLine":  467,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Diagnostic\\DiagnosticWithInfo.cs",
+"region":  {
+"startLine":  167,
+"startColumn":  9,
+"endLine":  185,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerDriver.cs",
+"region":  {
+"startLine":  1351,
+"startColumn":  9,
+"endLine":  1351,
+"endColumn":  178
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerFileReference.cs",
+"region":  {
+"startLine":  146,
+"startColumn":  9,
+"endLine":  150,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerImageReference.cs",
+"region":  {
+"startLine":  69,
+"startColumn":  9,
+"endLine":  89,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\CompilationWithAnalyzers.cs",
+"region":  {
+"startLine":  140,
+"startColumn":  9,
+"endLine":  145,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\CompilationWithAnalyzers.cs",
+"region":  {
+"startLine":  188,
+"startColumn":  9,
+"endLine":  196,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\CompilerDiagnosticAnalyzer.CompilationAnalyzer.cs",
+"region":  {
+"startLine":  46,
+"startColumn":  13,
+"endLine":  50,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\AnonymousTypeKey.cs",
+"region":  {
+"startLine":  85,
+"startColumn":  9,
+"endLine":  98,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\DeltaMetadataWriter.cs",
+"region":  {
+"startLine":  993,
+"startColumn":  13,
+"endLine":  998,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\EncHoistedLocalInfo.cs",
+"region":  {
+"startLine":  53,
+"startColumn":  9,
+"endLine":  64,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\EncLocalInfo.cs",
+"region":  {
+"startLine":  78,
+"startColumn":  9,
+"endLine":  96,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\EnumField.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  9,
+"endLine":  34,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\FileNameUtilities.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  9,
+"endLine":  14,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\SpecializedCollections.Empty.Enumerator.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  17,
+"endLine":  14,
+"endColumn":  80
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\SpecializedCollections.ReadOnly.Enumerable%601.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  17,
+"endLine":  19,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\MetadataHelpers.cs",
+"region":  {
+"startLine":  104,
+"startColumn":  13,
+"endLine":  110,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReference\\AssemblyIdentity.DisplayName.cs",
+"region":  {
+"startLine":  134,
+"startColumn":  9,
+"endLine":  137,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReference\\MetadataImageReference.cs",
+"region":  {
+"startLine":  55,
+"startColumn":  9,
+"endLine":  86,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataWriter.cs",
+"region":  {
+"startLine":  105,
+"startColumn":  9,
+"endLine":  105,
+"endColumn":  86
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\SequencePoint.cs",
+"region":  {
+"startLine":  50,
+"startColumn":  9,
+"endLine":  53,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\SourceSpan.cs",
+"region":  {
+"startLine":  45,
+"startColumn":  9,
+"endLine":  48,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ReferenceManager\\AssemblyData.cs",
+"region":  {
+"startLine":  69,
+"startColumn":  13,
+"endLine":  69,
+"endColumn":  103
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ReferenceManager\\AssemblyReferenceBinding.cs",
+"region":  {
+"startLine":  102,
+"startColumn":  13,
+"endLine":  105,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ReferenceManager\\BoundInputAssembly.cs",
+"region":  {
+"startLine":  34,
+"startColumn":  13,
+"endLine":  37,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ReferenceManager\\CommonReferenceManager.Resolution.cs",
+"region":  {
+"startLine":  143,
+"startColumn":  13,
+"endLine":  146,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\RuleSet\\RuleSetProcessor.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  9,
+"endLine":  23,
+"endColumn":  78
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\StrongName\\CryptoBlobParser.cs",
+"region":  {
+"startLine":  97,
+"startColumn":  9,
+"endLine":  101,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\AttributeDescription.cs",
+"region":  {
+"startLine":  55,
+"startColumn":  9,
+"endLine":  55,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\AttributeDescription.cs",
+"region":  {
+"startLine":  56,
+"startColumn":  9,
+"endLine":  56,
+"endColumn":  66
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\AttributeDescription.cs",
+"region":  {
+"startLine":  59,
+"startColumn":  9,
+"endLine":  59,
+"endColumn":  68
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\AttributeDescription.cs",
+"region":  {
+"startLine":  63,
+"startColumn":  9,
+"endLine":  63,
+"endColumn":  68
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\AttributeDescription.cs",
+"region":  {
+"startLine":  64,
+"startColumn":  9,
+"endLine":  64,
+"endColumn":  68
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\AttributeDescription.cs",
+"region":  {
+"startLine":  65,
+"startColumn":  9,
+"endLine":  65,
+"endColumn":  68
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\ChildSyntaxList.cs",
+"region":  {
+"startLine":  297,
+"startColumn":  9,
+"endLine":  303,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\GreenNode.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  9,
+"endLine":  21,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\InternalSyntax\\ChildSyntaxList.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  9,
+"endLine":  56,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SeparatedSyntaxList.cs",
+"region":  {
+"startLine":  542,
+"startColumn":  9,
+"endLine":  545,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SeparatedSyntaxList.cs",
+"region":  {
+"startLine":  547,
+"startColumn":  9,
+"endLine":  550,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxAnnotation.cs",
+"region":  {
+"startLine":  67,
+"startColumn":  9,
+"endLine":  70,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxList%601.cs",
+"region":  {
+"startLine":  351,
+"startColumn":  9,
+"endLine":  354,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxNode.cs",
+"region":  {
+"startLine":  47,
+"startColumn":  9,
+"endLine":  50,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxNodeOrTokenList.cs",
+"region":  {
+"startLine":  362,
+"startColumn":  9,
+"endLine":  365,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxToken.cs",
+"region":  {
+"startLine":  43,
+"startColumn":  9,
+"endLine":  46,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxTokenList.cs",
+"region":  {
+"startLine":  375,
+"startColumn":  9,
+"endLine":  375,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxTrivia.cs",
+"region":  {
+"startLine":  39,
+"startColumn":  9,
+"endLine":  42,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxTriviaList.cs",
+"region":  {
+"startLine":  334,
+"startColumn":  9,
+"endLine":  334,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Xml\\XmlCharType.cs",
+"region":  {
+"startLine":  82,
+"startColumn":  9,
+"endLine":  82,
+"endColumn":  73
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\CustomDebugInfoReader.cs",
+"region":  {
+"startLine":  277,
+"startColumn":  9,
+"endLine":  282,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\CustomDebugInfoReader.cs",
+"region":  {
+"startLine":  287,
+"startColumn":  9,
+"endLine":  290,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\CustomDebugInfoReader.cs",
+"region":  {
+"startLine":  481,
+"startColumn":  9,
+"endLine":  487,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\PooledObjects\\ArrayBuilder.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  13,
+"endLine":  25,
+"endColumn":  14
+}
+}
+}
+]
+}

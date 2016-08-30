@@ -1,0 +1,186 @@
+{
+"issues":  [
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"taskType\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeFixes\\Async\\CSharpAddAwaitCodeFixProvider.cs",
+"region":  {
+"startLine":  96,
+"startColumn":  39,
+"endLine":  96,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"returnType\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeFixes\\Async\\CSharpAddAwaitCodeFixProvider.cs",
+"region":  {
+"startLine":  102,
+"startColumn":  41,
+"endLine":  102,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"taskType\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeFixes\\Async\\CSharpAddAwaitCodeFixProvider.cs",
+"region":  {
+"startLine":  114,
+"startColumn":  39,
+"endLine":  114,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"semanticModel\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\InlineTemporary\\InlineTemporaryCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  464,
+"startColumn":  31,
+"endLine":  464,
+"endColumn":  117
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"startToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\OverrideCompletionProvider.cs",
+"region":  {
+"startLine":  150,
+"startColumn":  24,
+"endLine":  150,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"shouldAnalyze\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Diagnostics\\Analyzers\\CSharpTypeStyleDiagnosticAnalyzerBase.cs",
+"region":  {
+"startLine":  80,
+"startColumn":  31,
+"endLine":  80,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"label\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\TopSyntaxComparer.cs",
+"region":  {
+"startLine":  64,
+"startColumn":  25,
+"endLine":  64,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"declaration\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EncapsulateField\\CSharpEncapsulateFieldService.cs",
+"region":  {
+"startLine":  84,
+"startColumn":  29,
+"endLine":  84,
+"endColumn":  77
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"declaration\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EncapsulateField\\CSharpEncapsulateFieldService.cs",
+"region":  {
+"startLine":  102,
+"startColumn":  29,
+"endLine":  102,
+"endColumn":  77
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"expression\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpMethodExtractor.CSharpCodeGenerator.ExpressionCodeGenerator.cs",
+"region":  {
+"startLine":  93,
+"startColumn":  49,
+"endLine":  93,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"nameOrMemberAccessExpression\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateType\\CSharpGenerateTypeService.cs",
+"region":  {
+"startLine":  160,
+"startColumn":  59,
+"endLine":  160,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"outerMostMemberAccessExpression\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateType\\CSharpGenerateTypeService.cs",
+"region":  {
+"startLine":  348,
+"startColumn":  70,
+"endLine":  348,
+"endColumn":  76
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"afterThisLocation\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateType\\CSharpGenerateTypeService.cs",
+"region":  {
+"startLine":  600,
+"startColumn":  40,
+"endLine":  600,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"root\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateType\\CSharpGenerateTypeService.cs",
+"region":  {
+"startLine":  825,
+"startColumn":  29,
+"endLine":  825,
+"endColumn":  35
+}
+}
+}
+]
+}

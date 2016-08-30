@@ -1,0 +1,368 @@
+{
+"issues":  [
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"comp\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\CompilationAPITests.cs",
+"region":  {
+"startLine":  111,
+"startColumn":  18,
+"endLine":  111,
+"endColumn":  83
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"compCollection\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\CompilationAPITests.cs",
+"region":  {
+"startLine":  373,
+"startColumn":  28,
+"endLine":  373,
+"endColumn":  98
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"error\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\CompilationAPITests.cs",
+"region":  {
+"startLine":  666,
+"startColumn":  23,
+"endLine":  666,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"error\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\CompilationAPITests.cs",
+"region":  {
+"startLine":  730,
+"startColumn":  19,
+"endLine":  730,
+"endColumn":  83
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"invalidCastSynTreeEx\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\CompilationAPITests.cs",
+"region":  {
+"startLine":  1428,
+"startColumn":  48,
+"endLine":  1428,
+"endColumn":  86
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"invalidCastSynTreeEx\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\CompilationAPITests.cs",
+"region":  {
+"startLine":  1433,
+"startColumn":  38,
+"endLine":  1433,
+"endColumn":  76
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"invalidCastSynTreeEx\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\CompilationAPITests.cs",
+"region":  {
+"startLine":  1438,
+"startColumn":  38,
+"endLine":  1438,
+"endColumn":  76
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"bindInfo\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\GetSemanticInfoTests.cs",
+"region":  {
+"startLine":  1652,
+"startColumn":  26,
+"endLine":  1652,
+"endColumn":  74
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"bindInfo\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\GetSemanticInfoTests.cs",
+"region":  {
+"startLine":  1657,
+"startColumn":  22,
+"endLine":  1657,
+"endColumn":  67
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"typeSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\SemanticModelAPITests.cs",
+"region":  {
+"startLine":  2458,
+"startColumn":  28,
+"endLine":  2458,
+"endColumn":  85
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"typeSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\SemanticModelAPITests.cs",
+"region":  {
+"startLine":  2472,
+"startColumn":  28,
+"endLine":  2472,
+"endColumn":  70
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"info\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\SemanticModelGetDeclaredSymbolAPITests.cs",
+"region":  {
+"startLine":  4073,
+"startColumn":  29,
+"endLine":  4073,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"i\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\SemanticModelGetSemanticInfoTests.cs",
+"region":  {
+"startLine":  15179,
+"startColumn":  40,
+"endLine":  15179,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\AnonymousTypesSemanticsTests.cs",
+"region":  {
+"startLine":  665,
+"startColumn":  70,
+"endLine":  665,
+"endColumn":  77
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\AnonymousTypesSemanticsTests.cs",
+"region":  {
+"startLine":  682,
+"startColumn":  70,
+"endLine":  682,
+"endColumn":  77
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"assemblies\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Metadata\\PE\\BaseTypeResolution.cs",
+"region":  {
+"startLine":  35,
+"startColumn":  24,
+"endLine":  35,
+"endColumn":  82
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"attrSym\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Metadata\\PE\\LoadingAttributes.cs",
+"region":  {
+"startLine":  1122,
+"startColumn":  25,
+"endLine":  1122,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"n\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Metadata\\PE\\LoadingNamespacesAndTypes.cs",
+"region":  {
+"startLine":  69,
+"startColumn":  15,
+"endLine":  69,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"test2\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Metadata\\PE\\NoPia.cs",
+"region":  {
+"startLine":  292,
+"startColumn":  19,
+"endLine":  292,
+"endColumn":  89
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"test2\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Metadata\\PE\\NoPia.cs",
+"region":  {
+"startLine":  626,
+"startColumn":  19,
+"endLine":  626,
+"endColumn":  89
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"ilBytes\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Metadata\\PE\\TypeForwarders.cs",
+"region":  {
+"startLine":  1514,
+"startColumn":  25,
+"endLine":  1514,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"test2\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Retargeting\\NoPia.cs",
+"region":  {
+"startLine":  595,
+"startColumn":  19,
+"endLine":  595,
+"endColumn":  89
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"test2\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Retargeting\\NoPia.cs",
+"region":  {
+"startLine":  894,
+"startColumn":  19,
+"endLine":  894,
+"endColumn":  89
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"test2\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Retargeting\\NoPia.cs",
+"region":  {
+"startLine":  1196,
+"startColumn":  19,
+"endLine":  1196,
+"endColumn":  89
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"pType\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Source\\CompletionTests.cs",
+"region":  {
+"startLine":  79,
+"startColumn":  23,
+"endLine":  79,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"pParameters\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Source\\CompletionTests.cs",
+"region":  {
+"startLine":  80,
+"startColumn":  29,
+"endLine":  80,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"pType\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Source\\CompletionTests.cs",
+"region":  {
+"startLine":  85,
+"startColumn":  19,
+"endLine":  85,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"pParameters\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Source\\CompletionTests.cs",
+"region":  {
+"startLine":  86,
+"startColumn":  25,
+"endLine":  86,
+"endColumn":  39
+}
+}
+}
+]
+}

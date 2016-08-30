@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1450",
+"message":  "Remove the \"_renameService\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Xaml\\Impl\\Features\\InlineRename\\XamlEditorInlineRenameService.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  53,
+"endLine":  36,
+"endColumn":  67
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_position\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Xaml\\Impl\\Features\\InlineRename\\XamlEditorInlineRenameService.cs",
+"region":  {
+"startLine":  38,
+"startColumn":  34,
+"endLine":  38,
+"endColumn":  43
+}
+}
+}
+]
+}

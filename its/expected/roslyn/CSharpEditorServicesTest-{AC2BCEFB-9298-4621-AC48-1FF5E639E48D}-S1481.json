@@ -1,0 +1,862 @@
+{
+"issues":  [
+{
+"id":  "S1481",
+"message":  "Remove this unused \"syntaxTree\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Classification\\SemanticClassifierTests.cs",
+"region":  {
+"startLine":  38,
+"startColumn":  21,
+"endLine":  38,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"snapshot\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Classification\\SyntacticClassifierTests.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  21,
+"endLine":  24,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"start\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Classification\\SyntacticClassifierTests_Preprocessor.cs",
+"region":  {
+"startLine":  327,
+"startColumn":  17,
+"endLine":  327,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"text\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\Preview\\PreviewExceptionTests.cs",
+"region":  {
+"startLine":  72,
+"startColumn":  17,
+"endLine":  72,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"actionSets\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\Preview\\PreviewExceptionTests.cs",
+"region":  {
+"startLine":  86,
+"startColumn":  17,
+"endLine":  86,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"action\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\Preview\\PreviewExceptionTests.cs",
+"region":  {
+"startLine":  97,
+"startColumn":  17,
+"endLine":  97,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"provider\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\CrefCompletionProviderTests.cs",
+"region":  {
+"startLine":  438,
+"startColumn":  21,
+"endLine":  438,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"completionList\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\CrefCompletionProviderTests.cs",
+"region":  {
+"startLine":  442,
+"startColumn":  21,
+"endLine":  442,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"oldTree\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\OverrideCompletionProviderTests.cs",
+"region":  {
+"startLine":  2555,
+"startColumn":  21,
+"endLine":  2555,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"windowsDirPath\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\ReferenceDirectiveCompletionProviderTests.cs",
+"region":  {
+"startLine":  135,
+"startColumn":  20,
+"endLine":  135,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"position\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  517,
+"startColumn":  21,
+"endLine":  517,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"incrementalAnalyzer\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\Suppression\\SuppressionTests.cs",
+"region":  {
+"startLine":  178,
+"startColumn":  29,
+"endLine":  178,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"active\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\ActiveStatementTests.cs",
+"region":  {
+"startLine":  7889,
+"startColumn":  17,
+"endLine":  7889,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"active\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\ActiveStatementTests.cs",
+"region":  {
+"startLine":  7924,
+"startColumn":  17,
+"endLine":  7924,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"match\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\Helpers\\RudeEditTestBase.cs",
+"region":  {
+"startLine":  169,
+"startColumn":  17,
+"endLine":  169,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"syntaxMap\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\RudeEditTopLevelTests.cs",
+"region":  {
+"startLine":  4288,
+"startColumn":  17,
+"endLine":  4288,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"syntaxMap\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\RudeEditTopLevelTests.cs",
+"region":  {
+"startLine":  5434,
+"startColumn":  17,
+"endLine":  5434,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"syntaxMap\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\RudeEditTopLevelTests.cs",
+"region":  {
+"startLine":  6003,
+"startColumn":  17,
+"endLine":  6003,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"syntaxMap\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\RudeEditTopLevelTests.cs",
+"region":  {
+"startLine":  6048,
+"startColumn":  17,
+"endLine":  6048,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"textSpan\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\ExtractMethod\\ExtractMethodBase.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  21,
+"endLine":  31,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"treeAfterExtractMethod\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\ExtractMethod\\ExtractMethodBase.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  21,
+"endLine":  32,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"tree\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\ExtractMethod\\ExtractMethodBase.cs",
+"region":  {
+"startLine":  67,
+"startColumn":  25,
+"endLine":  67,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"tree\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\ExtractMethod\\ExtractMethodTests.cs",
+"region":  {
+"startLine":  10214,
+"startColumn":  21,
+"endLine":  10214,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"container\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\ExtractMethod\\MiscTests.cs",
+"region":  {
+"startLine":  138,
+"startColumn":  21,
+"endLine":  138,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"buffer\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Formatting\\FormattingEngineTestBase.cs",
+"region":  {
+"startLine":  192,
+"startColumn":  21,
+"endLine":  192,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"buffer\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Formatting\\FormattingEngineTestBase.cs",
+"region":  {
+"startLine":  223,
+"startColumn":  21,
+"endLine":  223,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"view\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Interactive\\BraceMatching\\InteractiveBraceHighlightingTests.cs",
+"region":  {
+"startLine":  34,
+"startColumn":  17,
+"endLine":  34,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"unused\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Interactive\\NavigateTo\\InteractiveNavigateToTests.cs",
+"region":  {
+"startLine":  595,
+"startColumn":  17,
+"endLine":  595,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"unused\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\NavigateTo\\NavigateToTests.cs",
+"region":  {
+"startLine":  945,
+"startColumn":  17,
+"endLine":  945,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp2\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SymbolId\\SymbolKeyCompilationsTests.cs",
+"region":  {
+"startLine":  194,
+"startColumn":  17,
+"endLine":  194,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"lengthOfStringIncludingQuotes\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\TextStructureNavigation\\TextStructureNavigatorTests.cs",
+"region":  {
+"startLine":  275,
+"startColumn":  17,
+"endLine":  275,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"reasons\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\TodoComment\\TodoCommentTests.cs",
+"region":  {
+"startLine":  177,
+"startColumn":  21,
+"endLine":  177,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  123,
+"startColumn":  21,
+"endLine":  123,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  136,
+"startColumn":  21,
+"endLine":  136,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  152,
+"startColumn":  21,
+"endLine":  152,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  179,
+"startColumn":  21,
+"endLine":  179,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  257,
+"startColumn":  21,
+"endLine":  257,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  273,
+"startColumn":  21,
+"endLine":  273,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"id2\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  286,
+"startColumn":  21,
+"endLine":  286,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  297,
+"startColumn":  21,
+"endLine":  297,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  316,
+"startColumn":  21,
+"endLine":  316,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"id2\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  329,
+"startColumn":  21,
+"endLine":  329,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  340,
+"startColumn":  21,
+"endLine":  340,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  359,
+"startColumn":  21,
+"endLine":  359,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  378,
+"startColumn":  21,
+"endLine":  378,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  395,
+"startColumn":  21,
+"endLine":  395,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  415,
+"startColumn":  21,
+"endLine":  415,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"classC\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  427,
+"startColumn":  21,
+"endLine":  427,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  436,
+"startColumn":  21,
+"endLine":  436,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"id1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  448,
+"startColumn":  21,
+"endLine":  448,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"classC\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  453,
+"startColumn":  21,
+"endLine":  453,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  462,
+"startColumn":  21,
+"endLine":  462,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"id1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  474,
+"startColumn":  21,
+"endLine":  474,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"classC\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  479,
+"startColumn":  21,
+"endLine":  479,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solutionX\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  488,
+"startColumn":  21,
+"endLine":  488,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"id1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  500,
+"startColumn":  21,
+"endLine":  500,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"errors\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  504,
+"startColumn":  21,
+"endLine":  504,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"docZText\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  519,
+"startColumn":  21,
+"endLine":  519,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solutionX\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  534,
+"startColumn":  21,
+"endLine":  534,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"id1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  546,
+"startColumn":  21,
+"endLine":  546,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"errors\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  550,
+"startColumn":  21,
+"endLine":  550,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solutionX\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  590,
+"startColumn":  21,
+"endLine":  590,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"id1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  602,
+"startColumn":  21,
+"endLine":  602,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"errors\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  606,
+"startColumn":  21,
+"endLine":  606,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"buffer\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  896,
+"startColumn":  21,
+"endLine":  896,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"doc\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  934,
+"startColumn":  21,
+"endLine":  934,
+"endColumn":  24
+}
+}
+}
+]
+}

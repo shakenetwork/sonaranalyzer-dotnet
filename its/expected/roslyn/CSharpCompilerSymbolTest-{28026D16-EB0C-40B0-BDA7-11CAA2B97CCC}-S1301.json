@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\ReferenceManagerTests.cs",
+"region":  {
+"startLine":  1311,
+"startColumn":  17,
+"endLine":  1311,
+"endColumn":  23
+}
+}
+}
+]
+}

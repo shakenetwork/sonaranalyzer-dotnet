@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeParameters\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\AbstractCodeModelObject_CodeGen.cs",
+"region":  {
+"startLine":  223,
+"startColumn":  17,
+"endLine":  223,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"specialType\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\AbstractCodeModelObject_CodeGen.cs",
+"region":  {
+"startLine":  226,
+"startColumn":  17,
+"endLine":  226,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"members\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\AbstractCodeModelObject_CodeGen.cs",
+"region":  {
+"startLine":  227,
+"startColumn":  17,
+"endLine":  227,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"optionSet\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\AbstractCodeModelService.cs",
+"region":  {
+"startLine":  1203,
+"startColumn":  73,
+"endLine":  1203,
+"endColumn":  88
+}
+}
+}
+]
+}

@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S2333",
+"message":  "\"unsafe\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Test\\ExpressionCompiler\\ModuleInstance.cs",
+"region":  {
+"startLine":  54,
+"startColumn":  16,
+"endLine":  54,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"unsafe\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Test\\ExpressionCompiler\\ModuleInstance.cs",
+"region":  {
+"startLine":  60,
+"startColumn":  16,
+"endLine":  60,
+"endColumn":  22
+}
+}
+}
+]
+}

@@ -1,0 +1,654 @@
+{
+"issues":  [
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\FileSystem\\PathUtilities.cs",
+"region":  {
+"startLine":  247,
+"startColumn":  21,
+"endLine":  247,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\PooledObjects\\ObjectPool%601.cs",
+"region":  {
+"startLine":  166,
+"startColumn":  21,
+"endLine":  166,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Execution\\AbstractReferenceSerializationService.cs",
+"region":  {
+"startLine":  64,
+"startColumn":  21,
+"endLine":  64,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\FindReferences\\DependentTypeFinder.cs",
+"region":  {
+"startLine":  456,
+"startColumn":  25,
+"endLine":  456,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\FindReferences\\DependentTypeFinder.cs",
+"region":  {
+"startLine":  552,
+"startColumn":  33,
+"endLine":  552,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\FindReferences\\DependentTypeFinder.cs",
+"region":  {
+"startLine":  652,
+"startColumn":  21,
+"endLine":  652,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\SymbolFinder.cs",
+"region":  {
+"startLine":  59,
+"startColumn":  17,
+"endLine":  59,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\SymbolFinder.cs",
+"region":  {
+"startLine":  133,
+"startColumn":  25,
+"endLine":  133,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\SymbolFinder_Hierarchy.cs",
+"region":  {
+"startLine":  266,
+"startColumn":  17,
+"endLine":  266,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\SymbolFinder_Hierarchy.cs",
+"region":  {
+"startLine":  329,
+"startColumn":  21,
+"endLine":  329,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\SymbolTree\\SymbolTreeInfo.cs",
+"region":  {
+"startLine":  332,
+"startColumn":  17,
+"endLine":  332,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Formatting\\BottomUpBaseIndentationFinder.cs",
+"region":  {
+"startLine":  56,
+"startColumn":  17,
+"endLine":  56,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Formatting\\ContextIntervalTree.cs",
+"region":  {
+"startLine":  132,
+"startColumn":  29,
+"endLine":  132,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Formatting\\ContextIntervalTree.cs",
+"region":  {
+"startLine":  163,
+"startColumn":  33,
+"endLine":  163,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Formatting\\Engine\\AbstractFormatEngine.cs",
+"region":  {
+"startLine":  494,
+"startColumn":  17,
+"endLine":  494,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Formatting\\Engine\\AbstractFormatEngine.cs",
+"region":  {
+"startLine":  500,
+"startColumn":  21,
+"endLine":  500,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Formatting\\Engine\\AbstractFormatEngine.cs",
+"region":  {
+"startLine":  509,
+"startColumn":  17,
+"endLine":  509,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\LanguageServices\\TypeInferenceService\\AbstractTypeInferenceService.cs",
+"region":  {
+"startLine":  50,
+"startColumn":  21,
+"endLine":  50,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Rename\\ConflictEngine\\DeclarationConflictHelpers.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  21,
+"endLine":  37,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Rename\\RenameLocation.ReferenceProcessing.cs",
+"region":  {
+"startLine":  61,
+"startColumn":  21,
+"endLine":  61,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\INamedTypeSymbolExtensions.cs",
+"region":  {
+"startLine":  125,
+"startColumn":  17,
+"endLine":  125,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\INamedTypeSymbolExtensions.cs",
+"region":  {
+"startLine":  133,
+"startColumn":  17,
+"endLine":  133,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\INamedTypeSymbolExtensions.cs",
+"region":  {
+"startLine":  147,
+"startColumn":  17,
+"endLine":  147,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\INamedTypeSymbolExtensions.cs",
+"region":  {
+"startLine":  155,
+"startColumn":  17,
+"endLine":  155,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\ISymbolExtensions_2.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  21,
+"endLine":  15,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\ITypeSymbolExtensions.CollectTypeParameterSymbolsVisitor.cs",
+"region":  {
+"startLine":  70,
+"startColumn":  25,
+"endLine":  70,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\SemanticEquivalence.cs",
+"region":  {
+"startLine":  89,
+"startColumn":  21,
+"endLine":  89,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\StringExtensions.cs",
+"region":  {
+"startLine":  135,
+"startColumn":  21,
+"endLine":  135,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Utilities\\SignatureComparer.cs",
+"region":  {
+"startLine":  108,
+"startColumn":  17,
+"endLine":  108,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Utilities\\SignatureComparer.cs",
+"region":  {
+"startLine":  204,
+"startColumn":  17,
+"endLine":  204,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Utilities\\SignatureComparer.cs",
+"region":  {
+"startLine":  214,
+"startColumn":  17,
+"endLine":  214,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Utilities\\StringBreaker.cs",
+"region":  {
+"startLine":  272,
+"startColumn":  17,
+"endLine":  272,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Utilities\\SymbolEquivalenceComparer.EquivalenceVisitor.cs",
+"region":  {
+"startLine":  233,
+"startColumn":  25,
+"endLine":  233,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Utilities\\SymbolEquivalenceComparer.EquivalenceVisitor.cs",
+"region":  {
+"startLine":  514,
+"startColumn":  21,
+"endLine":  514,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Simplification\\AbstractSimplificationService.cs",
+"region":  {
+"startLine":  70,
+"startColumn":  21,
+"endLine":  70,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\SymbolKey\\SymbolKey.MethodSymbolKey.cs",
+"region":  {
+"startLine":  248,
+"startColumn":  21,
+"endLine":  248,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\SymbolKey\\SymbolKey.MethodSymbolKey.cs",
+"region":  {
+"startLine":  250,
+"startColumn":  25,
+"endLine":  250,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\SymbolKey\\SymbolKey.SymbolKeyWriter.cs",
+"region":  {
+"startLine":  149,
+"startColumn":  21,
+"endLine":  149,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\AbstractSpeculationAnalyzer.cs",
+"region":  {
+"startLine":  616,
+"startColumn":  29,
+"endLine":  616,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\AbstractSpeculationAnalyzer.cs",
+"region":  {
+"startLine":  698,
+"startColumn":  21,
+"endLine":  698,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\AbstractSpeculationAnalyzer.cs",
+"region":  {
+"startLine":  826,
+"startColumn":  17,
+"endLine":  826,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\AsyncLazy%601.cs",
+"region":  {
+"startLine":  501,
+"startColumn":  21,
+"endLine":  501,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\AsyncLazy%601.cs",
+"region":  {
+"startLine":  503,
+"startColumn":  25,
+"endLine":  503,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\ValuesSources\\WeakConstantValueSource.cs",
+"region":  {
+"startLine":  39,
+"startColumn":  17,
+"endLine":  39,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Host\\Mef\\MefWorkspaceServices.cs",
+"region":  {
+"startLine":  181,
+"startColumn":  21,
+"endLine":  181,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Solution\\MetadataOnlyReference.cs",
+"region":  {
+"startLine":  51,
+"startColumn":  17,
+"endLine":  51,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Solution\\Solution.cs",
+"region":  {
+"startLine":  153,
+"startColumn":  21,
+"endLine":  153,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Solution\\SolutionState.cs",
+"region":  {
+"startLine":  379,
+"startColumn":  21,
+"endLine":  379,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Solution\\SolutionState.cs",
+"region":  {
+"startLine":  1841,
+"startColumn":  17,
+"endLine":  1841,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Workspace_Editor.cs",
+"region":  {
+"startLine":  45,
+"startColumn":  17,
+"endLine":  45,
+"endColumn":  19
+}
+}
+}
+]
+}

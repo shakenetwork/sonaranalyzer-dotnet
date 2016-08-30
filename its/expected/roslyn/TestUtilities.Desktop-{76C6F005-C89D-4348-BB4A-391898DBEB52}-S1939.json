@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1939",
+"message":  "\"IRuntimeEnvironment\" implements \"IDisposable\" so \"IDisposable\" can be removed from the inheritance list.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\HostedRuntimeEnvironment.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  52,
+"endLine":  19,
+"endColumn":  64
+}
+}
+}
+]
+}

@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\Host\\TemporaryStorage\\TemporaryStorageServiceFactory.cs",
+"region":  {
+"startLine":  162,
+"startColumn":  135,
+"endLine":  162,
+"endColumn":  170
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"disposing\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\Host\\TemporaryStorage\\TemporaryStorageServiceFactory.MemoryMappedFiles.cs",
+"region":  {
+"startLine":  120,
+"startColumn":  34,
+"endLine":  120,
+"endColumn":  48
+}
+}
+}
+]
+}

@@ -1,0 +1,82 @@
+{
+"issues":  [
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\FindAllDeclarationsTests.TestSolutionsAndProject.cs",
+"region":  {
+"startLine":  63,
+"startColumn":  149,
+"endLine":  63,
+"endColumn":  160
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\FindAllDeclarationsTests.TestSolutionsAndProject.cs",
+"region":  {
+"startLine":  69,
+"startColumn":  145,
+"endLine":  69,
+"endColumn":  156
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\SolutionGeneration.cs",
+"region":  {
+"startLine":  200,
+"startColumn":  54,
+"endLine":  200,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  1981,
+"startColumn":  81,
+"endLine":  1981,
+"endColumn":  92
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  2072,
+"startColumn":  83,
+"endLine":  2072,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  2104,
+"startColumn":  83,
+"endLine":  2104,
+"endColumn":  94
+}
+}
+}
+]
+}

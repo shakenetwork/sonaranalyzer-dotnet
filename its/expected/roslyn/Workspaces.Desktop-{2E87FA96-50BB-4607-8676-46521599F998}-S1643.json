@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1643",
+"message":  "Use a StringBuilder instead.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\MSBuild\\ProjectFile\\ProjectFile.cs",
+"region":  {
+"startLine":  243,
+"startColumn":  21,
+"endLine":  243,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1643",
+"message":  "Use a StringBuilder instead.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\MSBuild\\ProjectFile\\ProjectFile.cs",
+"region":  {
+"startLine":  246,
+"startColumn":  17,
+"endLine":  246,
+"endColumn":  52
+}
+}
+}
+]
+}

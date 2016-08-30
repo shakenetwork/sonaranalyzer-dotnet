@@ -1,0 +1,121 @@
+{
+"issues":  [
+{
+"id":  "S2696",
+"message":  "Remove this set, which updates a \"static\" field from an instance method.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\Host\\WorkspaceServices\\TestTemporaryStorageService.cs",
+"region":  {
+"startLine":  39,
+"startColumn":  17,
+"endLine":  39,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2696",
+"message":  "Remove this set, which updates a \"static\" field from an instance method.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\Host\\WorkspaceServices\\TestTemporaryStorageService.cs",
+"region":  {
+"startLine":  90,
+"startColumn":  17,
+"endLine":  90,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2696",
+"message":  "Make the enclosing instance method \"static\" or remove this set on the \"static\" field.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  1222,
+"startColumn":  13,
+"endLine":  1222,
+"endColumn":  70
+}
+}
+},
+{
+"id":  "S2696",
+"message":  "Make the enclosing instance method \"static\" or remove this set on the \"static\" field.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  1243,
+"startColumn":  13,
+"endLine":  1243,
+"endColumn":  70
+}
+}
+},
+{
+"id":  "S2696",
+"message":  "Make the enclosing instance method \"static\" or remove this set on the \"static\" field.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  1265,
+"startColumn":  13,
+"endLine":  1265,
+"endColumn":  70
+}
+}
+},
+{
+"id":  "S2696",
+"message":  "Make the enclosing instance method \"static\" or remove this set on the \"static\" field.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  1291,
+"startColumn":  13,
+"endLine":  1291,
+"endColumn":  70
+}
+}
+},
+{
+"id":  "S2696",
+"message":  "Make the enclosing instance method \"static\" or remove this set on the \"static\" field.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  1310,
+"startColumn":  13,
+"endLine":  1310,
+"endColumn":  70
+}
+}
+},
+{
+"id":  "S2696",
+"message":  "Make the enclosing instance method \"static\" or remove this set on the \"static\" field.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  1330,
+"startColumn":  13,
+"endLine":  1330,
+"endColumn":  70
+}
+}
+},
+{
+"id":  "S2696",
+"message":  "Make the enclosing instance method \"static\" or remove this set on the \"static\" field.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  1359,
+"startColumn":  13,
+"endLine":  1359,
+"endColumn":  70
+}
+}
+}
+]
+}

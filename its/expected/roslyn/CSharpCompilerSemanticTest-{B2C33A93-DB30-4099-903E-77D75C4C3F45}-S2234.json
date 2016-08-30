@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S2234",
+"message":  "Parameters to \"AppendFormat\" have the same names but not the same order as the method arguments.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\OperatorTests.cs",
+"region":  {
+"startLine":  5468,
+"startColumn":  29,
+"endLine":  5468,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2234",
+"message":  "Parameters to \"AppendFormat\" have the same names but not the same order as the method arguments.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\OperatorTests.cs",
+"region":  {
+"startLine":  5625,
+"startColumn":  29,
+"endLine":  5625,
+"endColumn":  41
+}
+}
+}
+]
+}

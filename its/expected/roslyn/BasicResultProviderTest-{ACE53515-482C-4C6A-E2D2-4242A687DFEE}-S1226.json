@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"lmrType\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Source\\ResultProvider\\VisualBasicFormatter.Values.vb",
+"region":  {
+"startLine":  36,
+"startColumn":  17,
+"endLine":  36,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"expression\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Source\\ResultProvider\\VisualBasicFormatter.vb",
+"region":  {
+"startLine":  43,
+"startColumn":  13,
+"endLine":  43,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"expression\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Source\\ResultProvider\\VisualBasicFormatter.vb",
+"region":  {
+"startLine":  44,
+"startColumn":  13,
+"endLine":  44,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"inspectionContext\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ResultProvider\\Helpers\\TestTypeExtensions.vb",
+"region":  {
+"startLine":  26,
+"startColumn":  17,
+"endLine":  26,
+"endColumn":  34
+}
+}
+}
+]
+}

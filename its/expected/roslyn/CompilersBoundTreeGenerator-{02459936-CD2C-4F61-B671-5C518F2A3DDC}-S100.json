@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S100",
+"message":  "Rename method \"IsVBKeyword\" to match camel case naming rules, consider using \"IsVbKeyword\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\BoundTreeGenerator\\BoundNodeClassWriter.cs",
+"region":  {
+"startLine":  1726,
+"startColumn":  28,
+"endLine":  1726,
+"endColumn":  39
+}
+}
+}
+]
+}

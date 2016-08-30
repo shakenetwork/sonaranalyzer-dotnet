@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Metadata\\MetadataReaderUtils.cs",
+"region":  {
+"startLine":  155,
+"startColumn":  13,
+"endLine":  155,
+"endColumn":  19
+}
+}
+}
+]
+}

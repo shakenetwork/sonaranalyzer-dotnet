@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S2259",
+"message":  "\"code\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\Core\\Hosting\\CommandLine\\CommandLineRunner.cs",
+"region":  {
+"startLine":  123,
+"startColumn":  49,
+"endLine":  123,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"type\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\Core\\Hosting\\ObjectFormatter\\ObjectFormatterHelpers.cs",
+"region":  {
+"startLine":  92,
+"startColumn":  46,
+"endLine":  92,
+"endColumn":  50
+}
+}
+}
+]
+}

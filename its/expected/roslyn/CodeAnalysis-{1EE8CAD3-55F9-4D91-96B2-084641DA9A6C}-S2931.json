@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_textReader\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DocumentationComments\\XmlDocumentationCommentTextReader.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  28,
+"endLine":  13,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_textReader\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DocumentationComments\\XmlDocumentationCommentTextReader.XmlStream.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  28,
+"endLine":  11,
+"endColumn":  61
+}
+}
+}
+]
+}

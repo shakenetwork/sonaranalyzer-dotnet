@@ -1,0 +1,1291 @@
+{
+"issues":  [
+{
+"id":  "S1481",
+"message":  "Remove this unused \"semanticModel\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\CodeCleanup\\CodeCleanupTests.cs",
+"region":  {
+"startLine":  238,
+"startColumn":  17,
+"endLine":  238,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"info\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\Execution\\SnapshotSerializationTestBase.cs",
+"region":  {
+"startLine":  132,
+"startColumn":  17,
+"endLine":  132,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"assetFromStorage2\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\Execution\\SnapshotSerializationTests.cs",
+"region":  {
+"startLine":  316,
+"startColumn":  17,
+"endLine":  316,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"declarations\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\FindAllDeclarationsTests.cs",
+"region":  {
+"startLine":  97,
+"startColumn":  21,
+"endLine":  97,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"declarations\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\FindAllDeclarationsTests.cs",
+"region":  {
+"startLine":  107,
+"startColumn":  21,
+"endLine":  107,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"declarations\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\FindAllDeclarationsTests.cs",
+"region":  {
+"startLine":  119,
+"startColumn":  21,
+"endLine":  119,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"declarations\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\FindAllDeclarationsTests.cs",
+"region":  {
+"startLine":  261,
+"startColumn":  21,
+"endLine":  261,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"declarations\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\FindAllDeclarationsTests.cs",
+"region":  {
+"startLine":  271,
+"startColumn":  21,
+"endLine":  271,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"declarations\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\FindAllDeclarationsTests.cs",
+"region":  {
+"startLine":  283,
+"startColumn":  21,
+"endLine":  283,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"declarations\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\FindAllDeclarationsTests.cs",
+"region":  {
+"startLine":  368,
+"startColumn":  21,
+"endLine":  368,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"declarations\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\FindAllDeclarationsTests.cs",
+"region":  {
+"startLine":  378,
+"startColumn":  21,
+"endLine":  378,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"declarations\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\FindAllDeclarationsTests.cs",
+"region":  {
+"startLine":  392,
+"startColumn":  25,
+"endLine":  392,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"declarations\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\FindAllDeclarationsTests.cs",
+"region":  {
+"startLine":  446,
+"startColumn":  25,
+"endLine":  446,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"declarations\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\FindAllDeclarationsTests.cs",
+"region":  {
+"startLine":  462,
+"startColumn":  21,
+"endLine":  462,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"declarations\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\FindAllDeclarationsTests.cs",
+"region":  {
+"startLine":  476,
+"startColumn":  25,
+"endLine":  476,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"declarations\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\FindAllDeclarationsTests.cs",
+"region":  {
+"startLine":  530,
+"startColumn":  25,
+"endLine":  530,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"declarations\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\FindAllDeclarationsTests.cs",
+"region":  {
+"startLine":  546,
+"startColumn":  21,
+"endLine":  546,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"declarations\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\FindAllDeclarationsTests.cs",
+"region":  {
+"startLine":  560,
+"startColumn":  25,
+"endLine":  560,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"sol\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\SolutionTests\\SolutionTests.cs",
+"region":  {
+"startLine":  59,
+"startColumn":  17,
+"endLine":  59,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation0\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\SolutionTests\\SolutionTests.cs",
+"region":  {
+"startLine":  313,
+"startColumn":  17,
+"endLine":  313,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation2\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\SolutionTests\\SolutionTests.cs",
+"region":  {
+"startLine":  314,
+"startColumn":  17,
+"endLine":  314,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"root\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\SolutionTests\\SolutionTests.cs",
+"region":  {
+"startLine":  618,
+"startColumn":  17,
+"endLine":  618,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"ws\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\SolutionTests\\SolutionTests.cs",
+"region":  {
+"startLine":  1138,
+"startColumn":  17,
+"endLine":  1138,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"text\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\SolutionTests\\SolutionTests.cs",
+"region":  {
+"startLine":  1218,
+"startColumn":  17,
+"endLine":  1218,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"text\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\SolutionTests\\SolutionTests.cs",
+"region":  {
+"startLine":  1249,
+"startColumn":  17,
+"endLine":  1249,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"model\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\SymbolKeyTests.cs",
+"region":  {
+"startLine":  386,
+"startColumn":  17,
+"endLine":  386,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"model\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\SymbolKeyTests.cs",
+"region":  {
+"startLine":  404,
+"startColumn":  17,
+"endLine":  404,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"model\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\SymbolKeyTests.cs",
+"region":  {
+"startLine":  422,
+"startColumn":  17,
+"endLine":  422,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"model\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\SymbolKeyTests.cs",
+"region":  {
+"startLine":  442,
+"startColumn":  17,
+"endLine":  442,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"model\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\SymbolKeyTests.cs",
+"region":  {
+"startLine":  465,
+"startColumn":  17,
+"endLine":  465,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"model\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\SymbolKeyTests.cs",
+"region":  {
+"startLine":  508,
+"startColumn":  17,
+"endLine":  508,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"model\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\SymbolKeyTests.cs",
+"region":  {
+"startLine":  522,
+"startColumn":  17,
+"endLine":  522,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"m\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\SymbolKeyTests.cs",
+"region":  {
+"startLine":  566,
+"startColumn":  17,
+"endLine":  566,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\SyntaxNodeTests.cs",
+"region":  {
+"startLine":  101,
+"startColumn":  17,
+"endLine":  101,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"items\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\UtilityTest\\BKTreeTests.cs",
+"region":  {
+"startLine":  41,
+"startColumn":  21,
+"endLine":  41,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"wrappedAction\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\UtilityTest\\ExceptionHelpersTests.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  20,
+"endLine":  15,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"optionSet\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceServiceTests\\OptionServiceTests.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  17,
+"endLine":  16,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"option\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceServiceTests\\OptionServiceTests.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  21,
+"endLine":  20,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"option2\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceServiceTests\\OptionServiceTests.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  21,
+"endLine":  25,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"option3\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceServiceTests\\OptionServiceTests.cs",
+"region":  {
+"startLine":  30,
+"startColumn":  21,
+"endLine":  30,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"option4\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceServiceTests\\OptionServiceTests.cs",
+"region":  {
+"startLine":  35,
+"startColumn":  21,
+"endLine":  35,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"option\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceServiceTests\\OptionServiceTests.cs",
+"region":  {
+"startLine":  47,
+"startColumn":  21,
+"endLine":  47,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"option2\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceServiceTests\\OptionServiceTests.cs",
+"region":  {
+"startLine":  52,
+"startColumn":  21,
+"endLine":  52,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"option3\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceServiceTests\\OptionServiceTests.cs",
+"region":  {
+"startLine":  57,
+"startColumn":  21,
+"endLine":  57,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"option4\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceServiceTests\\OptionServiceTests.cs",
+"region":  {
+"startLine":  62,
+"startColumn":  21,
+"endLine":  62,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\AdhocWorkspaceTests.cs",
+"region":  {
+"startLine":  185,
+"startColumn":  21,
+"endLine":  185,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"actualText\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\AdhocWorkspaceTests.cs",
+"region":  {
+"startLine":  410,
+"startColumn":  21,
+"endLine":  410,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"docid2\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\AdhocWorkspaceTests.cs",
+"region":  {
+"startLine":  473,
+"startColumn":  21,
+"endLine":  473,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\AdhocWorkspaceTests.cs",
+"region":  {
+"startLine":  477,
+"startColumn":  21,
+"endLine":  477,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"frozen\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\AdhocWorkspaceTests.cs",
+"region":  {
+"startLine":  484,
+"startColumn":  21,
+"endLine":  484,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"info\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\CommandLineProjectTests.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  21,
+"endLine":  22,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"info\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\CommandLineProjectTests.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  17,
+"endLine":  31,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"p2\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTestBase.cs",
+"region":  {
+"startLine":  81,
+"startColumn":  17,
+"endLine":  81,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  201,
+"startColumn":  17,
+"endLine":  201,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"sversion\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  319,
+"startColumn":  17,
+"endLine":  319,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"latestPV\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  320,
+"startColumn":  17,
+"endLine":  320,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"pversion\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  322,
+"startColumn":  17,
+"endLine":  322,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"documents\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  464,
+"startColumn":  17,
+"endLine":  464,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"documents\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  485,
+"startColumn":  17,
+"endLine":  485,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"documents\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  495,
+"startColumn":  17,
+"endLine":  495,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"projFile\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  589,
+"startColumn":  17,
+"endLine":  589,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"documents\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  680,
+"startColumn":  17,
+"endLine":  680,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  776,
+"startColumn":  21,
+"endLine":  776,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  787,
+"startColumn":  21,
+"endLine":  787,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  883,
+"startColumn":  17,
+"endLine":  883,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"sol\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  900,
+"startColumn":  17,
+"endLine":  900,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  916,
+"startColumn":  21,
+"endLine":  916,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  936,
+"startColumn":  17,
+"endLine":  936,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  954,
+"startColumn":  21,
+"endLine":  954,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  1015,
+"startColumn":  21,
+"endLine":  1015,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  1036,
+"startColumn":  21,
+"endLine":  1036,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  1060,
+"startColumn":  17,
+"endLine":  1060,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"project\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  1076,
+"startColumn":  21,
+"endLine":  1076,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"project\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  1091,
+"startColumn":  21,
+"endLine":  1091,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"project\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  1102,
+"startColumn":  21,
+"endLine":  1102,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"project\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  1137,
+"startColumn":  21,
+"endLine":  1137,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"project\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  1172,
+"startColumn":  21,
+"endLine":  1172,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"project\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  1209,
+"startColumn":  21,
+"endLine":  1209,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"csproject\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  1342,
+"startColumn":  17,
+"endLine":  1342,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"diagnostics\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  1363,
+"startColumn":  17,
+"endLine":  1363,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"vbpid\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  2032,
+"startColumn":  17,
+"endLine":  2032,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"csdoc4\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  2141,
+"startColumn":  17,
+"endLine":  2141,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"csdoc6\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  2148,
+"startColumn":  17,
+"endLine":  2148,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"csdoc8\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  2155,
+"startColumn":  17,
+"endLine":  2155,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"vbdoc4\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  2177,
+"startColumn":  17,
+"endLine":  2177,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"vbdoc6\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  2184,
+"startColumn":  17,
+"endLine":  2184,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"vbdoc8\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  2191,
+"startColumn":  17,
+"endLine":  2191,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  2439,
+"startColumn":  21,
+"endLine":  2439,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"project\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  2519,
+"startColumn":  17,
+"endLine":  2519,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  2533,
+"startColumn":  17,
+"endLine":  2533,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  2549,
+"startColumn":  17,
+"endLine":  2549,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution2\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  2550,
+"startColumn":  17,
+"endLine":  2550,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solution3\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  2551,
+"startColumn":  17,
+"endLine":  2551,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"root\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\MSBuildWorkspaceTests.cs",
+"region":  {
+"startLine":  2770,
+"startColumn":  17,
+"endLine":  2770,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"referenceProject\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\WorkspaceReferenceTests.cs",
+"region":  {
+"startLine":  55,
+"startColumn":  21,
+"endLine":  55,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"referenceProject\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\WorkspaceReferenceTests.cs",
+"region":  {
+"startLine":  97,
+"startColumn":  21,
+"endLine":  97,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"referenceDocument\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\WorkspaceReferenceTests.cs",
+"region":  {
+"startLine":  158,
+"startColumn":  21,
+"endLine":  158,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"text\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\WorkspaceTestBase.cs",
+"region":  {
+"startLine":  257,
+"startColumn":  17,
+"endLine":  257,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"text\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\WorkspaceTestBase.cs",
+"region":  {
+"startLine":  274,
+"startColumn":  17,
+"endLine":  274,
+"endColumn":  21
+}
+}
+}
+]
+}

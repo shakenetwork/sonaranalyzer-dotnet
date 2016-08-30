@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\AnonymousTypes\\AnonymousTypesSemanticsTests.vb",
+"region":  {
+"startLine":  2000,
+"startColumn":  13,
+"endLine":  2000,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\MyBaseMyClassSemanticsTests.vb",
+"region":  {
+"startLine":  152,
+"startColumn":  13,
+"endLine":  152,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Source\\OperatorsTests.vb",
+"region":  {
+"startLine":  248,
+"startColumn":  13,
+"endLine":  248,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\WithStatementSymbolsTests.vb",
+"region":  {
+"startLine":  305,
+"startColumn":  13,
+"endLine":  305,
+"endColumn":  15
+}
+}
+}
+]
+}

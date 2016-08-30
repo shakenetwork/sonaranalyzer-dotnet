@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S3459",
+"message":  "Remove unassigned field \"source\", or set its value.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Packaging\\PackageInstallerServiceFactory_UndoRedo.cs",
+"region":  {
+"startLine":  54,
+"startColumn":  39,
+"endLine":  54,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S3459",
+"message":  "Remove unassigned field \"pBuf\", or set its value.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\SymbolSearch\\Patching\\Delta.cs",
+"region":  {
+"startLine":  40,
+"startColumn":  27,
+"endLine":  40,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3459",
+"message":  "Remove unassigned field \"cbBuf\", or set its value.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\SymbolSearch\\Patching\\Delta.cs",
+"region":  {
+"startLine":  41,
+"startColumn":  27,
+"endLine":  41,
+"endColumn":  32
+}
+}
+}
+]
+}

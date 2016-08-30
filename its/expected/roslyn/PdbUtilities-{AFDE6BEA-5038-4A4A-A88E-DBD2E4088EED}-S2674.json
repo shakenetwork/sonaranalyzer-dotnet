@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S2674",
+"message":  "Check the return value of the \"Read\" call to see how many bytes were read.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Pdb\\PdbToXml.cs",
+"region":  {
+"startLine":  86,
+"startColumn":  13,
+"endLine":  86,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S2674",
+"message":  "Check the return value of the \"Read\" call to see how many bytes were read.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Pdb\\Token2SourceLineExporter.cs",
+"region":  {
+"startLine":  71,
+"startColumn":  17,
+"endLine":  71,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2674",
+"message":  "Check the return value of the \"Read\" call to see how many bytes were read.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Pdb\\Token2SourceLineExporter.cs",
+"region":  {
+"startLine":  84,
+"startColumn":  17,
+"endLine":  84,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2674",
+"message":  "Check the return value of the \"Read\" call to see how many bytes were read.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Pdb\\Token2SourceLineExporter.cs",
+"region":  {
+"startLine":  861,
+"startColumn":  17,
+"endLine":  861,
+"endColumn":  50
+}
+}
+}
+]
+}

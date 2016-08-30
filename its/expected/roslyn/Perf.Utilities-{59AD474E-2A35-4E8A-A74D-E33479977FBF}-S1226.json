@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"workingDirectory\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Perf\\Utilities\\TestUtilities.cs",
+"region":  {
+"startLine":  186,
+"startColumn":  17,
+"endLine":  186,
+"endColumn":  33
+}
+}
+}
+]
+}

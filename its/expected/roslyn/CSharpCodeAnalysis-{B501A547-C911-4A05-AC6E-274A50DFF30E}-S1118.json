@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\BoundTree\\Expression.cs",
+"region":  {
+"startLine":  2226,
+"startColumn":  20,
+"endLine":  2226,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\CodeGen\\Optimizer.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  20,
+"endLine":  17,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\FlowAnalysis\\FlowAnalysisPass.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  20,
+"endLine":  11,
+"endColumn":  36
+}
+}
+}
+]
+}

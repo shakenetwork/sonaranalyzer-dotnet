@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\AnalyzerFileReferenceTests.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  38,
+"endLine":  20,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\AnalyzerFileReferenceTests.cs",
+"region":  {
+"startLine":  34,
+"startColumn":  36,
+"endLine":  34,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"RoPublicKey1\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\AssemblyIdentityTestBase.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  46,
+"endLine":  42,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"RoPublicKeyToken1\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\AssemblyIdentityTestBase.cs",
+"region":  {
+"startLine":  43,
+"startColumn":  46,
+"endLine":  43,
+"endColumn":  63
+}
+}
+}
+]
+}

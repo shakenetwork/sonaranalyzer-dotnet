@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S2953",
+"message":  "Either implement \"IDisposable.Dispose\", or totally rename this method to prevent confusion.",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\Features\\Interactive\\Core\\InteractiveHost.LazyRemoteService.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  25,
+"endLine":  33,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2953",
+"message":  "Either implement \"IDisposable.Dispose\", or totally rename this method to prevent confusion.",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\Features\\Interactive\\Core\\InteractiveHost.RemoteService.cs",
+"region":  {
+"startLine":  115,
+"startColumn":  27,
+"endLine":  115,
+"endColumn":  34
+}
+}
+}
+]
+}

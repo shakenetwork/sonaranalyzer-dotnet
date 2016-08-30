@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"i\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\MSBuild\\ProjectFile\\BuildTargets.cs",
+"region":  {
+"startLine":  79,
+"startColumn":  21,
+"endLine":  79,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"i\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\MSBuild\\ProjectFile\\BuildTargets.cs",
+"region":  {
+"startLine":  113,
+"startColumn":  25,
+"endLine":  113,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"i\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\MSBuild\\ProjectFile\\BuildTargets.cs",
+"region":  {
+"startLine":  136,
+"startColumn":  21,
+"endLine":  136,
+"endColumn":  22
+}
+}
+}
+]
+}

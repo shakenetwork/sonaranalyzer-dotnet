@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"Byte1Marker\", the compiler will do that for you.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Serialization\\ObjectReaderWriterBase.cs",
+"region":  {
+"startLine":  78,
+"startColumn":  51,
+"endLine":  78,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_skipString\", the compiler will do that for you.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\SymbolKey\\SymbolKey.SymbolKeyReader.cs",
+"region":  {
+"startLine":  389,
+"startColumn":  38,
+"endLine":  389,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"TestHookStandaloneProjectsDoNotHoldReferences\", the compiler will do that for you.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Workspace.cs",
+"region":  {
+"startLine":  46,
+"startColumn":  76,
+"endLine":  46,
+"endColumn":  83
+}
+}
+}
+]
+}

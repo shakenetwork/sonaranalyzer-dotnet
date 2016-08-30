@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"changes\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\RepoUtil\\ChangeCommand.cs",
+"region":  {
+"startLine":  103,
+"startColumn":  17,
+"endLine":  103,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"fullPath\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\RepoUtil\\FileName.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  13,
+"endLine":  25,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"writer\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\RepoUtil\\UsageCommand.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  13,
+"endLine":  20,
+"endColumn":  19
+}
+}
+}
+]
+}

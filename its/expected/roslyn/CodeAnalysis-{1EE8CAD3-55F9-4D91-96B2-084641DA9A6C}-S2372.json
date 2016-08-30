@@ -1,0 +1,693 @@
+{
+"issues":  [
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\LocalDefinition.cs",
+"region":  {
+"startLine":  109,
+"startColumn":  19,
+"endLine":  109,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\LocalDefinition.cs",
+"region":  {
+"startLine":  117,
+"startColumn":  19,
+"endLine":  117,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\PrivateImplementationDetails.cs",
+"region":  {
+"startLine":  389,
+"startColumn":  19,
+"endLine":  389,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\PrivateImplementationDetails.cs",
+"region":  {
+"startLine":  425,
+"startColumn":  19,
+"endLine":  425,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\PrivateImplementationDetails.cs",
+"region":  {
+"startLine":  538,
+"startColumn":  19,
+"endLine":  538,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\SignatureOnlyLocalDefinition.cs",
+"region":  {
+"startLine":  30,
+"startColumn":  19,
+"endLine":  30,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\SignatureOnlyLocalDefinition.cs",
+"region":  {
+"startLine":  35,
+"startColumn":  19,
+"endLine":  35,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\SignatureOnlyLocalDefinition.cs",
+"region":  {
+"startLine":  40,
+"startColumn":  19,
+"endLine":  40,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\SignatureOnlyLocalDefinition.cs",
+"region":  {
+"startLine":  53,
+"startColumn":  19,
+"endLine":  53,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\SignatureOnlyLocalDefinition.cs",
+"region":  {
+"startLine":  58,
+"startColumn":  19,
+"endLine":  58,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\SignatureOnlyLocalDefinition.cs",
+"region":  {
+"startLine":  63,
+"startColumn":  19,
+"endLine":  63,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\SignatureOnlyLocalDefinition.cs",
+"region":  {
+"startLine":  74,
+"startColumn":  19,
+"endLine":  74,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\CompilationOptions.cs",
+"region":  {
+"startLine":  250,
+"startColumn":  17,
+"endLine":  250,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ConstantValue.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  51,
+"endLine":  37,
+"endColumn":  89
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ConstantValue.cs",
+"region":  {
+"startLine":  38,
+"startColumn":  50,
+"endLine":  38,
+"endColumn":  88
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ConstantValue.cs",
+"region":  {
+"startLine":  40,
+"startColumn":  49,
+"endLine":  40,
+"endColumn":  87
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ConstantValue.cs",
+"region":  {
+"startLine":  41,
+"startColumn":  47,
+"endLine":  41,
+"endColumn":  85
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ConstantValue.cs",
+"region":  {
+"startLine":  62,
+"startColumn":  47,
+"endLine":  62,
+"endColumn":  85
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ConstantValue.cs",
+"region":  {
+"startLine":  63,
+"startColumn":  53,
+"endLine":  63,
+"endColumn":  91
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ConstantValue.cs",
+"region":  {
+"startLine":  64,
+"startColumn":  55,
+"endLine":  64,
+"endColumn":  93
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ConstantValue.cs",
+"region":  {
+"startLine":  66,
+"startColumn":  51,
+"endLine":  66,
+"endColumn":  89
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ConstantValue.cs",
+"region":  {
+"startLine":  67,
+"startColumn":  50,
+"endLine":  67,
+"endColumn":  88
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ConstantValue.cs",
+"region":  {
+"startLine":  455,
+"startColumn":  30,
+"endLine":  455,
+"endColumn":  91
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\BlobBuildingStream.cs",
+"region":  {
+"startLine":  117,
+"startColumn":  19,
+"endLine":  117,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\SpecializedCollections.Empty.Enumerator%601.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  25,
+"endLine":  24,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\SpecializedCollections.Empty.Enumerator.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  25,
+"endLine":  24,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReference\\ModuleMetadata.cs",
+"region":  {
+"startLine":  243,
+"startColumn":  21,
+"endLine":  243,
+"endColumn":  79
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\InheritedTypeParameter.cs",
+"region":  {
+"startLine":  280,
+"startColumn":  19,
+"endLine":  280,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\InheritedTypeParameter.cs",
+"region":  {
+"startLine":  285,
+"startColumn":  19,
+"endLine":  285,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\InheritedTypeParameter.cs",
+"region":  {
+"startLine":  290,
+"startColumn":  19,
+"endLine":  290,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\InheritedTypeParameter.cs",
+"region":  {
+"startLine":  295,
+"startColumn":  19,
+"endLine":  295,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\InheritedTypeParameter.cs",
+"region":  {
+"startLine":  300,
+"startColumn":  19,
+"endLine":  300,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\ModifiedTypeReference.cs",
+"region":  {
+"startLine":  45,
+"startColumn":  19,
+"endLine":  45,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\ModifiedTypeReference.cs",
+"region":  {
+"startLine":  50,
+"startColumn":  19,
+"endLine":  50,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\ModifiedTypeReference.cs",
+"region":  {
+"startLine":  65,
+"startColumn":  19,
+"endLine":  65,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\RootModuleType.cs",
+"region":  {
+"startLine":  169,
+"startColumn":  19,
+"endLine":  169,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\RootModuleType.cs",
+"region":  {
+"startLine":  182,
+"startColumn":  19,
+"endLine":  182,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\RootModuleType.cs",
+"region":  {
+"startLine":  192,
+"startColumn":  19,
+"endLine":  192,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\RootModuleType.cs",
+"region":  {
+"startLine":  197,
+"startColumn":  19,
+"endLine":  197,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\RootModuleType.cs",
+"region":  {
+"startLine":  212,
+"startColumn":  19,
+"endLine":  212,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ReferenceManager\\AssemblyDataForAssemblyBeingBuilt.cs",
+"region":  {
+"startLine":  70,
+"startColumn":  21,
+"endLine":  70,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ReferenceManager\\AssemblyDataForAssemblyBeingBuilt.cs",
+"region":  {
+"startLine":  111,
+"startColumn":  21,
+"endLine":  111,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\PlatformInvokeInformation.cs",
+"region":  {
+"startLine":  80,
+"startColumn":  17,
+"endLine":  80,
+"endColumn":  66
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\TypedConstant.cs",
+"region":  {
+"startLine":  73,
+"startColumn":  21,
+"endLine":  73,
+"endColumn":  108
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\TypedConstant.cs",
+"region":  {
+"startLine":  89,
+"startColumn":  21,
+"endLine":  89,
+"endColumn":  111
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\InternalSyntax\\SyntaxList.cs",
+"region":  {
+"startLine":  150,
+"startColumn":  17,
+"endLine":  150,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\InternalSyntax\\SyntaxList.cs",
+"region":  {
+"startLine":  158,
+"startColumn":  17,
+"endLine":  158,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxList.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  17,
+"endLine":  20,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxTokenList.Enumerator.cs",
+"region":  {
+"startLine":  106,
+"startColumn":  25,
+"endLine":  106,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxTokenList.Reversed.cs",
+"region":  {
+"startLine":  119,
+"startColumn":  29,
+"endLine":  119,
+"endColumn":  67
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxTriviaList.Enumerator.cs",
+"region":  {
+"startLine":  106,
+"startColumn":  25,
+"endLine":  106,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxTriviaList.Reversed.cs",
+"region":  {
+"startLine":  118,
+"startColumn":  29,
+"endLine":  118,
+"endColumn":  67
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Text\\SourceTextStream.cs",
+"region":  {
+"startLine":  67,
+"startColumn":  19,
+"endLine":  67,
+"endColumn":  53
+}
+}
+}
+]
+}

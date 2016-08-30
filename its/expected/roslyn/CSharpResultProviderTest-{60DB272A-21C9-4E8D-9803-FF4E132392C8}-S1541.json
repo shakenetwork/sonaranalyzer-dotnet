@@ -1,0 +1,95 @@
+{
+"issues":  [
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 32 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\SymbolDisplay\\ObjectDisplay.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  30,
+"endLine":  37,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 20 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\SymbolDisplay\\ObjectDisplay.cs",
+"region":  {
+"startLine":  154,
+"startColumn":  29,
+"endLine":  154,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\SymbolDisplay\\ObjectDisplay.cs",
+"region":  {
+"startLine":  215,
+"startColumn":  30,
+"endLine":  215,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ResultProvider\\CSharpFormatter.cs",
+"region":  {
+"startLine":  44,
+"startColumn":  31,
+"endLine":  44,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 37 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ResultProvider\\Helpers\\TypeExtensions.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  32,
+"endLine":  17,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Test\\ResultProvider\\ValueFormattingTests.cs",
+"region":  {
+"startLine":  81,
+"startColumn":  21,
+"endLine":  81,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Test\\ResultProvider\\ValueFormattingTests.cs",
+"region":  {
+"startLine":  149,
+"startColumn":  21,
+"endLine":  149,
+"endColumn":  27
+}
+}
+}
+]
+}

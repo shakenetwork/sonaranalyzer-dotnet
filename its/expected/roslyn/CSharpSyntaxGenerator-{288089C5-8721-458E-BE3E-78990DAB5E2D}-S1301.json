@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\CSharpSyntaxGenerator\\SourceWriter.cs",
+"region":  {
+"startLine":  387,
+"startColumn":  13,
+"endLine":  387,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\CSharpSyntaxGenerator\\SourceWriter.cs",
+"region":  {
+"startLine":  398,
+"startColumn":  13,
+"endLine":  398,
+"endColumn":  19
+}
+}
+}
+]
+}

@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S2333",
+"message":  "\"unsafe\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\MetadataVisualizer\\Program.cs",
+"region":  {
+"startLine":  147,
+"startColumn":  13,
+"endLine":  147,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"unsafe\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\MetadataVisualizer\\Program.cs",
+"region":  {
+"startLine":  190,
+"startColumn":  13,
+"endLine":  190,
+"endColumn":  19
+}
+}
+}
+]
+}

@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S3217",
+"message":  "Either change the type of \"tps\" to \"TypeSymbol\" or iterate on a generic collection of type \"TypeParameterSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\Binders\\WithTypeArgumentsBinder.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  30,
+"endLine":  32,
+"endColumn":  49
+}
+}
+}
+]
+}

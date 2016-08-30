@@ -1,0 +1,979 @@
+{
+"issues":  [
+{
+"id":  "S2357",
+"message":  "Make \"Descriptor\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\CodeFixes\\CodeFixServiceTests.vb",
+"region":  {
+"startLine":  148,
+"startColumn":  29,
+"endLine":  148,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Descriptor\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Diagnostics\\DiagnosticServiceTests.vb",
+"region":  {
+"startLine":  1316,
+"startColumn":  29,
+"endLine":  1316,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"FileName\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\FindReferences\\FindReferencesTests.vb",
+"region":  {
+"startLine":  86,
+"startColumn":  29,
+"endLine":  86,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Spans\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\FindReferences\\FindReferencesTests.vb",
+"region":  {
+"startLine":  87,
+"startColumn":  29,
+"endLine":  87,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Definitions\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\FindReferences\\FindReferencesTests.vb",
+"region":  {
+"startLine":  116,
+"startColumn":  29,
+"endLine":  116,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"References\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\FindReferences\\FindReferencesTests.vb",
+"region":  {
+"startLine":  117,
+"startColumn":  29,
+"endLine":  117,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"checkpoint\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\CSharpCompletionCommandHandlerTests.vb",
+"region":  {
+"startLine":  1462,
+"startColumn":  20,
+"endLine":  1462,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"View\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\QuickInfoControllerTests.vb",
+"region":  {
+"startLine":  221,
+"startColumn":  29,
+"endLine":  221,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Buffer\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\QuickInfoControllerTests.vb",
+"region":  {
+"startLine":  222,
+"startColumn":  29,
+"endLine":  222,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Presenter\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\QuickInfoControllerTests.vb",
+"region":  {
+"startLine":  223,
+"startColumn":  29,
+"endLine":  223,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"AsyncListener\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\QuickInfoControllerTests.vb",
+"region":  {
+"startLine":  224,
+"startColumn":  29,
+"endLine":  224,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"DocumentProvider\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\QuickInfoControllerTests.vb",
+"region":  {
+"startLine":  225,
+"startColumn":  29,
+"endLine":  225,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Provider\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\QuickInfoControllerTests.vb",
+"region":  {
+"startLine":  226,
+"startColumn":  29,
+"endLine":  226,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"View\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\SignatureHelpControllerTests.vb",
+"region":  {
+"startLine":  347,
+"startColumn":  29,
+"endLine":  347,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Buffer\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\SignatureHelpControllerTests.vb",
+"region":  {
+"startLine":  348,
+"startColumn":  29,
+"endLine":  348,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Presenter\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\SignatureHelpControllerTests.vb",
+"region":  {
+"startLine":  349,
+"startColumn":  29,
+"endLine":  349,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"PresenterSession\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\SignatureHelpControllerTests.vb",
+"region":  {
+"startLine":  350,
+"startColumn":  29,
+"endLine":  350,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"AsyncListener\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\SignatureHelpControllerTests.vb",
+"region":  {
+"startLine":  351,
+"startColumn":  29,
+"endLine":  351,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"DocumentProvider\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\SignatureHelpControllerTests.vb",
+"region":  {
+"startLine":  352,
+"startColumn":  29,
+"endLine":  352,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Provider\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\SignatureHelpControllerTests.vb",
+"region":  {
+"startLine":  353,
+"startColumn":  29,
+"endLine":  353,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TriggerSpan\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\TestCompletionPresenterSession.vb",
+"region":  {
+"startLine":  14,
+"startColumn":  16,
+"endLine":  14,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"PresentationItems\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\TestCompletionPresenterSession.vb",
+"region":  {
+"startLine":  15,
+"startColumn":  16,
+"endLine":  15,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SelectedItem\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\TestCompletionPresenterSession.vb",
+"region":  {
+"startLine":  16,
+"startColumn":  16,
+"endLine":  16,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsSoftSelected\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\TestCompletionPresenterSession.vb",
+"region":  {
+"startLine":  17,
+"startColumn":  16,
+"endLine":  17,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SuggestionModeItem\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\TestCompletionPresenterSession.vb",
+"region":  {
+"startLine":  18,
+"startColumn":  16,
+"endLine":  18,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TriggerSpan\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\TestSignatureHelpPresenterSession.vb",
+"region":  {
+"startLine":  13,
+"startColumn":  16,
+"endLine":  13,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SignatureHelpItems\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\TestSignatureHelpPresenterSession.vb",
+"region":  {
+"startLine":  14,
+"startColumn":  16,
+"endLine":  14,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SelectedItem\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\TestSignatureHelpPresenterSession.vb",
+"region":  {
+"startLine":  15,
+"startColumn":  16,
+"endLine":  15,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SelectedParameter\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\TestSignatureHelpPresenterSession.vb",
+"region":  {
+"startLine":  16,
+"startColumn":  16,
+"endLine":  16,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Items\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Peek\\PeekTests.vb",
+"region":  {
+"startLine":  286,
+"startColumn":  29,
+"endLine":  286,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"_canNavigateToLineAndOffset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  11,
+"startColumn":  16,
+"endLine":  11,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"_canNavigateToPosition\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  12,
+"startColumn":  16,
+"endLine":  12,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"_canNavigateToSpan\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  13,
+"startColumn":  16,
+"endLine":  13,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"_triedNavigationToLineAndOffset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  15,
+"startColumn":  16,
+"endLine":  15,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"_triedNavigationToPosition\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  16,
+"startColumn":  16,
+"endLine":  16,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"_triedNavigationToSpan\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  17,
+"startColumn":  16,
+"endLine":  17,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"_documentId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  19,
+"startColumn":  16,
+"endLine":  19,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"_options\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  20,
+"startColumn":  16,
+"endLine":  20,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"_line\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  21,
+"startColumn":  16,
+"endLine":  21,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"_offset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  22,
+"startColumn":  16,
+"endLine":  22,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"_span\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  23,
+"startColumn":  16,
+"endLine":  23,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"_position\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  24,
+"startColumn":  16,
+"endLine":  24,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"_positionVirtualSpace\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  25,
+"startColumn":  16,
+"endLine":  25,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ProvidedDocumentId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockDocumentNavigationServiceProvider.vb",
+"region":  {
+"startLine":  26,
+"startColumn":  20,
+"endLine":  26,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ProvidedTextSpan\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockDocumentNavigationServiceProvider.vb",
+"region":  {
+"startLine":  27,
+"startColumn":  20,
+"endLine":  27,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ProvidedLineNumber\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockDocumentNavigationServiceProvider.vb",
+"region":  {
+"startLine":  28,
+"startColumn":  20,
+"endLine":  28,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ProvidedOffset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockDocumentNavigationServiceProvider.vb",
+"region":  {
+"startLine":  29,
+"startColumn":  20,
+"endLine":  29,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ProvidedPosition\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockDocumentNavigationServiceProvider.vb",
+"region":  {
+"startLine":  30,
+"startColumn":  20,
+"endLine":  30,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ProvidedVirtualSpace\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockDocumentNavigationServiceProvider.vb",
+"region":  {
+"startLine":  31,
+"startColumn":  20,
+"endLine":  31,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ProvidedOptions\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockDocumentNavigationServiceProvider.vb",
+"region":  {
+"startLine":  32,
+"startColumn":  20,
+"endLine":  32,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"CanNavigateToLineAndOffsetReturnValue\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockDocumentNavigationServiceProvider.vb",
+"region":  {
+"startLine":  34,
+"startColumn":  20,
+"endLine":  34,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"CanNavigateToPositionReturnValue\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockDocumentNavigationServiceProvider.vb",
+"region":  {
+"startLine":  35,
+"startColumn":  20,
+"endLine":  35,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"CanNavigateToSpanReturnValue\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockDocumentNavigationServiceProvider.vb",
+"region":  {
+"startLine":  36,
+"startColumn":  20,
+"endLine":  36,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TryNavigateToLineAndOffsetReturnValue\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockDocumentNavigationServiceProvider.vb",
+"region":  {
+"startLine":  38,
+"startColumn":  20,
+"endLine":  38,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TryNavigateToPositionReturnValue\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockDocumentNavigationServiceProvider.vb",
+"region":  {
+"startLine":  39,
+"startColumn":  20,
+"endLine":  39,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TryNavigateToSpanReturnValue\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockDocumentNavigationServiceProvider.vb",
+"region":  {
+"startLine":  40,
+"startColumn":  20,
+"endLine":  40,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TryNavigateToSymbolProvidedSymbol\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockSymbolNavigationServiceProvider.vb",
+"region":  {
+"startLine":  26,
+"startColumn":  20,
+"endLine":  26,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TryNavigateToSymbolProvidedProject\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockSymbolNavigationServiceProvider.vb",
+"region":  {
+"startLine":  27,
+"startColumn":  20,
+"endLine":  27,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TryNavigateToSymbolProvidedOptions\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockSymbolNavigationServiceProvider.vb",
+"region":  {
+"startLine":  28,
+"startColumn":  20,
+"endLine":  28,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TrySymbolNavigationNotifyProvidedSymbol\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockSymbolNavigationServiceProvider.vb",
+"region":  {
+"startLine":  30,
+"startColumn":  20,
+"endLine":  30,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TrySymbolNavigationNotifyProvidedSolution\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockSymbolNavigationServiceProvider.vb",
+"region":  {
+"startLine":  31,
+"startColumn":  20,
+"endLine":  31,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TrySymbolNavigationNotifyReturnValue\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockSymbolNavigationServiceProvider.vb",
+"region":  {
+"startLine":  32,
+"startColumn":  20,
+"endLine":  32,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"WouldNavigateToSymbolProvidedSymbol\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockSymbolNavigationServiceProvider.vb",
+"region":  {
+"startLine":  34,
+"startColumn":  20,
+"endLine":  34,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"WouldNavigateToSymbolProvidedSolution\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockSymbolNavigationServiceProvider.vb",
+"region":  {
+"startLine":  35,
+"startColumn":  20,
+"endLine":  35,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"WouldNavigateToSymbolReturnValue\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockSymbolNavigationServiceProvider.vb",
+"region":  {
+"startLine":  36,
+"startColumn":  20,
+"endLine":  36,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NavigationFilePathReturnValue\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockSymbolNavigationServiceProvider.vb",
+"region":  {
+"startLine":  37,
+"startColumn":  20,
+"endLine":  37,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NavigationLineNumberReturnValue\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockSymbolNavigationServiceProvider.vb",
+"region":  {
+"startLine":  38,
+"startColumn":  20,
+"endLine":  38,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NavigationCharOffsetReturnValue\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\MockSymbolNavigationServiceProvider.vb",
+"region":  {
+"startLine":  39,
+"startColumn":  20,
+"endLine":  39,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"MessageText\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\TestNotificationService.vb",
+"region":  {
+"startLine":  9,
+"startColumn":  16,
+"endLine":  9,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"MessageTitle\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\TestNotificationService.vb",
+"region":  {
+"startLine":  10,
+"startColumn":  16,
+"endLine":  10,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"MessageSeverity\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\TestNotificationService.vb",
+"region":  {
+"startLine":  11,
+"startColumn":  16,
+"endLine":  11,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ConfirmBoxText\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\TestNotificationService.vb",
+"region":  {
+"startLine":  13,
+"startColumn":  16,
+"endLine":  13,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ConfirmBoxTitle\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\TestNotificationService.vb",
+"region":  {
+"startLine":  14,
+"startColumn":  16,
+"endLine":  14,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ConfirmBoxSeverity\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\TestNotificationService.vb",
+"region":  {
+"startLine":  15,
+"startColumn":  16,
+"endLine":  15,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"DesiredConfirmBoxResult\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\TestNotificationService.vb",
+"region":  {
+"startLine":  17,
+"startColumn":  16,
+"endLine":  17,
+"endColumn":  39
+}
+}
+}
+]
+}

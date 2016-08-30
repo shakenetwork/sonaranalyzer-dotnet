@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"elementIndex\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\Collections\\AbstractCodeElementCollection.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  30,
+"endLine":  42,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"needMoreTime\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\FileCodeModel_Events.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  30,
+"endLine":  21,
+"endColumn":  37
+}
+}
+}
+]
+}

@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S3246",
+"message":  "Add the \"in\" keyword to parameter \"TResult\" to make it \"contravariant\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\ResultProvider.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  46,
+"endLine":  21,
+"endColumn":  53
+}
+}
+}
+]
+}

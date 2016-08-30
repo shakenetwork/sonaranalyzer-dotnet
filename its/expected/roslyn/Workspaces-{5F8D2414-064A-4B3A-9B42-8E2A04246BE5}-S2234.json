@@ -1,0 +1,69 @@
+{
+"issues":  [
+{
+"id":  "S2234",
+"message":  "Parameters to \"Compare\" have the same names but not the same order as the method arguments.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\IComparerExtensions.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  34,
+"endLine":  31,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2234",
+"message":  "Parameters to \"TryGetValue\" have the same names but not the same order as the method arguments.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\BidirectionalMap.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  33,
+"endLine":  36,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2234",
+"message":  "Parameters to \"TryGetValue\" have the same names but not the same order as the method arguments.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\BidirectionalMap.cs",
+"region":  {
+"startLine":  65,
+"startColumn":  31,
+"endLine":  65,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2234",
+"message":  "Parameters to \"Add\" have the same names but not the same order as the method arguments.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\BidirectionalMap.cs",
+"region":  {
+"startLine":  79,
+"startColumn":  30,
+"endLine":  79,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2234",
+"message":  "Parameters to \"GetEditDistanceWorker\" have the same names but not the same order as the method arguments.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\EditDistance.cs",
+"region":  {
+"startLine":  178,
+"startColumn":  19,
+"endLine":  178,
+"endColumn":  40
+}
+}
+}
+]
+}

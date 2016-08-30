@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"s_DisposalCount\", the compiler will do that for you.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\Host\\WorkspaceServices\\TestTemporaryStorageService.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  47,
+"endLine":  33,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"s_DisposalCount\", the compiler will do that for you.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\Host\\WorkspaceServices\\TestTemporaryStorageService.cs",
+"region":  {
+"startLine":  84,
+"startColumn":  47,
+"endLine":  84,
+"endColumn":  50
+}
+}
+}
+]
+}

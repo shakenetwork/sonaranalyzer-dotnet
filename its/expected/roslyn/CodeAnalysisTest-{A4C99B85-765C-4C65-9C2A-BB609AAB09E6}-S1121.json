@@ -1,0 +1,134 @@
+{
+"issues":  [
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"a1[i]\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Collections\\BitArrayTests.cs",
+"region":  {
+"startLine":  84,
+"startColumn":  31,
+"endLine":  84,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"a2[i]\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Collections\\BitArrayTests.cs",
+"region":  {
+"startLine":  85,
+"startColumn":  31,
+"endLine":  85,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"a1[i]\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Collections\\BitArrayTests.cs",
+"region":  {
+"startLine":  129,
+"startColumn":  31,
+"endLine":  129,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"a2[i]\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Collections\\BitArrayTests.cs",
+"region":  {
+"startLine":  134,
+"startColumn":  31,
+"endLine":  134,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"m1\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\AssemblyMetadataTests.cs",
+"region":  {
+"startLine":  68,
+"startColumn":  20,
+"endLine":  68,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"m2\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\AssemblyMetadataTests.cs",
+"region":  {
+"startLine":  69,
+"startColumn":  20,
+"endLine":  69,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"m3\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\AssemblyMetadataTests.cs",
+"region":  {
+"startLine":  70,
+"startColumn":  20,
+"endLine":  70,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"m1\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\AssemblyMetadataTests.cs",
+"region":  {
+"startLine":  84,
+"startColumn":  20,
+"endLine":  84,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"m2\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\AssemblyMetadataTests.cs",
+"region":  {
+"startLine":  85,
+"startColumn":  20,
+"endLine":  85,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"m3\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\AssemblyMetadataTests.cs",
+"region":  {
+"startLine":  86,
+"startColumn":  20,
+"endLine":  86,
+"endColumn":  21
+}
+}
+}
+]
+}

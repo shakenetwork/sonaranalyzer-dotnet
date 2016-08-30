@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1940",
+"message":  "Use the opposite operator (\"\u003c=\") instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp.Desktop\\Extensions.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  17,
+"endLine":  42,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1940",
+"message":  "Use the opposite operator (\"!=\") instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp.Desktop\\Extensions.cs",
+"region":  {
+"startLine":  381,
+"startColumn":  21,
+"endLine":  381,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1940",
+"message":  "Use the opposite operator (\"!=\") instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp.Desktop\\Extensions.cs",
+"region":  {
+"startLine":  387,
+"startColumn":  21,
+"endLine":  387,
+"endColumn":  57
+}
+}
+}
+]
+}

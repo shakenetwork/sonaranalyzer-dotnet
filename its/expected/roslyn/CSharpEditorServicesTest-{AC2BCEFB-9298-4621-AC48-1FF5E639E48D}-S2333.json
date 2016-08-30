@@ -1,0 +1,147 @@
+{
+"issues":  [
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Classification\\SemanticClassifierTests.cs",
+"region":  {
+"startLine":  30,
+"startColumn":  12,
+"endLine":  30,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  12,
+"endLine":  15,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\AddUsing\\AddUsingTests.cs",
+"region":  {
+"startLine":  2358,
+"startColumn":  16,
+"endLine":  2358,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\Async\\AddAwaitTests.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  12,
+"endLine":  13,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\Async\\ChangeToAsyncTests.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  12,
+"endLine":  13,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\FixAllProvider\\BatchFixerTests.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  12,
+"endLine":  16,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateConstructor\\GenerateConstructorTests.cs",
+"region":  {
+"startLine":  622,
+"startColumn":  16,
+"endLine":  622,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\MakeMethodAsynchronous\\MakeMethodAsynchronousTests.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  12,
+"endLine":  13,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\MockDiagnosticAnalyzerTests.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  12,
+"endLine":  15,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\Suppression\\SuppressionTests.cs",
+"region":  {
+"startLine":  606,
+"startColumn":  16,
+"endLine":  606,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  12,
+"endLine":  20,
+"endColumn":  19
+}
+}
+}
+]
+}

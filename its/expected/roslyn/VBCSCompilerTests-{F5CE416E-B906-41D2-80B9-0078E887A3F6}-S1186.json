@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Server\\VBCSCompilerTests\\AnalyzerConsistencyCheckerTests.cs",
+"region":  {
+"startLine":  93,
+"startColumn":  25,
+"endLine":  93,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Server\\VBCSCompilerTests\\AnalyzerConsistencyCheckerTests.cs",
+"region":  {
+"startLine":  113,
+"startColumn":  25,
+"endLine":  113,
+"endColumn":  46
+}
+}
+}
+]
+}

@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S3604",
+"message":  "Remove the member initializer, all constructors set an initial value for the member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\CodeGen\\Optimizer.cs",
+"region":  {
+"startLine":  397,
+"startColumn":  75,
+"endLine":  398,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S3604",
+"message":  "Remove the member initializer, all constructors set an initial value for the member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\StateMachineRewriter\\MethodToStateMachineRewriter.cs",
+"region":  {
+"startLine":  69,
+"startColumn":  41,
+"endLine":  69,
+"endColumn":  47
+}
+}
+}
+]
+}

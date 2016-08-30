@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"uint\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\ProjectSystem\\Legacy\\AbstractLegacyProject.cs",
+"region":  {
+"startLine":  320,
+"startColumn":  40,
+"endLine":  320,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"uint\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\ProjectSystem\\Legacy\\AbstractLegacyProject.cs",
+"region":  {
+"startLine":  336,
+"startColumn":  40,
+"endLine":  336,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"VSTASKPRIORITY\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\TaskList\\ProjectExternalErrorReporter.cs",
+"region":  {
+"startLine":  164,
+"startColumn":  29,
+"endLine":  164,
+"endColumn":  43
+}
+}
+}
+]
+}

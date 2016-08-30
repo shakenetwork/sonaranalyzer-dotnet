@@ -1,0 +1,147 @@
+{
+"issues":  [
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\ExpressionEvaluatorFatalError.cs",
+"region":  {
+"startLine":  38,
+"startColumn":  33,
+"endLine":  38,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\Expansion\\MemberExpansion.cs",
+"region":  {
+"startLine":  180,
+"startColumn":  29,
+"endLine":  180,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\Formatter.cs",
+"region":  {
+"startLine":  206,
+"startColumn":  29,
+"endLine":  206,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\Formatter.TypeNames.cs",
+"region":  {
+"startLine":  218,
+"startColumn":  25,
+"endLine":  218,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\Helpers\\DynamicHelpers.cs",
+"region":  {
+"startLine":  29,
+"startColumn":  25,
+"endLine":  29,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\Helpers\\MemberAndDeclarationInfo.cs",
+"region":  {
+"startLine":  196,
+"startColumn":  25,
+"endLine":  196,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\Helpers\\TypeHelpers.cs",
+"region":  {
+"startLine":  80,
+"startColumn":  25,
+"endLine":  80,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\Helpers\\TypeHelpers.cs",
+"region":  {
+"startLine":  101,
+"startColumn":  25,
+"endLine":  101,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\Helpers\\TypeHelpers.cs",
+"region":  {
+"startLine":  110,
+"startColumn":  25,
+"endLine":  110,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Test\\ResultProvider\\Debugger\\Engine\\DkmClrValue.cs",
+"region":  {
+"startLine":  276,
+"startColumn":  25,
+"endLine":  276,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Test\\ResultProvider\\Debugger\\Engine\\DkmClrValue.cs",
+"region":  {
+"startLine":  313,
+"startColumn":  25,
+"endLine":  313,
+"endColumn":  27
+}
+}
+}
+]
+}

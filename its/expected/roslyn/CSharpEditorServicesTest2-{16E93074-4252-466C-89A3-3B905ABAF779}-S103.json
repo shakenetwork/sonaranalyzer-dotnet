@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S103",
+"message":  "Split this 306 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest2\\Recommendations\\NamespaceKeywordRecommenderTests.cs",
+"region":  {
+"startLine":  321,
+"startColumn":  1,
+"endLine":  321,
+"endColumn":  307
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 306 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest2\\Recommendations\\NamespaceKeywordRecommenderTests.cs",
+"region":  {
+"startLine":  334,
+"startColumn":  1,
+"endLine":  334,
+"endColumn":  307
+}
+}
+}
+]
+}

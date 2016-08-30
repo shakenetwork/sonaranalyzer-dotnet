@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"ResultTests\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Perf\\Utilities\\TestUtilities.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  34,
+"endLine":  19,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"Logger\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Perf\\Utilities\\TestUtilities.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  31,
+"endLine":  23,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"IsVerbose\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Perf\\Utilities\\TestUtilities.cs",
+"region":  {
+"startLine":  27,
+"startColumn":  28,
+"endLine":  27,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"IsRunnerAttached\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Perf\\Utilities\\TestUtilities.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  28,
+"endLine":  31,
+"endColumn":  44
+}
+}
+}
+]
+}

@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"reference\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp.Desktop\\CSharpTestBase.cs",
+"region":  {
+"startLine":  643,
+"startColumn":  41,
+"endLine":  643,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"symbolInfo\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\CompilationTestUtils.cs",
+"region":  {
+"startLine":  172,
+"startColumn":  35,
+"endLine":  172,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"symbolInfo\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\CompilationTestUtils.cs",
+"region":  {
+"startLine":  235,
+"startColumn":  35,
+"endLine":  235,
+"endColumn":  53
+}
+}
+}
+]
+}

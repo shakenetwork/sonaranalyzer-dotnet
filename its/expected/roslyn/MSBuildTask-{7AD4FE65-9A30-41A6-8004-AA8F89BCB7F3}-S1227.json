@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\MSBuildTask\\CommandLineBuilderExtension.cs",
+"region":  {
+"startLine":  258,
+"startColumn":  37,
+"endLine":  258,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Shared\\DesktopBuildClient.cs",
+"region":  {
+"startLine":  367,
+"startColumn":  21,
+"endLine":  367,
+"endColumn":  27
+}
+}
+}
+]
+}

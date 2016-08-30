@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S2326",
+"message":  "\"TLanguageKindEnum\" is not used in the class.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\Analyzers\\QualifyMemberAccessDiagnosticAnalyzerBase.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  71,
+"endLine":  13,
+"endColumn":  88
+}
+}
+},
+{
+"id":  "S2326",
+"message":  "\"TSimpleNameSyntax\" is not used in the class.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateMember\\AbstractGenerateMemberService.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  67,
+"endLine":  11,
+"endColumn":  84
+}
+}
+}
+]
+}

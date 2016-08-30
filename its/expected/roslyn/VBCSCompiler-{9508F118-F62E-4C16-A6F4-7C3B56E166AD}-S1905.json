@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"int\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\NativeMethods.cs",
+"region":  {
+"startLine":  49,
+"startColumn":  69,
+"endLine":  49,
+"endColumn":  72
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"int\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Server\\VBCSCompiler\\MemoryHelper.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  28,
+"endLine":  18,
+"endColumn":  31
+}
+}
+}
+]
+}

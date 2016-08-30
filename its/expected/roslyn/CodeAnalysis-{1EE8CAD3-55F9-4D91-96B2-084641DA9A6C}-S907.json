@@ -1,0 +1,368 @@
+{
+"issues":  [
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ILBuilder.cs",
+"region":  {
+"startLine":  284,
+"startColumn":  21,
+"endLine":  284,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Collections\\SmallDictionary.cs",
+"region":  {
+"startLine":  211,
+"startColumn":  21,
+"endLine":  211,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CommandLine\\ErrorLogger.cs",
+"region":  {
+"startLine":  308,
+"startColumn":  21,
+"endLine":  308,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Diagnostic\\DiagnosticFormatter.cs",
+"region":  {
+"startLine":  39,
+"startColumn":  25,
+"endLine":  39,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\StringTable.cs",
+"region":  {
+"startLine":  545,
+"startColumn":  21,
+"endLine":  545,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\StringTable.cs",
+"region":  {
+"startLine":  630,
+"startColumn":  21,
+"endLine":  630,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\TextKeyedCache.cs",
+"region":  {
+"startLine":  230,
+"startColumn":  21,
+"endLine":  230,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MemberDescriptor.cs",
+"region":  {
+"startLine":  173,
+"startColumn":  42,
+"endLine":  173,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\MetadataDecoder.cs",
+"region":  {
+"startLine":  768,
+"startColumn":  29,
+"endLine":  768,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\MetadataHelpers.cs",
+"region":  {
+"startLine":  222,
+"startColumn":  37,
+"endLine":  222,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\MetadataHelpers.cs",
+"region":  {
+"startLine":  247,
+"startColumn":  33,
+"endLine":  247,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\MetadataHelpers.cs",
+"region":  {
+"startLine":  256,
+"startColumn":  25,
+"endLine":  256,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\MetadataHelpers.cs",
+"region":  {
+"startLine":  739,
+"startColumn":  29,
+"endLine":  739,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\TypeNameSerializer.cs",
+"region":  {
+"startLine":  46,
+"startColumn":  17,
+"endLine":  46,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\TypeNameSerializer.cs",
+"region":  {
+"startLine":  56,
+"startColumn":  17,
+"endLine":  56,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\TypeNameSerializer.cs",
+"region":  {
+"startLine":  66,
+"startColumn":  17,
+"endLine":  66,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\TypeNameSerializer.cs",
+"region":  {
+"startLine":  80,
+"startColumn":  17,
+"endLine":  80,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\TypeNameSerializer.cs",
+"region":  {
+"startLine":  111,
+"startColumn":  17,
+"endLine":  111,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\TypeNameSerializer.cs",
+"region":  {
+"startLine":  121,
+"startColumn":  17,
+"endLine":  121,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\MarshalAsAttributeDecoder.cs",
+"region":  {
+"startLine":  244,
+"startColumn":  29,
+"endLine":  244,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\GreenNode.cs",
+"region":  {
+"startLine":  911,
+"startColumn":  25,
+"endLine":  911,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\InternalSyntax\\SyntaxDiagnosticInfoList.cs",
+"region":  {
+"startLine":  90,
+"startColumn":  29,
+"endLine":  90,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxNode.cs",
+"region":  {
+"startLine":  968,
+"startColumn":  29,
+"endLine":  968,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxNode.cs",
+"region":  {
+"startLine":  983,
+"startColumn":  45,
+"endLine":  983,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxNode.cs",
+"region":  {
+"startLine":  1002,
+"startColumn":  45,
+"endLine":  1002,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Text\\LargeText.cs",
+"region":  {
+"startLine":  260,
+"startColumn":  29,
+"endLine":  260,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Text\\LargeText.cs",
+"region":  {
+"startLine":  270,
+"startColumn":  29,
+"endLine":  270,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\CustomDebugInfoReader.cs",
+"region":  {
+"startLine":  344,
+"startColumn":  29,
+"endLine":  344,
+"endColumn":  33
+}
+}
+}
+]
+}

@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"i\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\TestUtilities\\VisualStudioSendKeys.cs",
+"region":  {
+"startLine":  136,
+"startColumn":  54,
+"endLine":  136,
+"endColumn":  55
+}
+}
+}
+]
+}

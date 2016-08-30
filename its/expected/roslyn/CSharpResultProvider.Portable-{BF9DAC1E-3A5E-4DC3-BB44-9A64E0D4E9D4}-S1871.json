@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"225\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\CharacterInfo.cs",
+"region":  {
+"startLine":  228,
+"startColumn":  17,
+"endLine":  230,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"975\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\SyntaxKindFacts.cs",
+"region":  {
+"startLine":  977,
+"startColumn":  17,
+"endLine":  977,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"949\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\SyntaxKindFacts.cs",
+"region":  {
+"startLine":  978,
+"startColumn":  17,
+"endLine":  978,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"1228\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\SyntaxKindFacts.cs",
+"region":  {
+"startLine":  1580,
+"startColumn":  17,
+"endLine":  1581,
+"endColumn":  33
+}
+}
+}
+]
+}

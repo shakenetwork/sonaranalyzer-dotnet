@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S3655",
+"message":  "\"range\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Text\\Extensions.SnapshotSourceText.cs",
+"region":  {
+"startLine":  412,
+"startColumn":  24,
+"endLine":  412,
+"endColumn":  35
+}
+}
+}
+]
+}

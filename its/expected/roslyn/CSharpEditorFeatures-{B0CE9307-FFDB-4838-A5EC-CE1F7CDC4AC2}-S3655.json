@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S3655",
+"message":  "\"caretPoint\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\EventHookup\\EventHookupSessionManager.cs",
+"region":  {
+"startLine":  142,
+"startColumn":  42,
+"endLine":  142,
+"endColumn":  58
+}
+}
+}
+]
+}

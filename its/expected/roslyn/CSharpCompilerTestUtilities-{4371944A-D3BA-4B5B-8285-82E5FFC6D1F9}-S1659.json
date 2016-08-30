@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S1659",
+"message":  "Declare \"Line\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\DiagnosticTestUtilities.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  26,
+"endLine":  21,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"Column\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\DiagnosticTestUtilities.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  32,
+"endLine":  21,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"w\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\ScriptTestFixtures.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  31,
+"endLine":  18,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"w\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\ScriptTestFixtures.cs",
+"region":  {
+"startLine":  44,
+"startColumn":  31,
+"endLine":  44,
+"endColumn":  32
+}
+}
+}
+]
+}

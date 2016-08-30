@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1944",
+"message":  "Review this cast; in this project there\u0027s no type that implements both \"IClassifier\" and \"IDisposable\".",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\EditorFeatures\\Core\\Implementation\\Interactive\\InertClassifierProvider.cs",
+"region":  {
+"startLine":  56,
+"startColumn":  48,
+"endLine":  56,
+"endColumn":  59
+}
+}
+}
+]
+}

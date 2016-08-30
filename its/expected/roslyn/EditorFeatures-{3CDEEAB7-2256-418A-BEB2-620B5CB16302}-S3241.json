@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S3241",
+"message":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\CommentSelection\\CommentUncommentSelectionCommandHandler.cs",
+"region":  {
+"startLine":  248,
+"startColumn":  17,
+"endLine":  248,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3241",
+"message":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\Presentation\\CompletionPresenterSession.cs",
+"region":  {
+"startLine":  185,
+"startColumn":  17,
+"endLine":  185,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3241",
+"message":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\SignatureHelp\\Presentation\\SignatureHelpPresenter.SignatureHelpPresenterSession.cs",
+"region":  {
+"startLine":  187,
+"startColumn":  21,
+"endLine":  187,
+"endColumn":  25
+}
+}
+}
+]
+}

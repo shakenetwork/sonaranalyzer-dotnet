@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S100",
+"message":  "Rename method \"IsInGAC\" to match camel case naming rules, consider using \"IsInGac\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\MSBuild\\ProjectFile\\ProjectFile.cs",
+"region":  {
+"startLine":  499,
+"startColumn":  22,
+"endLine":  499,
+"endColumn":  29
+}
+}
+}
+]
+}

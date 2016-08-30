@@ -1,0 +1,277 @@
+{
+"issues":  [
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\ExpressionEvaluatorFatalError.cs",
+"region":  {
+"startLine":  58,
+"startColumn":  30,
+"endLine":  58,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\Expansion\\DynamicViewExpansion.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  46,
+"endLine":  15,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 25 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\Expansion\\MemberExpansion.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  35,
+"endLine":  23,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\Formatter.cs",
+"region":  {
+"startLine":  178,
+"startColumn":  22,
+"endLine":  178,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\Formatter.TypeNames.cs",
+"region":  {
+"startLine":  111,
+"startColumn":  22,
+"endLine":  111,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 26 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\Formatter.Values.cs",
+"region":  {
+"startLine":  27,
+"startColumn":  24,
+"endLine":  27,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\Formatter.Values.cs",
+"region":  {
+"startLine":  159,
+"startColumn":  24,
+"endLine":  159,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 18 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\Formatter.Values.cs",
+"region":  {
+"startLine":  306,
+"startColumn":  32,
+"endLine":  306,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\Formatter.Values.cs",
+"region":  {
+"startLine":  336,
+"startColumn":  24,
+"endLine":  336,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\Helpers\\TypeHelpers.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  30,
+"endLine":  25,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\Helpers\\TypeHelpers.cs",
+"region":  {
+"startLine":  178,
+"startColumn":  30,
+"endLine":  178,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\Helpers\\TypeHelpers.cs",
+"region":  {
+"startLine":  367,
+"startColumn":  29,
+"endLine":  367,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\Helpers\\TypeHelpers.cs",
+"region":  {
+"startLine":  591,
+"startColumn":  30,
+"endLine":  591,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\Helpers\\TypeHelpers.cs",
+"region":  {
+"startLine":  733,
+"startColumn":  36,
+"endLine":  733,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\ResultProvider.cs",
+"region":  {
+"startLine":  239,
+"startColumn":  22,
+"endLine":  239,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\ResultProvider.cs",
+"region":  {
+"startLine":  868,
+"startColumn":  28,
+"endLine":  868,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Test\\ResultProvider\\Debugger\\Engine\\DkmClrType.cs",
+"region":  {
+"startLine":  261,
+"startColumn":  60,
+"endLine":  261,
+"endColumn":  91
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Test\\ResultProvider\\Debugger\\Engine\\DkmClrValue.cs",
+"region":  {
+"startLine":  233,
+"startColumn":  21,
+"endLine":  233,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 23 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Test\\ResultProvider\\Debugger\\Engine\\DkmClrValue.cs",
+"region":  {
+"startLine":  377,
+"startColumn":  28,
+"endLine":  377,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Test\\ResultProvider\\Debugger\\MemberInfo\\TypeImpl.cs",
+"region":  {
+"startLine":  207,
+"startColumn":  35,
+"endLine":  207,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Test\\ResultProvider\\ResultProviderTestBase.cs",
+"region":  {
+"startLine":  512,
+"startColumn":  63,
+"endLine":  512,
+"endColumn":  69
+}
+}
+}
+]
+}

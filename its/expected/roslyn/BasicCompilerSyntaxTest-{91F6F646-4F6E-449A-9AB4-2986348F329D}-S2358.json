@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S2358",
+"message":  "Replace this use of \"Not...Is...\" with \"IsNot\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Syntax\\Syntax\\ManualTests.vb",
+"region":  {
+"startLine":  43,
+"startColumn":  25,
+"endLine":  43,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S2358",
+"message":  "Replace this use of \"Not...Is...\" with \"IsNot\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Syntax\\Syntax\\ManualTests.vb",
+"region":  {
+"startLine":  49,
+"startColumn":  25,
+"endLine":  49,
+"endColumn":  52
+}
+}
+}
+]
+}

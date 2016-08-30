@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1450",
+"message":  "Remove the \"_findTarget\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\VisualStudio\\VsInteractiveWindow.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  31,
+"endLine":  42,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_preLanguageCommandFilter\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\VisualStudio\\VsInteractiveWindowCommandFilter.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  35,
+"endLine":  24,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_preEditorCommandFilter\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\VisualStudio\\VsInteractiveWindowCommandFilter.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  35,
+"endLine":  26,
+"endColumn":  58
+}
+}
+}
+]
+}

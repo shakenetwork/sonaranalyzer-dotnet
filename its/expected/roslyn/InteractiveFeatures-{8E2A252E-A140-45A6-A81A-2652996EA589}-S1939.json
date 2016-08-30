@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1939",
+"message":  "\"int\" should not be explicitly used as the underlying type.",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\Features\\Interactive\\Core\\InteractiveHost.Service.cs",
+"region":  {
+"startLine":  866,
+"startColumn":  37,
+"endLine":  866,
+"endColumn":  42
+}
+}
+}
+]
+}

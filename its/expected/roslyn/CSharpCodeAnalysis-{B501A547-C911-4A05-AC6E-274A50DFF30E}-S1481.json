@@ -1,0 +1,615 @@
+{
+"issues":  [
+{
+"id":  "S1481",
+"message":  "Remove this unused \"argLength\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Binder_Expressions.cs",
+"region":  {
+"startLine":  1791,
+"startColumn":  17,
+"endLine":  1791,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"discarded\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Binder_InterpolatedString.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  33,
+"endLine":  37,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"discarded\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Binder_Invocation.cs",
+"region":  {
+"startLine":  1171,
+"startColumn":  33,
+"endLine":  1171,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"unsafeBinder\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Binder_Statements.cs",
+"region":  {
+"startLine":  152,
+"startColumn":  17,
+"endLine":  152,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"argLength\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Binder_Statements.cs",
+"region":  {
+"startLine":  2806,
+"startColumn":  17,
+"endLine":  2806,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"hasErrors\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\ForEachLoopBinder.cs",
+"region":  {
+"startLine":  91,
+"startColumn":  18,
+"endLine":  91,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"switchGoverningType\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\SwitchBinder.cs",
+"region":  {
+"startLine":  571,
+"startColumn":  17,
+"endLine":  571,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"defaultLabelSyntax\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\SwitchBinder_BindPatternSwitch.cs",
+"region":  {
+"startLine":  143,
+"startColumn":  29,
+"endLine":  143,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"parameterKind\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\WithLambdaParametersBinder.cs",
+"region":  {
+"startLine":  123,
+"startColumn":  24,
+"endLine":  123,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"origStack\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\CodeGen\\Optimizer.cs",
+"region":  {
+"startLine":  1407,
+"startColumn":  21,
+"endLine":  1407,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"discarded\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Compiler\\MethodCompiler.cs",
+"region":  {
+"startLine":  481,
+"startColumn":  48,
+"endLine":  481,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"discarded\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\FlowAnalysis\\ControlFlowAnalysis.cs",
+"region":  {
+"startLine":  141,
+"startColumn":  25,
+"endLine":  141,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"returns\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\FlowAnalysis\\ControlFlowPass.cs",
+"region":  {
+"startLine":  171,
+"startColumn":  43,
+"endLine":  171,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"discarded\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\FlowAnalysis\\CSharpDataFlowAnalysis.cs",
+"region":  {
+"startLine":  109,
+"startColumn":  21,
+"endLine":  109,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"discarded\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\FlowAnalysis\\CSharpDataFlowAnalysis.cs",
+"region":  {
+"startLine":  291,
+"startColumn":  25,
+"endLine":  291,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"returns\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\FlowAnalysis\\DataFlowPass.cs",
+"region":  {
+"startLine":  336,
+"startColumn":  43,
+"endLine":  336,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"slot\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\FlowAnalysis\\DataFlowPass.cs",
+"region":  {
+"startLine":  1563,
+"startColumn":  29,
+"endLine":  1563,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"slot\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\FlowAnalysis\\DataFlowPass.cs",
+"region":  {
+"startLine":  1782,
+"startColumn":  17,
+"endLine":  1782,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"slot\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\FlowAnalysis\\DataFlowPass.cs",
+"region":  {
+"startLine":  1999,
+"startColumn":  17,
+"endLine":  1999,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"getEnumerator\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\IteratorRewriter\\IteratorRewriter.cs",
+"region":  {
+"startLine":  355,
+"startColumn":  17,
+"endLine":  355,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"result\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LambdaRewriter\\LambdaRewriter.Analysis.cs",
+"region":  {
+"startLine":  367,
+"startColumn":  21,
+"endLine":  367,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"containingType\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LambdaRewriter\\LambdaRewriter.cs",
+"region":  {
+"startLine":  308,
+"startColumn":  29,
+"endLine":  308,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"numConversions\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_DeconstructionAssignmentOperator.cs",
+"region":  {
+"startLine":  71,
+"startColumn":  17,
+"endLine":  71,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"outParameters\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_DeconstructionAssignmentOperator.cs",
+"region":  {
+"startLine":  228,
+"startColumn":  17,
+"endLine":  228,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"marshalType\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_Event.cs",
+"region":  {
+"startLine":  82,
+"startColumn":  29,
+"endLine":  82,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"syntax\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_Patterns.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  17,
+"endLine":  25,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"inputExpression\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_PatternSwitchStatement.cs",
+"region":  {
+"startLine":  184,
+"startColumn":  29,
+"endLine":  184,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"type\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_PatternSwitchStatement.cs",
+"region":  {
+"startLine":  206,
+"startColumn":  29,
+"endLine":  206,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"components\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\LanguageParser.cs",
+"region":  {
+"startLine":  8480,
+"startColumn":  62,
+"endLine":  8480,
+"endColumn":  72
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"unused\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PEMethodSymbol.cs",
+"region":  {
+"startLine":  446,
+"startColumn":  25,
+"endLine":  446,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"unused\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PEMethodSymbol.cs",
+"region":  {
+"startLine":  459,
+"startColumn":  25,
+"endLine":  459,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"syntaxTree\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\LocalFunctionSymbol.cs",
+"region":  {
+"startLine":  404,
+"startColumn":  17,
+"endLine":  404,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"tree\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceAssemblySymbol.cs",
+"region":  {
+"startLine":  1285,
+"startColumn":  17,
+"endLine":  1285,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"unused\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceAssemblySymbol.cs",
+"region":  {
+"startLine":  1347,
+"startColumn":  25,
+"endLine":  1347,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"unused\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceComplexParameterSymbol.cs",
+"region":  {
+"startLine":  1054,
+"startColumn":  17,
+"endLine":  1054,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"declType\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceLocalSymbol.cs",
+"region":  {
+"startLine":  291,
+"startColumn":  32,
+"endLine":  291,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"discarded\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceMemberContainerSymbol.cs",
+"region":  {
+"startLine":  434,
+"startColumn":  29,
+"endLine":  434,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"tmp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceMemberContainerSymbol.cs",
+"region":  {
+"startLine":  439,
+"startColumn":  33,
+"endLine":  439,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"unused\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceMemberContainerSymbol.cs",
+"region":  {
+"startLine":  1332,
+"startColumn":  18,
+"endLine":  1332,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"discarded\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceMemberFieldSymbol.cs",
+"region":  {
+"startLine":  513,
+"startColumn":  29,
+"endLine":  513,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"unusedType\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceMethodSymbol.cs",
+"region":  {
+"startLine":  697,
+"startColumn":  29,
+"endLine":  697,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"tmp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol_Bases.cs",
+"region":  {
+"startLine":  40,
+"startColumn":  29,
+"endLine":  40,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"tmp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceNamespaceSymbol_Completion.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  33,
+"endLine":  25,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"unused\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceStrictComplexParameterSymbol.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  17,
+"endLine":  37,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"constraintTypes\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceTypeParameterSymbol.cs",
+"region":  {
+"startLine":  278,
+"startColumn":  29,
+"endLine":  278,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"underlyingDefinition\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Tuples\\TupleTypeSymbol.cs",
+"region":  {
+"startLine":  987,
+"startColumn":  17,
+"endLine":  987,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"unused\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\TypeParameterSymbol.cs",
+"region":  {
+"startLine":  383,
+"startColumn":  21,
+"endLine":  383,
+"endColumn":  27
+}
+}
+}
+]
+}

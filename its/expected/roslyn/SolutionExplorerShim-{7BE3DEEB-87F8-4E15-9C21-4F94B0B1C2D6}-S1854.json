@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"selectedObjectCount\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\SolutionExplorerShim\\AnalyzerItemTracker.cs",
+"region":  {
+"startLine":  118,
+"startColumn":  38,
+"endLine":  118,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"project\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\SolutionExplorerShim\\AnalyzerReferenceManager.cs",
+"region":  {
+"startLine":  62,
+"startColumn":  36,
+"endLine":  62,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"project\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\SolutionExplorerShim\\AnalyzersFolderItem\\AnalyzersFolderItem.cs",
+"region":  {
+"startLine":  94,
+"startColumn":  36,
+"endLine":  94,
+"endColumn":  42
+}
+}
+}
+]
+}

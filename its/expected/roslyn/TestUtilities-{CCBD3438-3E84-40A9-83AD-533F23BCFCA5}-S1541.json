@@ -1,0 +1,199 @@
+{
+"issues":  [
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 22 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Assert\\AssertEx.cs",
+"region":  {
+"startLine":  52,
+"startColumn":  39,
+"endLine":  52,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Assert\\AssertXml.cs",
+"region":  {
+"startLine":  125,
+"startColumn":  29,
+"endLine":  125,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Assert\\ClrOnlyFactAttribute.cs",
+"region":  {
+"startLine":  53,
+"startColumn":  31,
+"endLine":  53,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Compilation\\CompilationDifference.cs",
+"region":  {
+"startLine":  150,
+"startColumn":  31,
+"endLine":  150,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Compilation\\CompilationExtensions.cs",
+"region":  {
+"startLine":  171,
+"startColumn":  30,
+"endLine":  171,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 39 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Diagnostics\\DiagnosticDescription.cs",
+"region":  {
+"startLine":  197,
+"startColumn":  30,
+"endLine":  197,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Diagnostics\\DiagnosticDescription.cs",
+"region":  {
+"startLine":  306,
+"startColumn":  32,
+"endLine":  306,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Diagnostics\\DiagnosticDescription.cs",
+"region":  {
+"startLine":  379,
+"startColumn":  30,
+"endLine":  379,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 25 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\MarkedSource\\MarkupTestFile.cs",
+"region":  {
+"startLine":  46,
+"startColumn":  29,
+"endLine":  46,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Metadata\\DynamicAnalysisDataReader.cs",
+"region":  {
+"startLine":  68,
+"startColumn":  16,
+"endLine":  68,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Metadata\\DynamicAnalysisDataReader.cs",
+"region":  {
+"startLine":  137,
+"startColumn":  49,
+"endLine":  137,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Metadata\\ILBuilderVisualizer.cs",
+"region":  {
+"startLine":  47,
+"startColumn":  42,
+"endLine":  47,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 438 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Metadata\\ILBuilderVisualizer.cs",
+"region":  {
+"startLine":  251,
+"startColumn":  31,
+"endLine":  251,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Pdb\\PdbValidation.cs",
+"region":  {
+"startLine":  201,
+"startColumn":  29,
+"endLine":  201,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Syntax\\NodeHelpers.cs",
+"region":  {
+"startLine":  177,
+"startColumn":  29,
+"endLine":  177,
+"endColumn":  36
+}
+}
+}
+]
+}

@@ -1,0 +1,355 @@
+{
+"issues":  [
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeFixes\\AddImport\\CSharpAddImportCodeFixProvider.cs",
+"region":  {
+"startLine":  599,
+"startColumn":  13,
+"endLine":  599,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeFixes\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastCodeFixProvider.cs",
+"region":  {
+"startLine":  74,
+"startColumn":  13,
+"endLine":  74,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\InlineTemporary\\InlineTemporaryCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  239,
+"startColumn":  17,
+"endLine":  239,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\CrefCompletionProvider.cs",
+"region":  {
+"startLine":  327,
+"startColumn":  13,
+"endLine":  327,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\BreakpointSpans.cs",
+"region":  {
+"startLine":  118,
+"startColumn":  13,
+"endLine":  118,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\BreakpointSpans.cs",
+"region":  {
+"startLine":  132,
+"startColumn":  13,
+"endLine":  132,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\BreakpointSpans.cs",
+"region":  {
+"startLine":  345,
+"startColumn":  13,
+"endLine":  345,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1173,
+"startColumn":  21,
+"endLine":  1173,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1190,
+"startColumn":  21,
+"endLine":  1190,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1647,
+"startColumn":  17,
+"endLine":  1647,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  3047,
+"startColumn":  13,
+"endLine":  3047,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\StatementSyntaxComparer.cs",
+"region":  {
+"startLine":  546,
+"startColumn":  21,
+"endLine":  546,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\StatementSyntaxComparer.cs",
+"region":  {
+"startLine":  595,
+"startColumn":  21,
+"endLine":  595,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\StatementSyntaxComparer.cs",
+"region":  {
+"startLine":  733,
+"startColumn":  21,
+"endLine":  733,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\TopSyntaxComparer.cs",
+"region":  {
+"startLine":  356,
+"startColumn":  21,
+"endLine":  356,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EncapsulateField\\CSharpEncapsulateFieldService.cs",
+"region":  {
+"startLine":  122,
+"startColumn":  13,
+"endLine":  122,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpMethodExtractor.CSharpCodeGenerator.ExpressionCodeGenerator.cs",
+"region":  {
+"startLine":  110,
+"startColumn":  21,
+"endLine":  110,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"??\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpMethodExtractor.CSharpCodeGenerator.ExpressionCodeGenerator.cs",
+"region":  {
+"startLine":  138,
+"startColumn":  21,
+"endLine":  138,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateFromMembers\\AddConstructorParameters\\CSharpAddConstructorParametersService.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  13,
+"endLine":  21,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateFromMembers\\GenerateEqualsAndGetHashCode\\CSharpGenerateEqualsAndGetHashCodeService.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  13,
+"endLine":  22,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"??\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateMember\\GenerateParameterizedMember\\CSharpGenerateParameterizedMemberService.cs",
+"region":  {
+"startLine":  114,
+"startColumn":  24,
+"endLine":  116,
+"endColumn":  125
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateType\\CSharpGenerateTypeService.cs",
+"region":  {
+"startLine":  601,
+"startColumn":  13,
+"endLine":  601,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateType\\CSharpGenerateTypeService.cs",
+"region":  {
+"startLine":  747,
+"startColumn":  25,
+"endLine":  747,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateType\\CSharpGenerateTypeService.cs",
+"region":  {
+"startLine":  791,
+"startColumn":  13,
+"endLine":  791,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"??\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateType\\CSharpGenerateTypeService.cs",
+"region":  {
+"startLine":  826,
+"startColumn":  13,
+"endLine":  826,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\SignatureHelp\\ElementAccessExpressionSignatureHelpProvider.cs",
+"region":  {
+"startLine":  120,
+"startColumn":  17,
+"endLine":  120,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\SignatureHelp\\GenericNameSignatureHelpProvider_Method.cs",
+"region":  {
+"startLine":  63,
+"startColumn":  13,
+"endLine":  63,
+"endColumn":  15
+}
+}
+}
+]
+}

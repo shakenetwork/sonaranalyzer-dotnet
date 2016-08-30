@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S101",
+"message":  "Rename class \"UIThreadOnly\" to match camel case naming rules, consider using \"UiThreadOnly\".",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\Editor\\InteractiveWindow.UIThreadOnly.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  38,
+"endLine":  31,
+"endColumn":  50
+}
+}
+}
+]
+}

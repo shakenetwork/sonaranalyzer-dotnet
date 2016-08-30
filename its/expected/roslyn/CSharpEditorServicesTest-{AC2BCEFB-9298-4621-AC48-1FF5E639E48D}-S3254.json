@@ -1,0 +1,7531 @@
+{
+"issues":  [
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"fixAllActionEquivalenceKey\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\AddBraces\\AddBracesFixAllTests.cs",
+"region":  {
+"startLine":  93,
+"startColumn":  68,
+"endLine":  93,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"fixAllActionEquivalenceKey\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\AddBraces\\AddBracesFixAllTests.cs",
+"region":  {
+"startLine":  177,
+"startColumn":  68,
+"endLine":  177,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"fixAllActionEquivalenceKey\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\AddBraces\\AddBracesFixAllTests.cs",
+"region":  {
+"startLine":  264,
+"startColumn":  68,
+"endLine":  264,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\AddBraces\\AddBracesTests.cs",
+"region":  {
+"startLine":  249,
+"startColumn":  13,
+"endLine":  249,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\AddBraces\\AddBracesTests.cs",
+"region":  {
+"startLine":  279,
+"startColumn":  13,
+"endLine":  279,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\AddBraces\\AddBracesTests.cs",
+"region":  {
+"startLine":  309,
+"startColumn":  13,
+"endLine":  309,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\AddBraces\\AddBracesTests.cs",
+"region":  {
+"startLine":  337,
+"startColumn":  13,
+"endLine":  337,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\AddBraces\\AddBracesTests.cs",
+"region":  {
+"startLine":  365,
+"startColumn":  13,
+"endLine":  365,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\AddBraces\\AddBracesTests.cs",
+"region":  {
+"startLine":  393,
+"startColumn":  13,
+"endLine":  393,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\AddBraces\\AddBracesTests.cs",
+"region":  {
+"startLine":  422,
+"startColumn":  13,
+"endLine":  422,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\AddBraces\\AddBracesTests.cs",
+"region":  {
+"startLine":  468,
+"startColumn":  4,
+"endLine":  468,
+"endColumn":  12
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\AddBraces\\AddBracesTests.cs",
+"region":  {
+"startLine":  532,
+"startColumn":  13,
+"endLine":  532,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\AddBraces\\AddBracesTests.cs",
+"region":  {
+"startLine":  564,
+"startColumn":  4,
+"endLine":  564,
+"endColumn":  12
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\AddBraces\\AddBracesTests.cs",
+"region":  {
+"startLine":  602,
+"startColumn":  13,
+"endLine":  602,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedCodeAction\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\ChangeSignature\\ReorderParametersTests.InvocationLocation.cs",
+"region":  {
+"startLine":  776,
+"startColumn":  65,
+"endLine":  776,
+"endColumn":  89
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedCodeAction\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\ChangeSignature\\ReorderParametersTests.InvocationLocation.cs",
+"region":  {
+"startLine":  814,
+"startColumn":  65,
+"endLine":  814,
+"endColumn":  89
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedCodeAction\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\ChangeSignature\\ReorderParametersTests.InvocationLocation.cs",
+"region":  {
+"startLine":  851,
+"startColumn":  65,
+"endLine":  851,
+"endColumn":  89
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"options\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Classification\\AbstractCSharpClassifierTests.cs",
+"region":  {
+"startLine":  75,
+"startColumn":  55,
+"endLine":  75,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\EncapsulateField\\EncapsulateFieldTests.cs",
+"region":  {
+"startLine":  101,
+"startColumn":  67,
+"endLine":  101,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\EncapsulateField\\EncapsulateFieldTests.cs",
+"region":  {
+"startLine":  185,
+"startColumn":  67,
+"endLine":  185,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\EncapsulateField\\EncapsulateFieldTests.cs",
+"region":  {
+"startLine":  307,
+"startColumn":  67,
+"endLine":  307,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\EncapsulateField\\EncapsulateFieldTests.cs",
+"region":  {
+"startLine":  332,
+"startColumn":  67,
+"endLine":  332,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\EncapsulateField\\EncapsulateFieldTests.cs",
+"region":  {
+"startLine":  376,
+"startColumn":  67,
+"endLine":  376,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\EncapsulateField\\EncapsulateFieldTests.cs",
+"region":  {
+"startLine":  431,
+"startColumn":  67,
+"endLine":  431,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\EncapsulateField\\EncapsulateFieldTests.cs",
+"region":  {
+"startLine":  488,
+"startColumn":  67,
+"endLine":  488,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\EncapsulateField\\EncapsulateFieldTests.cs",
+"region":  {
+"startLine":  531,
+"startColumn":  67,
+"endLine":  531,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\EncapsulateField\\EncapsulateFieldTests.cs",
+"region":  {
+"startLine":  559,
+"startColumn":  67,
+"endLine":  559,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\EncapsulateField\\EncapsulateFieldTests.cs",
+"region":  {
+"startLine":  587,
+"startColumn":  67,
+"endLine":  587,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\EncapsulateField\\EncapsulateFieldTests.cs",
+"region":  {
+"startLine":  620,
+"startColumn":  67,
+"endLine":  620,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\EncapsulateField\\EncapsulateFieldTests.cs",
+"region":  {
+"startLine":  662,
+"startColumn":  67,
+"endLine":  662,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\EncapsulateField\\EncapsulateFieldTests.cs",
+"region":  {
+"startLine":  763,
+"startColumn":  67,
+"endLine":  763,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\EncapsulateField\\EncapsulateFieldTests.cs",
+"region":  {
+"startLine":  806,
+"startColumn":  67,
+"endLine":  806,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\EncapsulateField\\EncapsulateFieldTests.cs",
+"region":  {
+"startLine":  842,
+"startColumn":  67,
+"endLine":  842,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\EncapsulateField\\EncapsulateFieldTests.cs",
+"region":  {
+"startLine":  878,
+"startColumn":  67,
+"endLine":  878,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\ExtractMethod\\ExtractMethodTests.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  1,
+"endLine":  26,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\ExtractMethod\\ExtractMethodTests.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  1,
+"endLine":  36,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\ExtractMethod\\ExtractMethodTests.cs",
+"region":  {
+"startLine":  53,
+"startColumn":  1,
+"endLine":  53,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\ExtractMethod\\ExtractMethodTests.cs",
+"region":  {
+"startLine":  446,
+"startColumn":  1,
+"endLine":  446,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\ExtractMethod\\ExtractMethodTests.cs",
+"region":  {
+"startLine":  458,
+"startColumn":  1,
+"endLine":  458,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\ExtractMethod\\ExtractMethodTests.cs",
+"region":  {
+"startLine":  470,
+"startColumn":  1,
+"endLine":  470,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\ExtractMethod\\ExtractMethodTests.cs",
+"region":  {
+"startLine":  482,
+"startColumn":  1,
+"endLine":  482,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\ExtractMethod\\ExtractMethodTests.cs",
+"region":  {
+"startLine":  494,
+"startColumn":  1,
+"endLine":  494,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\ExtractMethod\\ExtractMethodTests.cs",
+"region":  {
+"startLine":  506,
+"startColumn":  1,
+"endLine":  506,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\ExtractMethod\\ExtractMethodTests.cs",
+"region":  {
+"startLine":  518,
+"startColumn":  1,
+"endLine":  518,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\ExtractMethod\\ExtractMethodTests.cs",
+"region":  {
+"startLine":  531,
+"startColumn":  1,
+"endLine":  531,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\ExtractMethod\\ExtractMethodTests.cs",
+"region":  {
+"startLine":  542,
+"startColumn":  1,
+"endLine":  542,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\ExtractMethod\\ExtractMethodTests.cs",
+"region":  {
+"startLine":  553,
+"startColumn":  1,
+"endLine":  553,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateDefaultConstructors\\GenerateDefaultConstructorsTests.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  1,
+"endLine":  25,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateDefaultConstructors\\GenerateDefaultConstructorsTests.cs",
+"region":  {
+"startLine":  34,
+"startColumn":  1,
+"endLine":  34,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateDefaultConstructors\\GenerateDefaultConstructorsTests.cs",
+"region":  {
+"startLine":  43,
+"startColumn":  1,
+"endLine":  43,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateDefaultConstructors\\GenerateDefaultConstructorsTests.cs",
+"region":  {
+"startLine":  59,
+"startColumn":  1,
+"endLine":  59,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateDefaultConstructors\\GenerateDefaultConstructorsTests.cs",
+"region":  {
+"startLine":  68,
+"startColumn":  1,
+"endLine":  68,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateDefaultConstructors\\GenerateDefaultConstructorsTests.cs",
+"region":  {
+"startLine":  198,
+"startColumn":  1,
+"endLine":  198,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateDefaultConstructors\\GenerateDefaultConstructorsTests.cs",
+"region":  {
+"startLine":  216,
+"startColumn":  1,
+"endLine":  216,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateDefaultConstructors\\GenerateDefaultConstructorsTests.cs",
+"region":  {
+"startLine":  227,
+"startColumn":  1,
+"endLine":  227,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\AddConstructorParameters\\AddConstructorParametersTests.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  1,
+"endLine":  25,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\AddConstructorParameters\\AddConstructorParametersTests.cs",
+"region":  {
+"startLine":  43,
+"startColumn":  1,
+"endLine":  43,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\AddConstructorParameters\\AddConstructorParametersTests.cs",
+"region":  {
+"startLine":  61,
+"startColumn":  1,
+"endLine":  61,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\AddConstructorParameters\\AddConstructorParametersTests.cs",
+"region":  {
+"startLine":  79,
+"startColumn":  1,
+"endLine":  79,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\AddConstructorParameters\\AddConstructorParametersTests.cs",
+"region":  {
+"startLine":  88,
+"startColumn":  1,
+"endLine":  88,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\AddConstructorParameters\\AddConstructorParametersTests.cs",
+"region":  {
+"startLine":  131,
+"startColumn":  1,
+"endLine":  131,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\AddConstructorParameters\\AddConstructorParametersTests.cs",
+"region":  {
+"startLine":  140,
+"startColumn":  1,
+"endLine":  140,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\GenerateConstructorFromMembers\\GenerateConstructorFromMembersTests.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  1,
+"endLine":  26,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\GenerateConstructorFromMembers\\GenerateConstructorFromMembersTests.cs",
+"region":  {
+"startLine":  35,
+"startColumn":  1,
+"endLine":  35,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\GenerateConstructorFromMembers\\GenerateConstructorFromMembersTests.cs",
+"region":  {
+"startLine":  44,
+"startColumn":  1,
+"endLine":  44,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\GenerateConstructorFromMembers\\GenerateConstructorFromMembersTests.cs",
+"region":  {
+"startLine":  53,
+"startColumn":  1,
+"endLine":  53,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\GenerateConstructorFromMembers\\GenerateConstructorFromMembersTests.cs",
+"region":  {
+"startLine":  62,
+"startColumn":  1,
+"endLine":  62,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\GenerateConstructorFromMembers\\GenerateConstructorFromMembersTests.cs",
+"region":  {
+"startLine":  87,
+"startColumn":  1,
+"endLine":  87,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\GenerateConstructorFromMembers\\GenerateConstructorFromMembersTests.cs",
+"region":  {
+"startLine":  96,
+"startColumn":  1,
+"endLine":  96,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\GenerateConstructorFromMembers\\GenerateConstructorFromMembersTests.cs",
+"region":  {
+"startLine":  105,
+"startColumn":  1,
+"endLine":  105,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\GenerateConstructorFromMembers\\GenerateConstructorFromMembersTests.cs",
+"region":  {
+"startLine":  114,
+"startColumn":  1,
+"endLine":  114,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\GenerateConstructorFromMembers\\GenerateConstructorFromMembersTests.cs",
+"region":  {
+"startLine":  123,
+"startColumn":  1,
+"endLine":  123,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\GenerateConstructorFromMembers\\GenerateConstructorFromMembersTests.cs",
+"region":  {
+"startLine":  132,
+"startColumn":  1,
+"endLine":  132,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\GenerateConstructorFromMembers\\GenerateConstructorFromMembersTests.cs",
+"region":  {
+"startLine":  141,
+"startColumn":  1,
+"endLine":  141,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\GenerateConstructorFromMembers\\GenerateConstructorFromMembersTests.cs",
+"region":  {
+"startLine":  191,
+"startColumn":  1,
+"endLine":  191,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\GenerateEqualsAndGetHashCode\\GenerateEqualsAndGetHashCodeTests.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  1,
+"endLine":  25,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\GenerateEqualsAndGetHashCode\\GenerateEqualsAndGetHashCodeTests.cs",
+"region":  {
+"startLine":  34,
+"startColumn":  1,
+"endLine":  34,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\GenerateEqualsAndGetHashCode\\GenerateEqualsAndGetHashCodeTests.cs",
+"region":  {
+"startLine":  43,
+"startColumn":  1,
+"endLine":  43,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\GenerateEqualsAndGetHashCode\\GenerateEqualsAndGetHashCodeTests.cs",
+"region":  {
+"startLine":  52,
+"startColumn":  1,
+"endLine":  52,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\GenerateEqualsAndGetHashCode\\GenerateEqualsAndGetHashCodeTests.cs",
+"region":  {
+"startLine":  61,
+"startColumn":  1,
+"endLine":  61,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\GenerateEqualsAndGetHashCode\\GenerateEqualsAndGetHashCodeTests.cs",
+"region":  {
+"startLine":  70,
+"startColumn":  1,
+"endLine":  70,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\GenerateEqualsAndGetHashCode\\GenerateEqualsAndGetHashCodeTests.cs",
+"region":  {
+"startLine":  79,
+"startColumn":  1,
+"endLine":  79,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\GenerateEqualsAndGetHashCode\\GenerateEqualsAndGetHashCodeTests.cs",
+"region":  {
+"startLine":  88,
+"startColumn":  1,
+"endLine":  88,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\GenerateEqualsAndGetHashCode\\GenerateEqualsAndGetHashCodeTests.cs",
+"region":  {
+"startLine":  186,
+"startColumn":  1,
+"endLine":  186,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\GenerateEqualsAndGetHashCode\\GenerateEqualsAndGetHashCodeTests.cs",
+"region":  {
+"startLine":  196,
+"startColumn":  1,
+"endLine":  196,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\GenerateFromMembers\\GenerateEqualsAndGetHashCode\\GenerateEqualsAndGetHashCodeTests.cs",
+"region":  {
+"startLine":  206,
+"startColumn":  1,
+"endLine":  206,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  74,
+"endLine":  22,
+"endColumn":  82
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  185,
+"startColumn":  45,
+"endLine":  185,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  212,
+"startColumn":  45,
+"endLine":  212,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  246,
+"startColumn":  1,
+"endLine":  246,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  290,
+"startColumn":  5,
+"endLine":  290,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  334,
+"startColumn":  5,
+"endLine":  334,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  367,
+"startColumn":  45,
+"endLine":  367,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  412,
+"startColumn":  45,
+"endLine":  412,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  439,
+"startColumn":  45,
+"endLine":  439,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  492,
+"startColumn":  5,
+"endLine":  492,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  520,
+"startColumn":  5,
+"endLine":  520,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  549,
+"startColumn":  2,
+"endLine":  549,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  583,
+"startColumn":  5,
+"endLine":  583,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  609,
+"startColumn":  5,
+"endLine":  609,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  643,
+"startColumn":  48,
+"endLine":  643,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  677,
+"startColumn":  48,
+"endLine":  677,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  723,
+"startColumn":  48,
+"endLine":  723,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  759,
+"startColumn":  48,
+"endLine":  759,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  789,
+"startColumn":  48,
+"endLine":  789,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  819,
+"startColumn":  48,
+"endLine":  819,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  851,
+"startColumn":  48,
+"endLine":  851,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  881,
+"startColumn":  48,
+"endLine":  881,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  911,
+"startColumn":  48,
+"endLine":  911,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  941,
+"startColumn":  48,
+"endLine":  941,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  971,
+"startColumn":  48,
+"endLine":  971,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1001,
+"startColumn":  48,
+"endLine":  1001,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1031,
+"startColumn":  48,
+"endLine":  1031,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1061,
+"startColumn":  48,
+"endLine":  1061,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1091,
+"startColumn":  48,
+"endLine":  1091,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1121,
+"startColumn":  48,
+"endLine":  1121,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1151,
+"startColumn":  48,
+"endLine":  1151,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1181,
+"startColumn":  48,
+"endLine":  1181,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1211,
+"startColumn":  48,
+"endLine":  1211,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1241,
+"startColumn":  48,
+"endLine":  1241,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1269,
+"startColumn":  48,
+"endLine":  1269,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1296,
+"startColumn":  48,
+"endLine":  1296,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1397,
+"startColumn":  48,
+"endLine":  1397,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1424,
+"startColumn":  48,
+"endLine":  1424,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1451,
+"startColumn":  48,
+"endLine":  1451,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1478,
+"startColumn":  48,
+"endLine":  1478,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1504,
+"startColumn":  48,
+"endLine":  1504,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1530,
+"startColumn":  48,
+"endLine":  1530,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1558,
+"startColumn":  48,
+"endLine":  1558,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1588,
+"startColumn":  48,
+"endLine":  1588,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1618,
+"startColumn":  48,
+"endLine":  1618,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1648,
+"startColumn":  48,
+"endLine":  1648,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1680,
+"startColumn":  48,
+"endLine":  1680,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1710,
+"startColumn":  48,
+"endLine":  1710,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1740,
+"startColumn":  48,
+"endLine":  1740,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1770,
+"startColumn":  48,
+"endLine":  1770,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1797,
+"startColumn":  1,
+"endLine":  1797,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1826,
+"startColumn":  1,
+"endLine":  1826,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1853,
+"startColumn":  1,
+"endLine":  1853,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1883,
+"startColumn":  1,
+"endLine":  1883,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1908,
+"startColumn":  1,
+"endLine":  1908,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1944,
+"startColumn":  1,
+"endLine":  1944,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  1977,
+"startColumn":  13,
+"endLine":  1977,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2010,
+"startColumn":  13,
+"endLine":  2010,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2046,
+"startColumn":  13,
+"endLine":  2046,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2080,
+"startColumn":  13,
+"endLine":  2080,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2110,
+"startColumn":  13,
+"endLine":  2110,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2140,
+"startColumn":  13,
+"endLine":  2140,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2170,
+"startColumn":  13,
+"endLine":  2170,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2200,
+"startColumn":  13,
+"endLine":  2200,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2246,
+"startColumn":  13,
+"endLine":  2246,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2274,
+"startColumn":  13,
+"endLine":  2274,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2299,
+"startColumn":  13,
+"endLine":  2299,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2334,
+"startColumn":  13,
+"endLine":  2334,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2367,
+"startColumn":  13,
+"endLine":  2367,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2402,
+"startColumn":  13,
+"endLine":  2402,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2434,
+"startColumn":  13,
+"endLine":  2434,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2465,
+"startColumn":  13,
+"endLine":  2465,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2496,
+"startColumn":  13,
+"endLine":  2496,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2532,
+"startColumn":  13,
+"endLine":  2532,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2566,
+"startColumn":  13,
+"endLine":  2566,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2597,
+"startColumn":  13,
+"endLine":  2597,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2633,
+"startColumn":  13,
+"endLine":  2633,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2669,
+"startColumn":  13,
+"endLine":  2669,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2705,
+"startColumn":  13,
+"endLine":  2705,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2740,
+"startColumn":  13,
+"endLine":  2740,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2775,
+"startColumn":  13,
+"endLine":  2775,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2808,
+"startColumn":  13,
+"endLine":  2808,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2843,
+"startColumn":  13,
+"endLine":  2843,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2910,
+"startColumn":  13,
+"endLine":  2910,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  2955,
+"startColumn":  13,
+"endLine":  2955,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  3004,
+"startColumn":  13,
+"endLine":  3004,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  3047,
+"startColumn":  13,
+"endLine":  3047,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  3217,
+"startColumn":  13,
+"endLine":  3217,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  3250,
+"startColumn":  13,
+"endLine":  3250,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  3281,
+"startColumn":  13,
+"endLine":  3281,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  3314,
+"startColumn":  13,
+"endLine":  3314,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  3347,
+"startColumn":  13,
+"endLine":  3347,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  3393,
+"startColumn":  13,
+"endLine":  3393,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  3434,
+"startColumn":  13,
+"endLine":  3434,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  3498,
+"startColumn":  13,
+"endLine":  3498,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  3990,
+"startColumn":  45,
+"endLine":  3990,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  4017,
+"startColumn":  45,
+"endLine":  4017,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  4043,
+"startColumn":  45,
+"endLine":  4043,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  4072,
+"startColumn":  45,
+"endLine":  4072,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  128,
+"startColumn":  45,
+"endLine":  128,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  166,
+"startColumn":  45,
+"endLine":  166,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  194,
+"startColumn":  17,
+"endLine":  194,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  212,
+"startColumn":  17,
+"endLine":  212,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  230,
+"startColumn":  17,
+"endLine":  230,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  274,
+"startColumn":  17,
+"endLine":  274,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  284,
+"startColumn":  17,
+"endLine":  284,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  294,
+"startColumn":  17,
+"endLine":  294,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  304,
+"startColumn":  17,
+"endLine":  304,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  313,
+"startColumn":  1,
+"endLine":  313,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  323,
+"startColumn":  1,
+"endLine":  323,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  333,
+"startColumn":  1,
+"endLine":  333,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  343,
+"startColumn":  1,
+"endLine":  343,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  425,
+"startColumn":  1,
+"endLine":  425,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  493,
+"startColumn":  1,
+"endLine":  493,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  503,
+"startColumn":  1,
+"endLine":  503,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  530,
+"startColumn":  1,
+"endLine":  530,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  548,
+"startColumn":  1,
+"endLine":  548,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  1018,
+"startColumn":  1,
+"endLine":  1018,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  1655,
+"startColumn":  45,
+"endLine":  1655,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  1685,
+"startColumn":  4,
+"endLine":  1685,
+"endColumn":  12
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  1732,
+"startColumn":  45,
+"endLine":  1732,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  1760,
+"startColumn":  45,
+"endLine":  1760,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  1806,
+"startColumn":  45,
+"endLine":  1806,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  1854,
+"startColumn":  45,
+"endLine":  1854,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  1905,
+"startColumn":  45,
+"endLine":  1905,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  1942,
+"startColumn":  45,
+"endLine":  1942,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  1976,
+"startColumn":  45,
+"endLine":  1976,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  2014,
+"startColumn":  45,
+"endLine":  2014,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  2037,
+"startColumn":  45,
+"endLine":  2037,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  2089,
+"startColumn":  45,
+"endLine":  2089,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  2119,
+"startColumn":  45,
+"endLine":  2119,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  2420,
+"startColumn":  45,
+"endLine":  2420,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  2498,
+"startColumn":  45,
+"endLine":  2498,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  2528,
+"startColumn":  45,
+"endLine":  2528,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  2612,
+"startColumn":  45,
+"endLine":  2612,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  2633,
+"startColumn":  45,
+"endLine":  2633,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  2654,
+"startColumn":  45,
+"endLine":  2654,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  2692,
+"startColumn":  45,
+"endLine":  2692,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  2711,
+"startColumn":  45,
+"endLine":  2711,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  2730,
+"startColumn":  45,
+"endLine":  2730,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\IntroduceVariable\\IntroduceVariableTests.cs",
+"region":  {
+"startLine":  2749,
+"startColumn":  45,
+"endLine":  2749,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InvertIf\\InvertIfTests.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  80,
+"endLine":  17,
+"endColumn":  88
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\LambdaSimplifier\\LambdaSimplifierTests.cs",
+"region":  {
+"startLine":  99,
+"startColumn":  17,
+"endLine":  99,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\MoveDeclarationNearReference\\MoveDeclarationNearReferenceTests.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  1,
+"endLine":  25,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\MoveDeclarationNearReference\\MoveDeclarationNearReferenceTests.cs",
+"region":  {
+"startLine":  34,
+"startColumn":  1,
+"endLine":  34,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\MoveDeclarationNearReference\\MoveDeclarationNearReferenceTests.cs",
+"region":  {
+"startLine":  43,
+"startColumn":  1,
+"endLine":  43,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\MoveDeclarationNearReference\\MoveDeclarationNearReferenceTests.cs",
+"region":  {
+"startLine":  52,
+"startColumn":  1,
+"endLine":  52,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\MoveDeclarationNearReference\\MoveDeclarationNearReferenceTests.cs",
+"region":  {
+"startLine":  61,
+"startColumn":  1,
+"endLine":  61,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\MoveDeclarationNearReference\\MoveDeclarationNearReferenceTests.cs",
+"region":  {
+"startLine":  70,
+"startColumn":  1,
+"endLine":  70,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\MoveDeclarationNearReference\\MoveDeclarationNearReferenceTests.cs",
+"region":  {
+"startLine":  79,
+"startColumn":  1,
+"endLine":  79,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\MoveDeclarationNearReference\\MoveDeclarationNearReferenceTests.cs",
+"region":  {
+"startLine":  132,
+"startColumn":  1,
+"endLine":  132,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\MoveDeclarationNearReference\\MoveDeclarationNearReferenceTests.cs",
+"region":  {
+"startLine":  377,
+"startColumn":  1,
+"endLine":  377,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\MoveDeclarationNearReference\\MoveDeclarationNearReferenceTests.cs",
+"region":  {
+"startLine":  388,
+"startColumn":  1,
+"endLine":  388,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\ReplaceMethodWithProperty\\ReplaceMethodWithPropertyTests.cs",
+"region":  {
+"startLine":  388,
+"startColumn":  1,
+"endLine":  388,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\ReplaceMethodWithProperty\\ReplaceMethodWithPropertyTests.cs",
+"region":  {
+"startLine":  397,
+"startColumn":  1,
+"endLine":  397,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\ReplaceMethodWithProperty\\ReplaceMethodWithPropertyTests.cs",
+"region":  {
+"startLine":  406,
+"startColumn":  1,
+"endLine":  406,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\ReplaceMethodWithProperty\\ReplaceMethodWithPropertyTests.cs",
+"region":  {
+"startLine":  512,
+"startColumn":  1,
+"endLine":  512,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\EnumAndCompletionListTagCompletionProviderTests.cs",
+"region":  {
+"startLine":  143,
+"startColumn":  17,
+"endLine":  143,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\ObjectInitializerCompletionProviderTests.cs",
+"region":  {
+"startLine":  538,
+"startColumn":  17,
+"endLine":  538,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\ObjectInitializerCompletionProviderTests.cs",
+"region":  {
+"startLine":  615,
+"startColumn":  17,
+"endLine":  615,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SpeculativeTCompletionProviderTests.cs",
+"region":  {
+"startLine":  195,
+"startColumn":  54,
+"endLine":  195,
+"endColumn":  85
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SpeculativeTCompletionProviderTests.cs",
+"region":  {
+"startLine":  203,
+"startColumn":  56,
+"endLine":  203,
+"endColumn":  87
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SpeculativeTCompletionProviderTests.cs",
+"region":  {
+"startLine":  211,
+"startColumn":  56,
+"endLine":  211,
+"endColumn":  87
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SpeculativeTCompletionProviderTests.cs",
+"region":  {
+"startLine":  222,
+"startColumn":  54,
+"endLine":  222,
+"endColumn":  85
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SpeculativeTCompletionProviderTests.cs",
+"region":  {
+"startLine":  233,
+"startColumn":  54,
+"endLine":  233,
+"endColumn":  85
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SpeculativeTCompletionProviderTests.cs",
+"region":  {
+"startLine":  244,
+"startColumn":  54,
+"endLine":  244,
+"endColumn":  85
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  29,
+"startColumn":  61,
+"endLine":  29,
+"endColumn":  92
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  30,
+"startColumn":  61,
+"endLine":  30,
+"endColumn":  92
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  61,
+"endLine":  36,
+"endColumn":  92
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  59,
+"endLine":  37,
+"endColumn":  90
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  44,
+"startColumn":  17,
+"endLine":  44,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  46,
+"startColumn":  17,
+"endLine":  46,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  53,
+"startColumn":  17,
+"endLine":  53,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  55,
+"startColumn":  17,
+"endLine":  55,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  61,
+"startColumn":  64,
+"endLine":  61,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  67,
+"startColumn":  67,
+"endLine":  67,
+"endColumn":  98
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  277,
+"startColumn":  64,
+"endLine":  277,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  278,
+"startColumn":  64,
+"endLine":  278,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  291,
+"startColumn":  66,
+"endLine":  291,
+"endColumn":  97
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  292,
+"startColumn":  66,
+"endLine":  292,
+"endColumn":  97
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  1991,
+"startColumn":  56,
+"endLine":  1991,
+"endColumn":  87
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  1992,
+"startColumn":  56,
+"endLine":  1992,
+"endColumn":  87
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  2007,
+"startColumn":  54,
+"endLine":  2007,
+"endColumn":  85
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  2008,
+"startColumn":  56,
+"endLine":  2008,
+"endColumn":  87
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  2070,
+"startColumn":  59,
+"endLine":  2070,
+"endColumn":  90
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  2082,
+"startColumn":  64,
+"endLine":  2082,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  2144,
+"startColumn":  62,
+"endLine":  2144,
+"endColumn":  93
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  3056,
+"startColumn":  1,
+"endLine":  3056,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  3066,
+"startColumn":  1,
+"endLine":  3066,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  3076,
+"startColumn":  1,
+"endLine":  3076,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  3086,
+"startColumn":  1,
+"endLine":  3086,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  3651,
+"startColumn":  17,
+"endLine":  3651,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  3881,
+"startColumn":  17,
+"endLine":  3881,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  4519,
+"startColumn":  17,
+"endLine":  4519,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  4651,
+"startColumn":  17,
+"endLine":  4651,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  4755,
+"startColumn":  17,
+"endLine":  4755,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  4920,
+"startColumn":  17,
+"endLine":  4920,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  5003,
+"startColumn":  17,
+"endLine":  5003,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  5214,
+"startColumn":  17,
+"endLine":  5214,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  5249,
+"startColumn":  17,
+"endLine":  5249,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  5294,
+"startColumn":  17,
+"endLine":  5294,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  5469,
+"startColumn":  17,
+"endLine":  5469,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  5504,
+"startColumn":  17,
+"endLine":  5504,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  5599,
+"startColumn":  17,
+"endLine":  5599,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  5742,
+"startColumn":  17,
+"endLine":  5742,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  5777,
+"startColumn":  17,
+"endLine":  5777,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  5815,
+"startColumn":  17,
+"endLine":  5815,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\CompletionProviders\\SymbolCompletionProviderTests.cs",
+"region":  {
+"startLine":  5843,
+"startColumn":  17,
+"endLine":  5843,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\LoadDirectiveCompletionProviderTests.cs",
+"region":  {
+"startLine":  50,
+"startColumn":  59,
+"endLine":  50,
+"endColumn":  90
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"usePreviousCharAsTrigger\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\LoadDirectiveCompletionProviderTests.cs",
+"region":  {
+"startLine":  50,
+"startColumn":  131,
+"endLine":  50,
+"endColumn":  162
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\LoadDirectiveCompletionProviderTests.cs",
+"region":  {
+"startLine":  55,
+"startColumn":  61,
+"endLine":  55,
+"endColumn":  92
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"usePreviousCharAsTrigger\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\LoadDirectiveCompletionProviderTests.cs",
+"region":  {
+"startLine":  55,
+"startColumn":  133,
+"endLine":  55,
+"endColumn":  164
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedDescriptionOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Completion\\ReferenceDirectiveCompletionProviderTests.cs",
+"region":  {
+"startLine":  48,
+"startColumn":  55,
+"endLine":  48,
+"endColumn":  86
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\AddUsing\\AddUsingTests_NuGet.cs",
+"region":  {
+"startLine":  162,
+"startColumn":  1,
+"endLine":  162,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateMethod\\GenerateMethodTests.cs",
+"region":  {
+"startLine":  748,
+"startColumn":  1,
+"endLine":  748,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateMethod\\GenerateMethodTests.cs",
+"region":  {
+"startLine":  758,
+"startColumn":  1,
+"endLine":  758,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests.cs",
+"region":  {
+"startLine":  1439,
+"startColumn":  1,
+"endLine":  1439,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests.cs",
+"region":  {
+"startLine":  1449,
+"startColumn":  1,
+"endLine":  1449,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests.cs",
+"region":  {
+"startLine":  1945,
+"startColumn":  45,
+"endLine":  1945,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests.cs",
+"region":  {
+"startLine":  1970,
+"startColumn":  1,
+"endLine":  1970,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests.cs",
+"region":  {
+"startLine":  2000,
+"startColumn":  1,
+"endLine":  2000,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  39,
+"startColumn":  1,
+"endLine":  39,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  73,
+"startColumn":  1,
+"endLine":  73,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  105,
+"startColumn":  1,
+"endLine":  105,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  143,
+"startColumn":  1,
+"endLine":  143,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  181,
+"startColumn":  1,
+"endLine":  181,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  216,
+"startColumn":  1,
+"endLine":  216,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  245,
+"startColumn":  1,
+"endLine":  245,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  285,
+"startColumn":  1,
+"endLine":  285,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  325,
+"startColumn":  1,
+"endLine":  325,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"accessibility\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  363,
+"startColumn":  1,
+"endLine":  363,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  365,
+"startColumn":  1,
+"endLine":  365,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"accessibility\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  399,
+"startColumn":  1,
+"endLine":  399,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  401,
+"startColumn":  1,
+"endLine":  401,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"accessibility\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  441,
+"startColumn":  1,
+"endLine":  441,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  443,
+"startColumn":  1,
+"endLine":  443,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  483,
+"startColumn":  1,
+"endLine":  483,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  529,
+"startColumn":  1,
+"endLine":  529,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  576,
+"startColumn":  1,
+"endLine":  576,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  623,
+"startColumn":  1,
+"endLine":  623,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  663,
+"startColumn":  1,
+"endLine":  663,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  1071,
+"startColumn":  1,
+"endLine":  1071,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  1122,
+"startColumn":  1,
+"endLine":  1122,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  1183,
+"startColumn":  1,
+"endLine":  1183,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  1440,
+"startColumn":  1,
+"endLine":  1440,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  1486,
+"startColumn":  1,
+"endLine":  1486,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  1526,
+"startColumn":  1,
+"endLine":  1526,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  1573,
+"startColumn":  1,
+"endLine":  1573,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  1614,
+"startColumn":  1,
+"endLine":  1614,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  1661,
+"startColumn":  1,
+"endLine":  1661,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  1700,
+"startColumn":  1,
+"endLine":  1700,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  1742,
+"startColumn":  1,
+"endLine":  1742,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  1743,
+"startColumn":  1,
+"endLine":  1743,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  1789,
+"startColumn":  1,
+"endLine":  1789,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  1790,
+"startColumn":  1,
+"endLine":  1790,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  1834,
+"startColumn":  1,
+"endLine":  1834,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  1835,
+"startColumn":  1,
+"endLine":  1835,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  1886,
+"startColumn":  1,
+"endLine":  1886,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  1887,
+"startColumn":  1,
+"endLine":  1887,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  1956,
+"startColumn":  1,
+"endLine":  1956,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  1979,
+"startColumn":  1,
+"endLine":  1979,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2002,
+"startColumn":  1,
+"endLine":  2002,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2032,
+"startColumn":  1,
+"endLine":  2032,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2033,
+"startColumn":  1,
+"endLine":  2033,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2070,
+"startColumn":  1,
+"endLine":  2070,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2071,
+"startColumn":  1,
+"endLine":  2071,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2109,
+"startColumn":  1,
+"endLine":  2109,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2110,
+"startColumn":  1,
+"endLine":  2110,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2148,
+"startColumn":  1,
+"endLine":  2148,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2149,
+"startColumn":  1,
+"endLine":  2149,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2186,
+"startColumn":  1,
+"endLine":  2186,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2187,
+"startColumn":  1,
+"endLine":  2187,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2217,
+"startColumn":  1,
+"endLine":  2217,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2218,
+"startColumn":  1,
+"endLine":  2218,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2271,
+"startColumn":  1,
+"endLine":  2271,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2307,
+"startColumn":  1,
+"endLine":  2307,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2342,
+"startColumn":  1,
+"endLine":  2342,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2375,
+"startColumn":  1,
+"endLine":  2375,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2408,
+"startColumn":  1,
+"endLine":  2408,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2441,
+"startColumn":  1,
+"endLine":  2441,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2470,
+"startColumn":  1,
+"endLine":  2470,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2499,
+"startColumn":  1,
+"endLine":  2499,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2529,
+"startColumn":  1,
+"endLine":  2529,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2564,
+"startColumn":  1,
+"endLine":  2564,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2599,
+"startColumn":  1,
+"endLine":  2599,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2632,
+"startColumn":  1,
+"endLine":  2632,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2665,
+"startColumn":  1,
+"endLine":  2665,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2695,
+"startColumn":  1,
+"endLine":  2695,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2724,
+"startColumn":  1,
+"endLine":  2724,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2759,
+"startColumn":  1,
+"endLine":  2759,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2794,
+"startColumn":  1,
+"endLine":  2794,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2827,
+"startColumn":  1,
+"endLine":  2827,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2860,
+"startColumn":  1,
+"endLine":  2860,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2890,
+"startColumn":  1,
+"endLine":  2890,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2919,
+"startColumn":  1,
+"endLine":  2919,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  2986,
+"startColumn":  1,
+"endLine":  2986,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  3015,
+"startColumn":  1,
+"endLine":  3015,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  3016,
+"startColumn":  1,
+"endLine":  3016,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  3052,
+"startColumn":  1,
+"endLine":  3052,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  3053,
+"startColumn":  1,
+"endLine":  3053,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  3089,
+"startColumn":  1,
+"endLine":  3089,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  3090,
+"startColumn":  1,
+"endLine":  3090,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  3132,
+"startColumn":  1,
+"endLine":  3132,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  3133,
+"startColumn":  1,
+"endLine":  3133,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  3181,
+"startColumn":  1,
+"endLine":  3181,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  3182,
+"startColumn":  1,
+"endLine":  3182,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  3211,
+"startColumn":  1,
+"endLine":  3211,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  3240,
+"startColumn":  1,
+"endLine":  3240,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  3275,
+"startColumn":  1,
+"endLine":  3275,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  3308,
+"startColumn":  1,
+"endLine":  3308,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  3333,
+"startColumn":  1,
+"endLine":  3333,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  3368,
+"startColumn":  1,
+"endLine":  3368,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  3395,
+"startColumn":  1,
+"endLine":  3395,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  3435,
+"startColumn":  1,
+"endLine":  3435,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  3436,
+"startColumn":  1,
+"endLine":  3436,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  3468,
+"startColumn":  1,
+"endLine":  3468,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  3469,
+"startColumn":  1,
+"endLine":  3469,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  3502,
+"startColumn":  1,
+"endLine":  3502,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isNewFile\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateType\\GenerateTypeTests_Dialog.cs",
+"region":  {
+"startLine":  3541,
+"startColumn":  1,
+"endLine":  3541,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateVariable\\GenerateVariableTests.cs",
+"region":  {
+"startLine":  1010,
+"startColumn":  1,
+"endLine":  1010,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\GenerateVariable\\GenerateVariableTests.cs",
+"region":  {
+"startLine":  1070,
+"startColumn":  1,
+"endLine":  1070,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\ImplementInterface\\ImplementInterfaceTests.cs",
+"region":  {
+"startLine":  421,
+"startColumn":  1,
+"endLine":  421,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\ImplementInterface\\ImplementInterfaceTests.cs",
+"region":  {
+"startLine":  553,
+"startColumn":  1,
+"endLine":  553,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\ImplementInterface\\ImplementInterfaceTests.cs",
+"region":  {
+"startLine":  1735,
+"startColumn":  4,
+"endLine":  1735,
+"endColumn":  12
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\ImplementInterface\\ImplementInterfaceTests.cs",
+"region":  {
+"startLine":  1878,
+"startColumn":  5,
+"endLine":  1878,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\ImplementInterface\\ImplementInterfaceTests.cs",
+"region":  {
+"startLine":  2331,
+"startColumn":  48,
+"endLine":  2331,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\ImplementInterface\\ImplementInterfaceTests.cs",
+"region":  {
+"startLine":  2416,
+"startColumn":  4,
+"endLine":  2416,
+"endColumn":  12
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\ImplementInterface\\ImplementInterfaceTests.cs",
+"region":  {
+"startLine":  2447,
+"startColumn":  4,
+"endLine":  2447,
+"endColumn":  12
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  71,
+"startColumn":  13,
+"endLine":  71,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  104,
+"startColumn":  13,
+"endLine":  104,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  135,
+"startColumn":  13,
+"endLine":  135,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  401,
+"startColumn":  5,
+"endLine":  401,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  427,
+"startColumn":  5,
+"endLine":  427,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  455,
+"startColumn":  5,
+"endLine":  455,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  483,
+"startColumn":  5,
+"endLine":  483,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  511,
+"startColumn":  5,
+"endLine":  511,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  539,
+"startColumn":  5,
+"endLine":  539,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  569,
+"startColumn":  5,
+"endLine":  569,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  599,
+"startColumn":  5,
+"endLine":  599,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  629,
+"startColumn":  5,
+"endLine":  629,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  676,
+"startColumn":  5,
+"endLine":  676,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  712,
+"startColumn":  5,
+"endLine":  712,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  746,
+"startColumn":  5,
+"endLine":  746,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  780,
+"startColumn":  5,
+"endLine":  780,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  816,
+"startColumn":  5,
+"endLine":  816,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  846,
+"startColumn":  5,
+"endLine":  846,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  918,
+"startColumn":  5,
+"endLine":  918,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  958,
+"startColumn":  5,
+"endLine":  958,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  990,
+"startColumn":  5,
+"endLine":  990,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  1125,
+"startColumn":  13,
+"endLine":  1125,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  1233,
+"startColumn":  5,
+"endLine":  1233,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  1292,
+"startColumn":  5,
+"endLine":  1292,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  1326,
+"startColumn":  5,
+"endLine":  1326,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  1506,
+"startColumn":  5,
+"endLine":  1506,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  1563,
+"startColumn":  5,
+"endLine":  1563,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  1593,
+"startColumn":  5,
+"endLine":  1593,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  1625,
+"startColumn":  5,
+"endLine":  1625,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  1655,
+"startColumn":  5,
+"endLine":  1655,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  1789,
+"startColumn":  13,
+"endLine":  1789,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  1819,
+"startColumn":  13,
+"endLine":  1819,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  1865,
+"startColumn":  13,
+"endLine":  1865,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  2177,
+"startColumn":  13,
+"endLine":  2177,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  2238,
+"startColumn":  13,
+"endLine":  2238,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  2303,
+"startColumn":  13,
+"endLine":  2303,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  2390,
+"startColumn":  13,
+"endLine":  2390,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  2480,
+"startColumn":  13,
+"endLine":  2480,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  2625,
+"startColumn":  5,
+"endLine":  2625,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  2662,
+"startColumn":  5,
+"endLine":  2662,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  2699,
+"startColumn":  5,
+"endLine":  2699,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  2736,
+"startColumn":  5,
+"endLine":  2736,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  2841,
+"startColumn":  13,
+"endLine":  2841,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  2873,
+"startColumn":  13,
+"endLine":  2873,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  2905,
+"startColumn":  13,
+"endLine":  2905,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  2937,
+"startColumn":  13,
+"endLine":  2937,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  2969,
+"startColumn":  13,
+"endLine":  2969,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  2999,
+"startColumn":  13,
+"endLine":  2999,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  3239,
+"startColumn":  13,
+"endLine":  3239,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  3278,
+"startColumn":  13,
+"endLine":  3278,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests.cs",
+"region":  {
+"startLine":  3646,
+"startColumn":  13,
+"endLine":  3646,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"fixAllActionEquivalenceKey\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests_FixAllTests.cs",
+"region":  {
+"startLine":  178,
+"startColumn":  68,
+"endLine":  178,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"fixAllActionEquivalenceKey\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests_FixAllTests.cs",
+"region":  {
+"startLine":  322,
+"startColumn":  68,
+"endLine":  322,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"fixAllActionEquivalenceKey\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryCast\\RemoveUnnecessaryCastTests_FixAllTests.cs",
+"region":  {
+"startLine":  466,
+"startColumn":  68,
+"endLine":  466,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"fixAllActionEquivalenceKey\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryUsings\\RemoveUnnecessaryUsingsTests_FixAllTests.cs",
+"region":  {
+"startLine":  87,
+"startColumn":  68,
+"endLine":  87,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"fixAllActionEquivalenceKey\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryUsings\\RemoveUnnecessaryUsingsTests_FixAllTests.cs",
+"region":  {
+"startLine":  163,
+"startColumn":  68,
+"endLine":  163,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"fixAllActionEquivalenceKey\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\RemoveUnnecessaryUsings\\RemoveUnnecessaryUsingsTests_FixAllTests.cs",
+"region":  {
+"startLine":  238,
+"startColumn":  68,
+"endLine":  238,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  83,
+"startColumn":  5,
+"endLine":  83,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  107,
+"startColumn":  5,
+"endLine":  107,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  127,
+"startColumn":  5,
+"endLine":  127,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  160,
+"startColumn":  5,
+"endLine":  160,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  184,
+"startColumn":  5,
+"endLine":  184,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  214,
+"startColumn":  5,
+"endLine":  214,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  232,
+"startColumn":  5,
+"endLine":  232,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  256,
+"startColumn":  5,
+"endLine":  256,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  280,
+"startColumn":  5,
+"endLine":  280,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  310,
+"startColumn":  5,
+"endLine":  310,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  341,
+"startColumn":  5,
+"endLine":  341,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  369,
+"startColumn":  5,
+"endLine":  369,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  397,
+"startColumn":  5,
+"endLine":  397,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  442,
+"startColumn":  5,
+"endLine":  442,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  478,
+"startColumn":  5,
+"endLine":  478,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  520,
+"startColumn":  80,
+"endLine":  520,
+"endColumn":  88
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  561,
+"startColumn":  5,
+"endLine":  561,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  592,
+"startColumn":  5,
+"endLine":  592,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  622,
+"startColumn":  5,
+"endLine":  622,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  653,
+"startColumn":  5,
+"endLine":  653,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  683,
+"startColumn":  5,
+"endLine":  683,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  737,
+"startColumn":  5,
+"endLine":  737,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  780,
+"startColumn":  5,
+"endLine":  780,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  851,
+"startColumn":  5,
+"endLine":  851,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  904,
+"startColumn":  5,
+"endLine":  904,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  947,
+"startColumn":  5,
+"endLine":  947,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  971,
+"startColumn":  5,
+"endLine":  971,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  1017,
+"startColumn":  5,
+"endLine":  1017,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  1135,
+"startColumn":  5,
+"endLine":  1135,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  1177,
+"startColumn":  5,
+"endLine":  1177,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  1208,
+"startColumn":  5,
+"endLine":  1208,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  1241,
+"startColumn":  5,
+"endLine":  1241,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  1285,
+"startColumn":  5,
+"endLine":  1285,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  1402,
+"startColumn":  1,
+"endLine":  1402,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  1640,
+"startColumn":  1,
+"endLine":  1640,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  1650,
+"startColumn":  1,
+"endLine":  1650,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  1660,
+"startColumn":  1,
+"endLine":  1660,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  1670,
+"startColumn":  1,
+"endLine":  1670,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  1680,
+"startColumn":  1,
+"endLine":  1680,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  1754,
+"startColumn":  5,
+"endLine":  1754,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  1764,
+"startColumn":  1,
+"endLine":  1764,
+"endColumn":  9
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  1808,
+"startColumn":  25,
+"endLine":  1808,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  2025,
+"startColumn":  171,
+"endLine":  2025,
+"endColumn":  179
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  2054,
+"startColumn":  11,
+"endLine":  2054,
+"endColumn":  12
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  2080,
+"startColumn":  5,
+"endLine":  2080,
+"endColumn":  6
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  2120,
+"startColumn":  5,
+"endLine":  2120,
+"endColumn":  6
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SimplifyTypeNames\\SimplifyTypeNamesTests.cs",
+"region":  {
+"startLine":  2166,
+"startColumn":  11,
+"endLine":  2166,
+"endColumn":  12
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\SpellCheck\\SpellCheckTests.cs",
+"region":  {
+"startLine":  356,
+"startColumn":  45,
+"endLine":  356,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"compilationOptions\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\CSharpEditAndContinueAnalyzerTests.cs",
+"region":  {
+"startLine":  410,
+"startColumn":  53,
+"endLine":  410,
+"endColumn":  77
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"exportProvider\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\CSharpEditAndContinueAnalyzerTests.cs",
+"region":  {
+"startLine":  410,
+"startColumn":  79,
+"endLine":  410,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"compilationOptions\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\CSharpEditAndContinueAnalyzerTests.cs",
+"region":  {
+"startLine":  455,
+"startColumn":  58,
+"endLine":  455,
+"endColumn":  82
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"exportProvider\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\CSharpEditAndContinueAnalyzerTests.cs",
+"region":  {
+"startLine":  455,
+"startColumn":  84,
+"endLine":  455,
+"endColumn":  104
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"kind\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\RudeEditStatementTests.cs",
+"region":  {
+"startLine":  884,
+"startColumn":  54,
+"endLine":  884,
+"endColumn":  78
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"preserveLocalVariables\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\RudeEditTopLevelTests.cs",
+"region":  {
+"startLine":  1559,
+"startColumn":  80,
+"endLine":  1559,
+"endColumn":  109
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"preserveLocalVariables\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\RudeEditTopLevelTests.cs",
+"region":  {
+"startLine":  1789,
+"startColumn":  91,
+"endLine":  1789,
+"endColumn":  120
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"preserveLocalVariables\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\RudeEditTopLevelTests.cs",
+"region":  {
+"startLine":  1817,
+"startColumn":  91,
+"endLine":  1817,
+"endColumn":  120
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"preserveLocalVariables\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\RudeEditTopLevelTests.cs",
+"region":  {
+"startLine":  6152,
+"startColumn":  84,
+"endLine":  6152,
+"endColumn":  113
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"preserveLocalVariables\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\RudeEditTopLevelTests.cs",
+"region":  {
+"startLine":  6171,
+"startColumn":  84,
+"endLine":  6171,
+"endColumn":  113
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"preserveLocalVariables\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\RudeEditTopLevelTests.cs",
+"region":  {
+"startLine":  6191,
+"startColumn":  84,
+"endLine":  6191,
+"endColumn":  113
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"preserveLocalVariables\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\RudeEditTopLevelTests.cs",
+"region":  {
+"startLine":  6192,
+"startColumn":  84,
+"endLine":  6192,
+"endColumn":  113
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"preserveLocalVariables\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\RudeEditTopLevelTests.cs",
+"region":  {
+"startLine":  6211,
+"startColumn":  84,
+"endLine":  6211,
+"endColumn":  113
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"preserveLocalVariables\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\RudeEditTopLevelTests.cs",
+"region":  {
+"startLine":  6588,
+"startColumn":  87,
+"endLine":  6588,
+"endColumn":  116
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"preserveLocalVariables\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\RudeEditTopLevelTests.cs",
+"region":  {
+"startLine":  6605,
+"startColumn":  87,
+"endLine":  6605,
+"endColumn":  116
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"preserveLocalVariables\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\RudeEditTopLevelTests.cs",
+"region":  {
+"startLine":  6622,
+"startColumn":  87,
+"endLine":  6622,
+"endColumn":  116
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"allowMovingDeclaration\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\ExtractMethod\\ExtractMethodTests.cs",
+"region":  {
+"startLine":  9481,
+"startColumn":  58,
+"endLine":  9481,
+"endColumn":  86
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"dontPutOutOrRefOnStruct\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\ExtractMethod\\ExtractMethodTests.cs",
+"region":  {
+"startLine":  10205,
+"startColumn":  58,
+"endLine":  10205,
+"endColumn":  87
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Interactive\\CodeActions\\InteractiveIntroduceVariableTests.cs",
+"region":  {
+"startLine":  51,
+"startColumn":  45,
+"endLine":  51,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Interactive\\CodeActions\\InteractiveIntroduceVariableTests.cs",
+"region":  {
+"startLine":  73,
+"startColumn":  17,
+"endLine":  73,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Interactive\\CodeActions\\InteractiveIntroduceVariableTests.cs",
+"region":  {
+"startLine":  91,
+"startColumn":  17,
+"endLine":  91,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\PopulateSwitch\\PopulateSwitchTests.cs",
+"region":  {
+"startLine":  424,
+"startColumn":  4,
+"endLine":  424,
+"endColumn":  12
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"usePreviousCharAsTrigger\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SignatureHelp\\AttributeSignatureHelpProviderTests.cs",
+"region":  {
+"startLine":  268,
+"startColumn":  59,
+"endLine":  268,
+"endColumn":  90
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"usePreviousCharAsTrigger\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SignatureHelp\\AttributeSignatureHelpProviderTests.cs",
+"region":  {
+"startLine":  355,
+"startColumn":  59,
+"endLine":  355,
+"endColumn":  90
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"usePreviousCharAsTrigger\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SignatureHelp\\AttributeSignatureHelpProviderTests.cs",
+"region":  {
+"startLine":  486,
+"startColumn":  59,
+"endLine":  486,
+"endColumn":  90
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"usePreviousCharAsTrigger\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SignatureHelp\\AttributeSignatureHelpProviderTests.cs",
+"region":  {
+"startLine":  513,
+"startColumn":  59,
+"endLine":  513,
+"endColumn":  90
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"usePreviousCharAsTrigger\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SignatureHelp\\AttributeSignatureHelpProviderTests.cs",
+"region":  {
+"startLine":  540,
+"startColumn":  59,
+"endLine":  540,
+"endColumn":  90
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"usePreviousCharAsTrigger\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SignatureHelp\\AttributeSignatureHelpProviderTests.cs",
+"region":  {
+"startLine":  565,
+"startColumn":  59,
+"endLine":  565,
+"endColumn":  90
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"usePreviousCharAsTrigger\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SignatureHelp\\AttributeSignatureHelpProviderTests.cs",
+"region":  {
+"startLine":  590,
+"startColumn":  59,
+"endLine":  590,
+"endColumn":  90
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SignatureHelp\\AttributeSignatureHelpProviderTests.cs",
+"region":  {
+"startLine":  772,
+"startColumn":  49,
+"endLine":  772,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SignatureHelp\\ConstructorInitializerSignatureHelpProviderTests.cs",
+"region":  {
+"startLine":  376,
+"startColumn":  49,
+"endLine":  376,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SignatureHelp\\ElementAccessExpressionSignatureHelpProviderTests.cs",
+"region":  {
+"startLine":  468,
+"startColumn":  17,
+"endLine":  468,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"usePreviousCharAsTrigger\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SignatureHelp\\GenericNamePartiallyWrittenSignatureHelpProviderTests.cs",
+"region":  {
+"startLine":  92,
+"startColumn":  59,
+"endLine":  92,
+"endColumn":  90
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SignatureHelp\\GenericNamePartiallyWrittenSignatureHelpProviderTests.cs",
+"region":  {
+"startLine":  192,
+"startColumn":  56,
+"endLine":  192,
+"endColumn":  82
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"usePreviousCharAsTrigger\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SignatureHelp\\GenericNameSignatureHelpProviderTests.cs",
+"region":  {
+"startLine":  556,
+"startColumn":  59,
+"endLine":  556,
+"endColumn":  90
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SignatureHelp\\GenericNameSignatureHelpProviderTests.cs",
+"region":  {
+"startLine":  805,
+"startColumn":  56,
+"endLine":  805,
+"endColumn":  82
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedOrderedItemsOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SignatureHelp\\InvocationExpressionSignatureHelpProviderTests.cs",
+"region":  {
+"startLine":  814,
+"startColumn":  37,
+"endLine":  814,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedOrderedItemsOrNull\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SignatureHelp\\InvocationExpressionSignatureHelpProviderTests.cs",
+"region":  {
+"startLine":  841,
+"startColumn":  37,
+"endLine":  841,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SignatureHelp\\InvocationExpressionSignatureHelpProviderTests.cs",
+"region":  {
+"startLine":  1077,
+"startColumn":  49,
+"endLine":  1077,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hideAdvancedMembers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SignatureHelp\\ObjectCreationExpressionSignatureHelpProviderTests.cs",
+"region":  {
+"startLine":  436,
+"startColumn":  37,
+"endLine":  436,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"comparison\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SymbolId\\SymbolKeyCompilationsTests.cs",
+"region":  {
+"startLine":  389,
+"startColumn":  88,
+"endLine":  389,
+"endColumn":  112
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"comparison\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SymbolId\\SymbolKeyCompilationsTests.cs",
+"region":  {
+"startLine":  390,
+"startColumn":  86,
+"endLine":  390,
+"endColumn":  110
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectEqual\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SymbolId\\SymbolKeyCompilationsTests.cs",
+"region":  {
+"startLine":  436,
+"startColumn":  86,
+"endLine":  436,
+"endColumn":  90
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectEqual\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SymbolId\\SymbolKeyCompilationsTests.cs",
+"region":  {
+"startLine":  445,
+"startColumn":  86,
+"endLine":  445,
+"endColumn":  90
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectEqual\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SymbolId\\SymbolKeyCompilationsTests.cs",
+"region":  {
+"startLine":  467,
+"startColumn":  96,
+"endLine":  467,
+"endColumn":  113
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectEqual\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SymbolId\\SymbolKeyCompilationsTests.cs",
+"region":  {
+"startLine":  507,
+"startColumn":  73,
+"endLine":  507,
+"endColumn":  90
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"comparison\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SymbolId\\SymbolKeyMetadataVsSourceTests.cs",
+"region":  {
+"startLine":  81,
+"startColumn":  73,
+"endLine":  81,
+"endColumn":  97
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"comparison\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SymbolId\\SymbolKeyMetadataVsSourceTests.cs",
+"region":  {
+"startLine":  82,
+"startColumn":  73,
+"endLine":  82,
+"endColumn":  97
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"comparison\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SymbolId\\SymbolKeyMetadataVsSourceTests.cs",
+"region":  {
+"startLine":  83,
+"startColumn":  73,
+"endLine":  83,
+"endColumn":  97
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"comparison\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SymbolId\\SymbolKeyMetadataVsSourceTests.cs",
+"region":  {
+"startLine":  84,
+"startColumn":  73,
+"endLine":  84,
+"endColumn":  97
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"comparison\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SymbolId\\SymbolKeyMetadataVsSourceTests.cs",
+"region":  {
+"startLine":  85,
+"startColumn":  73,
+"endLine":  85,
+"endColumn":  97
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"comparison\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SymbolId\\SymbolKeyMetadataVsSourceTests.cs",
+"region":  {
+"startLine":  156,
+"startColumn":  79,
+"endLine":  156,
+"endColumn":  103
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"comparison\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SymbolId\\SymbolKeyMetadataVsSourceTests.cs",
+"region":  {
+"startLine":  159,
+"startColumn":  79,
+"endLine":  159,
+"endColumn":  103
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"comparison\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SymbolId\\SymbolKeyMetadataVsSourceTests.cs",
+"region":  {
+"startLine":  162,
+"startColumn":  79,
+"endLine":  162,
+"endColumn":  103
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"comparison\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SymbolId\\SymbolKeyMetadataVsSourceTests.cs",
+"region":  {
+"startLine":  165,
+"startColumn":  79,
+"endLine":  165,
+"endColumn":  103
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"comparison\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SymbolId\\SymbolKeyMetadataVsSourceTests.cs",
+"region":  {
+"startLine":  168,
+"startColumn":  79,
+"endLine":  168,
+"endColumn":  103
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"comparison\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SymbolId\\SymbolKeyMetadataVsSourceTests.cs",
+"region":  {
+"startLine":  171,
+"startColumn":  79,
+"endLine":  171,
+"endColumn":  103
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"comparison\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SymbolId\\SymbolKeyMetadataVsSourceTests.cs",
+"region":  {
+"startLine":  258,
+"startColumn":  78,
+"endLine":  258,
+"endColumn":  102
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"comparison\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SymbolId\\SymbolKeyMetadataVsSourceTests.cs",
+"region":  {
+"startLine":  262,
+"startColumn":  78,
+"endLine":  262,
+"endColumn":  102
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"comparison\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SymbolId\\SymbolKeyMetadataVsSourceTests.cs",
+"region":  {
+"startLine":  266,
+"startColumn":  78,
+"endLine":  266,
+"endColumn":  102
+}
+}
+}
+]
+}

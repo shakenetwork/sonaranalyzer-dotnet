@@ -1,0 +1,160 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"node\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Expansion\\AbstractExpansionTest.vb",
+"region":  {
+"startLine":  52,
+"startColumn":  17,
+"endLine":  52,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"controller\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\ModelTests.vb",
+"region":  {
+"startLine":  31,
+"startColumn":  21,
+"endLine":  31,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"presenter\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\QuickInfoControllerTests.vb",
+"region":  {
+"startLine":  180,
+"startColumn":  13,
+"endLine":  180,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"documentProvider\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\QuickInfoControllerTests.vb",
+"region":  {
+"startLine":  182,
+"startColumn":  17,
+"endLine":  182,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"provider\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\QuickInfoControllerTests.vb",
+"region":  {
+"startLine":  187,
+"startColumn":  17,
+"endLine":  187,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"documentProvider\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\SignatureHelpControllerTests.vb",
+"region":  {
+"startLine":  256,
+"startColumn":  17,
+"endLine":  256,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"items\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\SignatureHelpControllerTests.vb",
+"region":  {
+"startLine":  262,
+"startColumn":  17,
+"endLine":  262,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"provider\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\SignatureHelpControllerTests.vb",
+"region":  {
+"startLine":  263,
+"startColumn":  17,
+"endLine":  263,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"presenterSession\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\SignatureHelpControllerTests.vb",
+"region":  {
+"startLine":  267,
+"startColumn":  13,
+"endLine":  267,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\TestCompletionPresenterSession.vb",
+"region":  {
+"startLine":  55,
+"startColumn":  13,
+"endLine":  55,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"types\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\TestState.vb",
+"region":  {
+"startLine":  81,
+"startColumn":  13,
+"endLine":  81,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"node\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Simplification\\AbstractSimplificationTests.vb",
+"region":  {
+"startLine":  106,
+"startColumn":  17,
+"endLine":  106,
+"endColumn":  21
+}
+}
+}
+]
+}

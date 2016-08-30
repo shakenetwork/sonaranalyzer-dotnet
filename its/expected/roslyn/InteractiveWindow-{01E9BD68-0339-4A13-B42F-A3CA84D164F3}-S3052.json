@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"LanguageBufferCounter\", the compiler will do that for you.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\Editor\\InteractiveWindow.cs",
+"region":  {
+"startLine":  53,
+"startColumn":  44,
+"endLine":  53,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_classificationRegistry\", the compiler will do that for you.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\Editor\\Output\\OutputClassifierProvider.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  76,
+"endLine":  25,
+"endColumn":  82
+}
+}
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"Definition\", the compiler will do that for you.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\Editor\\Output\\OutputClassifierProvider.cs",
+"region":  {
+"startLine":  98,
+"startColumn":  82,
+"endLine":  98,
+"endColumn":  88
+}
+}
+}
+]
+}

@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"useFullSpan\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\Debugging\\LocationInfoGetter.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  103,
+"endLine":  25,
+"endColumn":  120
+}
+}
+}
+]
+}

@@ -1,0 +1,69 @@
+{
+"issues":  [
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\VisualStudio\\ProvideInteractiveWindowAttribute.cs",
+"region":  {
+"startLine":  129,
+"startColumn":  24,
+"endLine":  129,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\VisualStudio\\ProvideInteractiveWindowAttribute.cs",
+"region":  {
+"startLine":  145,
+"startColumn":  24,
+"endLine":  145,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 59 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\VisualStudio\\VsInteractiveWindowCommandFilter.cs",
+"region":  {
+"startLine":  198,
+"startColumn":  21,
+"endLine":  198,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 27 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\VisualStudio\\VsInteractiveWindowCommandFilter.cs",
+"region":  {
+"startLine":  352,
+"startColumn":  21,
+"endLine":  352,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 41 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\VisualStudio\\VsInteractiveWindowCommandFilter.cs",
+"region":  {
+"startLine":  412,
+"startColumn":  21,
+"endLine":  412,
+"endColumn":  49
+}
+}
+}
+]
+}

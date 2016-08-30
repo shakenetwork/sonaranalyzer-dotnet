@@ -1,0 +1,589 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"line\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\AbstractCommandHandlerTestState.cs",
+"region":  {
+"startLine":  301,
+"startColumn":  17,
+"endLine":  301,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"expectedSpans\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeActions\\AbstractCodeActionOrUserDiagnosticTest.cs",
+"region":  {
+"startLine":  38,
+"startColumn":  13,
+"endLine":  38,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"actions\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeActions\\AbstractCodeActionOrUserDiagnosticTest.cs",
+"region":  {
+"startLine":  478,
+"startColumn":  21,
+"endLine":  478,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"expected\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeGeneration\\CodeGenerationTests.cs",
+"region":  {
+"startLine":  127,
+"startColumn":  17,
+"endLine":  127,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"expected\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeGeneration\\CodeGenerationTests.cs",
+"region":  {
+"startLine":  166,
+"startColumn":  21,
+"endLine":  166,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"expected\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeGeneration\\CodeGenerationTests.cs",
+"region":  {
+"startLine":  243,
+"startColumn":  17,
+"endLine":  243,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"expected\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeGeneration\\CodeGenerationTests.cs",
+"region":  {
+"startLine":  271,
+"startColumn":  17,
+"endLine":  271,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"type\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeGeneration\\CodeGenerationTests.cs",
+"region":  {
+"startLine":  344,
+"startColumn":  17,
+"endLine":  344,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"expected\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeGeneration\\CodeGenerationTests.cs",
+"region":  {
+"startLine":  381,
+"startColumn":  17,
+"endLine":  381,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"expected\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeGeneration\\CodeGenerationTests.cs",
+"region":  {
+"startLine":  386,
+"startColumn":  17,
+"endLine":  386,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"expectedCodeAfterCommit\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Completion\\AbstractCompletionProviderTests.cs",
+"region":  {
+"startLine":  171,
+"startColumn":  13,
+"endLine":  171,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"code\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Completion\\AbstractCompletionProviderTests.cs",
+"region":  {
+"startLine":  659,
+"startColumn":  13,
+"endLine":  659,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"position\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Completion\\AbstractCompletionProviderTests.cs",
+"region":  {
+"startLine":  660,
+"startColumn":  13,
+"endLine":  660,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"code\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Completion\\AbstractCompletionProviderTests.cs",
+"region":  {
+"startLine":  690,
+"startColumn":  13,
+"endLine":  690,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"position\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Completion\\AbstractCompletionProviderTests.cs",
+"region":  {
+"startLine":  691,
+"startColumn":  13,
+"endLine":  691,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"invalidChars\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Completion\\AbstractCompletionProviderTests.cs",
+"region":  {
+"startLine":  780,
+"startColumn":  13,
+"endLine":  780,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"diagnostics\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Diagnostics\\AbstractSuppressionDiagnosticTest.cs",
+"region":  {
+"startLine":  40,
+"startColumn":  17,
+"endLine":  40,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"diagnostics\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Diagnostics\\AbstractSuppressionDiagnosticTest.cs",
+"region":  {
+"startLine":  45,
+"startColumn":  17,
+"endLine":  45,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"diagnostics\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Diagnostics\\AbstractSuppressionDiagnosticTest.cs",
+"region":  {
+"startLine":  50,
+"startColumn":  17,
+"endLine":  50,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"updateSource\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Diagnostics\\DiagnosticsSquiggleTaggerProviderTests.cs",
+"region":  {
+"startLine":  83,
+"startColumn":  17,
+"endLine":  83,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"onAnalyzerException\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Diagnostics\\TestDiagnosticAnalyzerDriver.cs",
+"region":  {
+"startLine":  41,
+"startColumn":  17,
+"endLine":  41,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"expectedDiagnostics\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\EditAndContinue\\Extensions.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  13,
+"endLine":  15,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"projectLanguage\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\MetadataAsSource\\AbstractMetadataAsSourceTests.TestContext.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  17,
+"endLine":  32,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"metadataSources\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\MetadataAsSource\\AbstractMetadataAsSourceTests.TestContext.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  17,
+"endLine":  33,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"metadataSources\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\MetadataAsSource\\AbstractMetadataAsSourceTests.TestContext.cs",
+"region":  {
+"startLine":  34,
+"startColumn":  17,
+"endLine":  34,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"project\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\MetadataAsSource\\AbstractMetadataAsSourceTests.TestContext.cs",
+"region":  {
+"startLine":  61,
+"startColumn":  17,
+"endLine":  61,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"symbolMetadataName\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\MetadataAsSource\\AbstractMetadataAsSourceTests.TestContext.cs",
+"region":  {
+"startLine":  69,
+"startColumn":  17,
+"endLine":  69,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"project\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\MetadataAsSource\\AbstractMetadataAsSourceTests.TestContext.cs",
+"region":  {
+"startLine":  70,
+"startColumn":  17,
+"endLine":  70,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"expected\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\MetadataAsSource\\AbstractMetadataAsSourceTests.TestContext.cs",
+"region":  {
+"startLine":  98,
+"startColumn":  21,
+"endLine":  98,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"compilation\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\MetadataAsSource\\AbstractMetadataAsSourceTests.TestContext.cs",
+"region":  {
+"startLine":  146,
+"startColumn":  21,
+"endLine":  146,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"metadataSources\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\MetadataAsSource\\AbstractMetadataAsSourceTests.TestContext.cs",
+"region":  {
+"startLine":  224,
+"startColumn":  17,
+"endLine":  224,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"destinationDocumentContainers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\MoveType\\AbstractMoveTypeTest.cs",
+"region":  {
+"startLine":  150,
+"startColumn":  25,
+"endLine":  150,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"document\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\RenameTracking\\RenameTrackingTestState.cs",
+"region":  {
+"startLine":  163,
+"startColumn":  13,
+"endLine":  163,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"markupWithPositionAndOptSpan\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\SignatureHelp\\AbstractSignatureHelpProviderTests.cs",
+"region":  {
+"startLine":  75,
+"startColumn":  13,
+"endLine":  75,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"value\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Utilities\\BloomFilterTests.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  17,
+"endLine":  36,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"owner\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\ProjectCacheHostServiceFactoryTests.cs",
+"region":  {
+"startLine":  75,
+"startColumn":  21,
+"endLine":  75,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"owner\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\ProjectCacheHostServiceFactoryTests.cs",
+"region":  {
+"startLine":  90,
+"startColumn":  21,
+"endLine":  90,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"language\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestHostProject.cs",
+"region":  {
+"startLine":  220,
+"startColumn":  13,
+"endLine":  220,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"foregroundThreadData\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestWorkspace.cs",
+"region":  {
+"startLine":  72,
+"startColumn":  13,
+"endLine":  72,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"extension\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestWorkspace_Create.cs",
+"region":  {
+"startLine":  123,
+"startColumn":  17,
+"endLine":  123,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"metadataReferences\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestWorkspace_Create.cs",
+"region":  {
+"startLine":  133,
+"startColumn":  13,
+"endLine":  133,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"exportProvider\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestWorkspace_XmlConsumption.cs",
+"region":  {
+"startLine":  90,
+"startColumn":  13,
+"endLine":  90,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"parseOptions\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestWorkspace_XmlConsumption.cs",
+"region":  {
+"startLine":  400,
+"startColumn":  17,
+"endLine":  400,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"parseOptions\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestWorkspace_XmlConsumption.cs",
+"region":  {
+"startLine":  405,
+"startColumn":  17,
+"endLine":  405,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"documentElement\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestWorkspace_XmlConsumption.cs",
+"region":  {
+"startLine":  587,
+"startColumn":  17,
+"endLine":  587,
+"endColumn":  32
+}
+}
+}
+]
+}

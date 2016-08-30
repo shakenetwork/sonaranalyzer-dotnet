@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\EvaluationContextBase.cs",
+"region":  {
+"startLine":  58,
+"startColumn":  21,
+"endLine":  58,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\PDB\\MethodDebugInfo.Portable.cs",
+"region":  {
+"startLine":  74,
+"startColumn":  29,
+"endLine":  74,
+"endColumn":  35
+}
+}
+}
+]
+}

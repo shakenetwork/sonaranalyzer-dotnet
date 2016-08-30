@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"N\", the compiler will do that for you.",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\CSharpTest\\InteractiveSessionTests.cs",
+"region":  {
+"startLine":  1959,
+"startColumn":  43,
+"endLine":  1959,
+"endColumn":  49
+}
+}
+}
+]
+}

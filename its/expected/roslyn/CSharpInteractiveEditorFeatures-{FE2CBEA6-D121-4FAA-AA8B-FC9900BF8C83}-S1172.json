@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"triggerInfo\".",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\EditorFeatures\\CSharp\\Completion\\FileSystem\\LoadDirectiveCompletionProvider.cs",
+"region":  {
+"startLine":  64,
+"startColumn":  107,
+"endLine":  64,
+"endColumn":  136
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\EditorFeatures\\CSharp\\Completion\\FileSystem\\LoadDirectiveCompletionProvider.cs",
+"region":  {
+"startLine":  64,
+"startColumn":  138,
+"endLine":  64,
+"endColumn":  173
+}
+}
+}
+]
+}

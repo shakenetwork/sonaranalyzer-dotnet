@@ -1,0 +1,82 @@
+{
+"issues":  [
+{
+"id":  "S1699",
+"message":  "Remove this call from a constructor to the overridable \"MakeParameters\" method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ArrayMembers.cs",
+"region":  {
+"startLine":  294,
+"startColumn":  27,
+"endLine":  294,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S1699",
+"message":  "Remove this call from a constructor to the overridable \"SuppressDefaultResponseFile\" method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CommandLine\\CommonCompiler.cs",
+"region":  {
+"startLine":  60,
+"startColumn":  18,
+"endLine":  60,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1699",
+"message":  "Remove this call from a constructor to the overridable \"GetTypeParameters\" method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\NoPia\\CommonEmbeddedMethod.cs",
+"region":  {
+"startLine":  43,
+"startColumn":  35,
+"endLine":  43,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S1699",
+"message":  "Remove this call from a constructor to the overridable \"GetParameters\" method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\NoPia\\CommonEmbeddedMethod.cs",
+"region":  {
+"startLine":  44,
+"startColumn":  31,
+"endLine":  44,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1699",
+"message":  "Remove this call from a constructor to the overridable \"GetParameters\" method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\NoPia\\CommonEmbeddedProperty.cs",
+"region":  {
+"startLine":  46,
+"startColumn":  31,
+"endLine":  46,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1699",
+"message":  "Remove this call from a constructor to the overridable \"CreateWarningStateMapEntries\" method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\AbstractWarningStateMap.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  39,
+"endLine":  20,
+"endColumn":  67
+}
+}
+}
+]
+}

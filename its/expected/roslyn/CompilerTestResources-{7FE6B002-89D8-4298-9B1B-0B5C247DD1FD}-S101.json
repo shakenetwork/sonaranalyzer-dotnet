@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S101",
+"message":  "Rename class \"aacorlib_v15_0_3928\" to match camel case naming rules, consider using \"Aacorlib_V15_0_3928\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Resources\\Core\\TestResources.cs",
+"region":  {
+"startLine":  155,
+"startColumn":  25,
+"endLine":  155,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"netModule\" to match camel case naming rules, consider using \"NetModule\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Resources\\Core\\TestResources.cs",
+"region":  {
+"startLine":  503,
+"startColumn":  25,
+"endLine":  503,
+"endColumn":  34
+}
+}
+}
+]
+}

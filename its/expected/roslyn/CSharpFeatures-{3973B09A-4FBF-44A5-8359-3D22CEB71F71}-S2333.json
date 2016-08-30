@@ -1,0 +1,316 @@
+{
+"issues":  [
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeFixes\\SpellCheck\\CSharpSpellCheckCodeFixProvider.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  14,
+"endLine":  16,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\ConvertToInterpolatedString\\ConvertToInterpolatedStringRefactoringProvider.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  14,
+"endLine":  9,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\InvertIf\\InvertIfCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  14,
+"endLine":  20,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\CrefCompletionProvider.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  14,
+"endLine":  21,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\EnumAndCompletionListTagCompletionProvider.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  14,
+"endLine":  21,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\ExplicitInterfaceCompletionProvider.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  14,
+"endLine":  17,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\NamedParameterCompletionProvider.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  14,
+"endLine":  22,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\ObjectCreationCompletionProvider.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  14,
+"endLine":  21,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\OverrideCompletionProvider.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  14,
+"endLine":  19,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\PartialMethodCompletionProvider.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  14,
+"endLine":  18,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\PartialTypeCompletionProvider.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  14,
+"endLine":  20,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\SymbolCompletionProvider.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  14,
+"endLine":  21,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\XmlDocCommentCompletionProvider.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  11,
+"endLine":  20,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\AbstractSyntacticSingleKeywordRecommender.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  23,
+"endLine":  13,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Diagnostics\\Analyzers\\CSharpSimplifyTypeNamesDiagnosticAnalyzer.cs",
+"region":  {
+"startLine":  96,
+"startColumn":  19,
+"endLine":  96,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\StatementSyntaxComparer.cs",
+"region":  {
+"startLine":  110,
+"startColumn":  28,
+"endLine":  110,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateMember\\GenerateEnumMember\\CSharpGenerateEnumMemberService.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  14,
+"endLine":  13,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateMember\\GenerateParameterizedMember\\CSharpGenerateConversionService.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  14,
+"endLine":  20,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateMember\\GenerateParameterizedMember\\CSharpGenerateMethodService.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  14,
+"endLine":  20,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateMember\\GenerateParameterizedMember\\CSharpGenerateParameterizedMemberService.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  18,
+"endLine":  23,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateMember\\GenerateVariable\\CSharpGenerateVariableService.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  14,
+"endLine":  20,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\LanguageServices\\CSharpSymbolDisplayServiceFactory.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  14,
+"endLine":  11,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\SignatureHelp\\AttributeSignatureHelpProvider.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  14,
+"endLine":  22,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\SignatureHelp\\ConstructorInitializerSignatureHelpProvider.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  14,
+"endLine":  22,
+"endColumn":  21
+}
+}
+}
+]
+}

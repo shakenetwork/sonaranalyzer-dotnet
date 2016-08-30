@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_AssignmentOperator.cs",
+"region":  {
+"startLine":  297,
+"startColumn":  40,
+"endLine":  297,
+"endColumn":  44
+}
+}
+}
+]
+}

@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1450",
+"message":  "Remove the \"_syntax\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\Binders\\PlaceholderLocalBinder.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  43,
+"endLine":  18,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_syntax\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\Symbols\\EENamedTypeSymbol.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  43,
+"endLine":  20,
+"endColumn":  50
+}
+}
+}
+]
+}

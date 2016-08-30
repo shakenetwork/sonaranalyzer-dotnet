@@ -1,0 +1,82 @@
+{
+"issues":  [
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"currentToken\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\CodeModel\\EndRegionFormattingRule.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  89,
+"endLine":  33,
+"endColumn":  113
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"document\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\LanguageService\\CSharpHelpContextService.cs",
+"region":  {
+"startLine":  221,
+"startColumn":  67,
+"endLine":  221,
+"endColumn":  84
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"document\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\LanguageService\\CSharpHelpContextService.cs",
+"region":  {
+"startLine":  239,
+"startColumn":  72,
+"endLine":  239,
+"endColumn":  89
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"syntaxFacts\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\LanguageService\\CSharpHelpContextService.cs",
+"region":  {
+"startLine":  239,
+"startColumn":  91,
+"endLine":  239,
+"endColumn":  122
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"document\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\LanguageService\\CSharpHelpContextService.cs",
+"region":  {
+"startLine":  277,
+"startColumn":  62,
+"endLine":  277,
+"endColumn":  79
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"project\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\ProjectSystemShim\\CSharpProjectShim.ICSharpProjectSite.cs",
+"region":  {
+"startLine":  205,
+"startColumn":  62,
+"endLine":  205,
+"endColumn":  77
+}
+}
+}
+]
+}

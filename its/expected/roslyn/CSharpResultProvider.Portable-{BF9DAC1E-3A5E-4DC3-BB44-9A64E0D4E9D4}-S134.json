@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ResultProvider\\CSharpFormatter.cs",
+"region":  {
+"startLine":  66,
+"startColumn":  25,
+"endLine":  66,
+"endColumn":  27
+}
+}
+}
+]
+}

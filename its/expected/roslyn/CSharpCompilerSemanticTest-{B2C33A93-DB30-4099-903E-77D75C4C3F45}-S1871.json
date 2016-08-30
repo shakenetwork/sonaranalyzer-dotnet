@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"10263\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\OutVarTests.cs",
+"region":  {
+"startLine":  10274,
+"startColumn":  21,
+"endLine":  10276,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"3424\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3435,
+"startColumn":  21,
+"endLine":  3437,
+"endColumn":  31
+}
+}
+}
+]
+}

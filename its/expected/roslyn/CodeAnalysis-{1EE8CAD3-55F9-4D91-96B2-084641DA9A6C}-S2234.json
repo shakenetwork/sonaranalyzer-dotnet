@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2234",
+"message":  "Parameters to \"TryGetNode\" have the same names but not the same order as the method arguments.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\InternalSyntax\\SyntaxList.cs",
+"region":  {
+"startLine":  56,
+"startColumn":  48,
+"endLine":  56,
+"endColumn":  58
+}
+}
+}
+]
+}

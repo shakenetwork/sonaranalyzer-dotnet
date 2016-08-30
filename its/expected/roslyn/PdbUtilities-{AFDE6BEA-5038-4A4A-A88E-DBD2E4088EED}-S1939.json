@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1939",
+"message":  "\"IReadOnlyList\u003cT\u003e\" implements \"IReadOnlyCollection\u003cT\u003e\" so \"IReadOnlyCollection\u003cT\u003e\" can be removed from the inheritance list.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\PooledObjects\\ArrayBuilder.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  53,
+"endLine":  14,
+"endColumn":  76
+}
+}
+}
+]
+}

@@ -1,0 +1,251 @@
+{
+"issues":  [
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ILBuilder.cs",
+"region":  {
+"startLine":  503,
+"startColumn":  25,
+"endLine":  503,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ILBuilder.cs",
+"region":  {
+"startLine":  563,
+"startColumn":  25,
+"endLine":  563,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ILBuilderConversions.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  21,
+"endLine":  20,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ILBuilderConversions.cs",
+"region":  {
+"startLine":  34,
+"startColumn":  21,
+"endLine":  34,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ILBuilderConversions.cs",
+"region":  {
+"startLine":  262,
+"startColumn":  21,
+"endLine":  262,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ILBuilderConversions.cs",
+"region":  {
+"startLine":  273,
+"startColumn":  21,
+"endLine":  273,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ILOpCodeExtensions.cs",
+"region":  {
+"startLine":  29,
+"startColumn":  13,
+"endLine":  29,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\CommonPEModuleBuilder.cs",
+"region":  {
+"startLine":  889,
+"startColumn":  13,
+"endLine":  889,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\SymbolChanges.cs",
+"region":  {
+"startLine":  306,
+"startColumn":  13,
+"endLine":  306,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\SymbolChanges.cs",
+"region":  {
+"startLine":  331,
+"startColumn":  17,
+"endLine":  331,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\IncrementalHash.cs",
+"region":  {
+"startLine":  71,
+"startColumn":  17,
+"endLine":  71,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataWriter.cs",
+"region":  {
+"startLine":  862,
+"startColumn":  13,
+"endLine":  862,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataWriter.cs",
+"region":  {
+"startLine":  1468,
+"startColumn":  13,
+"endLine":  1468,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataWriter.cs",
+"region":  {
+"startLine":  1519,
+"startColumn":  13,
+"endLine":  1519,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ReferenceManager\\CommonReferenceManager.Resolution.cs",
+"region":  {
+"startLine":  268,
+"startColumn":  21,
+"endLine":  268,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\MarshalAsAttributeDecoder.cs",
+"region":  {
+"startLine":  179,
+"startColumn":  17,
+"endLine":  179,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxNode.Iterators.cs",
+"region":  {
+"startLine":  561,
+"startColumn":  21,
+"endLine":  561,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\UnicodeCharacterUtilities.cs",
+"region":  {
+"startLine":  138,
+"startColumn":  13,
+"endLine":  138,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\CustomDebugInfoReader.cs",
+"region":  {
+"startLine":  700,
+"startColumn":  21,
+"endLine":  700,
+"endColumn":  27
+}
+}
+}
+]
+}

@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1450",
+"message":  "Remove the \"_compilation\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\CommonTypedConstantTests.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  51,
+"endLine":  16,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_currentEncoding\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Text\\StringTextTests_Default.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  26,
+"endLine":  14,
+"endColumn":  42
+}
+}
+}
+]
+}

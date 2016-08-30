@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1939",
+"message":  "\"int\" should not be explicitly used as the underlying type.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\ObjectSerializationTests.cs",
+"region":  {
+"startLine":  278,
+"startColumn":  26,
+"endLine":  278,
+"endColumn":  31
+}
+}
+}
+]
+}

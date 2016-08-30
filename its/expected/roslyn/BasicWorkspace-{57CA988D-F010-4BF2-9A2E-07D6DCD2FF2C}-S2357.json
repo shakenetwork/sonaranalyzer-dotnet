@@ -1,0 +1,251 @@
+{
+"issues":  [
+{
+"id":  "S2357",
+"message":  "Make \"Value\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\CodeGeneration\\ExpressionGenerator.StringPiece.vb",
+"region":  {
+"startLine":  19,
+"startColumn":  29,
+"endLine":  19,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Kind\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\CodeGeneration\\ExpressionGenerator.StringPiece.vb",
+"region":  {
+"startLine":  20,
+"startColumn":  29,
+"endLine":  20,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"FollowsEndOfStatement\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\ContextQuery\\VisualBasicSyntaxContext.vb",
+"region":  {
+"startLine":  20,
+"startColumn":  25,
+"endLine":  20,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"MustBeginNewStatement\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\ContextQuery\\VisualBasicSyntaxContext.vb",
+"region":  {
+"startLine":  33,
+"startColumn":  25,
+"endLine":  33,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsSingleLineStatementContext\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\ContextQuery\\VisualBasicSyntaxContext.vb",
+"region":  {
+"startLine":  35,
+"startColumn":  25,
+"endLine":  35,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsMultiLineStatementContext\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\ContextQuery\\VisualBasicSyntaxContext.vb",
+"region":  {
+"startLine":  36,
+"startColumn":  25,
+"endLine":  36,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsGlobalStatementContext\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\ContextQuery\\VisualBasicSyntaxContext.vb",
+"region":  {
+"startLine":  38,
+"startColumn":  25,
+"endLine":  38,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsTypeDeclarationKeywordContext\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\ContextQuery\\VisualBasicSyntaxContext.vb",
+"region":  {
+"startLine":  40,
+"startColumn":  25,
+"endLine":  40,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsTypeMemberDeclarationKeywordContext\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\ContextQuery\\VisualBasicSyntaxContext.vb",
+"region":  {
+"startLine":  41,
+"startColumn":  25,
+"endLine":  41,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsInterfaceMemberDeclarationKeywordContext\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\ContextQuery\\VisualBasicSyntaxContext.vb",
+"region":  {
+"startLine":  42,
+"startColumn":  25,
+"endLine":  42,
+"endColumn":  67
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ModifierCollectionFacts\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\ContextQuery\\VisualBasicSyntaxContext.vb",
+"region":  {
+"startLine":  44,
+"startColumn":  25,
+"endLine":  44,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsPreprocessorStartContext\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\ContextQuery\\VisualBasicSyntaxContext.vb",
+"region":  {
+"startLine":  45,
+"startColumn":  25,
+"endLine":  45,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TouchingToken\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\ContextQuery\\VisualBasicSyntaxContext.vb",
+"region":  {
+"startLine":  46,
+"startColumn":  25,
+"endLine":  46,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsInLambda\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\ContextQuery\\VisualBasicSyntaxContext.vb",
+"region":  {
+"startLine":  47,
+"startColumn":  25,
+"endLine":  47,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsQueryOperatorContext\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\ContextQuery\\VisualBasicSyntaxContext.vb",
+"region":  {
+"startLine":  48,
+"startColumn":  25,
+"endLine":  48,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"EnclosingNamedType\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\ContextQuery\\VisualBasicSyntaxContext.vb",
+"region":  {
+"startLine":  49,
+"startColumn":  25,
+"endLine":  49,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsCustomEventContext\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\ContextQuery\\VisualBasicSyntaxContext.vb",
+"region":  {
+"startLine":  50,
+"startColumn":  25,
+"endLine":  50,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsPreprocessorEndDirectiveKeywordContext\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\ContextQuery\\VisualBasicSyntaxContext.vb",
+"region":  {
+"startLine":  52,
+"startColumn":  25,
+"endLine":  52,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsWithinPreprocessorContext\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\ContextQuery\\VisualBasicSyntaxContext.vb",
+"region":  {
+"startLine":  53,
+"startColumn":  25,
+"endLine":  53,
+"endColumn":  52
+}
+}
+}
+]
+}

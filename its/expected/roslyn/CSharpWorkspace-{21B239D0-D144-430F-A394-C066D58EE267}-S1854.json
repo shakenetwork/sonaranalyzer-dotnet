@@ -1,0 +1,160 @@
+{
+"issues":  [
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"xPrecedence\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\CodeGeneration\\CSharpDeclarationComparer.cs",
+"region":  {
+"startLine":  424,
+"startColumn":  33,
+"endLine":  424,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"yPrecedence\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\CodeGeneration\\CSharpDeclarationComparer.cs",
+"region":  {
+"startLine":  425,
+"startColumn":  33,
+"endLine":  425,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"validTypeDeclarations\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  227,
+"startColumn":  35,
+"endLine":  227,
+"endColumn":  107
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"newComment\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Engine\\Trivia\\CSharpTriviaFormatter.cs",
+"region":  {
+"startLine":  221,
+"startColumn":  28,
+"endLine":  221,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"newComment\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Engine\\Trivia\\CSharpTriviaFormatter.cs",
+"region":  {
+"startLine":  240,
+"startColumn":  28,
+"endLine":  240,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"methods\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\LanguageServices\\CSharpTypeInferenceService.TypeInferrer.cs",
+"region":  {
+"startLine":  407,
+"startColumn":  52,
+"endLine":  407,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"symbols\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Rename\\CSharpRenameRewriterLanguageService.cs",
+"region":  {
+"startLine":  461,
+"startColumn":  50,
+"endLine":  461,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"newToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Rename\\CSharpRenameRewriterLanguageService.cs",
+"region":  {
+"startLine":  606,
+"startColumn":  32,
+"endLine":  606,
+"endColumn":  176
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"newToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Rename\\CSharpRenameRewriterLanguageService.cs",
+"region":  {
+"startLine":  607,
+"startColumn":  32,
+"endLine":  607,
+"endColumn":  196
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"left\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Simplification\\CSharpSimplificationService.Expander.cs",
+"region":  {
+"startLine":  884,
+"startColumn":  43,
+"endLine":  884,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"originalConversion\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Utilities\\SpeculationAnalyzer.cs",
+"region":  {
+"startLine":  670,
+"startColumn":  44,
+"endLine":  670,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"newConversion\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Utilities\\SpeculationAnalyzer.cs",
+"region":  {
+"startLine":  671,
+"startColumn":  39,
+"endLine":  671,
+"endColumn":  45
+}
+}
+}
+]
+}

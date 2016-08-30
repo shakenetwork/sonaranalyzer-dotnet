@@ -1,0 +1,407 @@
+{
+"issues":  [
+{
+"id":  "S107",
+"message":  "Method has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Extensibility\\Completion\\ICompletionPresenterSession.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  26,
+"endLine":  17,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Constructor has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Extensibility\\NavigationBar\\NavigationBarProjectItem.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  40,
+"endLine":  22,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Constructor has 9 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Extensibility\\NavigationBar\\NavigationBarSymbolItem.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  39,
+"endLine":  22,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Method has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Host\\IPreviewDialogService.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  32,
+"endLine":  34,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Constructor has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\AutomaticCompletion\\BraceCompletionSessionProvider.BraceCompletionSession.cs",
+"region":  {
+"startLine":  40,
+"startColumn":  42,
+"endLine":  43,
+"endColumn":  119
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Method has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\CodeActions\\CodeActionEditHandlerService.cs",
+"region":  {
+"startLine":  197,
+"startColumn":  67,
+"endLine":  199,
+"endColumn":  83
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Method has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\CodeFixes\\CodeFixService.cs",
+"region":  {
+"startLine":  265,
+"startColumn":  83,
+"endLine":  273,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Constructor has 9 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\InlineRename\\InlineRenameSession.cs",
+"region":  {
+"startLine":  91,
+"startColumn":  35,
+"endLine":  100,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Constructor has 10 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\Controller.cs",
+"region":  {
+"startLine":  50,
+"startColumn":  26,
+"endLine":  60,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Method has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\Controller.cs",
+"region":  {
+"startLine":  72,
+"startColumn":  47,
+"endLine":  80,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Method has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\Controller.Session_FilterModel.cs",
+"region":  {
+"startLine":  199,
+"startColumn":  48,
+"endLine":  207,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Constructor has 9 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\FileSystem\\FileSystemCompletionHelper.cs",
+"region":  {
+"startLine":  35,
+"startColumn":  42,
+"endLine":  44,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Constructor has 17 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\Model.cs",
+"region":  {
+"startLine":  49,
+"startColumn":  22,
+"endLine":  66,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Method has 10 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\Model.cs",
+"region":  {
+"startLine":  89,
+"startColumn":  40,
+"endLine":  99,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Method has 9 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\Model.cs",
+"region":  {
+"startLine":  204,
+"startColumn":  27,
+"endLine":  213,
+"endColumn":  101
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Constructor has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\QuickInfo\\DeferredContent\\QuickInfoDisplayDeferredContent.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  47,
+"endLine":  27,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Method has 9 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\QuickInfo\\Providers\\AbstractQuickInfoProvider.cs",
+"region":  {
+"startLine":  90,
+"startColumn":  82,
+"endLine":  99,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Constructor has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\QuickInfo\\Providers\\QuickInfoDisplayPanel.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  37,
+"endLine":  29,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Constructor has 9 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\SignatureHelp\\Model.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  21,
+"endLine":  34,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Constructor has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Outlining\\OutliningTaggerProvider.Tag.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  23,
+"endLine":  41,
+"endColumn":  74
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Constructor has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Preview\\PreviewFactoryService.cs",
+"region":  {
+"startLine":  41,
+"startColumn":  37,
+"endLine":  49,
+"endColumn":  72
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Method has 9 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Preview\\PreviewFactoryService.cs",
+"region":  {
+"startLine":  490,
+"startColumn":  60,
+"endLine":  492,
+"endColumn":  67
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Method has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\RenameTracking\\RenameTrackingTaggerProvider.RenameTrackingCommitter.cs",
+"region":  {
+"startLine":  246,
+"startColumn":  66,
+"endLine":  254,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Constructor has 9 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Suggestions\\CodeFixSuggestedAction.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  38,
+"endLine":  34,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Method has 10 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Suggestions\\CodeFixSuggestedAction.cs",
+"region":  {
+"startLine":  45,
+"startColumn":  71,
+"endLine":  55,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Constructor has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Suggestions\\FixAllSuggestedAction.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  39,
+"endLine":  33,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Constructor has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Suggestions\\SuggestedAction.cs",
+"region":  {
+"startLine":  40,
+"startColumn":  33,
+"endLine":  48,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Method has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Suggestions\\SuggestedActionsSourceProvider.cs",
+"region":  {
+"startLine":  615,
+"startColumn":  58,
+"endLine":  623,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Constructor has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Suggestions\\SuppressionSuggestedAction.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  42,
+"endLine":  39,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Constructor has 10 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\TodoComment\\TodoItem.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  24,
+"endLine":  19,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Method has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Extensions\\IProjectionBufferFactoryServiceExtensions.cs",
+"region":  {
+"startLine":  213,
+"startColumn":  64,
+"endLine":  221,
+"endColumn":  48
+}
+}
+}
+]
+}

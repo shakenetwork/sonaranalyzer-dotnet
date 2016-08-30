@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\LanguageServices\\CSharpSyntaxTreeFactoryService.NullSyntaxReference.cs",
+"region":  {
+"startLine":  45,
+"startColumn":  25,
+"endLine":  45,
+"endColumn":  135
+}
+}
+}
+]
+}

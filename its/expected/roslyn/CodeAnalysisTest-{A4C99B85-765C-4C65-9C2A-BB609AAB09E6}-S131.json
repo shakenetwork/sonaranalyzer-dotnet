@@ -1,0 +1,69 @@
+{
+"issues":  [
+{
+"id":  "S131",
+"message":  "Add a \"default\" clause to this \"switch\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Diagnostics\\FieldCouldBeReadOnlyAnalyzer.cs",
+"region":  {
+"startLine":  104,
+"startColumn":  21,
+"endLine":  104,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"default\" clause to this \"switch\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Diagnostics\\OperationTestAnalyzer.cs",
+"region":  {
+"startLine":  327,
+"startColumn":  30,
+"endLine":  327,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"default\" clause to this \"switch\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Diagnostics\\OperationTestAnalyzer.cs",
+"region":  {
+"startLine":  384,
+"startColumn":  46,
+"endLine":  384,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"default\" clause to this \"switch\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Diagnostics\\OperationTestAnalyzer.cs",
+"region":  {
+"startLine":  878,
+"startColumn":  22,
+"endLine":  878,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"default\" clause to this \"switch\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\MetadataHelpersTests.cs",
+"region":  {
+"startLine":  173,
+"startColumn":  17,
+"endLine":  173,
+"endColumn":  23
+}
+}
+}
+]
+}

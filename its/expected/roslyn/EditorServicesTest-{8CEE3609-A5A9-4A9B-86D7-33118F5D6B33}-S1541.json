@@ -1,0 +1,160 @@
+{
+"issues":  [
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 23 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeGeneration\\CodeGenerationTests.cs",
+"region":  {
+"startLine":  667,
+"startColumn":  50,
+"endLine":  667,
+"endColumn":  70
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Completion\\AbstractCompletionProviderTests.cs",
+"region":  {
+"startLine":  82,
+"startColumn":  28,
+"endLine":  82,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Diagnostics\\AbstractUserDiagnosticTest.cs",
+"region":  {
+"startLine":  80,
+"startColumn":  32,
+"endLine":  80,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Diagnostics\\AbstractUserDiagnosticTest.cs",
+"region":  {
+"startLine":  290,
+"startColumn":  29,
+"endLine":  290,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\MetadataAsSource\\AbstractMetadataAsSourceTests.TestContext.cs",
+"region":  {
+"startLine":  142,
+"startColumn":  40,
+"endLine":  142,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestHostProject.cs",
+"region":  {
+"startLine":  330,
+"startColumn":  31,
+"endLine":  330,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestWorkspace.cs",
+"region":  {
+"startLine":  268,
+"startColumn":  30,
+"endLine":  268,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestWorkspace.cs",
+"region":  {
+"startLine":  440,
+"startColumn":  22,
+"endLine":  440,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestWorkspace.cs",
+"region":  {
+"startLine":  536,
+"startColumn":  22,
+"endLine":  536,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestWorkspace_XmlConsumption.cs",
+"region":  {
+"startLine":  78,
+"startColumn":  43,
+"endLine":  78,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestWorkspace_XmlConsumption.cs",
+"region":  {
+"startLine":  529,
+"startColumn":  41,
+"endLine":  529,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 19 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestWorkspace_XmlConsumption.cs",
+"region":  {
+"startLine":  759,
+"startColumn":  49,
+"endLine":  759,
+"endColumn":  71
+}
+}
+}
+]
+}

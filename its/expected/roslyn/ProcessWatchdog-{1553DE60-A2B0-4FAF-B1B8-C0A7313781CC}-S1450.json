@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1450",
+"message":  "Remove the \"_timeLimit\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\ProcessWatchdog\\Program.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  26,
+"endLine":  18,
+"endColumn":  36
+}
+}
+}
+]
+}

@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S103",
+"message":  "Split this 271 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Next\\IntelliSense\\Completion\\Presentation\\VisualStudio15CompletionSet.cs",
+"region":  {
+"startLine":  80,
+"startColumn":  1,
+"endLine":  80,
+"endColumn":  272
+}
+}
+}
+]
+}

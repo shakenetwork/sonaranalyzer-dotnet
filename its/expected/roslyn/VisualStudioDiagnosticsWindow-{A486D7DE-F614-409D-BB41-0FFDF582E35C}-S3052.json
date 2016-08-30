@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_isDisposed\", the compiler will do that for you.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualStudioDiagnosticsToolWindow\\VenusMargin\\VenusMargin.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  34,
+"endLine":  19,
+"endColumn":  41
+}
+}
+}
+]
+}

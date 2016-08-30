@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S100",
+"message":  "Rename method \"GetVBPropertyFromAccessorOrAnOverrideAsync\" to match camel case naming rules, consider using \"GetVbPropertyFromAccessorOrAnOverrideAsync\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Rename\\CSharpRenameRewriterLanguageService.cs",
+"region":  {
+"startLine":  915,
+"startColumn":  44,
+"endLine":  915,
+"endColumn":  86
+}
+}
+}
+]
+}

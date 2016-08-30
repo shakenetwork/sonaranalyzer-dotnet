@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"TESTSessionHookupMutex\", the compiler will do that for you.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\EventHookup\\EventHookupSessionManager_EventHookupSession.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  51,
+"endLine":  42,
+"endColumn":  57
+}
+}
+}
+]
+}

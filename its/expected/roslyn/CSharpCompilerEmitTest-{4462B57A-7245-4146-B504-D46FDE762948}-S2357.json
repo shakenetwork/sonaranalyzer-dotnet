@@ -1,0 +1,69 @@
+{
+"issues":  [
+{
+"id":  "S2357",
+"message":  "Make \"ThrownException\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\EmitTestStrongNameProvider.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  30,
+"endLine":  20,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ActionFlags\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EmitMetadataTestBase.cs",
+"region":  {
+"startLine":  198,
+"startColumn":  46,
+"endLine":  198,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ParentKind\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EmitMetadataTestBase.cs",
+"region":  {
+"startLine":  199,
+"startColumn":  31,
+"endLine":  199,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ParentNameOpt\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EmitMetadataTestBase.cs",
+"region":  {
+"startLine":  200,
+"startColumn":  27,
+"endLine":  200,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"PermissionSet\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EmitMetadataTestBase.cs",
+"region":  {
+"startLine":  201,
+"startColumn":  27,
+"endLine":  201,
+"endColumn":  40
+}
+}
+}
+]
+}

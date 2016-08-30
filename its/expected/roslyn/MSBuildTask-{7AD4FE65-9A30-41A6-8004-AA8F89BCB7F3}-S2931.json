@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_sharedCompileCts\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\MSBuildTask\\ManagedCompiler.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  27,
+"endLine":  23,
+"endColumn":  42
+}
+}
+}
+]
+}

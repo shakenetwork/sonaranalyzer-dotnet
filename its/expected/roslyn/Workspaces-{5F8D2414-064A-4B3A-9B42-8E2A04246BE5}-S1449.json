@@ -1,0 +1,95 @@
+{
+"issues":  [
+{
+"id":  "S1449",
+"message":  "Use \"CompareOrdinal\" or \"Compare\" with the locale specified instead of \"CompareTo\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\CodeGeneration\\AbstractFlagsEnumGenerator.cs",
+"region":  {
+"startLine":  226,
+"startColumn":  45,
+"endLine":  226,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S1449",
+"message":  "Use \"CompareOrdinal\" or \"Compare\" with the locale specified instead of \"CompareTo\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\CodeGeneration\\CodeGenerationHelpers.cs",
+"region":  {
+"startLine":  208,
+"startColumn":  47,
+"endLine":  208,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S1449",
+"message":  "Define the locale to be used in this string operation.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\FindReferences\\DependentProjectsFinder.cs",
+"region":  {
+"startLine":  159,
+"startColumn":  123,
+"endLine":  159,
+"endColumn":  130
+}
+}
+},
+{
+"id":  "S1449",
+"message":  "Define the locale to be used in this string operation.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Rename\\ConflictEngine\\ConflictResolver.cs",
+"region":  {
+"startLine":  360,
+"startColumn":  37,
+"endLine":  360,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1449",
+"message":  "Define the locale to be used in this string operation.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Rename\\ConflictEngine\\ConflictResolver.cs",
+"region":  {
+"startLine":  382,
+"startColumn":  41,
+"endLine":  382,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1449",
+"message":  "Use \"CompareOrdinal\" or \"Compare\" with the locale specified instead of \"CompareTo\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\INamespaceOrTypeSymbolExtensions.cs",
+"region":  {
+"startLine":  57,
+"startColumn":  38,
+"endLine":  57,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1449",
+"message":  "Use \"CompareOrdinal\" or \"Compare\" with the locale specified instead of \"CompareTo\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\INamespaceSymbolExtensions.cs",
+"region":  {
+"startLine":  47,
+"startColumn":  38,
+"endLine":  47,
+"endColumn":  47
+}
+}
+}
+]
+}

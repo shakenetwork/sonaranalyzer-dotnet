@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Perf\\Runner\\Benchview.cs",
+"region":  {
+"startLine":  38,
+"startColumn":  29,
+"endLine":  38,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Perf\\Runner\\Program.cs",
+"region":  {
+"startLine":  75,
+"startColumn":  35,
+"endLine":  75,
+"endColumn":  44
+}
+}
+}
+]
+}

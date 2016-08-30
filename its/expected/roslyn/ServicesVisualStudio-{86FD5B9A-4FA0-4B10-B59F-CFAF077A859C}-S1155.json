@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1155",
+"message":  "Use \".Any()\" to test whether this \"IEnumerable\u003cMicrosoft.VisualStudio.LanguageServices.Implementation.TableDataSource.TableItem\u003cT\u003e\u003e\" is empty or not.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\TableDataSource\\TableItem.cs",
+"region":  {
+"startLine":  35,
+"startColumn":  41,
+"endLine":  35,
+"endColumn":  46
+}
+}
+}
+]
+}

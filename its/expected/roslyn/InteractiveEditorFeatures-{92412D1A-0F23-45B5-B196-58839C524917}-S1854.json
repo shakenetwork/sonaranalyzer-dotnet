@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"afterIsInteractiveCommand\".",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\EditorFeatures\\Core\\Extensibility\\Interactive\\InteractiveEvaluator.cs",
+"region":  {
+"startLine":  297,
+"startColumn":  43,
+"endLine":  297,
+"endColumn":  149
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"beforeIsLanguage\".",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\EditorFeatures\\Core\\Extensibility\\Interactive\\InteractiveEvaluator.cs",
+"region":  {
+"startLine":  298,
+"startColumn":  34,
+"endLine":  298,
+"endColumn":  81
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"beforeIsInteractiveCommand\".",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\EditorFeatures\\Core\\Extensibility\\Interactive\\InteractiveEvaluator.cs",
+"region":  {
+"startLine":  299,
+"startColumn":  44,
+"endLine":  299,
+"endColumn":  151
+}
+}
+}
+]
+}

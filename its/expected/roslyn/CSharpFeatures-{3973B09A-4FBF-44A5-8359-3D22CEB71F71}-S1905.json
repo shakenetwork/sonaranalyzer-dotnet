@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"IMethodSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateMember\\GenerateParameterizedMember\\CSharpGenerateMethodService.cs",
+"region":  {
+"startLine":  69,
+"startColumn":  102,
+"endLine":  69,
+"endColumn":  118
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"IPropertySymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateMember\\GenerateVariable\\CSharpGenerateVariableService.cs",
+"region":  {
+"startLine":  48,
+"startColumn":  106,
+"endLine":  48,
+"endColumn":  124
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"INamedTypeSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\IntroduceVariable\\CSharpIntroduceVariableService_IntroduceField.cs",
+"region":  {
+"startLine":  27,
+"startColumn":  99,
+"endLine":  27,
+"endColumn":  118
+}
+}
+}
+]
+}

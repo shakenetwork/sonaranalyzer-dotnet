@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S104",
+"message":  "This file has 3958 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Test\\Debugging\\ProximityExpressionsGetterTests.Lines.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 2003 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Test\\Debugging\\ProximityExpressionsGetterTests.Statements.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+}
+]
+}

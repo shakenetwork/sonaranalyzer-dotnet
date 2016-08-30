@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"options\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasicTest\\CodeGeneration\\AddImportsTests.vb",
+"region":  {
+"startLine":  39,
+"startColumn":  13,
+"endLine":  39,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"code\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasicTest\\CodeGeneration\\SyntaxGeneratorTests.vb",
+"region":  {
+"startLine":  25,
+"startColumn":  13,
+"endLine":  25,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"code\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasicTest\\Formatting\\VisualBasicFormattingTestBase.vb",
+"region":  {
+"startLine":  34,
+"startColumn":  13,
+"endLine":  34,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"expected\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasicTest\\Formatting\\VisualBasicFormattingTestBase.vb",
+"region":  {
+"startLine":  35,
+"startColumn":  13,
+"endLine":  35,
+"endColumn":  21
+}
+}
+}
+]
+}

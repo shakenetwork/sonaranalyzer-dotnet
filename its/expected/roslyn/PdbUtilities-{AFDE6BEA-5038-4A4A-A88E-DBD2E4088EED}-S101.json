@@ -1,0 +1,69 @@
+{
+"issues":  [
+{
+"id":  "S101",
+"message":  "Rename class \"ILVisualizer\" to match camel case naming rules, consider using \"IlVisualizer\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Metadata\\ILVisualizer.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  27,
+"endLine":  17,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"ILVisualizerAsTokens\" to match camel case naming rules, consider using \"IlVisualizerAsTokens\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Metadata\\ILVisualizerAsTokens.cs",
+"region":  {
+"startLine":  5,
+"startColumn":  25,
+"endLine":  5,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"MethodILExtensions\" to match camel case naming rules, consider using \"MethodIlExtensions\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Metadata\\MethodILExtensions.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  25,
+"endLine":  11,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename struct \"bucket\" to match camel case naming rules, consider using \"Bucket\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Pdb\\Token2SourceLineExporter.cs",
+"region":  {
+"startLine":  383,
+"startColumn":  28,
+"endLine":  383,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename struct \"CV_FileCheckSum\" to match camel case naming rules, consider using \"Cv_FileCheckSum\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Pdb\\Token2SourceLineExporter.cs",
+"region":  {
+"startLine":  1009,
+"startColumn":  24,
+"endLine":  1009,
+"endColumn":  39
+}
+}
+}
+]
+}

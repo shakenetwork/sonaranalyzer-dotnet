@@ -1,0 +1,342 @@
+{
+"issues":  [
+{
+"id":  "S2357",
+"message":  "Make \"QueryCount\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\CompilationAPITests.cs",
+"region":  {
+"startLine":  1936,
+"startColumn":  24,
+"endLine":  1936,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"path1\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\ReferenceManagerTests.cs",
+"region":  {
+"startLine":  1241,
+"startColumn":  36,
+"endLine":  1241,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"path2\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\ReferenceManagerTests.cs",
+"region":  {
+"startLine":  1241,
+"startColumn":  43,
+"endLine":  1241,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"resolved1\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\ReferenceManagerTests.cs",
+"region":  {
+"startLine":  1242,
+"startColumn":  25,
+"endLine":  1242,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"resolved2\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\ReferenceManagerTests.cs",
+"region":  {
+"startLine":  1242,
+"startColumn":  36,
+"endLine":  1242,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Incompletes\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\SemanticModelGetDeclaredSymbolAPITests.cs",
+"region":  {
+"startLine":  4757,
+"startColumn":  58,
+"endLine":  4757,
+"endColumn":  69
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"AccessCount\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\DeclarationTests.cs",
+"region":  {
+"startLine":  365,
+"startColumn":  24,
+"endLine":  365,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Compilation\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\AnonymousTypesSemanticsTests.cs",
+"region":  {
+"startLine":  858,
+"startColumn":  38,
+"endLine":  858,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Tree\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\AnonymousTypesSemanticsTests.cs",
+"region":  {
+"startLine":  859,
+"startColumn":  31,
+"endLine":  859,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Nodes\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\AnonymousTypesSemanticsTests.cs",
+"region":  {
+"startLine":  860,
+"startColumn":  37,
+"endLine":  860,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Model\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\AnonymousTypesSemanticsTests.cs",
+"region":  {
+"startLine":  861,
+"startColumn":  34,
+"endLine":  861,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"FieldNames\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\AnonymousTypesSymbolTests.cs",
+"region":  {
+"startLine":  1012,
+"startColumn":  29,
+"endLine":  1012,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"CtorName\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\AnonymousTypesSymbolTests.cs",
+"region":  {
+"startLine":  1170,
+"startColumn":  27,
+"endLine":  1170,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ConstructorArguments\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\AnonymousTypesSymbolTests.cs",
+"region":  {
+"startLine":  1171,
+"startColumn":  29,
+"endLine":  1171,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Pos\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Metadata\\PE\\LoadingAttributes.cs",
+"region":  {
+"startLine":  514,
+"startColumn":  29,
+"endLine":  514,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Named\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Metadata\\PE\\LoadingAttributes.cs",
+"region":  {
+"startLine":  516,
+"startColumn":  51,
+"endLine":  516,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"c1\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Retargeting\\RetargetCustomAttributes.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  47,
+"endLine":  19,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"c2\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Retargeting\\RetargetCustomAttributes.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  51,
+"endLine":  19,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"c1MscorLibAssemblyRef\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Retargeting\\RetargetCustomAttributes.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  35,
+"endLine":  20,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"c2MscorlibAssemblyRef\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Retargeting\\RetargetCustomAttributes.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  58,
+"endLine":  20,
+"endColumn":  79
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"oldMsCorLib_debuggerTypeProxyAttributeType\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Retargeting\\RetargetCustomAttributes.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  36,
+"endLine":  21,
+"endColumn":  78
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"newMsCorLib_debuggerTypeProxyAttributeType\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Retargeting\\RetargetCustomAttributes.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  80,
+"endLine":  21,
+"endColumn":  122
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"oldMsCorLib_debuggerTypeProxyAttributeCtor\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Retargeting\\RetargetCustomAttributes.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  33,
+"endLine":  22,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"newMsCorLib_debuggerTypeProxyAttributeCtor\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Retargeting\\RetargetCustomAttributes.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  77,
+"endLine":  22,
+"endColumn":  119
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"oldMsCorLib_systemType\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Retargeting\\RetargetCustomAttributes.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  36,
+"endLine":  23,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"newMsCorLib_systemType\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Retargeting\\RetargetCustomAttributes.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  60,
+"endLine":  23,
+"endColumn":  82
+}
+}
+}
+]
+}

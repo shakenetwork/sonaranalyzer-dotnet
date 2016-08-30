@@ -1,0 +1,433 @@
+{
+"issues":  [
+{
+"id":  "S101",
+"message":  "Rename class \"DocumentationCommentIDVisitor\" to match camel case naming rules, consider using \"DocumentationCommentIdVisitor\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\DocumentationComments\\DocumentationCommentIDVisitor.cs",
+"region":  {
+"startLine":  8,
+"startColumn":  35,
+"endLine":  8,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"DocumentationCommentIDVisitor\" to match camel case naming rules, consider using \"DocumentationCommentIdVisitor\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\DocumentationComments\\DocumentationCommentIDVisitor.PartVisitor.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  35,
+"endLine":  16,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PEDocumentationCommentUtils\" to match camel case naming rules, consider using \"PeDocumentationCommentUtils\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\DocumentationComments\\PEDocumentationCommentUtils.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  27,
+"endLine":  13,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PEDeltaAssemblyBuilder\" to match camel case naming rules, consider using \"PeDeltaAssemblyBuilder\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\EditAndContinue\\PEDeltaAssemblyBuilder.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  27,
+"endLine":  17,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PEAssemblyBuilderBase\" to match camel case naming rules, consider using \"PeAssemblyBuilderBase\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\PEAssemblyBuilder.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  29,
+"endLine":  14,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PEAssemblyBuilder\" to match camel case naming rules, consider using \"PeAssemblyBuilder\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\PEAssemblyBuilder.cs",
+"region":  {
+"startLine":  136,
+"startColumn":  27,
+"endLine":  136,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PEModuleBuilder\" to match camel case naming rules, consider using \"PeModuleBuilder\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\PEModuleBuilder.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  29,
+"endLine":  19,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PENetModuleBuilder\" to match camel case naming rules, consider using \"PeNetModuleBuilder\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\PENetModuleBuilder.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  27,
+"endLine":  11,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"CSDiagnostic\" to match camel case naming rules, consider using \"CsDiagnostic\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Errors\\CSDiagnostic.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  27,
+"endLine":  10,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"CSDiagnosticInfo\" to match camel case naming rules, consider using \"CsDiagnosticInfo\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Errors\\CSDiagnosticInfo.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  27,
+"endLine":  9,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"MessageIDExtensions\" to match camel case naming rules, consider using \"MessageIdExtensions\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Errors\\MessageID.cs",
+"region":  {
+"startLine":  151,
+"startColumn":  35,
+"endLine":  151,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename interface \"AbstractLocalState\" to match camel case naming rules, consider using \"IAbstractLocalState\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\FlowAnalysis\\PreciseAbstractFlowPass.AbstractLocalState.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  28,
+"endLine":  13,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"SZArray\" to match camel case naming rules, consider using \"SzArray\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\ArrayTypeSymbol.cs",
+"region":  {
+"startLine":  498,
+"startColumn":  30,
+"endLine":  498,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"MDArray\" to match camel case naming rules, consider using \"MdArray\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\ArrayTypeSymbol.cs",
+"region":  {
+"startLine":  551,
+"startColumn":  32,
+"endLine":  551,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"MDArrayNoSizesOrBounds\" to match camel case naming rules, consider using \"MdArrayNoSizesOrBounds\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\ArrayTypeSymbol.cs",
+"region":  {
+"startLine":  588,
+"startColumn":  30,
+"endLine":  588,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"MDArrayWithSizesAndBounds\" to match camel case naming rules, consider using \"MdArrayWithSizesAndBounds\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\ArrayTypeSymbol.cs",
+"region":  {
+"startLine":  613,
+"startColumn":  30,
+"endLine":  613,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PEAttributeData\" to match camel case naming rules, consider using \"PeAttributeData\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Attributes\\PEAttributeData.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  27,
+"endLine":  14,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PEAssemblySymbol\" to match camel case naming rules, consider using \"PeAssemblySymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PEAssemblySymbol.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  27,
+"endLine":  16,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PEEventSymbol\" to match camel case naming rules, consider using \"PeEventSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PEEventSymbol.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  27,
+"endLine":  19,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PEFieldSymbol\" to match camel case naming rules, consider using \"PeFieldSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PEFieldSymbol.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  27,
+"endLine":  22,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PEGlobalNamespaceSymbol\" to match camel case naming rules, consider using \"PeGlobalNamespaceSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PEGlobalNamespaceSymbol.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  27,
+"endLine":  15,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PEMethodSymbol\" to match camel case naming rules, consider using \"PeMethodSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PEMethodSymbol.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  27,
+"endLine":  19,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PEModuleSymbol\" to match camel case naming rules, consider using \"PeModuleSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PEModuleSymbol.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  27,
+"endLine":  22,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PENamedTypeSymbol\" to match camel case naming rules, consider using \"PeNamedTypeSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PENamedTypeSymbol.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  29,
+"endLine":  23,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PENamedTypeSymbolNonGeneric\" to match camel case naming rules, consider using \"PeNamedTypeSymbolNonGeneric\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PENamedTypeSymbol.cs",
+"region":  {
+"startLine":  2162,
+"startColumn":  30,
+"endLine":  2162,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PENamedTypeSymbolGeneric\" to match camel case naming rules, consider using \"PeNamedTypeSymbolGeneric\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PENamedTypeSymbol.cs",
+"region":  {
+"startLine":  2204,
+"startColumn":  30,
+"endLine":  2204,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PENamespaceSymbol\" to match camel case naming rules, consider using \"PeNamespaceSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PENamespaceSymbol.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  29,
+"endLine":  18,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PENestedNamespaceSymbol\" to match camel case naming rules, consider using \"PeNestedNamespaceSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PENestedNamespaceSymbol.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  27,
+"endLine":  17,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PEParameterSymbol\" to match camel case naming rules, consider using \"PeParameterSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PEParameterSymbol.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  20,
+"endLine":  19,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PEParameterSymbolWithCustomModifiers\" to match camel case naming rules, consider using \"PeParameterSymbolWithCustomModifiers\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PEParameterSymbol.cs",
+"region":  {
+"startLine":  270,
+"startColumn":  30,
+"endLine":  270,
+"endColumn":  66
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PEPropertySymbol\" to match camel case naming rules, consider using \"PePropertySymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PEPropertySymbol.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  27,
+"endLine":  20,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PETypeParameterSymbol\" to match camel case naming rules, consider using \"PeTypeParameterSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PETypeParameterSymbol.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  27,
+"endLine":  18,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PEPropertyOrEventHelpers\" to match camel case naming rules, consider using \"PePropertyOrEventHelpers\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\PropertyOrEventSymbolExtensions.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  27,
+"endLine":  15,
+"endColumn":  51
+}
+}
+}
+]
+}

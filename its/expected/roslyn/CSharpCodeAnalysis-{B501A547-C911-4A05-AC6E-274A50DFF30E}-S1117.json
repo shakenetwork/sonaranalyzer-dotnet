@@ -1,0 +1,134 @@
+{
+"issues":  [
+{
+"id":  "S1117",
+"message":  "Rename \"proxyLabels\" which hides the field with the same name.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\AsyncRewriter\\AsyncExceptionHandlerRewriter.cs",
+"region":  {
+"startLine":  915,
+"startColumn":  21,
+"endLine":  915,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1117",
+"message":  "Rename \"proxiedLabels\" which hides the field with the same name.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\AsyncRewriter\\AsyncExceptionHandlerRewriter.cs",
+"region":  {
+"startLine":  916,
+"startColumn":  21,
+"endLine":  916,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1117",
+"message":  "Rename \"knownStates\" which hides the field with the same name.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\IteratorRewriter\\IteratorMethodToStateMachineRewriter.IteratorFinallyFrame.cs",
+"region":  {
+"startLine":  77,
+"startColumn":  21,
+"endLine":  77,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1117",
+"message":  "Rename \"proxyLabels\" which hides the field with the same name.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\IteratorRewriter\\IteratorMethodToStateMachineRewriter.IteratorFinallyFrame.cs",
+"region":  {
+"startLine":  102,
+"startColumn":  21,
+"endLine":  102,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1117",
+"message":  "Rename \"currentLabels\" which hides the field with the same name.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\IteratorRewriter\\IteratorMethodToStateMachineRewriter.YieldsInTryAnalysis.cs",
+"region":  {
+"startLine":  143,
+"startColumn":  21,
+"endLine":  143,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1117",
+"message":  "Rename \"n\" which hides the field with the same name.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_StringInterpolation.cs",
+"region":  {
+"startLine":  38,
+"startColumn":  17,
+"endLine":  38,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1117",
+"message":  "Rename \"lexer\" which hides the field with the same name.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\SyntaxParser.cs",
+"region":  {
+"startLine":  122,
+"startColumn":  17,
+"endLine":  122,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1117",
+"message":  "Rename \"modifier\" which hides the field with the same name.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\CustomModifier.cs",
+"region":  {
+"startLine":  57,
+"startColumn":  17,
+"endLine":  57,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1117",
+"message":  "Rename \"fieldDefs\" which hides the property with the same name.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PENamedTypeSymbol.cs",
+"region":  {
+"startLine":  747,
+"startColumn":  17,
+"endLine":  747,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1117",
+"message":  "Rename \"declaration\" which hides the field with the same name.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceMemberContainerSymbol.cs",
+"region":  {
+"startLine":  892,
+"startColumn":  30,
+"endLine":  892,
+"endColumn":  41
+}
+}
+}
+]
+}

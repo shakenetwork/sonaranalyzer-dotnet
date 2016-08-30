@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Any\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\MetadataHelpersTests.cs",
+"region":  {
+"startLine":  430,
+"startColumn":  69,
+"endLine":  430,
+"endColumn":  74
+}
+}
+}
+]
+}

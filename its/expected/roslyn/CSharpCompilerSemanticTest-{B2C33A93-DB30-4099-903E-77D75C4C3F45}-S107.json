@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S107",
+"message":  "Method has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\OperatorTests.cs",
+"region":  {
+"startLine":  5174,
+"startColumn":  46,
+"endLine":  5183,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Method has 13 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\OperatorTests.cs",
+"region":  {
+"startLine":  5707,
+"startColumn":  47,
+"endLine":  5721,
+"endColumn":  10
+}
+}
+}
+]
+}

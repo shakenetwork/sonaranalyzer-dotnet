@@ -1,0 +1,69 @@
+{
+"issues":  [
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"attrs\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests.cs",
+"region":  {
+"startLine":  972,
+"startColumn":  27,
+"endLine":  972,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"method\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests_WellKnownAttributes.cs",
+"region":  {
+"startLine":  336,
+"startColumn":  37,
+"endLine":  336,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"parm\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests_WellKnownAttributes.cs",
+"region":  {
+"startLine":  337,
+"startColumn":  38,
+"endLine":  337,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"method\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests_WellKnownAttributes.cs",
+"region":  {
+"startLine":  2226,
+"startColumn":  37,
+"endLine":  2226,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"c1\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\ResourceTests.cs",
+"region":  {
+"startLine":  433,
+"startColumn":  16,
+"endLine":  433,
+"endColumn":  22
+}
+}
+}
+]
+}

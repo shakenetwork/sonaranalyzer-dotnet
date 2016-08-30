@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2696",
+"message":  "Make the enclosing instance method \"static\" or remove this set on the \"static\" field.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\ValuesSources\\RecoverableWeakValueSource.cs",
+"region":  {
+"startLine":  149,
+"startColumn":  21,
+"endLine":  149,
+"endColumn":  35
+}
+}
+}
+]
+}

@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TSymbol)\" instead or add a constraint to \"TSymbol\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\DkmUtilities.cs",
+"region":  {
+"startLine":  180,
+"startColumn":  40,
+"endLine":  180,
+"endColumn":  44
+}
+}
+}
+]
+}

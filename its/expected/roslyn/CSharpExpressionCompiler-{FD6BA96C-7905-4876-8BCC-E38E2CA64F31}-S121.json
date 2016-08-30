@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\SyntaxHelpers.cs",
+"region":  {
+"startLine":  204,
+"startColumn":  21,
+"endLine":  204,
+"endColumn":  23
+}
+}
+}
+]
+}

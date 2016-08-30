@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1699",
+"message":  "Remove this call from a constructor to the overridable \"CreateNodeNameGenerator\" method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\AbstractCodeModelService.cs",
+"region":  {
+"startLine":  70,
+"startColumn":  34,
+"endLine":  70,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S1699",
+"message":  "Remove this call from a constructor to the overridable \"CreateNodeLocator\" method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\AbstractCodeModelService.cs",
+"region":  {
+"startLine":  71,
+"startColumn":  28,
+"endLine":  71,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1699",
+"message":  "Remove this call from a constructor to the overridable \"CreateCodeModelEventCollector\" method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\AbstractCodeModelService.cs",
+"region":  {
+"startLine":  72,
+"startColumn":  31,
+"endLine":  72,
+"endColumn":  60
+}
+}
+}
+]
+}

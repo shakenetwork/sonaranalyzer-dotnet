@@ -1,0 +1,667 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"symbolOpt\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\MethodXML\\MethodXmlBuilder.vb",
+"region":  {
+"startLine":  350,
+"startColumn":  13,
+"endLine":  350,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"symbolOpt\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\MethodXML\\MethodXmlBuilder.vb",
+"region":  {
+"startLine":  402,
+"startColumn":  13,
+"endLine":  402,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"member\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\ModifierFlagsExtensions.vb",
+"region":  {
+"startLine":  126,
+"startColumn":  13,
+"endLine":  126,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"parameter\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\ModifierFlagsExtensions.vb",
+"region":  {
+"startLine":  147,
+"startColumn":  13,
+"endLine":  147,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"typeSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  748,
+"startColumn":  17,
+"endLine":  748,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"delegateStatement\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  2950,
+"startColumn":  13,
+"endLine":  2950,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"delegateStatement\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  2958,
+"startColumn":  21,
+"endLine":  2958,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"delegateStatement\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  2972,
+"startColumn":  21,
+"endLine":  2972,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"delegateStatement\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  2985,
+"startColumn":  21,
+"endLine":  2985,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"delegateStatement\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  2987,
+"startColumn":  21,
+"endLine":  2987,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"eventStatement\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3003,
+"startColumn":  13,
+"endLine":  3003,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"eventStatement\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3012,
+"startColumn":  17,
+"endLine":  3012,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"eventStatement\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3019,
+"startColumn":  17,
+"endLine":  3019,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"eventStatement\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3021,
+"startColumn":  17,
+"endLine":  3021,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"eventBlock\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3057,
+"startColumn":  13,
+"endLine":  3057,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"eventBlock\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3103,
+"startColumn":  21,
+"endLine":  3103,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"declareStatement\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3114,
+"startColumn":  13,
+"endLine":  3114,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"declareStatement\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3122,
+"startColumn":  21,
+"endLine":  3122,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"declareStatement\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3139,
+"startColumn":  17,
+"endLine":  3139,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"declareStatement\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3157,
+"startColumn":  21,
+"endLine":  3157,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"declareStatement\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3159,
+"startColumn":  21,
+"endLine":  3159,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"methodStatement\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3170,
+"startColumn":  13,
+"endLine":  3170,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"methodStatement\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3178,
+"startColumn":  21,
+"endLine":  3178,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"methodStatement\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3194,
+"startColumn":  21,
+"endLine":  3194,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"methodStatement\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3209,
+"startColumn":  21,
+"endLine":  3209,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"methodStatement\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3211,
+"startColumn":  21,
+"endLine":  3211,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"methodBlock\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3224,
+"startColumn":  13,
+"endLine":  3224,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"methodBlock\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3241,
+"startColumn":  13,
+"endLine":  3241,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"parameter\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3257,
+"startColumn":  13,
+"endLine":  3257,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"parameter\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3268,
+"startColumn":  17,
+"endLine":  3268,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"parameter\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3270,
+"startColumn":  17,
+"endLine":  3270,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"propertyStatement\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3286,
+"startColumn":  13,
+"endLine":  3286,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"propertyStatement\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3296,
+"startColumn":  21,
+"endLine":  3296,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"propertyStatement\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3299,
+"startColumn":  17,
+"endLine":  3299,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"propertyBlock\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3315,
+"startColumn":  13,
+"endLine":  3315,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"propertyBlock\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3320,
+"startColumn":  13,
+"endLine":  3320,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"propertyBlock\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3352,
+"startColumn":  21,
+"endLine":  3352,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"variableDeclarator\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3369,
+"startColumn":  13,
+"endLine":  3369,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"variableDeclarator\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3379,
+"startColumn":  21,
+"endLine":  3379,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"variableDeclarator\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3382,
+"startColumn":  17,
+"endLine":  3382,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"compilation\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3629,
+"startColumn":  21,
+"endLine":  3629,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"attributes\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3820,
+"startColumn":  13,
+"endLine":  3820,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"container\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3832,
+"startColumn":  21,
+"endLine":  3832,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"list\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3833,
+"startColumn":  21,
+"endLine":  3833,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"list\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\CodeModel\\VisualBasicCodeModelService.vb",
+"region":  {
+"startLine":  3841,
+"startColumn":  17,
+"endLine":  3841,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"position\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\Debugging\\VisualBasicBreakpointService.vb",
+"region":  {
+"startLine":  48,
+"startColumn":  21,
+"endLine":  48,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"displayFormat\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\Progression\\VisualBasicProgressionLanguageService.vb",
+"region":  {
+"startLine":  76,
+"startColumn":  17,
+"endLine":  76,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"wszFileName\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\ProjectSystemShim\\VisualBasicProject.vb",
+"region":  {
+"startLine":  313,
+"startColumn":  13,
+"endLine":  313,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"baseCompilationOptionsOpt\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\ProjectSystemShim\\VisualBasicProjectOptionsHelper.vb",
+"region":  {
+"startLine":  56,
+"startColumn":  17,
+"endLine":  56,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"baseParseOptionsOpt\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\ProjectSystemShim\\VisualBasicProjectOptionsHelper.vb",
+"region":  {
+"startLine":  167,
+"startColumn":  13,
+"endLine":  167,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"ruleSetSpecificDiagnosticOptions\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\ProjectSystemShim\\VisualBasicProjectOptionsHelper.vb",
+"region":  {
+"startLine":  215,
+"startColumn":  17,
+"endLine":  215,
+"endColumn":  49
+}
+}
+}
+]
+}

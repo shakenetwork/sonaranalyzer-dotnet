@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"ExpressionSyntax\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\Telemetry\\CompilationErrorDetailDiscoverer.cs",
+"region":  {
+"startLine":  180,
+"startColumn":  90,
+"endLine":  180,
+"endColumn":  109
+}
+}
+}
+]
+}

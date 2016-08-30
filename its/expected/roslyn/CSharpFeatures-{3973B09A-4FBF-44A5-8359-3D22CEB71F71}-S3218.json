@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S3218",
+"message":  "Rename this method to not shadow the outer class\u0027 member with the same name.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeFixes\\SimplifyTypeNames\\SimplifyTypeNamesCodeFixProvider.SimplifyTypeNamesFixAllProvider.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  43,
+"endLine":  14,
+"endColumn":  60
+}
+}
+}
+]
+}

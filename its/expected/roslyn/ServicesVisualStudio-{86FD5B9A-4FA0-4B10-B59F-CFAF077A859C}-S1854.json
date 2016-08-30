@@ -1,0 +1,394 @@
+{
+"issues":  [
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"manager\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\InlineRename\\InlineRenameUndoManager.cs",
+"region":  {
+"startLine":  203,
+"startColumn":  45,
+"endLine":  203,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"fetchedCount\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\InlineRename\\InlineRenameUndoManager.cs",
+"region":  {
+"startLine":  228,
+"startColumn":  39,
+"endLine":  228,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"existingDropdownBar\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\LanguageService\\AbstractLanguageService%602.VsCodeWindowManager.cs",
+"region":  {
+"startLine":  99,
+"startColumn":  52,
+"endLine":  99,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"dropdownBarClient\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\LanguageService\\AbstractLanguageService%602.VsCodeWindowManager.cs",
+"region":  {
+"startLine":  106,
+"startColumn":  56,
+"endLine":  106,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"emittedDocs\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Library\\ObjectBrowser\\AbstractDescriptionBuilder.cs",
+"region":  {
+"startLine":  439,
+"startColumn":  37,
+"endLine":  439,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"libraryName\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Library\\ObjectBrowser\\AbstractObjectBrowserLibraryManager.cs",
+"region":  {
+"startLine":  341,
+"startColumn":  32,
+"endLine":  341,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"pTextView\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\NavigationBar\\NavigationBarClient.cs",
+"region":  {
+"startLine":  70,
+"startColumn":  23,
+"endLine":  70,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"headerStackPanelWidth\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\PreviewPane\\PreviewPane.xaml.cs",
+"region":  {
+"startLine":  238,
+"startColumn":  39,
+"endLine":  238,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"helpLinkToolTipText\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\PreviewPane\\PreviewPaneService.cs",
+"region":  {
+"startLine":  113,
+"startColumn":  37,
+"endLine":  113,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"optionLanguage\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\PreviewPane\\PreviewPaneService.cs",
+"region":  {
+"startLine":  120,
+"startColumn":  39,
+"endLine":  120,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"foundCookie\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\ProjectSystem\\DocumentProvider.cs",
+"region":  {
+"startLine":  100,
+"startColumn":  30,
+"endLine":  100,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"id\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\ProjectSystem\\DocumentProvider.cs",
+"region":  {
+"startLine":  134,
+"startColumn":  27,
+"endLine":  134,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"workspace\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\ProjectSystem\\DocumentProvider.StandardTextDocument.cs",
+"region":  {
+"startLine":  206,
+"startColumn":  41,
+"endLine":  206,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"property\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\ProjectSystem\\Legacy\\AbstractLegacyProject.cs",
+"region":  {
+"startLine":  180,
+"startColumn":  29,
+"endLine":  180,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"read\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\ProjectSystem\\MetadataReferences\\VisualStudioMetadataReferenceManager.cs",
+"region":  {
+"startLine":  232,
+"startColumn":  22,
+"endLine":  232,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"ppUnknown\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\ProjectSystem\\MetadataReferences\\VisualStudioMetadataReferenceManager.cs",
+"region":  {
+"startLine":  299,
+"startColumn":  27,
+"endLine":  299,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"endSnapshotSpan\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Snippets\\AbstractSnippetExpansionClient.cs",
+"region":  {
+"startLine":  187,
+"startColumn":  37,
+"endLine":  187,
+"endColumn":  110
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"startLine\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Snippets\\AbstractSnippetExpansionClient.cs",
+"region":  {
+"startLine":  376,
+"startColumn":  27,
+"endLine":  376,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"startIndex\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Snippets\\AbstractSnippetExpansionClient.cs",
+"region":  {
+"startLine":  377,
+"startColumn":  28,
+"endLine":  377,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"endLine\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Snippets\\AbstractSnippetExpansionClient.cs",
+"region":  {
+"startLine":  378,
+"startColumn":  25,
+"endLine":  378,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"endIndex\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Snippets\\AbstractSnippetExpansionClient.cs",
+"region":  {
+"startLine":  379,
+"startColumn":  26,
+"endLine":  379,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"expansionEnumerator\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Snippets\\AbstractSnippetInfoService.cs",
+"region":  {
+"startLine":  177,
+"startColumn":  57,
+"endLine":  177,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Snippets\\SnippetFunctions\\AbstractSnippetFunction.IVsExpansionFunction.cs",
+"region":  {
+"startLine":  41,
+"startColumn":  19,
+"endLine":  41,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"newFactory\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\TableDataSource\\AbstractTableDataSource.cs",
+"region":  {
+"startLine":  132,
+"startColumn":  29,
+"endLine":  132,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"errorCode\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\TableDataSource\\Suppression\\VisualStudioDiagnosticListSuppressionStateService.cs",
+"region":  {
+"startLine":  243,
+"startColumn":  38,
+"endLine":  243,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"filePath\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\TableDataSource\\Suppression\\VisualStudioDiagnosticListSuppressionStateService.cs",
+"region":  {
+"startLine":  243,
+"startColumn":  88,
+"endLine":  243,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"helpUri\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\TableDataSource\\VisualStudioBaseDiagnosticListTable.cs",
+"region":  {
+"startLine":  78,
+"startColumn":  25,
+"endLine":  78,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"useTabs\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Venus\\ContainedDocument.cs",
+"region":  {
+"startLine":  945,
+"startColumn":  45,
+"endLine":  945,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"tabSize\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Venus\\ContainedDocument.cs",
+"region":  {
+"startLine":  945,
+"startColumn":  58,
+"endLine":  945,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"manager\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Packaging\\PackageInstallerServiceFactory_UndoRedo.cs",
+"region":  {
+"startLine":  39,
+"startColumn":  41,
+"endLine":  39,
+"endColumn":  47
+}
+}
+}
+]
+}

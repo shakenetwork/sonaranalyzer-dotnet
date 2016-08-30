@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1939",
+"message":  "\"ISupportDisposalNotification\" implements \"INotifyPropertyChanged\" so \"INotifyPropertyChanged\" can be removed from the inheritance list.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\SolutionExplorerShim\\BaseItem.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  28,
+"endLine":  27,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1939",
+"message":  "\"int\" should not be explicitly used as the underlying type.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\SolutionExplorerShim\\DiagnosticItem\\RuleSelectionImage.cs",
+"region":  {
+"startLine":  6,
+"startColumn":  38,
+"endLine":  6,
+"endColumn":  43
+}
+}
+}
+]
+}

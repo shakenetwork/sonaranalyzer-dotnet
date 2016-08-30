@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S100",
+"message":  "Rename method \"TestDisplayResultsWithCurrentUICulture\" to match camel case naming rules, consider using \"TestDisplayResultsWithCurrentUiCulture\".",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\CSharpTest\\CommandLineRunnerTests.cs",
+"region":  {
+"startLine":  91,
+"startColumn":  21,
+"endLine":  91,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"foo\" to match camel case naming rules, consider using \"Foo\".",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\CSharpTest\\InteractiveSessionTests.cs",
+"region":  {
+"startLine":  2052,
+"startColumn":  24,
+"endLine":  2052,
+"endColumn":  27
+}
+}
+}
+]
+}

@@ -1,0 +1,121 @@
+{
+"issues":  [
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\AbstractCommandHandlerTestState.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  29,
+"endLine":  21,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\AutomaticCompletion\\AbstractAutomaticBraceCompletionTests.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  27,
+"endLine":  17,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Classification\\AbstractClassifierTests.cs",
+"region":  {
+"startLine":  8,
+"startColumn":  27,
+"endLine":  8,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeGeneration\\AbstractCodeGenerationTests.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  27,
+"endLine":  12,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeLens\\AbstractCodeLensTest.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  27,
+"endLine":  13,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\ExtractInterface\\AbstractExtractInterfaceTests.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  27,
+"endLine":  11,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\MetadataAsSource\\AbstractMetadataAsSourceTests.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  35,
+"endLine":  15,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\MetadataAsSource\\AbstractMetadataAsSourceTests.TestContext.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  35,
+"endLine":  19,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Squiggles\\AbstractSquiggleProducerTests.cs",
+"region":  {
+"startLine":  43,
+"startColumn":  27,
+"endLine":  43,
+"endColumn":  56
+}
+}
+}
+]
+}

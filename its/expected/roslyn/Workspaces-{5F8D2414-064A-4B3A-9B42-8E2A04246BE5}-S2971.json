@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S2971",
+"message":  "Use \"Count\" property here instead.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\CodeFixes\\FixAllOccurrences\\BatchFixAllProvider.cs",
+"region":  {
+"startLine":  214,
+"startColumn":  31,
+"endLine":  214,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"FirstOrDefault\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\SymbolFinder_Hierarchy.cs",
+"region":  {
+"startLine":  230,
+"startColumn":  51,
+"endLine":  230,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"FirstOrDefault\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Rename\\ConflictEngine\\ConflictResolution.cs",
+"region":  {
+"startLine":  156,
+"startColumn":  61,
+"endLine":  156,
+"endColumn":  66
+}
+}
+}
+]
+}

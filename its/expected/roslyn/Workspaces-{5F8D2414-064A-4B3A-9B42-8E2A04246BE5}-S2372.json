@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\SpecializedCollections.Empty.Enumerator%601.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  25,
+"endLine":  24,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\SpecializedCollections.Empty.Enumerator.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  25,
+"endLine":  24,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Formatting\\Engine\\TokenStream.Iterator.cs",
+"region":  {
+"startLine":  86,
+"startColumn":  29,
+"endLine":  86,
+"endColumn":  67
+}
+}
+}
+]
+}

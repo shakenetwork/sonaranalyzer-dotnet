@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1172",
+"message":  "Remove this parameter \"endLine\", whose value is ignored in the method.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\Editor\\InteractiveWindow.UIThreadOnly.cs",
+"region":  {
+"startLine":  2433,
+"startColumn":  56,
+"endLine":  2433,
+"endColumn":  67
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"shortcut\".",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\Editor\\Output\\ZoomableInlineAdornment.cs",
+"region":  {
+"startLine":  84,
+"startColumn":  72,
+"endLine":  84,
+"endColumn":  87
+}
+}
+}
+]
+}

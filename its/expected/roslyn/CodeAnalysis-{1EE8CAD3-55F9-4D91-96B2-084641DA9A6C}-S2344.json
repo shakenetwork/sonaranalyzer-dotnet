@@ -1,0 +1,69 @@
+{
+"issues":  [
+{
+"id":  "S2344",
+"message":  "Rename this enumeration to remove the \"Flags\" suffix.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\DiagnosticAnalysisContext.cs",
+"region":  {
+"startLine":  248,
+"startColumn":  17,
+"endLine":  248,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2344",
+"message":  "Rename this enumeration to remove the \"Flags\" suffix.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MemberDescriptor.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  19,
+"endLine":  12,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S2344",
+"message":  "Rename this enumeration to remove the \"Enum\" suffix.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\Constants.cs",
+"region":  {
+"startLine":  40,
+"startColumn":  19,
+"endLine":  40,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S2344",
+"message":  "Rename this enumeration to remove the \"Flags\" suffix.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\TypeLibTypeFlags.cs",
+"region":  {
+"startLine":  8,
+"startColumn":  19,
+"endLine":  8,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2344",
+"message":  "Rename this enumeration to remove the \"Flags\" suffix.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\GreenNode.cs",
+"region":  {
+"startLine":  253,
+"startColumn":  23,
+"endLine":  253,
+"endColumn":  32
+}
+}
+}
+]
+}

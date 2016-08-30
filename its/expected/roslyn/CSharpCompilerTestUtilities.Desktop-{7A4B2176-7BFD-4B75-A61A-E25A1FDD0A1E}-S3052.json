@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"ImplicitConversion\", the compiler will do that for you.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\CompilationTestUtils.cs",
+"region":  {
+"startLine":  154,
+"startColumn":  50,
+"endLine":  154,
+"endColumn":  71
+}
+}
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"ConstantValue\", the compiler will do that for you.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\CompilationTestUtils.cs",
+"region":  {
+"startLine":  156,
+"startColumn":  51,
+"endLine":  156,
+"endColumn":  78
+}
+}
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"N\", the compiler will do that for you.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\ScriptTestFixtures.cs",
+"region":  {
+"startLine":  38,
+"startColumn":  43,
+"endLine":  38,
+"endColumn":  49
+}
+}
+}
+]
+}

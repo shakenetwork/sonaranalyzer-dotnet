@@ -1,0 +1,277 @@
+{
+"issues":  [
+{
+"id":  "S1659",
+"message":  "Declare \"hasIncompleteParentMember\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\CodeFixes\\AddImport\\AbstractAddImportCodeFixProvider.SymbolReferenceFinder.cs",
+"region":  {
+"startLine":  172,
+"startColumn":  42,
+"endLine":  172,
+"endColumn":  67
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"hasIncompleteParentMember\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\CodeFixes\\AddImport\\AbstractAddImportCodeFixProvider.SymbolReferenceFinder.cs",
+"region":  {
+"startLine":  196,
+"startColumn":  42,
+"endLine":  196,
+"endColumn":  67
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"hasIncompleteParentMember\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\CodeFixes\\AddImport\\AbstractAddImportCodeFixProvider.SymbolReferenceFinder.cs",
+"region":  {
+"startLine":  227,
+"startColumn":  42,
+"endLine":  227,
+"endColumn":  67
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"indexOfTrailingPragmaEnableToRemove\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\CodeFixes\\Suppression\\AbstractSuppressionCodeFixProvider.RemoveSuppressionCodeAction_Pragma.cs",
+"region":  {
+"startLine":  68,
+"startColumn":  67,
+"endLine":  68,
+"endColumn":  102
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"hasMultipleIds\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\CodeFixes\\Suppression\\AbstractSuppressionCodeFixProvider.RemoveSuppressionCodeAction_Pragma.cs",
+"region":  {
+"startLine":  131,
+"startColumn":  49,
+"endLine":  131,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"message\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\AnalyzerHelper.cs",
+"region":  {
+"startLine":  171,
+"startColumn":  24,
+"endLine":  171,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"messageFormat\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\AnalyzerHelper.cs",
+"region":  {
+"startLine":  171,
+"startColumn":  33,
+"endLine":  171,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"description\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\AnalyzerHelper.cs",
+"region":  {
+"startLine":  171,
+"startColumn":  48,
+"endLine":  171,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"newStatementSpan\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  732,
+"startColumn":  44,
+"endLine":  732,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"newBody\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  895,
+"startColumn":  33,
+"endLine":  895,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"end\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  904,
+"startColumn":  24,
+"endLine":  904,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"newHasStateMachineSuspensionPoint\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1021,
+"startColumn":  53,
+"endLine":  1021,
+"endColumn":  86
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"oldLambdaBody2\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1204,
+"startColumn":  48,
+"endLine":  1204,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"newStateMachineSuspensionPoints\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1322,
+"startColumn":  73,
+"endLine":  1322,
+"endColumn":  104
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"newStateMachineKind\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1323,
+"startColumn":  51,
+"endLine":  1323,
+"endColumn":  70
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"newNodes\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1733,
+"startColumn":  47,
+"endLine":  1733,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"newSymbol\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  2141,
+"startColumn":  36,
+"endLine":  2141,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"end\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  2426,
+"startColumn":  28,
+"endLine":  2426,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"newLambdaBody2\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  3141,
+"startColumn":  44,
+"endLine":  3141,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"oldLambdaBody2\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  3162,
+"startColumn":  44,
+"endLine":  3162,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"abstractClassType\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\ImplementAbstractClass\\AbstractImplementAbstractClassService.State.cs",
+"region":  {
+"startLine":  38,
+"startColumn":  45,
+"endLine":  38,
+"endColumn":  62
+}
+}
+}
+]
+}

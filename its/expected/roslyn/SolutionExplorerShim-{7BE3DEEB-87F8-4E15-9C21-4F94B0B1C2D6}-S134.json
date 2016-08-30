@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\SolutionExplorerShim\\AnalyzerReferenceManager.cs",
+"region":  {
+"startLine":  73,
+"startColumn":  25,
+"endLine":  73,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\SolutionExplorerShim\\AnalyzersCommandHandler.cs",
+"region":  {
+"startLine":  273,
+"startColumn":  25,
+"endLine":  273,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\SolutionExplorerShim\\AnalyzersCommandHandler.cs",
+"region":  {
+"startLine":  445,
+"startColumn":  25,
+"endLine":  445,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\SolutionExplorerShim\\DiagnosticItem\\DiagnosticItemSource.cs",
+"region":  {
+"startLine":  133,
+"startColumn":  25,
+"endLine":  133,
+"endColumn":  32
+}
+}
+}
+]
+}

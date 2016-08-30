@@ -1,0 +1,238 @@
+{
+"issues":  [
+{
+"id":  "S2357",
+"message":  "Make \"OriginalParameterList\" private.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Test\\ChangeSignature\\ChangeSignatureViewModelTestState.vb",
+"region":  {
+"startLine":  9,
+"startColumn":  25,
+"endLine":  9,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ViewModel\" private.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Test\\ChangeSignature\\ChangeSignatureViewModelTestState.vb",
+"region":  {
+"startLine":  10,
+"startColumn":  25,
+"endLine":  10,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Items\" private.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Test\\Diagnostics\\DiagnosticTableDataSourceTests.vb",
+"region":  {
+"startLine":  695,
+"startColumn":  20,
+"endLine":  695,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Entries\" private.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Test\\Diagnostics\\TestTableManagerProvider.vb",
+"region":  {
+"startLine":  83,
+"startColumn":  33,
+"endLine":  83,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Items\" private.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Test\\Diagnostics\\TodoListTableDataSourceTests.vb",
+"region":  {
+"startLine":  363,
+"startColumn":  20,
+"endLine":  363,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"_oldFlags\" private.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Test\\EditAndContinue\\VsReadOnlyDocumentTrackerTests.vb",
+"region":  {
+"startLine":  181,
+"startColumn":  20,
+"endLine":  181,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"expectedCanGoToDefinition\" private.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Test\\FindResults\\FindResultsTests.vb",
+"region":  {
+"startLine":  220,
+"startColumn":  29,
+"endLine":  220,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"expectedCanGoToReference\" private.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Test\\FindResults\\FindResultsTests.vb",
+"region":  {
+"startLine":  221,
+"startColumn":  29,
+"endLine":  221,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Kind\" private.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Test\\ObjectBrowser\\NavInfoNodeDescriptor.vb",
+"region":  {
+"startLine":  7,
+"startColumn":  16,
+"endLine":  7,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Test\\ObjectBrowser\\NavInfoNodeDescriptor.vb",
+"region":  {
+"startLine":  8,
+"startColumn":  16,
+"endLine":  8,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"File\" private.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Test\\ProjectSystemShim\\VisualStudioAnalyzerTests.vb",
+"region":  {
+"startLine":  46,
+"startColumn":  20,
+"endLine":  46,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SnippetCommandHandler\" private.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Test\\Snippets\\SnippetTestState.vb",
+"region":  {
+"startLine":  68,
+"startColumn":  25,
+"endLine":  68,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"snippetSpanInSurfaceBuffer\" private.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Test\\Snippets\\TestExpansionClient.vb",
+"region":  {
+"startLine":  12,
+"startColumn":  16,
+"endLine":  12,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"endSpanInSurfaceBuffer\" private.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Test\\Snippets\\TestExpansionClient.vb",
+"region":  {
+"startLine":  13,
+"startColumn":  16,
+"endLine":  13,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"DefaultSession\" private.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Test\\Telemetry\\VSTelemetryLoggerTest.vb",
+"region":  {
+"startLine":  123,
+"startColumn":  29,
+"endLine":  123,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"PostedEvents\" private.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Test\\Telemetry\\VSTelemetryLoggerTest.vb",
+"region":  {
+"startLine":  148,
+"startColumn":  33,
+"endLine":  148,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"EventName\" private.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Test\\Telemetry\\VSTelemetryLoggerTest.vb",
+"region":  {
+"startLine":  295,
+"startColumn":  33,
+"endLine":  295,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Map\" private.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Test\\Telemetry\\VSTelemetryLoggerTest.vb",
+"region":  {
+"startLine":  296,
+"startColumn":  33,
+"endLine":  296,
+"endColumn":  36
+}
+}
+}
+]
+}

@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S2292",
+"message":  "Make this an auto-implemented property and remove its backing field.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\Options\\Style\\NamingPreferences\\NamingRuleDialogViewModel.cs",
+"region":  {
+"startLine":  114,
+"startColumn":  20,
+"endLine":  114,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2292",
+"message":  "Make this an auto-implemented property and remove its backing field.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\Options\\Style\\NamingPreferences\\NamingRuleDialogViewModel.cs",
+"region":  {
+"startLine":  148,
+"startColumn":  20,
+"endLine":  148,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2292",
+"message":  "Make this an auto-implemented property and remove its backing field.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\ProjectSystem\\CPS\\CPSProject_IWorkspaceProjectContext.cs",
+"region":  {
+"startLine":  51,
+"startColumn":  39,
+"endLine":  51,
+"endColumn":  67
+}
+}
+}
+]
+}

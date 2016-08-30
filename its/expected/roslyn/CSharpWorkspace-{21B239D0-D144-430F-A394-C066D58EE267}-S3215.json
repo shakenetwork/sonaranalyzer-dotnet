@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S3215",
+"message":  "Remove this cast and edit the interface to add the missing functionality.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\CodeGeneration\\CSharpCodeGenerationService.cs",
+"region":  {
+"startLine":  163,
+"startColumn":  53,
+"endLine":  163,
+"endColumn":  83
+}
+}
+},
+{
+"id":  "S3215",
+"message":  "Remove this cast and edit the interface to add the missing functionality.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\CodeGeneration\\CSharpCodeGenerationService.cs",
+"region":  {
+"startLine":  178,
+"startColumn":  53,
+"endLine":  178,
+"endColumn":  83
+}
+}
+}
+]
+}

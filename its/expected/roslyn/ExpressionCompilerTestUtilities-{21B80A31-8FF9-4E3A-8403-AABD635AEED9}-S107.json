@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S107",
+"message":  "Method has 10 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Test\\ExpressionCompiler\\ExpressionCompilerTestHelpers.cs",
+"region":  {
+"startLine":  96,
+"startColumn":  56,
+"endLine":  106,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Method has 10 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Test\\ExpressionCompiler\\ExpressionCompilerTestHelpers.cs",
+"region":  {
+"startLine":  210,
+"startColumn":  56,
+"endLine":  220,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Method has 12 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Test\\ExpressionCompiler\\ExpressionCompilerTestHelpers.cs",
+"region":  {
+"startLine":  503,
+"startColumn":  56,
+"endLine":  515,
+"endColumn":  41
+}
+}
+}
+]
+}

@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\" on a string.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\SolutionCrawlerLogger.cs",
+"region":  {
+"startLine":  236,
+"startColumn":  37,
+"endLine":  236,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\WorkCoordinator.IncrementalAnalyzerProcessor.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  141,
+"endLine":  26,
+"endColumn":  152
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\WorkCoordinator.SemanticChangeProcessor.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  151,
+"endLine":  22,
+"endColumn":  162
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\WorkCoordinator.SemanticChangeProcessor.cs",
+"region":  {
+"startLine":  320,
+"startColumn":  133,
+"endLine":  320,
+"endColumn":  144
+}
+}
+}
+]
+}

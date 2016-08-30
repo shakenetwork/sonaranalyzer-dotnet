@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2696",
+"message":  "Remove this set, which updates a \"static\" field from an instance method.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\TestUtilities\\Threading\\WpfTestCase.cs",
+"region":  {
+"startLine":  47,
+"startColumn":  25,
+"endLine":  47,
+"endColumn":  53
+}
+}
+}
+]
+}

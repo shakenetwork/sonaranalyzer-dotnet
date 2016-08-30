@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S1450",
+"message":  "Remove the \"FromKeyword\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Classification\\ClassificationHelpers.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  30,
+"endLine":  14,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"VarKeyword\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Classification\\ClassificationHelpers.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  30,
+"endLine":  16,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"AwaitKeyword\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Classification\\ClassificationHelpers.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  30,
+"endLine":  17,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_document\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\CodeGeneration\\UsingDirectivesAdder.Rewriter.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  39,
+"endLine":  18,
+"endColumn":  48
+}
+}
+}
+]
+}

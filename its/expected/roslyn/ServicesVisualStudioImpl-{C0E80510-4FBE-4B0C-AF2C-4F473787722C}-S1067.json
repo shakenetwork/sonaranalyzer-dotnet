@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\ExternalCodeAccessorFunction.cs",
+"region":  {
+"startLine":  27,
+"startColumn":  26,
+"endLine":  31,
+"endColumn":  69
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (7) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\FileCodeModel.cs",
+"region":  {
+"startLine":  590,
+"startColumn":  17,
+"endLine":  596,
+"endColumn":  107
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\FileCodeModel_CodeGen.cs",
+"region":  {
+"startLine":  374,
+"startColumn":  17,
+"endLine":  375,
+"endColumn":  81
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\InternalElements\\CodeAccessorFunction.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  26,
+"endLine":  32,
+"endColumn":  56
+}
+}
+}
+]
+}

@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S1994",
+"message":  "This loop\u0027s stop incrementer updates \"node\" but the stop condition doesn\u0027t test any variables.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Binder_QueryErrors.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  13,
+"endLine":  28,
+"endColumn":  16
+}
+}
+},
+{
+"id":  "S1994",
+"message":  "This loop\u0027s stop condition tests \"binder\" but the incrementer updates \"current\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Compilation\\MemberSemanticModel.cs",
+"region":  {
+"startLine":  161,
+"startColumn":  38,
+"endLine":  161,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S1994",
+"message":  "This loop\u0027s stop condition tests \"this\" but the incrementer updates \"firstLoop\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\LanguageParser.cs",
+"region":  {
+"startLine":  6144,
+"startColumn":  45,
+"endLine":  6144,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S1994",
+"message":  "This loop\u0027s stop incrementer updates \"i\" but the stop condition doesn\u0027t test any variables.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\SymbolCompletionState.cs",
+"region":  {
+"startLine":  116,
+"startColumn":  13,
+"endLine":  116,
+"endColumn":  16
+}
+}
+}
+]
+}

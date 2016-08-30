@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S2486",
+"message":  "Handle the exception or explain in a comment why it can be ignored.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\Telemetry\\CSharpCompilationErrorTelemetryIncrementalAnalyzer.cs",
+"region":  {
+"startLine":  135,
+"startColumn":  21,
+"endLine":  137,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2486",
+"message":  "Handle the exception or explain in a comment why it can be ignored.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\Telemetry\\CSharpCompilationErrorTelemetryIncrementalAnalyzer.cs",
+"region":  {
+"startLine":  331,
+"startColumn":  21,
+"endLine":  333,
+"endColumn":  22
+}
+}
+}
+]
+}

@@ -1,0 +1,1655 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"block\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ILBuilder.cs",
+"region":  {
+"startLine":  283,
+"startColumn":  21,
+"endLine":  283,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"srcHandler\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ILBuilder.cs",
+"region":  {
+"startLine":  407,
+"startColumn":  17,
+"endLine":  407,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"currentHandler\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ILBuilder.cs",
+"region":  {
+"startLine":  640,
+"startColumn":  17,
+"endLine":  640,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"methodReference\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ReferenceDependencyWalker.cs",
+"region":  {
+"startLine":  113,
+"startColumn":  17,
+"endLine":  113,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"methodReference\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ReferenceDependencyWalker.cs",
+"region":  {
+"startLine":  120,
+"startColumn":  17,
+"endLine":  120,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"fieldReference\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ReferenceDependencyWalker.cs",
+"region":  {
+"startLine":  164,
+"startColumn":  17,
+"endLine":  164,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"size\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Collections\\CachingFactory.cs",
+"region":  {
+"startLine":  231,
+"startColumn":  13,
+"endLine":  231,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"size\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Collections\\CachingFactory.cs",
+"region":  {
+"startLine":  232,
+"startColumn":  13,
+"endLine":  232,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"size\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Collections\\CachingFactory.cs",
+"region":  {
+"startLine":  233,
+"startColumn":  13,
+"endLine":  233,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"size\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Collections\\CachingFactory.cs",
+"region":  {
+"startLine":  234,
+"startColumn":  13,
+"endLine":  234,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"size\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Collections\\CachingFactory.cs",
+"region":  {
+"startLine":  235,
+"startColumn":  13,
+"endLine":  235,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"list\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Collections\\ConsListExtensions.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  47,
+"endLine":  20,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"set\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Collections\\SmallConcurrentSetOfInts.cs",
+"region":  {
+"startLine":  63,
+"startColumn":  17,
+"endLine":  63,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"set\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Collections\\SmallConcurrentSetOfInts.cs",
+"region":  {
+"startLine":  110,
+"startColumn":  17,
+"endLine":  110,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"next\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Collections\\SmallDictionary.cs",
+"region":  {
+"startLine":  238,
+"startColumn":  17,
+"endLine":  238,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"mode\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CommandLine\\CommonCompiler.cs",
+"region":  {
+"startLine":  881,
+"startColumn":  13,
+"endLine":  881,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"access\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CommandLine\\CommonCompiler.cs",
+"region":  {
+"startLine":  882,
+"startColumn":  13,
+"endLine":  882,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"share\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CommandLine\\CommonCompiler.cs",
+"region":  {
+"startLine":  883,
+"startColumn":  13,
+"endLine":  883,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"manifestContents\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\Compilation.cs",
+"region":  {
+"startLine":  1018,
+"startColumn":  29,
+"endLine":  1018,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"options\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\Compilation.cs",
+"region":  {
+"startLine":  2054,
+"startColumn":  17,
+"endLine":  2054,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"identity\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerAssemblyLoader.cs",
+"region":  {
+"startLine":  75,
+"startColumn":  21,
+"endLine":  75,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"identity\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerAssemblyLoader.cs",
+"region":  {
+"startLine":  98,
+"startColumn":  13,
+"endLine":  98,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"assembly\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerAssemblyLoader.cs",
+"region":  {
+"startLine":  108,
+"startColumn":  21,
+"endLine":  108,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"identity\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerAssemblyLoader.cs",
+"region":  {
+"startLine":  147,
+"startColumn":  21,
+"endLine":  147,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"id\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerExecutor.cs",
+"region":  {
+"startLine":  1213,
+"startColumn":  13,
+"endLine":  1213,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"title\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerExecutor.cs",
+"region":  {
+"startLine":  1214,
+"startColumn":  13,
+"endLine":  1214,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"messageFormat\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerExecutor.cs",
+"region":  {
+"startLine":  1215,
+"startColumn":  13,
+"endLine":  1215,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"description\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerExecutor.cs",
+"region":  {
+"startLine":  1216,
+"startColumn":  13,
+"endLine":  1216,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"e\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerFileReference.cs",
+"region":  {
+"startLine":  211,
+"startColumn":  13,
+"endLine":  211,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"compilation\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\CompilationWithAnalyzers.cs",
+"region":  {
+"startLine":  123,
+"startColumn":  13,
+"endLine":  123,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"diagnostic\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\SuppressMessageAttributeState.cs",
+"region":  {
+"startLine":  92,
+"startColumn":  17,
+"endLine":  92,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"symbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DocumentationCommentId.cs",
+"region":  {
+"startLine":  251,
+"startColumn":  17,
+"endLine":  251,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"name\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DocumentationCommentId.cs",
+"region":  {
+"startLine":  273,
+"startColumn":  17,
+"endLine":  273,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"name\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DocumentationCommentId.cs",
+"region":  {
+"startLine":  277,
+"startColumn":  17,
+"endLine":  277,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"name\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DocumentationCommentId.cs",
+"region":  {
+"startLine":  290,
+"startColumn":  21,
+"endLine":  290,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"name\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DocumentationCommentId.cs",
+"region":  {
+"startLine":  294,
+"startColumn":  21,
+"endLine":  294,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"memberName\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DocumentationCommentId.cs",
+"region":  {
+"startLine":  1255,
+"startColumn":  25,
+"endLine":  1255,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"def\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\DefinitionMap.cs",
+"region":  {
+"startLine":  121,
+"startColumn":  13,
+"endLine":  121,
+"endColumn":  16
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"symbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\SymbolChanges.cs",
+"region":  {
+"startLine":  269,
+"startColumn":  17,
+"endLine":  269,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"symbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\SymbolChanges.cs",
+"region":  {
+"startLine":  328,
+"startColumn":  13,
+"endLine":  328,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"baseDirectory\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\FileSystem\\FileUtilities.cs",
+"region":  {
+"startLine":  54,
+"startColumn":  17,
+"endLine":  54,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"baseDirectory\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\FileSystem\\FileUtilities.cs",
+"region":  {
+"startLine":  111,
+"startColumn":  21,
+"endLine":  111,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"baseDirectory\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\FileSystem\\FileUtilities.cs",
+"region":  {
+"startLine":  121,
+"startColumn":  21,
+"endLine":  121,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"baseDirectory\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\FileSystem\\FileUtilities.cs",
+"region":  {
+"startLine":  139,
+"startColumn":  21,
+"endLine":  139,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"s\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\FileSystem\\PathUtilities.cs",
+"region":  {
+"startLine":  43,
+"startColumn":  17,
+"endLine":  43,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"length\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\ArrayExtensions.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  17,
+"endLine":  19,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"length\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\ArrayExtensions.cs",
+"region":  {
+"startLine":  103,
+"startColumn":  17,
+"endLine":  103,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"v\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\BitArithmeticUtilities.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  17,
+"endLine":  18,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"v\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\BitArithmeticUtilities.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  17,
+"endLine":  19,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"v\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\BitArithmeticUtilities.cs",
+"region":  {
+"startLine":  39,
+"startColumn":  17,
+"endLine":  39,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"v\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\BitArithmeticUtilities.cs",
+"region":  {
+"startLine":  40,
+"startColumn":  17,
+"endLine":  40,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"v\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\BitArithmeticUtilities.cs",
+"region":  {
+"startLine":  41,
+"startColumn":  17,
+"endLine":  41,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"v\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\BitArithmeticUtilities.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  17,
+"endLine":  42,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"v\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\BitArithmeticUtilities.cs",
+"region":  {
+"startLine":  43,
+"startColumn":  17,
+"endLine":  43,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"v\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\BitArithmeticUtilities.cs",
+"region":  {
+"startLine":  44,
+"startColumn":  17,
+"endLine":  44,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"hashCode\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\Hash.cs",
+"region":  {
+"startLine":  331,
+"startColumn":  17,
+"endLine":  331,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"count\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\IncrementalHash.cs",
+"region":  {
+"startLine":  134,
+"startColumn":  21,
+"endLine":  134,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"offset\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\IncrementalHash.cs",
+"region":  {
+"startLine":  135,
+"startColumn":  21,
+"endLine":  135,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"name\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\StringExtensions.cs",
+"region":  {
+"startLine":  128,
+"startColumn":  17,
+"endLine":  128,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"allowByRef\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MemberDescriptor.cs",
+"region":  {
+"startLine":  187,
+"startColumn":  17,
+"endLine":  187,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"cb\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\NativePdbWriter\\ComMemoryStream.cs",
+"region":  {
+"startLine":  90,
+"startColumn":  17,
+"endLine":  90,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"newPos\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\NativePdbWriter\\ComMemoryStream.cs",
+"region":  {
+"startLine":  106,
+"startColumn":  17,
+"endLine":  106,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"cb\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\NativePdbWriter\\ComMemoryStream.cs",
+"region":  {
+"startLine":  180,
+"startColumn":  17,
+"endLine":  180,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"typeReference\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\NativePdbWriter\\PdbWriter.cs",
+"region":  {
+"startLine":  607,
+"startColumn":  21,
+"endLine":  607,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"value\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\NativePdbWriter\\PdbWriter.cs",
+"region":  {
+"startLine":  1205,
+"startColumn":  17,
+"endLine":  1205,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"typeCode\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\NativePdbWriter\\PdbWriter.cs",
+"region":  {
+"startLine":  1206,
+"startColumn":  17,
+"endLine":  1206,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"value\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\NativePdbWriter\\PdbWriter.cs",
+"region":  {
+"startLine":  1267,
+"startColumn":  17,
+"endLine":  1267,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"typeReference\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataWriter.cs",
+"region":  {
+"startLine":  651,
+"startColumn":  17,
+"endLine":  651,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"fieldReference\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataWriter.cs",
+"region":  {
+"startLine":  810,
+"startColumn":  17,
+"endLine":  810,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"methodReference\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataWriter.cs",
+"region":  {
+"startLine":  1141,
+"startColumn":  17,
+"endLine":  1141,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"typeReference\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataWriter.cs",
+"region":  {
+"startLine":  3639,
+"startColumn":  21,
+"endLine":  3639,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"typeReference\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataWriter.cs",
+"region":  {
+"startLine":  3653,
+"startColumn":  21,
+"endLine":  3653,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"encoder\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataWriter.cs",
+"region":  {
+"startLine":  3661,
+"startColumn":  25,
+"endLine":  3661,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"typeReference\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataWriter.cs",
+"region":  {
+"startLine":  3678,
+"startColumn":  21,
+"endLine":  3678,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"encoder\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataWriter.cs",
+"region":  {
+"startLine":  3682,
+"startColumn":  25,
+"endLine":  3682,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"encoder\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataWriter.cs",
+"region":  {
+"startLine":  3923,
+"startColumn":  17,
+"endLine":  3923,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"type\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataWriter.cs",
+"region":  {
+"startLine":  3942,
+"startColumn":  13,
+"endLine":  3942,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"type\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataWriter.cs",
+"region":  {
+"startLine":  3947,
+"startColumn":  17,
+"endLine":  3947,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"theResources\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\NativeResourceWriter.cs",
+"region":  {
+"startLine":  171,
+"startColumn":  13,
+"endLine":  171,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"nativePdbWriterOpt\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\PeWriter.cs",
+"region":  {
+"startLine":  106,
+"startColumn":  13,
+"endLine":  106,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"typeReference\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\TypeNameSerializer.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  17,
+"endLine":  26,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"typeReference\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\TypeNameSerializer.cs",
+"region":  {
+"startLine":  52,
+"startColumn":  17,
+"endLine":  52,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"typeReference\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\TypeNameSerializer.cs",
+"region":  {
+"startLine":  62,
+"startColumn":  17,
+"endLine":  62,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"typeReference\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\TypeNameSerializer.cs",
+"region":  {
+"startLine":  241,
+"startColumn":  21,
+"endLine":  241,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"typeReference\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\TypeNameSerializer.cs",
+"region":  {
+"startLine":  248,
+"startColumn":  21,
+"endLine":  248,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"typeReference\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\TypeNameSerializer.cs",
+"region":  {
+"startLine":  255,
+"startColumn":  21,
+"endLine":  255,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"@namespace\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\TypeNameSerializer.cs",
+"region":  {
+"startLine":  285,
+"startColumn":  17,
+"endLine":  285,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"data\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\RealParser.cs",
+"region":  {
+"startLine":  634,
+"startColumn":  17,
+"endLine":  634,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"data\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\RealParser.cs",
+"region":  {
+"startLine":  649,
+"startColumn":  17,
+"endLine":  649,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"definitionStartIndex\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ReferenceManager\\CommonReferenceManager.Resolution.cs",
+"region":  {
+"startLine":  885,
+"startColumn":  13,
+"endLine":  885,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"includePath\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\RuleSet\\RuleSetInclude.cs",
+"region":  {
+"startLine":  98,
+"startColumn":  17,
+"endLine":  98,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"includePath\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\RuleSet\\RuleSetInclude.cs",
+"region":  {
+"startLine":  107,
+"startColumn":  13,
+"endLine":  107,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"includePath\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\RuleSet\\RuleSetInclude.cs",
+"region":  {
+"startLine":  120,
+"startColumn":  17,
+"endLine":  120,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"filePath\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\RuleSet\\RuleSetProcessor.cs",
+"region":  {
+"startLine":  64,
+"startColumn":  13,
+"endLine":  64,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"node1\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\GreenNode.cs",
+"region":  {
+"startLine":  849,
+"startColumn":  21,
+"endLine":  849,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"node2\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\GreenNode.cs",
+"region":  {
+"startLine":  854,
+"startColumn":  21,
+"endLine":  854,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SeparatedSyntaxList.cs",
+"region":  {
+"startLine":  120,
+"startColumn":  21,
+"endLine":  120,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"node\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxNavigator.cs",
+"region":  {
+"startLine":  465,
+"startColumn":  17,
+"endLine":  465,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"node\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxNavigator.cs",
+"region":  {
+"startLine":  514,
+"startColumn":  17,
+"endLine":  514,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"node\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxNode.cs",
+"region":  {
+"startLine":  450,
+"startColumn":  21,
+"endLine":  450,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"node\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxNode.cs",
+"region":  {
+"startLine":  454,
+"startColumn":  21,
+"endLine":  454,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"node\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxNode.cs",
+"region":  {
+"startLine":  458,
+"startColumn":  21,
+"endLine":  458,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"node\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxNode.cs",
+"region":  {
+"startLine":  967,
+"startColumn":  29,
+"endLine":  967,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"node\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxNode.cs",
+"region":  {
+"startLine":  982,
+"startColumn":  45,
+"endLine":  982,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"textOffset\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxNode.cs",
+"region":  {
+"startLine":  989,
+"startColumn":  37,
+"endLine":  989,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"textOffset\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxNode.cs",
+"region":  {
+"startLine":  994,
+"startColumn":  33,
+"endLine":  994,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"node\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxNode.cs",
+"region":  {
+"startLine":  1001,
+"startColumn":  45,
+"endLine":  1001,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"textOffset\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxNode.cs",
+"region":  {
+"startLine":  1008,
+"startColumn":  37,
+"endLine":  1008,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"textOffset\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxNode.cs",
+"region":  {
+"startLine":  1016,
+"startColumn":  21,
+"endLine":  1016,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"node\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxNodeExtensions_Tracking.cs",
+"region":  {
+"startLine":  147,
+"startColumn":  21,
+"endLine":  147,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"node\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxNodeExtensions_Tracking.cs",
+"region":  {
+"startLine":  156,
+"startColumn":  21,
+"endLine":  156,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"node\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxNodeExtensions_Tracking.cs",
+"region":  {
+"startLine":  172,
+"startColumn":  21,
+"endLine":  172,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"node\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxNodeExtensions_Tracking.cs",
+"region":  {
+"startLine":  180,
+"startColumn":  21,
+"endLine":  180,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"count\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Text\\CompositeText.cs",
+"region":  {
+"startLine":  147,
+"startColumn":  17,
+"endLine":  147,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"destinationIndex\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Text\\CompositeText.cs",
+"region":  {
+"startLine":  148,
+"startColumn":  17,
+"endLine":  148,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"count\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Text\\LargeText.cs",
+"region":  {
+"startLine":  167,
+"startColumn":  17,
+"endLine":  167,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"destinationIndex\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Text\\LargeText.cs",
+"region":  {
+"startLine":  173,
+"startColumn":  17,
+"endLine":  173,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"index\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Text\\LargeTextWriter.cs",
+"region":  {
+"startLine":  105,
+"startColumn":  17,
+"endLine":  105,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"count\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Text\\LargeTextWriter.cs",
+"region":  {
+"startLine":  106,
+"startColumn":  17,
+"endLine":  106,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"encoding\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Text\\SourceText.cs",
+"region":  {
+"startLine":  147,
+"startColumn":  13,
+"endLine":  147,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"offset\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Text\\SourceTextStream.cs",
+"region":  {
+"startLine":  91,
+"startColumn":  17,
+"endLine":  91,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"count\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Text\\SourceTextStream.cs",
+"region":  {
+"startLine":  92,
+"startColumn":  17,
+"endLine":  92,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"offset\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Text\\SourceTextStream.cs",
+"region":  {
+"startLine":  108,
+"startColumn":  17,
+"endLine":  108,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"count\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Text\\SourceTextStream.cs",
+"region":  {
+"startLine":  109,
+"startColumn":  17,
+"endLine":  109,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"span\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Text\\TextLine.cs",
+"region":  {
+"startLine":  65,
+"startColumn":  25,
+"endLine":  65,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"time\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\VersionHelper.cs",
+"region":  {
+"startLine":  184,
+"startColumn":  17,
+"endLine":  184,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"methodToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\CustomDebugInfoReader.cs",
+"region":  {
+"startLine":  337,
+"startColumn":  25,
+"endLine":  337,
+"endColumn":  36
+}
+}
+}
+]
+}

@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1006",
+"message":  "Add the default parameter value defined in the overridden method.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\BraceMatching\\StringLiteralBraceMatcher.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  116,
+"endLine":  15,
+"endColumn":  133
+}
+}
+},
+{
+"id":  "S1006",
+"message":  "Add the default parameter value defined in the overridden method.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\LineSeparators\\CSharpLineSeparatorService.cs",
+"region":  {
+"startLine":  27,
+"startColumn":  31,
+"endLine":  27,
+"endColumn":  48
+}
+}
+}
+]
+}

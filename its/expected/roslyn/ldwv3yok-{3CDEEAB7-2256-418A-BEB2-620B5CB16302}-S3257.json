@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S3257",
+"message":  "Remove the explicit delegate creation; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\CodeFixes\\CodeFixService.cs",
+"region":  {
+"startLine":  72,
+"startColumn":  45,
+"endLine":  72,
+"endColumn":  132
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\InlineRename\\Dashboard\\RenameShortcutKeys.cs",
+"region":  {
+"startLine":  34,
+"startColumn":  39,
+"endLine":  34,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the explicit delegate creation; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\InlineRename\\InlineRenameSession.OpenTextBufferManager.cs",
+"region":  {
+"startLine":  70,
+"startColumn":  37,
+"endLine":  70,
+"endColumn":  67
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the explicit delegate creation; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Utilities\\SynchronizationContextTaskScheduler.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  29,
+"endLine":  21,
+"endColumn":  51
+}
+}
+}
+]
+}

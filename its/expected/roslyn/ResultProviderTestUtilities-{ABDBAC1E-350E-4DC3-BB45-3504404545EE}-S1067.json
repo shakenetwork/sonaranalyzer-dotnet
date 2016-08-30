@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\ResultProvider.cs",
+"region":  {
+"startLine":  476,
+"startColumn":  17,
+"endLine":  479,
+"endColumn":  118
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Test\\ResultProvider\\Debugger\\Engine\\DkmClrValue.cs",
+"region":  {
+"startLine":  132,
+"startColumn":  20,
+"endLine":  134,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (11) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Test\\ResultProvider\\ResultProviderTestBase.cs",
+"region":  {
+"startLine":  514,
+"startColumn":  24,
+"endLine":  524,
+"endColumn":  98
+}
+}
+}
+]
+}

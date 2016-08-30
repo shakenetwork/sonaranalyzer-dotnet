@@ -1,0 +1,251 @@
+{
+"issues":  [
+{
+"id":  "S2357",
+"message":  "Make \"Symbol\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\CompilationTestUtils.vb",
+"region":  {
+"startLine":  493,
+"startColumn":  16,
+"endLine":  493,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"CandidateReason\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\CompilationTestUtils.vb",
+"region":  {
+"startLine":  494,
+"startColumn":  16,
+"endLine":  494,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"CandidateSymbols\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\CompilationTestUtils.vb",
+"region":  {
+"startLine":  495,
+"startColumn":  16,
+"endLine":  495,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"AllSymbols\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\CompilationTestUtils.vb",
+"region":  {
+"startLine":  496,
+"startColumn":  16,
+"endLine":  496,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Type\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\CompilationTestUtils.vb",
+"region":  {
+"startLine":  497,
+"startColumn":  16,
+"endLine":  497,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ConvertedType\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\CompilationTestUtils.vb",
+"region":  {
+"startLine":  498,
+"startColumn":  16,
+"endLine":  498,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ImplicitConversion\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\CompilationTestUtils.vb",
+"region":  {
+"startLine":  499,
+"startColumn":  16,
+"endLine":  499,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"MemberGroup\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\CompilationTestUtils.vb",
+"region":  {
+"startLine":  500,
+"startColumn":  16,
+"endLine":  500,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Alias\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\CompilationTestUtils.vb",
+"region":  {
+"startLine":  501,
+"startColumn":  16,
+"endLine":  501,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ConstantValue\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\CompilationTestUtils.vb",
+"region":  {
+"startLine":  502,
+"startColumn":  16,
+"endLine":  502,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Diagnostic\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\CompilationTestUtils.vb",
+"region":  {
+"startLine":  938,
+"startColumn":  25,
+"endLine":  938,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Index\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\CompilationTestUtils.vb",
+"region":  {
+"startLine":  939,
+"startColumn":  25,
+"endLine":  939,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Compilation\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\MockVisualBasicCompiler.vb",
+"region":  {
+"startLine":  12,
+"startColumn":  12,
+"endLine":  12,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"oldText\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\ParserTestUtilities.vb",
+"region":  {
+"startLine":  204,
+"startColumn":  16,
+"endLine":  204,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"changeText\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\ParserTestUtilities.vb",
+"region":  {
+"startLine":  205,
+"startColumn":  16,
+"endLine":  205,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"changeSpan\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\ParserTestUtilities.vb",
+"region":  {
+"startLine":  206,
+"startColumn":  16,
+"endLine":  206,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"changeType\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\ParserTestUtilities.vb",
+"region":  {
+"startLine":  207,
+"startColumn":  16,
+"endLine":  207,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"_Dict\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\ParserTestUtilities.vb",
+"region":  {
+"startLine":  851,
+"startColumn":  16,
+"endLine":  851,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"_Items\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\ParserTestUtilities.vb",
+"region":  {
+"startLine":  852,
+"startColumn":  25,
+"endLine":  852,
+"endColumn":  31
+}
+}
+}
+]
+}

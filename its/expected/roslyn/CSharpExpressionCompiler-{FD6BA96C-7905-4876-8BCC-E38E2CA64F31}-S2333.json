@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\Binders\\PlaceholderLocalBinder.cs",
+"region":  {
+"startLine":  57,
+"startColumn":  18,
+"endLine":  57,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\Binders\\PlaceholderLocalBinder.cs",
+"region":  {
+"startLine":  98,
+"startColumn":  19,
+"endLine":  98,
+"endColumn":  25
+}
+}
+}
+]
+}

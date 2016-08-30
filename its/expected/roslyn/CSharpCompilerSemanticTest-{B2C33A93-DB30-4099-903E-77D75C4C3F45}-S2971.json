@@ -1,0 +1,6608 @@
+{
+"issues":  [
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"FirstOrDefault\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\FlowAnalysis\\FlowTestBase.cs",
+"region":  {
+"startLine":  139,
+"startColumn":  56,
+"endLine":  139,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Last\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\FlowAnalysis\\FlowTestBase.cs",
+"region":  {
+"startLine":  145,
+"startColumn":  56,
+"endLine":  145,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\AmbiguousOverrideTests.cs",
+"region":  {
+"startLine":  475,
+"startColumn":  80,
+"endLine":  475,
+"endColumn":  85
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\AmbiguousOverrideTests.cs",
+"region":  {
+"startLine":  476,
+"startColumn":  80,
+"endLine":  476,
+"endColumn":  85
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\AmbiguousOverrideTests.cs",
+"region":  {
+"startLine":  530,
+"startColumn":  80,
+"endLine":  530,
+"endColumn":  85
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\AmbiguousOverrideTests.cs",
+"region":  {
+"startLine":  531,
+"startColumn":  80,
+"endLine":  531,
+"endColumn":  85
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\AmbiguousOverrideTests.cs",
+"region":  {
+"startLine":  595,
+"startColumn":  82,
+"endLine":  595,
+"endColumn":  87
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\AmbiguousOverrideTests.cs",
+"region":  {
+"startLine":  596,
+"startColumn":  82,
+"endLine":  596,
+"endColumn":  87
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\AmbiguousOverrideTests.cs",
+"region":  {
+"startLine":  663,
+"startColumn":  82,
+"endLine":  663,
+"endColumn":  87
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\AmbiguousOverrideTests.cs",
+"region":  {
+"startLine":  664,
+"startColumn":  82,
+"endLine":  664,
+"endColumn":  87
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\AmbiguousOverrideTests.cs",
+"region":  {
+"startLine":  887,
+"startColumn":  76,
+"endLine":  887,
+"endColumn":  81
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\AmbiguousOverrideTests.cs",
+"region":  {
+"startLine":  888,
+"startColumn":  76,
+"endLine":  888,
+"endColumn":  81
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\AmbiguousOverrideTests.cs",
+"region":  {
+"startLine":  970,
+"startColumn":  76,
+"endLine":  970,
+"endColumn":  81
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\AmbiguousOverrideTests.cs",
+"region":  {
+"startLine":  971,
+"startColumn":  76,
+"endLine":  971,
+"endColumn":  81
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingTests.cs",
+"region":  {
+"startLine":  2838,
+"startColumn":  57,
+"endLine":  2838,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingTests.cs",
+"region":  {
+"startLine":  2839,
+"startColumn":  43,
+"endLine":  2839,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingTests.cs",
+"region":  {
+"startLine":  2875,
+"startColumn":  59,
+"endLine":  2875,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingTests.cs",
+"region":  {
+"startLine":  2877,
+"startColumn":  45,
+"endLine":  2877,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingTests.cs",
+"region":  {
+"startLine":  2917,
+"startColumn":  59,
+"endLine":  2917,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingTests.cs",
+"region":  {
+"startLine":  2919,
+"startColumn":  45,
+"endLine":  2919,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingTests.cs",
+"region":  {
+"startLine":  2987,
+"startColumn":  58,
+"endLine":  2987,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingTests.cs",
+"region":  {
+"startLine":  3001,
+"startColumn":  57,
+"endLine":  3001,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingTests.cs",
+"region":  {
+"startLine":  3067,
+"startColumn":  58,
+"endLine":  3067,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingTests.cs",
+"region":  {
+"startLine":  3081,
+"startColumn":  57,
+"endLine":  3081,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingTests.cs",
+"region":  {
+"startLine":  3140,
+"startColumn":  58,
+"endLine":  3140,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingTests.cs",
+"region":  {
+"startLine":  3155,
+"startColumn":  57,
+"endLine":  3155,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingTests.cs",
+"region":  {
+"startLine":  3225,
+"startColumn":  58,
+"endLine":  3225,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingTests.cs",
+"region":  {
+"startLine":  3240,
+"startColumn":  57,
+"endLine":  3240,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingTests.cs",
+"region":  {
+"startLine":  3330,
+"startColumn":  58,
+"endLine":  3330,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingTests.cs",
+"region":  {
+"startLine":  3399,
+"startColumn":  58,
+"endLine":  3399,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\ColorColorTests.cs",
+"region":  {
+"startLine":  1885,
+"startColumn":  89,
+"endLine":  1885,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\ColorColorTests.cs",
+"region":  {
+"startLine":  1942,
+"startColumn":  89,
+"endLine":  1942,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\ColorColorTests.cs",
+"region":  {
+"startLine":  1999,
+"startColumn":  89,
+"endLine":  1999,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\ColorColorTests.cs",
+"region":  {
+"startLine":  2048,
+"startColumn":  89,
+"endLine":  2048,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\DynamicTests.cs",
+"region":  {
+"startLine":  3252,
+"startColumn":  88,
+"endLine":  3252,
+"endColumn":  93
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\DynamicTests.cs",
+"region":  {
+"startLine":  3285,
+"startColumn":  88,
+"endLine":  3285,
+"endColumn":  93
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\DynamicTests.cs",
+"region":  {
+"startLine":  3312,
+"startColumn":  88,
+"endLine":  3312,
+"endColumn":  93
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\DynamicTests.cs",
+"region":  {
+"startLine":  3339,
+"startColumn":  88,
+"endLine":  3339,
+"endColumn":  93
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\DynamicTests.cs",
+"region":  {
+"startLine":  3390,
+"startColumn":  88,
+"endLine":  3390,
+"endColumn":  93
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"SingleOrDefault\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\IteratorTests.cs",
+"region":  {
+"startLine":  314,
+"startColumn":  84,
+"endLine":  314,
+"endColumn":  89
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"SingleOrDefault\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\IteratorTests.cs",
+"region":  {
+"startLine":  337,
+"startColumn":  84,
+"endLine":  337,
+"endColumn":  89
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LambdaTests.cs",
+"region":  {
+"startLine":  702,
+"startColumn":  17,
+"endLine":  702,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Last\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LambdaTests.cs",
+"region":  {
+"startLine":  897,
+"startColumn":  18,
+"endLine":  897,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Last\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LambdaTests.cs",
+"region":  {
+"startLine":  951,
+"startColumn":  18,
+"endLine":  951,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LambdaTests.cs",
+"region":  {
+"startLine":  1369,
+"startColumn":  88,
+"endLine":  1369,
+"endColumn":  93
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LambdaTests.cs",
+"region":  {
+"startLine":  1404,
+"startColumn":  88,
+"endLine":  1404,
+"endColumn":  93
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LambdaTests.cs",
+"region":  {
+"startLine":  1438,
+"startColumn":  88,
+"endLine":  1438,
+"endColumn":  93
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LambdaTests.cs",
+"region":  {
+"startLine":  1470,
+"startColumn":  88,
+"endLine":  1470,
+"endColumn":  93
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LambdaTests.cs",
+"region":  {
+"startLine":  1633,
+"startColumn":  58,
+"endLine":  1633,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LookupTests.cs",
+"region":  {
+"startLine":  1304,
+"startColumn":  66,
+"endLine":  1304,
+"endColumn":  71
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LookupTests.cs",
+"region":  {
+"startLine":  1411,
+"startColumn":  84,
+"endLine":  1411,
+"endColumn":  89
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LookupTests.cs",
+"region":  {
+"startLine":  1434,
+"startColumn":  68,
+"endLine":  1434,
+"endColumn":  73
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LookupTests.cs",
+"region":  {
+"startLine":  1443,
+"startColumn":  63,
+"endLine":  1443,
+"endColumn":  68
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LookupTests.cs",
+"region":  {
+"startLine":  1448,
+"startColumn":  60,
+"endLine":  1448,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"First\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LookupTests.cs",
+"region":  {
+"startLine":  1553,
+"startColumn":  57,
+"endLine":  1553,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"First\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LookupTests.cs",
+"region":  {
+"startLine":  1580,
+"startColumn":  57,
+"endLine":  1580,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LookupTests.cs",
+"region":  {
+"startLine":  1919,
+"startColumn":  24,
+"endLine":  1919,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\OutVarTests.cs",
+"region":  {
+"startLine":  7583,
+"startColumn":  89,
+"endLine":  7583,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\OutVarTests.cs",
+"region":  {
+"startLine":  8156,
+"startColumn":  96,
+"endLine":  8156,
+"endColumn":  101
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  780,
+"startColumn":  94,
+"endLine":  780,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  781,
+"startColumn":  89,
+"endLine":  781,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  784,
+"startColumn":  94,
+"endLine":  784,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  785,
+"startColumn":  89,
+"endLine":  785,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  788,
+"startColumn":  94,
+"endLine":  788,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  795,
+"startColumn":  94,
+"endLine":  795,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  810,
+"startColumn":  94,
+"endLine":  810,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  811,
+"startColumn":  89,
+"endLine":  811,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  814,
+"startColumn":  95,
+"endLine":  814,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  815,
+"startColumn":  90,
+"endLine":  815,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  818,
+"startColumn":  95,
+"endLine":  818,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  823,
+"startColumn":  95,
+"endLine":  823,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  940,
+"startColumn":  94,
+"endLine":  940,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  941,
+"startColumn":  89,
+"endLine":  941,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  975,
+"startColumn":  81,
+"endLine":  975,
+"endColumn":  86
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  981,
+"startColumn":  94,
+"endLine":  981,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1238,
+"startColumn":  94,
+"endLine":  1238,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1239,
+"startColumn":  89,
+"endLine":  1239,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1242,
+"startColumn":  94,
+"endLine":  1242,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1243,
+"startColumn":  89,
+"endLine":  1243,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1246,
+"startColumn":  94,
+"endLine":  1246,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1253,
+"startColumn":  94,
+"endLine":  1253,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1265,
+"startColumn":  94,
+"endLine":  1265,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1266,
+"startColumn":  89,
+"endLine":  1266,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1269,
+"startColumn":  95,
+"endLine":  1269,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1270,
+"startColumn":  90,
+"endLine":  1270,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1273,
+"startColumn":  95,
+"endLine":  1273,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1278,
+"startColumn":  95,
+"endLine":  1278,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1318,
+"startColumn":  94,
+"endLine":  1318,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1319,
+"startColumn":  89,
+"endLine":  1319,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1353,
+"startColumn":  81,
+"endLine":  1353,
+"endColumn":  86
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1359,
+"startColumn":  94,
+"endLine":  1359,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1508,
+"startColumn":  94,
+"endLine":  1508,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1509,
+"startColumn":  89,
+"endLine":  1509,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1512,
+"startColumn":  94,
+"endLine":  1512,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1513,
+"startColumn":  89,
+"endLine":  1513,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1516,
+"startColumn":  94,
+"endLine":  1516,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1523,
+"startColumn":  94,
+"endLine":  1523,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1535,
+"startColumn":  94,
+"endLine":  1535,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1536,
+"startColumn":  89,
+"endLine":  1536,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1539,
+"startColumn":  95,
+"endLine":  1539,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1540,
+"startColumn":  90,
+"endLine":  1540,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1543,
+"startColumn":  95,
+"endLine":  1543,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1548,
+"startColumn":  95,
+"endLine":  1548,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1587,
+"startColumn":  94,
+"endLine":  1587,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1588,
+"startColumn":  89,
+"endLine":  1588,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1622,
+"startColumn":  81,
+"endLine":  1622,
+"endColumn":  86
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1628,
+"startColumn":  94,
+"endLine":  1628,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1798,
+"startColumn":  94,
+"endLine":  1798,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1803,
+"startColumn":  94,
+"endLine":  1803,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1808,
+"startColumn":  94,
+"endLine":  1808,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1814,
+"startColumn":  94,
+"endLine":  1814,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1821,
+"startColumn":  94,
+"endLine":  1821,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1822,
+"startColumn":  89,
+"endLine":  1822,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1825,
+"startColumn":  94,
+"endLine":  1825,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1830,
+"startColumn":  94,
+"endLine":  1830,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1836,
+"startColumn":  94,
+"endLine":  1836,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1853,
+"startColumn":  90,
+"endLine":  1853,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1891,
+"startColumn":  94,
+"endLine":  1891,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1892,
+"startColumn":  89,
+"endLine":  1892,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1926,
+"startColumn":  81,
+"endLine":  1926,
+"endColumn":  86
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  1932,
+"startColumn":  94,
+"endLine":  1932,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2208,
+"startColumn":  94,
+"endLine":  2208,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2209,
+"startColumn":  89,
+"endLine":  2209,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2212,
+"startColumn":  94,
+"endLine":  2212,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2213,
+"startColumn":  89,
+"endLine":  2213,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2217,
+"startColumn":  89,
+"endLine":  2217,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2229,
+"startColumn":  94,
+"endLine":  2229,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2238,
+"startColumn":  94,
+"endLine":  2238,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2257,
+"startColumn":  95,
+"endLine":  2257,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2264,
+"startColumn":  95,
+"endLine":  2264,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2544,
+"startColumn":  94,
+"endLine":  2544,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2549,
+"startColumn":  94,
+"endLine":  2549,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2554,
+"startColumn":  94,
+"endLine":  2554,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2561,
+"startColumn":  94,
+"endLine":  2561,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2566,
+"startColumn":  94,
+"endLine":  2566,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2573,
+"startColumn":  94,
+"endLine":  2573,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2578,
+"startColumn":  94,
+"endLine":  2578,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2583,
+"startColumn":  94,
+"endLine":  2583,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2591,
+"startColumn":  94,
+"endLine":  2591,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2599,
+"startColumn":  94,
+"endLine":  2599,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2604,
+"startColumn":  94,
+"endLine":  2604,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2609,
+"startColumn":  94,
+"endLine":  2609,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2617,
+"startColumn":  94,
+"endLine":  2617,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2625,
+"startColumn":  94,
+"endLine":  2625,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2630,
+"startColumn":  94,
+"endLine":  2630,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2637,
+"startColumn":  94,
+"endLine":  2637,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2642,
+"startColumn":  94,
+"endLine":  2642,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2650,
+"startColumn":  94,
+"endLine":  2650,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2658,
+"startColumn":  94,
+"endLine":  2658,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2663,
+"startColumn":  94,
+"endLine":  2663,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2669,
+"startColumn":  94,
+"endLine":  2669,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2674,
+"startColumn":  94,
+"endLine":  2674,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2681,
+"startColumn":  94,
+"endLine":  2681,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2688,
+"startColumn":  95,
+"endLine":  2688,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2694,
+"startColumn":  95,
+"endLine":  2694,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2795,
+"startColumn":  94,
+"endLine":  2795,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2800,
+"startColumn":  94,
+"endLine":  2800,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2805,
+"startColumn":  94,
+"endLine":  2805,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2813,
+"startColumn":  94,
+"endLine":  2813,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2821,
+"startColumn":  94,
+"endLine":  2821,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2826,
+"startColumn":  94,
+"endLine":  2826,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2831,
+"startColumn":  94,
+"endLine":  2831,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2839,
+"startColumn":  94,
+"endLine":  2839,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  2934,
+"startColumn":  97,
+"endLine":  2934,
+"endColumn":  102
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3190,
+"startColumn":  97,
+"endLine":  3190,
+"endColumn":  102
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3191,
+"startColumn":  92,
+"endLine":  3191,
+"endColumn":  97
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3260,
+"startColumn":  97,
+"endLine":  3260,
+"endColumn":  102
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3261,
+"startColumn":  92,
+"endLine":  3261,
+"endColumn":  97
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3418,
+"startColumn":  97,
+"endLine":  3418,
+"endColumn":  102
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3508,
+"startColumn":  97,
+"endLine":  3508,
+"endColumn":  102
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3509,
+"startColumn":  92,
+"endLine":  3509,
+"endColumn":  97
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3659,
+"startColumn":  94,
+"endLine":  3659,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3660,
+"startColumn":  89,
+"endLine":  3660,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3663,
+"startColumn":  94,
+"endLine":  3663,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3664,
+"startColumn":  89,
+"endLine":  3664,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3668,
+"startColumn":  89,
+"endLine":  3668,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3680,
+"startColumn":  94,
+"endLine":  3680,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3687,
+"startColumn":  95,
+"endLine":  3687,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3693,
+"startColumn":  95,
+"endLine":  3693,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3699,
+"startColumn":  95,
+"endLine":  3699,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3700,
+"startColumn":  90,
+"endLine":  3700,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3831,
+"startColumn":  94,
+"endLine":  3831,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3832,
+"startColumn":  89,
+"endLine":  3832,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3835,
+"startColumn":  94,
+"endLine":  3835,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3836,
+"startColumn":  89,
+"endLine":  3836,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3840,
+"startColumn":  89,
+"endLine":  3840,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3852,
+"startColumn":  94,
+"endLine":  3852,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3859,
+"startColumn":  95,
+"endLine":  3859,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3860,
+"startColumn":  90,
+"endLine":  3860,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3972,
+"startColumn":  94,
+"endLine":  3972,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3973,
+"startColumn":  89,
+"endLine":  3973,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3976,
+"startColumn":  94,
+"endLine":  3976,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3977,
+"startColumn":  89,
+"endLine":  3977,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3981,
+"startColumn":  89,
+"endLine":  3981,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  3993,
+"startColumn":  94,
+"endLine":  3993,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4000,
+"startColumn":  95,
+"endLine":  4000,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4001,
+"startColumn":  90,
+"endLine":  4001,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4143,
+"startColumn":  94,
+"endLine":  4143,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4144,
+"startColumn":  89,
+"endLine":  4144,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4147,
+"startColumn":  94,
+"endLine":  4147,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4148,
+"startColumn":  89,
+"endLine":  4148,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4152,
+"startColumn":  89,
+"endLine":  4152,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4164,
+"startColumn":  94,
+"endLine":  4164,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4221,
+"startColumn":  94,
+"endLine":  4221,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4222,
+"startColumn":  89,
+"endLine":  4222,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4225,
+"startColumn":  94,
+"endLine":  4225,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4226,
+"startColumn":  89,
+"endLine":  4226,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4230,
+"startColumn":  89,
+"endLine":  4230,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4242,
+"startColumn":  94,
+"endLine":  4242,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4308,
+"startColumn":  94,
+"endLine":  4308,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4309,
+"startColumn":  89,
+"endLine":  4309,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4312,
+"startColumn":  94,
+"endLine":  4312,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4313,
+"startColumn":  89,
+"endLine":  4313,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4317,
+"startColumn":  89,
+"endLine":  4317,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4329,
+"startColumn":  94,
+"endLine":  4329,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4410,
+"startColumn":  94,
+"endLine":  4410,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4411,
+"startColumn":  89,
+"endLine":  4411,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4414,
+"startColumn":  94,
+"endLine":  4414,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4415,
+"startColumn":  89,
+"endLine":  4415,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4419,
+"startColumn":  89,
+"endLine":  4419,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4431,
+"startColumn":  94,
+"endLine":  4431,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4513,
+"startColumn":  94,
+"endLine":  4513,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4514,
+"startColumn":  89,
+"endLine":  4514,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4517,
+"startColumn":  94,
+"endLine":  4517,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4518,
+"startColumn":  89,
+"endLine":  4518,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4522,
+"startColumn":  89,
+"endLine":  4522,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4534,
+"startColumn":  94,
+"endLine":  4534,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4604,
+"startColumn":  94,
+"endLine":  4604,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4605,
+"startColumn":  89,
+"endLine":  4605,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4608,
+"startColumn":  94,
+"endLine":  4608,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4609,
+"startColumn":  89,
+"endLine":  4609,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4613,
+"startColumn":  89,
+"endLine":  4613,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4625,
+"startColumn":  94,
+"endLine":  4625,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4691,
+"startColumn":  94,
+"endLine":  4691,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4692,
+"startColumn":  89,
+"endLine":  4692,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4695,
+"startColumn":  94,
+"endLine":  4695,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4696,
+"startColumn":  89,
+"endLine":  4696,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4700,
+"startColumn":  89,
+"endLine":  4700,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4712,
+"startColumn":  94,
+"endLine":  4712,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4783,
+"startColumn":  94,
+"endLine":  4783,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4784,
+"startColumn":  89,
+"endLine":  4784,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4787,
+"startColumn":  94,
+"endLine":  4787,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4788,
+"startColumn":  89,
+"endLine":  4788,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4792,
+"startColumn":  89,
+"endLine":  4792,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4804,
+"startColumn":  94,
+"endLine":  4804,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4879,
+"startColumn":  94,
+"endLine":  4879,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4880,
+"startColumn":  89,
+"endLine":  4880,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4883,
+"startColumn":  94,
+"endLine":  4883,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4884,
+"startColumn":  89,
+"endLine":  4884,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4888,
+"startColumn":  89,
+"endLine":  4888,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  4900,
+"startColumn":  94,
+"endLine":  4900,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  5297,
+"startColumn":  94,
+"endLine":  5297,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  5302,
+"startColumn":  94,
+"endLine":  5302,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  5307,
+"startColumn":  94,
+"endLine":  5307,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  5314,
+"startColumn":  94,
+"endLine":  5314,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  5330,
+"startColumn":  94,
+"endLine":  5330,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  5339,
+"startColumn":  95,
+"endLine":  5339,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  5347,
+"startColumn":  95,
+"endLine":  5347,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  5697,
+"startColumn":  94,
+"endLine":  5697,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  5702,
+"startColumn":  94,
+"endLine":  5702,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  5707,
+"startColumn":  94,
+"endLine":  5707,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  5714,
+"startColumn":  94,
+"endLine":  5714,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  5730,
+"startColumn":  94,
+"endLine":  5730,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  5739,
+"startColumn":  95,
+"endLine":  5739,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  5747,
+"startColumn":  95,
+"endLine":  5747,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  5994,
+"startColumn":  94,
+"endLine":  5994,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  5999,
+"startColumn":  94,
+"endLine":  5999,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6007,
+"startColumn":  94,
+"endLine":  6007,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6012,
+"startColumn":  94,
+"endLine":  6012,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6017,
+"startColumn":  94,
+"endLine":  6017,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6087,
+"startColumn":  94,
+"endLine":  6087,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6088,
+"startColumn":  89,
+"endLine":  6088,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6122,
+"startColumn":  81,
+"endLine":  6122,
+"endColumn":  86
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6128,
+"startColumn":  94,
+"endLine":  6128,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6376,
+"startColumn":  94,
+"endLine":  6376,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6381,
+"startColumn":  94,
+"endLine":  6381,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6386,
+"startColumn":  94,
+"endLine":  6386,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6392,
+"startColumn":  94,
+"endLine":  6392,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6397,
+"startColumn":  94,
+"endLine":  6397,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6403,
+"startColumn":  94,
+"endLine":  6403,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6416,
+"startColumn":  95,
+"endLine":  6416,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6417,
+"startColumn":  90,
+"endLine":  6417,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6425,
+"startColumn":  90,
+"endLine":  6425,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6583,
+"startColumn":  94,
+"endLine":  6583,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6588,
+"startColumn":  94,
+"endLine":  6588,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6593,
+"startColumn":  94,
+"endLine":  6593,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6599,
+"startColumn":  94,
+"endLine":  6599,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6604,
+"startColumn":  94,
+"endLine":  6604,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6610,
+"startColumn":  94,
+"endLine":  6610,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6623,
+"startColumn":  95,
+"endLine":  6623,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6624,
+"startColumn":  90,
+"endLine":  6624,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6632,
+"startColumn":  90,
+"endLine":  6632,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6790,
+"startColumn":  94,
+"endLine":  6790,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6795,
+"startColumn":  94,
+"endLine":  6795,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6800,
+"startColumn":  94,
+"endLine":  6800,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6806,
+"startColumn":  94,
+"endLine":  6806,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6811,
+"startColumn":  94,
+"endLine":  6811,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6817,
+"startColumn":  94,
+"endLine":  6817,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6830,
+"startColumn":  95,
+"endLine":  6830,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6831,
+"startColumn":  90,
+"endLine":  6831,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6839,
+"startColumn":  90,
+"endLine":  6839,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6896,
+"startColumn":  94,
+"endLine":  6896,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6903,
+"startColumn":  94,
+"endLine":  6903,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6977,
+"startColumn":  94,
+"endLine":  6977,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6989,
+"startColumn":  94,
+"endLine":  6989,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  6994,
+"startColumn":  94,
+"endLine":  6994,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7119,
+"startColumn":  94,
+"endLine":  7119,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7120,
+"startColumn":  89,
+"endLine":  7120,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7123,
+"startColumn":  94,
+"endLine":  7123,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7130,
+"startColumn":  94,
+"endLine":  7130,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7131,
+"startColumn":  89,
+"endLine":  7131,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7134,
+"startColumn":  94,
+"endLine":  7134,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7140,
+"startColumn":  90,
+"endLine":  7140,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7206,
+"startColumn":  94,
+"endLine":  7206,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7207,
+"startColumn":  89,
+"endLine":  7207,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7210,
+"startColumn":  94,
+"endLine":  7210,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7217,
+"startColumn":  94,
+"endLine":  7217,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7218,
+"startColumn":  89,
+"endLine":  7218,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7221,
+"startColumn":  94,
+"endLine":  7221,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7227,
+"startColumn":  90,
+"endLine":  7227,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7283,
+"startColumn":  94,
+"endLine":  7283,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7290,
+"startColumn":  94,
+"endLine":  7290,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7353,
+"startColumn":  94,
+"endLine":  7353,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7365,
+"startColumn":  94,
+"endLine":  7365,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7370,
+"startColumn":  94,
+"endLine":  7370,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7405,
+"startColumn":  81,
+"endLine":  7405,
+"endColumn":  86
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7411,
+"startColumn":  94,
+"endLine":  7411,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7453,
+"startColumn":  94,
+"endLine":  7453,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7454,
+"startColumn":  89,
+"endLine":  7454,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7458,
+"startColumn":  89,
+"endLine":  7458,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7629,
+"startColumn":  94,
+"endLine":  7629,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7630,
+"startColumn":  89,
+"endLine":  7630,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7633,
+"startColumn":  94,
+"endLine":  7633,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7640,
+"startColumn":  94,
+"endLine":  7640,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7641,
+"startColumn":  89,
+"endLine":  7641,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7644,
+"startColumn":  94,
+"endLine":  7644,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7650,
+"startColumn":  90,
+"endLine":  7650,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7718,
+"startColumn":  94,
+"endLine":  7718,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7719,
+"startColumn":  89,
+"endLine":  7719,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7722,
+"startColumn":  94,
+"endLine":  7722,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7729,
+"startColumn":  94,
+"endLine":  7729,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7730,
+"startColumn":  89,
+"endLine":  7730,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7733,
+"startColumn":  94,
+"endLine":  7733,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7739,
+"startColumn":  90,
+"endLine":  7739,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7797,
+"startColumn":  94,
+"endLine":  7797,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7804,
+"startColumn":  94,
+"endLine":  7804,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7872,
+"startColumn":  94,
+"endLine":  7872,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7887,
+"startColumn":  94,
+"endLine":  7887,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7892,
+"startColumn":  94,
+"endLine":  7892,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7926,
+"startColumn":  129,
+"endLine":  7926,
+"endColumn":  134
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7931,
+"startColumn":  94,
+"endLine":  7931,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7975,
+"startColumn":  94,
+"endLine":  7975,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  7981,
+"startColumn":  96,
+"endLine":  7981,
+"endColumn":  101
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  8399,
+"startColumn":  94,
+"endLine":  8399,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  8404,
+"startColumn":  94,
+"endLine":  8404,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  8409,
+"startColumn":  94,
+"endLine":  8409,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  8417,
+"startColumn":  94,
+"endLine":  8417,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  8422,
+"startColumn":  94,
+"endLine":  8422,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  8428,
+"startColumn":  94,
+"endLine":  8428,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  8445,
+"startColumn":  90,
+"endLine":  8445,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  8490,
+"startColumn":  94,
+"endLine":  8490,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  8491,
+"startColumn":  89,
+"endLine":  8491,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  8525,
+"startColumn":  81,
+"endLine":  8525,
+"endColumn":  86
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  8531,
+"startColumn":  94,
+"endLine":  8531,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  8805,
+"startColumn":  94,
+"endLine":  8805,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  8810,
+"startColumn":  94,
+"endLine":  8810,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  8815,
+"startColumn":  94,
+"endLine":  8815,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  8823,
+"startColumn":  94,
+"endLine":  8823,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  8828,
+"startColumn":  94,
+"endLine":  8828,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  8834,
+"startColumn":  94,
+"endLine":  8834,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  8851,
+"startColumn":  90,
+"endLine":  8851,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  8897,
+"startColumn":  94,
+"endLine":  8897,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  8898,
+"startColumn":  89,
+"endLine":  8898,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  8932,
+"startColumn":  81,
+"endLine":  8932,
+"endColumn":  86
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  8938,
+"startColumn":  94,
+"endLine":  8938,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9209,
+"startColumn":  94,
+"endLine":  9209,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9214,
+"startColumn":  94,
+"endLine":  9214,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9219,
+"startColumn":  94,
+"endLine":  9219,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9225,
+"startColumn":  94,
+"endLine":  9225,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9230,
+"startColumn":  94,
+"endLine":  9230,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9236,
+"startColumn":  94,
+"endLine":  9236,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9254,
+"startColumn":  90,
+"endLine":  9254,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9438,
+"startColumn":  94,
+"endLine":  9438,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9443,
+"startColumn":  94,
+"endLine":  9443,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9448,
+"startColumn":  94,
+"endLine":  9448,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9454,
+"startColumn":  94,
+"endLine":  9454,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9459,
+"startColumn":  94,
+"endLine":  9459,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9465,
+"startColumn":  94,
+"endLine":  9465,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9483,
+"startColumn":  90,
+"endLine":  9483,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9697,
+"startColumn":  94,
+"endLine":  9697,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9702,
+"startColumn":  94,
+"endLine":  9702,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9707,
+"startColumn":  94,
+"endLine":  9707,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9713,
+"startColumn":  94,
+"endLine":  9713,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9718,
+"startColumn":  94,
+"endLine":  9718,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9724,
+"startColumn":  94,
+"endLine":  9724,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9742,
+"startColumn":  90,
+"endLine":  9742,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9929,
+"startColumn":  94,
+"endLine":  9929,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9934,
+"startColumn":  94,
+"endLine":  9934,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9939,
+"startColumn":  94,
+"endLine":  9939,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9945,
+"startColumn":  94,
+"endLine":  9945,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9950,
+"startColumn":  94,
+"endLine":  9950,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9956,
+"startColumn":  94,
+"endLine":  9956,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  9974,
+"startColumn":  90,
+"endLine":  9974,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10161,
+"startColumn":  94,
+"endLine":  10161,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10166,
+"startColumn":  94,
+"endLine":  10166,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10171,
+"startColumn":  94,
+"endLine":  10171,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10177,
+"startColumn":  94,
+"endLine":  10177,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10182,
+"startColumn":  94,
+"endLine":  10182,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10188,
+"startColumn":  94,
+"endLine":  10188,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10206,
+"startColumn":  90,
+"endLine":  10206,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10468,
+"startColumn":  94,
+"endLine":  10468,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10469,
+"startColumn":  89,
+"endLine":  10469,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10473,
+"startColumn":  94,
+"endLine":  10473,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10474,
+"startColumn":  89,
+"endLine":  10474,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10478,
+"startColumn":  94,
+"endLine":  10478,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10479,
+"startColumn":  89,
+"endLine":  10479,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10483,
+"startColumn":  94,
+"endLine":  10483,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10484,
+"startColumn":  89,
+"endLine":  10484,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10488,
+"startColumn":  94,
+"endLine":  10488,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10489,
+"startColumn":  89,
+"endLine":  10489,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10493,
+"startColumn":  94,
+"endLine":  10493,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10494,
+"startColumn":  89,
+"endLine":  10494,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10498,
+"startColumn":  94,
+"endLine":  10498,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10499,
+"startColumn":  89,
+"endLine":  10499,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10557,
+"startColumn":  95,
+"endLine":  10557,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10760,
+"startColumn":  94,
+"endLine":  10760,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10765,
+"startColumn":  94,
+"endLine":  10765,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10770,
+"startColumn":  94,
+"endLine":  10770,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10776,
+"startColumn":  94,
+"endLine":  10776,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10781,
+"startColumn":  94,
+"endLine":  10781,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10787,
+"startColumn":  94,
+"endLine":  10787,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10805,
+"startColumn":  90,
+"endLine":  10805,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10815,
+"startColumn":  95,
+"endLine":  10815,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  10999,
+"startColumn":  94,
+"endLine":  10999,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11004,
+"startColumn":  94,
+"endLine":  11004,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11009,
+"startColumn":  94,
+"endLine":  11009,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11017,
+"startColumn":  94,
+"endLine":  11017,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11022,
+"startColumn":  94,
+"endLine":  11022,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11028,
+"startColumn":  94,
+"endLine":  11028,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11045,
+"startColumn":  90,
+"endLine":  11045,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11090,
+"startColumn":  94,
+"endLine":  11090,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11091,
+"startColumn":  89,
+"endLine":  11091,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11125,
+"startColumn":  81,
+"endLine":  11125,
+"endColumn":  86
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11131,
+"startColumn":  94,
+"endLine":  11131,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11370,
+"startColumn":  94,
+"endLine":  11370,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11375,
+"startColumn":  94,
+"endLine":  11375,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11380,
+"startColumn":  94,
+"endLine":  11380,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11386,
+"startColumn":  94,
+"endLine":  11386,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11391,
+"startColumn":  94,
+"endLine":  11391,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11397,
+"startColumn":  94,
+"endLine":  11397,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11415,
+"startColumn":  90,
+"endLine":  11415,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11499,
+"startColumn":  94,
+"endLine":  11499,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11506,
+"startColumn":  94,
+"endLine":  11506,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11511,
+"startColumn":  94,
+"endLine":  11511,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11683,
+"startColumn":  94,
+"endLine":  11683,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11684,
+"startColumn":  89,
+"endLine":  11684,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11687,
+"startColumn":  94,
+"endLine":  11687,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11688,
+"startColumn":  89,
+"endLine":  11688,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11691,
+"startColumn":  94,
+"endLine":  11691,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11698,
+"startColumn":  94,
+"endLine":  11698,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11713,
+"startColumn":  94,
+"endLine":  11713,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11714,
+"startColumn":  89,
+"endLine":  11714,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11717,
+"startColumn":  95,
+"endLine":  11717,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11722,
+"startColumn":  95,
+"endLine":  11722,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11763,
+"startColumn":  94,
+"endLine":  11763,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11764,
+"startColumn":  89,
+"endLine":  11764,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11801,
+"startColumn":  81,
+"endLine":  11801,
+"endColumn":  86
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  11807,
+"startColumn":  94,
+"endLine":  11807,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  12236,
+"startColumn":  94,
+"endLine":  12236,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  12241,
+"startColumn":  94,
+"endLine":  12241,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  12247,
+"startColumn":  94,
+"endLine":  12247,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  12252,
+"startColumn":  94,
+"endLine":  12252,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  12258,
+"startColumn":  94,
+"endLine":  12258,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  12283,
+"startColumn":  95,
+"endLine":  12283,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  12619,
+"startColumn":  94,
+"endLine":  12619,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  12620,
+"startColumn":  89,
+"endLine":  12620,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  12623,
+"startColumn":  94,
+"endLine":  12623,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  12624,
+"startColumn":  89,
+"endLine":  12624,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  12627,
+"startColumn":  94,
+"endLine":  12627,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  12634,
+"startColumn":  94,
+"endLine":  12634,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  12649,
+"startColumn":  94,
+"endLine":  12649,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  12650,
+"startColumn":  89,
+"endLine":  12650,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  12653,
+"startColumn":  95,
+"endLine":  12653,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  12654,
+"startColumn":  90,
+"endLine":  12654,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  12657,
+"startColumn":  95,
+"endLine":  12657,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  12662,
+"startColumn":  95,
+"endLine":  12662,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  12707,
+"startColumn":  94,
+"endLine":  12707,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  12708,
+"startColumn":  89,
+"endLine":  12708,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  12742,
+"startColumn":  81,
+"endLine":  12742,
+"endColumn":  86
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  12748,
+"startColumn":  94,
+"endLine":  12748,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\QueryTests.cs",
+"region":  {
+"startLine":  384,
+"startColumn":  101,
+"endLine":  384,
+"endColumn":  106
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\QueryTests.cs",
+"region":  {
+"startLine":  448,
+"startColumn":  101,
+"endLine":  448,
+"endColumn":  106
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\QueryTests.cs",
+"region":  {
+"startLine":  508,
+"startColumn":  101,
+"endLine":  508,
+"endColumn":  106
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\QueryTests.cs",
+"region":  {
+"startLine":  546,
+"startColumn":  101,
+"endLine":  546,
+"endColumn":  106
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\QueryTests.cs",
+"region":  {
+"startLine":  992,
+"startColumn":  80,
+"endLine":  992,
+"endColumn":  85
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\QueryTests.cs",
+"region":  {
+"startLine":  993,
+"startColumn":  79,
+"endLine":  993,
+"endColumn":  84
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\QueryTests.cs",
+"region":  {
+"startLine":  994,
+"startColumn":  79,
+"endLine":  994,
+"endColumn":  84
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\QueryTests.cs",
+"region":  {
+"startLine":  1092,
+"startColumn":  80,
+"endLine":  1092,
+"endColumn":  85
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\QueryTests.cs",
+"region":  {
+"startLine":  1156,
+"startColumn":  80,
+"endLine":  1156,
+"endColumn":  85
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\QueryTests.cs",
+"region":  {
+"startLine":  1191,
+"startColumn":  82,
+"endLine":  1191,
+"endColumn":  87
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\QueryTests.cs",
+"region":  {
+"startLine":  1324,
+"startColumn":  109,
+"endLine":  1324,
+"endColumn":  114
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\QueryTests.cs",
+"region":  {
+"startLine":  1427,
+"startColumn":  101,
+"endLine":  1427,
+"endColumn":  106
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\QueryTests.cs",
+"region":  {
+"startLine":  1460,
+"startColumn":  101,
+"endLine":  1460,
+"endColumn":  106
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\QueryTests.cs",
+"region":  {
+"startLine":  1864,
+"startColumn":  101,
+"endLine":  1864,
+"endColumn":  106
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\QueryTests.cs",
+"region":  {
+"startLine":  1908,
+"startColumn":  101,
+"endLine":  1908,
+"endColumn":  106
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\QueryTests.cs",
+"region":  {
+"startLine":  1955,
+"startColumn":  101,
+"endLine":  1955,
+"endColumn":  106
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\QueryTests.cs",
+"region":  {
+"startLine":  1994,
+"startColumn":  101,
+"endLine":  1994,
+"endColumn":  106
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\QueryTests.cs",
+"region":  {
+"startLine":  2042,
+"startColumn":  101,
+"endLine":  2042,
+"endColumn":  106
+}
+}
+}
+]
+}

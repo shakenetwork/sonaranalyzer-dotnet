@@ -1,0 +1,511 @@
+{
+"issues":  [
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"364\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\LambdaUtilities.cs",
+"region":  {
+"startLine":  379,
+"startColumn":  17,
+"endLine":  380,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"364\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\LambdaUtilities.cs",
+"region":  {
+"startLine":  383,
+"startColumn":  17,
+"endLine":  395,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"364\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\LambdaUtilities.cs",
+"region":  {
+"startLine":  397,
+"startColumn":  17,
+"endLine":  403,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"41\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeLens\\CSharpCodeLensDisplayInfoService.cs",
+"region":  {
+"startLine":  46,
+"startColumn":  21,
+"endLine":  48,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this branch with the identical one on line \"102\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\InvertIf\\InvertIfCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  120,
+"startColumn":  13,
+"endLine":  126,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this branch with the identical one on line \"111\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\InvertIf\\InvertIfCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  129,
+"startColumn":  13,
+"endLine":  135,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this branch with the identical one on line \"125\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\NamespaceKeywordRecommender.cs",
+"region":  {
+"startLine":  129,
+"startColumn":  17,
+"endLine":  131,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"107\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\RefKeywordRecommender.cs",
+"region":  {
+"startLine":  113,
+"startColumn":  17,
+"endLine":  114,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"723\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  727,
+"startColumn":  17,
+"endLine":  731,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"1074\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1077,
+"startColumn":  17,
+"endLine":  1079,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"1081\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1115,
+"startColumn":  17,
+"endLine":  1116,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"1081\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1150,
+"startColumn":  17,
+"endLine":  1151,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"1081\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1199,
+"startColumn":  17,
+"endLine":  1201,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"1081\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1230,
+"startColumn":  17,
+"endLine":  1232,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"1081\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1280,
+"startColumn":  17,
+"endLine":  1291,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"1081\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1336,
+"startColumn":  17,
+"endLine":  1338,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"1699\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1730,
+"startColumn":  21,
+"endLine":  1736,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"1699\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1738,
+"startColumn":  21,
+"endLine":  1742,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"1699\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1744,
+"startColumn":  21,
+"endLine":  1747,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"1762\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1767,
+"startColumn":  21,
+"endLine":  1772,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"1779\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1825,
+"startColumn":  21,
+"endLine":  1827,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"1762\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1845,
+"startColumn":  21,
+"endLine":  1853,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"1946\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1951,
+"startColumn":  21,
+"endLine":  1973,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"1946\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1985,
+"startColumn":  21,
+"endLine":  1996,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"1946\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  2012,
+"startColumn":  21,
+"endLine":  2018,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"1946\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  2020,
+"startColumn":  21,
+"endLine":  2024,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"1946\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  2026,
+"startColumn":  21,
+"endLine":  2032,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"2047\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  2051,
+"startColumn":  21,
+"endLine":  2053,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"2047\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  2055,
+"startColumn":  21,
+"endLine":  2059,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"2079\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  2083,
+"startColumn":  21,
+"endLine":  2085,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"2047\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  2153,
+"startColumn":  21,
+"endLine":  2157,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"2123\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  2159,
+"startColumn":  21,
+"endLine":  2163,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"297\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\StatementSyntaxComparer.cs",
+"region":  {
+"startLine":  366,
+"startColumn":  17,
+"endLine":  371,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"297\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\StatementSyntaxComparer.cs",
+"region":  {
+"startLine":  446,
+"startColumn":  17,
+"endLine":  474,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"172\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\TopSyntaxComparer.cs",
+"region":  {
+"startLine":  297,
+"startColumn":  17,
+"endLine":  299,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"413\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\TopSyntaxComparer.cs",
+"region":  {
+"startLine":  439,
+"startColumn":  17,
+"endLine":  440,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"413\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\TopSyntaxComparer.cs",
+"region":  {
+"startLine":  448,
+"startColumn":  17,
+"endLine":  450,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"413\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\TopSyntaxComparer.cs",
+"region":  {
+"startLine":  458,
+"startColumn":  17,
+"endLine":  461,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"413\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\TopSyntaxComparer.cs",
+"region":  {
+"startLine":  472,
+"startColumn":  17,
+"endLine":  473,
+"endColumn":  33
+}
+}
+}
+]
+}

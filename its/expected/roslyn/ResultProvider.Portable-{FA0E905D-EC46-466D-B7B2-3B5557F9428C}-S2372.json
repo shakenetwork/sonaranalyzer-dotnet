@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\Helpers\\MemberAndDeclarationInfo.cs",
+"region":  {
+"startLine":  108,
+"startColumn":  25,
+"endLine":  108,
+"endColumn":  86
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\Helpers\\MemberAndDeclarationInfo.cs",
+"region":  {
+"startLine":  169,
+"startColumn":  25,
+"endLine":  169,
+"endColumn":  86
+}
+}
+}
+]
+}

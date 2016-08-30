@@ -1,0 +1,69 @@
+{
+"issues":  [
+{
+"id":  "S2333",
+"message":  "\"unsafe\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\CSharpTestBase.cs",
+"region":  {
+"startLine":  898,
+"startColumn":  18,
+"endLine":  898,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\Extensions.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  21,
+"endLine":  19,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\LocalVariableDeclaratorsCollector.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  16,
+"endLine":  26,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\LocalVariableDeclaratorsCollector.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  16,
+"endLine":  32,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\LocalVariableDeclaratorsCollector.cs",
+"region":  {
+"startLine":  38,
+"startColumn":  16,
+"endLine":  38,
+"endColumn":  22
+}
+}
+}
+]
+}

@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S3604",
+"message":  "Remove the member initializer, all constructors set an initial value for the member.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\Model.cs",
+"region":  {
+"startLine":  30,
+"startColumn":  43,
+"endLine":  30,
+"endColumn":  47
+}
+}
+}
+]
+}

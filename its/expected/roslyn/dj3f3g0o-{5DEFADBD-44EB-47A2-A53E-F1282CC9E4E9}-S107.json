@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S107",
+"message":  "Constructor has 9 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\ProjectSystemShim\\CSharpProjectShimWithServices.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  45,
+"endLine":  29,
+"endColumn":  67
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Constructor has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\Telemetry\\CompilationErrorDetails.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  39,
+"endLine":  17,
+"endColumn":  130
+}
+}
+}
+]
+}

@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\BuildProtocol.cs",
+"region":  {
+"startLine":  78,
+"startColumn":  13,
+"endLine":  78,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\BuildProtocol.cs",
+"region":  {
+"startLine":  81,
+"startColumn":  13,
+"endLine":  81,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"while\" block.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Server\\ServerShared\\BuildProtocolUtil.cs",
+"region":  {
+"startLine":  54,
+"startColumn":  21,
+"endLine":  54,
+"endColumn":  26
+}
+}
+}
+]
+}

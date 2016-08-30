@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2234",
+"message":  "Parameters to \"GetTopEdits\" have the same names but not the same order as the method arguments.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\RudeEditStatementTests.cs",
+"region":  {
+"startLine":  2814,
+"startColumn":  26,
+"endLine":  2814,
+"endColumn":  37
+}
+}
+}
+]
+}

@@ -1,0 +1,82 @@
+{
+"issues":  [
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\AnalyzerDriver\\DeclarationComputer.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  20,
+"endLine":  12,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\Expression.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  20,
+"endLine":  11,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CvtRes.cs",
+"region":  {
+"startLine":  46,
+"startColumn":  20,
+"endLine":  46,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\SpecializedCollections.Empty.Array.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  28,
+"endLine":  9,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\RuleSet\\RuleSetProcessor.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  20,
+"endLine":  18,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\InternalSyntax\\SyntaxNodeCache.cs",
+"region":  {
+"startLine":  41,
+"startColumn":  20,
+"endLine":  41,
+"endColumn":  30
+}
+}
+}
+]
+}

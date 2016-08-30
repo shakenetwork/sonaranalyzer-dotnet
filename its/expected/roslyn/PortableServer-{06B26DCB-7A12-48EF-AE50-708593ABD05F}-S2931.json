@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_listenCancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Server\\ServerShared\\ServerDispatcher.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  27,
+"endLine":  25,
+"endColumn":  43
+}
+}
+}
+]
+}

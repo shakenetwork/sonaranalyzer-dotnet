@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S2234",
+"message":  "Parameters to \"ClassifyStandardImplicitConversion\" have the same names but not the same order as the method arguments.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Semantics\\Conversions\\ConversionsBase.cs",
+"region":  {
+"startLine":  627,
+"startColumn":  38,
+"endLine":  627,
+"endColumn":  72
+}
+}
+},
+{
+"id":  "S2234",
+"message":  "Parameters to \"HasBoxingConversion\" have the same names but not the same order as the method arguments.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Semantics\\Conversions\\ConversionsBase.cs",
+"region":  {
+"startLine":  2917,
+"startColumn":  17,
+"endLine":  2917,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2234",
+"message":  "Parameters to \"DependsOn\" have the same names but not the same order as the method arguments.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Semantics\\OverloadResolution\\MethodTypeInference.cs",
+"region":  {
+"startLine":  1261,
+"startColumn":  21,
+"endLine":  1261,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S2234",
+"message":  "Parameters to \"CheckForUnmatchedOperator\" have the same names but not the same order as the method arguments.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceMemberContainerSymbol.cs",
+"region":  {
+"startLine":  1866,
+"startColumn":  13,
+"endLine":  1866,
+"endColumn":  38
+}
+}
+}
+]
+}

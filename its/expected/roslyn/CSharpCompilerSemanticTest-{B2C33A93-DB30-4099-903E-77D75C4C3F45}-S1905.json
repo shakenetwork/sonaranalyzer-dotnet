@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"ExpressionSyntax\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LambdaTests.cs",
+"region":  {
+"startLine":  1061,
+"startColumn":  25,
+"endLine":  1061,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"SemanticModel\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LookupPositionTests.cs",
+"region":  {
+"startLine":  1423,
+"startColumn":  26,
+"endLine":  1423,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"CompilationUnitSyntax\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\ScriptSemanticsTests.cs",
+"region":  {
+"startLine":  280,
+"startColumn":  42,
+"endLine":  280,
+"endColumn":  66
+}
+}
+}
+]
+}

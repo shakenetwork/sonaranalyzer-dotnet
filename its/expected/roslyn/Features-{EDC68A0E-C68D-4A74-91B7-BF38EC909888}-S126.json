@@ -1,0 +1,472 @@
+{
+"issues":  [
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\CodeFixes\\Suppression\\AbstractSuppressionCodeFixProvider.cs",
+"region":  {
+"startLine":  148,
+"startColumn":  17,
+"endLine":  148,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\CompletionHelper.cs",
+"region":  {
+"startLine":  180,
+"startColumn":  13,
+"endLine":  180,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\CompletionHelper.cs",
+"region":  {
+"startLine":  254,
+"startColumn":  17,
+"endLine":  254,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\CompletionService.cs",
+"region":  {
+"startLine":  162,
+"startColumn":  21,
+"endLine":  162,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\CompletionServiceWithProviders.cs",
+"region":  {
+"startLine":  173,
+"startColumn":  13,
+"endLine":  173,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\Providers\\AbstractMemberInsertingCompletionProvider.cs",
+"region":  {
+"startLine":  72,
+"startColumn":  13,
+"endLine":  72,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\Providers\\AbstractMemberInsertingCompletionProvider.cs",
+"region":  {
+"startLine":  155,
+"startColumn":  13,
+"endLine":  155,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\AbstractHostDiagnosticUpdateSource.cs",
+"region":  {
+"startLine":  128,
+"startColumn":  13,
+"endLine":  128,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\Analyzers\\UnboundIdentifiersDiagnosticAnalyzerBase.cs",
+"region":  {
+"startLine":  76,
+"startColumn":  17,
+"endLine":  76,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\EngineV2\\DiagnosticIncrementalAnalyzer.AnalysisData.cs",
+"region":  {
+"startLine":  129,
+"startColumn":  21,
+"endLine":  129,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\EngineV2\\DiagnosticIncrementalAnalyzer_GetDiagnostics.cs",
+"region":  {
+"startLine":  225,
+"startColumn":  21,
+"endLine":  225,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\DocumentationComments\\AbstractDocumentationCommentFormattingService.cs",
+"region":  {
+"startLine":  90,
+"startColumn":  17,
+"endLine":  90,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\DocumentationComments\\AbstractDocumentationCommentFormattingService.cs",
+"region":  {
+"startLine":  166,
+"startColumn":  13,
+"endLine":  166,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1390,
+"startColumn":  13,
+"endLine":  1390,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1830,
+"startColumn":  17,
+"endLine":  1830,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1985,
+"startColumn":  21,
+"endLine":  1985,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  2006,
+"startColumn":  17,
+"endLine":  2006,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  2268,
+"startColumn":  33,
+"endLine":  2268,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  3089,
+"startColumn":  29,
+"endLine":  3089,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  3209,
+"startColumn":  21,
+"endLine":  3209,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\FindReferences\\IDefinitionsAndReferencesFactory.cs",
+"region":  {
+"startLine":  172,
+"startColumn":  21,
+"endLine":  172,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateMember\\GenerateConstructor\\AbstractGenerateConstructorService.Editor.cs",
+"region":  {
+"startLine":  411,
+"startColumn":  21,
+"endLine":  411,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateMember\\GenerateConstructor\\AbstractGenerateConstructorService.State.cs",
+"region":  {
+"startLine":  249,
+"startColumn":  21,
+"endLine":  249,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateMember\\GenerateParameterizedMember\\AbstractGenerateConversionService.State.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  17,
+"endLine":  42,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateMember\\GenerateParameterizedMember\\AbstractGenerateMethodService.State.cs",
+"region":  {
+"startLine":  61,
+"startColumn":  17,
+"endLine":  61,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateType\\AbstractGenerateTypeService.Editor.cs",
+"region":  {
+"startLine":  609,
+"startColumn":  21,
+"endLine":  609,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateType\\AbstractGenerateTypeService.State.cs",
+"region":  {
+"startLine":  221,
+"startColumn":  17,
+"endLine":  221,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateType\\AbstractGenerateTypeService.State.cs",
+"region":  {
+"startLine":  389,
+"startColumn":  21,
+"endLine":  389,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\ImplementAbstractClass\\AbstractImplementAbstractClassService.Editor.cs",
+"region":  {
+"startLine":  93,
+"startColumn":  17,
+"endLine":  93,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\ImplementInterface\\AbstractImplementInterfaceService.CodeAction.cs",
+"region":  {
+"startLine":  388,
+"startColumn":  17,
+"endLine":  388,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\IntroduceVariable\\AbstractIntroduceVariableService.cs",
+"region":  {
+"startLine":  124,
+"startColumn":  13,
+"endLine":  124,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\IntroduceVariable\\AbstractIntroduceVariableService.State.cs",
+"region":  {
+"startLine":  170,
+"startColumn":  21,
+"endLine":  170,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\LanguageServices\\AnonymousTypeDisplayService\\AbstractAnonymousTypeDisplayService.cs",
+"region":  {
+"startLine":  106,
+"startColumn":  13,
+"endLine":  106,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\LanguageServices\\SymbolDisplayService\\AbstractSymbolDisplayService.AbstractSymbolDescriptionBuilder.cs",
+"region":  {
+"startLine":  491,
+"startColumn":  17,
+"endLine":  491,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Shared\\Utilities\\PatternMatcher.cs",
+"region":  {
+"startLine":  639,
+"startColumn":  17,
+"endLine":  639,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SignatureHelp\\CommonSignatureHelpUtilities.cs",
+"region":  {
+"startLine":  130,
+"startColumn":  13,
+"endLine":  130,
+"endColumn":  20
+}
+}
+}
+]
+}

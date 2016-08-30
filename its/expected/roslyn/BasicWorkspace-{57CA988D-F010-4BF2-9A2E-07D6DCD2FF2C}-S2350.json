@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2350",
+"message":  "Remove this redundant use of \"Exit Select\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\CodeCleanup\\Providers\\FixIncorrectTokensCodeCleanupProvider.vb",
+"region":  {
+"startLine":  257,
+"startColumn":  37,
+"endLine":  257,
+"endColumn":  48
+}
+}
+}
+]
+}

@@ -1,0 +1,667 @@
+{
+"issues":  [
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Collections\\OrderPreservingMultiDictionary.cs",
+"region":  {
+"startLine":  306,
+"startColumn":  29,
+"endLine":  306,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Collections\\SmallDictionary.cs",
+"region":  {
+"startLine":  575,
+"startColumn":  34,
+"endLine":  575,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Collections\\SmallDictionary.cs",
+"region":  {
+"startLine":  692,
+"startColumn":  34,
+"endLine":  692,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Collections\\SmallDictionary.cs",
+"region":  {
+"startLine":  798,
+"startColumn":  30,
+"endLine":  798,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\OperationWalker.cs",
+"region":  {
+"startLine":  126,
+"startColumn":  30,
+"endLine":  126,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\OperationWalker.cs",
+"region":  {
+"startLine":  129,
+"startColumn":  30,
+"endLine":  129,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\OperationWalker.cs",
+"region":  {
+"startLine":  132,
+"startColumn":  30,
+"endLine":  132,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\OperationWalker.cs",
+"region":  {
+"startLine":  188,
+"startColumn":  30,
+"endLine":  188,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\OperationWalker.cs",
+"region":  {
+"startLine":  191,
+"startColumn":  30,
+"endLine":  191,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\OperationWalker.cs",
+"region":  {
+"startLine":  207,
+"startColumn":  30,
+"endLine":  207,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\OperationWalker.cs",
+"region":  {
+"startLine":  221,
+"startColumn":  30,
+"endLine":  221,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\OperationWalker.cs",
+"region":  {
+"startLine":  224,
+"startColumn":  30,
+"endLine":  224,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\OperationWalker.cs",
+"region":  {
+"startLine":  227,
+"startColumn":  30,
+"endLine":  227,
+"endColumn":  68
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\OperationWalker.cs",
+"region":  {
+"startLine":  230,
+"startColumn":  30,
+"endLine":  230,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\OperationWalker.cs",
+"region":  {
+"startLine":  265,
+"startColumn":  30,
+"endLine":  265,
+"endColumn":  70
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\OperationWalker.cs",
+"region":  {
+"startLine":  269,
+"startColumn":  30,
+"endLine":  269,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\OperationWalker.cs",
+"region":  {
+"startLine":  313,
+"startColumn":  30,
+"endLine":  313,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\OperationWalker.cs",
+"region":  {
+"startLine":  316,
+"startColumn":  30,
+"endLine":  316,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\OperationWalker.cs",
+"region":  {
+"startLine":  324,
+"startColumn":  30,
+"endLine":  324,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\OperationWalker.cs",
+"region":  {
+"startLine":  397,
+"startColumn":  30,
+"endLine":  397,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\OperationWalker.cs",
+"region":  {
+"startLine":  400,
+"startColumn":  30,
+"endLine":  400,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\OperationWalker.cs",
+"region":  {
+"startLine":  403,
+"startColumn":  30,
+"endLine":  403,
+"endColumn":  72
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\OperationWalker.cs",
+"region":  {
+"startLine":  406,
+"startColumn":  30,
+"endLine":  406,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\OperationWalker.cs",
+"region":  {
+"startLine":  409,
+"startColumn":  30,
+"endLine":  409,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\CompilationUnitCompletedEvent.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  30,
+"endLine":  37,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\NoPia\\CommonEmbeddedMethod.cs",
+"region":  {
+"startLine":  134,
+"startColumn":  38,
+"endLine":  134,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\ConsList%601.cs",
+"region":  {
+"startLine":  57,
+"startColumn":  25,
+"endLine":  57,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\MultiDictionary.cs",
+"region":  {
+"startLine":  51,
+"startColumn":  29,
+"endLine":  51,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\SpecializedCollections.Empty.Collection.cs",
+"region":  {
+"startLine":  35,
+"startColumn":  29,
+"endLine":  35,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\SpecializedCollections.Empty.Enumerator%601.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  29,
+"endLine":  28,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\SpecializedCollections.Singleton.Enumerator%601.cs",
+"region":  {
+"startLine":  39,
+"startColumn":  29,
+"endLine":  39,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\NativePdbWriter\\ComMemoryStream.cs",
+"region":  {
+"startLine":  193,
+"startColumn":  31,
+"endLine":  193,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\InheritedTypeParameter.cs",
+"region":  {
+"startLine":  204,
+"startColumn":  21,
+"endLine":  204,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\ReturnValueParameter.cs",
+"region":  {
+"startLine":  43,
+"startColumn":  21,
+"endLine":  43,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\ChildSyntaxList.Enumerator.cs",
+"region":  {
+"startLine":  144,
+"startColumn":  25,
+"endLine":  144,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\ChildSyntaxList.Reversed.cs",
+"region":  {
+"startLine":  155,
+"startColumn":  29,
+"endLine":  155,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\InternalSyntax\\SyntaxNodeCache.cs",
+"region":  {
+"startLine":  88,
+"startColumn":  30,
+"endLine":  88,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\InternalSyntax\\SyntaxNodeCache.cs",
+"region":  {
+"startLine":  93,
+"startColumn":  30,
+"endLine":  93,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\InternalSyntax\\SyntaxNodeCache.cs",
+"region":  {
+"startLine":  98,
+"startColumn":  30,
+"endLine":  98,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\InternalSyntax\\SyntaxNodeCache.cs",
+"region":  {
+"startLine":  103,
+"startColumn":  30,
+"endLine":  103,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SeparatedSyntaxList.Enumerator.cs",
+"region":  {
+"startLine":  89,
+"startColumn":  25,
+"endLine":  89,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxList%601.Enumerator.cs",
+"region":  {
+"startLine":  82,
+"startColumn":  30,
+"endLine":  82,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxNodeOrTokenList.cs",
+"region":  {
+"startLine":  518,
+"startColumn":  30,
+"endLine":  518,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxTokenList.Enumerator.cs",
+"region":  {
+"startLine":  151,
+"startColumn":  25,
+"endLine":  151,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxTokenList.Reversed.cs",
+"region":  {
+"startLine":  161,
+"startColumn":  29,
+"endLine":  161,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxTriviaList.Enumerator.cs",
+"region":  {
+"startLine":  149,
+"startColumn":  25,
+"endLine":  149,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxTriviaList.Reversed.cs",
+"region":  {
+"startLine":  150,
+"startColumn":  29,
+"endLine":  150,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Text\\TextLineCollection.cs",
+"region":  {
+"startLine":  138,
+"startColumn":  30,
+"endLine":  138,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Text\\TextLineCollection.cs",
+"region":  {
+"startLine":  142,
+"startColumn":  30,
+"endLine":  142,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\PooledObjects\\ArrayBuilder.Enumerator.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  25,
+"endLine":  37,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\PooledObjects\\ObjectPool%601.cs",
+"region":  {
+"startLine":  227,
+"startColumn":  23,
+"endLine":  227,
+"endColumn":  42
+}
+}
+}
+]
+}

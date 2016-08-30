@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_text\", the compiler will do that for you.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\CompletionDescription.cs",
+"region":  {
+"startLine":  77,
+"startColumn":  30,
+"endLine":  77,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"Default\", the compiler will do that for you.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\MatchPriority.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  44,
+"endLine":  16,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"location\", the compiler will do that for you.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateMember\\GenerateParameterizedMember\\AbstractGenerateParameterizedMemberService.State.cs",
+"region":  {
+"startLine":  39,
+"startColumn":  41,
+"endLine":  39,
+"endColumn":  47
+}
+}
+}
+]
+}

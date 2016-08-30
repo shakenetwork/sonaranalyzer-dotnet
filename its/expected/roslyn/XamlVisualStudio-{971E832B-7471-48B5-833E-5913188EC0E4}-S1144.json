@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Xaml\\Impl\\Features\\InlineRename\\XamlEditorInlineRenameService.cs",
+"region":  {
+"startLine":  180,
+"startColumn":  21,
+"endLine":  183,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Xaml\\Impl\\Implementation\\XamlProject.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  9,
+"endLine":  40,
+"endColumn":  10
+}
+}
+}
+]
+}

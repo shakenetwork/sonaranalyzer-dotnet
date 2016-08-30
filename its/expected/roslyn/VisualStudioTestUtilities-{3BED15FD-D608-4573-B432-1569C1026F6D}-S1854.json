@@ -1,0 +1,134 @@
+{
+"issues":  [
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"vsTextView\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\TestUtilities\\InProcess\\Editor_InProc.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  36,
+"endLine":  33,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"roslynPackage\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\TestUtilities\\InProcess\\VisualStudioWorkspace_InProc.cs",
+"region":  {
+"startLine":  76,
+"startColumn":  38,
+"endLine":  76,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"foregroundWindow\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\TestUtilities\\IntegrationHelper.cs",
+"region":  {
+"startLine":  108,
+"startColumn":  34,
+"endLine":  108,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"runningObjectTable\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\TestUtilities\\IntegrationHelper.cs",
+"region":  {
+"startLine":  454,
+"startColumn":  52,
+"endLine":  454,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"enumMoniker\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\TestUtilities\\IntegrationHelper.cs",
+"region":  {
+"startLine":  455,
+"startColumn":  38,
+"endLine":  455,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"bindContext\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\TestUtilities\\IntegrationHelper.cs",
+"region":  {
+"startLine":  456,
+"startColumn":  34,
+"endLine":  456,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"monikersFetched\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\TestUtilities\\IntegrationHelper.cs",
+"region":  {
+"startLine":  468,
+"startColumn":  37,
+"endLine":  468,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"fullDisplayName\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\TestUtilities\\IntegrationHelper.cs",
+"region":  {
+"startLine":  482,
+"startColumn":  40,
+"endLine":  482,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"displayNameProcessId\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\TestUtilities\\IntegrationHelper.cs",
+"region":  {
+"startLine":  486,
+"startColumn":  42,
+"endLine":  486,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"invokePatternObj\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\TestUtilities\\VisualStudioInstance.cs",
+"region":  {
+"startLine":  116,
+"startColumn":  41,
+"endLine":  116,
+"endColumn":  47
+}
+}
+}
+]
+}

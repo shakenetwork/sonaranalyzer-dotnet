@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Semantics\\OverloadResolution\\OverloadResolutionResult.cs",
+"region":  {
+"startLine":  1219,
+"startColumn":  99,
+"endLine":  1219,
+"endColumn":  110
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\TypedConstantExtensions.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  50,
+"endLine":  37,
+"endColumn":  61
+}
+}
+}
+]
+}

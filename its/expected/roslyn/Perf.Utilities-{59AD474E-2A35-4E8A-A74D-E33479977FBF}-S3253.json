@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S3253",
+"message":  "Remove this redundant \"base()\" call.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Perf\\Utilities\\TraceManager.cs",
+"region":  {
+"startLine":  39,
+"startColumn":  45,
+"endLine":  39,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3253",
+"message":  "Remove this redundant constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Perf\\Utilities\\TraceManager.cs",
+"region":  {
+"startLine":  124,
+"startColumn":  9,
+"endLine":  126,
+"endColumn":  10
+}
+}
+}
+]
+}

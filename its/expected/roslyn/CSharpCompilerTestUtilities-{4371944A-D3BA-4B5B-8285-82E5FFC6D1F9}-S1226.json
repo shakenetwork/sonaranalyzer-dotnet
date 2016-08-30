@@ -1,0 +1,173 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"references\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\BasicCompilationUtils.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  17,
+"endLine":  22,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"assemblyName\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\BasicCompilationUtils.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  17,
+"endLine":  33,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"options\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\CSharpTestBase.cs",
+"region":  {
+"startLine":  134,
+"startColumn":  13,
+"endLine":  134,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"options\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\CSharpTestBase.cs",
+"region":  {
+"startLine":  159,
+"startColumn":  17,
+"endLine":  159,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"options\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\CSharpTestBase.cs",
+"region":  {
+"startLine":  234,
+"startColumn":  17,
+"endLine":  234,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"references\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\CSharpTestBase.cs",
+"region":  {
+"startLine":  472,
+"startColumn":  13,
+"endLine":  472,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"options\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\CSharpTestBase.cs",
+"region":  {
+"startLine":  522,
+"startColumn":  17,
+"endLine":  522,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"options\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\CSharpTestBase.cs",
+"region":  {
+"startLine":  528,
+"startColumn":  17,
+"endLine":  528,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"type\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\CSharpTestBase.cs",
+"region":  {
+"startLine":  1013,
+"startColumn":  21,
+"endLine":  1013,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"synList\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\SemanticModelTestBase.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  17,
+"endLine":  25,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"synList\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\SemanticModelTestBase.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  21,
+"endLine":  32,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"exprSynList\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\SemanticModelTestBase.cs",
+"region":  {
+"startLine":  99,
+"startColumn":  17,
+"endLine":  99,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"exprSynList\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\SemanticModelTestBase.cs",
+"region":  {
+"startLine":  109,
+"startColumn":  21,
+"endLine":  109,
+"endColumn":  32
+}
+}
+}
+]
+}

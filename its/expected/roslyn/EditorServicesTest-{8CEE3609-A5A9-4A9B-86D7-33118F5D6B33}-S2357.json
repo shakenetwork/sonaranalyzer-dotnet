@@ -1,0 +1,1057 @@
+{
+"issues":  [
+{
+"id":  "S2357",
+"message":  "Make \"Workspace\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\AbstractCommandHandlerTestState.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  39,
+"endLine":  23,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"EditorOperations\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\AbstractCommandHandlerTestState.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  43,
+"endLine":  24,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"UndoHistoryRegistry\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\AbstractCommandHandlerTestState.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  50,
+"endLine":  25,
+"endColumn":  69
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"PresentedRoot\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CallHierarchy\\CallHierarchyTestState.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  38,
+"endLine":  37,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsCancelled\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\ChangeSignature\\TestChangeSignatureOptionsService.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  21,
+"endLine":  14,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"UpdatedSignature\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\ChangeSignature\\TestChangeSignatureOptionsService.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  22,
+"endLine":  15,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Called\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeFixes\\CodeFixServiceTests.cs",
+"region":  {
+"startLine":  181,
+"startColumn":  25,
+"endLine":  181,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Fixer\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeFixes\\CodeFixServiceTests.cs",
+"region":  {
+"startLine":  197,
+"startColumn":  45,
+"endLine":  197,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Analyzer\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeFixes\\CodeFixServiceTests.cs",
+"region":  {
+"startLine":  198,
+"startColumn":  52,
+"endLine":  198,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Messages\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeFixes\\CodeFixServiceTests.cs",
+"region":  {
+"startLine":  273,
+"startColumn":  47,
+"endLine":  273,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsVisualBasic\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeGeneration\\CodeGenerationTests.cs",
+"region":  {
+"startLine":  783,
+"startColumn":  34,
+"endLine":  783,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Document\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeGeneration\\CodeGenerationTests.cs",
+"region":  {
+"startLine":  784,
+"startColumn":  29,
+"endLine":  784,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SemanticModel\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeGeneration\\CodeGenerationTests.cs",
+"region":  {
+"startLine":  785,
+"startColumn":  34,
+"endLine":  785,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SyntaxTree\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeGeneration\\CodeGenerationTests.cs",
+"region":  {
+"startLine":  786,
+"startColumn":  31,
+"endLine":  786,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Service\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeGeneration\\CodeGenerationTests.cs",
+"region":  {
+"startLine":  787,
+"startColumn":  43,
+"endLine":  787,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Result\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeGeneration\\CodeGenerationTests.cs",
+"region":  {
+"startLine":  789,
+"startColumn":  29,
+"endLine":  789,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"AnalyzerService\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Diagnostics\\DiagnosticsSquiggleTaggerProviderTests.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  51,
+"endLine":  31,
+"endColumn":  66
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"DiagnosticService\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Diagnostics\\DiagnosticsSquiggleTaggerProviderTests.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  43,
+"endLine":  36,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Accessibility\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Diagnostics\\GenerateType\\TestGenerateTypeOptionsService.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  30,
+"endLine":  16,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TypeKind\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Diagnostics\\GenerateType\\TestGenerateTypeOptionsService.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  25,
+"endLine":  17,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TypeName\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Diagnostics\\GenerateType\\TestGenerateTypeOptionsService.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  23,
+"endLine":  18,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Project\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Diagnostics\\GenerateType\\TestGenerateTypeOptionsService.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  24,
+"endLine":  19,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsNewFile\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Diagnostics\\GenerateType\\TestGenerateTypeOptionsService.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  21,
+"endLine":  20,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NewFileName\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Diagnostics\\GenerateType\\TestGenerateTypeOptionsService.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  23,
+"endLine":  21,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Folders\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Diagnostics\\GenerateType\\TestGenerateTypeOptionsService.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  30,
+"endLine":  22,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"FullFilePath\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Diagnostics\\GenerateType\\TestGenerateTypeOptionsService.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  23,
+"endLine":  23,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ExistingDocument\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Diagnostics\\GenerateType\\TestGenerateTypeOptionsService.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  25,
+"endLine":  24,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"AreFoldersValidIdentifiers\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Diagnostics\\GenerateType\\TestGenerateTypeOptionsService.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  21,
+"endLine":  25,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"DefaultNamespace\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Diagnostics\\GenerateType\\TestGenerateTypeOptionsService.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  23,
+"endLine":  26,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsCancelled\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Diagnostics\\GenerateType\\TestGenerateTypeOptionsService.cs",
+"region":  {
+"startLine":  27,
+"startColumn":  21,
+"endLine":  27,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"OldSpans\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\EditAndContinue\\ActiveStatementDescription.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  47,
+"endLine":  16,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NewSpans\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\EditAndContinue\\ActiveStatementDescription.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  36,
+"endLine":  17,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"OldRegions\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\EditAndContinue\\ActiveStatementDescription.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  52,
+"endLine":  18,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NewRegions\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\EditAndContinue\\ActiveStatementDescription.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  52,
+"endLine":  19,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"OldTrackingSpans\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\EditAndContinue\\ActiveStatementDescription.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  37,
+"endLine":  20,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"OldSpans\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\EditAndContinue\\DeclaratorMapDescription.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  66,
+"endLine":  15,
+"endColumn":  74
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NewSpans\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\EditAndContinue\\DeclaratorMapDescription.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  66,
+"endLine":  16,
+"endColumn":  74
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Old\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\EditAndContinue\\MatchingPair.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  23,
+"endLine":  12,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"New\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\EditAndContinue\\MatchingPair.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  23,
+"endLine":  13,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Pairs\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\EditAndContinue\\MatchingPair.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  44,
+"endLine":  23,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Kind\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\EditAndContinue\\SemanticEditDescription.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  42,
+"endLine":  12,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SymbolProvider\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\EditAndContinue\\SemanticEditDescription.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  52,
+"endLine":  13,
+"endColumn":  66
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SyntaxMap\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\EditAndContinue\\SemanticEditDescription.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  71,
+"endLine":  14,
+"endColumn":  80
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"PreserveLocalVariables\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\EditAndContinue\\SemanticEditDescription.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  30,
+"endLine":  15,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TrackingSpans\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\EditAndContinue\\TestActiveStatementTrackingService.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  37,
+"endLine":  12,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"DefinitionsAndReferences\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\FindReferences\\MockDefinitionsAndReferencesPresenter.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  41,
+"endLine":  10,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ReturnsNull\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\RenameTracking\\MockPreviewDialogService.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  21,
+"endLine":  13,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Called\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\RenameTracking\\MockPreviewDialogService.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  21,
+"endLine":  14,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Title\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\RenameTracking\\MockPreviewDialogService.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  23,
+"endLine":  15,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"HelpString\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\RenameTracking\\MockPreviewDialogService.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  23,
+"endLine":  16,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Description\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\RenameTracking\\MockPreviewDialogService.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  23,
+"endLine":  17,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TopLevelName\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\RenameTracking\\MockPreviewDialogService.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  23,
+"endLine":  18,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TopLevelGlyph\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\RenameTracking\\MockPreviewDialogService.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  22,
+"endLine":  19,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ShowCheckBoxes\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\RenameTracking\\MockPreviewDialogService.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  21,
+"endLine":  20,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Workspace\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\RenameTracking\\RenameTrackingTestState.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  39,
+"endLine":  36,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Signature\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\SignatureHelp\\SignatureHelpTestItem.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  32,
+"endLine":  10,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"MethodDocumentation\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\SignatureHelp\\SignatureHelpTestItem.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  32,
+"endLine":  15,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ParameterDocumentation\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\SignatureHelp\\SignatureHelpTestItem.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  32,
+"endLine":  20,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"CurrentParameterIndex\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\SignatureHelp\\SignatureHelpTestItem.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  30,
+"endLine":  26,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Description\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\SignatureHelp\\SignatureHelpTestItem.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  32,
+"endLine":  33,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"PrettyPrintedSignature\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\SignatureHelp\\SignatureHelpTestItem.cs",
+"region":  {
+"startLine":  38,
+"startColumn":  32,
+"endLine":  38,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"BlockEvent\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\SolutionCrawler\\WorkCoordinatorTests.cs",
+"region":  {
+"startLine":  1023,
+"startColumn":  50,
+"endLine":  1023,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"RunningEvent\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\SolutionCrawler\\WorkCoordinatorTests.cs",
+"region":  {
+"startLine":  1024,
+"startColumn":  50,
+"endLine":  1024,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SyntaxDocumentIds\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\SolutionCrawler\\WorkCoordinatorTests.cs",
+"region":  {
+"startLine":  1026,
+"startColumn":  49,
+"endLine":  1026,
+"endColumn":  66
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"DocumentIds\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\SolutionCrawler\\WorkCoordinatorTests.cs",
+"region":  {
+"startLine":  1027,
+"startColumn":  49,
+"endLine":  1027,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ProjectIds\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\SolutionCrawler\\WorkCoordinatorTests.cs",
+"region":  {
+"startLine":  1028,
+"startColumn":  48,
+"endLine":  1028,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"InvalidateDocumentIds\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\SolutionCrawler\\WorkCoordinatorTests.cs",
+"region":  {
+"startLine":  1030,
+"startColumn":  49,
+"endLine":  1030,
+"endColumn":  70
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"InvalidateProjectIds\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\SolutionCrawler\\WorkCoordinatorTests.cs",
+"region":  {
+"startLine":  1031,
+"startColumn":  48,
+"endLine":  1031,
+"endColumn":  68
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ProjectId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestAddMetadataReferenceCodeActionOperationFactoryWorkspaceService.cs",
+"region":  {
+"startLine":  27,
+"startColumn":  39,
+"endLine":  27,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"AssemblyIdentity\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestAddMetadataReferenceCodeActionOperationFactoryWorkspaceService.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  46,
+"endLine":  28,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"BaseIndentation\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestFormattingRuleFactoryServiceFactory.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  24,
+"endLine":  28,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TextSpan\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestFormattingRuleFactoryServiceFactory.cs",
+"region":  {
+"startLine":  29,
+"startColumn":  29,
+"endLine":  29,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"UseBaseIndentation\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestFormattingRuleFactoryServiceFactory.cs",
+"region":  {
+"startLine":  30,
+"startColumn":  25,
+"endLine":  30,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TextBuffer\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestHostDocument.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  28,
+"endLine":  28,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"InitialTextSnapshot\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestHostDocument.cs",
+"region":  {
+"startLine":  29,
+"startColumn":  30,
+"endLine":  29,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Documents\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestHostProject.cs",
+"region":  {
+"startLine":  34,
+"startColumn":  46,
+"endLine":  34,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"AdditionalDocuments\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestHostProject.cs",
+"region":  {
+"startLine":  35,
+"startColumn":  46,
+"endLine":  35,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Id\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestHostSolution.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  36,
+"endLine":  13,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Version\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestHostSolution.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  38,
+"endLine":  14,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"FilePath\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestHostSolution.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  32,
+"endLine":  15,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Projects\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestHostSolution.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  54,
+"endLine":  16,
+"endColumn":  62
+}
+}
+}
+]
+}

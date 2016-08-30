@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S3457",
+"message":  "Remove this formatting call and simply use the input string.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\MSBuildTaskTests\\IntegrationTests.cs",
+"region":  {
+"startLine":  411,
+"startColumn":  32,
+"endLine":  411,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S3457",
+"message":  "Remove this formatting call and simply use the input string.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\MSBuildTaskTests\\IntegrationTests.cs",
+"region":  {
+"startLine":  610,
+"startColumn":  32,
+"endLine":  610,
+"endColumn":  45
+}
+}
+}
+]
+}

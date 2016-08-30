@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1643",
+"message":  "Use a StringBuilder instead.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\CSharpSyntaxGenerator\\TestWriter.cs",
+"region":  {
+"startLine":  270,
+"startColumn":  25,
+"endLine":  270,
+"endColumn":  84
+}
+}
+},
+{
+"id":  "S1643",
+"message":  "Use a StringBuilder instead.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\CSharpSyntaxGenerator\\TestWriter.cs",
+"region":  {
+"startLine":  279,
+"startColumn":  25,
+"endLine":  279,
+"endColumn":  84
+}
+}
+}
+]
+}

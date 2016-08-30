@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S2674",
+"message":  "Check the return value of the \"Read\" call to see how many bytes were read.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\SolutionTests\\SolutionTests.cs",
+"region":  {
+"startLine":  43,
+"startColumn":  21,
+"endLine":  43,
+"endColumn":  78
+}
+}
+},
+{
+"id":  "S2674",
+"message":  "Check the return value of the \"Read\" call to see how many bytes were read.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\WorkspaceTestBase.cs",
+"region":  {
+"startLine":  184,
+"startColumn":  21,
+"endLine":  184,
+"endColumn":  78
+}
+}
+}
+]
+}

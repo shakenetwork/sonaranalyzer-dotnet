@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (16) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp.Desktop\\Extensions.cs",
+"region":  {
+"startLine":  531,
+"startColumn":  13,
+"endLine":  548,
+"endColumn":  53
+}
+}
+}
+]
+}

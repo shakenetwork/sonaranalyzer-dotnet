@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1450",
+"message":  "Remove the \"EventIdTaskScheduled\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Diagnostics\\DiagnosticOnly_TPLListener.cs",
+"region":  {
+"startLine":  43,
+"startColumn":  31,
+"endLine":  43,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"EventIdTaskStarted\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Diagnostics\\DiagnosticOnly_TPLListener.cs",
+"region":  {
+"startLine":  44,
+"startColumn":  31,
+"endLine":  44,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"EventIdTaskCompleted\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Diagnostics\\DiagnosticOnly_TPLListener.cs",
+"region":  {
+"startLine":  45,
+"startColumn":  31,
+"endLine":  45,
+"endColumn":  55
+}
+}
+}
+]
+}

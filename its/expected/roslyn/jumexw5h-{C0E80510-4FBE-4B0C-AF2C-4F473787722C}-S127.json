@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"i\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\AbstractCodeModelService.AbstractCodeModelEventCollector.cs",
+"region":  {
+"startLine":  156,
+"startColumn":  25,
+"endLine":  156,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"newIndex\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\AbstractCodeModelService.AbstractCodeModelEventCollector.cs",
+"region":  {
+"startLine":  211,
+"startColumn":  25,
+"endLine":  211,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"oldIndex\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\AbstractCodeModelService.AbstractCodeModelEventCollector.cs",
+"region":  {
+"startLine":  263,
+"startColumn":  25,
+"endLine":  263,
+"endColumn":  33
+}
+}
+}
+]
+}

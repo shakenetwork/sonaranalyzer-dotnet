@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2486",
+"message":  "Handle the exception or explain in a comment why it can be ignored.",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\Core\\Hosting\\AssemblyLoader\\MetadataShadowCopyProvider.cs",
+"region":  {
+"startLine":  198,
+"startColumn":  17,
+"endLine":  200,
+"endColumn":  18
+}
+}
+}
+]
+}

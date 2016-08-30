@@ -1,0 +1,147 @@
+{
+"issues":  [
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\AnalyzerDriver\\DeclarationComputer.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  20,
+"endLine":  12,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\Providers\\MemberInsertingCompletionItem.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  20,
+"endLine":  10,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\Providers\\SymbolMatchPriority.cs",
+"region":  {
+"startLine":  3,
+"startColumn":  20,
+"endLine":  3,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\Log\\DiagnosticAnalyzerLogger.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  20,
+"endLine":  14,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateType\\TypeKindOptions.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  20,
+"endLine":  37,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\MetadataAsSource\\AbstractMetadataAsSourceService.DocCommentFormatter.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  24,
+"endLine":  12,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\MetadataAsSource\\MetadataAsSourceHelpers.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  20,
+"endLine":  15,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\QuickInfo\\QuickInfoUtilities.cs",
+"region":  {
+"startLine":  6,
+"startColumn":  20,
+"endLine":  6,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Shared\\Options\\AddImportOptions.cs",
+"region":  {
+"startLine":  5,
+"startColumn":  20,
+"endLine":  5,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Shared\\Options\\OrganizerOptions.cs",
+"region":  {
+"startLine":  8,
+"startColumn":  28,
+"endLine":  8,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\SolutionCrawlerLogger.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  20,
+"endLine":  13,
+"endColumn":  41
+}
+}
+}
+]
+}

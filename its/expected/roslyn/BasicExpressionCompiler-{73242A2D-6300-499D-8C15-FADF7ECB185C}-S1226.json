@@ -1,0 +1,212 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"compilation\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Source\\ExpressionCompiler\\CompilationContext.vb",
+"region":  {
+"startLine":  62,
+"startColumn":  17,
+"endLine":  62,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"compilation\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Source\\ExpressionCompiler\\CompilationContext.vb",
+"region":  {
+"startLine":  71,
+"startColumn":  17,
+"endLine":  71,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"compilation\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Source\\ExpressionCompiler\\CompilationContext.vb",
+"region":  {
+"startLine":  75,
+"startColumn":  17,
+"endLine":  75,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"[namespace]\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Source\\ExpressionCompiler\\CompilationContext.vb",
+"region":  {
+"startLine":  559,
+"startColumn":  13,
+"endLine":  559,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"[namespace]\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Source\\ExpressionCompiler\\CompilationContext.vb",
+"region":  {
+"startLine":  566,
+"startColumn":  21,
+"endLine":  566,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"binder\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Source\\ExpressionCompiler\\CompilationContext.vb",
+"region":  {
+"startLine":  600,
+"startColumn":  17,
+"endLine":  600,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"binder\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Source\\ExpressionCompiler\\CompilationContext.vb",
+"region":  {
+"startLine":  606,
+"startColumn":  17,
+"endLine":  606,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"binder\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Source\\ExpressionCompiler\\CompilationContext.vb",
+"region":  {
+"startLine":  614,
+"startColumn":  17,
+"endLine":  614,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"binder\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Source\\ExpressionCompiler\\CompilationContext.vb",
+"region":  {
+"startLine":  619,
+"startColumn":  13,
+"endLine":  619,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"sourceMethodMustBeInstance\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Source\\ExpressionCompiler\\CompilationContext.vb",
+"region":  {
+"startLine":  1347,
+"startColumn":  25,
+"endLine":  1347,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"type\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Source\\ExpressionCompiler\\CompilationContext.vb",
+"region":  {
+"startLine":  1376,
+"startColumn":  17,
+"endLine":  1376,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"block\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Source\\ExpressionCompiler\\Rewriters\\LocalDeclarationRewriter.vb",
+"region":  {
+"startLine":  24,
+"startColumn":  17,
+"endLine":  24,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"containingSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Source\\ExpressionCompiler\\SymbolExtensions.vb",
+"region":  {
+"startLine":  25,
+"startColumn":  21,
+"endLine":  25,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"offset\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Source\\ExpressionCompiler\\SyntaxHelpers.vb",
+"region":  {
+"startLine":  103,
+"startColumn":  17,
+"endLine":  103,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"method\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Source\\ExpressionCompiler\\VisualBasicInstructionDecoder.vb",
+"region":  {
+"startLine":  72,
+"startColumn":  13,
+"endLine":  72,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"method\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Source\\ExpressionCompiler\\VisualBasicInstructionDecoder.vb",
+"region":  {
+"startLine":  74,
+"startColumn":  17,
+"endLine":  74,
+"endColumn":  23
+}
+}
+}
+]
+}

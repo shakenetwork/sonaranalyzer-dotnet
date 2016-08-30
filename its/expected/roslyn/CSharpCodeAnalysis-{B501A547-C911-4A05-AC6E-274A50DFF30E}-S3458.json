@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S3458",
+"message":  "Remove this empty \"case\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Binder_Lambda.cs",
+"region":  {
+"startLine":  51,
+"startColumn":  17,
+"endLine":  51,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3458",
+"message":  "Remove this empty \"case\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Semantics\\Operators\\BinaryOperatorOverloadResolution.cs",
+"region":  {
+"startLine":  87,
+"startColumn":  17,
+"endLine":  87,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S3458",
+"message":  "Remove this empty \"case\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Semantics\\Operators\\BinaryOperatorOverloadResolution.cs",
+"region":  {
+"startLine":  88,
+"startColumn":  17,
+"endLine":  88,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3458",
+"message":  "Remove this empty \"case\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Compilation\\MemberSemanticModel.cs",
+"region":  {
+"startLine":  918,
+"startColumn":  17,
+"endLine":  918,
+"endColumn":  49
+}
+}
+}
+]
+}

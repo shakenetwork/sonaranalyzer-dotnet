@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1450",
+"message":  "Remove the \"_workspace\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Next\\FindReferences\\StreamingFindReferencesPresenter.DocumentLocationEntry.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  56,
+"endLine":  31,
+"endColumn":  66
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_context\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Next\\FindReferences\\StreamingFindReferencesPresenter.RoslynDefinitionBucket.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  67,
+"endLine":  20,
+"endColumn":  75
+}
+}
+}
+]
+}

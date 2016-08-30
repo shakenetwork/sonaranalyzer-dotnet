@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S2933",
+"message":  "Make \"_classificationRegistry\" \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\Editor\\Output\\OutputClassifierProvider.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  52,
+"endLine":  25,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S2933",
+"message":  "Make \"_allowableMergeDirections\" \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\Editor\\TextTransactionMergePolicy.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  48,
+"endLine":  23,
+"endColumn":  73
+}
+}
+}
+]
+}

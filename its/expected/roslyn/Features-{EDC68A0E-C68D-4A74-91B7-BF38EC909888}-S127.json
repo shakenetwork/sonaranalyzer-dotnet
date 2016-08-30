@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"i\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\Providers\\SymbolCompletionItem.cs",
+"region":  {
+"startLine":  158,
+"startColumn":  21,
+"endLine":  158,
+"endColumn":  22
+}
+}
+}
+]
+}

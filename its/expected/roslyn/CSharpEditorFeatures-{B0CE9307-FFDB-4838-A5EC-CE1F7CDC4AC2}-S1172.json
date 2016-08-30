@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"workspace\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\EventHookup\\EventHookupCommandHandler_TabKeyCommand.cs",
+"region":  {
+"startLine":  292,
+"startColumn":  40,
+"endLine":  292,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"subjectBuffer\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\EventHookup\\EventHookupCommandHandler_TabKeyCommand.cs",
+"region":  {
+"startLine":  292,
+"startColumn":  81,
+"endLine":  292,
+"endColumn":  106
+}
+}
+}
+]
+}

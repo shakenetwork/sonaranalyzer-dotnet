@@ -1,0 +1,186 @@
+{
+"issues":  [
+{
+"id":  "S1450",
+"message":  "Remove the \"_containingType\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\CodeFixes\\AddImport\\AbstractAddImportCodeFixProvider.SymbolReferenceFinder.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  47,
+"endLine":  28,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_containingTypeOrAssembly\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\CodeFixes\\AddImport\\AbstractAddImportCodeFixProvider.SymbolReferenceFinder.cs",
+"region":  {
+"startLine":  29,
+"startColumn":  38,
+"endLine":  29,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_mainTask\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\DiagnosticEventTaskScheduler.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  31,
+"endLine":  16,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"s_fatalErrorBaseActiveStatements\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  518,
+"startColumn":  46,
+"endLine":  518,
+"endColumn":  78
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_debuggingSession\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\EditSession.cs",
+"region":  {
+"startLine":  53,
+"startColumn":  43,
+"endLine":  53,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_service\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateFromMembers\\AddConstructorParameters\\AbstractAddConstructorParametersService.CodeAction.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  39,
+"endLine":  21,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_service\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateFromMembers\\GenerateConstructorFromMembers\\AbstractGenerateConstructorFromMembersService.ConstructorDelegatingCodeAction.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  39,
+"endLine":  19,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_service\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateFromMembers\\GenerateConstructorFromMembers\\AbstractGenerateConstructorFromMembersService.FieldDelegatingCodeAction.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  39,
+"endLine":  19,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_service\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateFromMembers\\GenerateEqualsAndGetHashCode\\GenerateEqualsAndGetHashCodeCodeRefactoringProvider.CodeAction.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  39,
+"endLine":  20,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_service\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateMember\\GenerateDefaultConstructors\\AbstractGenerateDefaultConstructorsService.AbstractCodeAction.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  39,
+"endLine":  21,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_nameToken\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\ReplacePropertyWithMethods\\AbstractReplacePropertyWithMethodsService.cs",
+"region":  {
+"startLine":  62,
+"startColumn":  42,
+"endLine":  62,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_registration\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\WorkCoordinator.SemanticChangeProcessor.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  47,
+"endLine":  26,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_notificationQueue\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Workspace\\BackgroundCompiler.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  50,
+"endLine":  17,
+"endColumn":  68
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_workspace\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Workspace\\BackgroundParser.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  36,
+"endLine":  13,
+"endColumn":  46
+}
+}
+}
+]
+}

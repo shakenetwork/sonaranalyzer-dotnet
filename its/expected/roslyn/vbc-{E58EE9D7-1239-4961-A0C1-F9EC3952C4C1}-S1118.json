@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\CompilerServerLogger.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  20,
+"endLine":  22,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\vbc\\Program.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  18,
+"endLine":  9,
+"endColumn":  25
+}
+}
+}
+]
+}

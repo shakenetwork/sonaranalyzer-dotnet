@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"ExternalLocation\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\CodeModel\\Extenders\\ExtenderNames.cs",
+"region":  {
+"startLine":  7,
+"startColumn":  30,
+"endLine":  7,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"PartialMethod\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\CodeModel\\Extenders\\ExtenderNames.cs",
+"region":  {
+"startLine":  8,
+"startColumn":  30,
+"endLine":  8,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"ExtensionMethod\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\CodeModel\\Extenders\\ExtenderNames.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  30,
+"endLine":  9,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"AutoImplementedProperty\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\CodeModel\\Extenders\\ExtenderNames.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  30,
+"endLine":  10,
+"endColumn":  53
+}
+}
+}
+]
+}

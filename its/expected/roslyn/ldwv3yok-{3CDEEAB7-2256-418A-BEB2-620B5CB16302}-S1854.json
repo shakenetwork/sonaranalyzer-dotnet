@@ -1,0 +1,160 @@
+{
+"issues":  [
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"dataHasLineCutCopyTag\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\CommandHandlers\\InteractivePasteCommandHandler.cs",
+"region":  {
+"startLine":  90,
+"startColumn":  40,
+"endLine":  90,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"dataHasBoxCutCopyTag\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\CommandHandlers\\InteractivePasteCommandHandler.cs",
+"region":  {
+"startLine":  91,
+"startColumn":  39,
+"endLine":  91,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"projectFixers\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\CodeFixes\\CodeFixService.cs",
+"region":  {
+"startLine":  354,
+"startColumn":  49,
+"endLine":  354,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"commandHandlerList\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Commands\\CommandHandlerService.cs",
+"region":  {
+"startLine":  44,
+"startColumn":  39,
+"endLine":  44,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"positionOfStart\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\CommentSelection\\CommentUncommentSelectionCommandHandler.cs",
+"region":  {
+"startLine":  258,
+"startColumn":  33,
+"endLine":  258,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"workspace\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\Controller_TabKey.cs",
+"region":  {
+"startLine":  83,
+"startColumn":  33,
+"endLine":  83,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"ret\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\PrioritizedTaskScheduler.cs",
+"region":  {
+"startLine":  35,
+"startColumn":  26,
+"endLine":  35,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"allSpans\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Preview\\PreviewFactoryService.cs",
+"region":  {
+"startLine":  384,
+"startColumn":  26,
+"endLine":  384,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"firstLayout\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Extensions\\IWpfTextViewExtensions.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  70,
+"endLine":  18,
+"endColumn":  76
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"tagTree\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Tagging\\AbstractAsynchronousTaggerProvider.TagSource_ProduceTags.cs",
+"region":  {
+"startLine":  206,
+"startColumn":  51,
+"endLine":  206,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"document\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Tagging\\AbstractAsynchronousTaggerProvider.TagSource_ProduceTags.cs",
+"region":  {
+"startLine":  311,
+"startColumn":  39,
+"endLine":  311,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"transaction\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Undo\\EditorSourceTextUndoService.cs",
+"region":  {
+"startLine":  40,
+"startColumn":  51,
+"endLine":  40,
+"endColumn":  57
+}
+}
+}
+]
+}

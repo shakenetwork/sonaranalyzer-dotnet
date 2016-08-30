@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S1659",
+"message":  "Declare \"Y\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\CSharpTest\\InteractiveSessionFixtures.cs",
+"region":  {
+"startLine":  5,
+"startColumn":  19,
+"endLine":  5,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"Z\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\CSharpTest\\InteractiveSessionFixtures.cs",
+"region":  {
+"startLine":  5,
+"startColumn":  22,
+"endLine":  5,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"w\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\CSharpTest\\InteractiveSessionTests.cs",
+"region":  {
+"startLine":  1939,
+"startColumn":  31,
+"endLine":  1939,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"actualIsCallable\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\CSharpTest\\ObjectFormatterTests.cs",
+"region":  {
+"startLine":  119,
+"startColumn":  34,
+"endLine":  119,
+"endColumn":  50
+}
+}
+}
+]
+}

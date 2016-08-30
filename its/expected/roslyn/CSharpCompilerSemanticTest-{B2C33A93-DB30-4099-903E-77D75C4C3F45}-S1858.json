@@ -1,0 +1,95 @@
+{
+"issues":  [
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Diagnostics\\CompilationEventTests.cs",
+"region":  {
+"startLine":  64,
+"startColumn":  43,
+"endLine":  64,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\" on a string.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LookupPositionTests.cs",
+"region":  {
+"startLine":  1424,
+"startColumn":  52,
+"endLine":  1424,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LookupPositionTests.cs",
+"region":  {
+"startLine":  1601,
+"startColumn":  66,
+"endLine":  1601,
+"endColumn":  77
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LookupTests.cs",
+"region":  {
+"startLine":  1352,
+"startColumn":  63,
+"endLine":  1352,
+"endColumn":  74
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\OperatorTests.cs",
+"region":  {
+"startLine":  1389,
+"startColumn":  40,
+"endLine":  1389,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\OperatorTests.cs",
+"region":  {
+"startLine":  1403,
+"startColumn":  34,
+"endLine":  1403,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\" on a string.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\UsingStatementTests.cs",
+"region":  {
+"startLine":  701,
+"startColumn":  44,
+"endLine":  701,
+"endColumn":  55
+}
+}
+}
+]
+}

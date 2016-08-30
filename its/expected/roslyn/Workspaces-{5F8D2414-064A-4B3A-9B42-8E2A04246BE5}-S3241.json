@@ -1,0 +1,121 @@
+{
+"issues":  [
+{
+"id":  "S3241",
+"message":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Formatting\\Engine\\AbstractFormatEngine.OperationApplier.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  20,
+"endLine":  31,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S3241",
+"message":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Formatting\\Engine\\AbstractFormatEngine.OperationApplier.cs",
+"region":  {
+"startLine":  253,
+"startColumn":  20,
+"endLine":  253,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S3241",
+"message":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Formatting\\Engine\\AbstractFormatEngine.OperationApplier.cs",
+"region":  {
+"startLine":  374,
+"startColumn":  21,
+"endLine":  374,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3241",
+"message":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Formatting\\Engine\\AbstractFormatEngine.OperationApplier.cs",
+"region":  {
+"startLine":  464,
+"startColumn":  20,
+"endLine":  464,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S3241",
+"message":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Formatting\\Engine\\AbstractFormatEngine.OperationApplier.cs",
+"region":  {
+"startLine":  536,
+"startColumn":  20,
+"endLine":  536,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S3241",
+"message":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Formatting\\Engine\\TokenStream.Changes.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  20,
+"endLine":  21,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S3241",
+"message":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\SymbolKey\\SymbolKey.SymbolKeyReader.cs",
+"region":  {
+"startLine":  94,
+"startColumn":  23,
+"endLine":  94,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S3241",
+"message":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Solution\\ProjectDependencyGraph.cs",
+"region":  {
+"startLine":  263,
+"startColumn":  17,
+"endLine":  263,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3241",
+"message":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Solution\\ProjectDependencyGraph.cs",
+"region":  {
+"startLine":  320,
+"startColumn":  17,
+"endLine":  320,
+"endColumn":  52
+}
+}
+}
+]
+}

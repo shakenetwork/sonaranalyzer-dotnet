@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S3218",
+"message":  "Rename this method to not shadow the outer class\u0027 member with the same name.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\MetadataAsSource\\AbstractMetadataAsSourceTests.TestContext.cs",
+"region":  {
+"startLine":  114,
+"startColumn":  31,
+"endLine":  114,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S3218",
+"message":  "Rename this method to not shadow the outer class\u0027 member with the same name.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Tagging\\AsynchronousTaggerTests.cs",
+"region":  {
+"startLine":  162,
+"startColumn":  51,
+"endLine":  162,
+"endColumn":  68
+}
+}
+}
+]
+}

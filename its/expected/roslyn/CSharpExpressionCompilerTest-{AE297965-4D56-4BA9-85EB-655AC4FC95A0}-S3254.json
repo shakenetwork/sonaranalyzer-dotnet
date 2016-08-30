@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"methodVersion\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Test\\ExpressionCompiler\\ExpressionCompilerTests.cs",
+"region":  {
+"startLine":  5798,
+"startColumn":  72,
+"endLine":  5798,
+"endColumn":  88
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"expectedGeneric\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Test\\ExpressionCompiler\\LocalsTests.cs",
+"region":  {
+"startLine":  1219,
+"startColumn":  21,
+"endLine":  1219,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"includeSymbols\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Test\\ExpressionCompiler\\UsingDebugInfoTests.cs",
+"region":  {
+"startLine":  1094,
+"startColumn":  17,
+"endLine":  1094,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"includeSymbols\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Test\\ExpressionCompiler\\UsingDebugInfoTests.cs",
+"region":  {
+"startLine":  1116,
+"startColumn":  17,
+"endLine":  1116,
+"endColumn":  37
+}
+}
+}
+]
+}

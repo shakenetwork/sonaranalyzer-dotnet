@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\CompilationContext.cs",
+"region":  {
+"startLine":  726,
+"startColumn":  17,
+"endLine":  726,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\CompilationContext.cs",
+"region":  {
+"startLine":  857,
+"startColumn":  13,
+"endLine":  857,
+"endColumn":  15
+}
+}
+}
+]
+}

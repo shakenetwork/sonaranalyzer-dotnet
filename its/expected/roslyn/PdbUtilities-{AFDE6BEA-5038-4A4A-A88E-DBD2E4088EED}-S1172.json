@@ -1,0 +1,69 @@
+{
+"issues":  [
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"bytes\".",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\CustomDebugInfoReader.cs",
+"region":  {
+"startLine":  287,
+"startColumn":  40,
+"endLine":  287,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"dir\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Pdb\\Token2SourceLineExporter.cs",
+"region":  {
+"startLine":  1402,
+"startColumn":  61,
+"endLine":  1402,
+"endColumn":  77
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"nameIndex\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Pdb\\Token2SourceLineExporter.cs",
+"region":  {
+"startLine":  1403,
+"startColumn":  13,
+"endLine":  1403,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"reader\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Pdb\\Token2SourceLineExporter.cs",
+"region":  {
+"startLine":  1403,
+"startColumn":  48,
+"endLine":  1403,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"disposing\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Shared\\DummyMetadataImport.cs",
+"region":  {
+"startLine":  34,
+"startColumn":  30,
+"endLine":  34,
+"endColumn":  44
+}
+}
+}
+]
+}

@@ -1,0 +1,134 @@
+{
+"issues":  [
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"IdentityUnderlying\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Semantics\\Conversions\\Conversion.cs",
+"region":  {
+"startLine":  228,
+"startColumn":  56,
+"endLine":  228,
+"endColumn":  74
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"ImplicitConstantUnderlying\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Semantics\\Conversions\\Conversion.cs",
+"region":  {
+"startLine":  229,
+"startColumn":  56,
+"endLine":  229,
+"endColumn":  82
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"ImplicitNumericUnderlying\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Semantics\\Conversions\\Conversion.cs",
+"region":  {
+"startLine":  230,
+"startColumn":  56,
+"endLine":  230,
+"endColumn":  81
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"ExplicitNumericUnderlying\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Semantics\\Conversions\\Conversion.cs",
+"region":  {
+"startLine":  231,
+"startColumn":  56,
+"endLine":  231,
+"endColumn":  81
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"ExplicitEnumerationUnderlying\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Semantics\\Conversions\\Conversion.cs",
+"region":  {
+"startLine":  232,
+"startColumn":  56,
+"endLine":  232,
+"endColumn":  85
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"PointerToIntegerUnderlying\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Semantics\\Conversions\\Conversion.cs",
+"region":  {
+"startLine":  233,
+"startColumn":  56,
+"endLine":  233,
+"endColumn":  82
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"Error\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Semantics\\Operators\\BinaryOperatorSignature.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  47,
+"endLine":  11,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"Error\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Semantics\\Operators\\UnaryOperatorSignature.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  46,
+"endLine":  11,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"TokensLexed\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\Lexer.cs",
+"region":  {
+"startLine":  219,
+"startColumn":  29,
+"endLine":  219,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"IsInstanceFieldOrEvent\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\NamedTypeSymbol.cs",
+"region":  {
+"startLine":  576,
+"startColumn":  45,
+"endLine":  576,
+"endColumn":  67
+}
+}
+}
+]
+}

@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S3655",
+"message":  "\"contiguous\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Shared\\Utilities\\PatternMatcher.cs",
+"region":  {
+"startLine":  626,
+"startColumn":  25,
+"endLine":  626,
+"endColumn":  41
+}
+}
+}
+]
+}

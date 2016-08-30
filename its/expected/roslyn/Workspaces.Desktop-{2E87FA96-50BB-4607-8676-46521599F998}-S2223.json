@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"s_rootLocations\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Shared\\GlobalAssemblyCacheHelpers\\GlobalAssemblyCacheLocation.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  46,
+"endLine":  26,
+"endColumn":  61
+}
+}
+}
+]
+}

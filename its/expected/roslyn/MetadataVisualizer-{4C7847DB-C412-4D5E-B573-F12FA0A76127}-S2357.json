@@ -1,0 +1,121 @@
+{
+"issues":  [
+{
+"id":  "S2357",
+"message":  "Make \"MetadataReader\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\MetadataVisualizer\\Program.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  31,
+"endLine":  21,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"PEReaderOpt\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\MetadataVisualizer\\Program.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  25,
+"endLine":  22,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"DeltaILOpt\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\MetadataVisualizer\\Program.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  23,
+"endLine":  23,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"MemoryOwner\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\MetadataVisualizer\\Program.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  28,
+"endLine":  24,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"AssemblyNameOpt\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\MetadataVisualizer\\Program.cs",
+"region":  {
+"startLine":  406,
+"startColumn":  32,
+"endLine":  406,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"AssemblyVersionOpt\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\MetadataVisualizer\\Program.cs",
+"region":  {
+"startLine":  407,
+"startColumn":  33,
+"endLine":  407,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Namespace\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\MetadataVisualizer\\Program.cs",
+"region":  {
+"startLine":  408,
+"startColumn":  32,
+"endLine":  408,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TypeName\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\MetadataVisualizer\\Program.cs",
+"region":  {
+"startLine":  409,
+"startColumn":  32,
+"endLine":  409,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"MemberName\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\MetadataVisualizer\\Program.cs",
+"region":  {
+"startLine":  410,
+"startColumn":  32,
+"endLine":  410,
+"endColumn":  42
+}
+}
+}
+]
+}

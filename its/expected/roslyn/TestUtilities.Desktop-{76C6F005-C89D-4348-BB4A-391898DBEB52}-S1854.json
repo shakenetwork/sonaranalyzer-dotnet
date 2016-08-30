@@ -1,0 +1,407 @@
+{
+"issues":  [
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"message\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\CLRHelpers.cs",
+"region":  {
+"startLine":  148,
+"startColumn":  32,
+"endLine":  148,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"verifier\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\CommonTestBase.cs",
+"region":  {
+"startLine":  208,
+"startColumn":  42,
+"endLine":  208,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"retVal\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\MetadataSignatureHelper.cs",
+"region":  {
+"startLine":  620,
+"startColumn":  40,
+"endLine":  620,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"actualSignatures\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\MetadataSignatureUnitTestHelper.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  47,
+"endLine":  37,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"result\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\ProcessUtilities.cs",
+"region":  {
+"startLine":  119,
+"startColumn":  27,
+"endLine":  119,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"us\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\Win32Res.cs",
+"region":  {
+"startLine":  123,
+"startColumn":  16,
+"endLine":  123,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"us\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\Win32Res.cs",
+"region":  {
+"startLine":  124,
+"startColumn":  16,
+"endLine":  124,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"us\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\Win32Res.cs",
+"region":  {
+"startLine":  125,
+"startColumn":  16,
+"endLine":  125,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"s\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\Win32Res.cs",
+"region":  {
+"startLine":  126,
+"startColumn":  15,
+"endLine":  126,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"us\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\Win32Res.cs",
+"region":  {
+"startLine":  129,
+"startColumn":  16,
+"endLine":  129,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"us\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\Win32Res.cs",
+"region":  {
+"startLine":  130,
+"startColumn":  16,
+"endLine":  130,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"s\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\Win32Res.cs",
+"region":  {
+"startLine":  144,
+"startColumn":  15,
+"endLine":  144,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"l\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\Win32Res.cs",
+"region":  {
+"startLine":  188,
+"startColumn":  19,
+"endLine":  188,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"l\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\Win32Res.cs",
+"region":  {
+"startLine":  189,
+"startColumn":  19,
+"endLine":  189,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"l\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\Win32Res.cs",
+"region":  {
+"startLine":  190,
+"startColumn":  19,
+"endLine":  190,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"l\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\Win32Res.cs",
+"region":  {
+"startLine":  191,
+"startColumn":  19,
+"endLine":  191,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"l\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\Win32Res.cs",
+"region":  {
+"startLine":  192,
+"startColumn":  19,
+"endLine":  192,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"l\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\Win32Res.cs",
+"region":  {
+"startLine":  193,
+"startColumn":  19,
+"endLine":  193,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"l\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\Win32Res.cs",
+"region":  {
+"startLine":  194,
+"startColumn":  19,
+"endLine":  194,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"us\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\Win32Res.cs",
+"region":  {
+"startLine":  204,
+"startColumn":  24,
+"endLine":  204,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"us\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\Win32Res.cs",
+"region":  {
+"startLine":  205,
+"startColumn":  24,
+"endLine":  205,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"startPos\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\Win32Res.cs",
+"region":  {
+"startLine":  238,
+"startColumn":  27,
+"endLine":  238,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"type\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\Win32Res.cs",
+"region":  {
+"startLine":  247,
+"startColumn":  22,
+"endLine":  247,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"methodData\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Compilation\\CompilationTestDataExtensions.cs",
+"region":  {
+"startLine":  39,
+"startColumn":  28,
+"endLine":  39,
+"endColumn":  69
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"c\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Diagnostics\\DiagnosticExtensions.cs",
+"region":  {
+"startLine":  162,
+"startColumn":  15,
+"endLine":  162,
+"endColumn":  164
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"retVal\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Diagnostics\\DiagnosticExtensions.cs",
+"region":  {
+"startLine":  329,
+"startColumn":  24,
+"endLine":  329,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"retVal\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Diagnostics\\DiagnosticExtensions.cs",
+"region":  {
+"startLine":  332,
+"startColumn":  24,
+"endLine":  332,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"actual\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Pdb\\PdbValidation.cs",
+"region":  {
+"startLine":  231,
+"startColumn":  27,
+"endLine":  231,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"retVal\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Syntax\\NodeHelpers.cs",
+"region":  {
+"startLine":  76,
+"startColumn":  31,
+"endLine":  76,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"retVal\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Syntax\\NodeHelpers.cs",
+"region":  {
+"startLine":  130,
+"startColumn":  29,
+"endLine":  130,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"xml\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Syntax\\XmlHelpers.cs",
+"region":  {
+"startLine":  96,
+"startColumn":  26,
+"endLine":  96,
+"endColumn":  32
+}
+}
+}
+]
+}

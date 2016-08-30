@@ -1,0 +1,160 @@
+{
+"issues":  [
+{
+"id":  "S2344",
+"message":  "Rename this enumeration to remove the \"Flags\" suffix.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\BinderFlags.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  19,
+"endLine":  11,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S2344",
+"message":  "Rename this enumeration to remove the \"Flags\" suffix.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\BoundTree\\BoundMethodGroupFlags.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  19,
+"endLine":  15,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2344",
+"message":  "Rename this enumeration to remove the \"Flags\" suffix.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Declarations\\SingleTypeDeclaration.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  23,
+"endLine":  21,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2344",
+"message":  "Rename this enumeration to remove the \"Flags\" suffix.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LoweredDynamicOperationFactory.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  22,
+"endLine":  36,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S2344",
+"message":  "Rename this enumeration to remove the \"Flags\" suffix.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LoweredDynamicOperationFactory.cs",
+"region":  {
+"startLine":  54,
+"startColumn":  22,
+"endLine":  54,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2344",
+"message":  "Rename this enumeration to remove the \"Flags\" suffix.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\LanguageParser.cs",
+"region":  {
+"startLine":  4159,
+"startColumn":  22,
+"endLine":  4159,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2344",
+"message":  "Rename this enumeration to remove the \"Flags\" suffix.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\LanguageParser.cs",
+"region":  {
+"startLine":  4608,
+"startColumn":  22,
+"endLine":  4608,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2344",
+"message":  "Rename this enumeration to remove the \"Flags\" suffix.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\LanguageParser.cs",
+"region":  {
+"startLine":  5993,
+"startColumn":  22,
+"endLine":  5993,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2344",
+"message":  "Rename this enumeration to remove the \"Flags\" suffix.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\QuickScanner.cs",
+"region":  {
+"startLine":  38,
+"startColumn":  22,
+"endLine":  38,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2344",
+"message":  "Rename this enumeration to remove the \"Flags\" suffix.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PEEventSymbol.cs",
+"region":  {
+"startLine":  40,
+"startColumn":  22,
+"endLine":  40,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S2344",
+"message":  "Rename this enumeration to remove the \"Flags\" suffix.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PEParameterSymbol.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  22,
+"endLine":  22,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2344",
+"message":  "Rename this enumeration to remove the \"Flags\" suffix.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PEPropertySymbol.cs",
+"region":  {
+"startLine":  48,
+"startColumn":  22,
+"endLine":  48,
+"endColumn":  27
+}
+}
+}
+]
+}

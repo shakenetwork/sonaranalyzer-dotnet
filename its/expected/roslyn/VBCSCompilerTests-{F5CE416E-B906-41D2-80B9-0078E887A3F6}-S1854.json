@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"textWriter\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Server\\VBCSCompilerTests\\ServerUtil.cs",
+"region":  {
+"startLine":  195,
+"startColumn":  24,
+"endLine":  195,
+"endColumn":  58
+}
+}
+}
+]
+}

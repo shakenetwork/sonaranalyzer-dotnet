@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S2583",
+"message":  "Change this condition so that it does not always evaluate to \"true\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\BlockCommentEditing\\BlockCommentEditingCommandHandler.cs",
+"region":  {
+"startLine":  92,
+"startColumn":  17,
+"endLine":  92,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2583",
+"message":  "Change this condition so that it does not always evaluate to \"true\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\Highlighting\\KeywordHighlighters\\IfStatementHighlighter.cs",
+"region":  {
+"startLine":  35,
+"startColumn":  20,
+"endLine":  35,
+"endColumn":  39
+}
+}
+}
+]
+}

@@ -1,0 +1,485 @@
+{
+"issues":  [
+{
+"id":  "S1481",
+"message":  "Remove this unused \"semanticModel\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\CaseCorrection\\CaseCorrector.cs",
+"region":  {
+"startLine":  43,
+"startColumn":  17,
+"endLine":  43,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"model\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\CodeCleanup\\AbstractCodeCleanerService.cs",
+"region":  {
+"startLine":  57,
+"startColumn":  21,
+"endLine":  57,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"spanAlignedToTokens\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\CodeCleanup\\AbstractCodeCleanerService.cs",
+"region":  {
+"startLine":  324,
+"startColumn":  26,
+"endLine":  324,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"span\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\CodeFixes\\FixAllOccurrences\\BatchSimplificationFixAllProvider.cs",
+"region":  {
+"startLine":  43,
+"startColumn":  17,
+"endLine":  43,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"textSpan\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Diagnostics\\DiagnosticDataSerializer.cs",
+"region":  {
+"startLine":  285,
+"startColumn":  21,
+"endLine":  285,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"method\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Editing\\DeclarationModifiers.cs",
+"region":  {
+"startLine":  50,
+"startColumn":  17,
+"endLine":  50,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"checksumAlgorithm\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Execution\\Serializer_Asset.cs",
+"region":  {
+"startLine":  130,
+"startColumn":  17,
+"endLine":  130,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"syntaxFactsService\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\FindReferences\\Finders\\AbstractMemberScopedReferenceFinder.cs",
+"region":  {
+"startLine":  63,
+"startColumn":  21,
+"endLine":  63,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"symbolToMatch\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\FindReferences\\Finders\\AbstractReferenceFinder.cs",
+"region":  {
+"startLine":  225,
+"startColumn":  25,
+"endLine":  225,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"syntaxTree\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\FindReferences\\Finders\\AbstractReferenceFinder.cs",
+"region":  {
+"startLine":  272,
+"startColumn":  17,
+"endLine":  272,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"syntaxFacts\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\FindReferences\\Finders\\OrdinaryMethodReferenceFinder.cs",
+"region":  {
+"startLine":  111,
+"startColumn":  17,
+"endLine":  111,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"result\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\FindReferences\\FindReferencesSearchEngine.ProgressWrapper.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  21,
+"endLine":  23,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"orderedKeys2\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\SymbolTree\\SymbolTreeInfo.cs",
+"region":  {
+"startLine":  417,
+"startColumn":  17,
+"endLine":  417,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"triviaInfo\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Formatting\\Engine\\AbstractFormatEngine.cs",
+"region":  {
+"startLine":  489,
+"startColumn":  17,
+"endLine":  489,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"trimmedTriviaText\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Formatting\\FormattingExtensions.cs",
+"region":  {
+"startLine":  177,
+"startColumn":  17,
+"endLine":  177,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"started\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Notification\\GlobalOperationNotificationServiceFactory.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  21,
+"endLine":  33,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"stopped\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Notification\\GlobalOperationNotificationServiceFactory.cs",
+"region":  {
+"startLine":  34,
+"startColumn":  21,
+"endLine":  34,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"syntaxFactsService\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Rename\\ConflictEngine\\ConflictResolver.Session.cs",
+"region":  {
+"startLine":  326,
+"startColumn":  29,
+"endLine":  326,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"withinAssembly\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\ISymbolExtensions_Accessibility.cs",
+"region":  {
+"startLine":  92,
+"startColumn":  17,
+"endLine":  92,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"derivedAndImplementedTypes\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\ITypeSymbolExtensions.ReplaceTypeParameterBasedOnTypeConstraintVisitor.cs",
+"region":  {
+"startLine":  101,
+"startColumn":  37,
+"endLine":  101,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"pairs\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Utilities\\CommonFormattingHelpers.cs",
+"region":  {
+"startLine":  52,
+"startColumn":  17,
+"endLine":  52,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"token1PartOftoken2LeadingTrivia\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Utilities\\CommonFormattingHelpers.cs",
+"region":  {
+"startLine":  182,
+"startColumn":  17,
+"endLine":  182,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"root\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Simplification\\AbstractSimplificationService.cs",
+"region":  {
+"startLine":  59,
+"startColumn":  21,
+"endLine":  59,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"elementNames\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\SymbolKey\\SymbolKey.AnonymousTypeSymbolKey.cs",
+"region":  {
+"startLine":  30,
+"startColumn":  21,
+"endLine":  30,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"value\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\SymbolKey\\SymbolKey.AssemblySymbolKey.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  21,
+"endLine":  21,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"parameterTypeResolutions\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\SymbolKey\\SymbolKey.MethodSymbolKey.cs",
+"region":  {
+"startLine":  172,
+"startColumn":  25,
+"endLine":  172,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"returnType\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\SymbolKey\\SymbolKey.MethodSymbolKey.cs",
+"region":  {
+"startLine":  173,
+"startColumn":  25,
+"endLine":  173,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"elementNames\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\SymbolKey\\SymbolKey.TupleTypeSymbolKey.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  21,
+"endLine":  24,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"ignored\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\AsyncLazy%601.cs",
+"region":  {
+"startLine":  544,
+"startColumn":  21,
+"endLine":  544,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"assemblyShortName\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Host\\Mef\\MefHostServices.cs",
+"region":  {
+"startLine":  131,
+"startColumn":  17,
+"endLine":  131,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"inProgressProject\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Solution\\SolutionState.CompilationTracker.cs",
+"region":  {
+"startLine":  553,
+"startColumn":  29,
+"endLine":  553,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"solutionId\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Workspace.cs",
+"region":  {
+"startLine":  306,
+"startColumn":  21,
+"endLine":  306,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"newDocument\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Workspace.cs",
+"region":  {
+"startLine":  798,
+"startColumn":  21,
+"endLine":  798,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"ignore\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Workspace.cs",
+"region":  {
+"startLine":  876,
+"startColumn":  25,
+"endLine":  876,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"oldDoc\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Workspace.cs",
+"region":  {
+"startLine":  1215,
+"startColumn":  21,
+"endLine":  1215,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"oldDocument\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Workspace_Editor.cs",
+"region":  {
+"startLine":  565,
+"startColumn":  21,
+"endLine":  565,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"oldDocument\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Workspace_Editor.cs",
+"region":  {
+"startLine":  607,
+"startColumn":  21,
+"endLine":  607,
+"endColumn":  32
+}
+}
+}
+]
+}

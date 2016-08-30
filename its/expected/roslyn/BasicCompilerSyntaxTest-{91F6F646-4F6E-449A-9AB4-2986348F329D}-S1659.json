@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1659",
+"message":  "Declare \"followingTrivia\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Syntax\\TestSyntaxNodes.vb",
+"region":  {
+"startLine":  262,
+"startColumn":  64,
+"endLine":  262,
+"endColumn":  79
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"followingTrivia\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Syntax\\TestSyntaxNodes.vb",
+"region":  {
+"startLine":  287,
+"startColumn":  57,
+"endLine":  287,
+"endColumn":  72
+}
+}
+}
+]
+}

@@ -1,0 +1,381 @@
+{
+"issues":  [
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\CodeFixes\\AddImport\\AbstractAddImportCodeFixProvider.cs",
+"region":  {
+"startLine":  435,
+"startColumn":  20,
+"endLine":  437,
+"endColumn":  68
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\CodeFixes\\Qualify\\AbstractFullyQualifyCodeFixProvider.cs",
+"region":  {
+"startLine":  130,
+"startColumn":  29,
+"endLine":  133,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (6) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\CompletionItem.cs",
+"region":  {
+"startLine":  143,
+"startColumn":  17,
+"endLine":  149,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\CompletionItemRules.cs",
+"region":  {
+"startLine":  133,
+"startColumn":  17,
+"endLine":  138,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\CompletionItemRules.cs",
+"region":  {
+"startLine":  185,
+"startColumn":  17,
+"endLine":  190,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\CompletionRules.cs",
+"region":  {
+"startLine":  107,
+"startColumn":  17,
+"endLine":  111,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\Providers\\AbstractSymbolCompletionProvider.cs",
+"region":  {
+"startLine":  142,
+"startColumn":  20,
+"endLine":  146,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\Analyzers\\NamingStyles\\Serialization\\SymbolSpecification.cs",
+"region":  {
+"startLine":  369,
+"startColumn":  21,
+"endLine":  369,
+"endColumn":  109
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\DiagnosticAnalyzerService_IncrementalAnalyzer.cs",
+"region":  {
+"startLine":  130,
+"startColumn":  24,
+"endLine":  135,
+"endColumn":  74
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\ExtractMethod\\AbstractSyntaxTriviaService.Result.cs",
+"region":  {
+"startLine":  121,
+"startColumn":  21,
+"endLine":  125,
+"endColumn":  127
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\ExtractMethod\\ExtractMethodMatrix.cs",
+"region":  {
+"startLine":  72,
+"startColumn":  21,
+"endLine":  72,
+"endColumn":  105
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (7) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\ExtractMethod\\ExtractMethodMatrix.cs",
+"region":  {
+"startLine":  192,
+"startColumn":  24,
+"endLine":  199,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\ExtractMethod\\MethodExtractor.Analyzer.cs",
+"region":  {
+"startLine":  419,
+"startColumn":  21,
+"endLine":  419,
+"endColumn":  119
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\ExtractMethod\\MethodExtractor.Analyzer.cs",
+"region":  {
+"startLine":  659,
+"startColumn":  24,
+"endLine":  663,
+"endColumn":  79
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\ExtractMethod\\MethodExtractor.Analyzer.SymbolMapBuilder.cs",
+"region":  {
+"startLine":  57,
+"startColumn":  25,
+"endLine":  61,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateMember\\GenerateDefaultConstructors\\AbstractGenerateDefaultConstructorsService.State.cs",
+"region":  {
+"startLine":  67,
+"startColumn":  21,
+"endLine":  71,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateMember\\GenerateVariable\\AbstractGenerateVariableService.CodeAction.cs",
+"region":  {
+"startLine":  186,
+"startColumn":  32,
+"endLine":  190,
+"endColumn":  133
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateType\\AbstractGenerateTypeService.Editor.cs",
+"region":  {
+"startLine":  490,
+"startColumn":  25,
+"endLine":  492,
+"endColumn":  108
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateType\\AbstractGenerateTypeService.Editor.cs",
+"region":  {
+"startLine":  510,
+"startColumn":  25,
+"endLine":  512,
+"endColumn":  108
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateType\\AbstractGenerateTypeService.State.cs",
+"region":  {
+"startLine":  137,
+"startColumn":  21,
+"endLine":  141,
+"endColumn":  133
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateType\\AbstractGenerateTypeService.State.cs",
+"region":  {
+"startLine":  264,
+"startColumn":  21,
+"endLine":  268,
+"endColumn":  120
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\ImplementInterface\\AbstractImplementInterfaceService.DisposePatternCodeAction.cs",
+"region":  {
+"startLine":  29,
+"startColumn":  25,
+"endLine":  30,
+"endColumn":  93
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\IntroduceVariable\\AbstractIntroduceVariableService.AbstractIntroduceVariableCodeAction.cs",
+"region":  {
+"startLine":  112,
+"startColumn":  36,
+"endLine":  116,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (6) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\MetadataAsSource\\AbstractMetadataAsSourceService.WrappedNamedTypeSymbol.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  39,
+"endLine":  35,
+"endColumn":  112
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (6) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\ReplaceMethodWithProperty\\ReplaceMethodWithPropertyCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  118,
+"startColumn":  20,
+"endLine":  124,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\ReplaceMethodWithProperty\\ReplaceMethodWithPropertyCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  129,
+"startColumn":  20,
+"endLine":  133,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\ReplaceMethodWithProperty\\ReplaceMethodWithPropertyCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  138,
+"startColumn":  20,
+"endLine":  142,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Shared\\Utilities\\IOUtilities.cs",
+"region":  {
+"startLine":  35,
+"startColumn":  20,
+"endLine":  40,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (9) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\WorkCoordinator.cs",
+"region":  {
+"startLine":  513,
+"startColumn":  21,
+"endLine":  522,
+"endColumn":  91
+}
+}
+}
+]
+}

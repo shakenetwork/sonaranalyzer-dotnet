@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\RepoUtil\\ChangeCommand.cs",
+"region":  {
+"startLine":  51,
+"startColumn":  17,
+"endLine":  51,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\RepoUtil\\Program.cs",
+"region":  {
+"startLine":  101,
+"startColumn":  17,
+"endLine":  101,
+"endColumn":  23
+}
+}
+}
+]
+}

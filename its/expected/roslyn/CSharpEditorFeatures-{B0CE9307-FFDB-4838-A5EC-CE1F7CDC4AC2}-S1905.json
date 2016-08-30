@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"SyntaxNode\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\EventHookup\\EventHookupCommandHandler_TabKeyCommand.cs",
+"region":  {
+"startLine":  236,
+"startColumn":  38,
+"endLine":  236,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"SemanticModel\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\EventHookup\\EventHookupCommandHandler_TabKeyCommand.cs",
+"region":  {
+"startLine":  259,
+"startColumn":  56,
+"endLine":  259,
+"endColumn":  72
+}
+}
+}
+]
+}

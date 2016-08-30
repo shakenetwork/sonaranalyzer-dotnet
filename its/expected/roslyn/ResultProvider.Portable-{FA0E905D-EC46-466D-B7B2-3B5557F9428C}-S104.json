@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S104",
+"message":  "This file has 1183 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Xml\\XmlCharType.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 1027 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\ResultProvider.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+}
+]
+}

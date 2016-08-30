@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"inspectionContext\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\FrameDecoder.cs",
+"region":  {
+"startLine":  134,
+"startColumn":  17,
+"endLine":  134,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"handle\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\PDB\\MethodDebugInfo.Portable.cs",
+"region":  {
+"startLine":  252,
+"startColumn":  17,
+"endLine":  252,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"type\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\PDB\\PdbHelpers.cs",
+"region":  {
+"startLine":  66,
+"startColumn":  17,
+"endLine":  66,
+"endColumn":  21
+}
+}
+}
+]
+}

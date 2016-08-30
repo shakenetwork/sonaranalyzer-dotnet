@@ -1,0 +1,95 @@
+{
+"issues":  [
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\AutomaticCompletion\\Sessions\\CurlyBraceCompletionSession.cs",
+"region":  {
+"startLine":  210,
+"startColumn":  21,
+"endLine":  210,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\BlockCommentEditing\\BlockCommentEditingCommandHandler.cs",
+"region":  {
+"startLine":  145,
+"startColumn":  13,
+"endLine":  145,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\BraceMatching\\StringLiteralBraceMatcher.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  21,
+"endLine":  24,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\EventHookup\\EventHookupCommandHandler_TabKeyCommand.cs",
+"region":  {
+"startLine":  52,
+"startColumn":  13,
+"endLine":  52,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\Outlining\\CSharpOutliningHelpers.cs",
+"region":  {
+"startLine":  119,
+"startColumn":  17,
+"endLine":  119,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\Outlining\\Outliners\\MetadataAsSource\\RegionDirectiveOutliner.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  13,
+"endLine":  20,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\Outlining\\Outliners\\RegionDirectiveOutliner.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  13,
+"endLine":  20,
+"endColumn":  15
+}
+}
+}
+]
+}

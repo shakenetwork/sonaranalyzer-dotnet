@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1944",
+"message":  "Review this cast; in this project there\u0027s no type that implements both \"IVsTextLines\" and \"IVsUserData\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Xaml\\Impl\\Implementation\\XamlTextViewCreationListener.cs",
+"region":  {
+"startLine":  84,
+"startColumn":  49,
+"endLine":  84,
+"endColumn":  60
+}
+}
+}
+]
+}

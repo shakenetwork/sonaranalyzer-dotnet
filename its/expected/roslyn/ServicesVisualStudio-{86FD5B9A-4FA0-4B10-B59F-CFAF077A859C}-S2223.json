@@ -1,0 +1,160 @@
+{
+"issues":  [
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"InjectMvidReadingFailure\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\EditAndContinue\\VsENCRebuildableProjectImpl.cs",
+"region":  {
+"startLine":  1242,
+"startColumn":  48,
+"endLine":  1242,
+"endColumn":  72
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"s_ComWrapperFactory\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Interop\\WrapperPolicy.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  44,
+"endLine":  16,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"ReferenceGlyphIndex\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Library\\FindResults\\TreeItems\\AbstractTreeItem.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  30,
+"endLine":  11,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"TextView\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Preview\\PreviewUpdater.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  33,
+"endLine":  16,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"SpanToShow\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Preview\\PreviewUpdater.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  30,
+"endLine":  18,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"Tagger\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Preview\\PreviewUpdater.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  39,
+"endLine":  19,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"RuleSetErrorId\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\ProjectSystem\\AbstractProject.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  32,
+"endLine":  33,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"CrashOnException\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\ProjectSystem\\AbstractProject.cs",
+"region":  {
+"startLine":  1311,
+"startColumn":  30,
+"endLine":  1311,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"ClrRuntimeHostClassId\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Watson\\Watson.cs",
+"region":  {
+"startLine":  27,
+"startColumn":  30,
+"endLine":  27,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"ClrRuntimeHostInterfaceId\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Watson\\Watson.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  30,
+"endLine":  28,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"ClrErrorReportingManagerInterfaceId\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Watson\\Watson.cs",
+"region":  {
+"startLine":  29,
+"startColumn":  30,
+"endLine":  29,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"Empty\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\SymbolSearch\\Patching\\Delta.cs",
+"region":  {
+"startLine":  34,
+"startColumn":  38,
+"endLine":  34,
+"endColumn":  43
+}
+}
+}
+]
+}

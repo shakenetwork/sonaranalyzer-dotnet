@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S3249",
+"message":  "Remove this \"base\" call to \"object.GetHashCode\", which is directly based on the object reference.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Suggestions\\SuggestedAction.cs",
+"region":  {
+"startLine":  381,
+"startColumn":  24,
+"endLine":  381,
+"endColumn":  42
+}
+}
+}
+]
+}

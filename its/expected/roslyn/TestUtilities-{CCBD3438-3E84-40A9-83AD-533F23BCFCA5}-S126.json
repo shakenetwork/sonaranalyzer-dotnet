@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Assert\\AssertEx.cs",
+"region":  {
+"startLine":  200,
+"startColumn":  13,
+"endLine":  200,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Compilation\\CompilationTestDataExtensions.cs",
+"region":  {
+"startLine":  53,
+"startColumn":  21,
+"endLine":  53,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Pdb\\PdbValidation.cs",
+"region":  {
+"startLine":  455,
+"startColumn":  21,
+"endLine":  455,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Pe\\BrokenStream.cs",
+"region":  {
+"startLine":  90,
+"startColumn":  13,
+"endLine":  90,
+"endColumn":  20
+}
+}
+}
+]
+}

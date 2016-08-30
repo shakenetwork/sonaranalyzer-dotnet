@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S100",
+"message":  "Rename method \"WriteMSBuildFiles\" to match camel case naming rules, consider using \"WriteMsBuildFiles\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Extension\\CompilerPackage.cs",
+"region":  {
+"startLine":  48,
+"startColumn":  22,
+"endLine":  48,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"GetMSBuildVersionString\" to match camel case naming rules, consider using \"GetMsBuildVersionString\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Extension\\CompilerPackage.cs",
+"region":  {
+"startLine":  113,
+"startColumn":  24,
+"endLine":  113,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"WriteMSBuildFile\" to match camel case naming rules, consider using \"WriteMsBuildFile\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Extension\\CompilerPackage.cs",
+"region":  {
+"startLine":  138,
+"startColumn":  22,
+"endLine":  138,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"GetMSBuildPath\" to match camel case naming rules, consider using \"GetMsBuildPath\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Extension\\CompilerPackage.cs",
+"region":  {
+"startLine":  150,
+"startColumn":  24,
+"endLine":  150,
+"endColumn":  38
+}
+}
+}
+]
+}

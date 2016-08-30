@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1135",
+"message":  "Complete the task associated to this \"TODO\" comment.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\IntegrationTests\\CSharp\\CSharpBuild.cs",
+"region":  {
+"startLine":  43,
+"startColumn":  16,
+"endLine":  43,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S1135",
+"message":  "Complete the task associated to this \"TODO\" comment.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\IntegrationTests\\VisualBasic\\BasicBuild.cs",
+"region":  {
+"startLine":  35,
+"startColumn":  16,
+"endLine":  35,
+"endColumn":  20
+}
+}
+}
+]
+}

@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1450",
+"message":  "Remove the \"_tempDirectory\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Server\\VBCSCompilerTests\\DesktopBuildClientTests.cs",
+"region":  {
+"startLine":  73,
+"startColumn":  44,
+"endLine":  73,
+"endColumn":  58
+}
+}
+}
+]
+}

@@ -1,0 +1,82 @@
+{
+"issues":  [
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeActions\\AbstractCodeActionOrUserDiagnosticTest.cs",
+"region":  {
+"startLine":  292,
+"startColumn":  33,
+"endLine":  292,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CommentSelection\\CommentUncommentSelectionCommandHandlerTests.cs",
+"region":  {
+"startLine":  596,
+"startColumn":  21,
+"endLine":  596,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Outlining\\AbstractSyntaxNodeOutlinerTests.cs",
+"region":  {
+"startLine":  35,
+"startColumn":  21,
+"endLine":  35,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestWorkspace.cs",
+"region":  {
+"startLine":  85,
+"startColumn":  21,
+"endLine":  85,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestWorkspace.cs",
+"region":  {
+"startLine":  568,
+"startColumn":  33,
+"endLine":  568,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestWorkspace_XmlConsumption.cs",
+"region":  {
+"startLine":  165,
+"startColumn":  25,
+"endLine":  165,
+"endColumn":  31
+}
+}
+}
+]
+}

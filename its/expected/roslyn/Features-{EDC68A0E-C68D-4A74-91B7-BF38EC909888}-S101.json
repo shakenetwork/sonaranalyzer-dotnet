@@ -1,0 +1,82 @@
+{
+"issues":  [
+{
+"id":  "S101",
+"message":  "Rename class \"IDEDiagnosticIds\" to match camel case naming rules, consider using \"IdeDiagnosticIds\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\Analyzers\\IDEDiagnosticIds.cs",
+"region":  {
+"startLine":  5,
+"startColumn":  27,
+"endLine":  5,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"IDECachedDiagnosticGetter\" to match camel case naming rules, consider using \"IdeCachedDiagnosticGetter\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\EngineV2\\DiagnosticIncrementalAnalyzer_GetDiagnostics.cs",
+"region":  {
+"startLine":  235,
+"startColumn":  23,
+"endLine":  235,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"IDELatestDiagnosticGetter\" to match camel case naming rules, consider using \"IdeLatestDiagnosticGetter\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\EngineV2\\DiagnosticIncrementalAnalyzer_GetDiagnostics.cs",
+"region":  {
+"startLine":  337,
+"startColumn":  23,
+"endLine":  337,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename struct \"ILDelta\" to match camel case naming rules, consider using \"IlDelta\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\ILDelta.cs",
+"region":  {
+"startLine":  5,
+"startColumn":  21,
+"endLine":  5,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"ISymbolExtensions2\" to match camel case naming rules, consider using \"SymbolExtensions2\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Shared\\Extensions\\ISymbolExtensions_Sorting.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  28,
+"endLine":  14,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"IOUtilities\" to match camel case naming rules, consider using \"IoUtilities\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Shared\\Utilities\\IOUtilities.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  27,
+"endLine":  9,
+"endColumn":  38
+}
+}
+}
+]
+}

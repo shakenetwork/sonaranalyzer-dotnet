@@ -1,0 +1,82 @@
+{
+"issues":  [
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\CodeModel\\CSharpCodeModelNavigationPointServiceFactory.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  14,
+"endLine":  17,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\CodeModel\\CSharpCodeModelServiceFactory.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  14,
+"endLine":  15,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\Debugging\\CSharpBreakpointResolutionService.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  14,
+"endLine":  16,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\Debugging\\CSharpLanguageDebugInfoService.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  14,
+"endLine":  14,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\Progression\\CSharpProgressionLanguageService.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  14,
+"endLine":  23,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\Snippets\\SnippetExpansionClient.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  21,
+"endLine":  26,
+"endColumn":  28
+}
+}
+}
+]
+}

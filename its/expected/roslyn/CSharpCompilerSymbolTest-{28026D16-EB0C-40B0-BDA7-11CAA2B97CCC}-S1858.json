@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\" on a string.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Metadata\\PE\\LoadingAttributes.cs",
+"region":  {
+"startLine":  570,
+"startColumn":  50,
+"endLine":  570,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\TypeTests.cs",
+"region":  {
+"startLine":  618,
+"startColumn":  69,
+"endLine":  618,
+"endColumn":  80
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\TypeTests.cs",
+"region":  {
+"startLine":  635,
+"startColumn":  71,
+"endLine":  635,
+"endColumn":  82
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\TypeTests.cs",
+"region":  {
+"startLine":  643,
+"startColumn":  71,
+"endLine":  643,
+"endColumn":  82
+}
+}
+}
+]
+}

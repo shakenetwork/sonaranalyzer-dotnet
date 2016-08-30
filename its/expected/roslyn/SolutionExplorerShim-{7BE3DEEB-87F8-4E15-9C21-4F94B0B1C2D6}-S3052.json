@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_commandHandler\", the compiler will do that for you.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\SolutionExplorerShim\\AnalyzerItem\\AnalyzerItemProvider.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  58,
+"endLine":  16,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_vsMonitorSelection\", the compiler will do that for you.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\SolutionExplorerShim\\AnalyzerItemTracker.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  57,
+"endLine":  21,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_selectionEventsCookie\", the compiler will do that for you.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\SolutionExplorerShim\\AnalyzerItemTracker.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  45,
+"endLine":  22,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_tracker\", the compiler will do that for you.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\SolutionExplorerShim\\AnalyzerReferenceManager.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  47,
+"endLine":  25,
+"endColumn":  53
+}
+}
+}
+]
+}

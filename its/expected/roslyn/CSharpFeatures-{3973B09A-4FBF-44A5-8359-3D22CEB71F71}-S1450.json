@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1450",
+"message":  "Remove the \"_initializer\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\InlineTemporary\\InlineTemporaryCodeRefactoringProvider.InitializerRewriter.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  47,
+"endLine":  20,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_codeIssueProvider\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\LambdaSimplifier\\LambdaSimplifierCodeRefactoringProvider.Rewriter.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  70,
+"endLine":  20,
+"endColumn":  88
+}
+}
+}
+]
+}

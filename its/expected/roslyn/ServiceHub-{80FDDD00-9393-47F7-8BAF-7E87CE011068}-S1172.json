@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"logger\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Remote\\ServiceHub\\Services\\SnapshotService.JsonRpcAssetSource.cs",
+"region":  {
+"startLine":  56,
+"startColumn":  32,
+"endLine":  56,
+"endColumn":  50
+}
+}
+}
+]
+}

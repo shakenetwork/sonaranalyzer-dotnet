@@ -1,0 +1,82 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"text\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest2\\Recommendations\\RecommenderTests.cs",
+"region":  {
+"startLine":  44,
+"startColumn":  13,
+"endLine":  44,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"position\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest2\\Recommendations\\RecommenderTests.cs",
+"region":  {
+"startLine":  46,
+"startColumn":  13,
+"endLine":  46,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"text\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest2\\Recommendations\\RecommenderTests.cs",
+"region":  {
+"startLine":  116,
+"startColumn":  13,
+"endLine":  116,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"position\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest2\\Recommendations\\RecommenderTests.cs",
+"region":  {
+"startLine":  118,
+"startColumn":  13,
+"endLine":  118,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"text\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest2\\Recommendations\\RecommenderTests.cs",
+"region":  {
+"startLine":  147,
+"startColumn":  13,
+"endLine":  147,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"position\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest2\\Recommendations\\RecommenderTests.cs",
+"region":  {
+"startLine":  149,
+"startColumn":  13,
+"endLine":  149,
+"endColumn":  21
+}
+}
+}
+]
+}

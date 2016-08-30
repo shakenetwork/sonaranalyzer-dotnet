@@ -1,0 +1,82 @@
+{
+"issues":  [
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (7) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeGeneration\\CodeGenerationTests.cs",
+"region":  {
+"startLine":  929,
+"startColumn":  21,
+"endLine":  936,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (6) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Completion\\AbstractCompletionProviderTests.cs",
+"region":  {
+"startLine":  125,
+"startColumn":  46,
+"endLine":  128,
+"endColumn":  112
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\EditAndContinue\\RudeEditDiagnosticDescription.cs",
+"region":  {
+"startLine":  34,
+"startColumn":  20,
+"endLine":  37,
+"endColumn":  77
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\MetadataAsSource\\AbstractMetadataAsSourceTests.TestContext.cs",
+"region":  {
+"startLine":  204,
+"startColumn":  21,
+"endLine":  209,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestWorkspace.cs",
+"region":  {
+"startLine":  508,
+"startColumn":  21,
+"endLine":  511,
+"endColumn":  144
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestWorkspace_XmlCreation.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  20,
+"endLine":  33,
+"endColumn":  26
+}
+}
+}
+]
+}

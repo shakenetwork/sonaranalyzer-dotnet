@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S3257",
+"message":  "Remove the explicit delegate creation; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Diagnostics\\PerfMargin\\ActivityLevel.cs",
+"region":  {
+"startLine":  88,
+"startColumn":  32,
+"endLine":  88,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Diagnostics\\PerfMargin\\PerfMarginPanel.cs",
+"region":  {
+"startLine":  40,
+"startColumn":  47,
+"endLine":  40,
+"endColumn":  60
+}
+}
+}
+]
+}

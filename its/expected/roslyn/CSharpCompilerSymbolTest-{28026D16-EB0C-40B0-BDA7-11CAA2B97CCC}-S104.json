@@ -1,0 +1,459 @@
+{
+"issues":  [
+{
+"id":  "S104",
+"message":  "This file has 1412 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\BadSymbolReference.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 2532 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\CompilationAPITests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 5785 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\GetSemanticInfoTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 3251 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\ReferenceManagerTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 3518 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\SemanticModelAPITests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 4767 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\SemanticModelGetDeclaredSymbolAPITests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 15183 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\SemanticModelGetSemanticInfoTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 6601 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\DocumentationComments\\CrefTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 6182 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\DocumentationComments\\DocumentationCommentCompilerTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 1026 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\AccessorOverriddenOrHiddenMembersTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 1964 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\AnonymousTypesSymbolTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 2994 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\CompilationCreationTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 1991 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\ConversionTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 2011 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\CustomModifiersTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 3718 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\ExtensionMethodTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 1061 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\GenericConstraintConversionTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 6688 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\GenericConstraintTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 2766 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\IndexedPropertyTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 2912 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\IndexerTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 2458 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\InterfaceImplementationTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 1457 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Metadata\\PE\\LoadingAttributes.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 1186 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Metadata\\PE\\LoadingIndexers.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 1384 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Metadata\\PE\\LoadingMethods.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 1345 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Metadata\\PE\\NoPia.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 1744 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Metadata\\PE\\TypeForwarders.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 3982 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\OverriddenOrHiddenMembersTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 2459 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Retargeting\\NoPia.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 2272 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Source\\BaseClassTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 3639 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Source\\ClsComplianceTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 2004 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Source\\CustomModifierCopyTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 2420 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Source\\EventTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 2124 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Source\\MethodTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 2935 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Source\\PropertyTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 19402 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\SymbolErrorTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 1855 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\TypeTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+}
+]
+}

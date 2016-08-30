@@ -1,0 +1,1174 @@
+{
+"issues":  [
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Binder_Attributes.cs",
+"region":  {
+"startLine":  916,
+"startColumn":  17,
+"endLine":  916,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Binder_Attributes.cs",
+"region":  {
+"startLine":  921,
+"startColumn":  25,
+"endLine":  921,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Binder_Attributes.cs",
+"region":  {
+"startLine":  1026,
+"startColumn":  21,
+"endLine":  1026,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Binder_Await.cs",
+"region":  {
+"startLine":  124,
+"startColumn":  17,
+"endLine":  124,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Binder_Expressions.cs",
+"region":  {
+"startLine":  2025,
+"startColumn":  17,
+"endLine":  2025,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Binder_Invocation.cs",
+"region":  {
+"startLine":  1032,
+"startColumn":  13,
+"endLine":  1032,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Binder_Operators.cs",
+"region":  {
+"startLine":  27,
+"startColumn":  17,
+"endLine":  27,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Binder_Operators.cs",
+"region":  {
+"startLine":  2380,
+"startColumn":  17,
+"endLine":  2380,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Binder_Operators.cs",
+"region":  {
+"startLine":  2396,
+"startColumn":  17,
+"endLine":  2396,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\EarlyWellKnownAttributeBinder.cs",
+"region":  {
+"startLine":  60,
+"startColumn":  29,
+"endLine":  60,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Imports.cs",
+"region":  {
+"startLine":  763,
+"startColumn":  17,
+"endLine":  763,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\LockOrUsingBinder.cs",
+"region":  {
+"startLine":  54,
+"startColumn":  29,
+"endLine":  54,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Semantics\\Operators\\BinaryOperatorOverloadResolution.cs",
+"region":  {
+"startLine":  147,
+"startColumn":  17,
+"endLine":  147,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Semantics\\Operators\\BinaryOperatorOverloadResolution.cs",
+"region":  {
+"startLine":  351,
+"startColumn":  13,
+"endLine":  351,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Semantics\\OverloadResolution\\OverloadResolution.cs",
+"region":  {
+"startLine":  537,
+"startColumn":  13,
+"endLine":  537,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\SwitchBinder.cs",
+"region":  {
+"startLine":  216,
+"startColumn":  17,
+"endLine":  216,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\BoundTree\\BoundExpressionExtensions.cs",
+"region":  {
+"startLine":  148,
+"startColumn":  13,
+"endLine":  148,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\BoundTree\\Expression.cs",
+"region":  {
+"startLine":  567,
+"startColumn":  33,
+"endLine":  567,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\BoundTree\\Expression.cs",
+"region":  {
+"startLine":  2487,
+"startColumn":  21,
+"endLine":  2487,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\BoundTree\\Expression.cs",
+"region":  {
+"startLine":  2498,
+"startColumn":  21,
+"endLine":  2498,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\CodeGen\\EmitConversion.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  13,
+"endLine":  14,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\CodeGen\\EmitConversion.cs",
+"region":  {
+"startLine":  130,
+"startColumn":  17,
+"endLine":  130,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\CodeGen\\EmitExpression.cs",
+"region":  {
+"startLine":  1303,
+"startColumn":  13,
+"endLine":  1303,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\CodeGen\\EmitExpression.cs",
+"region":  {
+"startLine":  2012,
+"startColumn":  13,
+"endLine":  2012,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Compilation\\AttributeSemanticModel.cs",
+"region":  {
+"startLine":  55,
+"startColumn":  13,
+"endLine":  55,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Compilation\\CSharpSemanticModel.cs",
+"region":  {
+"startLine":  3896,
+"startColumn":  17,
+"endLine":  3896,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Compilation\\CSharpSemanticModel.cs",
+"region":  {
+"startLine":  4688,
+"startColumn":  13,
+"endLine":  4688,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Compilation\\SyntaxTreeSemanticModel.cs",
+"region":  {
+"startLine":  1076,
+"startColumn":  17,
+"endLine":  1076,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Compiler\\DocumentationCommentCompiler.cs",
+"region":  {
+"startLine":  748,
+"startColumn":  17,
+"endLine":  748,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Compiler\\EntryPointCandidateFinder.cs",
+"region":  {
+"startLine":  52,
+"startColumn":  17,
+"endLine":  52,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Compiler\\SynthesizedMetadataCompiler.cs",
+"region":  {
+"startLine":  80,
+"startColumn":  17,
+"endLine":  80,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\TypeParameterSymbolAdapter.cs",
+"region":  {
+"startLine":  229,
+"startColumn":  17,
+"endLine":  229,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Errors\\MessageID.cs",
+"region":  {
+"startLine":  166,
+"startColumn":  13,
+"endLine":  166,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\FlowAnalysis\\DataFlowPass.cs",
+"region":  {
+"startLine":  1651,
+"startColumn":  17,
+"endLine":  1651,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\FlowAnalysis\\EmptyStructTypeCache.cs",
+"region":  {
+"startLine":  166,
+"startColumn":  17,
+"endLine":  166,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\FlowAnalysis\\PreciseAbstractFlowPass.cs",
+"region":  {
+"startLine":  964,
+"startColumn":  13,
+"endLine":  964,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\FlowAnalysis\\RegionAnalysisContext.cs",
+"region":  {
+"startLine":  45,
+"startColumn":  17,
+"endLine":  45,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\DiagnosticsPass_Warnings.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  25,
+"endLine":  26,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\DiagnosticsPass_Warnings.cs",
+"region":  {
+"startLine":  725,
+"startColumn":  13,
+"endLine":  725,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LocalRewriter.cs",
+"region":  {
+"startLine":  447,
+"startColumn":  17,
+"endLine":  447,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_BinaryOperator.cs",
+"region":  {
+"startLine":  1889,
+"startColumn":  17,
+"endLine":  1889,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_Call.cs",
+"region":  {
+"startLine":  821,
+"startColumn":  13,
+"endLine":  821,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_Conversion.cs",
+"region":  {
+"startLine":  70,
+"startColumn":  13,
+"endLine":  70,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_StringConcat.cs",
+"region":  {
+"startLine":  121,
+"startColumn":  13,
+"endLine":  121,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\MethodToClassRewriter.cs",
+"region":  {
+"startLine":  619,
+"startColumn":  13,
+"endLine":  619,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\Directives.cs",
+"region":  {
+"startLine":  308,
+"startColumn":  17,
+"endLine":  308,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\DocumentationCommentParser.cs",
+"region":  {
+"startLine":  802,
+"startColumn":  13,
+"endLine":  802,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\DocumentationCommentParser.cs",
+"region":  {
+"startLine":  823,
+"startColumn":  13,
+"endLine":  823,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\DocumentationCommentParser.cs",
+"region":  {
+"startLine":  1185,
+"startColumn":  13,
+"endLine":  1185,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\DocumentationCommentXmlTokens.cs",
+"region":  {
+"startLine":  85,
+"startColumn":  21,
+"endLine":  85,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\DocumentationCommentXmlTokens.cs",
+"region":  {
+"startLine":  96,
+"startColumn":  21,
+"endLine":  96,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\DocumentationCommentXmlTokens.cs",
+"region":  {
+"startLine":  127,
+"startColumn":  21,
+"endLine":  127,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\LanguageParser.cs",
+"region":  {
+"startLine":  1181,
+"startColumn":  17,
+"endLine":  1181,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\LanguageParser.cs",
+"region":  {
+"startLine":  1272,
+"startColumn":  21,
+"endLine":  1272,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\LanguageParser.cs",
+"region":  {
+"startLine":  2270,
+"startColumn":  29,
+"endLine":  2270,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\LanguageParser.cs",
+"region":  {
+"startLine":  7078,
+"startColumn":  13,
+"endLine":  7078,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\LanguageParser.cs",
+"region":  {
+"startLine":  7621,
+"startColumn":  13,
+"endLine":  7621,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\LanguageParser.cs",
+"region":  {
+"startLine":  9583,
+"startColumn":  13,
+"endLine":  9583,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\SymbolDisplay\\SymbolDisplayVisitor.Members.cs",
+"region":  {
+"startLine":  725,
+"startColumn":  17,
+"endLine":  725,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\SymbolDisplay\\SymbolDisplayVisitor.Types.cs",
+"region":  {
+"startLine":  608,
+"startColumn":  17,
+"endLine":  608,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\AnonymousTypes\\SynthesizedSymbols\\AnonymousType.TemplateSymbol.cs",
+"region":  {
+"startLine":  206,
+"startColumn":  21,
+"endLine":  206,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\BaseTypeAnalysis.cs",
+"region":  {
+"startLine":  111,
+"startColumn":  13,
+"endLine":  111,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\ErrorMethodSymbol.cs",
+"region":  {
+"startLine":  189,
+"startColumn":  17,
+"endLine":  189,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\NamedTypeSymbol.cs",
+"region":  {
+"startLine":  580,
+"startColumn":  17,
+"endLine":  580,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\ModifierUtils.cs",
+"region":  {
+"startLine":  45,
+"startColumn":  17,
+"endLine":  45,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceAssemblySymbol.cs",
+"region":  {
+"startLine":  2262,
+"startColumn":  21,
+"endLine":  2262,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceCustomEventSymbol.cs",
+"region":  {
+"startLine":  75,
+"startColumn":  17,
+"endLine":  75,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceMemberContainerSymbol.cs",
+"region":  {
+"startLine":  341,
+"startColumn":  21,
+"endLine":  341,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceMemberContainerSymbol.cs",
+"region":  {
+"startLine":  723,
+"startColumn":  17,
+"endLine":  723,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceMemberContainerSymbol.cs",
+"region":  {
+"startLine":  1106,
+"startColumn":  13,
+"endLine":  1106,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceMemberContainerSymbol.cs",
+"region":  {
+"startLine":  1193,
+"startColumn":  17,
+"endLine":  1193,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceMemberContainerSymbol.cs",
+"region":  {
+"startLine":  1706,
+"startColumn":  17,
+"endLine":  1706,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceMemberContainerSymbol.cs",
+"region":  {
+"startLine":  2790,
+"startColumn":  21,
+"endLine":  2790,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceModuleSymbol.cs",
+"region":  {
+"startLine":  160,
+"startColumn":  17,
+"endLine":  160,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol.cs",
+"region":  {
+"startLine":  875,
+"startColumn":  21,
+"endLine":  875,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourcePropertyAccessorSymbol.cs",
+"region":  {
+"startLine":  464,
+"startColumn":  13,
+"endLine":  464,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\SymbolExtensions.cs",
+"region":  {
+"startLine":  279,
+"startColumn":  17,
+"endLine":  279,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Synthesized\\SynthesizedContainer.cs",
+"region":  {
+"startLine":  139,
+"startColumn":  17,
+"endLine":  139,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\TypeParameterSymbol.cs",
+"region":  {
+"startLine":  407,
+"startColumn":  17,
+"endLine":  407,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\TypeSymbol.cs",
+"region":  {
+"startLine":  1159,
+"startColumn":  17,
+"endLine":  1159,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\DirectiveTriviaSyntax.cs",
+"region":  {
+"startLine":  225,
+"startColumn":  21,
+"endLine":  225,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\DirectiveTriviaSyntax.cs",
+"region":  {
+"startLine":  275,
+"startColumn":  25,
+"endLine":  275,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\DirectiveTriviaSyntax.cs",
+"region":  {
+"startLine":  289,
+"startColumn":  25,
+"endLine":  289,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\DirectiveTriviaSyntax.cs",
+"region":  {
+"startLine":  326,
+"startColumn":  21,
+"endLine":  326,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\InternalSyntax\\SyntaxToken.MissingTokenWithTrivia.cs",
+"region":  {
+"startLine":  44,
+"startColumn":  21,
+"endLine":  44,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\NameSyntax.cs",
+"region":  {
+"startLine":  44,
+"startColumn":  17,
+"endLine":  44,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\SyntaxEquivalence.cs",
+"region":  {
+"startLine":  111,
+"startColumn":  17,
+"endLine":  111,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\SyntaxFactory.cs",
+"region":  {
+"startLine":  2076,
+"startColumn":  21,
+"endLine":  2076,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\SyntaxFacts.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  13,
+"endLine":  28,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\SyntaxNormalizer.cs",
+"region":  {
+"startLine":  654,
+"startColumn":  13,
+"endLine":  654,
+"endColumn":  19
+}
+}
+}
+]
+}

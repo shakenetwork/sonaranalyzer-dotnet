@@ -1,0 +1,108 @@
+{
+"issues":  [
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\InlineTemporary\\InlineTemporaryCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  402,
+"startColumn":  21,
+"endLine":  402,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\InlineTemporary\\InlineTemporaryCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  412,
+"startColumn":  21,
+"endLine":  412,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\MoveDeclarationNearReference\\MoveDeclarationNearReferenceCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  113,
+"startColumn":  21,
+"endLine":  113,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\OverrideCompletionProvider.cs",
+"region":  {
+"startLine":  144,
+"startColumn":  21,
+"endLine":  144,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\XmlDocCommentCompletionProvider.cs",
+"region":  {
+"startLine":  294,
+"startColumn":  25,
+"endLine":  294,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpMethodExtractor.CSharpCodeGenerator.MultipleStatementsCodeGenerator.cs",
+"region":  {
+"startLine":  78,
+"startColumn":  29,
+"endLine":  78,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionResult.cs",
+"region":  {
+"startLine":  84,
+"startColumn":  21,
+"endLine":  84,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateMember\\GenerateConstructor\\CSharpGenerateConstructorService.cs",
+"region":  {
+"startLine":  271,
+"startColumn":  29,
+"endLine":  271,
+"endColumn":  35
+}
+}
+}
+]
+}

@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S104",
+"message":  "This file has 7429 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\WinRT\\CodeGen\\WinRTCollectionTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 3544 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\WinRT\\Metadata\\WinMdEventTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+}
+]
+}

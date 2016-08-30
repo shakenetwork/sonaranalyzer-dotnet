@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S104",
+"message":  "This file has 3139 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+},
+{
+"id":  "S104",
+"message":  "This file has 1040 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\StatementSyntaxComparer.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+}
+]
+}

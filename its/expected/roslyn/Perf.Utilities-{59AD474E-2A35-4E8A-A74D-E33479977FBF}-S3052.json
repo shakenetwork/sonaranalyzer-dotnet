@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"ResultTests\", the compiler will do that for you.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Perf\\Utilities\\TestUtilities.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  46,
+"endLine":  19,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"IsRunnerAttached\", the compiler will do that for you.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Perf\\Utilities\\TestUtilities.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  45,
+"endLine":  31,
+"endColumn":  52
+}
+}
+}
+]
+}

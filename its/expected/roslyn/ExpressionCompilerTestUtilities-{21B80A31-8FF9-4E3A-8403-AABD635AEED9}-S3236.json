@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S3236",
+"message":  "Remove this argument from the method call; it hides the caller information.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Test\\ExpressionCompiler\\ExpressionCompilerTestHelpers.cs",
+"region":  {
+"startLine":  531,
+"startColumn":  21,
+"endLine":  531,
+"endColumn":  69
+}
+}
+},
+{
+"id":  "S3236",
+"message":  "Remove this argument from the method call; it hides the caller information.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Test\\ExpressionCompiler\\ExpressionCompilerTestHelpers.cs",
+"region":  {
+"startLine":  532,
+"startColumn":  21,
+"endLine":  532,
+"endColumn":  69
+}
+}
+}
+]
+}

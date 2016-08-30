@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1944",
+"message":  "Review this cast; in this project there\u0027s no type that implements both \"IVsTextBuffer\" and \"IVsUserData\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\AbstractEditorFactory.cs",
+"region":  {
+"startLine":  129,
+"startColumn":  50,
+"endLine":  129,
+"endColumn":  61
+}
+}
+}
+]
+}

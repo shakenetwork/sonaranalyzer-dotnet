@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1185",
+"message":  "Remove this method \"FreeBasicBlocks\" to simply inherit its behavior.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\LocalScopeManager.cs",
+"region":  {
+"startLine":  656,
+"startColumn":  13,
+"endLine":  659,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1185",
+"message":  "Remove this method \"WriteTo\" to simply inherit its behavior.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\InternalSyntax\\SyntaxList.WithLotsOfChildren.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  13,
+"endLine":  37,
+"endColumn":  14
+}
+}
+}
+]
+}

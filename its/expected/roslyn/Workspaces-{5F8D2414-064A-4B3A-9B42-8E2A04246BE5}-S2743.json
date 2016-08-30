@@ -1,0 +1,82 @@
+{
+"issues":  [
+{
+"id":  "S2743",
+"message":  "A static field in a generic type is not shared among instances of different close constructed types.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Collections\\IntervalTree%601.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  46,
+"endLine":  23,
+"endColumn":  66
+}
+}
+},
+{
+"id":  "S2743",
+"message":  "A static field in a generic type is not shared among instances of different close constructed types.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Collections\\IntervalTree%601.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  46,
+"endLine":  24,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S2743",
+"message":  "A static field in a generic type is not shared among instances of different close constructed types.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Collections\\IntervalTree%601.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  46,
+"endLine":  25,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S2743",
+"message":  "A static field in a generic type is not shared among instances of different close constructed types.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\AsyncLazy%601.cs",
+"region":  {
+"startLine":  55,
+"startColumn":  50,
+"endLine":  55,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2743",
+"message":  "A static field in a generic type is not shared among instances of different close constructed types.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\ValuesSources\\RecoverableWeakValueSource.cs",
+"region":  {
+"startLine":  61,
+"startColumn":  29,
+"endLine":  61,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2743",
+"message":  "A static field in a generic type is not shared among instances of different close constructed types.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\ValuesSources\\RecoverableWeakValueSource.cs",
+"region":  {
+"startLine":  62,
+"startColumn":  50,
+"endLine":  62,
+"endColumn":  61
+}
+}
+}
+]
+}

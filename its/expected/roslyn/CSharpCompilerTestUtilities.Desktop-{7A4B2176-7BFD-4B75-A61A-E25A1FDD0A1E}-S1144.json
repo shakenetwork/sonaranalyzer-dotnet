@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp.Desktop\\CSharpTestBase.cs",
+"region":  {
+"startLine":  55,
+"startColumn":  9,
+"endLine":  65,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\ScriptTestFixtures.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  9,
+"endLine":  40,
+"endColumn":  10
+}
+}
+}
+]
+}

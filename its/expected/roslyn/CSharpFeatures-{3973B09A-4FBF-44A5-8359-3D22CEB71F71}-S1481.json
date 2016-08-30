@@ -1,0 +1,342 @@
+{
+"issues":  [
+{
+"id":  "S1481",
+"message":  "Remove this unused \"usingDirectives\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeFixes\\AddImport\\CSharpAddImportCodeFixProvider.cs",
+"region":  {
+"startLine":  588,
+"startColumn":  17,
+"endLine":  588,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"workspace\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\AttributeNamedParameterCompletionProvider.cs",
+"region":  {
+"startLine":  71,
+"startColumn":  17,
+"endLine":  71,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"unspecifiedNamedParameters\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\AttributeNamedParameterCompletionProvider.cs",
+"region":  {
+"startLine":  142,
+"startColumn":  17,
+"endLine":  142,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"text\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\AttributeNamedParameterCompletionProvider.cs",
+"region":  {
+"startLine":  144,
+"startColumn":  17,
+"endLine":  144,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"text\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\AttributeNamedParameterCompletionProvider.cs",
+"region":  {
+"startLine":  162,
+"startColumn":  17,
+"endLine":  162,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"workspace\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\EnumAndCompletionListTagCompletionProvider.cs",
+"region":  {
+"startLine":  111,
+"startColumn":  21,
+"endLine":  111,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"text\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\EnumAndCompletionListTagCompletionProvider.cs",
+"region":  {
+"startLine":  112,
+"startColumn":  21,
+"endLine":  112,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"text\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\ExplicitInterfaceCompletionProvider.cs",
+"region":  {
+"startLine":  91,
+"startColumn":  17,
+"endLine":  91,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"text\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\ExternAliasCompletionProvider.cs",
+"region":  {
+"startLine":  54,
+"startColumn":  25,
+"endLine":  54,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"text\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\NamedParameterCompletionProvider.cs",
+"region":  {
+"startLine":  87,
+"startColumn":  17,
+"endLine":  87,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"workspace\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\NamedParameterCompletionProvider.cs",
+"region":  {
+"startLine":  89,
+"startColumn":  17,
+"endLine":  89,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"options\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\SnippetCompletionProvider.cs",
+"region":  {
+"startLine":  43,
+"startColumn":  17,
+"endLine":  43,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"text\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\SnippetCompletionProvider.cs",
+"region":  {
+"startLine":  135,
+"startColumn":  17,
+"endLine":  135,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"text\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\SpeculativeTCompletionProvider.cs",
+"region":  {
+"startLine":  35,
+"startColumn":  21,
+"endLine":  35,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"text\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\XmlDocCommentCompletionProvider.cs",
+"region":  {
+"startLine":  41,
+"startColumn":  17,
+"endLine":  41,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"syntaxTree\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\AbstractSyntacticSingleKeywordRecommender.cs",
+"region":  {
+"startLine":  74,
+"startColumn":  17,
+"endLine":  74,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"syntaxTree\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\DynamicKeywordRecommender.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  17,
+"endLine":  17,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"syntaxTree\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\NullKeywordRecommender.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  17,
+"endLine":  19,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"ns\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\UsingKeywordRecommender.cs",
+"region":  {
+"startLine":  107,
+"startColumn":  21,
+"endLine":  107,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"text\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\SuggestionMode\\CSharpSuggestionModeCompletionProvider.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  21,
+"endLine":  26,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"semanticModel\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionResult.StatementResult.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  21,
+"endLine":  33,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"syntaxTree\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateMember\\GenerateDefaultConstructors\\CSharpGenerateDefaultConstructorsService.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  21,
+"endLine":  23,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"semanticModel\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateMember\\GenerateParameterizedMember\\CSharpGenerateParameterizedMemberService.cs",
+"region":  {
+"startLine":  76,
+"startColumn":  21,
+"endLine":  76,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"typeNameToReplace\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateType\\CSharpGenerateTypeService.cs",
+"region":  {
+"startLine":  939,
+"startColumn":  17,
+"endLine":  939,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"parentBlock\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\InvokeDelegateWithConditionalAccess\\InvokeDelegateWithConditionalAccessCodeFixProvider.cs",
+"region":  {
+"startLine":  108,
+"startColumn":  17,
+"endLine":  108,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"conditional\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\SignatureHelp\\ElementAccessExpressionSignatureHelpProvider.cs",
+"region":  {
+"startLine":  164,
+"startColumn":  21,
+"endLine":  164,
+"endColumn":  32
+}
+}
+}
+]
+}

@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TTag)\" instead or add a constraint to \"TTag\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Diagnostics\\AbstractDiagnosticsAdornmentTaggerProvider.cs",
+"region":  {
+"startLine":  29,
+"startColumn":  29,
+"endLine":  29,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TModel)\" instead or add a constraint to \"TModel\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\AbstractController.cs",
+"region":  {
+"startLine":  136,
+"startColumn":  71,
+"endLine":  136,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TModel)\" instead or add a constraint to \"TModel\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\ModelComputation.cs",
+"region":  {
+"startLine":  172,
+"startColumn":  44,
+"endLine":  172,
+"endColumn":  48
+}
+}
+}
+]
+}

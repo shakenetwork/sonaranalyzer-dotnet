@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S100",
+"message":  "Rename method \"GetEncodingOrUTF8\" to match camel case naming rules, consider using \"GetEncodingOrUtf8\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Text\\Extensions.cs",
+"region":  {
+"startLine":  150,
+"startColumn":  34,
+"endLine":  150,
+"endColumn":  51
+}
+}
+}
+]
+}

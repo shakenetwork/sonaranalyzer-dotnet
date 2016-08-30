@@ -1,0 +1,69 @@
+{
+"issues":  [
+{
+"id":  "S2376",
+"message":  "Provide a getter for \"CurrentLocalTime_internal_protected_set\" or replace the property with a \"SetCurrentLocalTime_internal_protected_set\" method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\CompilationOptions.cs",
+"region":  {
+"startLine":  161,
+"startColumn":  27,
+"endLine":  161,
+"endColumn":  66
+}
+}
+},
+{
+"id":  "S2376",
+"message":  "Provide a getter for \"ExtendedCustomDebugInformation_internal_protected_set\" or replace the property with a \"SetExtendedCustomDebugInformation_internal_protected_set\" method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\CompilationOptions.cs",
+"region":  {
+"startLine":  169,
+"startColumn":  23,
+"endLine":  169,
+"endColumn":  76
+}
+}
+},
+{
+"id":  "S2376",
+"message":  "Provide a getter for \"DebugPlusMode_internal_protected_set\" or replace the property with a \"SetDebugPlusMode_internal_protected_set\" method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\CompilationOptions.cs",
+"region":  {
+"startLine":  177,
+"startColumn":  23,
+"endLine":  177,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S2376",
+"message":  "Provide a getter for \"MetadataImportOptions_internal_protected_set\" or replace the property with a \"SetMetadataImportOptions_internal_protected_set\" method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\CompilationOptions.cs",
+"region":  {
+"startLine":  185,
+"startColumn":  40,
+"endLine":  185,
+"endColumn":  84
+}
+}
+},
+{
+"id":  "S2376",
+"message":  "Provide a getter for \"ReferencesSupersedeLowerVersions_internal_protected_set\" or replace the property with a \"SetReferencesSupersedeLowerVersions_internal_protected_set\" method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\CompilationOptions.cs",
+"region":  {
+"startLine":  193,
+"startColumn":  23,
+"endLine":  193,
+"endColumn":  78
+}
+}
+}
+]
+}

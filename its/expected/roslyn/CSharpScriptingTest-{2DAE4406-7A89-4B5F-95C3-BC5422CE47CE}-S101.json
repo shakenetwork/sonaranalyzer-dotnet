@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S101",
+"message":  "Rename interface \"System\" to match camel case naming rules, consider using \"ISystem\".",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\CSharpTest\\InteractiveSessionFixtures.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  26,
+"endLine":  22,
+"endColumn":  32
+}
+}
+}
+]
+}

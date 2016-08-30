@@ -1,0 +1,238 @@
+{
+"issues":  [
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\CommandHandlers\\GoToAdjacentMemberCommandHandler.cs",
+"region":  {
+"startLine":  102,
+"startColumn":  13,
+"endLine":  102,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"??\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\CallHierarchy\\CallHierarchyProvider.cs",
+"region":  {
+"startLine":  67,
+"startColumn":  32,
+"endLine":  67,
+"endColumn":  106
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"??\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\CallHierarchy\\CallHierarchyProvider.cs",
+"region":  {
+"startLine":  68,
+"startColumn":  32,
+"endLine":  68,
+"endColumn":  114
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\InlineRename\\AbstractEditorInlineRenameService.InlineRenameReplacementInfo.cs",
+"region":  {
+"startLine":  70,
+"startColumn":  17,
+"endLine":  70,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\InlineRename\\Dashboard\\Dashboard.xaml.cs",
+"region":  {
+"startLine":  124,
+"startColumn":  13,
+"endLine":  124,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\InlineRename\\InlineRenameSession.OpenTextBufferManager.cs",
+"region":  {
+"startLine":  590,
+"startColumn":  25,
+"endLine":  590,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\Controller.Session_FilterModel.cs",
+"region":  {
+"startLine":  298,
+"startColumn":  17,
+"endLine":  298,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\Controller.Session_FilterModel.cs",
+"region":  {
+"startLine":  370,
+"startColumn":  17,
+"endLine":  370,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\Controller_Backspace.cs",
+"region":  {
+"startLine":  35,
+"startColumn":  13,
+"endLine":  35,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\MetadataAsSource\\MetadataAsSourceFileService.cs",
+"region":  {
+"startLine":  245,
+"startColumn":  13,
+"endLine":  245,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\NavigateTo\\NavigateToSearchResultProvider.cs",
+"region":  {
+"startLine":  59,
+"startColumn":  13,
+"endLine":  59,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\RenameTracking\\RenameTrackingTaggerProvider.cs",
+"region":  {
+"startLine":  96,
+"startColumn":  25,
+"endLine":  96,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\TextStructureNavigation\\AbstractTextStructureNavigatorProvider.TextStructureNavigator.cs",
+"region":  {
+"startLine":  220,
+"startColumn":  25,
+"endLine":  220,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\TextStructureNavigation\\AbstractTextStructureNavigatorProvider.TextStructureNavigator.cs",
+"region":  {
+"startLine":  272,
+"startColumn":  25,
+"endLine":  272,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"??\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\TextStructureNavigation\\AbstractTextStructureNavigatorProvider.TextStructureNavigator.cs",
+"region":  {
+"startLine":  356,
+"startColumn":  17,
+"endLine":  356,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Tagging\\EventSources\\TaggerEventSources.ViewSpanChangedEventSource.cs",
+"region":  {
+"startLine":  75,
+"startColumn":  21,
+"endLine":  75,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Threading\\AsynchronousSerialWorkQueue.cs",
+"region":  {
+"startLine":  85,
+"startColumn":  17,
+"endLine":  85,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Threading\\AsynchronousSerialWorkQueue.cs",
+"region":  {
+"startLine":  124,
+"startColumn":  17,
+"endLine":  124,
+"endColumn":  19
+}
+}
+}
+]
+}

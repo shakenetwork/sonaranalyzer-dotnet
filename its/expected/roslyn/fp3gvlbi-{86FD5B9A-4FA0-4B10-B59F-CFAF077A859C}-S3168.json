@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S3168",
+"message":  "Return \"Task\" instead.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\AnalyzerDependency\\AnalyzerDependencyCheckingService.cs",
+"region":  {
+"startLine":  62,
+"startColumn":  22,
+"endLine":  62,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S3168",
+"message":  "Return \"Task\" instead.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Remote\\RemoteHostClientServiceFactory.SolutionChecksumUpdator.cs",
+"region":  {
+"startLine":  72,
+"startColumn":  26,
+"endLine":  72,
+"endColumn":  30
+}
+}
+}
+]
+}

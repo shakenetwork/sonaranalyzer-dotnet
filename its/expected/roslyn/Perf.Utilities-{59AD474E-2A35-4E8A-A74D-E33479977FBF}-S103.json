@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S103",
+"message":  "Split this 210 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Perf\\Utilities\\TraceManager.cs",
+"region":  {
+"startLine":  61,
+"startColumn":  1,
+"endLine":  61,
+"endColumn":  211
+}
+}
+}
+]
+}

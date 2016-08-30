@@ -1,0 +1,212 @@
+{
+"issues":  [
+{
+"id":  "S1659",
+"message":  "Declare \"unusedEnd\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\CommandHandlers\\InteractivePasteCommandHandler.cs",
+"region":  {
+"startLine":  138,
+"startColumn":  59,
+"endLine":  138,
+"endColumn":  68
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"committed\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\Controller_AutomaticLineEnder.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  31,
+"endLine":  28,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"committed\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\Controller_ReturnKey.cs",
+"region":  {
+"startLine":  29,
+"startColumn":  31,
+"endLine":  29,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"QS_MOUSEMOVE\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Utilities\\NativeMethods.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  13,
+"endLine":  13,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"QS_MOUSEBUTTON\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Utilities\\NativeMethods.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  13,
+"endLine":  14,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"QS_POSTMESSAGE\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Utilities\\NativeMethods.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  13,
+"endLine":  15,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"QS_TIMER\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Utilities\\NativeMethods.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  13,
+"endLine":  16,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"QS_PAINT\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Utilities\\NativeMethods.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  13,
+"endLine":  17,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"QS_SENDMESSAGE\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Utilities\\NativeMethods.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  13,
+"endLine":  18,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"QS_HOTKEY\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Utilities\\NativeMethods.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  13,
+"endLine":  19,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"QS_ALLPOSTMESSAGE\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Utilities\\NativeMethods.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  13,
+"endLine":  20,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"QS_MOUSE\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Utilities\\NativeMethods.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  13,
+"endLine":  21,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"QS_INPUT\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Utilities\\NativeMethods.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  13,
+"endLine":  22,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"QS_ALLEVENTS\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Utilities\\NativeMethods.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  13,
+"endLine":  23,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"QS_ALLINPUT\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Utilities\\NativeMethods.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  13,
+"endLine":  24,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"QS_EVENT\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Utilities\\NativeMethods.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  13,
+"endLine":  25,
+"endColumn":  21
+}
+}
+}
+]
+}

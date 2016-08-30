@@ -1,0 +1,667 @@
+{
+"issues":  [
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\CodeFixes\\Suppression\\AbstractSuppressionCodeFixProvider.cs",
+"region":  {
+"startLine":  251,
+"startColumn":  13,
+"endLine":  251,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\CodeFixes\\Suppression\\AbstractSuppressionCodeFixProvider.PragmaHelpers.cs",
+"region":  {
+"startLine":  48,
+"startColumn":  17,
+"endLine":  48,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\CodeFixes\\Suppression\\AbstractSuppressionCodeFixProvider.PragmaHelpers.cs",
+"region":  {
+"startLine":  160,
+"startColumn":  17,
+"endLine":  160,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\CodeFixes\\Suppression\\AbstractSuppressionCodeFixProvider.PragmaHelpers.cs",
+"region":  {
+"startLine":  190,
+"startColumn":  17,
+"endLine":  190,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\CodeFixes\\Suppression\\AbstractSuppressionCodeFixProvider.RemoveSuppressionCodeAction_Pragma.cs",
+"region":  {
+"startLine":  164,
+"startColumn":  21,
+"endLine":  164,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\CodeRefactorings\\CodeRefactoringService.cs",
+"region":  {
+"startLine":  63,
+"startColumn":  13,
+"endLine":  63,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\CommonCompletionItem.cs",
+"region":  {
+"startLine":  64,
+"startColumn":  13,
+"endLine":  64,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\CommonCompletionItem.cs",
+"region":  {
+"startLine":  83,
+"startColumn":  13,
+"endLine":  83,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\CommonCompletionProvider.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  13,
+"endLine":  32,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\CompletionDescription.cs",
+"region":  {
+"startLine":  51,
+"startColumn":  13,
+"endLine":  51,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\CompletionItem.cs",
+"region":  {
+"startLine":  231,
+"startColumn":  13,
+"endLine":  231,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\CompletionItemRules.cs",
+"region":  {
+"startLine":  133,
+"startColumn":  13,
+"endLine":  133,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\CompletionItemRules.cs",
+"region":  {
+"startLine":  185,
+"startColumn":  13,
+"endLine":  185,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\CompletionList.cs",
+"region":  {
+"startLine":  113,
+"startColumn":  13,
+"endLine":  113,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\CompletionRules.cs",
+"region":  {
+"startLine":  107,
+"startColumn":  13,
+"endLine":  107,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\CompletionServiceWithProviders.cs",
+"region":  {
+"startLine":  175,
+"startColumn":  17,
+"endLine":  175,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\CompletionServiceWithProviders.cs",
+"region":  {
+"startLine":  442,
+"startColumn":  13,
+"endLine":  442,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\CompletionServiceWithProviders.cs",
+"region":  {
+"startLine":  480,
+"startColumn":  13,
+"endLine":  480,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\Providers\\SymbolCompletionItem.cs",
+"region":  {
+"startLine":  193,
+"startColumn":  13,
+"endLine":  193,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\Providers\\SymbolCompletionItem.cs",
+"region":  {
+"startLine":  205,
+"startColumn":  13,
+"endLine":  205,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\Providers\\SymbolCompletionItem.cs",
+"region":  {
+"startLine":  239,
+"startColumn":  13,
+"endLine":  239,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\Analyzers\\NamingStyles\\Serialization\\SymbolSpecification.cs",
+"region":  {
+"startLine":  239,
+"startColumn":  17,
+"endLine":  239,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  2367,
+"startColumn":  33,
+"endLine":  2367,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  2758,
+"startColumn":  13,
+"endLine":  2758,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  2927,
+"startColumn":  13,
+"endLine":  2927,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  3217,
+"startColumn":  29,
+"endLine":  3217,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  3299,
+"startColumn":  13,
+"endLine":  3299,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\AbstractEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  3599,
+"startColumn":  21,
+"endLine":  3599,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"??\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\ExtractMethod\\MethodExtractor.CodeGenerator.cs",
+"region":  {
+"startLine":  83,
+"startColumn":  35,
+"endLine":  83,
+"endColumn":  119
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateFromMembers\\AddConstructorParameters\\AbstractAddConstructorParametersService.CodeAction.cs",
+"region":  {
+"startLine":  79,
+"startColumn":  21,
+"endLine":  79,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateFromMembers\\GenerateConstructorFromMembers\\AbstractGenerateConstructorFromMembersService.FieldDelegatingCodeAction.cs",
+"region":  {
+"startLine":  77,
+"startColumn":  21,
+"endLine":  77,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateType\\AbstractGenerateTypeService.CodeAction.cs",
+"region":  {
+"startLine":  46,
+"startColumn":  17,
+"endLine":  46,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateType\\AbstractGenerateTypeService.Editor.cs",
+"region":  {
+"startLine":  130,
+"startColumn":  21,
+"endLine":  130,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateType\\AbstractGenerateTypeService.Editor.cs",
+"region":  {
+"startLine":  201,
+"startColumn":  21,
+"endLine":  201,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateType\\AbstractGenerateTypeService.Editor.cs",
+"region":  {
+"startLine":  393,
+"startColumn":  17,
+"endLine":  393,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateType\\AbstractGenerateTypeService.Editor.cs",
+"region":  {
+"startLine":  474,
+"startColumn":  21,
+"endLine":  474,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\ImplementAbstractClass\\AbstractImplementAbstractClassService.State.cs",
+"region":  {
+"startLine":  58,
+"startColumn":  17,
+"endLine":  58,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\ImplementInterface\\AbstractImplementInterfaceService.CodeAction_Property.cs",
+"region":  {
+"startLine":  138,
+"startColumn":  21,
+"endLine":  138,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\ImplementInterface\\AbstractImplementInterfaceService.CodeAction_Property.cs",
+"region":  {
+"startLine":  179,
+"startColumn":  21,
+"endLine":  179,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\ImplementInterface\\AbstractImplementInterfaceService.DisposePatternCodeAction.cs",
+"region":  {
+"startLine":  87,
+"startColumn":  21,
+"endLine":  87,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\LanguageServices\\SymbolDisplayService\\AbstractSymbolDisplayService.AbstractSymbolDescriptionBuilder.cs",
+"region":  {
+"startLine":  381,
+"startColumn":  17,
+"endLine":  381,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\MakeMethodAsynchronous\\AbstractMakeMethodAsynchronousCodeFixProvider.cs",
+"region":  {
+"startLine":  81,
+"startColumn":  13,
+"endLine":  81,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\MakeMethodSynchronous\\AbstractMakeMethodSynchronousCodeFixProvider.cs",
+"region":  {
+"startLine":  47,
+"startColumn":  13,
+"endLine":  47,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Shared\\Extensions\\DiagnosticAnalyzerExtensions.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  17,
+"endLine":  24,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Shared\\Extensions\\ISymbolExtensions_2.cs",
+"region":  {
+"startLine":  129,
+"startColumn":  25,
+"endLine":  129,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Shared\\Utilities\\PatternMatcher.cs",
+"region":  {
+"startLine":  66,
+"startColumn":  13,
+"endLine":  66,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Shared\\Utilities\\PatternMatcher.cs",
+"region":  {
+"startLine":  283,
+"startColumn":  17,
+"endLine":  283,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"??\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SignatureHelp\\AbstractSignatureHelpProvider.cs",
+"region":  {
+"startLine":  89,
+"startColumn":  32,
+"endLine":  91,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\SolutionCrawlerLogger.cs",
+"region":  {
+"startLine":  289,
+"startColumn":  13,
+"endLine":  289,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\SolutionCrawlerLogger.cs",
+"region":  {
+"startLine":  301,
+"startColumn":  13,
+"endLine":  301,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\SolutionCrawlerLogger.cs",
+"region":  {
+"startLine":  320,
+"startColumn":  13,
+"endLine":  320,
+"endColumn":  15
+}
+}
+}
+]
+}

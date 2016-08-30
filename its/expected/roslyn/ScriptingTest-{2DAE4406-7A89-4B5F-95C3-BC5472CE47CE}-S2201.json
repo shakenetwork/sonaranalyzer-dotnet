@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2201",
+"message":  "Use the return value of method \"Any\", which has no side effect.",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\CoreTest\\ScriptingTestHelpers.cs",
+"region":  {
+"startLine":  46,
+"startColumn":  17,
+"endLine":  46,
+"endColumn":  108
+}
+}
+}
+]
+}

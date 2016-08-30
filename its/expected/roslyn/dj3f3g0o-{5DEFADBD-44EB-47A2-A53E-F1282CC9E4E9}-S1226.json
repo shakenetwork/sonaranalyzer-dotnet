@@ -1,0 +1,199 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"kind\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\CodeModel\\CSharpCodeModelService.cs",
+"region":  {
+"startLine":  1931,
+"startColumn":  17,
+"endLine":  1931,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"memberNode\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\CodeModel\\CSharpCodeModelService.cs",
+"region":  {
+"startLine":  2496,
+"startColumn":  13,
+"endLine":  2496,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"kind\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\CodeModel\\CSharpCodeModelService.cs",
+"region":  {
+"startLine":  2511,
+"startColumn":  21,
+"endLine":  2511,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"compilation\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\CodeModel\\CSharpCodeModelService.cs",
+"region":  {
+"startLine":  3100,
+"startColumn":  21,
+"endLine":  3100,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"container\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\CodeModel\\CSharpCodeModelService.cs",
+"region":  {
+"startLine":  3420,
+"startColumn":  21,
+"endLine":  3420,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"list\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\CodeModel\\CSharpCodeModelService.cs",
+"region":  {
+"startLine":  3421,
+"startColumn":  21,
+"endLine":  3421,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"typeDeclaration\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\CodeModel\\CSharpCodeModelService.cs",
+"region":  {
+"startLine":  3805,
+"startColumn":  17,
+"endLine":  3805,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"flags\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\CodeModel\\CSharpCodeModelService_Prototype.cs",
+"region":  {
+"startLine":  140,
+"startColumn":  17,
+"endLine":  140,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"flags\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\CodeModel\\CSharpCodeModelService_Prototype.cs",
+"region":  {
+"startLine":  161,
+"startColumn":  17,
+"endLine":  161,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"flags\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\CodeModel\\CSharpCodeModelService_Prototype.cs",
+"region":  {
+"startLine":  203,
+"startColumn":  17,
+"endLine":  203,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"flags\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\CodeModel\\CSharpCodeModelService_Prototype.cs",
+"region":  {
+"startLine":  245,
+"startColumn":  17,
+"endLine":  245,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"symbol\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\CodeModel\\CSharpCodeModelService_Prototype.cs",
+"region":  {
+"startLine":  583,
+"startColumn":  17,
+"endLine":  583,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"member\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\CodeModel\\ModifierFlagsExtensions.cs",
+"region":  {
+"startLine":  106,
+"startColumn":  13,
+"endLine":  106,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"filename\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\ProjectSystemShim\\CSharpProjectShim.ICSharpProjectSite.cs",
+"region":  {
+"startLine":  111,
+"startColumn":  13,
+"endLine":  111,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"filename\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\ProjectSystemShim\\CSharpProjectShim.ICSharpProjectSite.cs",
+"region":  {
+"startLine":  126,
+"startColumn":  13,
+"endLine":  126,
+"endColumn":  21
+}
+}
+}
+]
+}

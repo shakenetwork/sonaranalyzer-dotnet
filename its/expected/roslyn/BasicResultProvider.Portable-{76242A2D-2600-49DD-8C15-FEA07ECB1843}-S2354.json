@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S2354",
+"message":  "Reformat the code to remove this use of the line continuation character.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\CharacterInfo.vb",
+"region":  {
+"startLine":  418,
+"startColumn":  20,
+"endLine":  418,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2354",
+"message":  "Reformat the code to remove this use of the line continuation character.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Syntax\\SyntaxKindFacts.vb",
+"region":  {
+"startLine":  434,
+"startColumn":  22,
+"endLine":  434,
+"endColumn":  23
+}
+}
+}
+]
+}

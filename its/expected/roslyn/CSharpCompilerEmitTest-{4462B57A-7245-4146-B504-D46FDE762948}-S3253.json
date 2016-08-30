@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S3253",
+"message":  "Remove this redundant constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenAsyncEHTests.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  9,
+"endLine":  22,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S3253",
+"message":  "Remove this redundant constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenAsyncLocalsTests.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  9,
+"endLine":  22,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S3253",
+"message":  "Remove this redundant constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenAsyncSpillTests.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  9,
+"endLine":  22,
+"endColumn":  10
+}
+}
+}
+]
+}

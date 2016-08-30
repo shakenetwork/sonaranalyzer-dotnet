@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\TestUtilities\\Threading\\StaTaskScheduler.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  13,
+"endLine":  36,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"foreach\" block.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\TestUtilities\\Threading\\StaTaskScheduler.cs",
+"region":  {
+"startLine":  118,
+"startColumn":  17,
+"endLine":  118,
+"endColumn":  24
+}
+}
+}
+]
+}

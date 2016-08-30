@@ -1,0 +1,602 @@
+{
+"issues":  [
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"document\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeFixes\\HideBase\\HideBaseCodeFixProvider.AddNewKeywordAction.cs",
+"region":  {
+"startLine":  41,
+"startColumn":  43,
+"endLine":  41,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeFixes\\HideBase\\HideBaseCodeFixProvider.AddNewKeywordAction.cs",
+"region":  {
+"startLine":  41,
+"startColumn":  79,
+"endLine":  41,
+"endColumn":  114
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"returnExpressionType\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeFixes\\Iterator\\CSharpAddYieldCodeFixProvider.cs",
+"region":  {
+"startLine":  172,
+"startColumn":  50,
+"endLine":  172,
+"endColumn":  82
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"itemSpan\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\CrefCompletionProvider.cs",
+"region":  {
+"startLine":  223,
+"startColumn":  112,
+"endLine":  223,
+"endColumn":  129
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"workspace\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\CrefCompletionProvider.cs",
+"region":  {
+"startLine":  241,
+"startColumn":  13,
+"endLine":  241,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"span\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\XmlDocCommentCompletionProvider.cs",
+"region":  {
+"startLine":  128,
+"startColumn":  118,
+"endLine":  128,
+"endColumn":  131
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"itemSpan\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\XmlDocCommentCompletionProvider.cs",
+"region":  {
+"startLine":  152,
+"startColumn":  78,
+"endLine":  152,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"position\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\BaseKeywordRecommender.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  54,
+"endLine":  42,
+"endColumn":  66
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\BaseKeywordRecommender.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  97,
+"endLine":  42,
+"endColumn":  132
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"syntaxTree\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\RefKeywordRecommender.cs",
+"region":  {
+"startLine":  82,
+"startColumn":  70,
+"endLine":  82,
+"endColumn":  91
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"position\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\RefKeywordRecommender.cs",
+"region":  {
+"startLine":  82,
+"startColumn":  93,
+"endLine":  82,
+"endColumn":  105
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\RefKeywordRecommender.cs",
+"region":  {
+"startLine":  82,
+"startColumn":  136,
+"endLine":  82,
+"endColumn":  171
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"position\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\SuggestionMode\\CSharpSuggestionModeCompletionProvider.cs",
+"region":  {
+"startLine":  86,
+"startColumn":  94,
+"endLine":  86,
+"endColumn":  106
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"semanticModel\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Diagnostics\\Analyzers\\CSharpTypeStyleDiagnosticAnalyzerBase.cs",
+"region":  {
+"startLine":  130,
+"startColumn":  102,
+"endLine":  130,
+"endColumn":  129
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Diagnostics\\Analyzers\\CSharpTypeStyleDiagnosticAnalyzerBase.cs",
+"region":  {
+"startLine":  130,
+"startColumn":  131,
+"endLine":  130,
+"endColumn":  166
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Diagnostics\\Analyzers\\CSharpTypeStyleDiagnosticAnalyzerBase.State.cs",
+"region":  {
+"startLine":  101,
+"startColumn":  113,
+"endLine":  101,
+"endColumn":  148
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"position\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\BreakpointSpans.cs",
+"region":  {
+"startLine":  670,
+"startColumn":  89,
+"endLine":  670,
+"endColumn":  101
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"oldNode\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1688,
+"startColumn":  39,
+"endLine":  1688,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"newNode\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1688,
+"startColumn":  59,
+"endLine":  1688,
+"endColumn":  77
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"oldNode\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1695,
+"startColumn":  42,
+"endLine":  1695,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this parameter \"oldNode\", whose value is ignored in the method.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  2170,
+"startColumn":  41,
+"endLine":  2170,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this parameter \"newNode\", whose value is ignored in the method.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  2170,
+"startColumn":  77,
+"endLine":  2170,
+"endColumn":  111
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"isLeaf\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  3086,
+"startColumn":  13,
+"endLine":  3086,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"field\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EncapsulateField\\CSharpEncapsulateFieldService.cs",
+"region":  {
+"startLine":  182,
+"startColumn":  42,
+"endLine":  182,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionValidator.cs",
+"region":  {
+"startLine":  160,
+"startColumn":  89,
+"endLine":  160,
+"endColumn":  124
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionValidator.cs",
+"region":  {
+"startLine":  229,
+"startColumn":  114,
+"endLine":  229,
+"endColumn":  149
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionValidator.cs",
+"region":  {
+"startLine":  342,
+"startColumn":  93,
+"endLine":  342,
+"endColumn":  128
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"semanticModel\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionValidator.Validator.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  43,
+"endLine":  21,
+"endColumn":  70
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"globalStatement\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionValidator.Validator.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  72,
+"endLine":  21,
+"endColumn":  109
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionValidator.Validator.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  111,
+"endLine":  21,
+"endColumn":  146
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"semanticModel\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionValidator.Validator.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  33,
+"endLine":  26,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionValidator.Validator.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  81,
+"endLine":  26,
+"endColumn":  116
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"semanticModel\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionValidator.Validator.cs",
+"region":  {
+"startLine":  59,
+"startColumn":  37,
+"endLine":  59,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionValidator.Validator.cs",
+"region":  {
+"startLine":  59,
+"startColumn":  93,
+"endLine":  59,
+"endColumn":  128
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"indexDone\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateType\\CSharpGenerateTypeService.cs",
+"region":  {
+"startLine":  615,
+"startColumn":  91,
+"endLine":  615,
+"endColumn":  104
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"propertyDeclaration\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ReplacePropertyWithMethods\\CSharpReplacePropertyWithMethodsService.cs",
+"region":  {
+"startLine":  99,
+"startColumn":  13,
+"endLine":  99,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"method\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\SignatureHelp\\AttributeSignatureHelpProvider.cs",
+"region":  {
+"startLine":  217,
+"startColumn":  60,
+"endLine":  217,
+"endColumn":  80
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"method\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\SignatureHelp\\ConstructorInitializerSignatureHelpProvider.cs",
+"region":  {
+"startLine":  159,
+"startColumn":  60,
+"endLine":  159,
+"endColumn":  80
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"indexer\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\SignatureHelp\\ElementAccessExpressionSignatureHelpProvider.cs",
+"region":  {
+"startLine":  264,
+"startColumn":  60,
+"endLine":  264,
+"endColumn":  83
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\SignatureHelp\\GenericNameSignatureHelpProvider.cs",
+"region":  {
+"startLine":  232,
+"startColumn":  13,
+"endLine":  232,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"namedType\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\SignatureHelp\\GenericNameSignatureHelpProvider_NamedType.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  60,
+"endLine":  23,
+"endColumn":  86
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"method\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\SignatureHelp\\InvocationExpressionSignatureHelpProvider_MethodGroup.cs",
+"region":  {
+"startLine":  159,
+"startColumn":  71,
+"endLine":  159,
+"endColumn":  91
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"containingType\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\SignatureHelp\\ObjectCreationExpressionSignatureHelpProvider_DelegateType.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  13,
+"endLine":  21,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\SignatureHelp\\ObjectCreationExpressionSignatureHelpProvider_DelegateType.cs",
+"region":  {
+"startLine":  54,
+"startColumn":  150,
+"endLine":  54,
+"endColumn":  185
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"invokeMethod\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\SignatureHelp\\ObjectCreationExpressionSignatureHelpProvider_DelegateType.cs",
+"region":  {
+"startLine":  88,
+"startColumn":  72,
+"endLine":  88,
+"endColumn":  98
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"method\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\SignatureHelp\\ObjectCreationExpressionSignatureHelpProvider_NormalType.cs",
+"region":  {
+"startLine":  74,
+"startColumn":  70,
+"endLine":  74,
+"endColumn":  90
+}
+}
+}
+]
+}

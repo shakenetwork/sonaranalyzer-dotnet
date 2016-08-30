@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S1450",
+"message":  "Remove the \"_srcAssembly\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests_Dynamic.cs",
+"region":  {
+"startLine":  111,
+"startColumn":  51,
+"endLine":  111,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_outer3Class\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests_Dynamic.cs",
+"region":  {
+"startLine":  117,
+"startColumn":  46,
+"endLine":  117,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_expectedTransformFlags\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests_Dynamic.cs",
+"region":  {
+"startLine":  121,
+"startColumn":  28,
+"endLine":  121,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_srcModule\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests_Tuples.cs",
+"region":  {
+"startLine":  276,
+"startColumn":  43,
+"endLine":  276,
+"endColumn":  53
+}
+}
+}
+]
+}

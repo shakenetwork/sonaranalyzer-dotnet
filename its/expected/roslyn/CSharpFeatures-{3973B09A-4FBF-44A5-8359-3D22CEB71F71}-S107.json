@@ -1,0 +1,108 @@
+{
+"issues":  [
+{
+"id":  "S107",
+"message":  "Method has 9 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionResult.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  68,
+"endLine":  30,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Constructor has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionResult.cs",
+"region":  {
+"startLine":  60,
+"startColumn":  40,
+"endLine":  68,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Constructor has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionResult.ExpressionResult.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  36,
+"endLine":  27,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Constructor has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionResult.StatementResult.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  35,
+"endLine":  25,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Method has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\SignatureHelp\\AttributeSignatureHelpProvider.cs",
+"region":  {
+"startLine":  116,
+"startColumn":  42,
+"endLine":  124,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Method has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\SignatureHelp\\InvocationExpressionSignatureHelpProvider_DelegateInvoke.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  64,
+"endLine":  20,
+"endColumn":  174
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Method has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\SignatureHelp\\InvocationExpressionSignatureHelpProvider_MethodGroup.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  61,
+"endLine":  27,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Method has 9 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\SignatureHelp\\ObjectCreationExpressionSignatureHelpProvider_NormalType.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  67,
+"endLine":  27,
+"endColumn":  49
+}
+}
+}
+]
+}

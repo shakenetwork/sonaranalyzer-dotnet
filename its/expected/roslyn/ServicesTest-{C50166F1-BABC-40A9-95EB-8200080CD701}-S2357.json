@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S2357",
+"message":  "Make \"Label\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\Differencing\\TestNode.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  29,
+"endLine":  12,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Value\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\Differencing\\TestNode.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  29,
+"endLine":  13,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Children\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\Differencing\\TestNode.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  36,
+"endLine":  14,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Parent\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\Differencing\\TestNode.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  25,
+"endLine":  15,
+"endColumn":  31
+}
+}
+}
+]
+}

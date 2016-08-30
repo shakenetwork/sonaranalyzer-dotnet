@@ -1,0 +1,121 @@
+{
+"issues":  [
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Count\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\Suppression\\SuppressionTests.cs",
+"region":  {
+"startLine":  190,
+"startColumn":  53,
+"endLine":  190,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Count\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\Suppression\\SuppressionTests.cs",
+"region":  {
+"startLine":  205,
+"startColumn":  53,
+"endLine":  205,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Use \"Count\" property here instead.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Interactive\\NavigateTo\\InteractiveNavigateToTests.cs",
+"region":  {
+"startLine":  459,
+"startColumn":  44,
+"endLine":  459,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Use \"Count\" property here instead.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Interactive\\NavigateTo\\InteractiveNavigateToTests.cs",
+"region":  {
+"startLine":  554,
+"startColumn":  40,
+"endLine":  554,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\LineSeparators\\LineSeparatorTests.cs",
+"region":  {
+"startLine":  557,
+"startColumn":  47,
+"endLine":  557,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Use \"Count\" property here instead.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\NavigateTo\\NavigateToTests.cs",
+"region":  {
+"startLine":  604,
+"startColumn":  44,
+"endLine":  604,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Use \"Count\" property here instead.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\NavigateTo\\NavigateToTests.cs",
+"region":  {
+"startLine":  907,
+"startColumn":  40,
+"endLine":  907,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\QuickInfo\\SemanticQuickInfoSourceTests.cs",
+"region":  {
+"startLine":  101,
+"startColumn":  54,
+"endLine":  101,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Use \"Count\" property here instead.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Squiggles\\ErrorSquiggleProducerTests.cs",
+"region":  {
+"startLine":  71,
+"startColumn":  39,
+"endLine":  71,
+"endColumn":  44
+}
+}
+}
+]
+}

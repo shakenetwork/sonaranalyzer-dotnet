@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\TestUtilities\\IntegrationHelper.cs",
+"region":  {
+"startLine":  306,
+"startColumn":  29,
+"endLine":  306,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\TestUtilities\\IntegrationHelper.cs",
+"region":  {
+"startLine":  393,
+"startColumn":  31,
+"endLine":  393,
+"endColumn":  51
+}
+}
+}
+]
+}

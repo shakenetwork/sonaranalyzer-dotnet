@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S101",
+"message":  "Rename class \"VBCSCompilerServerTests\" to match camel case naming rules, consider using \"VbcsCompilerServerTests\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Server\\VBCSCompilerTests\\VBCSCompilerServerTests.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  18,
+"endLine":  14,
+"endColumn":  41
+}
+}
+}
+]
+}

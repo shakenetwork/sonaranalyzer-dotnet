@@ -1,0 +1,407 @@
+{
+"issues":  [
+{
+"id":  "S2357",
+"message":  "Make \"MetadataReader\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\AssemblyReaders.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  40,
+"endLine":  9,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SymReader\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\AssemblyReaders.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  32,
+"endLine":  10,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"PayloadTypeId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\CustomTypeInfo.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  21,
+"endLine":  16,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Payload\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\CustomTypeInfo.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  41,
+"endLine":  17,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"StartOffset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\ILSpan.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  30,
+"endLine":  14,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"EndOffsetExclusive\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\ILSpan.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  30,
+"endLine":  15,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"LocalName\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\LocalAndMethod.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  32,
+"endLine":  13,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"LocalDisplayName\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\LocalAndMethod.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  32,
+"endLine":  14,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"MethodName\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\LocalAndMethod.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  32,
+"endLine":  15,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Flags\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\LocalAndMethod.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  54,
+"endLine":  16,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Alias\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\PDB\\ExternAliasRecord.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  32,
+"endLine":  9,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TargetAssembly\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\PDB\\ExternAliasRecord.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  32,
+"endLine":  12,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"StartOffset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\PDB\\HoisedLocalScopeRecord.cs",
+"region":  {
+"startLine":  7,
+"startColumn":  29,
+"endLine":  7,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Length\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\PDB\\HoisedLocalScopeRecord.cs",
+"region":  {
+"startLine":  8,
+"startColumn":  29,
+"endLine":  8,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TargetKind\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\PDB\\ImportRecord.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  42,
+"endLine":  9,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Alias\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\PDB\\ImportRecord.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  32,
+"endLine":  10,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TargetType\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\PDB\\ImportRecord.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  37,
+"endLine":  13,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TargetString\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\PDB\\ImportRecord.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  32,
+"endLine":  16,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TargetAssembly\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\PDB\\ImportRecord.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  41,
+"endLine":  19,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TargetAssemblyAlias\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\PDB\\ImportRecord.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  32,
+"endLine":  22,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"HoistedLocalScopeRecords\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\PDB\\MethodDebugInfo.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  65,
+"endLine":  15,
+"endColumn":  89
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ImportRecordGroups\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\PDB\\MethodDebugInfo.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  70,
+"endLine":  16,
+"endColumn":  88
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ExternAliasRecords\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\PDB\\MethodDebugInfo.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  59,
+"endLine":  18,
+"endColumn":  77
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"DynamicLocalMap\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\PDB\\MethodDebugInfo.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  72,
+"endLine":  19,
+"endColumn":  87
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"DefaultNamespaceName\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\PDB\\MethodDebugInfo.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  32,
+"endLine":  21,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ReuseSpan\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\PDB\\MethodDebugInfo.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  23,
+"endLine":  26,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Flags\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\ResultProperties.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  54,
+"endLine":  10,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Category\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\ResultProperties.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  53,
+"endLine":  11,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"AccessType\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\ResultProperties.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  55,
+"endLine":  12,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"StorageType\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\ResultProperties.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  56,
+"endLine":  13,
+"endColumn":  67
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ModifierFlags\" private.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\ResultProperties.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  62,
+"endLine":  14,
+"endColumn":  75
+}
+}
+}
+]
+}

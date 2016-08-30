@@ -1,0 +1,69 @@
+{
+"issues":  [
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"throwIfBinaryDetected\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\EncodedStringText.cs",
+"region":  {
+"startLine":  97,
+"startColumn":  78,
+"endLine":  97,
+"endColumn":  106
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"sourceCodeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\CommandLineProject.cs",
+"region":  {
+"startLine":  136,
+"startColumn":  20,
+"endLine":  136,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"sourceCodeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\MSBuild\\MSBuildProjectLoader.cs",
+"region":  {
+"startLine":  372,
+"startColumn":  21,
+"endLine":  372,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isSubmission\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\MSBuild\\MSBuildProjectLoader.cs",
+"region":  {
+"startLine":  430,
+"startColumn":  21,
+"endLine":  430,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hostObjectType\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\MSBuild\\MSBuildProjectLoader.cs",
+"region":  {
+"startLine":  431,
+"startColumn":  21,
+"endLine":  431,
+"endColumn":  41
+}
+}
+}
+]
+}

@@ -1,0 +1,3605 @@
+{
+"issues":  [
+{
+"id":  "S2357",
+"message":  "Make \"NextBlock\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\BasicBlock.cs",
+"region":  {
+"startLine":  130,
+"startColumn":  31,
+"endLine":  130,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Start\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\BasicBlock.cs",
+"region":  {
+"startLine":  136,
+"startColumn":  24,
+"endLine":  136,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"enclosingHandler\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\BasicBlock.cs",
+"region":  {
+"startLine":  673,
+"startColumn":  51,
+"endLine":  673,
+"endColumn":  67
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NextExceptionHandler\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\BasicBlock.cs",
+"region":  {
+"startLine":  696,
+"startColumn":  48,
+"endLine":  696,
+"endColumn":  68
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"BranchLabels\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\BasicBlock.cs",
+"region":  {
+"startLine":  719,
+"startColumn":  29,
+"endLine":  719,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SyntaxOffset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ClosureDebugInfo.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  29,
+"endLine":  12,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ClosureId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ClosureDebugInfo.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  33,
+"endLine":  13,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ILBuilder\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\CompilationTestData.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  39,
+"endLine":  17,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Method\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\CompilationTestData.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  43,
+"endLine":  18,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Methods\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\CompilationTestData.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  73,
+"endLine":  28,
+"endColumn":  80
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Module\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\CompilationTestData.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  38,
+"endLine":  31,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SymWriterFactory\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\CompilationTestData.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  29,
+"endLine":  33,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Ordinal\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\DebugId.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  29,
+"endLine":  24,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Generation\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\DebugId.cs",
+"region":  {
+"startLine":  29,
+"startColumn":  29,
+"endLine":  29,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Spans\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\DynamicAnalysisMethodBodyData.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  52,
+"endLine":  10,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SeqPointsOpt\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ILBuilder.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  47,
+"endLine":  42,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"BlockOffset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ILBuilder.cs",
+"region":  {
+"startLine":  1270,
+"startColumn":  24,
+"endLine":  1270,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"AbsoluteOffset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ILBuilder.cs",
+"region":  {
+"startLine":  1271,
+"startColumn":  24,
+"endLine":  1271,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SyntaxOffset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\LambdaDebugInfo.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  29,
+"endLine":  21,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ClosureOrdinal\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\LambdaDebugInfo.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  29,
+"endLine":  28,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"LambdaId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\LambdaDebugInfo.cs",
+"region":  {
+"startLine":  30,
+"startColumn":  33,
+"endLine":  30,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SyntaxOffset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\LocalDebugId.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  29,
+"endLine":  28,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Ordinal\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\LocalDebugId.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  29,
+"endLine":  36,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Local\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\LocalOrParameter.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  41,
+"endLine":  10,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ParameterIndex\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\LocalOrParameter.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  29,
+"endLine":  11,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SynthesizedKind\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\LocalSlotDebugInfo.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  46,
+"endLine":  10,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Id\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\LocalSlotDebugInfo.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  38,
+"endLine":  11,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Offset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\SequencePointList.cs",
+"region":  {
+"startLine":  237,
+"startColumn":  33,
+"endLine":  237,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Span\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\SequencePointList.cs",
+"region":  {
+"startLine":  238,
+"startColumn":  38,
+"endLine":  238,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Key\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Collections\\SmallDictionary.cs",
+"region":  {
+"startLine":  116,
+"startColumn":  31,
+"endLine":  116,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Value\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Collections\\SmallDictionary.cs",
+"region":  {
+"startLine":  117,
+"startColumn":  22,
+"endLine":  117,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"next\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Collections\\SmallDictionary.cs",
+"region":  {
+"startLine":  141,
+"startColumn":  25,
+"endLine":  141,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"HashCode\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Collections\\SmallDictionary.cs",
+"region":  {
+"startLine":  157,
+"startColumn":  33,
+"endLine":  157,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Balance\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Collections\\SmallDictionary.cs",
+"region":  {
+"startLine":  158,
+"startColumn":  26,
+"endLine":  158,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Left\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Collections\\SmallDictionary.cs",
+"region":  {
+"startLine":  169,
+"startColumn":  28,
+"endLine":  169,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Right\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Collections\\SmallDictionary.cs",
+"region":  {
+"startLine":  170,
+"startColumn":  28,
+"endLine":  170,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ResolvedPath\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\LoadDirective.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  32,
+"endLine":  13,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Diagnostics\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\LoadDirective.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  52,
+"endLine":  14,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SuppressSilverlightPlatformAssembliesPortability\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Desktop\\AssemblyPortabilityPolicy.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  30,
+"endLine":  15,
+"endColumn":  78
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SuppressSilverlightLibraryAssembliesPortability\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Desktop\\AssemblyPortabilityPolicy.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  30,
+"endLine":  18,
+"endColumn":  77
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"PublicKeyToken\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Desktop\\DesktopAssemblyIdentityComparer.Fx.cs",
+"region":  {
+"startLine":  27,
+"startColumn":  54,
+"endLine":  27,
+"endColumn":  68
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Version\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Desktop\\DesktopAssemblyIdentityComparer.Fx.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  49,
+"endLine":  28,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Desktop\\DesktopAssemblyIdentityComparer.Fx.cs",
+"region":  {
+"startLine":  54,
+"startColumn":  40,
+"endLine":  54,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"PublicKeyToken\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Desktop\\DesktopAssemblyIdentityComparer.Fx.cs",
+"region":  {
+"startLine":  55,
+"startColumn":  54,
+"endLine":  55,
+"endColumn":  68
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"VersionLow\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Desktop\\DesktopAssemblyIdentityComparer.Fx.cs",
+"region":  {
+"startLine":  82,
+"startColumn":  49,
+"endLine":  82,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"VersionHigh\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Desktop\\DesktopAssemblyIdentityComparer.Fx.cs",
+"region":  {
+"startLine":  83,
+"startColumn":  49,
+"endLine":  83,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NewName\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Desktop\\DesktopAssemblyIdentityComparer.Fx.cs",
+"region":  {
+"startLine":  84,
+"startColumn":  40,
+"endLine":  84,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NewPublicKeyToken\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Desktop\\DesktopAssemblyIdentityComparer.Fx.cs",
+"region":  {
+"startLine":  85,
+"startColumn":  54,
+"endLine":  85,
+"endColumn":  71
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NewVersion\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Desktop\\DesktopAssemblyIdentityComparer.Fx.cs",
+"region":  {
+"startLine":  86,
+"startColumn":  49,
+"endLine":  86,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsPortable\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Desktop\\DesktopAssemblyIdentityComparer.Fx.cs",
+"region":  {
+"startLine":  87,
+"startColumn":  38,
+"endLine":  87,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Analyzer\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerDriver.cs",
+"region":  {
+"startLine":  1863,
+"startColumn":  39,
+"endLine":  1863,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"CodeBlockStartActions\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerDriver.cs",
+"region":  {
+"startLine":  1864,
+"startColumn":  84,
+"endLine":  1864,
+"endColumn":  105
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"CodeBlockActions\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerDriver.cs",
+"region":  {
+"startLine":  1865,
+"startColumn":  60,
+"endLine":  1865,
+"endColumn":  76
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"CodeBlockEndActions\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerDriver.cs",
+"region":  {
+"startLine":  1866,
+"startColumn":  60,
+"endLine":  1866,
+"endColumn":  79
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"OperationBlockStartActions\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerDriver.cs",
+"region":  {
+"startLine":  1867,
+"startColumn":  70,
+"endLine":  1867,
+"endColumn":  96
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"OperationBlockActions\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerDriver.cs",
+"region":  {
+"startLine":  1868,
+"startColumn":  65,
+"endLine":  1868,
+"endColumn":  86
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"OpererationBlockEndActions\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerDriver.cs",
+"region":  {
+"startLine":  1869,
+"startColumn":  65,
+"endLine":  1869,
+"endColumn":  91
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Analyzer\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerManager.AnalyzerAndOptions.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  48,
+"endLine":  12,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Type\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\SuppressMessageAttributeState.TargetSymbolResolver.cs",
+"region":  {
+"startLine":  850,
+"startColumn":  45,
+"endLine":  850,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"StartIndex\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\SuppressMessageAttributeState.TargetSymbolResolver.cs",
+"region":  {
+"startLine":  854,
+"startColumn":  37,
+"endLine":  854,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Type\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\SuppressMessageAttributeState.TargetSymbolResolver.cs",
+"region":  {
+"startLine":  880,
+"startColumn":  42,
+"endLine":  880,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsRefOrOut\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\SuppressMessageAttributeState.TargetSymbolResolver.cs",
+"region":  {
+"startLine":  881,
+"startColumn":  38,
+"endLine":  881,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Id\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\SuppressMessageInfo.cs",
+"region":  {
+"startLine":  7,
+"startColumn":  23,
+"endLine":  7,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Scope\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\SuppressMessageInfo.cs",
+"region":  {
+"startLine":  8,
+"startColumn":  23,
+"endLine":  8,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Target\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\SuppressMessageInfo.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  23,
+"endLine":  9,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"MessageId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\SuppressMessageInfo.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  23,
+"endLine":  10,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Attribute\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\SuppressMessageInfo.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  30,
+"endLine":  11,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\AnonymousTypeValue.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  32,
+"endLine":  11,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"UniqueIndex\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\AnonymousTypeValue.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  29,
+"endLine":  12,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Type\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\AnonymousTypeValue.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  41,
+"endLine":  13,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NestedTypes\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\CommonPEModuleBuilder.cs",
+"region":  {
+"startLine":  617,
+"startColumn":  63,
+"endLine":  617,
+"endColumn":  74
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Methods\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\CommonPEModuleBuilder.cs",
+"region":  {
+"startLine":  618,
+"startColumn":  59,
+"endLine":  618,
+"endColumn":  66
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Properties\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\CommonPEModuleBuilder.cs",
+"region":  {
+"startLine":  619,
+"startColumn":  61,
+"endLine":  619,
+"endColumn":  71
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Fields\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\CommonPEModuleBuilder.cs",
+"region":  {
+"startLine":  620,
+"startColumn":  58,
+"endLine":  620,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Module\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\Context.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  47,
+"endLine":  9,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SyntaxNodeOpt\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\Context.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  36,
+"endLine":  10,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Diagnostics\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\Context.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  39,
+"endLine":  11,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"MethodId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\AddedOrChangedMethodInfo.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  33,
+"endLine":  11,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Locals\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\AddedOrChangedMethodInfo.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  54,
+"endLine":  14,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"LambdaDebugInfo\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\AddedOrChangedMethodInfo.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  57,
+"endLine":  17,
+"endColumn":  72
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ClosureDebugInfo\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\AddedOrChangedMethodInfo.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  58,
+"endLine":  18,
+"endColumn":  74
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"StateMachineTypeNameOpt\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\AddedOrChangedMethodInfo.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  32,
+"endLine":  21,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"StateMachineHoistedLocalSlotsOpt\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\AddedOrChangedMethodInfo.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  61,
+"endLine":  22,
+"endColumn":  93
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"StateMachineAwaiterSlotsOpt\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\AddedOrChangedMethodInfo.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  60,
+"endLine":  23,
+"endColumn":  87
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"PreviousMethod\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\DefinitionMap.cs",
+"region":  {
+"startLine":  27,
+"startColumn":  51,
+"endLine":  27,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SyntaxMap\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\DefinitionMap.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  58,
+"endLine":  28,
+"endColumn":  67
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"AnonymousTypes\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\EmitBaseline.cs",
+"region":  {
+"startLine":  61,
+"startColumn":  87,
+"endLine":  61,
+"endColumn":  101
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"AssemblyReferenceIdentityMap\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\EmitBaseline.cs",
+"region":  {
+"startLine":  67,
+"startColumn":  85,
+"endLine":  67,
+"endColumn":  113
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"MetadataDecoder\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\EmitBaseline.cs",
+"region":  {
+"startLine":  69,
+"startColumn":  36,
+"endLine":  69,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SlotInfo\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\EncHoistedLocalInfo.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  44,
+"endLine":  13,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Type\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\EncHoistedLocalInfo.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  44,
+"endLine":  14,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\EncHoistedLocalMetadata.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  32,
+"endLine":  9,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Type\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\EncHoistedLocalMetadata.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  44,
+"endLine":  10,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SynthesizedKind\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\EncHoistedLocalMetadata.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  46,
+"endLine":  11,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SlotInfo\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\EncLocalInfo.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  44,
+"endLine":  13,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Type\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\EncLocalInfo.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  44,
+"endLine":  14,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Constraints\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\EncLocalInfo.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  46,
+"endLine":  15,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Signature\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\EncLocalInfo.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  32,
+"endLine":  16,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"isUnused\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\EncLocalInfo.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  30,
+"endLine":  17,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"FileAlignment\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\ModulePropertiesForSerialization.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  29,
+"endLine":  17,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SectionAlignment\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\ModulePropertiesForSerialization.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  29,
+"endLine":  24,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TargetRuntimeVersion\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\ModulePropertiesForSerialization.cs",
+"region":  {
+"startLine":  29,
+"startColumn":  32,
+"endLine":  29,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Machine\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\ModulePropertiesForSerialization.cs",
+"region":  {
+"startLine":  34,
+"startColumn":  33,
+"endLine":  34,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"PersistentIdentifier\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\ModulePropertiesForSerialization.cs",
+"region":  {
+"startLine":  39,
+"startColumn":  30,
+"endLine":  39,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"BaseAddress\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\ModulePropertiesForSerialization.cs",
+"region":  {
+"startLine":  44,
+"startColumn":  31,
+"endLine":  44,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SizeOfHeapReserve\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\ModulePropertiesForSerialization.cs",
+"region":  {
+"startLine":  50,
+"startColumn":  31,
+"endLine":  50,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SizeOfHeapCommit\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\ModulePropertiesForSerialization.cs",
+"region":  {
+"startLine":  56,
+"startColumn":  31,
+"endLine":  56,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SizeOfStackReserve\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\ModulePropertiesForSerialization.cs",
+"region":  {
+"startLine":  62,
+"startColumn":  31,
+"endLine":  62,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SizeOfStackCommit\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\ModulePropertiesForSerialization.cs",
+"region":  {
+"startLine":  64,
+"startColumn":  31,
+"endLine":  64,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"MajorSubsystemVersion\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\ModulePropertiesForSerialization.cs",
+"region":  {
+"startLine":  65,
+"startColumn":  32,
+"endLine":  65,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"MinorSubsystemVersion\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\ModulePropertiesForSerialization.cs",
+"region":  {
+"startLine":  66,
+"startColumn":  32,
+"endLine":  66,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"LinkerMajorVersion\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\ModulePropertiesForSerialization.cs",
+"region":  {
+"startLine":  71,
+"startColumn":  30,
+"endLine":  71,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"LinkerMinorVersion\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\ModulePropertiesForSerialization.cs",
+"region":  {
+"startLine":  76,
+"startColumn":  30,
+"endLine":  76,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ContainingType\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\NoPia\\CommonEmbeddedField.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  43,
+"endLine":  32,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ContainingType\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\NoPia\\CommonEmbeddedMethod.cs",
+"region":  {
+"startLine":  35,
+"startColumn":  43,
+"endLine":  35,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ContainingPropertyOrMethod\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\NoPia\\CommonEmbeddedParameter.cs",
+"region":  {
+"startLine":  35,
+"startColumn":  50,
+"endLine":  35,
+"endColumn":  76
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"UnderlyingParameter\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\NoPia\\CommonEmbeddedParameter.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  46,
+"endLine":  36,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TypeManager\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\NoPia\\CommonEmbeddedType.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  51,
+"endLine":  36,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"UnderlyingNamedType\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\NoPia\\CommonEmbeddedType.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  46,
+"endLine":  37,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ContainingMethod\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\NoPia\\CommonEmbeddedTypeParameter.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  45,
+"endLine":  36,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"UnderlyingTypeParameter\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\NoPia\\CommonEmbeddedTypeParameter.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  50,
+"endLine":  37,
+"endColumn":  73
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ModuleBeingBuilt\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\NoPia\\EmbeddedTypesManager.cs",
+"region":  {
+"startLine":  62,
+"startColumn":  42,
+"endLine":  62,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"EmbeddedTypesMap\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\NoPia\\EmbeddedTypesManager.cs",
+"region":  {
+"startLine":  64,
+"startColumn":  79,
+"endLine":  64,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"EmbeddedFieldsMap\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\NoPia\\EmbeddedTypesManager.cs",
+"region":  {
+"startLine":  65,
+"startColumn":  76,
+"endLine":  65,
+"endColumn":  93
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"EmbeddedMethodsMap\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\NoPia\\EmbeddedTypesManager.cs",
+"region":  {
+"startLine":  66,
+"startColumn":  78,
+"endLine":  66,
+"endColumn":  96
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"EmbeddedPropertiesMap\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\NoPia\\EmbeddedTypesManager.cs",
+"region":  {
+"startLine":  67,
+"startColumn":  82,
+"endLine":  67,
+"endColumn":  103
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"EmbeddedEventsMap\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\NoPia\\EmbeddedTypesManager.cs",
+"region":  {
+"startLine":  68,
+"startColumn":  76,
+"endLine":  68,
+"endColumn":  93
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ContainingType\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\NoPia\\VtblGap.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  45,
+"endLine":  11,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"FullPath\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\FileKey.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  32,
+"endLine":  14,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Timestamp\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\FileKey.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  34,
+"endLine":  19,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Value\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\ConcurrentLruCache.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  22,
+"endLine":  19,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Node\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\ConcurrentLruCache.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  38,
+"endLine":  20,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\EnumField.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  32,
+"endLine":  14,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Value\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\EnumField.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  31,
+"endLine":  15,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IdentityOpt\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\EnumField.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  32,
+"endLine":  16,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"HashCode\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\StringTable.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  24,
+"endLine":  20,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Text\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\StringTable.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  27,
+"endLine":  23,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Text\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\TextKeyedCache.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  27,
+"endLine":  21,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"HashCode\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\TextKeyedCache.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  24,
+"endLine":  24,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Item\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\TextKeyedCache.cs",
+"region":  {
+"startLine":  27,
+"startColumn":  22,
+"endLine":  27,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"HashCode\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\TextKeyedCache.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  24,
+"endLine":  33,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Entry\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\TextKeyedCache.cs",
+"region":  {
+"startLine":  34,
+"startColumn":  37,
+"endLine":  34,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Text\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\TextKeyedCache.cs",
+"region":  {
+"startLine":  41,
+"startColumn":  36,
+"endLine":  41,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Item\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\TextKeyedCache.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  31,
+"endLine":  42,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Item1\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\ValueTuple%602.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  28,
+"endLine":  14,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Item2\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\ValueTuple%602.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  28,
+"endLine":  15,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Item1\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\ValueTuple%603.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  28,
+"endLine":  15,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Item2\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\ValueTuple%603.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  28,
+"endLine":  16,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Item3\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\ValueTuple%603.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  28,
+"endLine":  17,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Flags\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MemberDescriptor.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  37,
+"endLine":  33,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"DeclaringTypeId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MemberDescriptor.cs",
+"region":  {
+"startLine":  45,
+"startColumn":  31,
+"endLine":  45,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Arity\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MemberDescriptor.cs",
+"region":  {
+"startLine":  57,
+"startColumn":  32,
+"endLine":  57,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MemberDescriptor.cs",
+"region":  {
+"startLine":  58,
+"startColumn":  32,
+"endLine":  58,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Signature\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MemberDescriptor.cs",
+"region":  {
+"startLine":  71,
+"startColumn":  46,
+"endLine":  71,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Offset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\EmbeddedResource.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  30,
+"endLine":  9,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Attributes\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\EmbeddedResource.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  52,
+"endLine":  10,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\EmbeddedResource.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  32,
+"endLine":  11,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Module\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\MetadataDecoder.cs",
+"region":  {
+"startLine":  77,
+"startColumn":  34,
+"endLine":  77,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"StringValue\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\PEModule.cs",
+"region":  {
+"startLine":  1283,
+"startColumn":  27,
+"endLine":  1283,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IntValue\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\PEModule.cs",
+"region":  {
+"startLine":  1284,
+"startColumn":  24,
+"endLine":  1284,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Handle\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\PEModule.cs",
+"region":  {
+"startLine":  1603,
+"startColumn":  51,
+"endLine":  1603,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SignatureIndex\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\PEModule.cs",
+"region":  {
+"startLine":  1604,
+"startColumn":  34,
+"endLine":  1604,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Modules\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReference\\AssemblyMetadata.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  60,
+"endLine":  24,
+"endColumn":  67
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Assembly\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReference\\AssemblyMetadata.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  40,
+"endLine":  25,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"File\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReference\\ReferenceDirective.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  32,
+"endLine":  13,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Location\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReference\\ReferenceDirective.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  34,
+"endLine":  14,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Data2\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\NativePdbWriter\\ISymUnmanagedWriter.cs",
+"region":  {
+"startLine":  185,
+"startColumn":  32,
+"endLine":  185,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Data3\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\NativePdbWriter\\ISymUnmanagedWriter.cs",
+"region":  {
+"startLine":  186,
+"startColumn":  32,
+"endLine":  186,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"RidOfField\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\NativePdbWriter\\PdbMetadataWrapper.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  21,
+"endLine":  15,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"UlOffset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\NativePdbWriter\\PdbMetadataWrapper.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  21,
+"endLine":  16,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\AssemblyReferenceAlias.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  32,
+"endLine":  15,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Assembly\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\AssemblyReferenceAlias.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  44,
+"endLine":  20,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ChecksumAlgorithmId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\DebugSourceInfo.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  30,
+"endLine":  18,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Checksum\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\DebugSourceInfo.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  46,
+"endLine":  23,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"EmbeddedTextBlob\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\DebugSourceInfo.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  46,
+"endLine":  28,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Type\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\ExportedType.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  40,
+"endLine":  13,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsForwarder\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\ExportedType.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  30,
+"endLine":  19,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ParentIndex\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\ExportedType.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  29,
+"endLine":  25,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"StartOffset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\LocalScope.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  29,
+"endLine":  18,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"EndOffset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\LocalScope.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  29,
+"endLine":  23,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"KickoffMethod\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\Members.cs",
+"region":  {
+"startLine":  322,
+"startColumn":  43,
+"endLine":  322,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"CatchHandlerOffset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\Members.cs",
+"region":  {
+"startLine":  327,
+"startColumn":  29,
+"endLine":  327,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"YieldOffsets\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\Members.cs",
+"region":  {
+"startLine":  332,
+"startColumn":  45,
+"endLine":  332,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ResumeOffsets\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\Members.cs",
+"region":  {
+"startLine":  337,
+"startColumn":  45,
+"endLine":  337,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Context\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataVisitor.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  37,
+"endLine":  16,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Context\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataWriter.cs",
+"region":  {
+"startLine":  407,
+"startColumn":  37,
+"endLine":  407,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataWriter.DynamicAnalysis.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  31,
+"endLine":  18,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"HashAlgorithm\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataWriter.DynamicAnalysis.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  31,
+"endLine":  19,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Hash\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataWriter.DynamicAnalysis.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  31,
+"endLine":  20,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Spans\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataWriter.DynamicAnalysis.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  31,
+"endLine":  25,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"BlobHeapSize\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataWriter.DynamicAnalysis.cs",
+"region":  {
+"startLine":  272,
+"startColumn":  33,
+"endLine":  272,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"GuidHeapSize\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataWriter.DynamicAnalysis.cs",
+"region":  {
+"startLine":  273,
+"startColumn":  33,
+"endLine":  273,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"BlobIndexSize\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataWriter.DynamicAnalysis.cs",
+"region":  {
+"startLine":  275,
+"startColumn":  33,
+"endLine":  275,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"GuidIndexSize\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\MetadataWriter.DynamicAnalysis.cs",
+"region":  {
+"startLine":  276,
+"startColumn":  33,
+"endLine":  276,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Offset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\SequencePoint.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  29,
+"endLine":  13,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"StartLine\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\SequencePoint.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  29,
+"endLine":  14,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"StartColumn\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\SequencePoint.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  29,
+"endLine":  15,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"EndLine\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\SequencePoint.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  29,
+"endLine":  16,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"EndColumn\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\SequencePoint.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  29,
+"endLine":  17,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Document\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\SequencePoint.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  45,
+"endLine":  18,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"StartLine\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\SourceSpan.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  29,
+"endLine":  13,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"StartColumn\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\SourceSpan.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  29,
+"endLine":  14,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"EndLine\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\SourceSpan.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  29,
+"endLine":  15,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"EndColumn\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\SourceSpan.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  29,
+"endLine":  16,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Document\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\SourceSpan.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  49,
+"endLine":  17,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"StartOffset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\StateMachineHoistedLocalScope.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  29,
+"endLine":  12,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"EndOffset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\StateMachineHoistedLocalScope.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  29,
+"endLine":  17,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ImplementingMethod\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\Types.cs",
+"region":  {
+"startLine":  338,
+"startColumn":  47,
+"endLine":  338,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ImplementedMethod\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\Types.cs",
+"region":  {
+"startLine":  343,
+"startColumn":  46,
+"endLine":  343,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Definition\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\Units.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  37,
+"endLine":  25,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"StartLine\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\Units.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  30,
+"endLine":  26,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"StartColumn\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\Units.cs",
+"region":  {
+"startLine":  27,
+"startColumn":  30,
+"endLine":  27,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"EndLine\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\Units.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  30,
+"endLine":  28,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"EndColumn\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\Units.cs",
+"region":  {
+"startLine":  29,
+"startColumn":  30,
+"endLine":  29,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"AliasOpt\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\UsedNamespaceOrType.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  32,
+"endLine":  14,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TargetAssemblyOpt\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\UsedNamespaceOrType.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  44,
+"endLine":  15,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TargetNamespaceOpt\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\UsedNamespaceOrType.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  36,
+"endLine":  16,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TargetTypeOpt\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\UsedNamespaceOrType.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  40,
+"endLine":  17,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TargetXmlNamespaceOpt\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\UsedNamespaceOrType.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  32,
+"endLine":  18,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Exponent\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\RealParser.cs",
+"region":  {
+"startLine":  282,
+"startColumn":  24,
+"endLine":  282,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Mantissa\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\RealParser.cs",
+"region":  {
+"startLine":  283,
+"startColumn":  27,
+"endLine":  283,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IntData\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\RealParser.cs",
+"region":  {
+"startLine":  792,
+"startColumn":  25,
+"endLine":  792,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"FloatData\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\RealParser.cs",
+"region":  {
+"startLine":  794,
+"startColumn":  26,
+"endLine":  794,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"DefinitionIndex\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ReferenceManager\\AssemblyReferenceCandidate.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  33,
+"endLine":  18,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"AssemblySymbol\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ReferenceManager\\AssemblyReferenceCandidate.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  45,
+"endLine":  23,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Identity\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ReferenceManager\\CommonReferenceManager.Resolution.cs",
+"region":  {
+"startLine":  156,
+"startColumn":  46,
+"endLine":  156,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Reference\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ReferenceManager\\CommonReferenceManager.Resolution.cs",
+"region":  {
+"startLine":  157,
+"startColumn":  47,
+"endLine":  157,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"RelativeAssemblyIndex\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ReferenceManager\\CommonReferenceManager.Resolution.cs",
+"region":  {
+"startLine":  163,
+"startColumn":  33,
+"endLine":  163,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"AliasesOpt\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ReferenceManager\\MergedAliases.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  37,
+"endLine":  10,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"RecursiveAliasesOpt\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ReferenceManager\\MergedAliases.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  37,
+"endLine":  11,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Identities\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ReferenceManager\\ModuleReferences.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  58,
+"endLine":  21,
+"endColumn":  68
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Symbols\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ReferenceManager\\ModuleReferences.cs",
+"region":  {
+"startLine":  30,
+"startColumn":  57,
+"endLine":  30,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"UnifiedAssemblies\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ReferenceManager\\ModuleReferences.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  74,
+"endLine":  36,
+"endColumn":  91
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SigAlgId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\StrongName\\CryptoBlobParser.cs",
+"region":  {
+"startLine":  83,
+"startColumn":  27,
+"endLine":  83,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"HashAlgId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\StrongName\\CryptoBlobParser.cs",
+"region":  {
+"startLine":  84,
+"startColumn":  27,
+"endLine":  84,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"PublicKeySize\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\StrongName\\CryptoBlobParser.cs",
+"region":  {
+"startLine":  85,
+"startColumn":  27,
+"endLine":  85,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"PublicKey\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\StrongName\\CryptoBlobParser.cs",
+"region":  {
+"startLine":  87,
+"startColumn":  31,
+"endLine":  87,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Type\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\StrongName\\CryptoBlobParser.cs",
+"region":  {
+"startLine":  162,
+"startColumn":  25,
+"endLine":  162,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Version\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\StrongName\\CryptoBlobParser.cs",
+"region":  {
+"startLine":  163,
+"startColumn":  25,
+"endLine":  163,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Reserved\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\StrongName\\CryptoBlobParser.cs",
+"region":  {
+"startLine":  164,
+"startColumn":  27,
+"endLine":  164,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"AlgId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\StrongName\\CryptoBlobParser.cs",
+"region":  {
+"startLine":  165,
+"startColumn":  27,
+"endLine":  165,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Magic\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\StrongName\\CryptoBlobParser.cs",
+"region":  {
+"startLine":  172,
+"startColumn":  27,
+"endLine":  172,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"BitLen\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\StrongName\\CryptoBlobParser.cs",
+"region":  {
+"startLine":  173,
+"startColumn":  27,
+"endLine":  173,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"PubExp\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\StrongName\\CryptoBlobParser.cs",
+"region":  {
+"startLine":  174,
+"startColumn":  27,
+"endLine":  174,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Namespace\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\AttributeDescription.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  32,
+"endLine":  12,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\AttributeDescription.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  32,
+"endLine":  13,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Signatures\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\AttributeDescription.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  34,
+"endLine":  14,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"MatchIgnoringCase\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\AttributeDescription.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  30,
+"endLine":  17,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Namespace\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\AttributeDescription.cs",
+"region":  {
+"startLine":  96,
+"startColumn":  36,
+"endLine":  96,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\AttributeDescription.cs",
+"region":  {
+"startLine":  97,
+"startColumn":  36,
+"endLine":  97,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Underlying\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\AttributeDescription.cs",
+"region":  {
+"startLine":  98,
+"startColumn":  51,
+"endLine":  98,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Position\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\AbstractWarningStateMap.cs",
+"region":  {
+"startLine":  63,
+"startColumn":  33,
+"endLine":  63,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"GeneralWarningOption\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\AbstractWarningStateMap.cs",
+"region":  {
+"startLine":  66,
+"startColumn":  46,
+"endLine":  66,
+"endColumn":  66
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SpecificWarningOption\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\AbstractWarningStateMap.cs",
+"region":  {
+"startLine":  69,
+"startColumn":  75,
+"endLine":  69,
+"endColumn":  96
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"hash\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\InternalSyntax\\SyntaxNodeCache.cs",
+"region":  {
+"startLine":  117,
+"startColumn":  33,
+"endLine":  117,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"node\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\InternalSyntax\\SyntaxNodeCache.cs",
+"region":  {
+"startLine":  118,
+"startColumn":  39,
+"endLine":  118,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"UnmappedLine\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\LineDirectiveMap.LineMappingEntry.cs",
+"region":  {
+"startLine":  53,
+"startColumn":  33,
+"endLine":  53,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"MappedLine\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\LineDirectiveMap.LineMappingEntry.cs",
+"region":  {
+"startLine":  56,
+"startColumn":  33,
+"endLine":  56,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"MappedPathOpt\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\LineDirectiveMap.LineMappingEntry.cs",
+"region":  {
+"startLine":  59,
+"startColumn":  36,
+"endLine":  59,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"State\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\LineDirectiveMap.LineMappingEntry.cs",
+"region":  {
+"startLine":  62,
+"startColumn":  43,
+"endLine":  62,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Operation\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxDiffer.cs",
+"region":  {
+"startLine":  189,
+"startColumn":  36,
+"endLine":  189,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Count\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxDiffer.cs",
+"region":  {
+"startLine":  190,
+"startColumn":  33,
+"endLine":  190,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Range\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxDiffer.cs",
+"region":  {
+"startLine":  510,
+"startColumn":  45,
+"endLine":  510,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"OldNodes\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxDiffer.cs",
+"region":  {
+"startLine":  511,
+"startColumn":  54,
+"endLine":  511,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NewNodes\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxDiffer.cs",
+"region":  {
+"startLine":  512,
+"startColumn":  54,
+"endLine":  512,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Range\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxDiffer.cs",
+"region":  {
+"startLine":  656,
+"startColumn":  45,
+"endLine":  656,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NewText\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxDiffer.cs",
+"region":  {
+"startLine":  657,
+"startColumn":  36,
+"endLine":  657,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Kind\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\CustomDebugInfoRecord.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  45,
+"endLine":  9,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Version\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\CustomDebugInfoRecord.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  30,
+"endLine":  10,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Data\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\CustomDebugInfoRecord.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  46,
+"endLine":  11,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"FlagCount\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\DynamicLocalInfo.cs",
+"region":  {
+"startLine":  7,
+"startColumn":  29,
+"endLine":  7,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Flags\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\DynamicLocalInfo.cs",
+"region":  {
+"startLine":  8,
+"startColumn":  31,
+"endLine":  8,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SlotId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\DynamicLocalInfo.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  29,
+"endLine":  9,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\DynamicLocalInfo.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  32,
+"endLine":  10,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"StartOffset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\StateMachineHoistedLocalScope.cs",
+"region":  {
+"startLine":  7,
+"startColumn":  29,
+"endLine":  7,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"EndOffset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\StateMachineHoistedLocalScope.cs",
+"region":  {
+"startLine":  8,
+"startColumn":  29,
+"endLine":  8,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Builder\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\PooledObjects\\PooledStringBuilder.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  39,
+"endLine":  19,
+"endColumn":  46
+}
+}
+}
+]
+}

@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1135",
+"message":  "Complete the task associated to this \"TODO\" comment.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Remote\\ServiceHub\\Services\\ServiceHubServiceBase.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  8,
+"endLine":  11,
+"endColumn":  12
+}
+}
+},
+{
+"id":  "S1135",
+"message":  "Complete the task associated to this \"TODO\" comment.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Remote\\ServiceHub\\Services\\SnapshotService.JsonRpcAssetSource.cs",
+"region":  {
+"startLine":  38,
+"startColumn":  20,
+"endLine":  38,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1135",
+"message":  "Complete the task associated to this \"TODO\" comment.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Remote\\ServiceHub\\Shared\\ClientDirectStream.cs",
+"region":  {
+"startLine":  110,
+"startColumn":  20,
+"endLine":  110,
+"endColumn":  24
+}
+}
+}
+]
+}

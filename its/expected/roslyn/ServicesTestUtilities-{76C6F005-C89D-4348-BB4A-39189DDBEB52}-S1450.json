@@ -1,0 +1,69 @@
+{
+"issues":  [
+{
+"id":  "S1450",
+"message":  "Remove the \"_vfPtr\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\TestUtilities\\BlindAggregatorFactory.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  28,
+"endLine":  31,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_queryInterfacePtr\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\TestUtilities\\BlindAggregatorFactory.cs",
+"region":  {
+"startLine":  87,
+"startColumn":  32,
+"endLine":  87,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_addRefPtr\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\TestUtilities\\BlindAggregatorFactory.cs",
+"region":  {
+"startLine":  88,
+"startColumn":  32,
+"endLine":  88,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_releasePtr\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\TestUtilities\\BlindAggregatorFactory.cs",
+"region":  {
+"startLine":  89,
+"startColumn":  32,
+"endLine":  89,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_getGCHandlePtr\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\TestUtilities\\BlindAggregatorFactory.cs",
+"region":  {
+"startLine":  90,
+"startColumn":  32,
+"endLine":  90,
+"endColumn":  47
+}
+}
+}
+]
+}

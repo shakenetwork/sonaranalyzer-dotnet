@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Syntax\\Parsing\\SyntaxExtensions.cs",
+"region":  {
+"startLine":  107,
+"startColumn":  17,
+"endLine":  107,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Syntax\\Syntax\\SyntaxFactoryTests.cs",
+"region":  {
+"startLine":  171,
+"startColumn":  17,
+"endLine":  171,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Syntax\\Syntax\\SyntaxFactoryTests.cs",
+"region":  {
+"startLine":  188,
+"startColumn":  17,
+"endLine":  188,
+"endColumn":  19
+}
+}
+}
+]
+}

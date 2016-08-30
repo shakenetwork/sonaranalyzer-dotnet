@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\CodeLens\\AbstractCodeLensTest.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  27,
+"endLine":  13,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\ExtractInterface\\AbstractExtractInterfaceTests.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  27,
+"endLine":  11,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S1118",
+"message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\NoCompilationConstants.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  20,
+"endLine":  11,
+"endColumn":  42
+}
+}
+}
+]
+}

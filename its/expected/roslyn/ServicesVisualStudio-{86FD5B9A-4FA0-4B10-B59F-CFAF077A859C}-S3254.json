@@ -1,0 +1,147 @@
+{
+"issues":  [
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"useExpandedHierarchy\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Library\\ObjectBrowser\\AbstractDescriptionBuilder.cs",
+"region":  {
+"startLine":  84,
+"startColumn":  137,
+"endLine":  84,
+"endColumn":  164
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"useExpandedHierarchy\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Library\\ObjectBrowser\\AbstractDescriptionBuilder.cs",
+"region":  {
+"startLine":  133,
+"startColumn":  127,
+"endLine":  133,
+"endColumn":  154
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"ignoreAssemblyKey\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Library\\ObjectBrowser\\Lists\\SymbolListItem.cs",
+"region":  {
+"startLine":  68,
+"startColumn":  52,
+"endLine":  68,
+"endColumn":  76
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"filePath\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\ProjectSystem\\MiscellaneousFilesWorkspace.HostProject.cs",
+"region":  {
+"startLine":  56,
+"startColumn":  21,
+"endLine":  56,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"compilationOptions\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\ProjectSystem\\MiscellaneousFilesWorkspace.HostProject.cs",
+"region":  {
+"startLine":  57,
+"startColumn":  21,
+"endLine":  57,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"isSubmission\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\ProjectSystem\\MiscellaneousFilesWorkspace.HostProject.cs",
+"region":  {
+"startLine":  62,
+"startColumn":  21,
+"endLine":  62,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"hostObjectType\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\ProjectSystem\\MiscellaneousFilesWorkspace.HostProject.cs",
+"region":  {
+"startLine":  63,
+"startColumn":  21,
+"endLine":  63,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"severity\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Snippets\\AbstractSnippetExpansionClient.cs",
+"region":  {
+"startLine":  574,
+"startColumn":  21,
+"endLine":  574,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"statements\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Venus\\ContainedLanguageCodeSupport.cs",
+"region":  {
+"startLine":  194,
+"startColumn":  17,
+"endLine":  194,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"optionSet\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Venus\\ContainedLanguageCodeSupport.cs",
+"region":  {
+"startLine":  217,
+"startColumn":  80,
+"endLine":  217,
+"endColumn":  84
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"name\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Venus\\ContainedLanguageCodeSupport.cs",
+"region":  {
+"startLine":  290,
+"startColumn":  108,
+"endLine":  290,
+"endColumn":  118
+}
+}
+}
+]
+}

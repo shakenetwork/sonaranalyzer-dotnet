@@ -1,0 +1,290 @@
+{
+"issues":  [
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\InlineTemporary\\InlineTemporaryCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  538,
+"startColumn":  33,
+"endLine":  538,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\AttributeNamedParameterCompletionProvider.cs",
+"region":  {
+"startLine":  101,
+"startColumn":  25,
+"endLine":  101,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\AttributeNamedParameterCompletionProvider.cs",
+"region":  {
+"startLine":  127,
+"startColumn":  25,
+"endLine":  127,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\CrefCompletionProvider.cs",
+"region":  {
+"startLine":  178,
+"startColumn":  25,
+"endLine":  178,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\CrefCompletionProvider.cs",
+"region":  {
+"startLine":  266,
+"startColumn":  25,
+"endLine":  266,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\CrefCompletionProvider.cs",
+"region":  {
+"startLine":  273,
+"startColumn":  25,
+"endLine":  273,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\ObjectCreationCompletionProvider.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  25,
+"endLine":  42,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\SpeculativeTCompletionProvider.cs",
+"region":  {
+"startLine":  73,
+"startColumn":  25,
+"endLine":  73,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\AwaitKeywordRecommender.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  25,
+"endLine":  42,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  693,
+"startColumn":  25,
+"endLine":  693,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\StatementSyntaxComparer.cs",
+"region":  {
+"startLine":  74,
+"startColumn":  25,
+"endLine":  74,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpMethodExtractor.CSharpCodeGenerator.cs",
+"region":  {
+"startLine":  332,
+"startColumn":  29,
+"endLine":  332,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateMember\\GenerateConstructor\\CSharpGenerateConstructorService.cs",
+"region":  {
+"startLine":  269,
+"startColumn":  25,
+"endLine":  269,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateMember\\GenerateDefaultConstructors\\CSharpGenerateDefaultConstructorsService.cs",
+"region":  {
+"startLine":  30,
+"startColumn":  25,
+"endLine":  30,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateType\\CSharpGenerateTypeService.cs",
+"region":  {
+"startLine":  279,
+"startColumn":  25,
+"endLine":  279,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateType\\CSharpGenerateTypeService.cs",
+"region":  {
+"startLine":  321,
+"startColumn":  25,
+"endLine":  321,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateType\\CSharpGenerateTypeService.cs",
+"region":  {
+"startLine":  415,
+"startColumn":  25,
+"endLine":  415,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateType\\CSharpGenerateTypeService.cs",
+"region":  {
+"startLine":  421,
+"startColumn":  25,
+"endLine":  421,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateType\\CSharpGenerateTypeService.cs",
+"region":  {
+"startLine":  440,
+"startColumn":  25,
+"endLine":  440,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateType\\CSharpGenerateTypeService.cs",
+"region":  {
+"startLine":  747,
+"startColumn":  25,
+"endLine":  747,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ImplementInterface\\CSharpImplementInterfaceService.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  25,
+"endLine":  37,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\RemoveUnnecessaryImports\\CSharpRemoveUnnecessaryImportsService.Rewriter.cs",
+"region":  {
+"startLine":  56,
+"startColumn":  29,
+"endLine":  56,
+"endColumn":  31
+}
+}
+}
+]
+}

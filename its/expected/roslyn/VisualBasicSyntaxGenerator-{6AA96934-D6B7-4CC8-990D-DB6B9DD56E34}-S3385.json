@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\Util\\WriteUtils.vb",
+"region":  {
+"startLine":  235,
+"startColumn":  29,
+"endLine":  235,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  60,
+"startColumn":  17,
+"endLine":  60,
+"endColumn":  25
+}
+}
+}
+]
+}

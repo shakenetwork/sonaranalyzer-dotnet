@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S2259",
+"message":  "\"d\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\CommonSyntaxTests.cs",
+"region":  {
+"startLine":  61,
+"startColumn":  26,
+"endLine":  61,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"input\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\CryptoBlobParserTests.cs",
+"region":  {
+"startLine":  88,
+"startColumn":  35,
+"endLine":  88,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"expectedNestedTypes\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\MetadataHelpersTests.cs",
+"region":  {
+"startLine":  142,
+"startColumn":  25,
+"endLine":  142,
+"endColumn":  44
+}
+}
+}
+]
+}

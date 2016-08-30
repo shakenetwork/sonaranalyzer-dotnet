@@ -1,0 +1,251 @@
+{
+"issues":  [
+{
+"id":  "S2357",
+"message":  "Make \"Syntax\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\DocumentationComments\\DocCommentTests.vb",
+"region":  {
+"startLine":  10022,
+"startColumn":  29,
+"endLine":  10022,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Symbols\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\DocumentationComments\\DocCommentTests.vb",
+"region":  {
+"startLine":  10023,
+"startColumn":  29,
+"endLine":  10023,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Types\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\DocumentationComments\\DocCommentTests.vb",
+"region":  {
+"startLine":  10024,
+"startColumn":  29,
+"endLine":  10024,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\DocumentationComments\\DocCommentTests.vb",
+"region":  {
+"startLine":  11846,
+"startColumn":  29,
+"endLine":  11846,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Target\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\DocumentationComments\\DocCommentTests.vb",
+"region":  {
+"startLine":  11847,
+"startColumn":  29,
+"endLine":  11847,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Kind\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Metadata\\PE\\LoadingOperators.vb",
+"region":  {
+"startLine":  607,
+"startColumn":  29,
+"endLine":  607,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Display\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Metadata\\PE\\LoadingOperators.vb",
+"region":  {
+"startLine":  608,
+"startColumn":  29,
+"endLine":  608,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"c1\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Retargeting\\RetargetingCustomAttributes.vb",
+"region":  {
+"startLine":  28,
+"startColumn":  20,
+"endLine":  28,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"c2\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Retargeting\\RetargetingCustomAttributes.vb",
+"region":  {
+"startLine":  29,
+"startColumn":  20,
+"endLine":  29,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"c1MscorLibAssemblyRef\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Retargeting\\RetargetingCustomAttributes.vb",
+"region":  {
+"startLine":  30,
+"startColumn":  20,
+"endLine":  30,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"c2MscorlibAssemblyRef\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Retargeting\\RetargetingCustomAttributes.vb",
+"region":  {
+"startLine":  31,
+"startColumn":  20,
+"endLine":  31,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"OldMsCorLib_debuggerTypeProxyAttributeType\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Retargeting\\RetargetingCustomAttributes.vb",
+"region":  {
+"startLine":  32,
+"startColumn":  20,
+"endLine":  32,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NewMsCorLib_debuggerTypeProxyAttributeType\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Retargeting\\RetargetingCustomAttributes.vb",
+"region":  {
+"startLine":  33,
+"startColumn":  20,
+"endLine":  33,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"OldMsCorLib_debuggerTypeProxyAttributeCtor\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Retargeting\\RetargetingCustomAttributes.vb",
+"region":  {
+"startLine":  34,
+"startColumn":  20,
+"endLine":  34,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NewMsCorLib_debuggerTypeProxyAttributeCtor\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Retargeting\\RetargetingCustomAttributes.vb",
+"region":  {
+"startLine":  35,
+"startColumn":  20,
+"endLine":  35,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"OldMsCorLib_systemType\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Retargeting\\RetargetingCustomAttributes.vb",
+"region":  {
+"startLine":  36,
+"startColumn":  20,
+"endLine":  36,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NewMsCorLib_systemType\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Retargeting\\RetargetingCustomAttributes.vb",
+"region":  {
+"startLine":  37,
+"startColumn":  20,
+"endLine":  37,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Kind\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Source\\OperatorsTests.vb",
+"region":  {
+"startLine":  238,
+"startColumn":  29,
+"endLine":  238,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Source\\OperatorsTests.vb",
+"region":  {
+"startLine":  239,
+"startColumn":  29,
+"endLine":  239,
+"endColumn":  33
+}
+}
+}
+]
+}

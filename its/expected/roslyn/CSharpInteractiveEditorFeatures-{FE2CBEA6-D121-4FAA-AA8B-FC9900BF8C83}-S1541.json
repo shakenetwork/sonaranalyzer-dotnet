@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\EditorFeatures\\CSharp\\Interactive\\CSharpSendToInteractiveSubmissionProvider.cs",
+"region":  {
+"startLine":  40,
+"startColumn":  28,
+"endLine":  40,
+"endColumn":  54
+}
+}
+}
+]
+}

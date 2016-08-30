@@ -1,0 +1,95 @@
+{
+"issues":  [
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Diagnostics\\BoxingOperationAnalyzer.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  18,
+"endLine":  65,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (6) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Diagnostics\\CouldHaveMoreSpecificTypeAnalyzer.cs",
+"region":  {
+"startLine":  245,
+"startColumn":  21,
+"endLine":  246,
+"endColumn":  192
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Diagnostics\\LocalCouldBeConstAnalyzer.cs",
+"region":  {
+"startLine":  67,
+"startColumn":  29,
+"endLine":  85,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (23) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Diagnostics\\OperationTestAnalyzer.cs",
+"region":  {
+"startLine":  138,
+"startColumn":  18,
+"endLine":  256,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (13) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Diagnostics\\OperationTestAnalyzer.cs",
+"region":  {
+"startLine":  315,
+"startColumn":  18,
+"endLine":  442,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Diagnostics\\OperationTestAnalyzer.cs",
+"region":  {
+"startLine":  1651,
+"startColumn":  17,
+"endLine":  1677,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\MetadataReferenceTests.cs",
+"region":  {
+"startLine":  484,
+"startColumn":  25,
+"endLine":  486,
+"endColumn":  75
+}
+}
+}
+]
+}

@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S100",
+"message":  "Rename property \"_ServerChannel\" to match camel case naming rules, trim underscores from the name.",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\Features\\Interactive\\Core\\InteractiveHost.cs",
+"region":  {
+"startLine":  87,
+"startColumn":  35,
+"endLine":  87,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ExecuteOnUIThread\" to match camel case naming rules, consider using \"ExecuteOnUiThread\".",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\Features\\Interactive\\Core\\InteractiveHost.Service.cs",
+"region":  {
+"startLine":  805,
+"startColumn":  53,
+"endLine":  805,
+"endColumn":  70
+}
+}
+}
+]
+}

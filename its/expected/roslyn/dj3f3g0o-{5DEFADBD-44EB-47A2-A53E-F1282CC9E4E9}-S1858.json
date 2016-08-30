@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\CodeModel\\CSharpCodeModelService.cs",
+"region":  {
+"startLine":  846,
+"startColumn":  50,
+"endLine":  846,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\" on a string.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\Telemetry\\CSharpCompilationErrorTelemetryIncrementalAnalyzer.cs",
+"region":  {
+"startLine":  83,
+"startColumn":  160,
+"endLine":  83,
+"endColumn":  171
+}
+}
+}
+]
+}

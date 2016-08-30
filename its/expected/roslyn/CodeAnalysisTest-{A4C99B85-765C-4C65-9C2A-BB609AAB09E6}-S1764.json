@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1764",
+"message":  "Identical sub-expressions on both sides of operator \"\u003c=\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\LinePositionTests.cs",
+"region":  {
+"startLine":  83,
+"startColumn":  25,
+"endLine":  83,
+"endColumn":  73
+}
+}
+},
+{
+"id":  "S1764",
+"message":  "Identical sub-expressions on both sides of operator \"\u003e=\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\LinePositionTests.cs",
+"region":  {
+"startLine":  91,
+"startColumn":  25,
+"endLine":  91,
+"endColumn":  73
+}
+}
+}
+]
+}

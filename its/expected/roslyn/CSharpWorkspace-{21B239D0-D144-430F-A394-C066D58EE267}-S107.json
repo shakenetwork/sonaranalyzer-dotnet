@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S107",
+"message":  "Constructor has 48 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\CSharpSyntaxContext.cs",
+"region":  {
+"startLine":  52,
+"startColumn":  36,
+"endLine":  100,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Constructor has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Engine\\Trivia\\TriviaDataFactory.FormattedComplexTrivia.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  42,
+"endLine":  27,
+"endColumn":  53
+}
+}
+}
+]
+}

@@ -1,0 +1,121 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"architectures\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Shared\\GlobalAssemblyCacheHelpers\\GacFileResolver.cs",
+"region":  {
+"startLine":  54,
+"startColumn":  17,
+"endLine":  54,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"culture\".",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\Core\\Hosting\\AssemblyLoader\\MetadataShadowCopyProvider.cs",
+"region":  {
+"startLine":  603,
+"startColumn":  17,
+"endLine":  603,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"info\".",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\Core\\Hosting\\CommonMemberFilter.cs",
+"region":  {
+"startLine":  56,
+"startColumn":  17,
+"endLine":  56,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"count\".",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\Core\\Hosting\\ObjectFormatter\\CommonObjectFormatter.Builder.cs",
+"region":  {
+"startLine":  94,
+"startColumn":  17,
+"endLine":  94,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"typeInfo\".",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\Core\\Hosting\\ObjectFormatter\\CommonTypeNameFormatter.cs",
+"region":  {
+"startLine":  77,
+"startColumn":  17,
+"endLine":  77,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"arrayOpt\".",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\Core\\Hosting\\ObjectFormatter\\CommonTypeNameFormatter.cs",
+"region":  {
+"startLine":  188,
+"startColumn":  21,
+"endLine":  188,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"typeInfo\".",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\Core\\Hosting\\ObjectFormatter\\CommonTypeNameFormatter.cs",
+"region":  {
+"startLine":  242,
+"startColumn":  21,
+"endLine":  242,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"type\".",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\Core\\Hosting\\ObjectFormatter\\ObjectFormatterHelpers.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  17,
+"endLine":  37,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"end\".",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\Core\\Hosting\\ObjectFormatter\\ObjectFormatterHelpers.cs",
+"region":  {
+"startLine":  423,
+"startColumn":  21,
+"endLine":  423,
+"endColumn":  24
+}
+}
+}
+]
+}

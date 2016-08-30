@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S3257",
+"message":  "Remove the explicit delegate creation; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\Editor\\InteractiveWindow.UIThreadOnly.cs",
+"region":  {
+"startLine":  183,
+"startColumn":  46,
+"endLine":  183,
+"endColumn":  91
+}
+}
+}
+]
+}

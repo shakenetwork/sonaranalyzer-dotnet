@@ -1,0 +1,212 @@
+{
+"issues":  [
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\AbstractEditorFactory.cs",
+"region":  {
+"startLine":  27,
+"startColumn":  23,
+"endLine":  27,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Debugging\\CachedProximityExpressionsGetter.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  14,
+"endLine":  15,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Diagnostics\\VisualStudioDiagnosticAnalyzerService.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  14,
+"endLine":  16,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Diagnostics\\VisualStudioVenusSpanMappingService.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  14,
+"endLine":  16,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\LanguageService\\AbstractPackage%602.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  23,
+"endLine":  17,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\LanguageService\\AbstractPackage%603.cs",
+"region":  {
+"startLine":  7,
+"startColumn":  23,
+"endLine":  7,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Preview\\ChangeList.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  14,
+"endLine":  9,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Progression\\GraphBuilder.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  21,
+"endLine":  23,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\ProjectSystem\\InvisibleEditor.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  14,
+"endLine":  16,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\TableDataSource\\Suppression\\DiagnosticTableControlEventProcessorProvider.SuppressionStateProcessor.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  17,
+"endLine":  10,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\TableDataSource\\Suppression\\VisualStudioDiagnosticListTableCommandHandler.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  14,
+"endLine":  12,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"unsafe\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Watson\\NativeWin32Stubs.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  21,
+"endLine":  28,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\PersistentStorageService.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  14,
+"endLine":  23,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\VisualStudioProjectCacheHostServiceFactory.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  14,
+"endLine":  13,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\VisualStudioSymbolNavigationService.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  14,
+"endLine":  31,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"unsafe\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\SymbolSearch\\Patching\\Delta.cs",
+"region":  {
+"startLine":  63,
+"startColumn":  23,
+"endLine":  63,
+"endColumn":  29
+}
+}
+}
+]
+}

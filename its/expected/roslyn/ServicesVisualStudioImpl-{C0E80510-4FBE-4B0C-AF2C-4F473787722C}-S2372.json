@@ -1,0 +1,667 @@
+{
+"issues":  [
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\AbstractCodeModelObject.cs",
+"region":  {
+"startLine":  44,
+"startColumn":  21,
+"endLine":  44,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\CodeTypeRef.cs",
+"region":  {
+"startLine":  101,
+"startColumn":  21,
+"endLine":  101,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\CodeTypeRef.cs",
+"region":  {
+"startLine":  137,
+"startColumn":  17,
+"endLine":  137,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\Collections\\BasesCollection.cs",
+"region":  {
+"startLine":  134,
+"startColumn":  21,
+"endLine":  134,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\AbstractExternalCodeElement.cs",
+"region":  {
+"startLine":  174,
+"startColumn":  19,
+"endLine":  174,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\AbstractExternalCodeElement.cs",
+"region":  {
+"startLine":  196,
+"startColumn":  17,
+"endLine":  196,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\AbstractExternalCodeElement.cs",
+"region":  {
+"startLine":  225,
+"startColumn":  19,
+"endLine":  225,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\AbstractExternalCodeElement.cs",
+"region":  {
+"startLine":  283,
+"startColumn":  19,
+"endLine":  283,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\AbstractExternalCodeElement.cs",
+"region":  {
+"startLine":  288,
+"startColumn":  19,
+"endLine":  288,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\AbstractExternalCodeElement.cs",
+"region":  {
+"startLine":  293,
+"startColumn":  19,
+"endLine":  293,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\AbstractExternalCodeElement.cs",
+"region":  {
+"startLine":  318,
+"startColumn":  19,
+"endLine":  318,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\AbstractExternalCodeType.cs",
+"region":  {
+"startLine":  76,
+"startColumn":  19,
+"endLine":  76,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\AbstractExternalCodeType.cs",
+"region":  {
+"startLine":  81,
+"startColumn":  19,
+"endLine":  81,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\ExternalCodeAccessorFunction.cs",
+"region":  {
+"startLine":  113,
+"startColumn":  25,
+"endLine":  113,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\ExternalCodeAccessorFunction.cs",
+"region":  {
+"startLine":  125,
+"startColumn":  19,
+"endLine":  125,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\ExternalCodeClass.cs",
+"region":  {
+"startLine":  107,
+"startColumn":  19,
+"endLine":  107,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\ExternalCodeClass.cs",
+"region":  {
+"startLine":  112,
+"startColumn":  19,
+"endLine":  112,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\ExternalCodeDelegate.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  19,
+"endLine":  33,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\ExternalCodeDelegate.cs",
+"region":  {
+"startLine":  38,
+"startColumn":  19,
+"endLine":  38,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\ExternalCodeDelegate.cs",
+"region":  {
+"startLine":  45,
+"startColumn":  17,
+"endLine":  45,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\ExternalCodeDelegate.cs",
+"region":  {
+"startLine":  56,
+"startColumn":  19,
+"endLine":  56,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\ExternalCodeEvent.cs",
+"region":  {
+"startLine":  48,
+"startColumn":  21,
+"endLine":  48,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\ExternalCodeEvent.cs",
+"region":  {
+"startLine":  71,
+"startColumn":  17,
+"endLine":  71,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\ExternalCodeEvent.cs",
+"region":  {
+"startLine":  87,
+"startColumn":  21,
+"endLine":  87,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\ExternalCodeEvent.cs",
+"region":  {
+"startLine":  107,
+"startColumn":  21,
+"endLine":  107,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\ExternalCodeFunction.cs",
+"region":  {
+"startLine":  59,
+"startColumn":  25,
+"endLine":  59,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\ExternalCodeInterface.cs",
+"region":  {
+"startLine":  57,
+"startColumn":  17,
+"endLine":  57,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\ExternalCodeInterface.cs",
+"region":  {
+"startLine":  68,
+"startColumn":  19,
+"endLine":  68,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\ExternalCodeInterface.cs",
+"region":  {
+"startLine":  75,
+"startColumn":  17,
+"endLine":  75,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\ExternalCodeProperty.cs",
+"region":  {
+"startLine":  48,
+"startColumn":  21,
+"endLine":  48,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\ExternalCodeProperty.cs",
+"region":  {
+"startLine":  72,
+"startColumn":  21,
+"endLine":  72,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\ExternalCodeProperty.cs",
+"region":  {
+"startLine":  172,
+"startColumn":  17,
+"endLine":  172,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\ExternalCodeStruct.cs",
+"region":  {
+"startLine":  58,
+"startColumn":  19,
+"endLine":  58,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\ExternalCodeStruct.cs",
+"region":  {
+"startLine":  63,
+"startColumn":  19,
+"endLine":  63,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\ExternalCodeVariable.cs",
+"region":  {
+"startLine":  52,
+"startColumn":  17,
+"endLine":  52,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\ExternalElements\\ExternalCodeVariable.cs",
+"region":  {
+"startLine":  88,
+"startColumn":  21,
+"endLine":  88,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\InternalElements\\AbstractCodeElement.cs",
+"region":  {
+"startLine":  224,
+"startColumn":  19,
+"endLine":  224,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\InternalElements\\AbstractCodeElement.cs",
+"region":  {
+"startLine":  249,
+"startColumn":  19,
+"endLine":  249,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\InternalElements\\AbstractCodeMember.cs",
+"region":  {
+"startLine":  47,
+"startColumn":  21,
+"endLine":  47,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\InternalElements\\AbstractCodeType.cs",
+"region":  {
+"startLine":  110,
+"startColumn":  19,
+"endLine":  110,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\InternalElements\\CodeAccessorFunction.cs",
+"region":  {
+"startLine":  124,
+"startColumn":  17,
+"endLine":  124,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\InternalElements\\CodeAccessorFunction.cs",
+"region":  {
+"startLine":  137,
+"startColumn":  17,
+"endLine":  137,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\InternalElements\\CodeAccessorFunction.cs",
+"region":  {
+"startLine":  166,
+"startColumn":  21,
+"endLine":  166,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\InternalElements\\CodeAccessorFunction.cs",
+"region":  {
+"startLine":  278,
+"startColumn":  17,
+"endLine":  278,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\InternalElements\\CodeAccessorFunction.cs",
+"region":  {
+"startLine":  291,
+"startColumn":  17,
+"endLine":  291,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\InternalElements\\CodeAccessorFunction.cs",
+"region":  {
+"startLine":  304,
+"startColumn":  17,
+"endLine":  304,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\InternalElements\\CodeEvent.cs",
+"region":  {
+"startLine":  125,
+"startColumn":  21,
+"endLine":  125,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\InternalElements\\CodeFunction.cs",
+"region":  {
+"startLine":  115,
+"startColumn":  21,
+"endLine":  115,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\InternalElements\\CodeProperty.cs",
+"region":  {
+"startLine":  109,
+"startColumn":  21,
+"endLine":  109,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\InternalElements\\CodeProperty.cs",
+"region":  {
+"startLine":  127,
+"startColumn":  21,
+"endLine":  127,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Impl\\CodeModel\\InternalElements\\CodeVariable.cs",
+"region":  {
+"startLine":  137,
+"startColumn":  21,
+"endLine":  137,
+"endColumn":  51
+}
+}
+}
+]
+}

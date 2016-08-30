@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"right\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\LanguageServices\\CSharpTypeInferenceService.TypeInferrer.cs",
+"region":  {
+"startLine":  66,
+"startColumn":  30,
+"endLine":  66,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"newToken\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Rename\\CSharpRenameRewriterLanguageService.cs",
+"region":  {
+"startLine":  606,
+"startColumn":  32,
+"endLine":  606,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"newToken\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Rename\\CSharpRenameRewriterLanguageService.cs",
+"region":  {
+"startLine":  607,
+"startColumn":  32,
+"endLine":  607,
+"endColumn":  33
+}
+}
+}
+]
+}

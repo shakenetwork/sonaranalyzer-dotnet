@@ -1,0 +1,264 @@
+{
+"issues":  [
+{
+"id":  "S2357",
+"message":  "Make \"Kind\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\CustomDebugInfoRecord.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  45,
+"endLine":  9,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Version\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\CustomDebugInfoRecord.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  30,
+"endLine":  10,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Data\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\CustomDebugInfoRecord.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  46,
+"endLine":  11,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"FlagCount\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\DynamicLocalInfo.cs",
+"region":  {
+"startLine":  7,
+"startColumn":  29,
+"endLine":  7,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Flags\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\DynamicLocalInfo.cs",
+"region":  {
+"startLine":  8,
+"startColumn":  31,
+"endLine":  8,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SlotId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\DynamicLocalInfo.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  29,
+"endLine":  9,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\DynamicLocalInfo.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  32,
+"endLine":  10,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"StartOffset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\StateMachineHoistedLocalScope.cs",
+"region":  {
+"startLine":  7,
+"startColumn":  29,
+"endLine":  7,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"EndOffset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\StateMachineHoistedLocalScope.cs",
+"region":  {
+"startLine":  8,
+"startColumn":  29,
+"endLine":  8,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Builder\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\PooledObjects\\PooledStringBuilder.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  39,
+"endLine":  19,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Last\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Metadata\\AggregatedMetadataReader.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  40,
+"endLine":  15,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Kind\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Metadata\\ILVisualizer.cs",
+"region":  {
+"startLine":  60,
+"startColumn":  41,
+"endLine":  60,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ExceptionType\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Metadata\\ILVisualizer.cs",
+"region":  {
+"startLine":  61,
+"startColumn":  36,
+"endLine":  61,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"StartOffset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Metadata\\ILVisualizer.cs",
+"region":  {
+"startLine":  62,
+"startColumn":  33,
+"endLine":  62,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"FilterHandlerStart\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Metadata\\ILVisualizer.cs",
+"region":  {
+"startLine":  63,
+"startColumn":  33,
+"endLine":  63,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"EndOffset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Metadata\\ILVisualizer.cs",
+"region":  {
+"startLine":  64,
+"startColumn":  33,
+"endLine":  64,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Metadata\\ILVisualizer.cs",
+"region":  {
+"startLine":  112,
+"startColumn":  36,
+"endLine":  112,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsPinned\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Metadata\\ILVisualizer.cs",
+"region":  {
+"startLine":  113,
+"startColumn":  34,
+"endLine":  113,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsByRef\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Metadata\\ILVisualizer.cs",
+"region":  {
+"startLine":  114,
+"startColumn":  34,
+"endLine":  114,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Type\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Metadata\\ILVisualizer.cs",
+"region":  {
+"startLine":  115,
+"startColumn":  36,
+"endLine":  115,
+"endColumn":  40
+}
+}
+}
+]
+}

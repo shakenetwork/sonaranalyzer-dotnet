@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S3241",
+"message":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\MSBuild\\CSharp\\CSharpProjectFileLoader.CSharpProjectFile.cs",
+"region":  {
+"startLine":  403,
+"startColumn":  24,
+"endLine":  403,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S3241",
+"message":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\MSBuild\\VisualBasic\\VisualBasicProjectFileLoader.cs",
+"region":  {
+"startLine":  422,
+"startColumn":  24,
+"endLine":  422,
+"endColumn":  28
+}
+}
+}
+]
+}

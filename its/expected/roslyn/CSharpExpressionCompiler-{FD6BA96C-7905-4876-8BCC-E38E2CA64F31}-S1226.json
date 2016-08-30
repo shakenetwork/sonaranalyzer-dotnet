@@ -1,0 +1,238 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"@namespace\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\CompilationContext.cs",
+"region":  {
+"startLine":  645,
+"startColumn":  17,
+"endLine":  645,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"@namespace\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\CompilationContext.cs",
+"region":  {
+"startLine":  657,
+"startColumn":  13,
+"endLine":  657,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"@namespace\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\CompilationContext.cs",
+"region":  {
+"startLine":  666,
+"startColumn":  21,
+"endLine":  666,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"compilation\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\CompilationContext.cs",
+"region":  {
+"startLine":  763,
+"startColumn":  13,
+"endLine":  763,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"binder\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\CompilationContext.cs",
+"region":  {
+"startLine":  806,
+"startColumn":  17,
+"endLine":  806,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"binder\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\CompilationContext.cs",
+"region":  {
+"startLine":  809,
+"startColumn":  21,
+"endLine":  809,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"binder\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\CompilationContext.cs",
+"region":  {
+"startLine":  817,
+"startColumn":  17,
+"endLine":  817,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"binder\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\CompilationContext.cs",
+"region":  {
+"startLine":  825,
+"startColumn":  17,
+"endLine":  825,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"binder\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\CompilationContext.cs",
+"region":  {
+"startLine":  840,
+"startColumn":  51,
+"endLine":  840,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"binder\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\CompilationContext.cs",
+"region":  {
+"startLine":  844,
+"startColumn":  55,
+"endLine":  844,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"binder\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\CompilationContext.cs",
+"region":  {
+"startLine":  900,
+"startColumn":  17,
+"endLine":  900,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"type\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\CompilationContext.cs",
+"region":  {
+"startLine":  1476,
+"startColumn":  17,
+"endLine":  1476,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"sourceMethodMustBeInstance\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\CompilationContext.cs",
+"region":  {
+"startLine":  1534,
+"startColumn":  25,
+"endLine":  1534,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"type\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\CSharpEESymbolProvider.cs",
+"region":  {
+"startLine":  66,
+"startColumn":  17,
+"endLine":  66,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"method\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\CSharpInstructionDecoder.cs",
+"region":  {
+"startLine":  120,
+"startColumn":  13,
+"endLine":  120,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"method\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\CSharpInstructionDecoder.cs",
+"region":  {
+"startLine":  123,
+"startColumn":  17,
+"endLine":  123,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"expr\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\Symbols\\PlaceholderLocalSymbol.cs",
+"region":  {
+"startLine":  158,
+"startColumn":  21,
+"endLine":  158,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"allowFormatSpecifiers\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\SyntaxHelpers.cs",
+"region":  {
+"startLine":  30,
+"startColumn":  17,
+"endLine":  30,
+"endColumn":  38
+}
+}
+}
+]
+}

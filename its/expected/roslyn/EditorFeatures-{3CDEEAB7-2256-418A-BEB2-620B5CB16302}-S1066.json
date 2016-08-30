@@ -1,0 +1,264 @@
+{
+"issues":  [
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\BraceMatching\\BraceHighlightingViewTaggerProvider.cs",
+"region":  {
+"startLine":  76,
+"startColumn":  21,
+"endLine":  76,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\CodeFixes\\CodeFixService.ProjectCodeFixProvider.cs",
+"region":  {
+"startLine":  65,
+"startColumn":  37,
+"endLine":  65,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\DocumentationComments\\AbstractDocumentationCommentCommandHandler.cs",
+"region":  {
+"startLine":  228,
+"startColumn":  17,
+"endLine":  228,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\ExtractMethod\\AbstractExtractMethodCommandHandler.cs",
+"region":  {
+"startLine":  143,
+"startColumn":  25,
+"endLine":  143,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\ExtractMethod\\AbstractExtractMethodCommandHandler.cs",
+"region":  {
+"startLine":  211,
+"startColumn":  17,
+"endLine":  211,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\FindReferences\\FindReferencesCommandHandler.cs",
+"region":  {
+"startLine":  63,
+"startColumn":  21,
+"endLine":  63,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\ForegroundNotification\\ForegroundNotificationService.cs",
+"region":  {
+"startLine":  139,
+"startColumn":  33,
+"endLine":  139,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\InlineRename\\AbstractEditorInlineRenameService.cs",
+"region":  {
+"startLine":  137,
+"startColumn":  17,
+"endLine":  137,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\InlineRename\\CommandHandlers\\RenameCommandHandler_SelectAllHandler.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  21,
+"endLine":  42,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\InlineRename\\InlineRenameSession.cs",
+"region":  {
+"startLine":  337,
+"startColumn":  17,
+"endLine":  337,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\Controller.Session_FilterModel.cs",
+"region":  {
+"startLine":  106,
+"startColumn":  21,
+"endLine":  106,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\SignatureHelp\\Controller.Session_ComputeModel.cs",
+"region":  {
+"startLine":  71,
+"startColumn":  29,
+"endLine":  71,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\SignatureHelp\\Controller.Session_ComputeModel.cs",
+"region":  {
+"startLine":  199,
+"startColumn":  29,
+"endLine":  199,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\MetadataAsSource\\MetadataAsSourceFileService.cs",
+"region":  {
+"startLine":  217,
+"startColumn":  21,
+"endLine":  217,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Peek\\PeekableItemFactory.cs",
+"region":  {
+"startLine":  76,
+"startColumn":  21,
+"endLine":  76,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\RenameTracking\\RenameTrackingTaggerProvider.RenameTrackingCodeAction.cs",
+"region":  {
+"startLine":  40,
+"startColumn":  21,
+"endLine":  40,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\RenameTracking\\RenameTrackingTaggerProvider.TrackingSession.cs",
+"region":  {
+"startLine":  241,
+"startColumn":  25,
+"endLine":  241,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\TextStructureNavigation\\AbstractTextStructureNavigatorProvider.TextStructureNavigator.cs",
+"region":  {
+"startLine":  93,
+"startColumn":  25,
+"endLine":  93,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\TodoComment\\AbstractTodoCommentIncrementalAnalyzer.cs",
+"region":  {
+"startLine":  65,
+"startColumn":  17,
+"endLine":  65,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Tagging\\AbstractAsynchronousTaggerProvider.BatchChangeNotifier.cs",
+"region":  {
+"startLine":  176,
+"startColumn":  21,
+"endLine":  176,
+"endColumn":  23
+}
+}
+}
+]
+}

@@ -1,0 +1,1161 @@
+{
+"issues":  [
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Diagnostics\\DiagnosticAnalyzerTests.AllInOne.cs",
+"region":  {
+"startLine":  87,
+"startColumn":  17,
+"endLine":  87,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"category\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Diagnostics\\DiagnosticAnalyzerTests.cs",
+"region":  {
+"startLine":  726,
+"startColumn":  21,
+"endLine":  726,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"analyzers\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Diagnostics\\DiagnosticAnalyzerTests.cs",
+"region":  {
+"startLine":  1483,
+"startColumn":  17,
+"endLine":  1483,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"unused\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Diagnostics\\GetDiagnosticsTests.cs",
+"region":  {
+"startLine":  298,
+"startColumn":  17,
+"endLine":  298,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"tmp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\FlowAnalysis\\RegionAnalysisTests.cs",
+"region":  {
+"startLine":  1343,
+"startColumn":  17,
+"endLine":  1343,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"tmp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\FlowAnalysis\\RegionAnalysisTests.cs",
+"region":  {
+"startLine":  3690,
+"startColumn":  17,
+"endLine":  3690,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"v\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\FlowAnalysis\\RegionAnalysisTests.cs",
+"region":  {
+"startLine":  4948,
+"startColumn":  17,
+"endLine":  4948,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"classK\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\AccessCheckTests.cs",
+"region":  {
+"startLine":  748,
+"startColumn":  29,
+"endLine":  748,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"semanticModel\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\AccessCheckTests.cs",
+"region":  {
+"startLine":  757,
+"startColumn":  17,
+"endLine":  757,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"diagnostics\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\AmbiguousOverrideTests.cs",
+"region":  {
+"startLine":  135,
+"startColumn":  17,
+"endLine":  135,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"newTree\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingAwaitTests.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  17,
+"endLine":  26,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"testAssembly\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingTests.cs",
+"region":  {
+"startLine":  733,
+"startColumn":  17,
+"endLine":  733,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"testAssembly\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingTests.cs",
+"region":  {
+"startLine":  772,
+"startColumn":  17,
+"endLine":  772,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"testAssembly\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingTests.cs",
+"region":  {
+"startLine":  811,
+"startColumn":  17,
+"endLine":  811,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"testAssembly\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingTests.cs",
+"region":  {
+"startLine":  1408,
+"startColumn":  17,
+"endLine":  1408,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"testAssembly\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingTests.cs",
+"region":  {
+"startLine":  1440,
+"startColumn":  17,
+"endLine":  1440,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"testAssembly\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingTests.cs",
+"region":  {
+"startLine":  1466,
+"startColumn":  17,
+"endLine":  1466,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"testAssembly\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingTests.cs",
+"region":  {
+"startLine":  1499,
+"startColumn":  17,
+"endLine":  1499,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\InterpolationTests.cs",
+"region":  {
+"startLine":  272,
+"startColumn":  17,
+"endLine":  272,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"actual_lookupSymbols_ignoreAcc\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LookupTests.cs",
+"region":  {
+"startLine":  632,
+"startColumn":  17,
+"endLine":  632,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LookupTests.cs",
+"region":  {
+"startLine":  1525,
+"startColumn":  17,
+"endLine":  1525,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"propertyTP\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LookupTests.cs",
+"region":  {
+"startLine":  1627,
+"startColumn":  17,
+"endLine":  1627,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"propertyTQ\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LookupTests.cs",
+"region":  {
+"startLine":  1628,
+"startColumn":  17,
+"endLine":  1628,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\MultiDimensionalArrayTests.cs",
+"region":  {
+"startLine":  93,
+"startColumn":  17,
+"endLine":  93,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\MultiDimensionalArrayTests.cs",
+"region":  {
+"startLine":  137,
+"startColumn":  17,
+"endLine":  137,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\MultiDimensionalArrayTests.cs",
+"region":  {
+"startLine":  158,
+"startColumn":  17,
+"endLine":  158,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\MultiDimensionalArrayTests.cs",
+"region":  {
+"startLine":  179,
+"startColumn":  17,
+"endLine":  179,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\MultiDimensionalArrayTests.cs",
+"region":  {
+"startLine":  1060,
+"startColumn":  17,
+"endLine":  1060,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\MultiDimensionalArrayTests.cs",
+"region":  {
+"startLine":  1387,
+"startColumn":  17,
+"endLine":  1387,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NameOfTests.cs",
+"region":  {
+"startLine":  145,
+"startColumn":  17,
+"endLine":  145,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NameOfTests.cs",
+"region":  {
+"startLine":  656,
+"startColumn":  17,
+"endLine":  656,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NameOfTests.cs",
+"region":  {
+"startLine":  678,
+"startColumn":  17,
+"endLine":  678,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NameOfTests.cs",
+"region":  {
+"startLine":  1156,
+"startColumn":  17,
+"endLine":  1156,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NameOfTests.cs",
+"region":  {
+"startLine":  1169,
+"startColumn":  17,
+"endLine":  1169,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NameOfTests.cs",
+"region":  {
+"startLine":  1249,
+"startColumn":  17,
+"endLine":  1249,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NullableConversionTests.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  17,
+"endLine":  32,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NullableConversionTests.cs",
+"region":  {
+"startLine":  81,
+"startColumn":  17,
+"endLine":  81,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NullableConversionTests.cs",
+"region":  {
+"startLine":  144,
+"startColumn":  17,
+"endLine":  144,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NullableTests.cs",
+"region":  {
+"startLine":  287,
+"startColumn":  21,
+"endLine":  287,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NullableTests.cs",
+"region":  {
+"startLine":  347,
+"startColumn":  17,
+"endLine":  347,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NullableTests.cs",
+"region":  {
+"startLine":  501,
+"startColumn":  17,
+"endLine":  501,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NullableTests.cs",
+"region":  {
+"startLine":  567,
+"startColumn":  17,
+"endLine":  567,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NullableTests.cs",
+"region":  {
+"startLine":  714,
+"startColumn":  21,
+"endLine":  714,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"enumSubtraction\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NullableTests.cs",
+"region":  {
+"startLine":  750,
+"startColumn":  23,
+"endLine":  750,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NullableTests.cs",
+"region":  {
+"startLine":  1277,
+"startColumn":  17,
+"endLine":  1277,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NullableTests.cs",
+"region":  {
+"startLine":  1373,
+"startColumn":  17,
+"endLine":  1373,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NullableTests.cs",
+"region":  {
+"startLine":  1572,
+"startColumn":  17,
+"endLine":  1572,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NullableTests.cs",
+"region":  {
+"startLine":  1617,
+"startColumn":  17,
+"endLine":  1617,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NullableTests.cs",
+"region":  {
+"startLine":  1635,
+"startColumn":  17,
+"endLine":  1635,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NullableTests.cs",
+"region":  {
+"startLine":  1733,
+"startColumn":  17,
+"endLine":  1733,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\OperatorTests.cs",
+"region":  {
+"startLine":  2931,
+"startColumn":  17,
+"endLine":  2931,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"model\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\OutVarTests.cs",
+"region":  {
+"startLine":  14938,
+"startColumn":  17,
+"endLine":  14938,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"model\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\OutVarTests.cs",
+"region":  {
+"startLine":  14999,
+"startColumn":  17,
+"endLine":  14999,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  117,
+"startColumn":  17,
+"endLine":  117,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  185,
+"startColumn":  21,
+"endLine":  185,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  258,
+"startColumn":  17,
+"endLine":  258,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  299,
+"startColumn":  21,
+"endLine":  299,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  334,
+"startColumn":  21,
+"endLine":  334,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  370,
+"startColumn":  21,
+"endLine":  370,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  406,
+"startColumn":  21,
+"endLine":  406,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  444,
+"startColumn":  21,
+"endLine":  444,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  518,
+"startColumn":  21,
+"endLine":  518,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"u\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  525,
+"startColumn":  17,
+"endLine":  525,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  578,
+"startColumn":  21,
+"endLine":  578,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternMatchingTests.cs",
+"region":  {
+"startLine":  13140,
+"startColumn":  17,
+"endLine":  13140,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternSwitchTests.cs",
+"region":  {
+"startLine":  417,
+"startColumn":  17,
+"endLine":  417,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternSwitchTests.cs",
+"region":  {
+"startLine":  827,
+"startColumn":  17,
+"endLine":  827,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternSwitchTests.cs",
+"region":  {
+"startLine":  872,
+"startColumn":  17,
+"endLine":  872,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternSwitchTests.cs",
+"region":  {
+"startLine":  978,
+"startColumn":  17,
+"endLine":  978,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternSwitchTests.cs",
+"region":  {
+"startLine":  1163,
+"startColumn":  17,
+"endLine":  1163,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternSwitchTests.cs",
+"region":  {
+"startLine":  1221,
+"startColumn":  17,
+"endLine":  1221,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"info2\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\QueryTests.cs",
+"region":  {
+"startLine":  522,
+"startColumn":  17,
+"endLine":  522,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"i\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\QueryTests.cs",
+"region":  {
+"startLine":  554,
+"startColumn":  17,
+"endLine":  554,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"success\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\QueryTests.cs",
+"region":  {
+"startLine":  1959,
+"startColumn":  18,
+"endLine":  1959,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"b\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\SemanticErrorTests.cs",
+"region":  {
+"startLine":  3024,
+"startColumn":  17,
+"endLine":  3024,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\SemanticErrorTests.cs",
+"region":  {
+"startLine":  10715,
+"startColumn":  17,
+"endLine":  10715,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\SemanticErrorTests.cs",
+"region":  {
+"startLine":  19299,
+"startColumn":  17,
+"endLine":  19299,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"_\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\SyntaxTreeRootTests.cs",
+"region":  {
+"startLine":  110,
+"startColumn":  61,
+"endLine":  110,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"info\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\UnsafeTests.cs",
+"region":  {
+"startLine":  7893,
+"startColumn":  17,
+"endLine":  7893,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp2\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\UnsafeTests.cs",
+"region":  {
+"startLine":  8443,
+"startColumn":  17,
+"endLine":  8443,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp3\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\UnsafeTests.cs",
+"region":  {
+"startLine":  8495,
+"startColumn":  17,
+"endLine":  8495,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\UserDefinedConversionTests.cs",
+"region":  {
+"startLine":  1153,
+"startColumn":  17,
+"endLine":  1153,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\UserDefinedConversionTests.cs",
+"region":  {
+"startLine":  1281,
+"startColumn":  17,
+"endLine":  1281,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\UserDefinedConversionTests.cs",
+"region":  {
+"startLine":  1307,
+"startColumn":  17,
+"endLine":  1307,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\UserDefinedConversionTests.cs",
+"region":  {
+"startLine":  1340,
+"startColumn":  17,
+"endLine":  1340,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\UserDefinedConversionTests.cs",
+"region":  {
+"startLine":  1366,
+"startColumn":  17,
+"endLine":  1366,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\UserDefinedConversionTests.cs",
+"region":  {
+"startLine":  1436,
+"startColumn":  17,
+"endLine":  1436,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\UserDefinedConversionTests.cs",
+"region":  {
+"startLine":  1468,
+"startColumn":  17,
+"endLine":  1468,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"model\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\UsingStatementTests.cs",
+"region":  {
+"startLine":  685,
+"startColumn":  17,
+"endLine":  685,
+"endColumn":  22
+}
+}
+}
+]
+}

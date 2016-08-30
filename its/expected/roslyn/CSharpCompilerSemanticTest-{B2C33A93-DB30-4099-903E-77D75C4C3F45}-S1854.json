@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"descriptor\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Diagnostics\\DiagnosticAnalyzerTests.cs",
+"region":  {
+"startLine":  797,
+"startColumn":  40,
+"endLine":  797,
+"endColumn":  71
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"conv\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LambdaTests.cs",
+"region":  {
+"startLine":  705,
+"startColumn":  22,
+"endLine":  705,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"verifier\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NullableTests.cs",
+"region":  {
+"startLine":  149,
+"startColumn":  26,
+"endLine":  149,
+"endColumn":  82
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"verifier\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NullableTests.cs",
+"region":  {
+"startLine":  172,
+"startColumn":  22,
+"endLine":  172,
+"endColumn":  78
+}
+}
+}
+]
+}

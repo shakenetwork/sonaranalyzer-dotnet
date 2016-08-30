@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S3217",
+"message":  "Either change the type of \"process\" to \"ManagementBaseObject\" or iterate on a generic collection of type \"ManagementObject\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\ProcessWatchdog\\ProcessTracker.cs",
+"region":  {
+"startLine":  125,
+"startColumn":  22,
+"endLine":  125,
+"endColumn":  38
+}
+}
+}
+]
+}

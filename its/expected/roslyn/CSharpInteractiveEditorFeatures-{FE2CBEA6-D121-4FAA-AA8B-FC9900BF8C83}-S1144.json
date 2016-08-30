@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\EditorFeatures\\CSharp\\Completion\\CompletionProviders\\CSharpReplCommandCompletionProvider.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  9,
+"endLine":  32,
+"endColumn":  106
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\EditorFeatures\\CSharp\\Completion\\CompletionProviders\\CSharpReplCommandCompletionProvider.cs",
+"region":  {
+"startLine":  34,
+"startColumn":  9,
+"endLine":  51,
+"endColumn":  10
+}
+}
+}
+]
+}

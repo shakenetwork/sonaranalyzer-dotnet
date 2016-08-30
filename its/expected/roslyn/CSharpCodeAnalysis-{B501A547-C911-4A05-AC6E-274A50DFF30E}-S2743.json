@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S2743",
+"message":  "A static field in a generic type is not shared among instances of different close constructed types.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\SyntaxReplacer.cs",
+"region":  {
+"startLine":  110,
+"startColumn":  57,
+"endLine":  110,
+"endColumn":  66
+}
+}
+},
+{
+"id":  "S2743",
+"message":  "A static field in a generic type is not shared among instances of different close constructed types.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\SyntaxReplacer.cs",
+"region":  {
+"startLine":  111,
+"startColumn":  58,
+"endLine":  111,
+"endColumn":  68
+}
+}
+},
+{
+"id":  "S2743",
+"message":  "A static field in a generic type is not shared among instances of different close constructed types.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\SyntaxReplacer.cs",
+"region":  {
+"startLine":  112,
+"startColumn":  59,
+"endLine":  112,
+"endColumn":  69
+}
+}
+}
+]
+}

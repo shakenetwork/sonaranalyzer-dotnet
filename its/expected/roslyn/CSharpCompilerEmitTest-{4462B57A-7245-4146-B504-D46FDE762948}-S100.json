@@ -1,0 +1,1954 @@
+{
+"issues":  [
+{
+"id":  "S100",
+"message":  "Rename method \"Bug688007a\" to match camel case naming rules, consider using \"Bug688007A\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests.cs",
+"region":  {
+"startLine":  1104,
+"startColumn":  21,
+"endLine":  1104,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"Bug688007b\" to match camel case naming rules, consider using \"Bug688007B\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests.cs",
+"region":  {
+"startLine":  1148,
+"startColumn":  21,
+"endLine":  1148,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"Bug688007c\" to match camel case naming rules, consider using \"Bug688007C\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests.cs",
+"region":  {
+"startLine":  1196,
+"startColumn":  21,
+"endLine":  1196,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"Bug688007d\" to match camel case naming rules, consider using \"Bug688007D\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests.cs",
+"region":  {
+"startLine":  1248,
+"startColumn":  21,
+"endLine":  1248,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"GenericAttributeTypeFromILSource\" to match camel case naming rules, consider using \"GenericAttributeTypeFromIlSource\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests.cs",
+"region":  {
+"startLine":  5501,
+"startColumn":  21,
+"endLine":  5501,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"PEMethodSymbolExtensionAttribute1\" to match camel case naming rules, consider using \"PeMethodSymbolExtensionAttribute1\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests.cs",
+"region":  {
+"startLine":  6082,
+"startColumn":  21,
+"endLine":  6082,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"PEMethodSymbolExtensionAttribute2\" to match camel case naming rules, consider using \"PeMethodSymbolExtensionAttribute2\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests.cs",
+"region":  {
+"startLine":  6125,
+"startColumn":  21,
+"endLine":  6125,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"PEMethodSymbolExtensionAttribute3\" to match camel case naming rules, consider using \"PeMethodSymbolExtensionAttribute3\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests.cs",
+"region":  {
+"startLine":  6168,
+"startColumn":  21,
+"endLine":  6168,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"PEParameterSymbolParamArrayAttribute\" to match camel case naming rules, consider using \"PeParameterSymbolParamArrayAttribute\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests.cs",
+"region":  {
+"startLine":  6215,
+"startColumn":  21,
+"endLine":  6215,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"IVTBasicCompilation\" to match camel case naming rules, consider using \"IvtBasicCompilation\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\InternalsVisibleToAndStrongNameTests.cs",
+"region":  {
+"startLine":  657,
+"startColumn":  21,
+"endLine":  657,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"IVTBasicMetadata\" to match camel case naming rules, consider using \"IvtBasicMetadata\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\InternalsVisibleToAndStrongNameTests.cs",
+"region":  {
+"startLine":  701,
+"startColumn":  21,
+"endLine":  701,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"IVTSigned\" to match camel case naming rules, consider using \"IvtSigned\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\InternalsVisibleToAndStrongNameTests.cs",
+"region":  {
+"startLine":  747,
+"startColumn":  21,
+"endLine":  747,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"IVTErrorNotBothSigned\" to match camel case naming rules, consider using \"IvtErrorNotBothSigned\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\InternalsVisibleToAndStrongNameTests.cs",
+"region":  {
+"startLine":  777,
+"startColumn":  21,
+"endLine":  777,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"IVTDeferredSuccess\" to match camel case naming rules, consider using \"IvtDeferredSuccess\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\InternalsVisibleToAndStrongNameTests.cs",
+"region":  {
+"startLine":  809,
+"startColumn":  21,
+"endLine":  809,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"IVTDeferredFailSignMismatch\" to match camel case naming rules, consider using \"IvtDeferredFailSignMismatch\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\InternalsVisibleToAndStrongNameTests.cs",
+"region":  {
+"startLine":  836,
+"startColumn":  21,
+"endLine":  836,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"IVTDeferredFailKeyMismatch\" to match camel case naming rules, consider using \"IvtDeferredFailKeyMismatch\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\InternalsVisibleToAndStrongNameTests.cs",
+"region":  {
+"startLine":  864,
+"startColumn":  21,
+"endLine":  864,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"IVTSuccessThroughIAssembly\" to match camel case naming rules, consider using \"IvtSuccessThroughIAssembly\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\InternalsVisibleToAndStrongNameTests.cs",
+"region":  {
+"startLine":  892,
+"startColumn":  21,
+"endLine":  892,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"IVTDeferredFailKeyMismatchIAssembly\" to match camel case naming rules, consider using \"IvtDeferredFailKeyMismatchIAssembly\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\InternalsVisibleToAndStrongNameTests.cs",
+"region":  {
+"startLine":  919,
+"startColumn":  21,
+"endLine":  919,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"IVTGivesAccessToUsingDifferentKeys\" to match camel case naming rules, consider using \"IvtGivesAccessToUsingDifferentKeys\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\InternalsVisibleToAndStrongNameTests.cs",
+"region":  {
+"startLine":  949,
+"startColumn":  21,
+"endLine":  949,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"IVTHasCulture\" to match camel case naming rules, consider using \"IvtHasCulture\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\InternalsVisibleToAndStrongNameTests.cs",
+"region":  {
+"startLine":  983,
+"startColumn":  21,
+"endLine":  983,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"IVTNoKey\" to match camel case naming rules, consider using \"IvtNoKey\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\InternalsVisibleToAndStrongNameTests.cs",
+"region":  {
+"startLine":  999,
+"startColumn":  21,
+"endLine":  999,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ExplicitUDCWithGenericConstraints\" to match camel case naming rules, consider using \"ExplicitUdcWithGenericConstraints\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\BreakingChanges.cs",
+"region":  {
+"startLine":  582,
+"startColumn":  21,
+"endLine":  582,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestNullCoalescingOverImplicitExplicitUDC\" to match camel case naming rules, consider using \"TestNullCoalescingOverImplicitExplicitUdc\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\BreakingChanges.cs",
+"region":  {
+"startLine":  624,
+"startColumn":  21,
+"endLine":  624,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"NoFormatCharInIDEqual\" to match camel case naming rules, consider using \"NoFormatCharInIdEqual\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\BreakingChanges.cs",
+"region":  {
+"startLine":  1156,
+"startColumn":  21,
+"endLine":  1156,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ExpressionTreeWithNullableUDCandOperator\" to match camel case naming rules, consider using \"ExpressionTreeWithNullableUdCandOperator\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\BreakingChanges.cs",
+"region":  {
+"startLine":  1226,
+"startColumn":  21,
+"endLine":  1226,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"CatchVarLifted2a\" to match camel case naming rules, consider using \"CatchVarLifted2A\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenClosureLambdaTests.cs",
+"region":  {
+"startLine":  814,
+"startColumn":  21,
+"endLine":  814,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestConditionalOperatorInterfaceRegression2a\" to match camel case naming rules, consider using \"TestConditionalOperatorInterfaceRegression2A\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenConditionalOperatorTests.cs",
+"region":  {
+"startLine":  1263,
+"startColumn":  21,
+"endLine":  1263,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ForEachSZArrayDeclarationWithImplicitVarType\" to match camel case naming rules, consider using \"ForEachSzArrayDeclarationWithImplicitVarType\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenDeconstructTests.cs",
+"region":  {
+"startLine":  2407,
+"startColumn":  21,
+"endLine":  2407,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ForEachMDArrayDeclarationWithImplicitVarType\" to match camel case naming rules, consider using \"ForEachMdArrayDeclarationWithImplicitVarType\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenDeconstructTests.cs",
+"region":  {
+"startLine":  2508,
+"startColumn":  21,
+"endLine":  2508,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ForEachSZArrayDeclarationWithNesting\" to match camel case naming rules, consider using \"ForEachSzArrayDeclarationWithNesting\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenDeconstructTests.cs",
+"region":  {
+"startLine":  2760,
+"startColumn":  21,
+"endLine":  2760,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ForEachMDArrayDeclarationWithNesting\" to match camel case naming rules, consider using \"ForEachMdArrayDeclarationWithNesting\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenDeconstructTests.cs",
+"region":  {
+"startLine":  2781,
+"startColumn":  21,
+"endLine":  2781,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ForEachSZArrayDeclarationWithDeconstruct\" to match camel case naming rules, consider using \"ForEachSzArrayDeclarationWithDeconstruct\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenDeconstructTests.cs",
+"region":  {
+"startLine":  2948,
+"startColumn":  21,
+"endLine":  2948,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ForEachMDArrayDeclarationWithDeconstruct\" to match camel case naming rules, consider using \"ForEachMdArrayDeclarationWithDeconstruct\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenDeconstructTests.cs",
+"region":  {
+"startLine":  2977,
+"startColumn":  21,
+"endLine":  2977,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestVBInterfaceImplementationMetadata\" to match camel case naming rules, consider using \"TestVbInterfaceImplementationMetadata\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExplicitImplementationTests.cs",
+"region":  {
+"startLine":  228,
+"startColumn":  21,
+"endLine":  228,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"CoalesceWithLiftedImplicitUDC\" to match camel case naming rules, consider using \"CoalesceWithLiftedImplicitUdc\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  1957,
+"startColumn":  21,
+"endLine":  1957,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"CoalesceWithImplicitUDC\" to match camel case naming rules, consider using \"CoalesceWithImplicitUdc\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  1984,
+"startColumn":  21,
+"endLine":  1984,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"CoalesceWithImplicitUDCFromNullable01\" to match camel case naming rules, consider using \"CoalesceWithImplicitUdcFromNullable01\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  2017,
+"startColumn":  21,
+"endLine":  2017,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"CoalesceWithImplicitUDC2\" to match camel case naming rules, consider using \"CoalesceWithImplicitUdc2\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  2066,
+"startColumn":  21,
+"endLine":  2066,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"CoalesceWithLiftedImplicitPDC\" to match camel case naming rules, consider using \"CoalesceWithLiftedImplicitPdc\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  2098,
+"startColumn":  21,
+"endLine":  2098,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ExplicitUDC2\" to match camel case naming rules, consider using \"ExplicitUdc2\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  2417,
+"startColumn":  21,
+"endLine":  2417,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ExprTreeConvertedNullOnLHS\" to match camel case naming rules, consider using \"ExprTreeConvertedNullOnLhs\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  3214,
+"startColumn":  21,
+"endLine":  3214,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ExprTreeFieldInitCoalesceWithNullOnLHS\" to match camel case naming rules, consider using \"ExprTreeFieldInitCoalesceWithNullOnLhs\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  3292,
+"startColumn":  21,
+"endLine":  3292,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ExprTreePropertyInitCoalesceWithNullOnLHS\" to match camel case naming rules, consider using \"ExprTreePropertyInitCoalesceWithNullOnLhs\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  3309,
+"startColumn":  21,
+"endLine":  3309,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"BadExprTreeLambdaInNSDecl\" to match camel case naming rules, consider using \"BadExprTreeLambdaInNsDecl\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  3552,
+"startColumn":  21,
+"endLine":  3552,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"BadExprTreeLambdaInNSDeclWithCSharp6\" to match camel case naming rules, consider using \"BadExprTreeLambdaInNsDeclWithCSharp6\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  3602,
+"startColumn":  21,
+"endLine":  3602,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestVBNestedInterfaceImplementationMetadata\" to match camel case naming rules, consider using \"TestVbNestedInterfaceImplementationMetadata\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenInterfaceImplementation.cs",
+"region":  {
+"startLine":  271,
+"startColumn":  21,
+"endLine":  271,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestOverrideNewToVBVirtualOverloadsMetadata\" to match camel case naming rules, consider using \"TestOverrideNewToVbVirtualOverloadsMetadata\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  2673,
+"startColumn":  21,
+"endLine":  2673,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestOverrideNewToVBVirtualPropMetadata\" to match camel case naming rules, consider using \"TestOverrideNewToVbVirtualPropMetadata\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  2735,
+"startColumn":  21,
+"endLine":  2735,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestBridgeMethodFromBaseVBMetadata\" to match camel case naming rules, consider using \"TestBridgeMethodFromBaseVbMetadata\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  3081,
+"startColumn":  21,
+"endLine":  3081,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestVBNestedClassesOverrideNewMetadata\" to match camel case naming rules, consider using \"TestVbNestedClassesOverrideNewMetadata\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  3287,
+"startColumn":  21,
+"endLine":  3287,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestConditionalMemberAccess001ext\" to match camel case naming rules, consider using \"TestConditionalMemberAccess001Ext\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  987,
+"startColumn":  21,
+"endLine":  987,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestConditionalMemberAccess001dyn\" to match camel case naming rules, consider using \"TestConditionalMemberAccess001Dyn\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  1036,
+"startColumn":  21,
+"endLine":  1036,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestConditionalMemberAccess001dyn1\" to match camel case naming rules, consider using \"TestConditionalMemberAccess001Dyn1\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  1182,
+"startColumn":  21,
+"endLine":  1182,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestConditionalMemberAccess001dyn2\" to match camel case naming rules, consider using \"TestConditionalMemberAccess001Dyn2\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  1206,
+"startColumn":  21,
+"endLine":  1206,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestConditionalMemberAccess001dyn3\" to match camel case naming rules, consider using \"TestConditionalMemberAccess001Dyn3\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  1229,
+"startColumn":  21,
+"endLine":  1229,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestConditionalMemberAccess001dyn4\" to match camel case naming rules, consider using \"TestConditionalMemberAccess001Dyn4\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  1253,
+"startColumn":  21,
+"endLine":  1253,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestConditionalMemberAccess001dyn5\" to match camel case naming rules, consider using \"TestConditionalMemberAccess001Dyn5\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  1277,
+"startColumn":  21,
+"endLine":  1277,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestConditionalMemberAccessUnused2a\" to match camel case naming rules, consider using \"TestConditionalMemberAccessUnused2A\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  1558,
+"startColumn":  21,
+"endLine":  1558,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestConditionalMemberAccessUsed2a\" to match camel case naming rules, consider using \"TestConditionalMemberAccessUsed2A\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  1689,
+"startColumn":  21,
+"endLine":  1689,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ConditionalMemberAccessCoalesce001n\" to match camel case naming rules, consider using \"ConditionalMemberAccessCoalesce001N\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  3501,
+"startColumn":  21,
+"endLine":  3501,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ConditionalMemberAccessCoalesce001r\" to match camel case naming rules, consider using \"ConditionalMemberAccessCoalesce001R\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  3578,
+"startColumn":  21,
+"endLine":  3578,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ConditionalMemberAccessCoalesce002r\" to match camel case naming rules, consider using \"ConditionalMemberAccessCoalesce002R\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  3746,
+"startColumn":  21,
+"endLine":  3746,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ConditionalBoolExpr01a\" to match camel case naming rules, consider using \"ConditionalBoolExpr01A\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  5832,
+"startColumn":  21,
+"endLine":  5832,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ConditionalBoolExpr01b\" to match camel case naming rules, consider using \"ConditionalBoolExpr01B\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  5870,
+"startColumn":  21,
+"endLine":  5870,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ConditionalBoolExpr02a\" to match camel case naming rules, consider using \"ConditionalBoolExpr02A\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  5993,
+"startColumn":  21,
+"endLine":  5993,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ConditionalBoolExpr02b\" to match camel case naming rules, consider using \"ConditionalBoolExpr02B\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  6035,
+"startColumn":  21,
+"endLine":  6035,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ConditionalUserDef01n\" to match camel case naming rules, consider using \"ConditionalUserDef01N\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  6397,
+"startColumn":  21,
+"endLine":  6397,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ConditionalUserDef02n\" to match camel case naming rules, consider using \"ConditionalUserDef02N\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  6549,
+"startColumn":  21,
+"endLine":  6549,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ConditionalBoolExpr02ba\" to match camel case naming rules, consider using \"ConditionalBoolExpr02Ba\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  6700,
+"startColumn":  21,
+"endLine":  6700,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ConditionalBoolExpr02bb\" to match camel case naming rules, consider using \"ConditionalBoolExpr02Bb\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  6748,
+"startColumn":  21,
+"endLine":  6748,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"InitTemp001a\" to match camel case naming rules, consider using \"InitTemp001A\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenStructsAndEnum.cs",
+"region":  {
+"startLine":  1505,
+"startColumn":  21,
+"endLine":  1505,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"InitTemp001b\" to match camel case naming rules, consider using \"InitTemp001B\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenStructsAndEnum.cs",
+"region":  {
+"startLine":  1573,
+"startColumn":  21,
+"endLine":  1573,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"Bug776642a\" to match camel case naming rules, consider using \"Bug776642A\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  21,
+"endLine":  21,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"Bug776642b\" to match camel case naming rules, consider using \"Bug776642B\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  108,
+"startColumn":  21,
+"endLine":  108,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"Bug776642c\" to match camel case naming rules, consider using \"Bug776642C\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  178,
+"startColumn":  21,
+"endLine":  178,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestBug16981b\" to match camel case naming rules, consider using \"TestBug16981B\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  529,
+"startColumn":  21,
+"endLine":  529,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"PostIncrementUnusedStruct1a\" to match camel case naming rules, consider using \"PostIncrementUnusedStruct1A\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  8919,
+"startColumn":  21,
+"endLine":  8919,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"LHSParenthesizedProperty\" to match camel case naming rules, consider using \"LhsParenthesizedProperty\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  10079,
+"startColumn":  21,
+"endLine":  10079,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestExternWithoutDLLImport\" to match camel case naming rules, consider using \"TestExternWithoutDllImport\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  10207,
+"startColumn":  21,
+"endLine":  10207,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestLINQQueryableAnyExtensionMethod\" to match camel case naming rules, consider using \"TestLinqQueryableAnyExtensionMethod\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  10242,
+"startColumn":  21,
+"endLine":  10242,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TupleConvertedType01insource\" to match camel case naming rules, consider using \"TupleConvertedType01Insource\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  6472,
+"startColumn":  21,
+"endLine":  6472,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TupleConvertedType01insourceImplicit\" to match camel case naming rules, consider using \"TupleConvertedType01InsourceImplicit\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  6517,
+"startColumn":  21,
+"endLine":  6517,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TupleConvertedType02insource00\" to match camel case naming rules, consider using \"TupleConvertedType02Insource00\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  6575,
+"startColumn":  21,
+"endLine":  6575,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TupleConvertedType02insource01\" to match camel case naming rules, consider using \"TupleConvertedType02Insource01\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  6611,
+"startColumn":  21,
+"endLine":  6611,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TupleConvertedType02insource02\" to match camel case naming rules, consider using \"TupleConvertedType02Insource02\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  6645,
+"startColumn":  21,
+"endLine":  6645,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TupleConvertedType03insource\" to match camel case naming rules, consider using \"TupleConvertedType03Insource\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  6708,
+"startColumn":  21,
+"endLine":  6708,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TupleConvertedType05insource\" to match camel case naming rules, consider using \"TupleConvertedType05Insource\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  6807,
+"startColumn":  21,
+"endLine":  6807,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TupleConvertedType06insource\" to match camel case naming rules, consider using \"TupleConvertedType06Insource\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  6865,
+"startColumn":  21,
+"endLine":  6865,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TupleConvertedTypeNull01insource\" to match camel case naming rules, consider using \"TupleConvertedTypeNull01Insource\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  6938,
+"startColumn":  21,
+"endLine":  6938,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TupleConvertedTypeUDC01\" to match camel case naming rules, consider using \"TupleConvertedTypeUdc01\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  6982,
+"startColumn":  21,
+"endLine":  6982,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TupleConvertedTypeUDC01insource\" to match camel case naming rules, consider using \"TupleConvertedTypeUdc01Insource\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  7029,
+"startColumn":  21,
+"endLine":  7029,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TupleConvertedTypeUDC02\" to match camel case naming rules, consider using \"TupleConvertedTypeUdc02\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  7083,
+"startColumn":  21,
+"endLine":  7083,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TupleConvertedTypeUDC03\" to match camel case naming rules, consider using \"TupleConvertedTypeUdc03\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  7135,
+"startColumn":  21,
+"endLine":  7135,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TupleConvertedTypeUDC04\" to match camel case naming rules, consider using \"TupleConvertedTypeUdc04\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  7192,
+"startColumn":  21,
+"endLine":  7192,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TupleConvertedTypeUDC05\" to match camel case naming rules, consider using \"TupleConvertedTypeUdc05\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  7266,
+"startColumn":  21,
+"endLine":  7266,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TupleConvertedTypeUDC06\" to match camel case naming rules, consider using \"TupleConvertedTypeUdc06\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  7349,
+"startColumn":  21,
+"endLine":  7349,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TupleConvertedTypeUDC07\" to match camel case naming rules, consider using \"TupleConvertedTypeUdc07\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  7431,
+"startColumn":  21,
+"endLine":  7431,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"Inference08t\" to match camel case naming rules, consider using \"Inference08T\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  7790,
+"startColumn":  21,
+"endLine":  7790,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ClassifyConversionImplicit03u\" to match camel case naming rules, consider using \"ClassifyConversionImplicit03U\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  15093,
+"startColumn":  21,
+"endLine":  15093,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ClassifyConversionImplicit03uu\" to match camel case naming rules, consider using \"ClassifyConversionImplicit03Uu\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  15118,
+"startColumn":  21,
+"endLine":  15118,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ClassifyConversionImplicit03uuu\" to match camel case naming rules, consider using \"ClassifyConversionImplicit03Uuu\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  15143,
+"startColumn":  21,
+"endLine":  15143,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"DictionaryInitializerTestSideeffects001param\" to match camel case naming rules, consider using \"DictionaryInitializerTestSideeffects001Param\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\ObjectAndCollectionInitializerTests.cs",
+"region":  {
+"startLine":  1003,
+"startColumn":  21,
+"endLine":  1003,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"DictionaryInitializerTestSideeffects001named\" to match camel case naming rules, consider using \"DictionaryInitializerTestSideeffects001Named\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\ObjectAndCollectionInitializerTests.cs",
+"region":  {
+"startLine":  1110,
+"startColumn":  21,
+"endLine":  1110,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"DictionaryInitializerTestSideeffects001namedAsync\" to match camel case naming rules, consider using \"DictionaryInitializerTestSideeffects001NamedAsync\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\ObjectAndCollectionInitializerTests.cs",
+"region":  {
+"startLine":  1156,
+"startColumn":  21,
+"endLine":  1156,
+"endColumn":  70
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"DictionaryInitializerTestSideeffects001dyn\" to match camel case naming rules, consider using \"DictionaryInitializerTestSideeffects001Dyn\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\ObjectAndCollectionInitializerTests.cs",
+"region":  {
+"startLine":  1218,
+"startColumn":  21,
+"endLine":  1218,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"DictionaryInitializerTestSideeffects001namedDynamic\" to match camel case naming rules, consider using \"DictionaryInitializerTestSideeffects001NamedDynamic\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\ObjectAndCollectionInitializerTests.cs",
+"region":  {
+"startLine":  1260,
+"startColumn":  21,
+"endLine":  1260,
+"endColumn":  72
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"DictionaryInitializerTestSideeffects001a\" to match camel case naming rules, consider using \"DictionaryInitializerTestSideeffects001A\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\ObjectAndCollectionInitializerTests.cs",
+"region":  {
+"startLine":  1316,
+"startColumn":  21,
+"endLine":  1316,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"DictionaryInitializerTestSideeffects001a1\" to match camel case naming rules, consider using \"DictionaryInitializerTestSideeffects001A1\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\ObjectAndCollectionInitializerTests.cs",
+"region":  {
+"startLine":  1433,
+"startColumn":  21,
+"endLine":  1433,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"DictionaryInitializerTestSideeffects001async\" to match camel case naming rules, consider using \"DictionaryInitializerTestSideeffects001Async\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\ObjectAndCollectionInitializerTests.cs",
+"region":  {
+"startLine":  1579,
+"startColumn":  21,
+"endLine":  1579,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"NestedIndexerInitializerMDArray\" to match camel case naming rules, consider using \"NestedIndexerInitializerMdArray\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\ObjectAndCollectionInitializerTests.cs",
+"region":  {
+"startLine":  1983,
+"startColumn":  21,
+"endLine":  1983,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"Regress947580a\" to match camel case naming rules, consider using \"Regress947580A\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\SwitchTests.cs",
+"region":  {
+"startLine":  6656,
+"startColumn":  21,
+"endLine":  6656,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"Regress1035228a\" to match camel case naming rules, consider using \"Regress1035228A\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\SwitchTests.cs",
+"region":  {
+"startLine":  6756,
+"startColumn":  21,
+"endLine":  6756,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"Regress4701a\" to match camel case naming rules, consider using \"Regress4701A\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\SwitchTests.cs",
+"region":  {
+"startLine":  6896,
+"startColumn":  21,
+"endLine":  6896,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ConvertClassToPointerUDC\" to match camel case naming rules, consider using \"ConvertClassToPointerUdc\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\UnsafeTests.cs",
+"region":  {
+"startLine":  4263,
+"startColumn":  21,
+"endLine":  4263,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"CSLegacyStackallocUse32bitChecked\" to match camel case naming rules, consider using \"CsLegacyStackallocUse32BitChecked\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\UnsafeTests.cs",
+"region":  {
+"startLine":  7954,
+"startColumn":  21,
+"endLine":  7954,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"UnsafeMathConv002a\" to match camel case naming rules, consider using \"UnsafeMathConv002A\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\UnsafeTests.cs",
+"region":  {
+"startLine":  8885,
+"startColumn":  21,
+"endLine":  8885,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"CheckRuntimeMDVersion\" to match camel case naming rules, consider using \"CheckRuntimeMdVersion\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\CompilationEmitTests.cs",
+"region":  {
+"startLine":  1021,
+"startColumn":  21,
+"endLine":  1021,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"CheckCOFFAndPEOptionalHeaders32\" to match camel case naming rules, consider using \"CheckCoffAndPeOptionalHeaders32\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\CompilationEmitTests.cs",
+"region":  {
+"startLine":  1081,
+"startColumn":  21,
+"endLine":  1081,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"CheckCOFFAndPEOptionalHeaders64\" to match camel case naming rules, consider using \"CheckCoffAndPeOptionalHeaders64\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\CompilationEmitTests.cs",
+"region":  {
+"startLine":  1115,
+"startColumn":  21,
+"endLine":  1115,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"CheckCOFFAndPEOptionalHeadersARM\" to match camel case naming rules, consider using \"CheckCoffAndPeOptionalHeadersArm\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\CompilationEmitTests.cs",
+"region":  {
+"startLine":  1165,
+"startColumn":  21,
+"endLine":  1165,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"CheckCOFFAndPEOptionalHeadersAnyCPUExe\" to match camel case naming rules, consider using \"CheckCoffAndPeOptionalHeadersAnyCpuExe\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\CompilationEmitTests.cs",
+"region":  {
+"startLine":  1205,
+"startColumn":  21,
+"endLine":  1205,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"CheckCOFFAndPEOptionalHeaders64Exe\" to match camel case naming rules, consider using \"CheckCoffAndPeOptionalHeaders64Exe\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\CompilationEmitTests.cs",
+"region":  {
+"startLine":  1247,
+"startColumn":  21,
+"endLine":  1247,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"BrokenPDBStream\" to match camel case naming rules, consider using \"BrokenPdbStream\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\CompilationEmitTests.cs",
+"region":  {
+"startLine":  2721,
+"startColumn":  21,
+"endLine":  2721,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"MethodSignatureWithNoPIAType\" to match camel case naming rules, consider using \"MethodSignatureWithNoPiaType\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueTests.cs",
+"region":  {
+"startLine":  6276,
+"startColumn":  21,
+"endLine":  6276,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"LocalSignatureWithNoPIAType\" to match camel case naming rules, consider using \"LocalSignatureWithNoPiaType\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueTests.cs",
+"region":  {
+"startLine":  6327,
+"startColumn":  21,
+"endLine":  6327,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"NoPIAReferences\" to match camel case naming rules, consider using \"NoPiaReferences\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueTests.cs",
+"region":  {
+"startLine":  6384,
+"startColumn":  21,
+"endLine":  6384,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"NoPIATypeInNamespace\" to match camel case naming rules, consider using \"NoPiaTypeInNamespace\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueTests.cs",
+"region":  {
+"startLine":  6499,
+"startColumn":  21,
+"endLine":  6499,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"FieldRVA\" to match camel case naming rules, consider using \"FieldRva\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EmitMetadata.cs",
+"region":  {
+"startLine":  124,
+"startColumn":  21,
+"endLine":  124,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"PEHeaders1\" to match camel case naming rules, consider using \"PeHeaders1\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EmitMetadata.cs",
+"region":  {
+"startLine":  2184,
+"startColumn":  28,
+"endLine":  2184,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"PEHeaders2\" to match camel case naming rules, consider using \"PeHeaders2\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EmitMetadata.cs",
+"region":  {
+"startLine":  2368,
+"startColumn":  21,
+"endLine":  2368,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"LCIDConversionAttribute\" to match camel case naming rules, consider using \"LcidConversionAttribute\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\NoPiaEmbedTypes.cs",
+"region":  {
+"startLine":  2915,
+"startColumn":  21,
+"endLine":  2915,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"EmitPDBDynamicObjectVariable1\" to match camel case naming rules, consider using \"EmitPdbDynamicObjectVariable1\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\PDB\\PDBDynamicLocalsTests.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  21,
+"endLine":  13,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"EmitPDBLangConstructsLocals1\" to match camel case naming rules, consider using \"EmitPdbLangConstructsLocals1\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\PDB\\PDBDynamicLocalsTests.cs",
+"region":  {
+"startLine":  110,
+"startColumn":  21,
+"endLine":  110,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"EmitPDBDynamicConstVariable\" to match camel case naming rules, consider using \"EmitPdbDynamicConstVariable\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\PDB\\PDBDynamicLocalsTests.cs",
+"region":  {
+"startLine":  171,
+"startColumn":  21,
+"endLine":  171,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"EmitPDBDynamicDuplicateName\" to match camel case naming rules, consider using \"EmitPdbDynamicDuplicateName\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\PDB\\PDBDynamicLocalsTests.cs",
+"region":  {
+"startLine":  227,
+"startColumn":  21,
+"endLine":  227,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"EmitPDBDynamicVariableNameTooLong\" to match camel case naming rules, consider using \"EmitPdbDynamicVariableNameTooLong\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\PDB\\PDBDynamicLocalsTests.cs",
+"region":  {
+"startLine":  293,
+"startColumn":  21,
+"endLine":  293,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"EmitPDBDynamicArrayVariable\" to match camel case naming rules, consider using \"EmitPdbDynamicArrayVariable\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\PDB\\PDBDynamicLocalsTests.cs",
+"region":  {
+"startLine":  344,
+"startColumn":  21,
+"endLine":  344,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"EmitPDBDynamicCollectionVariable\" to match camel case naming rules, consider using \"EmitPdbDynamicCollectionVariable\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\PDB\\PDBDynamicLocalsTests.cs",
+"region":  {
+"startLine":  399,
+"startColumn":  21,
+"endLine":  399,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"EmitPDBDynamicObjectVariable2\" to match camel case naming rules, consider using \"EmitPdbDynamicObjectVariable2\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\PDB\\PDBDynamicLocalsTests.cs",
+"region":  {
+"startLine":  462,
+"startColumn":  21,
+"endLine":  462,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"EmitPDBClassConstructorDynamicLocals\" to match camel case naming rules, consider using \"EmitPdbClassConstructorDynamicLocals\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\PDB\\PDBDynamicLocalsTests.cs",
+"region":  {
+"startLine":  553,
+"startColumn":  21,
+"endLine":  553,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"EmitPDBClassPropertyDynamicLocals\" to match camel case naming rules, consider using \"EmitPdbClassPropertyDynamicLocals\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\PDB\\PDBDynamicLocalsTests.cs",
+"region":  {
+"startLine":  607,
+"startColumn":  21,
+"endLine":  607,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"EmitPDBClassOverloadedOperatorDynamicLocals\" to match camel case naming rules, consider using \"EmitPdbClassOverloadedOperatorDynamicLocals\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\PDB\\PDBDynamicLocalsTests.cs",
+"region":  {
+"startLine":  690,
+"startColumn":  21,
+"endLine":  690,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"EmitPDBClassIndexerDynamicLocal\" to match camel case naming rules, consider using \"EmitPdbClassIndexerDynamicLocal\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\PDB\\PDBDynamicLocalsTests.cs",
+"region":  {
+"startLine":  768,
+"startColumn":  21,
+"endLine":  768,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"EmitPDBClassEventHandlerDynamicLocal\" to match camel case naming rules, consider using \"EmitPdbClassEventHandlerDynamicLocal\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\PDB\\PDBDynamicLocalsTests.cs",
+"region":  {
+"startLine":  853,
+"startColumn":  21,
+"endLine":  853,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"EmitPDBStructDynamicLocals\" to match camel case naming rules, consider using \"EmitPdbStructDynamicLocals\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\PDB\\PDBDynamicLocalsTests.cs",
+"region":  {
+"startLine":  918,
+"startColumn":  21,
+"endLine":  918,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"EmitPDBAnonymousFunctionLocals\" to match camel case naming rules, consider using \"EmitPdbAnonymousFunctionLocals\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\PDB\\PDBDynamicLocalsTests.cs",
+"region":  {
+"startLine":  1062,
+"startColumn":  21,
+"endLine":  1062,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"EmitPDBLangConstructsLocals2\" to match camel case naming rules, consider using \"EmitPdbLangConstructsLocals2\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\PDB\\PDBDynamicLocalsTests.cs",
+"region":  {
+"startLine":  1157,
+"startColumn":  21,
+"endLine":  1157,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"EmitPDBVarVariableLocal\" to match camel case naming rules, consider using \"EmitPdbVarVariableLocal\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\PDB\\PDBDynamicLocalsTests.cs",
+"region":  {
+"startLine":  1370,
+"startColumn":  21,
+"endLine":  1370,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"EmitPDBGenericDynamicNonLocal\" to match camel case naming rules, consider using \"EmitPdbGenericDynamicNonLocal\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\PDB\\PDBDynamicLocalsTests.cs",
+"region":  {
+"startLine":  1417,
+"startColumn":  21,
+"endLine":  1417,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"SuppressDynamicAndEncCDIForWinRT\" to match camel case naming rules, consider using \"SuppressDynamicAndEncCdiForWinRT\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\PDB\\PDBTests.cs",
+"region":  {
+"startLine":  315,
+"startColumn":  21,
+"endLine":  315,
+"endColumn":  53
+}
+}
+}
+]
+}

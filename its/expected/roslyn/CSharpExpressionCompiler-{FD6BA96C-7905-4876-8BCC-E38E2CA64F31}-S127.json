@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"i\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\CSharpInstructionDecoder.cs",
+"region":  {
+"startLine":  59,
+"startColumn":  33,
+"endLine":  59,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"i\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\CSharpInstructionDecoder.cs",
+"region":  {
+"startLine":  62,
+"startColumn":  29,
+"endLine":  62,
+"endColumn":  30
+}
+}
+}
+]
+}

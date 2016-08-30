@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S3218",
+"message":  "Rename this class to not shadow the outer class\u0027 member with the same name.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Mocks\\TestReferences.cs",
+"region":  {
+"startLine":  1450,
+"startColumn":  33,
+"endLine":  1450,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3218",
+"message":  "Rename this class to not shadow the outer class\u0027 member with the same name.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Mocks\\TestReferences.cs",
+"region":  {
+"startLine":  1487,
+"startColumn":  33,
+"endLine":  1487,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3218",
+"message":  "Rename this property to not shadow the outer class\u0027 member with the same name.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Mocks\\TestReferences.cs",
+"region":  {
+"startLine":  2186,
+"startColumn":  55,
+"endLine":  2186,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S3218",
+"message":  "Rename this class to not shadow the outer class\u0027 member with the same name.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Mocks\\TestReferences.cs",
+"region":  {
+"startLine":  2216,
+"startColumn":  33,
+"endLine":  2216,
+"endColumn":  40
+}
+}
+}
+]
+}

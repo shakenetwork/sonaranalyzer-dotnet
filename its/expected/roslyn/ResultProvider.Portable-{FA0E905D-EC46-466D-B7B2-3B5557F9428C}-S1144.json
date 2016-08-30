@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\EnumField.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  9,
+"endLine":  34,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Xml\\XmlCharType.cs",
+"region":  {
+"startLine":  82,
+"startColumn":  9,
+"endLine":  82,
+"endColumn":  73
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ResultProvider\\Helpers\\TypeHelpers.cs",
+"region":  {
+"startLine":  693,
+"startColumn":  9,
+"endLine":  696,
+"endColumn":  10
+}
+}
+}
+]
+}

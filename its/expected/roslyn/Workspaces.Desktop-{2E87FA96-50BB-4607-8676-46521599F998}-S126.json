@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\MSBuild\\CSharp\\CSharpProjectFileLoader.CSharpProjectFile.cs",
+"region":  {
+"startLine":  254,
+"startColumn":  25,
+"endLine":  254,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\MSBuild\\VisualBasic\\VisualBasicProjectFileLoader.cs",
+"region":  {
+"startLine":  402,
+"startColumn":  25,
+"endLine":  402,
+"endColumn":  32
+}
+}
+}
+]
+}

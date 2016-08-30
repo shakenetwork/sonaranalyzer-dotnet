@@ -1,0 +1,2019 @@
+{
+"issues":  [
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 58 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\CSharpAnalyzerDriver\\CSharpDeclarationComputer.cs",
+"region":  {
+"startLine":  38,
+"startColumn":  29,
+"endLine":  38,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\CSharpAnalyzerDriver\\CSharpDeclarationComputer.cs",
+"region":  {
+"startLine":  248,
+"startColumn":  53,
+"endLine":  248,
+"endColumn":  76
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\LambdaUtilities.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  28,
+"endLine":  14,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 25 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\LambdaUtilities.cs",
+"region":  {
+"startLine":  57,
+"startColumn":  36,
+"endLine":  57,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 33 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\LambdaUtilities.cs",
+"region":  {
+"startLine":  117,
+"startColumn":  28,
+"endLine":  117,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\LambdaUtilities.cs",
+"region":  {
+"startLine":  190,
+"startColumn":  29,
+"endLine":  190,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 28 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\LambdaUtilities.cs",
+"region":  {
+"startLine":  256,
+"startColumn":  28,
+"endLine":  256,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 36 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\LambdaUtilities.cs",
+"region":  {
+"startLine":  360,
+"startColumn":  30,
+"endLine":  360,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 19 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\AddBraces\\CSharpAddBracesCodeFixProvider.cs",
+"region":  {
+"startLine":  45,
+"startColumn":  28,
+"endLine":  45,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 18 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\AddBraces\\CSharpAddBracesDiagnosticAnalyzer.cs",
+"region":  {
+"startLine":  49,
+"startColumn":  21,
+"endLine":  49,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ChangeSignature\\CSharpChangeSignatureService.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  45,
+"endLine":  25,
+"endColumn":  69
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ChangeSignature\\CSharpChangeSignatureService.cs",
+"region":  {
+"startLine":  138,
+"startColumn":  28,
+"endLine":  138,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 41 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ChangeSignature\\CSharpChangeSignatureService.cs",
+"region":  {
+"startLine":  165,
+"startColumn":  36,
+"endLine":  165,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 32 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeFixes\\AddImport\\CSharpAddImportCodeFixProvider.cs",
+"region":  {
+"startLine":  170,
+"startColumn":  33,
+"endLine":  170,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeFixes\\AddImport\\CSharpAddImportCodeFixProvider.cs",
+"region":  {
+"startLine":  277,
+"startColumn":  33,
+"endLine":  277,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeFixes\\Async\\CSharpAddAwaitCodeFixProvider.cs",
+"region":  {
+"startLine":  54,
+"startColumn":  34,
+"endLine":  54,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeFixes\\Async\\CSharpConvertToAsyncMethodCodeFixProvider.cs",
+"region":  {
+"startLine":  55,
+"startColumn":  53,
+"endLine":  55,
+"endColumn":  73
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeFixes\\Iterator\\CSharpAddYieldCodeFixProvider.cs",
+"region":  {
+"startLine":  100,
+"startColumn":  22,
+"endLine":  100,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeFixes\\Iterator\\CSharpAddYieldCodeFixProvider.cs",
+"region":  {
+"startLine":  134,
+"startColumn":  22,
+"endLine":  134,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeFixes\\Iterator\\CSharpChangeToIEnumerableCodeFixProvider.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  51,
+"endLine":  31,
+"endColumn":  66
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeLens\\CSharpCodeLensDisplayInfoService.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  27,
+"endLine":  21,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 22 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeLens\\CSharpCodeLensDisplayInfoService.cs",
+"region":  {
+"startLine":  70,
+"startColumn":  23,
+"endLine":  70,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 20 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\InlineTemporary\\InlineTemporaryCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  36,
+"endLine":  32,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\InlineTemporary\\InlineTemporaryCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  116,
+"startColumn":  29,
+"endLine":  116,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\InvertIf\\InvertIfCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  36,
+"endLine":  33,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 18 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\InvertIf\\InvertIfCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  140,
+"startColumn":  22,
+"endLine":  140,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\InvertIf\\InvertIfCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  222,
+"startColumn":  34,
+"endLine":  222,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\LambdaSimplifier\\LambdaSimplifierCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  36,
+"endLine":  20,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 35 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\LambdaSimplifier\\LambdaSimplifierCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  113,
+"startColumn":  29,
+"endLine":  113,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\MoveDeclarationNearReference\\MoveDeclarationNearReferenceCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  36,
+"endLine":  19,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\MoveDeclarationNearReference\\MoveDeclarationNearReferenceCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  106,
+"startColumn":  22,
+"endLine":  106,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\MoveDeclarationNearReference\\MoveDeclarationNearReferenceCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  139,
+"startColumn":  34,
+"endLine":  139,
+"endColumn":  71
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 24 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\MoveDeclarationNearReference\\MoveDeclarationNearReferenceCodeRefactoringProvider.State.cs",
+"region":  {
+"startLine":  41,
+"startColumn":  38,
+"endLine":  41,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\AttributeNamedParameterCompletionProvider.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  36,
+"endLine":  32,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\AttributeNamedParameterCompletionProvider.cs",
+"region":  {
+"startLine":  232,
+"startColumn":  29,
+"endLine":  232,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\CompletionUtilities.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  30,
+"endLine":  31,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\EnumAndCompletionListTagCompletionProvider.cs",
+"region":  {
+"startLine":  40,
+"startColumn":  36,
+"endLine":  40,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\ExplicitInterfaceCompletionProvider.cs",
+"region":  {
+"startLine":  39,
+"startColumn":  36,
+"endLine":  39,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\NamedParameterCompletionProvider.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  36,
+"endLine":  36,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\ObjectInitializerCompletionProvider.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  45,
+"endLine":  22,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 18 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\ObjectInitializerCompletionProvider.cs",
+"region":  {
+"startLine":  90,
+"startColumn":  57,
+"endLine":  90,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 21 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\OverrideCompletionProvider.cs",
+"region":  {
+"startLine":  69,
+"startColumn":  30,
+"endLine":  69,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\OverrideCompletionProvider.cs",
+"region":  {
+"startLine":  178,
+"startColumn":  32,
+"endLine":  178,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 19 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\SnippetCompletionProvider.cs",
+"region":  {
+"startLine":  66,
+"startColumn":  57,
+"endLine":  66,
+"endColumn":  84
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\SpeculativeTCompletionProvider.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  34,
+"endLine":  42,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 31 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\XmlDocCommentCompletionProvider.cs",
+"region":  {
+"startLine":  27,
+"startColumn":  68,
+"endLine":  27,
+"endColumn":  87
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\XmlDocCommentCompletionProvider.cs",
+"region":  {
+"startLine":  242,
+"startColumn":  45,
+"endLine":  242,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\AwaitKeywordRecommender.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  33,
+"endLine":  18,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 20 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\BoolKeywordRecommender.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  33,
+"endLine":  19,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 21 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\ByteKeywordRecommender.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  33,
+"endLine":  19,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 20 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\CharKeywordRecommender.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  33,
+"endLine":  19,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 20 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\DecimalKeywordRecommender.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  33,
+"endLine":  19,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 20 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\DoubleKeywordRecommender.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  33,
+"endLine":  19,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\DynamicKeywordRecommender.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  31,
+"endLine":  36,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\ElseKeywordRecommender.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  33,
+"endLine":  17,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 20 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\FloatKeywordRecommender.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  33,
+"endLine":  19,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\InKeywordRecommender.cs",
+"region":  {
+"startLine":  88,
+"startColumn":  22,
+"endLine":  88,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 21 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\IntKeywordRecommender.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  33,
+"endLine":  19,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 21 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\LongKeywordRecommender.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  33,
+"endLine":  19,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 30 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\NamespaceKeywordRecommender.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  33,
+"endLine":  18,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 19 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\ObjectKeywordRecommender.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  33,
+"endLine":  19,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\RefKeywordRecommender.cs",
+"region":  {
+"startLine":  82,
+"startColumn":  29,
+"endLine":  82,
+"endColumn":  69
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 21 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\SByteKeywordRecommender.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  33,
+"endLine":  19,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 21 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\ShortKeywordRecommender.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  33,
+"endLine":  19,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 19 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\StringKeywordRecommender.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  33,
+"endLine":  19,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\ThisKeywordRecommender.cs",
+"region":  {
+"startLine":  61,
+"startColumn":  29,
+"endLine":  61,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\TypeVarKeywordRecommender.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  33,
+"endLine":  17,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 21 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\UIntKeywordRecommender.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  33,
+"endLine":  19,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 21 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\ULongKeywordRecommender.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  33,
+"endLine":  19,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 21 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\UShortKeywordRecommender.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  33,
+"endLine":  19,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\UsingKeywordRecommender.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  29,
+"endLine":  28,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 31 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\WhereKeywordRecommender.cs",
+"region":  {
+"startLine":  27,
+"startColumn":  22,
+"endLine":  27,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 26 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\SuggestionMode\\CSharpSuggestionModeCompletionProvider.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  55,
+"endLine":  21,
+"endColumn":  81
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\SuggestionMode\\CSharpSuggestionModeCompletionProvider.cs",
+"region":  {
+"startLine":  123,
+"startColumn":  22,
+"endLine":  123,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Diagnostics\\Analyzers\\CSharpSimplifyTypeNamesDiagnosticAnalyzer.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  33,
+"endLine":  36,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Diagnostics\\Analyzers\\CSharpSimplifyTypeNamesDiagnosticAnalyzer.cs",
+"region":  {
+"startLine":  101,
+"startColumn":  30,
+"endLine":  101,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Diagnostics\\Analyzers\\CSharpUnboundIdentifiersDiagnosticAnalyzer.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  33,
+"endLine":  33,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Diagnostics\\Analyzers\\CSharpUseImplicitTypeDiagnosticAnalyzer.cs",
+"region":  {
+"startLine":  57,
+"startColumn":  33,
+"endLine":  57,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Diagnostics\\Analyzers\\CSharpUseImplicitTypeDiagnosticAnalyzer.cs",
+"region":  {
+"startLine":  113,
+"startColumn":  33,
+"endLine":  113,
+"endColumn":  66
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 76 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\BreakpointSpans.cs",
+"region":  {
+"startLine":  142,
+"startColumn":  34,
+"endLine":  142,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 69 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\BreakpointSpans.cs",
+"region":  {
+"startLine":  355,
+"startColumn":  34,
+"endLine":  355,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\BreakpointSpans.cs",
+"region":  {
+"startLine":  566,
+"startColumn":  34,
+"endLine":  566,
+"endColumn":  69
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\BreakpointSpans.cs",
+"region":  {
+"startLine":  612,
+"startColumn":  49,
+"endLine":  612,
+"endColumn":  85
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\BreakpointSpans.cs",
+"region":  {
+"startLine":  694,
+"startColumn":  29,
+"endLine":  694,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 23 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  54,
+"startColumn":  38,
+"endLine":  54,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  165,
+"startColumn":  52,
+"endLine":  165,
+"endColumn":  70
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  212,
+"startColumn":  39,
+"endLine":  212,
+"endColumn":  66
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  243,
+"startColumn":  39,
+"endLine":  243,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  591,
+"startColumn":  33,
+"endLine":  591,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  632,
+"startColumn":  71,
+"endLine":  632,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 23 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  714,
+"startColumn":  33,
+"endLine":  714,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  860,
+"startColumn":  36,
+"endLine":  860,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 19 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  971,
+"startColumn":  32,
+"endLine":  971,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 162 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1070,
+"startColumn":  34,
+"endLine":  1070,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 67 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1391,
+"startColumn":  32,
+"endLine":  1391,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 54 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1510,
+"startColumn":  32,
+"endLine":  1510,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1657,
+"startColumn":  25,
+"endLine":  1657,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 38 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1695,
+"startColumn":  26,
+"endLine":  1695,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 52 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1758,
+"startColumn":  26,
+"endLine":  1758,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1877,
+"startColumn":  26,
+"endLine":  1877,
+"endColumn":  69
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 47 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  1942,
+"startColumn":  26,
+"endLine":  1942,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 64 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  2043,
+"startColumn":  26,
+"endLine":  2043,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  2474,
+"startColumn":  26,
+"endLine":  2474,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  2735,
+"startColumn":  45,
+"endLine":  2735,
+"endColumn":  74
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  2911,
+"startColumn":  35,
+"endLine":  2911,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  2944,
+"startColumn":  29,
+"endLine":  2944,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 27 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\StatementSyntaxComparer.cs",
+"region":  {
+"startLine":  219,
+"startColumn":  28,
+"endLine":  219,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 138 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\StatementSyntaxComparer.cs",
+"region":  {
+"startLine":  256,
+"startColumn":  31,
+"endLine":  256,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 36 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\StatementSyntaxComparer.cs",
+"region":  {
+"startLine":  567,
+"startColumn":  33,
+"endLine":  567,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 38 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\StatementSyntaxComparer.cs",
+"region":  {
+"startLine":  751,
+"startColumn":  22,
+"endLine":  751,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 18 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\SyntaxUtilities.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  34,
+"endLine":  13,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\SyntaxUtilities.cs",
+"region":  {
+"startLine":  74,
+"startColumn":  28,
+"endLine":  74,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\SyntaxUtilities.cs",
+"region":  {
+"startLine":  206,
+"startColumn":  28,
+"endLine":  206,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 28 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\TopSyntaxComparer.cs",
+"region":  {
+"startLine":  128,
+"startColumn":  28,
+"endLine":  128,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 69 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\TopSyntaxComparer.cs",
+"region":  {
+"startLine":  164,
+"startColumn":  31,
+"endLine":  164,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\TopSyntaxComparer.cs",
+"region":  {
+"startLine":  335,
+"startColumn":  30,
+"endLine":  335,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 58 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\TopSyntaxComparer.cs",
+"region":  {
+"startLine":  389,
+"startColumn":  43,
+"endLine":  389,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpMethodExtractor.CSharpCodeGenerator.cs",
+"region":  {
+"startLine":  264,
+"startColumn":  37,
+"endLine":  264,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpMethodExtractor.CSharpCodeGenerator.cs",
+"region":  {
+"startLine":  303,
+"startColumn":  50,
+"endLine":  303,
+"endColumn":  88
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpMethodExtractor.CSharpCodeGenerator.ExpressionCodeGenerator.cs",
+"region":  {
+"startLine":  46,
+"startColumn":  39,
+"endLine":  46,
+"endColumn":  69
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpMethodExtractor.FormattingProvider.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  53,
+"endLine":  18,
+"endColumn":  79
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpMethodExtractor.PostProcessor.cs",
+"region":  {
+"startLine":  152,
+"startColumn":  26,
+"endLine":  152,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 18 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpMethodExtractor.PostProcessor.cs",
+"region":  {
+"startLine":  226,
+"startColumn":  49,
+"endLine":  226,
+"endColumn":  93
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpMethodExtractor.PostProcessor.cs",
+"region":  {
+"startLine":  267,
+"startColumn":  49,
+"endLine":  267,
+"endColumn":  83
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpMethodExtractor.TriviaResult.cs",
+"region":  {
+"startLine":  55,
+"startColumn":  33,
+"endLine":  55,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpMethodExtractor.TriviaResult.cs",
+"region":  {
+"startLine":  83,
+"startColumn":  47,
+"endLine":  83,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionResult.ExpressionResult.cs",
+"region":  {
+"startLine":  47,
+"startColumn":  41,
+"endLine":  47,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionResult.ExpressionResult.cs",
+"region":  {
+"startLine":  91,
+"startColumn":  40,
+"endLine":  91,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionValidator.cs",
+"region":  {
+"startLine":  160,
+"startColumn":  31,
+"endLine":  160,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionValidator.cs",
+"region":  {
+"startLine":  229,
+"startColumn":  31,
+"endLine":  229,
+"endColumn":  67
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionValidator.cs",
+"region":  {
+"startLine":  294,
+"startColumn":  31,
+"endLine":  294,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 18 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionValidator.cs",
+"region":  {
+"startLine":  383,
+"startColumn":  30,
+"endLine":  383,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionValidator.Validator.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  22,
+"endLine":  26,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 19 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpSelectionValidator.Validator.cs",
+"region":  {
+"startLine":  59,
+"startColumn":  22,
+"endLine":  59,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\Extensions.cs",
+"region":  {
+"startLine":  68,
+"startColumn":  28,
+"endLine":  68,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\Extensions.cs",
+"region":  {
+"startLine":  163,
+"startColumn":  28,
+"endLine":  163,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateMember\\GenerateConstructor\\CSharpGenerateConstructorService.cs",
+"region":  {
+"startLine":  216,
+"startColumn":  41,
+"endLine":  216,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateMember\\GenerateParameterizedMember\\CSharpGenerateMethodService.cs",
+"region":  {
+"startLine":  84,
+"startColumn":  33,
+"endLine":  84,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateType\\CSharpGenerateTypeService.cs",
+"region":  {
+"startLine":  89,
+"startColumn":  33,
+"endLine":  89,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 89 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateType\\CSharpGenerateTypeService.cs",
+"region":  {
+"startLine":  132,
+"startColumn":  33,
+"endLine":  132,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateType\\CSharpGenerateTypeService.cs",
+"region":  {
+"startLine":  629,
+"startColumn":  44,
+"endLine":  629,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 24 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateType\\CSharpGenerateTypeService.cs",
+"region":  {
+"startLine":  722,
+"startColumn":  32,
+"endLine":  722,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ImplementInterface\\CSharpImplementInterfaceService.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  33,
+"endLine":  22,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\InvokeDelegateWithConditionalAccess\\InvokeDelegateWithConditionalAccessAnalyzer.cs",
+"region":  {
+"startLine":  38,
+"startColumn":  22,
+"endLine":  38,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 24 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\InvokeDelegateWithConditionalAccess\\InvokeDelegateWithConditionalAccessAnalyzer.cs",
+"region":  {
+"startLine":  146,
+"startColumn":  22,
+"endLine":  146,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\MetadataAsSource\\CSharpMetadataAsSourceService.cs",
+"region":  {
+"startLine":  80,
+"startColumn":  56,
+"endLine":  80,
+"endColumn":  105
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 20 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Organizing\\Organizers\\MemberDeclarationsOrganizer.Comparer.cs",
+"region":  {
+"startLine":  50,
+"startColumn":  24,
+"endLine":  50,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Organizing\\Organizers\\MemberDeclarationsOrganizer.Comparer.cs",
+"region":  {
+"startLine":  114,
+"startColumn":  42,
+"endLine":  114,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 29 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Organizing\\Organizers\\MemberDeclarationsOrganizer.Comparer.cs",
+"region":  {
+"startLine":  140,
+"startColumn":  42,
+"endLine":  140,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ReplaceMethodWithProperty\\CSharpReplaceMethodWithPropertyService.cs",
+"region":  {
+"startLine":  141,
+"startColumn":  50,
+"endLine":  141,
+"endColumn":  67
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\SignatureHelp\\ConstructorInitializerSignatureHelpProvider.cs",
+"region":  {
+"startLine":  60,
+"startColumn":  59,
+"endLine":  60,
+"endColumn":  78
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\SignatureHelp\\ElementAccessExpressionSignatureHelpProvider.cs",
+"region":  {
+"startLine":  46,
+"startColumn":  59,
+"endLine":  46,
+"endColumn":  78
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\SignatureHelp\\GenericNameSignatureHelpProvider.cs",
+"region":  {
+"startLine":  70,
+"startColumn":  59,
+"endLine":  70,
+"endColumn":  78
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\SignatureHelp\\InvocationExpressionSignatureHelpProvider.cs",
+"region":  {
+"startLine":  57,
+"startColumn":  59,
+"endLine":  57,
+"endColumn":  78
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\SignatureHelp\\InvocationExpressionSignatureHelpProvider_MethodGroup.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  42,
+"endLine":  19,
+"endColumn":  61
+}
+}
+}
+]
+}

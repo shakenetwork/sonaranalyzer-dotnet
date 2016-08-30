@@ -1,0 +1,69 @@
+{
+"issues":  [
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Diagnostics\\DiagnosticLocalizationTests.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  12,
+"endLine":  14,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"unsafe\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Shared\\GlobalAssemblyCacheHelpers\\FusionAssemblyIdentity.cs",
+"region":  {
+"startLine":  197,
+"startColumn":  25,
+"endLine":  197,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"unsafe\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Shared\\GlobalAssemblyCacheHelpers\\FusionAssemblyIdentity.cs",
+"region":  {
+"startLine":  205,
+"startColumn":  25,
+"endLine":  205,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"unsafe\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Shared\\GlobalAssemblyCacheHelpers\\FusionAssemblyIdentity.cs",
+"region":  {
+"startLine":  320,
+"startColumn":  25,
+"endLine":  320,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"unsafe\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Shared\\GlobalAssemblyCacheHelpers\\FusionAssemblyIdentity.cs",
+"region":  {
+"startLine":  378,
+"startColumn":  24,
+"endLine":  378,
+"endColumn":  30
+}
+}
+}
+]
+}

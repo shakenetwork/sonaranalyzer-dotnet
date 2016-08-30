@@ -1,0 +1,108 @@
+{
+"issues":  [
+{
+"id":  "S2346",
+"message":  "Rename \"Default\" to \"None\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\LookupOptions.vb",
+"region":  {
+"startLine":  17,
+"startColumn":  9,
+"endLine":  17,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2346",
+"message":  "Rename \"Unknown\" to \"None\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\BoundTree\\BoundLateMemberAccess.vb",
+"region":  {
+"startLine":  12,
+"startColumn":  9,
+"endLine":  12,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S2346",
+"message":  "Rename \"Unknown\" to \"None\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\BoundTree\\BoundPropertyAccess.vb",
+"region":  {
+"startLine":  10,
+"startColumn":  9,
+"endLine":  10,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S2346",
+"message":  "Rename \"Default\" to \"None\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_Flags.vb",
+"region":  {
+"startLine":  9,
+"startColumn":  13,
+"endLine":  9,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S2346",
+"message":  "Rename \"NotUsed\" to \"None\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\BlockContexts\\BlockContext.vb",
+"region":  {
+"startLine":  357,
+"startColumn":  13,
+"endLine":  357,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2346",
+"message":  "Rename \"DelegateRelaxationLevelNone\" to \"None\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\Conversions.vb",
+"region":  {
+"startLine":  354,
+"startColumn":  9,
+"endLine":  354,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2346",
+"message":  "Rename \"Identity\" to \"None\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\Conversions.vb",
+"region":  {
+"startLine":  396,
+"startColumn":  9,
+"endLine":  396,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2346",
+"message":  "Rename \"Other\" to \"None\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\TypeInference\\TypeInferenceCollection.vb",
+"region":  {
+"startLine":  14,
+"startColumn":  9,
+"endLine":  14,
+"endColumn":  20
+}
+}
+}
+]
+}

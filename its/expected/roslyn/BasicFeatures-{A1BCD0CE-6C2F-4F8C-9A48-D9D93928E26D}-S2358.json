@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2358",
+"message":  "Replace this use of \"Not...Is...\" with \"IsNot\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\GenerateMember\\GenerateParameterizedMember\\VisualBasicGenerateParameterizedMemberService.vb",
+"region":  {
+"startLine":  60,
+"startColumn":  20,
+"endLine":  60,
+"endColumn":  71
+}
+}
+}
+]
+}

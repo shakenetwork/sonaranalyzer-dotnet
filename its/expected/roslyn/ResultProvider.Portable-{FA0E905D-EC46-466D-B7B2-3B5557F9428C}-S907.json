@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\DynamicFlagsCustomTypeInfo.cs",
+"region":  {
+"startLine":  41,
+"startColumn":  25,
+"endLine":  41,
+"endColumn":  29
+}
+}
+}
+]
+}

@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S3246",
+"message":  "Add the \"in\" keyword to parameter \"T\" to make it \"contravariant\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\VarianceSafety.cs",
+"region":  {
+"startLine":  341,
+"startColumn":  52,
+"endLine":  341,
+"endColumn":  53
+}
+}
+}
+]
+}

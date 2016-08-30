@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S3235",
+"message":  "Remove these redundant parentheses.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp.Desktop\\CSharpTestBase.cs",
+"region":  {
+"startLine":  455,
+"startColumn":  51,
+"endLine":  455,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3235",
+"message":  "Remove these redundant parentheses.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\TestOptions.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  132,
+"endLine":  26,
+"endColumn":  134
+}
+}
+}
+]
+}

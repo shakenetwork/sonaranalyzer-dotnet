@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S122",
+"message":  "Reformat the code to have only one statement per line.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\SemanticModelExtensions.cs",
+"region":  {
+"startLine":  240,
+"startColumn":  21,
+"endLine":  240,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S122",
+"message":  "Reformat the code to have only one statement per line.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\SyntaxTokenListExtensions.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  13,
+"endLine":  16,
+"endColumn":  141
+}
+}
+}
+]
+}

@@ -1,0 +1,251 @@
+{
+"issues":  [
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_tasks\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\DiagnosticEventTaskScheduler.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  20,
+"endLine":  14,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_cancellation\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\EditAndContinue\\EditSession.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  27,
+"endLine":  20,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_shutdownNotificationSource\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\WorkCoordinator.AbstractPriorityProcessor.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  38,
+"endLine":  14,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_shutdownNotificationSource\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\WorkCoordinator.AsyncDocumentWorkItemQueue.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  31,
+"endLine":  12,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_shutdownNotificationSource\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\WorkCoordinator.AsyncProjectWorkItemQueue.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  31,
+"endLine":  14,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_shutdownNotificationSource\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\WorkCoordinator.AsyncWorkItemQueue.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  31,
+"endLine":  15,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_shutdownNotificationSource\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\WorkCoordinator.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  31,
+"endLine":  20,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_shutdownNotificationSource\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\WorkCoordinator.HighPriorityProcessor.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  38,
+"endLine":  16,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_workItemQueue\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\WorkCoordinator.HighPriorityProcessor.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  38,
+"endLine":  20,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_shutdownNotificationSource\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\WorkCoordinator.IncrementalAnalyzerProcessor.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  31,
+"endLine":  22,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_shutdownNotificationSource\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\WorkCoordinator.LowPriorityProcessor.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  38,
+"endLine":  18,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_workItemQueue\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\WorkCoordinator.LowPriorityProcessor.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  38,
+"endLine":  22,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_shutdownNotificationSource\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\WorkCoordinator.NormalPriorityProcessor.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  38,
+"endLine":  21,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_workItemQueue\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\WorkCoordinator.NormalPriorityProcessor.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  38,
+"endLine":  25,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_shutdownNotificationSource\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\WorkCoordinator.SemanticChangeProcessor.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  38,
+"endLine":  18,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_gate\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\WorkCoordinator.SemanticChangeProcessor.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  34,
+"endLine":  20,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_gate\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\WorkCoordinator.SemanticChangeProcessor.cs",
+"region":  {
+"startLine":  318,
+"startColumn":  31,
+"endLine":  318,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_shutdownNotificationSource\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\WorkCoordinator.WorkItem.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  31,
+"endLine":  11,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_stateLock\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Workspace\\BackgroundParser.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  20,
+"endLine":  11,
+"endColumn":  36
+}
+}
+}
+]
+}

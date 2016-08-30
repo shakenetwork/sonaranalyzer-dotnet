@@ -1,0 +1,69 @@
+{
+"issues":  [
+{
+"id":  "S2357",
+"message":  "Make \"Tokens\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Syntax\\Parser\\ParseStatements.vb",
+"region":  {
+"startLine":  7884,
+"startColumn":  16,
+"endLine":  7884,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IncrementInts\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Syntax\\TestSyntaxNodes.vb",
+"region":  {
+"startLine":  1044,
+"startColumn":  20,
+"endLine":  1044,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"CapitalizeKeywords\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Syntax\\TestSyntaxNodes.vb",
+"region":  {
+"startLine":  1045,
+"startColumn":  20,
+"endLine":  1045,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"CapitalizeIdentifiers\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Syntax\\TestSyntaxNodes.vb",
+"region":  {
+"startLine":  1046,
+"startColumn":  20,
+"endLine":  1046,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SwapParameters\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Syntax\\TestSyntaxNodes.vb",
+"region":  {
+"startLine":  1047,
+"startColumn":  20,
+"endLine":  1047,
+"endColumn":  34
+}
+}
+}
+]
+}

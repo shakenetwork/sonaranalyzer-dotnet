@@ -1,0 +1,134 @@
+{
+"issues":  [
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\AutomaticCompletion\\AutomaticLineEnderCommandHandler.cs",
+"region":  {
+"startLine":  69,
+"startColumn":  34,
+"endLine":  73,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\AutomaticCompletion\\Sessions\\CurlyBraceCompletionSession.cs",
+"region":  {
+"startLine":  204,
+"startColumn":  21,
+"endLine":  208,
+"endColumn":  90
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\DocumentationComments\\DocumentationCommentCommandHandler.cs",
+"region":  {
+"startLine":  220,
+"startColumn":  20,
+"endLine":  224,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\DocumentationComments\\DocumentationCommentCommandHandler.cs",
+"region":  {
+"startLine":  275,
+"startColumn":  20,
+"endLine":  279,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\Formatting\\CSharpEditorFormattingService.cs",
+"region":  {
+"startLine":  64,
+"startColumn":  17,
+"endLine":  65,
+"endColumn":  97
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\Formatting\\CSharpEditorFormattingService.cs",
+"region":  {
+"startLine":  153,
+"startColumn":  20,
+"endLine":  154,
+"endColumn":  146
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\Formatting\\CSharpEditorFormattingService.PasteFormattingRule.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  25,
+"endLine":  21,
+"endColumn":  98
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\Formatting\\Indentation\\CSharpIndentationService.Indenter.cs",
+"region":  {
+"startLine":  150,
+"startColumn":  21,
+"endLine":  153,
+"endColumn":  112
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (9) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\LineSeparators\\CSharpLineSeparatorService.cs",
+"region":  {
+"startLine":  245,
+"startColumn":  17,
+"endLine":  254,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\NavigationBar\\CSharpNavigationBarItemService.cs",
+"region":  {
+"startLine":  151,
+"startColumn":  25,
+"endLine":  155,
+"endColumn":  49
+}
+}
+}
+]
+}

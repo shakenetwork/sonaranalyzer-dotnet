@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Collections\\IntervalTreeTests.cs",
+"region":  {
+"startLine":  267,
+"startColumn":  45,
+"endLine":  267,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"FixIds\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Diagnostics\\GenerateType\\GenerateTypeTestState.cs",
+"region":  {
+"startLine":  29,
+"startColumn":  36,
+"endLine":  29,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Utilities\\TestEditorOptions.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  38,
+"endLine":  15,
+"endColumn":  46
+}
+}
+}
+]
+}

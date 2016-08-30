@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\EditorFeatures\\Core\\Extensibility\\Interactive\\InteractiveCommandHandler.cs",
+"region":  {
+"startLine":  68,
+"startColumn":  48,
+"endLine":  68,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the explicit delegate creation; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\EditorFeatures\\Core\\Extensibility\\Interactive\\InteractiveCommandHandler.cs",
+"region":  {
+"startLine":  90,
+"startColumn":  26,
+"endLine":  90,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the explicit delegate creation; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\EditorFeatures\\Core\\Extensibility\\Interactive\\InteractiveEvaluator.cs",
+"region":  {
+"startLine":  90,
+"startColumn":  42,
+"endLine":  90,
+"endColumn":  87
+}
+}
+}
+]
+}

@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"i\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Diagnostics\\DiagnosticAnalyzerTests.cs",
+"region":  {
+"startLine":  1316,
+"startColumn":  150,
+"endLine":  1316,
+"endColumn":  151
+}
+}
+}
+]
+}

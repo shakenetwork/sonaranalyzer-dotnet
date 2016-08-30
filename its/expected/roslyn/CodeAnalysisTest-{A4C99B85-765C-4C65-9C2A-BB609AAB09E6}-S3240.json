@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\CachingLookupTests.cs",
+"region":  {
+"startLine":  66,
+"startColumn":  13,
+"endLine":  66,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\AssemblyIdentityDisplayNameTests.cs",
+"region":  {
+"startLine":  59,
+"startColumn":  13,
+"endLine":  59,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\SourceFileResolverTest.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  13,
+"endLine":  17,
+"endColumn":  15
+}
+}
+}
+]
+}

@@ -1,0 +1,121 @@
+{
+"issues":  [
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"commandSpan\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\Editor\\Commands\\InteractiveWindowCommands.cs",
+"region":  {
+"startLine":  139,
+"startColumn":  42,
+"endLine":  139,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"argumentsSpan\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\Editor\\Commands\\InteractiveWindowCommands.cs",
+"region":  {
+"startLine":  139,
+"startColumn":  58,
+"endLine":  139,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"maxPromptLength\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\Editor\\InteractiveWindow.UIThreadOnly.cs",
+"region":  {
+"startLine":  2378,
+"startColumn":  55,
+"endLine":  2378,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"maxPromptLength\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\Editor\\InteractiveWindow.UIThreadOnly.cs",
+"region":  {
+"startLine":  2443,
+"startColumn":  51,
+"endLine":  2443,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"_lastEntry\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\Editor\\Output\\OutputBuffer.cs",
+"region":  {
+"startLine":  70,
+"startColumn":  38,
+"endLine":  70,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"_unflushedLength\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\Editor\\Output\\OutputBuffer.cs",
+"region":  {
+"startLine":  71,
+"startColumn":  45,
+"endLine":  71,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"_lastEntry\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\Editor\\Output\\OutputBuffer.cs",
+"region":  {
+"startLine":  140,
+"startColumn":  46,
+"endLine":  140,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"_lastEntry\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\Editor\\Output\\OutputBuffer.cs",
+"region":  {
+"startLine":  159,
+"startColumn":  42,
+"endLine":  159,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"thumb.Width\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\Editor\\Output\\ResizingAdorner.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  40,
+"endLine":  32,
+"endColumn":  41
+}
+}
+}
+]
+}

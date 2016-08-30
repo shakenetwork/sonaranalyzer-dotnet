@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\MSBuildTask\\RCWForCurrentContext.cs",
+"region":  {
+"startLine":  83,
+"startColumn":  21,
+"endLine":  83,
+"endColumn":  75
+}
+}
+}
+]
+}

@@ -1,0 +1,745 @@
+{
+"issues":  [
+{
+"id":  "S100",
+"message":  "Rename property \"FirstILMarker\" to match camel case naming rules, consider using \"FirstIlMarker\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\BasicBlock.cs",
+"region":  {
+"startLine":  91,
+"startColumn":  24,
+"endLine":  91,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename property \"LastILMarker\" to match camel case naming rules, consider using \"LastIlMarker\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\BasicBlock.cs",
+"region":  {
+"startLine":  94,
+"startColumn":  24,
+"endLine":  94,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"AddILMarker\" to match camel case naming rules, consider using \"AddIlMarker\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\BasicBlock.cs",
+"region":  {
+"startLine":  96,
+"startColumn":  25,
+"endLine":  96,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"RemoveTailILMarker\" to match camel case naming rules, consider using \"RemoveTailIlMarker\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\BasicBlock.cs",
+"region":  {
+"startLine":  110,
+"startColumn":  25,
+"endLine":  110,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"AllocateILMarker\" to match camel case naming rules, consider using \"AllocateIlMarker\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ILBuilder.cs",
+"region":  {
+"startLine":  1221,
+"startColumn":  22,
+"endLine":  1221,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"GetILOffsetFromMarker\" to match camel case naming rules, consider using \"GetIlOffsetFromMarker\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ILBuilder.cs",
+"region":  {
+"startLine":  1246,
+"startColumn":  20,
+"endLine":  1246,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename property \"PreferredUILang\" to match camel case naming rules, consider using \"PreferredUiLang\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CommandLine\\CommonCommandLineArguments.cs",
+"region":  {
+"startLine":  258,
+"startColumn":  28,
+"endLine":  258,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"MakeWin32ResourcesFromCOFF\" to match camel case naming rules, consider using \"MakeWin32ResourcesFromCoff\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\Compilation.cs",
+"region":  {
+"startLine":  1086,
+"startColumn":  38,
+"endLine":  1086,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ReadWin32ResourcesFromCOFF\" to match camel case naming rules, consider using \"ReadWin32ResourcesFromCoff\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CvtRes.cs",
+"region":  {
+"startLine":  176,
+"startColumn":  55,
+"endLine":  176,
+"endColumn":  81
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"WriteVSFixedFileInfo\" to match camel case naming rules, consider using \"WriteVsFixedFileInfo\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CvtRes.cs",
+"region":  {
+"startLine":  639,
+"startColumn":  26,
+"endLine":  639,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"KEYSIZE\" to match camel case naming rules, consider using \"Keysize\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CvtRes.cs",
+"region":  {
+"startLine":  732,
+"startColumn":  32,
+"endLine":  732,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"KEYBYTES\" to match camel case naming rules, consider using \"Keybytes\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CvtRes.cs",
+"region":  {
+"startLine":  736,
+"startColumn":  32,
+"endLine":  736,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"SetPEEntryPoint\" to match camel case naming rules, consider using \"SetPeEntryPoint\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\CommonPEModuleBuilder.cs",
+"region":  {
+"startLine":  203,
+"startColumn":  23,
+"endLine":  203,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"RethrowExceptionsAsIOException\" to match camel case naming rules, consider using \"RethrowExceptionsAsIoException\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\FileSystem\\FileUtilities.cs",
+"region":  {
+"startLine":  303,
+"startColumn":  27,
+"endLine":  303,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ParseFeatureFromMSBuild\" to match camel case naming rules, consider using \"ParseFeatureFromMsBuild\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\CompilerOptionParseUtilities.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  37,
+"endLine":  15,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"GetFNVHashCode\" to match camel case naming rules, consider using \"GetFnvHashCode\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\Hash.cs",
+"region":  {
+"startLine":  161,
+"startColumn":  29,
+"endLine":  161,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"GetFNVHashCode\" to match camel case naming rules, consider using \"GetFnvHashCode\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\Hash.cs",
+"region":  {
+"startLine":  183,
+"startColumn":  36,
+"endLine":  183,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"GetFNVHashCode\" to match camel case naming rules, consider using \"GetFnvHashCode\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\Hash.cs",
+"region":  {
+"startLine":  206,
+"startColumn":  29,
+"endLine":  206,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"GetFNVHashCode\" to match camel case naming rules, consider using \"GetFnvHashCode\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\Hash.cs",
+"region":  {
+"startLine":  230,
+"startColumn":  29,
+"endLine":  230,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"GetFNVHashCode\" to match camel case naming rules, consider using \"GetFnvHashCode\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\Hash.cs",
+"region":  {
+"startLine":  250,
+"startColumn":  29,
+"endLine":  250,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"GetFNVHashCode\" to match camel case naming rules, consider using \"GetFnvHashCode\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\Hash.cs",
+"region":  {
+"startLine":  261,
+"startColumn":  29,
+"endLine":  261,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"GetFNVHashCode\" to match camel case naming rules, consider using \"GetFnvHashCode\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\Hash.cs",
+"region":  {
+"startLine":  272,
+"startColumn":  29,
+"endLine":  272,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"GetFNVHashCode\" to match camel case naming rules, consider using \"GetFnvHashCode\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\Hash.cs",
+"region":  {
+"startLine":  293,
+"startColumn":  29,
+"endLine":  293,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"GetFNVHashCode\" to match camel case naming rules, consider using \"GetFnvHashCode\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\Hash.cs",
+"region":  {
+"startLine":  315,
+"startColumn":  29,
+"endLine":  315,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"CombineFNVHash\" to match camel case naming rules, consider using \"CombineFnvHash\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\Hash.cs",
+"region":  {
+"startLine":  327,
+"startColumn":  29,
+"endLine":  327,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"CombineFNVHash\" to match camel case naming rules, consider using \"CombineFnvHash\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\Hash.cs",
+"region":  {
+"startLine":  344,
+"startColumn":  29,
+"endLine":  344,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"FindSharedEntryASCII\" to match camel case naming rules, consider using \"FindSharedEntryAscii\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\StringTable.cs",
+"region":  {
+"startLine":  350,
+"startColumn":  38,
+"endLine":  350,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"AddSharedUTF8\" to match camel case naming rules, consider using \"AddSharedUtf8\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\StringTable.cs",
+"region":  {
+"startLine":  581,
+"startColumn":  39,
+"endLine":  581,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TextEqualsASCII\" to match camel case naming rules, consider using \"TextEqualsAscii\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\StringTable.cs",
+"region":  {
+"startLine":  706,
+"startColumn":  37,
+"endLine":  706,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TryGetCurrentUICultureSetter\" to match camel case naming rules, consider using \"TryGetCurrentUiCultureSetter\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\UICultureUtilities.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  29,
+"endLine":  15,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TryGetCurrentThreadUICultureSetter\" to match camel case naming rules, consider using \"TryGetCurrentThreadUiCultureSetter\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\UICultureUtilities.cs",
+"region":  {
+"startLine":  53,
+"startColumn":  29,
+"endLine":  53,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"WithCurrentUICulture\" to match camel case naming rules, consider using \"WithCurrentUiCulture\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\UICultureUtilities.cs",
+"region":  {
+"startLine":  111,
+"startColumn":  30,
+"endLine":  111,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"WithCurrentUICulture\" to match camel case naming rules, consider using \"WithCurrentUiCulture\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\UICultureUtilities.cs",
+"region":  {
+"startLine":  141,
+"startColumn":  33,
+"endLine":  141,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"WithCurrentUICulture\" to match camel case naming rules, consider using \"WithCurrentUiCulture\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\UICultureUtilities.cs",
+"region":  {
+"startLine":  171,
+"startColumn":  31,
+"endLine":  171,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"GetSymbolForILToken\" to match camel case naming rules, consider using \"GetSymbolForIlToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\MetadataDecoder.cs",
+"region":  {
+"startLine":  2233,
+"startColumn":  25,
+"endLine":  2233,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename property \"UseCLSCompliantNameArityEncoding\" to match camel case naming rules, consider using \"UseClsCompliantNameArityEncoding\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\MetadataTypeName.cs",
+"region":  {
+"startLine":  245,
+"startColumn":  21,
+"endLine":  245,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename property \"PEReaderOpt\" to match camel case naming rules, consider using \"PeReaderOpt\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\PEModule.cs",
+"region":  {
+"startLine":  143,
+"startColumn":  27,
+"endLine":  143,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename property \"IsCOFFOnly\" to match camel case naming rules, consider using \"IsCoffOnly\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\PEModule.cs",
+"region":  {
+"startLine":  230,
+"startColumn":  23,
+"endLine":  230,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"GetSZArrayTypeSymbol\" to match camel case naming rules, consider using \"GetSzArrayTypeSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\SymbolFactory.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  38,
+"endLine":  19,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"GetMDArrayTypeSymbol\" to match camel case naming rules, consider using \"GetMdArrayTypeSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\SymbolFactory.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  38,
+"endLine":  20,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"GetSZArrayTypeSymbol\" to match camel case naming rules, consider using \"GetSzArrayTypeSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\TypeNameDecoder.cs",
+"region":  {
+"startLine":  60,
+"startColumn":  30,
+"endLine":  60,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"GetMDArrayTypeSymbol\" to match camel case naming rules, consider using \"GetMdArrayTypeSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\TypeNameDecoder.cs",
+"region":  {
+"startLine":  65,
+"startColumn":  30,
+"endLine":  65,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename property \"IL\" to match camel case naming rules, consider using \"Il\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\Members.cs",
+"region":  {
+"startLine":  412,
+"startColumn":  30,
+"endLine":  412,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename property \"IsSZArray\" to match camel case naming rules, consider using \"IsSzArray\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\Types.cs",
+"region":  {
+"startLine":  35,
+"startColumn":  14,
+"endLine":  35,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"SetCurrentUICulture\" to match camel case naming rules, consider using \"SetCurrentUiCulture\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PortableShim.cs",
+"region":  {
+"startLine":  540,
+"startColumn":  34,
+"endLine":  540,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename property \"SHA1\" to match camel case naming rules, consider using \"Sha1\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PortableShim.cs",
+"region":  {
+"startLine":  688,
+"startColumn":  36,
+"endLine":  688,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"GetSZArrayElementType\" to match camel case naming rules, consider using \"GetSzArrayElementType\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\SignatureComparer.cs",
+"region":  {
+"startLine":  254,
+"startColumn":  39,
+"endLine":  254,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"GetMDArrayElementType\" to match camel case naming rules, consider using \"GetMdArrayElementType\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\SignatureComparer.cs",
+"region":  {
+"startLine":  265,
+"startColumn":  39,
+"endLine":  265,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"DumpXML\" to match camel case naming rules, consider using \"DumpXml\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\TreeDumper.cs",
+"region":  {
+"startLine":  105,
+"startColumn":  30,
+"endLine":  105,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"DoDumpXML\" to match camel case naming rules, consider using \"DoDumpXml\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\TreeDumper.cs",
+"region":  {
+"startLine":  112,
+"startColumn":  22,
+"endLine":  112,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"charProperties\" to match camel case naming rules, consider using \"CharProperties\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Xml\\XmlCharType.cs",
+"region":  {
+"startLine":  473,
+"startColumn":  29,
+"endLine":  473,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"IsNCNameSingleChar\" to match camel case naming rules, consider using \"IsNcNameSingleChar\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Xml\\XmlCharType.cs",
+"region":  {
+"startLine":  917,
+"startColumn":  28,
+"endLine":  917,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"IsStartNCNameSingleChar\" to match camel case naming rules, consider using \"IsStartNcNameSingleChar\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Xml\\XmlCharType.cs",
+"region":  {
+"startLine":  952,
+"startColumn":  28,
+"endLine":  952,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"IsNCNameCharXml4e\" to match camel case naming rules, consider using \"IsNcNameCharXml4E\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Xml\\XmlCharType.cs",
+"region":  {
+"startLine":  1014,
+"startColumn":  28,
+"endLine":  1014,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"IsStartNCNameCharXml4e\" to match camel case naming rules, consider using \"IsStartNcNameCharXml4E\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Xml\\XmlCharType.cs",
+"region":  {
+"startLine":  1020,
+"startColumn":  28,
+"endLine":  1020,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"IsNameCharXml4e\" to match camel case naming rules, consider using \"IsNameCharXml4E\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Xml\\XmlCharType.cs",
+"region":  {
+"startLine":  1026,
+"startColumn":  28,
+"endLine":  1026,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"IsStartNameCharXml4e\" to match camel case naming rules, consider using \"IsStartNameCharXml4E\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Xml\\XmlCharType.cs",
+"region":  {
+"startLine":  1032,
+"startColumn":  28,
+"endLine":  1032,
+"endColumn":  48
+}
+}
+}
+]
+}

@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (7) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Pdb\\PdbToXml.cs",
+"region":  {
+"startLine":  962,
+"startColumn":  21,
+"endLine":  967,
+"endColumn":  163
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (8) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Pdb\\PdbToXml.cs",
+"region":  {
+"startLine":  1023,
+"startColumn":  25,
+"endLine":  1025,
+"endColumn":  91
+}
+}
+}
+]
+}

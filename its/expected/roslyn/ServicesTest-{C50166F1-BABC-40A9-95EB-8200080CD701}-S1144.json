@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\ExtensionOrdererTests.cs",
+"region":  {
+"startLine":  230,
+"startColumn":  9,
+"endLine":  235,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\ReferencedSymbolTests.cs",
+"region":  {
+"startLine":  273,
+"startColumn":  13,
+"endLine":  276,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\SolutionTests\\ProjectDependencyGraphTests.cs",
+"region":  {
+"startLine":  126,
+"startColumn":  9,
+"endLine":  130,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\UtilityTest\\ExceptionHelpersTests.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  9,
+"endLine":  35,
+"endColumn":  10
+}
+}
+}
+]
+}

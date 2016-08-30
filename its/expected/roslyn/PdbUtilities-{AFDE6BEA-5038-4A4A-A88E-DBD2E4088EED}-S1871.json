@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"411\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Metadata\\ILVisualizer.cs",
+"region":  {
+"startLine":  444,
+"startColumn":  25,
+"endLine":  446,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"1380\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Pdb\\Token2SourceLineExporter.cs",
+"region":  {
+"startLine":  1384,
+"startColumn":  21,
+"endLine":  1386,
+"endColumn":  31
+}
+}
+}
+]
+}

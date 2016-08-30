@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1185",
+"message":  "Remove this method \"Initialize\" to simply inherit its behavior.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\SymbolKey\\SymbolKey.SymbolKeyReader.cs",
+"region":  {
+"startLine":  209,
+"startColumn":  13,
+"endLine":  212,
+"endColumn":  14
+}
+}
+}
+]
+}

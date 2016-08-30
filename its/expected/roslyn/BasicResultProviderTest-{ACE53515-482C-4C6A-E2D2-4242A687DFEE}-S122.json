@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S122",
+"message":  "Reformat the code to have only one statement per line.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\SymbolDisplay\\ObjectDisplay.vb",
+"region":  {
+"startLine":  480,
+"startColumn":  13,
+"endLine":  480,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S122",
+"message":  "Reformat the code to have only one statement per line.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Source\\ResultProvider\\Helpers\\TypeExtensions.vb",
+"region":  {
+"startLine":  23,
+"startColumn":  13,
+"endLine":  23,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S122",
+"message":  "Reformat the code to have only one statement per line.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ResultProvider\\ValueFormatterTests.vb",
+"region":  {
+"startLine":  84,
+"startColumn":  17,
+"endLine":  84,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S122",
+"message":  "Reformat the code to have only one statement per line.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ResultProvider\\ValueFormatterTests.vb",
+"region":  {
+"startLine":  140,
+"startColumn":  17,
+"endLine":  140,
+"endColumn":  37
+}
+}
+}
+]
+}

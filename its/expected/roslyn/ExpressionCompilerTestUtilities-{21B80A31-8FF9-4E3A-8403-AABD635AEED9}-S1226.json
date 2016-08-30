@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"references\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Test\\ExpressionCompiler\\RuntimeInstance.cs",
+"region":  {
+"startLine":  47,
+"startColumn":  17,
+"endLine":  47,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"references\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Test\\ExpressionCompiler\\RuntimeInstance.cs",
+"region":  {
+"startLine":  50,
+"startColumn":  13,
+"endLine":  50,
+"endColumn":  23
+}
+}
+}
+]
+}

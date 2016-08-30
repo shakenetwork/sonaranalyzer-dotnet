@@ -1,0 +1,342 @@
+{
+"issues":  [
+{
+"id":  "S2259",
+"message":  "\"receiverOpt\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Binder_Conversions.cs",
+"region":  {
+"startLine":  567,
+"startColumn":  83,
+"endLine":  567,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"constructionInputs\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Binder_Deconstruct.cs",
+"region":  {
+"startLine":  348,
+"startColumn":  93,
+"endLine":  348,
+"endColumn":  111
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"receiver\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\Binder_Expressions.cs",
+"region":  {
+"startLine":  6796,
+"startColumn":  17,
+"endLine":  6796,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"gotoCaseExpressionConstant\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\SwitchBinder.cs",
+"region":  {
+"startLine":  689,
+"startColumn":  48,
+"endLine":  689,
+"endColumn":  74
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"receiver\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\CodeGen\\EmitConversion.cs",
+"region":  {
+"startLine":  272,
+"startColumn":  91,
+"endLine":  272,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"wellKnownAttributeData\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\PEModuleBuilder.cs",
+"region":  {
+"startLine":  560,
+"startColumn":  59,
+"endLine":  560,
+"endColumn":  81
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"firstInRegion\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\FlowAnalysis\\PreciseAbstractFlowPass.cs",
+"region":  {
+"startLine":  174,
+"startColumn":  37,
+"endLine":  174,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"lastInRegion\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\FlowAnalysis\\PreciseAbstractFlowPass.cs",
+"region":  {
+"startLine":  175,
+"startColumn":  35,
+"endLine":  175,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"firstInRegion\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\FlowAnalysis\\RegionAnalysisContext.cs",
+"region":  {
+"startLine":  45,
+"startColumn":  25,
+"endLine":  45,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"containerAsFrame\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LambdaRewriter\\LambdaRewriter.cs",
+"region":  {
+"startLine":  811,
+"startColumn":  29,
+"endLine":  811,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"defaultConstantValue\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_Call.cs",
+"region":  {
+"startLine":  996,
+"startColumn":  22,
+"endLine":  996,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"dynamicSiteInitializers\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_ObjectCreationExpression.cs",
+"region":  {
+"startLine":  133,
+"startColumn":  17,
+"endLine":  133,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"memberInit\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_ObjectOrCollectionInitializerExpression.cs",
+"region":  {
+"startLine":  230,
+"startColumn":  30,
+"endLine":  230,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"initializerMember\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_ObjectOrCollectionInitializerExpression.cs",
+"region":  {
+"startLine":  301,
+"startColumn":  101,
+"endLine":  301,
+"endColumn":  118
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"initializerMember\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_ObjectOrCollectionInitializerExpression.cs",
+"region":  {
+"startLine":  307,
+"startColumn":  97,
+"endLine":  307,
+"endColumn":  114
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"arrayAccess\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_ObjectOrCollectionInitializerExpression.cs",
+"region":  {
+"startLine":  316,
+"startColumn":  77,
+"endLine":  316,
+"endColumn":  88
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"identifierOrThisOpt\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\LanguageParser.cs",
+"region":  {
+"startLine":  6931,
+"startColumn":  17,
+"endLine":  6931,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"moduleReferencesBuilder\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\ReferenceManager.cs",
+"region":  {
+"startLine":  781,
+"startColumn":  25,
+"endLine":  781,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"ctorInitializer\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceConstructorSymbol.cs",
+"region":  {
+"startLine":  268,
+"startColumn":  24,
+"endLine":  268,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"result\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol_Bases.cs",
+"region":  {
+"startLine":  551,
+"startColumn":  25,
+"endLine":  551,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"result\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol_Bases.cs",
+"region":  {
+"startLine":  557,
+"startColumn":  25,
+"endLine":  557,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"result\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol_Bases.cs",
+"region":  {
+"startLine":  582,
+"startColumn":  51,
+"endLine":  582,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"propertySyntax\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourcePropertySymbol.cs",
+"region":  {
+"startLine":  116,
+"startColumn":  49,
+"endLine":  116,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"bindersBuilder\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Symbol_Attributes.cs",
+"region":  {
+"startLine":  445,
+"startColumn":  29,
+"endLine":  445,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"subType\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\SymbolExtensions.cs",
+"region":  {
+"startLine":  85,
+"startColumn":  65,
+"endLine":  85,
+"endColumn":  72
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"implementingType\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\TypeSymbol.cs",
+"region":  {
+"startLine":  1123,
+"startColumn":  37,
+"endLine":  1123,
+"endColumn":  53
+}
+}
+}
+]
+}

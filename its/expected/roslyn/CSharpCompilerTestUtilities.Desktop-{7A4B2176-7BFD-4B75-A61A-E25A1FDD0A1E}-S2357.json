@@ -1,0 +1,238 @@
+{
+"issues":  [
+{
+"id":  "S2357",
+"message":  "Make \"Symbol\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\CompilationTestUtils.cs",
+"region":  {
+"startLine":  149,
+"startColumn":  28,
+"endLine":  149,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"CandidateReason\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\CompilationTestUtils.cs",
+"region":  {
+"startLine":  150,
+"startColumn":  36,
+"endLine":  150,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"CandidateSymbols\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\CompilationTestUtils.cs",
+"region":  {
+"startLine":  151,
+"startColumn":  44,
+"endLine":  151,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Type\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\CompilationTestUtils.cs",
+"region":  {
+"startLine":  152,
+"startColumn":  32,
+"endLine":  152,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ConvertedType\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\CompilationTestUtils.cs",
+"region":  {
+"startLine":  153,
+"startColumn":  32,
+"endLine":  153,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ImplicitConversion\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\CompilationTestUtils.cs",
+"region":  {
+"startLine":  154,
+"startColumn":  31,
+"endLine":  154,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Alias\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\CompilationTestUtils.cs",
+"region":  {
+"startLine":  155,
+"startColumn":  33,
+"endLine":  155,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ConstantValue\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\CompilationTestUtils.cs",
+"region":  {
+"startLine":  156,
+"startColumn":  37,
+"endLine":  156,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"MemberGroup\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\CompilationTestUtils.cs",
+"region":  {
+"startLine":  158,
+"startColumn":  44,
+"endLine":  158,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IsWarning\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\DiagnosticTestUtilities.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  21,
+"endLine":  20,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Code\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\DiagnosticTestUtilities.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  20,
+"endLine":  21,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Line\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\DiagnosticTestUtilities.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  26,
+"endLine":  21,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Column\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\DiagnosticTestUtilities.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  32,
+"endLine":  21,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Parameters\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\DiagnosticTestUtilities.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  25,
+"endLine":  22,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"x\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\ScriptTestFixtures.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  24,
+"endLine":  18,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"w\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\ScriptTestFixtures.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  31,
+"endLine":  18,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"x\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\ScriptTestFixtures.cs",
+"region":  {
+"startLine":  44,
+"startColumn":  24,
+"endLine":  44,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"w\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\ScriptTestFixtures.cs",
+"region":  {
+"startLine":  44,
+"startColumn":  31,
+"endLine":  44,
+"endColumn":  32
+}
+}
+}
+]
+}

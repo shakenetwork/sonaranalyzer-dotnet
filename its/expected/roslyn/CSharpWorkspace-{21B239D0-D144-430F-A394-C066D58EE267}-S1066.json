@@ -1,0 +1,1343 @@
+{
+"issues":  [
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Classification\\ClassificationHelpers.cs",
+"region":  {
+"startLine":  158,
+"startColumn":  29,
+"endLine":  158,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Classification\\ClassificationHelpers.cs",
+"region":  {
+"startLine":  171,
+"startColumn":  29,
+"endLine":  171,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Classification\\ClassificationHelpers.cs",
+"region":  {
+"startLine":  340,
+"startColumn":  25,
+"endLine":  340,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Classification\\Classifiers\\NameSyntaxClassifier.cs",
+"region":  {
+"startLine":  153,
+"startColumn":  21,
+"endLine":  153,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Classification\\Classifiers\\NameSyntaxClassifier.cs",
+"region":  {
+"startLine":  167,
+"startColumn":  17,
+"endLine":  167,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Classification\\Classifiers\\SyntaxTokenClassifier.cs",
+"region":  {
+"startLine":  44,
+"startColumn":  17,
+"endLine":  44,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Classification\\Classifiers\\SyntaxTokenClassifier.cs",
+"region":  {
+"startLine":  79,
+"startColumn":  17,
+"endLine":  79,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\CodeGeneration\\EventGenerator.cs",
+"region":  {
+"startLine":  191,
+"startColumn":  17,
+"endLine":  191,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\CodeGeneration\\MethodGenerator.cs",
+"region":  {
+"startLine":  191,
+"startColumn":  17,
+"endLine":  191,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\CodeGeneration\\ParameterGenerator.cs",
+"region":  {
+"startLine":  120,
+"startColumn":  17,
+"endLine":  120,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\CodeGeneration\\PropertyGenerator.cs",
+"region":  {
+"startLine":  202,
+"startColumn":  17,
+"endLine":  202,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTokenExtensions.cs",
+"region":  {
+"startLine":  156,
+"startColumn":  17,
+"endLine":  156,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTokenExtensions.cs",
+"region":  {
+"startLine":  253,
+"startColumn":  21,
+"endLine":  253,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTokenExtensions.cs",
+"region":  {
+"startLine":  406,
+"startColumn":  17,
+"endLine":  406,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTokenExtensions.cs",
+"region":  {
+"startLine":  470,
+"startColumn":  17,
+"endLine":  470,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTokenExtensions.cs",
+"region":  {
+"startLine":  472,
+"startColumn":  21,
+"endLine":  472,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  91,
+"startColumn":  17,
+"endLine":  91,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  133,
+"startColumn":  17,
+"endLine":  133,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  144,
+"startColumn":  17,
+"endLine":  144,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  484,
+"startColumn":  17,
+"endLine":  484,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  587,
+"startColumn":  21,
+"endLine":  587,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  707,
+"startColumn":  17,
+"endLine":  707,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  950,
+"startColumn":  21,
+"endLine":  950,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  1022,
+"startColumn":  17,
+"endLine":  1022,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  1056,
+"startColumn":  17,
+"endLine":  1056,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  1102,
+"startColumn":  17,
+"endLine":  1102,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  1670,
+"startColumn":  17,
+"endLine":  1670,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  1693,
+"startColumn":  17,
+"endLine":  1693,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  1818,
+"startColumn":  21,
+"endLine":  1818,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  1847,
+"startColumn":  17,
+"endLine":  1847,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  1877,
+"startColumn":  17,
+"endLine":  1877,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  1892,
+"startColumn":  17,
+"endLine":  1892,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  1902,
+"startColumn":  17,
+"endLine":  1902,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  1905,
+"startColumn":  21,
+"endLine":  1905,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  1917,
+"startColumn":  17,
+"endLine":  1917,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  1942,
+"startColumn":  17,
+"endLine":  1942,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  2013,
+"startColumn":  17,
+"endLine":  2013,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  2027,
+"startColumn":  17,
+"endLine":  2027,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  2045,
+"startColumn":  17,
+"endLine":  2045,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  2063,
+"startColumn":  17,
+"endLine":  2063,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  2074,
+"startColumn":  17,
+"endLine":  2074,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  2158,
+"startColumn":  17,
+"endLine":  2158,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  2312,
+"startColumn":  21,
+"endLine":  2312,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  2377,
+"startColumn":  21,
+"endLine":  2377,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ExpressionSyntaxExtensions.cs",
+"region":  {
+"startLine":  299,
+"startColumn":  17,
+"endLine":  299,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ExpressionSyntaxExtensions.cs",
+"region":  {
+"startLine":  573,
+"startColumn":  17,
+"endLine":  573,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ExpressionSyntaxExtensions.cs",
+"region":  {
+"startLine":  1318,
+"startColumn":  33,
+"endLine":  1318,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ExpressionSyntaxExtensions.cs",
+"region":  {
+"startLine":  1582,
+"startColumn":  17,
+"endLine":  1582,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ExpressionSyntaxExtensions.cs",
+"region":  {
+"startLine":  1770,
+"startColumn":  33,
+"endLine":  1770,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ParenthesizedExpressionSyntaxExtensions.cs",
+"region":  {
+"startLine":  201,
+"startColumn":  29,
+"endLine":  201,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ParenthesizedExpressionSyntaxExtensions.cs",
+"region":  {
+"startLine":  338,
+"startColumn":  29,
+"endLine":  338,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ParenthesizedExpressionSyntaxExtensions.cs",
+"region":  {
+"startLine":  351,
+"startColumn":  29,
+"endLine":  351,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\SemanticModelExtensions.cs",
+"region":  {
+"startLine":  358,
+"startColumn":  17,
+"endLine":  358,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\SyntaxNodeExtensions.cs",
+"region":  {
+"startLine":  492,
+"startColumn":  21,
+"endLine":  492,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\SyntaxNodeExtensions.cs",
+"region":  {
+"startLine":  533,
+"startColumn":  25,
+"endLine":  533,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\BaseFormattingRule.cs",
+"region":  {
+"startLine":  228,
+"startColumn":  17,
+"endLine":  228,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\ElasticTriviaFormattingRule.cs",
+"region":  {
+"startLine":  309,
+"startColumn":  29,
+"endLine":  309,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\ElasticTriviaFormattingRule.cs",
+"region":  {
+"startLine":  369,
+"startColumn":  29,
+"endLine":  369,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\ElasticTriviaFormattingRule.cs",
+"region":  {
+"startLine":  372,
+"startColumn":  33,
+"endLine":  372,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\NewLineUserSettingFormattingRule.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  17,
+"endLine":  36,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\NewLineUserSettingFormattingRule.cs",
+"region":  {
+"startLine":  45,
+"startColumn":  17,
+"endLine":  45,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\NewLineUserSettingFormattingRule.cs",
+"region":  {
+"startLine":  54,
+"startColumn":  17,
+"endLine":  54,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\NewLineUserSettingFormattingRule.cs",
+"region":  {
+"startLine":  63,
+"startColumn":  17,
+"endLine":  63,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\NewLineUserSettingFormattingRule.cs",
+"region":  {
+"startLine":  72,
+"startColumn":  17,
+"endLine":  72,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\NewLineUserSettingFormattingRule.cs",
+"region":  {
+"startLine":  81,
+"startColumn":  17,
+"endLine":  81,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\NewLineUserSettingFormattingRule.cs",
+"region":  {
+"startLine":  104,
+"startColumn":  17,
+"endLine":  104,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\NewLineUserSettingFormattingRule.cs",
+"region":  {
+"startLine":  113,
+"startColumn":  17,
+"endLine":  113,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\NewLineUserSettingFormattingRule.cs",
+"region":  {
+"startLine":  123,
+"startColumn":  17,
+"endLine":  123,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\NewLineUserSettingFormattingRule.cs",
+"region":  {
+"startLine":  132,
+"startColumn":  17,
+"endLine":  132,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\SpacingFormattingRule.cs",
+"region":  {
+"startLine":  136,
+"startColumn":  17,
+"endLine":  136,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\SpacingFormattingRule.cs",
+"region":  {
+"startLine":  345,
+"startColumn":  17,
+"endLine":  345,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\SuppressFormattingRule.cs",
+"region":  {
+"startLine":  142,
+"startColumn":  17,
+"endLine":  142,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\SuppressFormattingRule.cs",
+"region":  {
+"startLine":  153,
+"startColumn":  17,
+"endLine":  153,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\SuppressFormattingRule.cs",
+"region":  {
+"startLine":  163,
+"startColumn":  17,
+"endLine":  163,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\SuppressFormattingRule.cs",
+"region":  {
+"startLine":  173,
+"startColumn":  17,
+"endLine":  173,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\TokenBasedFormattingRule.cs",
+"region":  {
+"startLine":  64,
+"startColumn":  25,
+"endLine":  64,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\TokenBasedFormattingRule.cs",
+"region":  {
+"startLine":  199,
+"startColumn":  17,
+"endLine":  199,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\TokenBasedFormattingRule.cs",
+"region":  {
+"startLine":  266,
+"startColumn":  17,
+"endLine":  266,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\LanguageServices\\CSharpSyntaxFactsService.cs",
+"region":  {
+"startLine":  507,
+"startColumn":  17,
+"endLine":  507,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\LanguageServices\\CSharpSyntaxFactsService.cs",
+"region":  {
+"startLine":  1464,
+"startColumn":  21,
+"endLine":  1464,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\LanguageServices\\CSharpSyntaxFactsService.cs",
+"region":  {
+"startLine":  1475,
+"startColumn":  21,
+"endLine":  1475,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\LanguageServices\\CSharpSyntaxFactsService.cs",
+"region":  {
+"startLine":  1486,
+"startColumn":  21,
+"endLine":  1486,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\LanguageServices\\CSharpSyntaxFactsService.cs",
+"region":  {
+"startLine":  1497,
+"startColumn":  21,
+"endLine":  1497,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\LanguageServices\\CSharpTypeInferenceService.TypeInferrer.cs",
+"region":  {
+"startLine":  245,
+"startColumn":  21,
+"endLine":  245,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\LanguageServices\\CSharpTypeInferenceService.TypeInferrer.cs",
+"region":  {
+"startLine":  319,
+"startColumn":  21,
+"endLine":  319,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\LanguageServices\\CSharpTypeInferenceService.TypeInferrer.cs",
+"region":  {
+"startLine":  603,
+"startColumn":  21,
+"endLine":  603,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\LanguageServices\\CSharpTypeInferenceService.TypeInferrer.cs",
+"region":  {
+"startLine":  1738,
+"startColumn":  21,
+"endLine":  1738,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\LanguageServices\\CSharpTypeInferenceService.TypeInferrer.cs",
+"region":  {
+"startLine":  1859,
+"startColumn":  21,
+"endLine":  1859,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Recommendations\\CSharpRecommendationService.cs",
+"region":  {
+"startLine":  264,
+"startColumn":  17,
+"endLine":  264,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Rename\\CSharpRenameRewriterLanguageService.cs",
+"region":  {
+"startLine":  869,
+"startColumn":  29,
+"endLine":  869,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Rename\\CSharpRenameRewriterLanguageService.cs",
+"region":  {
+"startLine":  976,
+"startColumn":  17,
+"endLine":  976,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Rename\\CSharpRenameRewriterLanguageService.cs",
+"region":  {
+"startLine":  1039,
+"startColumn":  33,
+"endLine":  1039,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Rename\\CSharpRenameRewriterLanguageService.cs",
+"region":  {
+"startLine":  1153,
+"startColumn":  17,
+"endLine":  1153,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Simplification\\CSharpCastReducer.Rewriter.cs",
+"region":  {
+"startLine":  34,
+"startColumn":  21,
+"endLine":  34,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Simplification\\CSharpEscapingReducer.cs",
+"region":  {
+"startLine":  48,
+"startColumn":  25,
+"endLine":  48,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Simplification\\CSharpEscapingReducer.cs",
+"region":  {
+"startLine":  56,
+"startColumn":  25,
+"endLine":  56,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Simplification\\CSharpExtensionMethodReducer.cs",
+"region":  {
+"startLine":  98,
+"startColumn":  29,
+"endLine":  98,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Simplification\\CSharpSimplificationService.Expander.cs",
+"region":  {
+"startLine":  558,
+"startColumn":  21,
+"endLine":  558,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Simplification\\CSharpSimplificationService.Expander.cs",
+"region":  {
+"startLine":  713,
+"startColumn":  21,
+"endLine":  713,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Simplification\\CSharpSimplificationService.Expander.cs",
+"region":  {
+"startLine":  763,
+"startColumn":  21,
+"endLine":  763,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Utilities\\FormattingRangeHelper.cs",
+"region":  {
+"startLine":  318,
+"startColumn":  21,
+"endLine":  318,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Utilities\\FormattingRangeHelper.cs",
+"region":  {
+"startLine":  424,
+"startColumn":  17,
+"endLine":  424,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Utilities\\SpeculationAnalyzer.cs",
+"region":  {
+"startLine":  413,
+"startColumn":  21,
+"endLine":  413,
+"endColumn":  23
+}
+}
+}
+]
+}

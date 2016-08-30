@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1944",
+"message":  "Review this cast; in this project there\u0027s no type that implements both \"IVsTextView\" and \"IOleCommandTarget\".",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\VisualStudio\\VsInteractiveWindow.cs",
+"region":  {
+"startLine":  101,
+"startColumn":  45,
+"endLine":  101,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S1944",
+"message":  "Review this cast; in this project there\u0027s no type that implements both \"IVsTextView\" and \"IOleCommandTarget\".",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\VisualStudio\\VsInteractiveWindowCommandFilter.cs",
+"region":  {
+"startLine":  77,
+"startColumn":  25,
+"endLine":  77,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1944",
+"message":  "Review this cast; in this project there\u0027s no type that implements both \"IVsTextBuffer\" and \"IOleCommandTarget\".",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\VisualStudio\\VsInteractiveWindowEditorFactoryService.cs",
+"region":  {
+"startLine":  70,
+"startColumn":  58,
+"endLine":  70,
+"endColumn":  75
+}
+}
+}
+]
+}

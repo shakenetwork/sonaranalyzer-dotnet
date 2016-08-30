@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2971",
+"message":  "Drop \"ToList\" from the middle of the call chain.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\Extensions.cs",
+"region":  {
+"startLine":  291,
+"startColumn":  31,
+"endLine":  291,
+"endColumn":  37
+}
+}
+}
+]
+}

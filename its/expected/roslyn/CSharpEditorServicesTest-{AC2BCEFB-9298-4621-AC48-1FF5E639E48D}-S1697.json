@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1697",
+"message":  "Either reverse the equality operator in the \"body\" null test, or reverse the logical operator that follows it.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SymbolId\\SymbolKeyTestBase.cs",
+"region":  {
+"startLine":  136,
+"startColumn":  21,
+"endLine":  136,
+"endColumn":  33
+}
+}
+}
+]
+}

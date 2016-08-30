@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S3427",
+"message":  "This method signature overlaps the one defined on line 396, the default parameter value can\u0027t be used.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\BoundTree\\Constructors.cs",
+"region":  {
+"startLine":  391,
+"startColumn":  83,
+"endLine":  391,
+"endColumn":  105
+}
+}
+},
+{
+"id":  "S3427",
+"message":  "This method signature overlaps the one defined on line 409, the default parameter value can\u0027t be used.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\BoundTree\\Constructors.cs",
+"region":  {
+"startLine":  404,
+"startColumn":  94,
+"endLine":  404,
+"endColumn":  116
+}
+}
+},
+{
+"id":  "S3427",
+"message":  "This method signature overlaps the one defined on line 427, the default parameter value can\u0027t be used.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\BoundTree\\Constructors.cs",
+"region":  {
+"startLine":  422,
+"startColumn":  93,
+"endLine":  422,
+"endColumn":  115
+}
+}
+}
+]
+}

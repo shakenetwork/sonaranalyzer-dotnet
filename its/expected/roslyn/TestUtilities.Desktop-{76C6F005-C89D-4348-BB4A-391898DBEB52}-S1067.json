@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (6) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\CommonDiagnosticAnalyzers.cs",
+"region":  {
+"startLine":  97,
+"startColumn":  24,
+"endLine":  161,
+"endColumn":  3
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\MarkedSource\\MarkupTestFile.cs",
+"region":  {
+"startLine":  92,
+"startColumn":  25,
+"endLine":  93,
+"endColumn":  151
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (12) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Pdb\\PdbValidation.cs",
+"region":  {
+"startLine":  203,
+"startColumn":  39,
+"endLine":  216,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (11) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Syntax\\NodeHelpers.cs",
+"region":  {
+"startLine":  180,
+"startColumn":  17,
+"endLine":  191,
+"endColumn":  48
+}
+}
+}
+]
+}

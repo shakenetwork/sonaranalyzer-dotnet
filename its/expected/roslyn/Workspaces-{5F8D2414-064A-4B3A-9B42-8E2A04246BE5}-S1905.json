@@ -1,0 +1,173 @@
+{
+"issues":  [
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"IEnumerable\u003cINamespaceSymbol\u003e\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Editing\\ImportAdderService.cs",
+"region":  {
+"startLine":  88,
+"startColumn":  24,
+"endLine":  88,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"INamedTypeSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\FindReferences\\Finders\\ParameterSymbolReferenceFinder.cs",
+"region":  {
+"startLine":  203,
+"startColumn":  69,
+"endLine":  203,
+"endColumn":  88
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"Workspace\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\DocumentExtensions.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  65,
+"endLine":  28,
+"endColumn":  77
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"IEnumerable\u003cIMethodSymbol\u003e\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\ITypeSymbolExtensions.cs",
+"region":  {
+"startLine":  630,
+"startColumn":  21,
+"endLine":  630,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"int\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Utilities\\EnumValueUtilities.cs",
+"region":  {
+"startLine":  68,
+"startColumn":  29,
+"endLine":  68,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"long\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Utilities\\EnumValueUtilities.cs",
+"region":  {
+"startLine":  83,
+"startColumn":  40,
+"endLine":  83,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"ulong\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Utilities\\EnumValueUtilities.cs",
+"region":  {
+"startLine":  84,
+"startColumn":  41,
+"endLine":  84,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"uint\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Utilities\\EnumValueUtilities.cs",
+"region":  {
+"startLine":  86,
+"startColumn":  40,
+"endLine":  86,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"long\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Utilities\\EnumValueUtilities.cs",
+"region":  {
+"startLine":  97,
+"startColumn":  40,
+"endLine":  97,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"ulong\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Utilities\\EnumValueUtilities.cs",
+"region":  {
+"startLine":  98,
+"startColumn":  41,
+"endLine":  98,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"uint\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Utilities\\EnumValueUtilities.cs",
+"region":  {
+"startLine":  100,
+"startColumn":  40,
+"endLine":  100,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"long\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Utilities\\IntegerUtilities.cs",
+"region":  {
+"startLine":  27,
+"startColumn":  43,
+"endLine":  27,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"Workspace\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Solution\\SolutionState.cs",
+"region":  {
+"startLine":  1552,
+"startColumn":  51,
+"endLine":  1552,
+"endColumn":  63
+}
+}
+}
+]
+}

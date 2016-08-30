@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\Core\\Hosting\\ObjectFormatter\\CommonObjectFormatter.Visitor.cs",
+"region":  {
+"startLine":  375,
+"startColumn":  29,
+"endLine":  375,
+"endColumn":  132
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (8) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\Core\\Hosting\\ObjectFormatter\\CommonObjectFormatter.Visitor.cs",
+"region":  {
+"startLine":  393,
+"startColumn":  29,
+"endLine":  395,
+"endColumn":  115
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\Core\\Hosting\\ObjectFormatter\\CommonObjectFormatter.Visitor.FormattedMember.cs",
+"region":  {
+"startLine":  47,
+"startColumn":  28,
+"endLine":  47,
+"endColumn":  124
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\Core\\Hosting\\Resolvers\\RuntimeMetadataReferenceResolver.cs",
+"region":  {
+"startLine":  135,
+"startColumn":  20,
+"endLine":  139,
+"endColumn":  63
+}
+}
+}
+]
+}

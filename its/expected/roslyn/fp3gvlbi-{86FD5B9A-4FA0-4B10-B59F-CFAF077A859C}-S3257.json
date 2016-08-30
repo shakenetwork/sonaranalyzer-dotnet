@@ -1,0 +1,329 @@
+{
+"issues":  [
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\AnalyzerDependency\\AnalyzerDependencyCheckingService.cs",
+"region":  {
+"startLine":  93,
+"startColumn":  52,
+"endLine":  93,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\AnalyzerDependency\\AnalyzerDependencyCheckingService.cs",
+"region":  {
+"startLine":  106,
+"startColumn":  52,
+"endLine":  106,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\AnalyzerDependency\\AnalyzerFileWatcherService.cs",
+"region":  {
+"startLine":  78,
+"startColumn":  40,
+"endLine":  78,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Diagnostics\\VisualStudioWorkspaceDiagnosticAnalyzerProviderService.cs",
+"region":  {
+"startLine":  76,
+"startColumn":  129,
+"endLine":  76,
+"endColumn":  133
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Diagnostics\\VisualStudioWorkspaceDiagnosticAnalyzerProviderService.cs",
+"region":  {
+"startLine":  102,
+"startColumn":  115,
+"endLine":  102,
+"endColumn":  119
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Diagnostics\\VisualStudioWorkspaceDiagnosticAnalyzerProviderService.cs",
+"region":  {
+"startLine":  103,
+"startColumn":  90,
+"endLine":  103,
+"endColumn":  96
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\GenerateType\\GenerateTypeDialogViewModel.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  50,
+"endLine":  42,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\ProjectSystem\\AbstractProject.cs",
+"region":  {
+"startLine":  1157,
+"startColumn":  44,
+"endLine":  1157,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\ProjectSystem\\MetadataReferences\\VisualStudioMetadataReferenceManager.cs",
+"region":  {
+"startLine":  100,
+"startColumn":  21,
+"endLine":  100,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\TableDataSource\\VisualStudioBaseDiagnosticListTable.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  58,
+"endLine":  19,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\TableDataSource\\VisualStudioBaseTodoListTable.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  58,
+"endLine":  23,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Venus\\ContainedDocument.cs",
+"region":  {
+"startLine":  860,
+"startColumn":  31,
+"endLine":  860,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array size specification; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\VsRefactorNotifyService.cs",
+"region":  {
+"startLine":  124,
+"startColumn":  34,
+"endLine":  124,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Watson\\WatsonErrorReport.cs",
+"region":  {
+"startLine":  302,
+"startColumn":  52,
+"endLine":  302,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.DocumentTable.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  35,
+"endLine":  32,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.IdentifierLocationTable.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  35,
+"endLine":  31,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.IdentifierTable.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  35,
+"endLine":  26,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.IdentifierTable.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  35,
+"endLine":  31,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.NameTable.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  35,
+"endLine":  26,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.NameTable.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  35,
+"endLine":  31,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.ProjectDocumentTable.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  28,
+"endLine":  21,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.ProjectDocumentTable.cs",
+"region":  {
+"startLine":  59,
+"startColumn":  28,
+"endLine":  59,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.ProjectTable.cs",
+"region":  {
+"startLine":  30,
+"startColumn":  35,
+"endLine":  30,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.SolutionTable.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  35,
+"endLine":  25,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.SolutionTable.cs",
+"region":  {
+"startLine":  29,
+"startColumn":  35,
+"endLine":  29,
+"endColumn":  50
+}
+}
+}
+]
+}

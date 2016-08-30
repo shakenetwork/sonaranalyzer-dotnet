@@ -1,0 +1,95 @@
+{
+"issues":  [
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\InternalUtilities\\FilePathUtilities.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  30,
+"endLine":  36,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\MSBuild\\CSharp\\CSharpProjectFileLoader.CSharpProjectFile.cs",
+"region":  {
+"startLine":  229,
+"startColumn":  29,
+"endLine":  229,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\MSBuild\\MSBuildProjectLoader.cs",
+"region":  {
+"startLine":  640,
+"startColumn":  22,
+"endLine":  640,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\MSBuild\\MSBuildWorkspace.cs",
+"region":  {
+"startLine":  207,
+"startColumn":  30,
+"endLine":  207,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\MSBuild\\ProjectFile\\ProjectFile.cs",
+"region":  {
+"startLine":  636,
+"startColumn":  30,
+"endLine":  636,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\MSBuild\\SolutionFile\\SolutionFile.cs",
+"region":  {
+"startLine":  102,
+"startColumn":  36,
+"endLine":  102,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\MSBuild\\VisualBasic\\VisualBasicProjectFileLoader.cs",
+"region":  {
+"startLine":  377,
+"startColumn":  29,
+"endLine":  377,
+"endColumn":  41
+}
+}
+}
+]
+}

@@ -1,0 +1,3618 @@
+{
+"issues":  [
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Analysis\\FlowAnalysis\\AbstractFlowPass.vb",
+"region":  {
+"startLine":  901,
+"startColumn":  29,
+"endLine":  901,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Analysis\\FlowAnalysis\\AbstractFlowPass.vb",
+"region":  {
+"startLine":  929,
+"startColumn":  25,
+"endLine":  929,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Analysis\\FlowAnalysis\\DataFlowPass.vb",
+"region":  {
+"startLine":  652,
+"startColumn":  21,
+"endLine":  652,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Analysis\\FlowAnalysis\\DataFlowPass.vb",
+"region":  {
+"startLine":  710,
+"startColumn":  29,
+"endLine":  710,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Analysis\\ForLoopVerification.vb",
+"region":  {
+"startLine":  81,
+"startColumn":  29,
+"endLine":  81,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Conversions.vb",
+"region":  {
+"startLine":  705,
+"startColumn":  29,
+"endLine":  705,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Delegates.vb",
+"region":  {
+"startLine":  841,
+"startColumn":  21,
+"endLine":  841,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Delegates.vb",
+"region":  {
+"startLine":  855,
+"startColumn":  25,
+"endLine":  855,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Expressions.vb",
+"region":  {
+"startLine":  3230,
+"startColumn":  25,
+"endLine":  3230,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Expressions.vb",
+"region":  {
+"startLine":  3315,
+"startColumn":  29,
+"endLine":  3315,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Expressions.vb",
+"region":  {
+"startLine":  3381,
+"startColumn":  21,
+"endLine":  3381,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Expressions.vb",
+"region":  {
+"startLine":  4183,
+"startColumn":  25,
+"endLine":  4183,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Imports.vb",
+"region":  {
+"startLine":  187,
+"startColumn":  41,
+"endLine":  187,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Invocation.vb",
+"region":  {
+"startLine":  611,
+"startColumn":  25,
+"endLine":  611,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Invocation.vb",
+"region":  {
+"startLine":  757,
+"startColumn":  33,
+"endLine":  757,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Invocation.vb",
+"region":  {
+"startLine":  1514,
+"startColumn":  29,
+"endLine":  1514,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Invocation.vb",
+"region":  {
+"startLine":  1940,
+"startColumn":  37,
+"endLine":  1940,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Invocation.vb",
+"region":  {
+"startLine":  1949,
+"startColumn":  29,
+"endLine":  1949,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Invocation.vb",
+"region":  {
+"startLine":  2028,
+"startColumn":  25,
+"endLine":  2028,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Invocation.vb",
+"region":  {
+"startLine":  2055,
+"startColumn":  33,
+"endLine":  2055,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Invocation.vb",
+"region":  {
+"startLine":  2069,
+"startColumn":  25,
+"endLine":  2069,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Invocation.vb",
+"region":  {
+"startLine":  3067,
+"startColumn":  41,
+"endLine":  3067,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Invocation.vb",
+"region":  {
+"startLine":  3079,
+"startColumn":  45,
+"endLine":  3079,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Lambda.vb",
+"region":  {
+"startLine":  275,
+"startColumn":  33,
+"endLine":  275,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Lookup.vb",
+"region":  {
+"startLine":  660,
+"startColumn":  25,
+"endLine":  660,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Lookup.vb",
+"region":  {
+"startLine":  669,
+"startColumn":  37,
+"endLine":  669,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Lookup.vb",
+"region":  {
+"startLine":  868,
+"startColumn":  29,
+"endLine":  868,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Lookup.vb",
+"region":  {
+"startLine":  877,
+"startColumn":  29,
+"endLine":  877,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Lookup.vb",
+"region":  {
+"startLine":  1788,
+"startColumn":  25,
+"endLine":  1788,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_ObjectInitializer.vb",
+"region":  {
+"startLine":  101,
+"startColumn":  37,
+"endLine":  101,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Query.vb",
+"region":  {
+"startLine":  1215,
+"startColumn":  21,
+"endLine":  1215,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Query.vb",
+"region":  {
+"startLine":  2773,
+"startColumn":  33,
+"endLine":  2773,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Query.vb",
+"region":  {
+"startLine":  2776,
+"startColumn":  33,
+"endLine":  2776,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Query.vb",
+"region":  {
+"startLine":  2779,
+"startColumn":  33,
+"endLine":  2779,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Query.vb",
+"region":  {
+"startLine":  2782,
+"startColumn":  33,
+"endLine":  2782,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Query.vb",
+"region":  {
+"startLine":  3684,
+"startColumn":  25,
+"endLine":  3684,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Statements.vb",
+"region":  {
+"startLine":  574,
+"startColumn":  21,
+"endLine":  574,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Statements.vb",
+"region":  {
+"startLine":  797,
+"startColumn":  25,
+"endLine":  797,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Statements.vb",
+"region":  {
+"startLine":  824,
+"startColumn":  21,
+"endLine":  824,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Statements.vb",
+"region":  {
+"startLine":  1781,
+"startColumn":  21,
+"endLine":  1781,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Statements.vb",
+"region":  {
+"startLine":  1839,
+"startColumn":  21,
+"endLine":  1839,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Statements.vb",
+"region":  {
+"startLine":  3018,
+"startColumn":  29,
+"endLine":  3018,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Statements.vb",
+"region":  {
+"startLine":  4768,
+"startColumn":  29,
+"endLine":  4768,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Statements.vb",
+"region":  {
+"startLine":  4778,
+"startColumn":  29,
+"endLine":  4778,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Statements.vb",
+"region":  {
+"startLine":  5073,
+"startColumn":  29,
+"endLine":  5073,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Statements.vb",
+"region":  {
+"startLine":  5080,
+"startColumn":  29,
+"endLine":  5080,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Statements.vb",
+"region":  {
+"startLine":  5086,
+"startColumn":  29,
+"endLine":  5086,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Statements.vb",
+"region":  {
+"startLine":  5090,
+"startColumn":  33,
+"endLine":  5090,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Symbols.vb",
+"region":  {
+"startLine":  475,
+"startColumn":  25,
+"endLine":  475,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Symbols.vb",
+"region":  {
+"startLine":  480,
+"startColumn":  25,
+"endLine":  480,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Symbols.vb",
+"region":  {
+"startLine":  514,
+"startColumn":  25,
+"endLine":  514,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Symbols.vb",
+"region":  {
+"startLine":  797,
+"startColumn":  25,
+"endLine":  797,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Utils.vb",
+"region":  {
+"startLine":  121,
+"startColumn":  29,
+"endLine":  121,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Utils.vb",
+"region":  {
+"startLine":  873,
+"startColumn":  25,
+"endLine":  873,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\BlockBaseBinder.vb",
+"region":  {
+"startLine":  73,
+"startColumn":  29,
+"endLine":  73,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\DocumentationCommentBinder.vb",
+"region":  {
+"startLine":  209,
+"startColumn":  33,
+"endLine":  209,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\DocumentationCommentBinder.vb",
+"region":  {
+"startLine":  226,
+"startColumn":  33,
+"endLine":  226,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\DocumentationCommentCrefBinder.vb",
+"region":  {
+"startLine":  268,
+"startColumn":  25,
+"endLine":  268,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\DocumentationCommentCrefBinder.vb",
+"region":  {
+"startLine":  426,
+"startColumn":  25,
+"endLine":  426,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\ImportedTypesAndNamespacesMembersBinder.vb",
+"region":  {
+"startLine":  113,
+"startColumn":  21,
+"endLine":  113,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\LookupResult.vb",
+"region":  {
+"startLine":  758,
+"startColumn":  25,
+"endLine":  758,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\LookupResult.vb",
+"region":  {
+"startLine":  773,
+"startColumn":  33,
+"endLine":  773,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\LookupResult.vb",
+"region":  {
+"startLine":  797,
+"startColumn":  25,
+"endLine":  797,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\MemberSemanticModel.vb",
+"region":  {
+"startLine":  977,
+"startColumn":  21,
+"endLine":  977,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\MemberSemanticModel.vb",
+"region":  {
+"startLine":  1485,
+"startColumn":  21,
+"endLine":  1485,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\MemberSemanticModel.vb",
+"region":  {
+"startLine":  1510,
+"startColumn":  25,
+"endLine":  1510,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\MemberSemanticModel.vb",
+"region":  {
+"startLine":  1746,
+"startColumn":  29,
+"endLine":  1746,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\MemberSemanticModel.vb",
+"region":  {
+"startLine":  1751,
+"startColumn":  29,
+"endLine":  1751,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\StatementListBinder.vb",
+"region":  {
+"startLine":  55,
+"startColumn":  33,
+"endLine":  55,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\CodeGen\\EmitStatement.vb",
+"region":  {
+"startLine":  320,
+"startColumn":  29,
+"endLine":  320,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\CodeGen\\Optimizer\\StackScheduler.vb",
+"region":  {
+"startLine":  92,
+"startColumn":  29,
+"endLine":  92,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\CodeGen\\Optimizer\\StackScheduler.vb",
+"region":  {
+"startLine":  100,
+"startColumn":  33,
+"endLine":  100,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\CodeGen\\Optimizer\\StackScheduler.vb",
+"region":  {
+"startLine":  107,
+"startColumn":  25,
+"endLine":  107,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\CommandLine\\CommandLineDiagnosticFormatter.vb",
+"region":  {
+"startLine":  115,
+"startColumn":  21,
+"endLine":  115,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Compilation\\ClsComplianceChecker.vb",
+"region":  {
+"startLine":  141,
+"startColumn":  29,
+"endLine":  141,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Compilation\\ClsComplianceChecker.vb",
+"region":  {
+"startLine":  185,
+"startColumn":  37,
+"endLine":  185,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Compilation\\DocumentationComments\\DocumentationCommentCompiler.Common.vb",
+"region":  {
+"startLine":  347,
+"startColumn":  37,
+"endLine":  347,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Compilation\\DocumentationComments\\DocumentationCommentCompiler.Common.vb",
+"region":  {
+"startLine":  357,
+"startColumn":  41,
+"endLine":  357,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Compilation\\DocumentationComments\\DocumentationCommentCompiler.Common.vb",
+"region":  {
+"startLine":  497,
+"startColumn":  37,
+"endLine":  497,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Compilation\\MethodCompiler.vb",
+"region":  {
+"startLine":  757,
+"startColumn":  29,
+"endLine":  757,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Compilation\\MethodCompiler.vb",
+"region":  {
+"startLine":  860,
+"startColumn":  25,
+"endLine":  860,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Compilation\\MethodCompiler.vb",
+"region":  {
+"startLine":  938,
+"startColumn":  25,
+"endLine":  938,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Compilation\\MethodCompiler.vb",
+"region":  {
+"startLine":  983,
+"startColumn":  25,
+"endLine":  983,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Compilation\\MethodCompiler.vb",
+"region":  {
+"startLine":  1050,
+"startColumn":  21,
+"endLine":  1050,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Compilation\\SemanticModel.vb",
+"region":  {
+"startLine":  1164,
+"startColumn":  41,
+"endLine":  1164,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Compilation\\SyntaxTreeSemanticModel.vb",
+"region":  {
+"startLine":  657,
+"startColumn":  37,
+"endLine":  657,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Emit\\NoPia\\EmbeddedEvent.vb",
+"region":  {
+"startLine":  92,
+"startColumn":  21,
+"endLine":  92,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Lowering\\Diagnostics\\DiagnosticsPass.vb",
+"region":  {
+"startLine":  148,
+"startColumn":  41,
+"endLine":  148,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Lowering\\LambdaRewriter\\LambdaRewriter.Analysis.vb",
+"region":  {
+"startLine":  232,
+"startColumn":  25,
+"endLine":  232,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_AddRemoveHandler.vb",
+"region":  {
+"startLine":  219,
+"startColumn":  25,
+"endLine":  219,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_Block.vb",
+"region":  {
+"startLine":  27,
+"startColumn":  25,
+"endLine":  27,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\BlockContexts\\BlockContext.vb",
+"region":  {
+"startLine":  381,
+"startColumn":  29,
+"endLine":  381,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\BlockContexts\\DeclarationContext.vb",
+"region":  {
+"startLine":  42,
+"startColumn":  37,
+"endLine":  42,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\BlockContexts\\ForBlockContext.vb",
+"region":  {
+"startLine":  68,
+"startColumn":  25,
+"endLine":  68,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\BlockContexts\\ForBlockContext.vb",
+"region":  {
+"startLine":  72,
+"startColumn":  25,
+"endLine":  72,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseConditional.vb",
+"region":  {
+"startLine":  360,
+"startColumn":  29,
+"endLine":  360,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseExpression.vb",
+"region":  {
+"startLine":  1762,
+"startColumn":  25,
+"endLine":  1762,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseExpression.vb",
+"region":  {
+"startLine":  1776,
+"startColumn":  29,
+"endLine":  1776,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseExpression.vb",
+"region":  {
+"startLine":  1787,
+"startColumn":  25,
+"endLine":  1787,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseInterpolatedString.vb",
+"region":  {
+"startLine":  299,
+"startColumn":  25,
+"endLine":  299,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\Parser.vb",
+"region":  {
+"startLine":  312,
+"startColumn":  21,
+"endLine":  312,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\Parser.vb",
+"region":  {
+"startLine":  487,
+"startColumn":  25,
+"endLine":  487,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\Parser.vb",
+"region":  {
+"startLine":  3141,
+"startColumn":  21,
+"endLine":  3141,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\Parser.vb",
+"region":  {
+"startLine":  3294,
+"startColumn":  21,
+"endLine":  3294,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseScan.vb",
+"region":  {
+"startLine":  257,
+"startColumn":  25,
+"endLine":  257,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseScan.vb",
+"region":  {
+"startLine":  260,
+"startColumn":  21,
+"endLine":  260,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseScan.vb",
+"region":  {
+"startLine":  264,
+"startColumn":  21,
+"endLine":  264,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseStatement.vb",
+"region":  {
+"startLine":  1585,
+"startColumn":  21,
+"endLine":  1585,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseXml.vb",
+"region":  {
+"startLine":  347,
+"startColumn":  25,
+"endLine":  347,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseXml.vb",
+"region":  {
+"startLine":  733,
+"startColumn":  25,
+"endLine":  733,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseXml.vb",
+"region":  {
+"startLine":  2515,
+"startColumn":  29,
+"endLine":  2515,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseXml.vb",
+"region":  {
+"startLine":  2520,
+"startColumn":  33,
+"endLine":  2520,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Blender.vb",
+"region":  {
+"startLine":  162,
+"startColumn":  25,
+"endLine":  162,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Blender.vb",
+"region":  {
+"startLine":  166,
+"startColumn":  29,
+"endLine":  166,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Directives.vb",
+"region":  {
+"startLine":  563,
+"startColumn":  29,
+"endLine":  563,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Directives.vb",
+"region":  {
+"startLine":  579,
+"startColumn":  29,
+"endLine":  579,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Directives.vb",
+"region":  {
+"startLine":  606,
+"startColumn":  25,
+"endLine":  606,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\QuickTokenAccumulator.vb",
+"region":  {
+"startLine":  200,
+"startColumn":  21,
+"endLine":  200,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\QuickTokenAccumulator.vb",
+"region":  {
+"startLine":  218,
+"startColumn":  29,
+"endLine":  218,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\QuickTokenAccumulator.vb",
+"region":  {
+"startLine":  232,
+"startColumn":  29,
+"endLine":  232,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\QuickTokenAccumulator.vb",
+"region":  {
+"startLine":  245,
+"startColumn":  29,
+"endLine":  245,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\QuickTokenAccumulator.vb",
+"region":  {
+"startLine":  250,
+"startColumn":  29,
+"endLine":  250,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\QuickTokenAccumulator.vb",
+"region":  {
+"startLine":  253,
+"startColumn":  29,
+"endLine":  253,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\QuickTokenAccumulator.vb",
+"region":  {
+"startLine":  264,
+"startColumn":  29,
+"endLine":  264,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\QuickTokenAccumulator.vb",
+"region":  {
+"startLine":  267,
+"startColumn":  29,
+"endLine":  267,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\QuickTokenAccumulator.vb",
+"region":  {
+"startLine":  270,
+"startColumn":  29,
+"endLine":  270,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\QuickTokenAccumulator.vb",
+"region":  {
+"startLine":  281,
+"startColumn":  29,
+"endLine":  281,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\QuickTokenAccumulator.vb",
+"region":  {
+"startLine":  284,
+"startColumn":  29,
+"endLine":  284,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\QuickTokenAccumulator.vb",
+"region":  {
+"startLine":  287,
+"startColumn":  29,
+"endLine":  287,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\QuickTokenAccumulator.vb",
+"region":  {
+"startLine":  298,
+"startColumn":  29,
+"endLine":  298,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\QuickTokenAccumulator.vb",
+"region":  {
+"startLine":  301,
+"startColumn":  29,
+"endLine":  301,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\QuickTokenAccumulator.vb",
+"region":  {
+"startLine":  304,
+"startColumn":  29,
+"endLine":  304,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\QuickTokenAccumulator.vb",
+"region":  {
+"startLine":  312,
+"startColumn":  29,
+"endLine":  312,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\QuickTokenAccumulator.vb",
+"region":  {
+"startLine":  315,
+"startColumn":  29,
+"endLine":  315,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\QuickTokenAccumulator.vb",
+"region":  {
+"startLine":  322,
+"startColumn":  29,
+"endLine":  322,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\QuickTokenAccumulator.vb",
+"region":  {
+"startLine":  326,
+"startColumn":  25,
+"endLine":  326,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Scanner.vb",
+"region":  {
+"startLine":  298,
+"startColumn":  25,
+"endLine":  298,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Scanner.vb",
+"region":  {
+"startLine":  557,
+"startColumn":  21,
+"endLine":  557,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Scanner.vb",
+"region":  {
+"startLine":  791,
+"startColumn":  25,
+"endLine":  791,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Scanner.vb",
+"region":  {
+"startLine":  1390,
+"startColumn":  21,
+"endLine":  1390,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Scanner.vb",
+"region":  {
+"startLine":  1532,
+"startColumn":  21,
+"endLine":  1532,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Scanner.vb",
+"region":  {
+"startLine":  1535,
+"startColumn":  21,
+"endLine":  1535,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Scanner.vb",
+"region":  {
+"startLine":  1587,
+"startColumn":  33,
+"endLine":  1587,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Scanner.vb",
+"region":  {
+"startLine":  1605,
+"startColumn":  33,
+"endLine":  1605,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Scanner.vb",
+"region":  {
+"startLine":  1623,
+"startColumn":  33,
+"endLine":  1623,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Scanner.vb",
+"region":  {
+"startLine":  1647,
+"startColumn":  25,
+"endLine":  1647,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Scanner.vb",
+"region":  {
+"startLine":  1677,
+"startColumn":  29,
+"endLine":  1677,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Scanner.vb",
+"region":  {
+"startLine":  1703,
+"startColumn":  33,
+"endLine":  1703,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Scanner.vb",
+"region":  {
+"startLine":  1867,
+"startColumn":  33,
+"endLine":  1867,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Scanner.vb",
+"region":  {
+"startLine":  2028,
+"startColumn":  21,
+"endLine":  2028,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Scanner.vb",
+"region":  {
+"startLine":  2348,
+"startColumn":  21,
+"endLine":  2348,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Scanner.vb",
+"region":  {
+"startLine":  2441,
+"startColumn":  25,
+"endLine":  2441,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\ScannerInterpolatedString.vb",
+"region":  {
+"startLine":  164,
+"startColumn":  21,
+"endLine":  164,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\ScannerInterpolatedString.vb",
+"region":  {
+"startLine":  178,
+"startColumn":  21,
+"endLine":  178,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\ScannerInterpolatedString.vb",
+"region":  {
+"startLine":  193,
+"startColumn":  21,
+"endLine":  193,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\ScannerInterpolatedString.vb",
+"region":  {
+"startLine":  197,
+"startColumn":  21,
+"endLine":  197,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\ScannerXml.vb",
+"region":  {
+"startLine":  1256,
+"startColumn":  25,
+"endLine":  1256,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\ScannerXml.vb",
+"region":  {
+"startLine":  1273,
+"startColumn":  25,
+"endLine":  1273,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\TokenStream.vb",
+"region":  {
+"startLine":  410,
+"startColumn":  21,
+"endLine":  410,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\XmlDocComments.vb",
+"region":  {
+"startLine":  155,
+"startColumn":  21,
+"endLine":  155,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\AccessCheck.vb",
+"region":  {
+"startLine":  324,
+"startColumn":  21,
+"endLine":  324,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\Conversions.vb",
+"region":  {
+"startLine":  1282,
+"startColumn":  21,
+"endLine":  1282,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\Operators.vb",
+"region":  {
+"startLine":  2134,
+"startColumn":  25,
+"endLine":  2134,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\Operators.vb",
+"region":  {
+"startLine":  2235,
+"startColumn":  29,
+"endLine":  2235,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\Operators.vb",
+"region":  {
+"startLine":  2280,
+"startColumn":  25,
+"endLine":  2280,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\Operators.vb",
+"region":  {
+"startLine":  2487,
+"startColumn":  25,
+"endLine":  2487,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\Operators.vb",
+"region":  {
+"startLine":  2650,
+"startColumn":  29,
+"endLine":  2650,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\Operators.vb",
+"region":  {
+"startLine":  2698,
+"startColumn":  21,
+"endLine":  2698,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\Operators.vb",
+"region":  {
+"startLine":  2743,
+"startColumn":  21,
+"endLine":  2743,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\Operators.vb",
+"region":  {
+"startLine":  2868,
+"startColumn":  25,
+"endLine":  2868,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\Operators.vb",
+"region":  {
+"startLine":  2880,
+"startColumn":  25,
+"endLine":  2880,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\Operators.vb",
+"region":  {
+"startLine":  2886,
+"startColumn":  25,
+"endLine":  2886,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\OverloadResolution.vb",
+"region":  {
+"startLine":  978,
+"startColumn":  29,
+"endLine":  978,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\OverloadResolution.vb",
+"region":  {
+"startLine":  1410,
+"startColumn":  21,
+"endLine":  1410,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\OverloadResolution.vb",
+"region":  {
+"startLine":  1461,
+"startColumn":  29,
+"endLine":  1461,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\OverloadResolution.vb",
+"region":  {
+"startLine":  1729,
+"startColumn":  25,
+"endLine":  1729,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\OverloadResolution.vb",
+"region":  {
+"startLine":  1797,
+"startColumn":  33,
+"endLine":  1797,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\OverloadResolution.vb",
+"region":  {
+"startLine":  1818,
+"startColumn":  37,
+"endLine":  1818,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\OverloadResolution.vb",
+"region":  {
+"startLine":  1836,
+"startColumn":  33,
+"endLine":  1836,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\OverloadResolution.vb",
+"region":  {
+"startLine":  1843,
+"startColumn":  25,
+"endLine":  1843,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\OverloadResolution.vb",
+"region":  {
+"startLine":  2259,
+"startColumn":  21,
+"endLine":  2259,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\OverloadResolution.vb",
+"region":  {
+"startLine":  2361,
+"startColumn":  29,
+"endLine":  2361,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\OverloadResolution.vb",
+"region":  {
+"startLine":  2563,
+"startColumn":  21,
+"endLine":  2563,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\OverloadResolution.vb",
+"region":  {
+"startLine":  2708,
+"startColumn":  21,
+"endLine":  2708,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\OverloadResolution.vb",
+"region":  {
+"startLine":  3403,
+"startColumn":  21,
+"endLine":  3403,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\OverloadResolution.vb",
+"region":  {
+"startLine":  4026,
+"startColumn":  29,
+"endLine":  4026,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\TypeInference\\TypeArgumentInference.vb",
+"region":  {
+"startLine":  487,
+"startColumn":  41,
+"endLine":  487,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\TypeInference\\TypeArgumentInference.vb",
+"region":  {
+"startLine":  828,
+"startColumn":  33,
+"endLine":  828,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\TypeInference\\TypeArgumentInference.vb",
+"region":  {
+"startLine":  1904,
+"startColumn":  33,
+"endLine":  1904,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\TypeInference\\TypeInferenceCollection.vb",
+"region":  {
+"startLine":  273,
+"startColumn":  25,
+"endLine":  273,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\TypeInference\\TypeInferenceCollection.vb",
+"region":  {
+"startLine":  306,
+"startColumn":  29,
+"endLine":  306,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\TypeInference\\TypeInferenceCollection.vb",
+"region":  {
+"startLine":  318,
+"startColumn":  33,
+"endLine":  318,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\AnonymousTypes\\AnonymousType_SymbolCollection.vb",
+"region":  {
+"startLine":  110,
+"startColumn":  33,
+"endLine":  110,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\AnonymousTypes\\AnonymousType_SymbolCollection.vb",
+"region":  {
+"startLine":  116,
+"startColumn":  29,
+"endLine":  116,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\AnonymousTypes\\PublicSymbols\\AnonymousTypeOrDelegatePublicSymbol.vb",
+"region":  {
+"startLine":  280,
+"startColumn":  29,
+"endLine":  280,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\AnonymousTypes\\SynthesizedSymbols\\AnonymousTypeOrDelegateTemplateSymbol.vb",
+"region":  {
+"startLine":  332,
+"startColumn":  25,
+"endLine":  332,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Attributes\\SourceAttributeData.vb",
+"region":  {
+"startLine":  142,
+"startColumn":  25,
+"endLine":  142,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Attributes\\SourceAttributeData.vb",
+"region":  {
+"startLine":  154,
+"startColumn":  29,
+"endLine":  154,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Attributes\\SourceAttributeData.vb",
+"region":  {
+"startLine":  165,
+"startColumn":  29,
+"endLine":  165,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Attributes\\SourceAttributeData.vb",
+"region":  {
+"startLine":  241,
+"startColumn":  25,
+"endLine":  241,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\BaseTypeAnalysis.vb",
+"region":  {
+"startLine":  282,
+"startColumn":  21,
+"endLine":  282,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\MergedNamespaceSymbol.vb",
+"region":  {
+"startLine":  498,
+"startColumn":  25,
+"endLine":  498,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Metadata\\PE\\MetadataDecoder.vb",
+"region":  {
+"startLine":  388,
+"startColumn":  21,
+"endLine":  388,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Metadata\\PE\\PEMethodSymbol.vb",
+"region":  {
+"startLine":  512,
+"startColumn":  29,
+"endLine":  512,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Metadata\\PE\\PEMethodSymbol.vb",
+"region":  {
+"startLine":  1043,
+"startColumn":  25,
+"endLine":  1043,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Metadata\\PE\\PEModuleSymbol.vb",
+"region":  {
+"startLine":  360,
+"startColumn":  25,
+"endLine":  360,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Metadata\\PE\\PENamedTypeSymbol.vb",
+"region":  {
+"startLine":  381,
+"startColumn":  37,
+"endLine":  381,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Metadata\\PE\\PENamedTypeSymbol.vb",
+"region":  {
+"startLine":  525,
+"startColumn":  25,
+"endLine":  525,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Metadata\\PE\\SymbolFactory.vb",
+"region":  {
+"startLine":  107,
+"startColumn":  25,
+"endLine":  107,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Metadata\\PE\\SymbolFactory.vb",
+"region":  {
+"startLine":  120,
+"startColumn":  25,
+"endLine":  120,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\MissingMetadataTypeSymbol.vb",
+"region":  {
+"startLine":  145,
+"startColumn":  41,
+"endLine":  145,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\MissingMetadataTypeSymbol.vb",
+"region":  {
+"startLine":  150,
+"startColumn":  37,
+"endLine":  150,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\NamespaceOrTypeSymbol.vb",
+"region":  {
+"startLine":  222,
+"startColumn":  33,
+"endLine":  222,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\NamespaceSymbol.vb",
+"region":  {
+"startLine":  278,
+"startColumn":  29,
+"endLine":  278,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\NamespaceSymbol.vb",
+"region":  {
+"startLine":  288,
+"startColumn":  21,
+"endLine":  288,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\NamespaceSymbol.vb",
+"region":  {
+"startLine":  338,
+"startColumn":  33,
+"endLine":  338,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\NamespaceSymbol.vb",
+"region":  {
+"startLine":  376,
+"startColumn":  25,
+"endLine":  376,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\NonMissingAssemblySymbol.vb",
+"region":  {
+"startLine":  125,
+"startColumn":  25,
+"endLine":  125,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\ReducedExtensionMethodSymbol.vb",
+"region":  {
+"startLine":  119,
+"startColumn":  29,
+"endLine":  119,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\ReducedExtensionMethodSymbol.vb",
+"region":  {
+"startLine":  222,
+"startColumn":  29,
+"endLine":  222,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Retargeting\\RetargetingSymbolTranslator.vb",
+"region":  {
+"startLine":  266,
+"startColumn":  33,
+"endLine":  266,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\ImplementsHelper.vb",
+"region":  {
+"startLine":  326,
+"startColumn":  29,
+"endLine":  326,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\OverloadingHelper.vb",
+"region":  {
+"startLine":  174,
+"startColumn":  33,
+"endLine":  174,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\OverrideHidingHelper.vb",
+"region":  {
+"startLine":  182,
+"startColumn":  25,
+"endLine":  182,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\OverrideHidingHelper.vb",
+"region":  {
+"startLine":  370,
+"startColumn":  25,
+"endLine":  370,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\OverrideHidingHelper.vb",
+"region":  {
+"startLine":  654,
+"startColumn":  21,
+"endLine":  654,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\OverrideHidingHelper.vb",
+"region":  {
+"startLine":  800,
+"startColumn":  21,
+"endLine":  800,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\OverrideHidingHelper.vb",
+"region":  {
+"startLine":  928,
+"startColumn":  29,
+"endLine":  928,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceMemberContainerTypeSymbol.vb",
+"region":  {
+"startLine":  377,
+"startColumn":  21,
+"endLine":  377,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceMemberContainerTypeSymbol.vb",
+"region":  {
+"startLine":  382,
+"startColumn":  21,
+"endLine":  382,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceMemberContainerTypeSymbol.vb",
+"region":  {
+"startLine":  492,
+"startColumn":  21,
+"endLine":  492,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceMemberContainerTypeSymbol.vb",
+"region":  {
+"startLine":  1056,
+"startColumn":  33,
+"endLine":  1056,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceMemberContainerTypeSymbol.vb",
+"region":  {
+"startLine":  2280,
+"startColumn":  29,
+"endLine":  2280,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceMemberContainerTypeSymbol.vb",
+"region":  {
+"startLine":  2410,
+"startColumn":  29,
+"endLine":  2410,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceMemberContainerTypeSymbol.vb",
+"region":  {
+"startLine":  2418,
+"startColumn":  29,
+"endLine":  2418,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceMemberContainerTypeSymbol.vb",
+"region":  {
+"startLine":  3561,
+"startColumn":  41,
+"endLine":  3561,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceMemberContainerTypeSymbol.vb",
+"region":  {
+"startLine":  3633,
+"startColumn":  29,
+"endLine":  3633,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceMemberMethodSymbol.vb",
+"region":  {
+"startLine":  239,
+"startColumn":  25,
+"endLine":  239,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceMemberMethodSymbol.vb",
+"region":  {
+"startLine":  986,
+"startColumn":  29,
+"endLine":  986,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceModuleSymbol.vb",
+"region":  {
+"startLine":  751,
+"startColumn":  25,
+"endLine":  751,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceModuleSymbol.vb",
+"region":  {
+"startLine":  968,
+"startColumn":  25,
+"endLine":  968,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceModuleSymbol.vb",
+"region":  {
+"startLine":  1156,
+"startColumn":  37,
+"endLine":  1156,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol.vb",
+"region":  {
+"startLine":  533,
+"startColumn":  41,
+"endLine":  533,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol.vb",
+"region":  {
+"startLine":  538,
+"startColumn":  37,
+"endLine":  538,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol.vb",
+"region":  {
+"startLine":  557,
+"startColumn":  25,
+"endLine":  557,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol.vb",
+"region":  {
+"startLine":  597,
+"startColumn":  41,
+"endLine":  597,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol.vb",
+"region":  {
+"startLine":  1425,
+"startColumn":  21,
+"endLine":  1425,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol.vb",
+"region":  {
+"startLine":  2506,
+"startColumn":  33,
+"endLine":  2506,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol.vb",
+"region":  {
+"startLine":  2515,
+"startColumn":  37,
+"endLine":  2515,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol_ComClass.vb",
+"region":  {
+"startLine":  173,
+"startColumn":  29,
+"endLine":  173,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol_ComClass.vb",
+"region":  {
+"startLine":  248,
+"startColumn":  25,
+"endLine":  248,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol_ComClass.vb",
+"region":  {
+"startLine":  257,
+"startColumn":  29,
+"endLine":  257,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol_GroupClass.vb",
+"region":  {
+"startLine":  51,
+"startColumn":  29,
+"endLine":  51,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceNamespaceSymbol.vb",
+"region":  {
+"startLine":  202,
+"startColumn":  33,
+"endLine":  202,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceNamespaceSymbol.vb",
+"region":  {
+"startLine":  272,
+"startColumn":  33,
+"endLine":  272,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceNamespaceSymbol.vb",
+"region":  {
+"startLine":  279,
+"startColumn":  33,
+"endLine":  279,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\SubstitutedNamedType.vb",
+"region":  {
+"startLine":  1031,
+"startColumn":  29,
+"endLine":  1031,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\SynthesizedSymbols\\SynthesizedEventDelegateSymbol.vb",
+"region":  {
+"startLine":  390,
+"startColumn":  21,
+"endLine":  390,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Tuples\\TupleTypeSymbol.vb",
+"region":  {
+"startLine":  443,
+"startColumn":  21,
+"endLine":  443,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Tuples\\TupleTypeSymbol.vb",
+"region":  {
+"startLine":  454,
+"startColumn":  21,
+"endLine":  454,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\TypeSubstitution.vb",
+"region":  {
+"startLine":  169,
+"startColumn":  21,
+"endLine":  169,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\TypeSubstitution.vb",
+"region":  {
+"startLine":  198,
+"startColumn":  21,
+"endLine":  198,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\TypeSubstitution.vb",
+"region":  {
+"startLine":  222,
+"startColumn":  21,
+"endLine":  222,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\TypeSymbol.vb",
+"region":  {
+"startLine":  335,
+"startColumn":  37,
+"endLine":  335,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\TypeSymbol.vb",
+"region":  {
+"startLine":  372,
+"startColumn":  29,
+"endLine":  372,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\TypeSymbolExtensions.vb",
+"region":  {
+"startLine":  1001,
+"startColumn":  25,
+"endLine":  1001,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\TypeSymbolExtensions.vb",
+"region":  {
+"startLine":  1185,
+"startColumn":  21,
+"endLine":  1185,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\TypeSymbolExtensions.vb",
+"region":  {
+"startLine":  1205,
+"startColumn":  21,
+"endLine":  1205,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\WellKnownMembers.vb",
+"region":  {
+"startLine":  54,
+"startColumn":  29,
+"endLine":  54,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\WellKnownMembers.vb",
+"region":  {
+"startLine":  93,
+"startColumn":  29,
+"endLine":  93,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\WellKnownMembers.vb",
+"region":  {
+"startLine":  470,
+"startColumn":  21,
+"endLine":  470,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Syntax\\SyntaxEquivalence.vb",
+"region":  {
+"startLine":  138,
+"startColumn":  29,
+"endLine":  138,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Syntax\\SyntaxEquivalence.vb",
+"region":  {
+"startLine":  147,
+"startColumn":  29,
+"endLine":  147,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Syntax\\SyntaxFacts.vb",
+"region":  {
+"startLine":  205,
+"startColumn":  25,
+"endLine":  205,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Syntax\\SyntaxNodeExtensions.vb",
+"region":  {
+"startLine":  44,
+"startColumn":  25,
+"endLine":  44,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Syntax\\VisualBasicSyntaxNode.vb",
+"region":  {
+"startLine":  70,
+"startColumn":  29,
+"endLine":  70,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Syntax\\VisualBasicSyntaxTree.vb",
+"region":  {
+"startLine":  317,
+"startColumn":  21,
+"endLine":  317,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Utilities\\TypeUnification.vb",
+"region":  {
+"startLine":  204,
+"startColumn":  25,
+"endLine":  204,
+"endColumn":  33
+}
+}
+}
+]
+}

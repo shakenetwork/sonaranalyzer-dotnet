@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"fullNamePi\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Test\\ResultProvider\\DynamicViewTests.cs",
+"region":  {
+"startLine":  106,
+"startColumn":  28,
+"endLine":  106,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"runtime\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Test\\ResultProvider\\DynamicViewTests.cs",
+"region":  {
+"startLine":  250,
+"startColumn":  43,
+"endLine":  250,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"runtime\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Test\\ResultProvider\\ExpansionTests.cs",
+"region":  {
+"startLine":  2201,
+"startColumn":  43,
+"endLine":  2201,
+"endColumn":  49
+}
+}
+}
+]
+}

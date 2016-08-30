@@ -1,0 +1,277 @@
+{
+"issues":  [
+{
+"id":  "S1659",
+"message":  "Declare \"paramHasExplicitType\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Utils.vb",
+"region":  {
+"startLine":  998,
+"startColumn":  47,
+"endLine":  998,
+"endColumn":  67
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"closureId\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Lowering\\LambdaRewriter\\LambdaRewriter.vb",
+"region":  {
+"startLine":  265,
+"startColumn":  31,
+"endLine":  265,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"topLevelMethodId\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Lowering\\LambdaRewriter\\LambdaRewriter.vb",
+"region":  {
+"startLine":  1058,
+"startColumn":  27,
+"endLine":  1058,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"mid\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_Constant.vb",
+"region":  {
+"startLine":  34,
+"startColumn":  22,
+"endLine":  34,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"high\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_Constant.vb",
+"region":  {
+"startLine":  34,
+"startColumn":  27,
+"endLine":  34,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"MonthValue\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Scanner.vb",
+"region":  {
+"startLine":  2052,
+"startColumn":  28,
+"endLine":  2052,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"DayValue\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Scanner.vb",
+"region":  {
+"startLine":  2052,
+"startColumn":  40,
+"endLine":  2052,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"HourValue\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Scanner.vb",
+"region":  {
+"startLine":  2052,
+"startColumn":  50,
+"endLine":  2052,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"MinuteValue\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Scanner.vb",
+"region":  {
+"startLine":  2052,
+"startColumn":  61,
+"endLine":  2052,
+"endColumn":  72
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"SecondValue\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Scanner.vb",
+"region":  {
+"startLine":  2052,
+"startColumn":  74,
+"endLine":  2052,
+"endColumn":  85
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"mid\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\CompileTimeCalculations.vb",
+"region":  {
+"startLine":  461,
+"startColumn":  26,
+"endLine":  461,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"high\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\CompileTimeCalculations.vb",
+"region":  {
+"startLine":  461,
+"startColumn":  31,
+"endLine":  461,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"rightIsExpressionTree\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\OverloadResolution.vb",
+"region":  {
+"startLine":  2115,
+"startColumn":  54,
+"endLine":  2115,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"rightIsExpressionTree\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\OverloadResolution.vb",
+"region":  {
+"startLine":  2276,
+"startColumn":  58,
+"endLine":  2276,
+"endColumn":  79
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"rightIsExpressionTree\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\OverloadResolution.vb",
+"region":  {
+"startLine":  4359,
+"startColumn":  54,
+"endLine":  4359,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"location2\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceMemberContainerTypeSymbol.vb",
+"region":  {
+"startLine":  3858,
+"startColumn":  28,
+"endLine":  3858,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"location2\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceMemberContainerTypeSymbol.vb",
+"region":  {
+"startLine":  3908,
+"startColumn":  32,
+"endLine":  3908,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"mid\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\WellKnownMembers.vb",
+"region":  {
+"startLine":  218,
+"startColumn":  22,
+"endLine":  218,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"high\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\WellKnownMembers.vb",
+"region":  {
+"startLine":  218,
+"startColumn":  27,
+"endLine":  218,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"n\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Syntax\\VisualBasicSyntaxRewriter.vb",
+"region":  {
+"startLine":  75,
+"startColumn":  24,
+"endLine":  75,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"n\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Syntax\\VisualBasicSyntaxRewriter.vb",
+"region":  {
+"startLine":  104,
+"startColumn":  25,
+"endLine":  104,
+"endColumn":  26
+}
+}
+}
+]
+}

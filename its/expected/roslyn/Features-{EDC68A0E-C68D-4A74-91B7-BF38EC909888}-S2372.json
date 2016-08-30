@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\CodeFixes\\FixAllOccurrences\\FixAllCodeAction.cs",
+"region":  {
+"startLine":  43,
+"startColumn":  25,
+"endLine":  43,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\ExtractMethod\\MethodExtractor.VariableSymbol.cs",
+"region":  {
+"startLine":  79,
+"startColumn":  23,
+"endLine":  79,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\MetadataAsSource\\AbstractMetadataAsSourceService.WrappedNamedTypeSymbol.cs",
+"region":  {
+"startLine":  107,
+"startColumn":  21,
+"endLine":  107,
+"endColumn":  57
+}
+}
+}
+]
+}

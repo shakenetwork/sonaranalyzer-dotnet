@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to an interface.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\EESymbolProvider.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  29,
+"endLine":  9,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\FrameDecoder.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  29,
+"endLine":  22,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\LanguageInstructionDecoder.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  29,
+"endLine":  15,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to an interface.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\PDB\\InScopeHoistedLocals.cs",
+"region":  {
+"startLine":  5,
+"startColumn":  29,
+"endLine":  5,
+"endColumn":  49
+}
+}
+}
+]
+}

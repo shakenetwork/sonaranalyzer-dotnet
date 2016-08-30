@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1155",
+"message":  "Use \".Any()\" to test whether this \"IEnumerable\u003cMicrosoft.CodeAnalysis.Diagnostic\u003e\" is empty or not.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LambdaTests.cs",
+"region":  {
+"startLine":  402,
+"startColumn":  34,
+"endLine":  402,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1155",
+"message":  "Use \".Any()\" to test whether this \"IEnumerable\u003cMicrosoft.CodeAnalysis.Diagnostic\u003e\" is empty or not.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LambdaTests.cs",
+"region":  {
+"startLine":  403,
+"startColumn":  76,
+"endLine":  403,
+"endColumn":  81
+}
+}
+}
+]
+}

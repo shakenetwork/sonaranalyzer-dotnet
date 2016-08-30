@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\CustomDebugInfoReader.cs",
+"region":  {
+"startLine":  344,
+"startColumn":  29,
+"endLine":  344,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S907",
+"message":  "Remove this use of \"goto\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\AbstractOleCommandTarget.Execute.cs",
+"region":  {
+"startLine":  242,
+"startColumn":  21,
+"endLine":  242,
+"endColumn":  25
+}
+}
+}
+]
+}

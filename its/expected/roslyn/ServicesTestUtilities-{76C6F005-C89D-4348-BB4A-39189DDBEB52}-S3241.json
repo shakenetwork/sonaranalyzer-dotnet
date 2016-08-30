@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S3241",
+"message":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\TestUtilities\\BlindAggregatorFactory.cs",
+"region":  {
+"startLine":  159,
+"startColumn":  35,
+"endLine":  159,
+"endColumn":  39
+}
+}
+}
+]
+}

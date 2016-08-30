@@ -1,0 +1,95 @@
+{
+"issues":  [
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_noOpRegistration\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Notification\\GlobalOperationNotificationServiceFactory.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  23,
+"endLine":  24,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_gate\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\SemanticModelWorkspaceService\\SemanticModelWorkspaceServiceFactory.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  23,
+"endLine":  28,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_textReader\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Utilities\\XmlFragmentParser.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  27,
+"endLine":  15,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_asynchronousComputationCancellationSource\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\AsyncLazy%601.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  27,
+"endLine":  23,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_storage\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Host\\PersistentStorage\\PersistentStorageServiceFactory.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  23,
+"endLine":  22,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_buildLock\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Solution\\SolutionState.CompilationTracker.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  31,
+"endLine":  25,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_buildLock\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Solution\\SolutionState.CompilationTracker.State.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  31,
+"endLine":  12,
+"endColumn":  49
+}
+}
+}
+]
+}

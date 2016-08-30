@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S103",
+"message":  "Split this 230 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ResultProvider\\CSharpFormatter.Values.cs",
+"region":  {
+"startLine":  52,
+"startColumn":  1,
+"endLine":  52,
+"endColumn":  231
+}
+}
+}
+]
+}

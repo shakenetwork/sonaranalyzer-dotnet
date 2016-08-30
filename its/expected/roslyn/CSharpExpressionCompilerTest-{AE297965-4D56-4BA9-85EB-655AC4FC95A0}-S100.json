@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S100",
+"message":  "Rename method \"EvaluateLINQExpression\" to match camel case naming rules, consider using \"EvaluateLinqExpression\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Test\\ExpressionCompiler\\ExpressionCompilerTests.cs",
+"region":  {
+"startLine":  3323,
+"startColumn":  21,
+"endLine":  3323,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"NoILOffset\" to match camel case naming rules, consider using \"NoIlOffset\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Test\\ExpressionCompiler\\ExpressionCompilerTests.cs",
+"region":  {
+"startLine":  6010,
+"startColumn":  21,
+"endLine":  6010,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"PIATypeAndEmbeddedType\" to match camel case naming rules, consider using \"PiaTypeAndEmbeddedType\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Test\\ExpressionCompiler\\NoPIATests.cs",
+"region":  {
+"startLine":  111,
+"startColumn":  21,
+"endLine":  111,
+"endColumn":  43
+}
+}
+}
+]
+}

@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S101",
+"message":  "Rename class \"EESymbolProvider\" to match camel case naming rules, consider using \"EeSymbolProvider\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\EESymbolProvider.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  29,
+"endLine":  9,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename struct \"ILSpan\" to match camel case naming rules, consider using \"IlSpan\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\ILSpan.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  21,
+"endLine":  10,
+"endColumn":  27
+}
+}
+}
+]
+}

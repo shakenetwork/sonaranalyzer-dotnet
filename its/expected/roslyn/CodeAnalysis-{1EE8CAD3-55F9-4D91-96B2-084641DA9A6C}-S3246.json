@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S3246",
+"message":  "Add the \"in\" keyword to parameter \"T\" to make it \"contravariant\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\IReadOnlySet.cs",
+"region":  {
+"startLine":  5,
+"startColumn":  37,
+"endLine":  5,
+"endColumn":  38
+}
+}
+}
+]
+}

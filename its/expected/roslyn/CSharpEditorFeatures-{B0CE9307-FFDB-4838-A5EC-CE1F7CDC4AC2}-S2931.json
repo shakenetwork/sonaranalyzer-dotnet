@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_cancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharp\\EventHookup\\EventHookupSessionManager_EventHookupSession.cs",
+"region":  {
+"startLine":  30,
+"startColumn":  24,
+"endLine":  30,
+"endColumn":  42
+}
+}
+}
+]
+}

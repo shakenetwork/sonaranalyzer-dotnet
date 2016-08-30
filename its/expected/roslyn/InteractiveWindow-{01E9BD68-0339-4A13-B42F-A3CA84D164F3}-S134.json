@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\Editor\\InteractiveWindow.UIThreadOnly.cs",
+"region":  {
+"startLine":  2690,
+"startColumn":  29,
+"endLine":  2690,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\Editor\\InteractiveWindow.UIThreadOnly.cs",
+"region":  {
+"startLine":  3081,
+"startColumn":  29,
+"endLine":  3081,
+"endColumn":  31
+}
+}
+}
+]
+}

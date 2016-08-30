@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Test\\Interactive\\Commands\\InteractiveCommandHandlerTests.cs",
+"region":  {
+"startLine":  168,
+"startColumn":  50,
+"endLine":  168,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Test\\Interactive\\Commands\\ResetInteractiveTests.cs",
+"region":  {
+"startLine":  126,
+"startColumn":  39,
+"endLine":  126,
+"endColumn":  45
+}
+}
+}
+]
+}

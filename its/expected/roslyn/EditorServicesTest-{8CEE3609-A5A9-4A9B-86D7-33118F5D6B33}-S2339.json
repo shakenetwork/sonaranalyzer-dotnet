@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S2339",
+"message":  "Change this constant to a \"static\" read-only property.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\MetadataAsSource\\AbstractMetadataAsSourceTests.TestContext.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  29,
+"endLine":  21,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2339",
+"message":  "Change this constant to a \"static\" read-only property.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\MetadataAsSource\\AbstractMetadataAsSourceTests.TestContext.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  29,
+"endLine":  22,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S2339",
+"message":  "Change this constant to a \"static\" read-only property.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestWorkspace.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  29,
+"endLine":  26,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2339",
+"message":  "Change this constant to a \"static\" read-only property.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestWorkspace_XmlConsumption.cs",
+"region":  {
+"startLine":  43,
+"startColumn":  29,
+"endLine":  43,
+"endColumn":  41
+}
+}
+}
+]
+}

@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S103",
+"message":  "Split this 211 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\BuildClient.cs",
+"region":  {
+"startLine":  194,
+"startColumn":  1,
+"endLine":  194,
+"endColumn":  212
+}
+}
+}
+]
+}

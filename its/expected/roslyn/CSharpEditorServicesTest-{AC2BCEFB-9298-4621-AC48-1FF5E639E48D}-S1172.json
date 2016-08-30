@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"compareTokens\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\CodeActions\\InlineTemporary\\InlineTemporaryTests.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  77,
+"endLine":  20,
+"endColumn":  102
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"expectedSpace\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Formatting\\Indentation\\SmartTokenFormatterFormatTokenTests.cs",
+"region":  {
+"startLine":  629,
+"startColumn":  13,
+"endLine":  629,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"expectedSpace\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Formatting\\Indentation\\SmartTokenFormatterFormatTokenTests.cs",
+"region":  {
+"startLine":  637,
+"startColumn":  13,
+"endLine":  637,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"syntaxTree\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\LineSeparators\\LineSeparatorTests.cs",
+"region":  {
+"startLine":  555,
+"startColumn":  49,
+"endLine":  555,
+"endColumn":  70
+}
+}
+}
+]
+}

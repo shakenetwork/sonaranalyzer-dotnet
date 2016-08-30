@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Single\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\WinRT\\CodeGen\\WinRTCollectionTests.cs",
+"region":  {
+"startLine":  7414,
+"startColumn":  56,
+"endLine":  7414,
+"endColumn":  61
+}
+}
+}
+]
+}

@@ -1,0 +1,95 @@
+{
+"issues":  [
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"Location\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\CodeGeneration\\CSharpCodeGenerationHelpers.cs",
+"region":  {
+"startLine":  304,
+"startColumn":  44,
+"endLine":  304,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"IEnumerable\u003cArgumentSyntax\u003e\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\CodeGeneration\\CSharpSyntaxGenerator.cs",
+"region":  {
+"startLine":  3592,
+"startColumn":  76,
+"endLine":  3592,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"INamespaceSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\CodeGeneration\\UsingDirectivesAdder.cs",
+"region":  {
+"startLine":  53,
+"startColumn":  108,
+"endLine":  53,
+"endColumn":  127
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"INamedTypeSymbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\SemanticModelExtensions.cs",
+"region":  {
+"startLine":  360,
+"startColumn":  140,
+"endLine":  360,
+"endColumn":  159
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"SyntaxTree\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\LanguageServices\\CSharpSyntaxFactsService.cs",
+"region":  {
+"startLine":  88,
+"startColumn":  41,
+"endLine":  88,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"SyntaxTree\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\LanguageServices\\CSharpSyntaxFactsService.cs",
+"region":  {
+"startLine":  99,
+"startColumn":  41,
+"endLine":  99,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"SyntaxTree\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\LanguageServices\\CSharpSyntaxFactsService.cs",
+"region":  {
+"startLine":  110,
+"startColumn":  41,
+"endLine":  110,
+"endColumn":  54
+}
+}
+}
+]
+}

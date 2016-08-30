@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  3187,
+"startColumn":  22,
+"endLine":  3187,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  3210,
+"startColumn":  14,
+"endLine":  3210,
+"endColumn":  25
+}
+}
+}
+]
+}

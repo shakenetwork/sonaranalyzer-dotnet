@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2737",
+"message":  "Add logic to this catch clause or eliminate it and rethrow the exception automatically.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Solution\\TextDocumentState.cs",
+"region":  {
+"startLine":  131,
+"startColumn":  17,
+"endLine":  135,
+"endColumn":  18
+}
+}
+}
+]
+}

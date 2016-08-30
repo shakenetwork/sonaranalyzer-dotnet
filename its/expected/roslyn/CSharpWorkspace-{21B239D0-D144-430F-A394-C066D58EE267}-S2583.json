@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S2583",
+"message":  "Change this condition so that it does not always evaluate to \"true\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ExpressionSyntaxExtensions.cs",
+"region":  {
+"startLine":  588,
+"startColumn":  17,
+"endLine":  588,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2583",
+"message":  "Change this condition so that it does not always evaluate to \"true\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ParenthesizedExpressionSyntaxExtensions.cs",
+"region":  {
+"startLine":  237,
+"startColumn":  22,
+"endLine":  237,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S2583",
+"message":  "Change this condition so that it does not always evaluate to \"true\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Rename\\CSharpRenameRewriterLanguageService.cs",
+"region":  {
+"startLine":  158,
+"startColumn":  55,
+"endLine":  158,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S2583",
+"message":  "Change this condition so that it does not always evaluate to \"true\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Rename\\CSharpRenameRewriterLanguageService.cs",
+"region":  {
+"startLine":  160,
+"startColumn":  55,
+"endLine":  160,
+"endColumn":  75
+}
+}
+}
+]
+}

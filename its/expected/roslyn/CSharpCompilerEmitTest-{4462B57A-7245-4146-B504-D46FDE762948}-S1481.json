@@ -1,0 +1,4632 @@
+{
+"issues":  [
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compVerifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests.cs",
+"region":  {
+"startLine":  1425,
+"startColumn":  17,
+"endLine":  1425,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"classF\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests.cs",
+"region":  {
+"startLine":  3100,
+"startColumn":  33,
+"endLine":  3100,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"classZ\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests.cs",
+"region":  {
+"startLine":  3101,
+"startColumn":  33,
+"endLine":  3101,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"classX\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests.cs",
+"region":  {
+"startLine":  3102,
+"startColumn":  33,
+"endLine":  3102,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests.cs",
+"region":  {
+"startLine":  4271,
+"startColumn":  17,
+"endLine":  4271,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"diagnostics\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests_Assembly.cs",
+"region":  {
+"startLine":  998,
+"startColumn":  17,
+"endLine":  998,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"diagnostics\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests_Assembly.cs",
+"region":  {
+"startLine":  1073,
+"startColumn":  17,
+"endLine":  1073,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"diagnostics\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests_Assembly.cs",
+"region":  {
+"startLine":  1125,
+"startColumn":  17,
+"endLine":  1125,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"diagnostics\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests_Assembly.cs",
+"region":  {
+"startLine":  1175,
+"startColumn":  17,
+"endLine":  1175,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"diagnostics\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests_Assembly.cs",
+"region":  {
+"startLine":  1220,
+"startColumn":  17,
+"endLine":  1220,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests_CallerInfoAttributes.cs",
+"region":  {
+"startLine":  2484,
+"startColumn":  17,
+"endLine":  2484,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests_Security.cs",
+"region":  {
+"startLine":  40,
+"startColumn":  25,
+"endLine":  40,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"isValueType\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests_StructLayout.cs",
+"region":  {
+"startLine":  169,
+"startColumn":  26,
+"endLine":  169,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"sigSym\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests_WellKnownAttributes.cs",
+"region":  {
+"startLine":  317,
+"startColumn":  21,
+"endLine":  317,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"dtcSym\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests_WellKnownAttributes.cs",
+"region":  {
+"startLine":  326,
+"startColumn":  21,
+"endLine":  326,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"dmcSym\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests_WellKnownAttributes.cs",
+"region":  {
+"startLine":  327,
+"startColumn":  21,
+"endLine":  327,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests_WellKnownAttributes.cs",
+"region":  {
+"startLine":  1901,
+"startColumn":  17,
+"endLine":  1901,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests_WellKnownAttributes.cs",
+"region":  {
+"startLine":  1927,
+"startColumn":  17,
+"endLine":  1927,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests_WellKnownAttributes.cs",
+"region":  {
+"startLine":  4673,
+"startColumn":  17,
+"endLine":  4673,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests_WellKnownAttributes.cs",
+"region":  {
+"startLine":  4707,
+"startColumn":  17,
+"endLine":  4707,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests_WellKnownAttributes.cs",
+"region":  {
+"startLine":  4743,
+"startColumn":  17,
+"endLine":  4743,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\AttributeTests_WellKnownAttributes.cs",
+"region":  {
+"startLine":  5257,
+"startColumn":  17,
+"endLine":  5257,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"x\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\InternalsVisibleToAndStrongNameTests.cs",
+"region":  {
+"startLine":  188,
+"startColumn":  17,
+"endLine":  188,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"x\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\InternalsVisibleToAndStrongNameTests.cs",
+"region":  {
+"startLine":  1248,
+"startColumn":  17,
+"endLine":  1248,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"emitResult\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\InternalsVisibleToAndStrongNameTests.cs",
+"region":  {
+"startLine":  1273,
+"startColumn":  17,
+"endLine":  1273,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Attributes\\InternalsVisibleToAndStrongNameTests.cs",
+"region":  {
+"startLine":  2180,
+"startColumn":  17,
+"endLine":  2180,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenCheckedTests.cs",
+"region":  {
+"startLine":  1333,
+"startColumn":  17,
+"endLine":  1333,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenCheckedTests.cs",
+"region":  {
+"startLine":  1362,
+"startColumn":  17,
+"endLine":  1362,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenCheckedTests.cs",
+"region":  {
+"startLine":  1390,
+"startColumn":  17,
+"endLine":  1390,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenCheckedTests.cs",
+"region":  {
+"startLine":  1415,
+"startColumn":  17,
+"endLine":  1415,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenCheckedTests.cs",
+"region":  {
+"startLine":  1442,
+"startColumn":  17,
+"endLine":  1442,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenCheckedTests.cs",
+"region":  {
+"startLine":  1468,
+"startColumn":  17,
+"endLine":  1468,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenCheckedTests.cs",
+"region":  {
+"startLine":  1494,
+"startColumn":  17,
+"endLine":  1494,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenCheckedTests.cs",
+"region":  {
+"startLine":  1521,
+"startColumn":  17,
+"endLine":  1521,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenCheckedTests.cs",
+"region":  {
+"startLine":  1549,
+"startColumn":  17,
+"endLine":  1549,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenCheckedTests.cs",
+"region":  {
+"startLine":  1577,
+"startColumn":  17,
+"endLine":  1577,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenCheckedTests.cs",
+"region":  {
+"startLine":  1605,
+"startColumn":  17,
+"endLine":  1605,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenCheckedTests.cs",
+"region":  {
+"startLine":  1634,
+"startColumn":  17,
+"endLine":  1634,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenCheckedTests.cs",
+"region":  {
+"startLine":  1662,
+"startColumn":  17,
+"endLine":  1662,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenCheckedTests.cs",
+"region":  {
+"startLine":  1690,
+"startColumn":  17,
+"endLine":  1690,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenCheckedTests.cs",
+"region":  {
+"startLine":  1718,
+"startColumn":  17,
+"endLine":  1718,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenCheckedTests.cs",
+"region":  {
+"startLine":  1746,
+"startColumn":  17,
+"endLine":  1746,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenCheckedTests.cs",
+"region":  {
+"startLine":  1770,
+"startColumn":  17,
+"endLine":  1770,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenCheckedTests.cs",
+"region":  {
+"startLine":  1793,
+"startColumn":  17,
+"endLine":  1793,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenCheckedTests.cs",
+"region":  {
+"startLine":  1816,
+"startColumn":  17,
+"endLine":  1816,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenCheckedTests.cs",
+"region":  {
+"startLine":  1841,
+"startColumn":  17,
+"endLine":  1841,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenClosureLambdaTests.cs",
+"region":  {
+"startLine":  154,
+"startColumn":  17,
+"endLine":  154,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenClosureLambdaTests.cs",
+"region":  {
+"startLine":  844,
+"startColumn":  17,
+"endLine":  844,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenClosureLambdaTests.cs",
+"region":  {
+"startLine":  1124,
+"startColumn":  17,
+"endLine":  1124,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenClosureLambdaTests.cs",
+"region":  {
+"startLine":  4301,
+"startColumn":  17,
+"endLine":  4301,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenClosureLambdaTests.cs",
+"region":  {
+"startLine":  4324,
+"startColumn":  17,
+"endLine":  4324,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenClosureLambdaTests.cs",
+"region":  {
+"startLine":  4346,
+"startColumn":  17,
+"endLine":  4346,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenClosureLambdaTests.cs",
+"region":  {
+"startLine":  4373,
+"startColumn":  17,
+"endLine":  4373,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenClosureLambdaTests.cs",
+"region":  {
+"startLine":  4431,
+"startColumn":  17,
+"endLine":  4431,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenClosureLambdaTests.cs",
+"region":  {
+"startLine":  4506,
+"startColumn":  17,
+"endLine":  4506,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenClosureLambdaTests.cs",
+"region":  {
+"startLine":  4533,
+"startColumn":  17,
+"endLine":  4533,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenClosureLambdaTests.cs",
+"region":  {
+"startLine":  4575,
+"startColumn":  17,
+"endLine":  4575,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenClosureLambdaTests.cs",
+"region":  {
+"startLine":  4959,
+"startColumn":  17,
+"endLine":  4959,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenClosureLambdaTests.cs",
+"region":  {
+"startLine":  5016,
+"startColumn":  17,
+"endLine":  5016,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenClosureLambdaTests.cs",
+"region":  {
+"startLine":  5047,
+"startColumn":  17,
+"endLine":  5047,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilationVerifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenConversionTests.cs",
+"region":  {
+"startLine":  77,
+"startColumn":  17,
+"endLine":  77,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilationVerifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenConversionTests.cs",
+"region":  {
+"startLine":  112,
+"startColumn":  17,
+"endLine":  112,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"symbol\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenDeconstructTests.cs",
+"region":  {
+"startLine":  2432,
+"startColumn":  21,
+"endLine":  2432,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  552,
+"startColumn":  17,
+"endLine":  552,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  575,
+"startColumn":  17,
+"endLine":  575,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  602,
+"startColumn":  17,
+"endLine":  602,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  628,
+"startColumn":  17,
+"endLine":  628,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  651,
+"startColumn":  17,
+"endLine":  651,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  698,
+"startColumn":  17,
+"endLine":  698,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  721,
+"startColumn":  17,
+"endLine":  721,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  830,
+"startColumn":  17,
+"endLine":  830,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  886,
+"startColumn":  17,
+"endLine":  886,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  939,
+"startColumn":  17,
+"endLine":  939,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  992,
+"startColumn":  17,
+"endLine":  992,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  1045,
+"startColumn":  17,
+"endLine":  1045,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  1098,
+"startColumn":  17,
+"endLine":  1098,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  1151,
+"startColumn":  17,
+"endLine":  1151,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  1198,
+"startColumn":  17,
+"endLine":  1198,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  1248,
+"startColumn":  17,
+"endLine":  1248,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  1311,
+"startColumn":  17,
+"endLine":  1311,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  1334,
+"startColumn":  17,
+"endLine":  1334,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  1436,
+"startColumn":  17,
+"endLine":  1436,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  1488,
+"startColumn":  17,
+"endLine":  1488,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  1557,
+"startColumn":  17,
+"endLine":  1557,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  1587,
+"startColumn":  17,
+"endLine":  1587,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  1613,
+"startColumn":  17,
+"endLine":  1613,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  1652,
+"startColumn":  17,
+"endLine":  1652,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenExprLambdaTests.cs",
+"region":  {
+"startLine":  1716,
+"startColumn":  17,
+"endLine":  1716,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenForEachTests.cs",
+"region":  {
+"startLine":  1350,
+"startColumn":  17,
+"endLine":  1350,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenForEachTests.cs",
+"region":  {
+"startLine":  1495,
+"startColumn":  17,
+"endLine":  1495,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenForEachTests.cs",
+"region":  {
+"startLine":  1539,
+"startColumn":  17,
+"endLine":  1539,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenForEachTests.cs",
+"region":  {
+"startLine":  1581,
+"startColumn":  17,
+"endLine":  1581,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenForEachTests.cs",
+"region":  {
+"startLine":  1607,
+"startColumn":  17,
+"endLine":  1607,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenImplicitImplementationTests.cs",
+"region":  {
+"startLine":  955,
+"startColumn":  17,
+"endLine":  955,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenImplicitImplementationTests.cs",
+"region":  {
+"startLine":  1211,
+"startColumn":  17,
+"endLine":  1211,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenImplicitImplementationTests.cs",
+"region":  {
+"startLine":  1355,
+"startColumn":  17,
+"endLine":  1355,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenImplicitImplementationTests.cs",
+"region":  {
+"startLine":  1854,
+"startColumn":  17,
+"endLine":  1854,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenImplicitlyTypeArraysTests.cs",
+"region":  {
+"startLine":  255,
+"startColumn":  17,
+"endLine":  255,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenImplicitlyTypeArraysTests.cs",
+"region":  {
+"startLine":  443,
+"startColumn":  17,
+"endLine":  443,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenInterfaceImplementation.cs",
+"region":  {
+"startLine":  136,
+"startColumn":  17,
+"endLine":  136,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenInterfaceImplementation.cs",
+"region":  {
+"startLine":  249,
+"startColumn":  17,
+"endLine":  249,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenInterfaceImplementation.cs",
+"region":  {
+"startLine":  2557,
+"startColumn":  17,
+"endLine":  2557,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOperators.cs",
+"region":  {
+"startLine":  57,
+"startColumn":  17,
+"endLine":  57,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOperators.cs",
+"region":  {
+"startLine":  123,
+"startColumn":  17,
+"endLine":  123,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOperators.cs",
+"region":  {
+"startLine":  178,
+"startColumn":  17,
+"endLine":  178,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOperators.cs",
+"region":  {
+"startLine":  212,
+"startColumn":  17,
+"endLine":  212,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOperators.cs",
+"region":  {
+"startLine":  536,
+"startColumn":  17,
+"endLine":  536,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOperators.cs",
+"region":  {
+"startLine":  2282,
+"startColumn":  17,
+"endLine":  2282,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOperators.cs",
+"region":  {
+"startLine":  2309,
+"startColumn":  17,
+"endLine":  2309,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOperators.cs",
+"region":  {
+"startLine":  2334,
+"startColumn":  17,
+"endLine":  2334,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOperators.cs",
+"region":  {
+"startLine":  2372,
+"startColumn":  17,
+"endLine":  2372,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOperators.cs",
+"region":  {
+"startLine":  2407,
+"startColumn":  17,
+"endLine":  2407,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOperators.cs",
+"region":  {
+"startLine":  2443,
+"startColumn":  17,
+"endLine":  2443,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOperators.cs",
+"region":  {
+"startLine":  2562,
+"startColumn":  17,
+"endLine":  2562,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOperators.cs",
+"region":  {
+"startLine":  2612,
+"startColumn":  17,
+"endLine":  2612,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOperators.cs",
+"region":  {
+"startLine":  3377,
+"startColumn":  17,
+"endLine":  3377,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOperators.cs",
+"region":  {
+"startLine":  3417,
+"startColumn":  17,
+"endLine":  3417,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOperators.cs",
+"region":  {
+"startLine":  3445,
+"startColumn":  17,
+"endLine":  3445,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOperators.cs",
+"region":  {
+"startLine":  3481,
+"startColumn":  17,
+"endLine":  3481,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOperators.cs",
+"region":  {
+"startLine":  3518,
+"startColumn":  17,
+"endLine":  3518,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"result\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOperators.cs",
+"region":  {
+"startLine":  4709,
+"startColumn":  17,
+"endLine":  4709,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"result\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOperators.cs",
+"region":  {
+"startLine":  4755,
+"startColumn":  17,
+"endLine":  4755,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"result\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOperators.cs",
+"region":  {
+"startLine":  4900,
+"startColumn":  17,
+"endLine":  4900,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"result\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOperators.cs",
+"region":  {
+"startLine":  4981,
+"startColumn":  17,
+"endLine":  4981,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOptimizedNullableOperators.cs",
+"region":  {
+"startLine":  2223,
+"startColumn":  17,
+"endLine":  2223,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOptimizedNullableOperators.cs",
+"region":  {
+"startLine":  2380,
+"startColumn":  17,
+"endLine":  2380,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  107,
+"startColumn":  17,
+"endLine":  107,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  312,
+"startColumn":  17,
+"endLine":  312,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  386,
+"startColumn":  17,
+"endLine":  386,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  470,
+"startColumn":  17,
+"endLine":  470,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  574,
+"startColumn":  17,
+"endLine":  574,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  1026,
+"startColumn":  17,
+"endLine":  1026,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  1113,
+"startColumn":  17,
+"endLine":  1113,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  1159,
+"startColumn":  17,
+"endLine":  1159,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  1211,
+"startColumn":  17,
+"endLine":  1211,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  1268,
+"startColumn":  17,
+"endLine":  1268,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  1311,
+"startColumn":  17,
+"endLine":  1311,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  1377,
+"startColumn":  17,
+"endLine":  1377,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  1457,
+"startColumn":  17,
+"endLine":  1457,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  1974,
+"startColumn":  17,
+"endLine":  1974,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  3119,
+"startColumn":  17,
+"endLine":  3119,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  3419,
+"startColumn":  17,
+"endLine":  3419,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  3453,
+"startColumn":  17,
+"endLine":  3453,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"baseType\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  3493,
+"startColumn":  17,
+"endLine":  3493,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  3597,
+"startColumn":  17,
+"endLine":  3597,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"invokeClass\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  3809,
+"startColumn":  21,
+"endLine":  3809,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"baseMethod\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  3811,
+"startColumn":  21,
+"endLine":  3811,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  3992,
+"startColumn":  17,
+"endLine":  3992,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  4021,
+"startColumn":  17,
+"endLine":  4021,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  4189,
+"startColumn":  17,
+"endLine":  4189,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"D\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenOverridingAndHiding.cs",
+"region":  {
+"startLine":  4212,
+"startColumn":  17,
+"endLine":  4212,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  1202,
+"startColumn":  17,
+"endLine":  1202,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  1225,
+"startColumn":  17,
+"endLine":  1225,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  1249,
+"startColumn":  17,
+"endLine":  1249,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  1273,
+"startColumn":  17,
+"endLine":  1273,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  1297,
+"startColumn":  17,
+"endLine":  1297,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  2015,
+"startColumn":  17,
+"endLine":  2015,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  2072,
+"startColumn":  17,
+"endLine":  2072,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  2639,
+"startColumn":  17,
+"endLine":  2639,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  2698,
+"startColumn":  17,
+"endLine":  2698,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  2764,
+"startColumn":  17,
+"endLine":  2764,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  2833,
+"startColumn":  17,
+"endLine":  2833,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  2914,
+"startColumn":  17,
+"endLine":  2914,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  2984,
+"startColumn":  17,
+"endLine":  2984,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  3067,
+"startColumn":  17,
+"endLine":  3067,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  3150,
+"startColumn":  17,
+"endLine":  3150,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  4371,
+"startColumn":  17,
+"endLine":  4371,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  4444,
+"startColumn":  17,
+"endLine":  4444,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  5595,
+"startColumn":  17,
+"endLine":  5595,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  5644,
+"startColumn":  17,
+"endLine":  5644,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  5733,
+"startColumn":  17,
+"endLine":  5733,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  6120,
+"startColumn":  17,
+"endLine":  6120,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  6157,
+"startColumn":  17,
+"endLine":  6157,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  6200,
+"startColumn":  17,
+"endLine":  6200,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  6237,
+"startColumn":  17,
+"endLine":  6237,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  6280,
+"startColumn":  17,
+"endLine":  6280,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenShortCircuitOperatorTests.cs",
+"region":  {
+"startLine":  6315,
+"startColumn":  17,
+"endLine":  6315,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  677,
+"startColumn":  17,
+"endLine":  677,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  3616,
+"startColumn":  17,
+"endLine":  3616,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  4659,
+"startColumn":  17,
+"endLine":  4659,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  9653,
+"startColumn":  17,
+"endLine":  9653,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  10479,
+"startColumn":  17,
+"endLine":  10479,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  10934,
+"startColumn":  17,
+"endLine":  10934,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  10957,
+"startColumn":  17,
+"endLine":  10957,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  10990,
+"startColumn":  17,
+"endLine":  10990,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  11023,
+"startColumn":  17,
+"endLine":  11023,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  11055,
+"startColumn":  17,
+"endLine":  11055,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  11156,
+"startColumn":  17,
+"endLine":  11156,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  11223,
+"startColumn":  17,
+"endLine":  11223,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  11415,
+"startColumn":  17,
+"endLine":  11415,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  11743,
+"startColumn":  17,
+"endLine":  11743,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  11775,
+"startColumn":  17,
+"endLine":  11775,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  11816,
+"startColumn":  17,
+"endLine":  11816,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  11847,
+"startColumn":  17,
+"endLine":  11847,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  11876,
+"startColumn":  17,
+"endLine":  11876,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  11912,
+"startColumn":  17,
+"endLine":  11912,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  11941,
+"startColumn":  17,
+"endLine":  11941,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTests.cs",
+"region":  {
+"startLine":  15041,
+"startColumn":  17,
+"endLine":  15041,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  1432,
+"startColumn":  17,
+"endLine":  1432,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  1552,
+"startColumn":  17,
+"endLine":  1552,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  1570,
+"startColumn":  17,
+"endLine":  1570,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  1630,
+"startColumn":  17,
+"endLine":  1630,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  2085,
+"startColumn":  17,
+"endLine":  2085,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  2791,
+"startColumn":  17,
+"endLine":  2791,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  2987,
+"startColumn":  17,
+"endLine":  2987,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  3342,
+"startColumn":  17,
+"endLine":  3342,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  3395,
+"startColumn":  17,
+"endLine":  3395,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  3415,
+"startColumn":  17,
+"endLine":  3415,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  3436,
+"startColumn":  17,
+"endLine":  3436,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  3519,
+"startColumn":  17,
+"endLine":  3519,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  3629,
+"startColumn":  17,
+"endLine":  3629,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  3679,
+"startColumn":  17,
+"endLine":  3679,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  3854,
+"startColumn":  17,
+"endLine":  3854,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"nodes\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  4589,
+"startColumn":  17,
+"endLine":  4589,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  4901,
+"startColumn":  17,
+"endLine":  4901,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  6072,
+"startColumn":  17,
+"endLine":  6072,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  6150,
+"startColumn":  17,
+"endLine":  6150,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  6190,
+"startColumn":  17,
+"endLine":  6190,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  6224,
+"startColumn":  17,
+"endLine":  6224,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  6264,
+"startColumn":  17,
+"endLine":  6264,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  6298,
+"startColumn":  17,
+"endLine":  6298,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  6331,
+"startColumn":  17,
+"endLine":  6331,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  6373,
+"startColumn":  17,
+"endLine":  6373,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  7508,
+"startColumn":  17,
+"endLine":  7508,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  7548,
+"startColumn":  17,
+"endLine":  7548,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  7586,
+"startColumn":  17,
+"endLine":  7586,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  7621,
+"startColumn":  17,
+"endLine":  7621,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  7660,
+"startColumn":  17,
+"endLine":  7660,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  7697,
+"startColumn":  17,
+"endLine":  7697,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  7732,
+"startColumn":  17,
+"endLine":  7732,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  7777,
+"startColumn":  17,
+"endLine":  7777,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  7828,
+"startColumn":  17,
+"endLine":  7828,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  7861,
+"startColumn":  17,
+"endLine":  7861,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  7964,
+"startColumn":  17,
+"endLine":  7964,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  7996,
+"startColumn":  17,
+"endLine":  7996,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  8061,
+"startColumn":  17,
+"endLine":  8061,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  8095,
+"startColumn":  17,
+"endLine":  8095,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  8205,
+"startColumn":  17,
+"endLine":  8205,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  8239,
+"startColumn":  17,
+"endLine":  8239,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  8270,
+"startColumn":  17,
+"endLine":  8270,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  8301,
+"startColumn":  17,
+"endLine":  8301,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  11635,
+"startColumn":  17,
+"endLine":  11635,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  11892,
+"startColumn":  17,
+"endLine":  11892,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  11951,
+"startColumn":  17,
+"endLine":  11951,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  13637,
+"startColumn":  17,
+"endLine":  13637,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  13686,
+"startColumn":  17,
+"endLine":  13686,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  13906,
+"startColumn":  17,
+"endLine":  13906,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  13947,
+"startColumn":  17,
+"endLine":  13947,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  14008,
+"startColumn":  17,
+"endLine":  14008,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  14138,
+"startColumn":  17,
+"endLine":  14138,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  14197,
+"startColumn":  17,
+"endLine":  14197,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  14410,
+"startColumn":  17,
+"endLine":  14410,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  14442,
+"startColumn":  17,
+"endLine":  14442,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  14721,
+"startColumn":  17,
+"endLine":  14721,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  14829,
+"startColumn":  17,
+"endLine":  14829,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  14863,
+"startColumn":  17,
+"endLine":  14863,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  14902,
+"startColumn":  17,
+"endLine":  14902,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  16737,
+"startColumn":  17,
+"endLine":  16737,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  16765,
+"startColumn":  17,
+"endLine":  16765,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  16790,
+"startColumn":  17,
+"endLine":  16790,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  16833,
+"startColumn":  17,
+"endLine":  16833,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  16876,
+"startColumn":  17,
+"endLine":  16876,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  16919,
+"startColumn":  17,
+"endLine":  16919,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  16962,
+"startColumn":  17,
+"endLine":  16962,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  16998,
+"startColumn":  17,
+"endLine":  16998,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  17044,
+"startColumn":  17,
+"endLine":  17044,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTupleTest.cs",
+"region":  {
+"startLine":  17083,
+"startColumn":  17,
+"endLine":  17083,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenTypeofTests.cs",
+"region":  {
+"startLine":  373,
+"startColumn":  17,
+"endLine":  373,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\CodeGenUsingStatementTests.cs",
+"region":  {
+"startLine":  2581,
+"startColumn":  17,
+"endLine":  2581,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compVerifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\EventTests.cs",
+"region":  {
+"startLine":  430,
+"startColumn":  17,
+"endLine":  430,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\ForLoopsTests.cs",
+"region":  {
+"startLine":  1617,
+"startColumn":  17,
+"endLine":  1617,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\ForLoopsTests.cs",
+"region":  {
+"startLine":  1653,
+"startColumn":  17,
+"endLine":  1653,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\ForLoopsTests.cs",
+"region":  {
+"startLine":  1702,
+"startColumn":  17,
+"endLine":  1702,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\ForLoopsTests.cs",
+"region":  {
+"startLine":  1809,
+"startColumn":  17,
+"endLine":  1809,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\ForLoopsTests.cs",
+"region":  {
+"startLine":  1832,
+"startColumn":  17,
+"endLine":  1832,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\ForLoopsTests.cs",
+"region":  {
+"startLine":  1859,
+"startColumn":  17,
+"endLine":  1859,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compVerifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\IndexerTests.cs",
+"region":  {
+"startLine":  27,
+"startColumn":  17,
+"endLine":  27,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compVerifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\IndexerTests.cs",
+"region":  {
+"startLine":  46,
+"startColumn":  17,
+"endLine":  46,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compVerifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\IndexerTests.cs",
+"region":  {
+"startLine":  64,
+"startColumn":  17,
+"endLine":  64,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compVerifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\IndexerTests.cs",
+"region":  {
+"startLine":  82,
+"startColumn":  17,
+"endLine":  82,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compVerifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\IndexerTests.cs",
+"region":  {
+"startLine":  101,
+"startColumn":  17,
+"endLine":  101,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compVerifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\IndexerTests.cs",
+"region":  {
+"startLine":  120,
+"startColumn":  17,
+"endLine":  120,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compVerifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\IndexerTests.cs",
+"region":  {
+"startLine":  166,
+"startColumn":  17,
+"endLine":  166,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compVerifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\IndexerTests.cs",
+"region":  {
+"startLine":  188,
+"startColumn":  17,
+"endLine":  188,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compVerifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\IndexerTests.cs",
+"region":  {
+"startLine":  212,
+"startColumn":  17,
+"endLine":  212,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compVerifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\IndexerTests.cs",
+"region":  {
+"startLine":  236,
+"startColumn":  17,
+"endLine":  236,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compVerifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\IndexerTests.cs",
+"region":  {
+"startLine":  670,
+"startColumn":  17,
+"endLine":  670,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compVerifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\ObjectAndCollectionInitializerTests.cs",
+"region":  {
+"startLine":  1152,
+"startColumn":  17,
+"endLine":  1152,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compVerifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\ObjectAndCollectionInitializerTests.cs",
+"region":  {
+"startLine":  1256,
+"startColumn":  17,
+"endLine":  1256,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compVerifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\ObjectAndCollectionInitializerTests.cs",
+"region":  {
+"startLine":  1818,
+"startColumn":  17,
+"endLine":  1818,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compVerifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\ObjectAndCollectionInitializerTests.cs",
+"region":  {
+"startLine":  1874,
+"startColumn":  17,
+"endLine":  1874,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compVerifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\ObjectAndCollectionInitializerTests.cs",
+"region":  {
+"startLine":  1930,
+"startColumn":  17,
+"endLine":  1930,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\SwitchTests.cs",
+"region":  {
+"startLine":  3123,
+"startColumn":  17,
+"endLine":  3123,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compVerifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\UnsafeTests.cs",
+"region":  {
+"startLine":  1114,
+"startColumn":  17,
+"endLine":  1114,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compVerifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\UnsafeTests.cs",
+"region":  {
+"startLine":  1143,
+"startColumn":  17,
+"endLine":  1143,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compVerifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\UnsafeTests.cs",
+"region":  {
+"startLine":  1163,
+"startColumn":  17,
+"endLine":  1163,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\UnsafeTests.cs",
+"region":  {
+"startLine":  8699,
+"startColumn":  17,
+"endLine":  8699,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"verifier\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\UnsafeTests.cs",
+"region":  {
+"startLine":  8723,
+"startColumn":  17,
+"endLine":  8723,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"result\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\CodeGen\\UnsafeTests.cs",
+"region":  {
+"startLine":  9194,
+"startColumn":  17,
+"endLine":  9194,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\CompilationEmitTests.cs",
+"region":  {
+"startLine":  1569,
+"startColumn":  17,
+"endLine":  1569,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"comp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\CompilationEmitTests.cs",
+"region":  {
+"startLine":  2206,
+"startColumn":  17,
+"endLine":  2206,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"v1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\AssemblyReferencesTests.cs",
+"region":  {
+"startLine":  211,
+"startColumn":  17,
+"endLine":  211,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"v2\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\AssemblyReferencesTests.cs",
+"region":  {
+"startLine":  212,
+"startColumn":  17,
+"endLine":  212,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"v1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\AssemblyReferencesTests.cs",
+"region":  {
+"startLine":  315,
+"startColumn":  17,
+"endLine":  315,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"v2\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\AssemblyReferencesTests.cs",
+"region":  {
+"startLine":  316,
+"startColumn":  17,
+"endLine":  316,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"v1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\AssemblyReferencesTests.cs",
+"region":  {
+"startLine":  398,
+"startColumn":  17,
+"endLine":  398,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"v2\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\AssemblyReferencesTests.cs",
+"region":  {
+"startLine":  399,
+"startColumn":  17,
+"endLine":  399,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"f2\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\AssemblyReferencesTests.cs",
+"region":  {
+"startLine":  403,
+"startColumn":  17,
+"endLine":  403,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"g2\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\AssemblyReferencesTests.cs",
+"region":  {
+"startLine":  404,
+"startColumn":  17,
+"endLine":  404,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"reader0\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\AssemblyReferencesTests.cs",
+"region":  {
+"startLine":  580,
+"startColumn":  17,
+"endLine":  580,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"reader1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueClosureTests.cs",
+"region":  {
+"startLine":  957,
+"startColumn":  17,
+"endLine":  957,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"reader1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueClosureTests.cs",
+"region":  {
+"startLine":  1068,
+"startColumn":  17,
+"endLine":  1068,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"reader1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueClosureTests.cs",
+"region":  {
+"startLine":  1282,
+"startColumn":  17,
+"endLine":  1282,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"reader1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueClosureTests.cs",
+"region":  {
+"startLine":  1814,
+"startColumn":  17,
+"endLine":  1814,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"reader1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueClosureTests.cs",
+"region":  {
+"startLine":  1920,
+"startColumn":  17,
+"endLine":  1920,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"reader1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueClosureTests.cs",
+"region":  {
+"startLine":  2134,
+"startColumn":  17,
+"endLine":  2134,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"reader1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueClosureTests.cs",
+"region":  {
+"startLine":  2194,
+"startColumn":  17,
+"endLine":  2194,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"reader1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueClosureTests.cs",
+"region":  {
+"startLine":  2322,
+"startColumn":  17,
+"endLine":  2322,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"reader1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueClosureTests.cs",
+"region":  {
+"startLine":  2438,
+"startColumn":  17,
+"endLine":  2438,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"reader1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueClosureTests.cs",
+"region":  {
+"startLine":  2563,
+"startColumn":  17,
+"endLine":  2563,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"f3\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueStateMachineTests.cs",
+"region":  {
+"startLine":  1808,
+"startColumn":  17,
+"endLine":  1808,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"h0\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueStateMachineTests.cs",
+"region":  {
+"startLine":  1815,
+"startColumn":  17,
+"endLine":  1815,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"h1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueStateMachineTests.cs",
+"region":  {
+"startLine":  1816,
+"startColumn":  17,
+"endLine":  1816,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"f3\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueStateMachineTests.cs",
+"region":  {
+"startLine":  2553,
+"startColumn":  17,
+"endLine":  2553,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"h0\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueStateMachineTests.cs",
+"region":  {
+"startLine":  2560,
+"startColumn":  17,
+"endLine":  2560,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"h1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueStateMachineTests.cs",
+"region":  {
+"startLine":  2561,
+"startColumn":  17,
+"endLine":  2561,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"f3\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueStateMachineTests.cs",
+"region":  {
+"startLine":  3008,
+"startColumn":  17,
+"endLine":  3008,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"reader0\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueTests.cs",
+"region":  {
+"startLine":  45,
+"startColumn":  21,
+"endLine":  45,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"method0\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueTests.cs",
+"region":  {
+"startLine":  1953,
+"startColumn":  17,
+"endLine":  1953,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"methodN\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueTests.cs",
+"region":  {
+"startLine":  3293,
+"startColumn":  17,
+"endLine":  3293,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation4\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueTests.cs",
+"region":  {
+"startLine":  4678,
+"startColumn":  17,
+"endLine":  4678,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"method2\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueTests.cs",
+"region":  {
+"startLine":  4722,
+"startColumn":  25,
+"endLine":  4722,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"methodData0\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\EditAndContinueTests.cs",
+"region":  {
+"startLine":  5673,
+"startColumn":  17,
+"endLine":  5673,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"methodData0\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\LocalSlotMappingTests.cs",
+"region":  {
+"startLine":  238,
+"startColumn":  17,
+"endLine":  238,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"diff1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\LocalSlotMappingTests.cs",
+"region":  {
+"startLine":  1474,
+"startColumn":  17,
+"endLine":  1474,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\LocalSlotMappingTests.cs",
+"region":  {
+"startLine":  2699,
+"startColumn":  17,
+"endLine":  2699,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\LocalSlotMappingTests.cs",
+"region":  {
+"startLine":  2767,
+"startColumn":  17,
+"endLine":  2767,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\LocalSlotMappingTests.cs",
+"region":  {
+"startLine":  2876,
+"startColumn":  17,
+"endLine":  2876,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"mscorlibRef\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EmitCustomModifiers.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  17,
+"endLine":  19,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation2\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EmitErrorTests.cs",
+"region":  {
+"startLine":  109,
+"startColumn":  17,
+"endLine":  109,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"compilation2\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EmitErrorTests.cs",
+"region":  {
+"startLine":  141,
+"startColumn":  17,
+"endLine":  141,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"expected\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EmitMetadataTestBase.cs",
+"region":  {
+"startLine":  111,
+"startColumn":  25,
+"endLine":  111,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"foo\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\NoPiaEmbedTypes.cs",
+"region":  {
+"startLine":  2200,
+"startColumn":  25,
+"endLine":  2200,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"foo1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\NoPiaEmbedTypes.cs",
+"region":  {
+"startLine":  2210,
+"startColumn":  25,
+"endLine":  2210,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"m1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\NoPiaEmbedTypes.cs",
+"region":  {
+"startLine":  3962,
+"startColumn":  25,
+"endLine":  3962,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"m2\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\NoPiaEmbedTypes.cs",
+"region":  {
+"startLine":  3965,
+"startColumn":  25,
+"endLine":  3965,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"m3\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\NoPiaEmbedTypes.cs",
+"region":  {
+"startLine":  3968,
+"startColumn":  25,
+"endLine":  3968,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"m1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\NoPiaEmbedTypes.cs",
+"region":  {
+"startLine":  4047,
+"startColumn":  25,
+"endLine":  4047,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"m2\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\NoPiaEmbedTypes.cs",
+"region":  {
+"startLine":  4050,
+"startColumn":  25,
+"endLine":  4050,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"m3\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\NoPiaEmbedTypes.cs",
+"region":  {
+"startLine":  4053,
+"startColumn":  25,
+"endLine":  4053,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"tmp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\NoPiaEmbedTypes.cs",
+"region":  {
+"startLine":  5695,
+"startColumn":  29,
+"endLine":  5695,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"tmp\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\NoPiaEmbedTypes.cs",
+"region":  {
+"startLine":  5764,
+"startColumn":  25,
+"endLine":  5764,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"v\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\PDB\\PDBAsyncTests.cs",
+"region":  {
+"startLine":  1364,
+"startColumn":  17,
+"endLine":  1364,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"v\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\PDB\\PDBUsingTests.cs",
+"region":  {
+"startLine":  2111,
+"startColumn":  17,
+"endLine":  2111,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"emitResult1\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\PDB\\PDBUsingTests.cs",
+"region":  {
+"startLine":  2213,
+"startColumn":  17,
+"endLine":  2213,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"emitResult2\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\PDB\\PDBUsingTests.cs",
+"region":  {
+"startLine":  2214,
+"startColumn":  17,
+"endLine":  2214,
+"endColumn":  28
+}
+}
+}
+]
+}

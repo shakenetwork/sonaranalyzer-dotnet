@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\DiagnosticAnalyzerDriver\\DiagnosticAnalyzerDriverTests.cs",
+"region":  {
+"startLine":  58,
+"startColumn":  27,
+"endLine":  58,
+"endColumn":  78
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\Suppression\\SuppressionTests.cs",
+"region":  {
+"startLine":  736,
+"startColumn":  33,
+"endLine":  736,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SymbolId\\SymbolKeyTestBase.cs",
+"region":  {
+"startLine":  145,
+"startColumn":  46,
+"endLine":  145,
+"endColumn":  62
+}
+}
+}
+]
+}

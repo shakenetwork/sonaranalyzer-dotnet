@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S127",
+"message":  "Do not update the loop counter \"i\" within the loop body.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Xml\\XmlCharType.cs",
+"region":  {
+"startLine":  1111,
+"startColumn":  29,
+"endLine":  1111,
+"endColumn":  30
+}
+}
+}
+]
+}

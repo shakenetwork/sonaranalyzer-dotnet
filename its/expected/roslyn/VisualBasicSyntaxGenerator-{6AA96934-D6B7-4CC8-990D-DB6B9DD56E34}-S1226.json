@@ -1,0 +1,225 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"nodeStructure\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\GreenNodes\\GreenNodeFactoryWriter.vb",
+"region":  {
+"startLine":  422,
+"startColumn":  13,
+"endLine":  422,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"nodeStructure\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\RedNodes\\RedNodeFactoryWriter.vb",
+"region":  {
+"startLine":  868,
+"startColumn":  13,
+"endLine":  868,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"struct\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\Util\\WriteUtils.vb",
+"region":  {
+"startLine":  492,
+"startColumn":  13,
+"endLine":  492,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"struct\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\Util\\WriteUtils.vb",
+"region":  {
+"startLine":  511,
+"startColumn":  13,
+"endLine":  511,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"text\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\Util\\WriteUtils.vb",
+"region":  {
+"startLine":  552,
+"startColumn":  9,
+"endLine":  552,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"text\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\Util\\WriteUtils.vb",
+"region":  {
+"startLine":  553,
+"startColumn":  9,
+"endLine":  553,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"text\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\Util\\WriteUtils.vb",
+"region":  {
+"startLine":  557,
+"startColumn":  13,
+"endLine":  557,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"text\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\Util\\WriteUtils.vb",
+"region":  {
+"startLine":  559,
+"startColumn":  9,
+"endLine":  559,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"text\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\Util\\WriteUtils.vb",
+"region":  {
+"startLine":  568,
+"startColumn":  13,
+"endLine":  568,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"text\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\Util\\WriteUtils.vb",
+"region":  {
+"startLine":  584,
+"startColumn":  9,
+"endLine":  584,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"text\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\Util\\WriteUtils.vb",
+"region":  {
+"startLine":  613,
+"startColumn":  13,
+"endLine":  613,
+"endColumn":  17
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"text\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\Util\\WriteUtils.vb",
+"region":  {
+"startLine":  634,
+"startColumn":  9,
+"endLine":  634,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"s\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\Util\\WriteUtils.vb",
+"region":  {
+"startLine":  884,
+"startColumn":  13,
+"endLine":  884,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"s\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\Util\\XmlRenamer.vb",
+"region":  {
+"startLine":  55,
+"startColumn":  9,
+"endLine":  55,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"s\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\Util\\XmlRenamer.vb",
+"region":  {
+"startLine":  57,
+"startColumn":  13,
+"endLine":  57,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"s\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\Util\\XmlRenamer.vb",
+"region":  {
+"startLine":  60,
+"startColumn":  13,
+"endLine":  60,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"child\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\XML\\ParseTreeDescription.vb",
+"region":  {
+"startLine":  220,
+"startColumn":  13,
+"endLine":  220,
+"endColumn":  18
+}
+}
+}
+]
+}

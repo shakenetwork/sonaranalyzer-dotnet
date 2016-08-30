@@ -1,0 +1,69 @@
+{
+"issues":  [
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\StreamExtensions.cs",
+"region":  {
+"startLine":  45,
+"startColumn":  21,
+"endLine":  45,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\InternalUtilities\\FilePathUtilities.cs",
+"region":  {
+"startLine":  60,
+"startColumn":  21,
+"endLine":  60,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\Host\\TemporaryStorage\\TemporaryStorageServiceFactory.cs",
+"region":  {
+"startLine":  325,
+"startColumn":  41,
+"endLine":  325,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\MSBuild\\SolutionFile\\SectionBlock.cs",
+"region":  {
+"startLine":  100,
+"startColumn":  21,
+"endLine":  100,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\MSBuild\\SolutionFile\\SectionBlock.cs",
+"region":  {
+"startLine":  124,
+"startColumn":  21,
+"endLine":  124,
+"endColumn":  27
+}
+}
+}
+]
+}

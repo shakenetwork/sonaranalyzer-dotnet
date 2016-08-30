@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"solution\".",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\EditorFeatures\\Core\\Extensibility\\Interactive\\InteractiveEvaluator.cs",
+"region":  {
+"startLine":  396,
+"startColumn":  13,
+"endLine":  396,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"solution\".",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\EditorFeatures\\Core\\Extensibility\\Interactive\\InteractiveEvaluator.cs",
+"region":  {
+"startLine":  413,
+"startColumn":  17,
+"endLine":  413,
+"endColumn":  25
+}
+}
+}
+]
+}

@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"assemblyPath\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\Host\\Documentation\\DocumentationProviderServiceFactory.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  17,
+"endLine":  32,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"count\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\Host\\TemporaryStorage\\TemporaryStorageServiceFactory.cs",
+"region":  {
+"startLine":  214,
+"startColumn":  25,
+"endLine":  214,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"path\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\MSBuild\\MSBuildProjectLoader.cs",
+"region":  {
+"startLine":  615,
+"startColumn":  17,
+"endLine":  615,
+"endColumn":  21
+}
+}
+}
+]
+}

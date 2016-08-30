@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\OperatorTests.cs",
+"region":  {
+"startLine":  2715,
+"startColumn":  9,
+"endLine":  2742,
+"endColumn":  13
+}
+}
+},
+{
+"id":  "S1144",
+"message":  "Remove this unused private member.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\UsingStatementTests.cs",
+"region":  {
+"startLine":  682,
+"startColumn":  9,
+"endLine":  688,
+"endColumn":  10
+}
+}
+}
+]
+}

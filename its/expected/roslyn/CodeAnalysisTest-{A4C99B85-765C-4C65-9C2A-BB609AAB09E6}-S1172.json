@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"sender\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\AnalyzerFileReferenceTests.cs",
+"region":  {
+"startLine":  251,
+"startColumn":  43,
+"endLine":  251,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"keys\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\CachingLookupTests.cs",
+"region":  {
+"startLine":  116,
+"startColumn":  104,
+"endLine":  116,
+"endColumn":  124
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"keys\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\CachingLookupTests.cs",
+"region":  {
+"startLine":  131,
+"startColumn":  104,
+"endLine":  131,
+"endColumn":  124
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"analyzers\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Diagnostics\\SuppressMessageAttributeTests.cs",
+"region":  {
+"startLine":  1230,
+"startColumn":  86,
+"endLine":  1230,
+"endColumn":  116
+}
+}
+}
+]
+}

@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1125",
+"message":  "Remove the unnecessary Boolean literal(s).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\MSBuildTask\\CommandLineBuilderExtension.cs",
+"region":  {
+"startLine":  224,
+"startColumn":  80,
+"endLine":  224,
+"endColumn":  85
+}
+}
+},
+{
+"id":  "S1125",
+"message":  "Remove the unnecessary Boolean literal(s).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\MSBuildTask\\CommandLineBuilderExtension.cs",
+"region":  {
+"startLine":  246,
+"startColumn":  80,
+"endLine":  246,
+"endColumn":  85
+}
+}
+},
+{
+"id":  "S1125",
+"message":  "Remove the unnecessary Boolean literal(s).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\MSBuildTask\\Vbc.cs",
+"region":  {
+"startLine":  437,
+"startColumn":  91,
+"endLine":  437,
+"endColumn":  96
+}
+}
+}
+]
+}

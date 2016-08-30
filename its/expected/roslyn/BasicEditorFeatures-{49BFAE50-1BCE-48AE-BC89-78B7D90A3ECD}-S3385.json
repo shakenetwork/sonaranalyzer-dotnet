@@ -1,0 +1,82 @@
+{
+"issues":  [
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\VisualBasic\\AutomaticCompletion\\Sessions\\InterpolationCompletionSession.vb",
+"region":  {
+"startLine":  44,
+"startColumn":  21,
+"endLine":  44,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\VisualBasic\\AutomaticEndConstructCorrection\\LetterOnlyTrackingSpan.vb",
+"region":  {
+"startLine":  80,
+"startColumn":  21,
+"endLine":  80,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\VisualBasic\\DocumentationComments\\DocumentationCommentCommandHandler.vb",
+"region":  {
+"startLine":  198,
+"startColumn":  21,
+"endLine":  198,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\VisualBasic\\EndConstructGeneration\\EndConstructStatementVisitor_IfStatement.vb",
+"region":  {
+"startLine":  92,
+"startColumn":  25,
+"endLine":  92,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\VisualBasic\\LineCommit\\ContainingStatementInfo.vb",
+"region":  {
+"startLine":  81,
+"startColumn":  25,
+"endLine":  81,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\VisualBasic\\LineCommit\\ContainingStatementInfo.vb",
+"region":  {
+"startLine":  89,
+"startColumn":  25,
+"endLine":  89,
+"endColumn":  32
+}
+}
+}
+]
+}

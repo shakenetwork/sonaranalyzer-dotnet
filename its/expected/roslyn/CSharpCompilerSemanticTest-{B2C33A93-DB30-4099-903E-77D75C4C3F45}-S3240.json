@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\OperatorTests.cs",
+"region":  {
+"startLine":  5100,
+"startColumn":  21,
+"endLine":  5100,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\UnsafeTests.cs",
+"region":  {
+"startLine":  2312,
+"startColumn":  25,
+"endLine":  2312,
+"endColumn":  27
+}
+}
+}
+]
+}

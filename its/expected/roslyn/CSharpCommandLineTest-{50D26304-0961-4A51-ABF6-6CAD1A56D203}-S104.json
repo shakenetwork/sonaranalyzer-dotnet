@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S104",
+"message":  "This file has 8878 lines, which is greater than 1000 authorized. Split it into smaller files.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\CommandLine\\CommandLineTests.cs",
+"region":  {
+"startLine":  1,
+"startColumn":  1,
+"endLine":  1,
+"endColumn":  161
+}
+}
+}
+]
+}

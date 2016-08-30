@@ -1,0 +1,82 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"specificOptions\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Diagnostics\\DiagnosticAnalyzerTests.cs",
+"region":  {
+"startLine":  1104,
+"startColumn":  13,
+"endLine":  1104,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"synList\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\InteractiveSemanticModelTests.cs",
+"region":  {
+"startLine":  276,
+"startColumn":  17,
+"endLine":  276,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"synList\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\InteractiveSemanticModelTests.cs",
+"region":  {
+"startLine":  283,
+"startColumn":  21,
+"endLine":  283,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"exprSynList\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\InteractiveSemanticModelTests.cs",
+"region":  {
+"startLine":  330,
+"startColumn":  17,
+"endLine":  330,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"exprSynList\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\InteractiveSemanticModelTests.cs",
+"region":  {
+"startLine":  340,
+"startColumn":  21,
+"endLine":  340,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"type\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\OverloadResolutionTests.cs",
+"region":  {
+"startLine":  700,
+"startColumn":  17,
+"endLine":  700,
+"endColumn":  21
+}
+}
+}
+]
+}

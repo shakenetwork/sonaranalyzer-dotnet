@@ -1,0 +1,199 @@
+{
+"issues":  [
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\AddMissingReference\\CodeAction.cs",
+"region":  {
+"startLine":  87,
+"startColumn":  78,
+"endLine":  87,
+"endColumn":  97
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\CodeFixes\\Suppression\\SuppressionHelpers.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  93,
+"endLine":  14,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\CommonCompletionItem.cs",
+"region":  {
+"startLine":  74,
+"startColumn":  61,
+"endLine":  74,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\CommonCompletionItem.cs",
+"region":  {
+"startLine":  87,
+"startColumn":  46,
+"endLine":  87,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the type specification; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Completion\\Providers\\AbstractSymbolCompletionProvider.cs",
+"region":  {
+"startLine":  198,
+"startColumn":  44,
+"endLine":  198,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the type specification; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\Analyzers\\UnboundIdentifiersDiagnosticAnalyzerBase.cs",
+"region":  {
+"startLine":  67,
+"startColumn":  63,
+"endLine":  67,
+"endColumn":  73
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\DiagnosticAnalyzerService_IncrementalAnalyzer.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  29,
+"endLine":  20,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\DiagnosticCustomTags.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  70,
+"endLine":  13,
+"endColumn":  76
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\DiagnosticCustomTags.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  76,
+"endLine":  14,
+"endColumn":  82
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\DiagnosticCustomTags.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  72,
+"endLine":  15,
+"endColumn":  78
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array size specification; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\IntroduceVariable\\AbstractIntroduceVariableService.AbstractIntroduceVariableCodeAction.cs",
+"region":  {
+"startLine":  100,
+"startColumn":  48,
+"endLine":  100,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array size specification; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\IntroduceVariable\\AbstractIntroduceVariableService.AbstractIntroduceVariableCodeAction.cs",
+"region":  {
+"startLine":  100,
+"startColumn":  51,
+"endLine":  100,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array size specification; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\IntroduceVariable\\AbstractIntroduceVariableService.AbstractIntroduceVariableCodeAction.cs",
+"region":  {
+"startLine":  100,
+"startColumn":  54,
+"endLine":  100,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array size specification; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Shared\\Utilities\\PatternMatcher.cs",
+"region":  {
+"startLine":  69,
+"startColumn":  74,
+"endLine":  69,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\UseAutoProperty\\AbstractUseAutoPropertyAnalyzer.cs",
+"region":  {
+"startLine":  262,
+"startColumn":  61,
+"endLine":  262,
+"endColumn":  69
+}
+}
+}
+]
+}

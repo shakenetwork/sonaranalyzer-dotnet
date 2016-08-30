@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\TestUtilities\\InProcess\\InProcComponent.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  29,
+"endLine":  23,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\TestUtilities\\OutOfProcess\\OutOfProcComponent.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  27,
+"endLine":  11,
+"endColumn":  45
+}
+}
+}
+]
+}

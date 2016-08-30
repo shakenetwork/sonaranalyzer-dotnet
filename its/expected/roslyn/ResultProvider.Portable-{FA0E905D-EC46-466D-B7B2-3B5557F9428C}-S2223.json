@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"IsFailFastEnabled\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\Core\\Source\\ExpressionCompiler\\ExpressionEvaluatorFatalError.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  30,
+"endLine":  19,
+"endColumn":  47
+}
+}
+}
+]
+}

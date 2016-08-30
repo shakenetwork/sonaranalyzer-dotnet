@@ -1,0 +1,82 @@
+{
+"issues":  [
+{
+"id":  "S3253",
+"message":  "Remove this redundant constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\OverrideCompletionProvider.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  9,
+"endLine":  23,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S3253",
+"message":  "Remove this redundant constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\CompletionProviders\\PartialMethodCompletionProvider.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  9,
+"endLine":  22,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S3253",
+"message":  "Remove this redundant constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Completion\\KeywordRecommenders\\VarKeywordRecommender.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  9,
+"endLine":  16,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S3253",
+"message":  "Remove this redundant constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\Diagnostics\\Analyzers\\CSharpNamingStyleDiagnosticAnalyzer.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  9,
+"endLine":  14,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S3253",
+"message":  "Remove this redundant constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpExtractMethodService.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  9,
+"endLine":  18,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S3253",
+"message":  "Remove this redundant constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpMethodExtractor.FormattingProvider.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  13,
+"endLine":  16,
+"endColumn":  14
+}
+}
+}
+]
+}

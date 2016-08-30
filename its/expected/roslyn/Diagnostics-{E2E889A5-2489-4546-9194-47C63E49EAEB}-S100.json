@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S100",
+"message":  "Rename method \"UpdateOnUIThread\" to match camel case naming rules, consider using \"UpdateOnUiThread\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Diagnostics\\PerfMargin\\StatusIndicator.xaml.cs",
+"region":  {
+"startLine":  47,
+"startColumn":  21,
+"endLine":  47,
+"endColumn":  37
+}
+}
+}
+]
+}

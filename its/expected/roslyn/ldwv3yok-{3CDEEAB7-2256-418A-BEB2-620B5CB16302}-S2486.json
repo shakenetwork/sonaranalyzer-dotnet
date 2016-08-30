@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S2486",
+"message":  "Handle the exception or explain in a comment why it can be ignored.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\CodeFixes\\CodeFixService.ProjectCodeFixProvider.cs",
+"region":  {
+"startLine":  74,
+"startColumn":  29,
+"endLine":  76,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S2486",
+"message":  "Handle the exception or explain in a comment why it can be ignored.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\MetadataAsSource\\MetadataAsSourceFileService.cs",
+"region":  {
+"startLine":  348,
+"startColumn":  17,
+"endLine":  350,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S2486",
+"message":  "Handle the exception or explain in a comment why it can be ignored.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\MetadataAsSource\\MetadataAsSourceFileService.cs",
+"region":  {
+"startLine":  365,
+"startColumn":  13,
+"endLine":  367,
+"endColumn":  14
+}
+}
+}
+]
+}

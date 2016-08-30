@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S131",
+"message":  "Add a \"default\" clause to this \"switch\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Syntax\\LexicalAndXml\\PreprocessorTests.cs",
+"region":  {
+"startLine":  178,
+"startColumn":  17,
+"endLine":  178,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"default\" clause to this \"switch\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Syntax\\Parsing\\ExpressionParsingTests.cs",
+"region":  {
+"startLine":  97,
+"startColumn":  13,
+"endLine":  97,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"default\" clause to this \"switch\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Syntax\\Parsing\\ExpressionParsingTests.cs",
+"region":  {
+"startLine":  412,
+"startColumn":  13,
+"endLine":  412,
+"endColumn":  19
+}
+}
+}
+]
+}

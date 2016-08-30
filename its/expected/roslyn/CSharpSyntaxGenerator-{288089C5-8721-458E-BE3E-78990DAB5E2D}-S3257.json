@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\CSharpSyntaxGenerator\\SourceWriter.cs",
+"region":  {
+"startLine":  2054,
+"startColumn":  47,
+"endLine":  2054,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\CSharpSyntaxGenerator\\SourceWriter.cs",
+"region":  {
+"startLine":  2072,
+"startColumn":  65,
+"endLine":  2072,
+"endColumn":  71
+}
+}
+}
+]
+}

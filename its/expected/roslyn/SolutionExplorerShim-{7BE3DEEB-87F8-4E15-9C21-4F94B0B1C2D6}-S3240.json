@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\SolutionExplorerShim\\AnalyzerItem\\AnalyzerItem.cs",
+"region":  {
+"startLine":  44,
+"startColumn":  17,
+"endLine":  44,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\SolutionExplorerShim\\AnalyzerItem\\AnalyzerItem.cs",
+"region":  {
+"startLine":  85,
+"startColumn":  13,
+"endLine":  85,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\SolutionExplorerShim\\AnalyzersCommandHandler.cs",
+"region":  {
+"startLine":  273,
+"startColumn":  25,
+"endLine":  273,
+"endColumn":  27
+}
+}
+}
+]
+}

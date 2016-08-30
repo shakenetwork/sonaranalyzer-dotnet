@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1450",
+"message":  "Remove the \"_completionProvider\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\EditorFeatures\\Core\\Completion\\GlobalAssemblyCacheCompletionHelper.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  45,
+"endLine":  21,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S1450",
+"message":  "Remove the \"_textChangeSpan\" field and declare it as a local variable in the relevant methods.",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\EditorFeatures\\Core\\Completion\\GlobalAssemblyCacheCompletionHelper.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  35,
+"endLine":  22,
+"endColumn":  50
+}
+}
+}
+]
+}

@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S3265",
+"message":  "Remove this bitwise operation; the enum \"__VSCREATETOOLWIN\" is not marked with \"Flags\" attribute.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\VisualStudio\\VsInteractiveWindow.cs",
+"region":  {
+"startLine":  66,
+"startColumn":  59,
+"endLine":  66,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S3265",
+"message":  "Remove this bitwise operation; the enum \"__VSCREATETOOLWIN\" is not marked with \"Flags\" attribute.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\VisualStudio\\VsInteractiveWindow.cs",
+"region":  {
+"startLine":  66,
+"startColumn":  96,
+"endLine":  66,
+"endColumn":  97
+}
+}
+},
+{
+"id":  "S3265",
+"message":  "Remove this bitwise operation; the enum \"OLECMDF\" is not marked with \"Flags\" attribute.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\VisualStudio\\VsInteractiveWindowCommandFilter.cs",
+"region":  {
+"startLine":  496,
+"startColumn":  76,
+"endLine":  496,
+"endColumn":  77
+}
+}
+},
+{
+"id":  "S3265",
+"message":  "Remove this bitwise operation; the enum \"OLECMDF\" is not marked with \"Flags\" attribute.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\VisualStudio\\VsInteractiveWindowCommandFilter.cs",
+"region":  {
+"startLine":  498,
+"startColumn":  88,
+"endLine":  498,
+"endColumn":  89
+}
+}
+}
+]
+}

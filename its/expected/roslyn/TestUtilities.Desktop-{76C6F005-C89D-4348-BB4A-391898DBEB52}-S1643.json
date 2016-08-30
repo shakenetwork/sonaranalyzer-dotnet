@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S1643",
+"message":  "Use a StringBuilder instead.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\CommonDiagnosticAnalyzers.cs",
+"region":  {
+"startLine":  77,
+"startColumn":  25,
+"endLine":  77,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1643",
+"message":  "Use a StringBuilder instead.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\CommonDiagnosticAnalyzers.cs",
+"region":  {
+"startLine":  80,
+"startColumn":  21,
+"endLine":  81,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S1643",
+"message":  "Use a StringBuilder instead.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\MetadataSignatureUnitTestHelper.cs",
+"region":  {
+"startLine":  154,
+"startColumn":  21,
+"endLine":  154,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S1643",
+"message":  "Use a StringBuilder instead.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Desktop\\MetadataSignatureUnitTestHelper.cs",
+"region":  {
+"startLine":  165,
+"startColumn":  21,
+"endLine":  165,
+"endColumn":  53
+}
+}
+}
+]
+}

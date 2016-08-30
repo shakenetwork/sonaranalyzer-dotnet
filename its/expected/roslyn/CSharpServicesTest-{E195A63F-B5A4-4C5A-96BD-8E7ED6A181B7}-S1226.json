@@ -1,0 +1,108 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"options\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharpTest\\CodeGeneration\\AddImportsTests.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  13,
+"endLine":  42,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"document\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharpTest\\CodeGeneration\\SymbolEditorTests.cs",
+"region":  {
+"startLine":  48,
+"startColumn":  13,
+"endLine":  48,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"document\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharpTest\\CodeGeneration\\SymbolEditorTests.cs",
+"region":  {
+"startLine":  49,
+"startColumn":  13,
+"endLine":  49,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"document\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharpTest\\CodeGeneration\\SymbolEditorTests.cs",
+"region":  {
+"startLine":  50,
+"startColumn":  13,
+"endLine":  50,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"codeWithMarker\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharpTest\\Formatting\\FormattingMultipleSpanTests.cs",
+"region":  {
+"startLine":  193,
+"startColumn":  17,
+"endLine":  193,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"codeWithMarker\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharpTest\\Formatting\\FormattingMultipleSpanTests.cs",
+"region":  {
+"startLine":  197,
+"startColumn":  17,
+"endLine":  197,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"expected\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharpTest\\Formatting\\FormattingTests.cs",
+"region":  {
+"startLine":  7414,
+"startColumn":  13,
+"endLine":  7414,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"input\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharpTest\\Formatting\\FormattingTests.cs",
+"region":  {
+"startLine":  7415,
+"startColumn":  13,
+"endLine":  7415,
+"endColumn":  18
+}
+}
+}
+]
+}

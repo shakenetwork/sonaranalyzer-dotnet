@@ -1,0 +1,69 @@
+{
+"issues":  [
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Portable\\CommonTestBase.cs",
+"region":  {
+"startLine":  51,
+"startColumn":  30,
+"endLine":  51,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the explicit delegate creation; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Assert\\AssertEx.cs",
+"region":  {
+"startLine":  428,
+"startColumn":  37,
+"endLine":  428,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Diagnostics\\TestDiagnosticAnalyzer.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  87,
+"endLine":  22,
+"endColumn":  93
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the explicit delegate creation; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\MarkedSource\\SourceWithMarkedNodes.cs",
+"region":  {
+"startLine":  110,
+"startColumn":  20,
+"endLine":  110,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\TestBase.cs",
+"region":  {
+"startLine":  116,
+"startColumn":  49,
+"endLine":  116,
+"endColumn":  66
+}
+}
+}
+]
+}

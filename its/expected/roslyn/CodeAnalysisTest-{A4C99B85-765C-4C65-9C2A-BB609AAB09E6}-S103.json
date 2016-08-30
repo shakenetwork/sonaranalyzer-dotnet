@@ -1,0 +1,316 @@
+{
+"issues":  [
+{
+"id":  "S103",
+"message":  "Split this 210 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\AnalyzerFileReferenceTests.cs",
+"region":  {
+"startLine":  189,
+"startColumn":  1,
+"endLine":  189,
+"endColumn":  211
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 210 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\AnalyzerFileReferenceTests.cs",
+"region":  {
+"startLine":  241,
+"startColumn":  1,
+"endLine":  241,
+"endColumn":  211
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 231 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\CommonCommandLineParserTests.cs",
+"region":  {
+"startLine":  986,
+"startColumn":  1,
+"endLine":  986,
+"endColumn":  232
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 201 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Diagnostics\\AnalysisContextInfoTests.cs",
+"region":  {
+"startLine":  66,
+"startColumn":  1,
+"endLine":  66,
+"endColumn":  202
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 217 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Diagnostics\\CouldHaveMoreSpecificTypeAnalyzer.cs",
+"region":  {
+"startLine":  140,
+"startColumn":  1,
+"endLine":  140,
+"endColumn":  218
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 221 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Diagnostics\\CouldHaveMoreSpecificTypeAnalyzer.cs",
+"region":  {
+"startLine":  211,
+"startColumn":  1,
+"endLine":  211,
+"endColumn":  222
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 221 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Diagnostics\\CouldHaveMoreSpecificTypeAnalyzer.cs",
+"region":  {
+"startLine":  216,
+"startColumn":  1,
+"endLine":  216,
+"endColumn":  222
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 205 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Diagnostics\\OperationTestAnalyzer.cs",
+"region":  {
+"startLine":  696,
+"startColumn":  1,
+"endLine":  696,
+"endColumn":  206
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 247 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Diagnostics\\OperationTestAnalyzer.cs",
+"region":  {
+"startLine":  937,
+"startColumn":  1,
+"endLine":  937,
+"endColumn":  248
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 222 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Diagnostics\\OperationTestAnalyzer.cs",
+"region":  {
+"startLine":  1517,
+"startColumn":  1,
+"endLine":  1517,
+"endColumn":  223
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 208 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Diagnostics\\SuppressMessageAttributeTests.cs",
+"region":  {
+"startLine":  1170,
+"startColumn":  1,
+"endLine":  1170,
+"endColumn":  209
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 207 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Diagnostics\\SuppressMessageAttributeTests.cs",
+"region":  {
+"startLine":  1196,
+"startColumn":  1,
+"endLine":  1196,
+"endColumn":  208
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 298 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Diagnostics\\SuppressMessageAttributeTests.cs",
+"region":  {
+"startLine":  1211,
+"startColumn":  1,
+"endLine":  1211,
+"endColumn":  299
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 210 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Emit\\CustomDebugInfoTests.cs",
+"region":  {
+"startLine":  156,
+"startColumn":  1,
+"endLine":  156,
+"endColumn":  211
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 207 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\AssemblyIdentityComparerTests.cs",
+"region":  {
+"startLine":  41,
+"startColumn":  1,
+"endLine":  41,
+"endColumn":  208
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 202 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\AssemblyIdentityDisplayNameTests.cs",
+"region":  {
+"startLine":  451,
+"startColumn":  1,
+"endLine":  451,
+"endColumn":  203
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 211 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\AssemblyIdentityTests.cs",
+"region":  {
+"startLine":  271,
+"startColumn":  1,
+"endLine":  271,
+"endColumn":  212
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 208 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\AssemblyIdentityTests.cs",
+"region":  {
+"startLine":  283,
+"startColumn":  1,
+"endLine":  283,
+"endColumn":  209
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 204 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\AssemblyIdentityTests.cs",
+"region":  {
+"startLine":  286,
+"startColumn":  1,
+"endLine":  286,
+"endColumn":  205
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 210 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\AssemblyIdentityTests.cs",
+"region":  {
+"startLine":  289,
+"startColumn":  1,
+"endLine":  289,
+"endColumn":  211
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 214 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\FusionAssemblyIdentityComparer.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  1,
+"endLine":  32,
+"endColumn":  215
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 225 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\FusionAssemblyIdentityTests.cs",
+"region":  {
+"startLine":  101,
+"startColumn":  1,
+"endLine":  101,
+"endColumn":  226
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 225 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\MetadataHelpersTests.cs",
+"region":  {
+"startLine":  203,
+"startColumn":  1,
+"endLine":  203,
+"endColumn":  226
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 243 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\MetadataReferenceTests.cs",
+"region":  {
+"startLine":  157,
+"startColumn":  1,
+"endLine":  157,
+"endColumn":  244
+}
+}
+}
+]
+}

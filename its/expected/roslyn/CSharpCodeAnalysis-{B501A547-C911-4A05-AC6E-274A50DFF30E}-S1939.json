@@ -1,0 +1,264 @@
+{
+"issues":  [
+{
+"id":  "S1939",
+"message":  "\"Cci.INamedTypeReference\" implements \"Cci.ITypeReference\" so \"Cci.ITypeReference\" can be removed from the inheritance list.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\DynamicTypeSymbolAdapter.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  9,
+"endLine":  12,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1939",
+"message":  "\"Cci.INamespaceTypeReference\" implements \"Cci.INamedTypeReference\" so \"Cci.INamedTypeReference\" can be removed from the inheritance list.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\DynamicTypeSymbolAdapter.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  27,
+"endLine":  13,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1939",
+"message":  "\"Cci.IGenericMethodInstanceReference\" implements \"Cci.IMethodReference\" so \"Cci.IMethodReference\" can be removed from the inheritance list.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\ExpandedVarargsMethodReference.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  9,
+"endLine":  12,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1939",
+"message":  "\"Cci.IFieldDefinition\" implements \"Cci.IFieldReference\" so \"Cci.IFieldReference\" can be removed from the inheritance list.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\FieldSymbolAdapter.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  9,
+"endLine":  13,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1939",
+"message":  "\"Cci.IFieldReference\" implements \"Cci.ITypeMemberReference\" so \"Cci.ITypeMemberReference\" can be removed from the inheritance list.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\FieldSymbolAdapter.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  29,
+"endLine":  15,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1939",
+"message":  "\"Cci.IFieldDefinition\" implements \"Cci.ITypeDefinitionMember\" so \"Cci.ITypeDefinitionMember\" can be removed from the inheritance list.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\FieldSymbolAdapter.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  33,
+"endLine":  16,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1939",
+"message":  "\"Cci.IMethodReference\" implements \"Cci.ITypeMemberReference\" so \"Cci.ITypeMemberReference\" can be removed from the inheritance list.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\MethodSymbolAdapter.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  9,
+"endLine":  15,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1939",
+"message":  "\"Cci.IGenericMethodInstanceReference\" implements \"Cci.IMethodReference\" so \"Cci.IMethodReference\" can be removed from the inheritance list.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\MethodSymbolAdapter.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  33,
+"endLine":  16,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1939",
+"message":  "\"Cci.IMethodDefinition\" implements \"Cci.ITypeDefinitionMember\" so \"Cci.ITypeDefinitionMember\" can be removed from the inheritance list.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\MethodSymbolAdapter.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  40,
+"endLine":  19,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1939",
+"message":  "\"ITypeDefinition\" implements \"ITypeReference\" so \"ITypeReference\" can be removed from the inheritance list.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\NamedTypeSymbolAdapter.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  9,
+"endLine":  18,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1939",
+"message":  "\"INamedTypeDefinition\" implements \"ITypeDefinition\" so \"ITypeDefinition\" can be removed from the inheritance list.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\NamedTypeSymbolAdapter.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  27,
+"endLine":  19,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1939",
+"message":  "\"INamedTypeDefinition\" implements \"INamedTypeReference\" so \"INamedTypeReference\" can be removed from the inheritance list.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\NamedTypeSymbolAdapter.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  28,
+"endLine":  20,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1939",
+"message":  "\"INamespaceTypeDefinition\" implements \"INamedTypeDefinition\" so \"INamedTypeDefinition\" can be removed from the inheritance list.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\NamedTypeSymbolAdapter.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  32,
+"endLine":  21,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1939",
+"message":  "\"INamespaceTypeDefinition\" implements \"INamespaceTypeReference\" so \"INamespaceTypeReference\" can be removed from the inheritance list.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\NamedTypeSymbolAdapter.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  33,
+"endLine":  22,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1939",
+"message":  "\"INestedTypeDefinition\" implements \"INestedTypeReference\" so \"INestedTypeReference\" can be removed from the inheritance list.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\NamedTypeSymbolAdapter.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  37,
+"endLine":  24,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S1939",
+"message":  "\"Cci.IParameterDefinition\" implements \"Cci.IParameterTypeInformation\" so \"Cci.IParameterTypeInformation\" can be removed from the inheritance list.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\ParameterSymbolAdapter.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  9,
+"endLine":  13,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1939",
+"message":  "\"Cci.IGenericMethodParameterReference\" implements \"Cci.IGenericParameterReference\" so \"Cci.IGenericParameterReference\" can be removed from the inheritance list.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\TypeParameterSymbolAdapter.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  9,
+"endLine":  15,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1939",
+"message":  "\"Cci.IGenericMethodParameter\" implements \"Cci.IGenericMethodParameterReference\" so \"Cci.IGenericMethodParameterReference\" can be removed from the inheritance list.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\TypeParameterSymbolAdapter.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  39,
+"endLine":  16,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1939",
+"message":  "\"Cci.IGenericTypeParameter\" implements \"Cci.IGenericTypeParameterReference\" so \"Cci.IGenericTypeParameterReference\" can be removed from the inheritance list.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\TypeParameterSymbolAdapter.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  45,
+"endLine":  17,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1939",
+"message":  "\"Cci.IGenericMethodParameter\" implements \"Cci.IGenericParameter\" so \"Cci.IGenericParameter\" can be removed from the inheritance list.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\TypeParameterSymbolAdapter.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  43,
+"endLine":  18,
+"endColumn":  30
+}
+}
+}
+]
+}

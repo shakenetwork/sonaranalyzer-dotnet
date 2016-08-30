@@ -1,0 +1,69 @@
+{
+"issues":  [
+{
+"id":  "S1481",
+"message":  "Remove this unused \"type\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\CSharpSyntaxGenerator\\SourceWriter.cs",
+"region":  {
+"startLine":  364,
+"startColumn":  24,
+"endLine":  364,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"valueFields\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\CSharpSyntaxGenerator\\TestWriter.cs",
+"region":  {
+"startLine":  318,
+"startColumn":  17,
+"endLine":  318,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"nodeFields\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\CSharpSyntaxGenerator\\TestWriter.cs",
+"region":  {
+"startLine":  319,
+"startColumn":  17,
+"endLine":  319,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"valueFields\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\CSharpSyntaxGenerator\\TestWriter.cs",
+"region":  {
+"startLine":  346,
+"startColumn":  17,
+"endLine":  346,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"nodeFields\" local variable.",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\CSharpSyntaxGenerator\\TestWriter.cs",
+"region":  {
+"startLine":  347,
+"startColumn":  17,
+"endLine":  347,
+"endColumn":  27
+}
+}
+}
+]
+}

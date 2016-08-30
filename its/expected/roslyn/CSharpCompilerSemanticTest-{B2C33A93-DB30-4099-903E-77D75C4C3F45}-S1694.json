@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\FlowAnalysis\\FlowTestBase.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  27,
+"endLine":  13,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\OverloadResolutionTestBase.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  27,
+"endLine":  17,
+"endColumn":  53
+}
+}
+}
+]
+}

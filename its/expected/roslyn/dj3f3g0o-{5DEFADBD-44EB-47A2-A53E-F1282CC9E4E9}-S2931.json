@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_libraryManager\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\CSharpPackage.cs",
+"region":  {
+"startLine":  67,
+"startColumn":  20,
+"endLine":  67,
+"endColumn":  33
+}
+}
+}
+]
+}

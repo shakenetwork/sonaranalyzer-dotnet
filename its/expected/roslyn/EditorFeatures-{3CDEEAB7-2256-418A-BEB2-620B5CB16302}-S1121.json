@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"_lastTask\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\ModelComputation.cs",
+"region":  {
+"startLine":  61,
+"startColumn":  47,
+"endLine":  61,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"_lastTask\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\ModelComputation.cs",
+"region":  {
+"startLine":  109,
+"startColumn":  47,
+"endLine":  109,
+"endColumn":  48
+}
+}
+}
+]
+}

@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\" on a string.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharpTest\\CodeGeneration\\SyntaxGeneratorTests.cs",
+"region":  {
+"startLine":  2619,
+"startColumn":  50,
+"endLine":  2619,
+"endColumn":  61
+}
+}
+}
+]
+}

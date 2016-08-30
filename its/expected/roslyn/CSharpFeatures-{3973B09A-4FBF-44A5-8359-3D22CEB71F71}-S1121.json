@@ -1,0 +1,69 @@
+{
+"issues":  [
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"statement\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  675,
+"startColumn":  45,
+"endLine":  675,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"newBody\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\EditAndContinue\\CSharpEditAndContinueAnalyzer.cs",
+"region":  {
+"startLine":  914,
+"startColumn":  35,
+"endLine":  914,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"generateTypeServiceStateOptions.NameOrMemberAccessExpression\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateType\\CSharpGenerateTypeService.cs",
+"region":  {
+"startLine":  169,
+"startColumn":  109,
+"endLine":  169,
+"endColumn":  110
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"generateTypeServiceStateOptions.NameOrMemberAccessExpression\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateType\\CSharpGenerateTypeService.cs",
+"region":  {
+"startLine":  186,
+"startColumn":  109,
+"endLine":  186,
+"endColumn":  110
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"generateTypeServiceStateOptions.ObjectCreationExpressionOpt\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\GenerateType\\CSharpGenerateTypeService.cs",
+"region":  {
+"startLine":  385,
+"startColumn":  111,
+"endLine":  385,
+"endColumn":  112
+}
+}
+}
+]
+}

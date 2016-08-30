@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\EditAndContinue\\CSharpEditAndContinueAnalyzerTests.cs",
+"region":  {
+"startLine":  58,
+"startColumn":  21,
+"endLine":  58,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  579,
+"startColumn":  25,
+"endLine":  579,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Workspaces\\WorkspaceTests.cs",
+"region":  {
+"startLine":  641,
+"startColumn":  29,
+"endLine":  641,
+"endColumn":  35
+}
+}
+}
+]
+}

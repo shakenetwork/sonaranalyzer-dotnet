@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S131",
+"message":  "Add a \"default\" clause to this \"switch\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\Diagnostics\\Suppression\\SuppressionTests.cs",
+"region":  {
+"startLine":  738,
+"startColumn":  25,
+"endLine":  738,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"default\" clause to this \"switch\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\CSharpTest\\SymbolId\\SymbolKeyTestBase.cs",
+"region":  {
+"startLine":  219,
+"startColumn":  17,
+"endLine":  219,
+"endColumn":  23
+}
+}
+}
+]
+}

@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2674",
+"message":  "Check the return value of the \"Read\" call to see how many bytes were read.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\InternalUtilities\\StreamExtensionsTests.cs",
+"region":  {
+"startLine":  96,
+"startColumn":  21,
+"endLine":  96,
+"endColumn":  59
+}
+}
+}
+]
+}

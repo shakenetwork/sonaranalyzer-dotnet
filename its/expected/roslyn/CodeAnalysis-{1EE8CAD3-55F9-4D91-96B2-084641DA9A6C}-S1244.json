@@ -1,0 +1,69 @@
+{
+"issues":  [
+{
+"id":  "S1244",
+"message":  "Do not check floating point equality with exact values, use a range instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ConstantValue.cs",
+"region":  {
+"startLine":  240,
+"startColumn":  28,
+"endLine":  240,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1244",
+"message":  "Do not check floating point equality with exact values, use a range instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ConstantValue.cs",
+"region":  {
+"startLine":  254,
+"startColumn":  28,
+"endLine":  254,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1244",
+"message":  "Do not check floating point equality with exact values, use a range instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ConstantValue.cs",
+"region":  {
+"startLine":  268,
+"startColumn":  28,
+"endLine":  268,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1244",
+"message":  "Do not check floating point equality with exact values, use a range instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ConstantValueSpecialized.cs",
+"region":  {
+"startLine":  401,
+"startColumn":  87,
+"endLine":  401,
+"endColumn":  89
+}
+}
+},
+{
+"id":  "S1244",
+"message":  "Do not check floating point equality with exact values, use a range instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ConstantValueSpecialized.cs",
+"region":  {
+"startLine":  424,
+"startColumn":  87,
+"endLine":  424,
+"endColumn":  89
+}
+}
+}
+]
+}

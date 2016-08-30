@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_submissionCount\", the compiler will do that for you.",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\EditorFeatures\\Core\\Extensibility\\Interactive\\InteractiveEvaluator.cs",
+"region":  {
+"startLine":  67,
+"startColumn":  38,
+"endLine":  67,
+"endColumn":  41
+}
+}
+}
+]
+}

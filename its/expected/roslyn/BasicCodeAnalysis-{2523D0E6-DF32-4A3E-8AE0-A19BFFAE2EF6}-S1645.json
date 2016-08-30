@@ -1,0 +1,433 @@
+{
+"issues":  [
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Symbols.vb",
+"region":  {
+"startLine":  1195,
+"startColumn":  108,
+"endLine":  1195,
+"endColumn":  109
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Symbols.vb",
+"region":  {
+"startLine":  1196,
+"startColumn":  33,
+"endLine":  1196,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\CodeGen\\EmitStatement.vb",
+"region":  {
+"startLine":  960,
+"startColumn":  76,
+"endLine":  960,
+"endColumn":  77
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\CommandLine\\VisualBasicCommandLineParser.vb",
+"region":  {
+"startLine":  1348,
+"startColumn":  55,
+"endLine":  1348,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\CommandLine\\VisualBasicCommandLineParser.vb",
+"region":  {
+"startLine":  1727,
+"startColumn":  41,
+"endLine":  1727,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\CommandLine\\VisualBasicCommandLineParser.vb",
+"region":  {
+"startLine":  2132,
+"startColumn":  86,
+"endLine":  2132,
+"endColumn":  87
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Compilation\\DocumentationComments\\DocumentationCommentCompiler.Includes.vb",
+"region":  {
+"startLine":  633,
+"startColumn":  56,
+"endLine":  633,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Compilation\\DocumentationComments\\DocumentationCommentCompiler.Includes.vb",
+"region":  {
+"startLine":  671,
+"startColumn":  60,
+"endLine":  671,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Compilation\\DocumentationComments\\DocumentationCommentCompiler.Includes.vb",
+"region":  {
+"startLine":  695,
+"startColumn":  56,
+"endLine":  695,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Compilation\\DocumentationComments\\DocumentationCommentCompiler.TextUtils.vb",
+"region":  {
+"startLine":  180,
+"startColumn":  117,
+"endLine":  180,
+"endColumn":  118
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Compilation\\VisualBasicCompilationReference.vb",
+"region":  {
+"startLine":  127,
+"startColumn":  55,
+"endLine":  127,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Errors\\ErrorFactories.vb",
+"region":  {
+"startLine":  115,
+"startColumn":  64,
+"endLine":  115,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Errors\\ErrorFactories.vb",
+"region":  {
+"startLine":  119,
+"startColumn":  64,
+"endLine":  119,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Lowering\\AsyncRewriter\\AsyncRewriter.AsyncMethodToClassRewriter.Spilling.vb",
+"region":  {
+"startLine":  334,
+"startColumn":  87,
+"endLine":  334,
+"endColumn":  88
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Lowering\\AsyncRewriter\\AsyncRewriter.CapturedSymbolOrExpression.vb",
+"region":  {
+"startLine":  27,
+"startColumn":  77,
+"endLine":  27,
+"endColumn":  78
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Lowering\\AsyncRewriter\\AsyncRewriter.vb",
+"region":  {
+"startLine":  455,
+"startColumn":  94,
+"endLine":  455,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_StringConcat.vb",
+"region":  {
+"startLine":  217,
+"startColumn":  49,
+"endLine":  217,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Lowering\\SynthesizedSubmissionFields.vb",
+"region":  {
+"startLine":  74,
+"startColumn":  31,
+"endLine":  74,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Lowering\\SynthesizedSubmissionFields.vb",
+"region":  {
+"startLine":  74,
+"startColumn":  61,
+"endLine":  74,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\OptionsValidator.vb",
+"region":  {
+"startLine":  27,
+"startColumn":  100,
+"endLine":  27,
+"endColumn":  101
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\OptionsValidator.vb",
+"region":  {
+"startLine":  27,
+"startColumn":  107,
+"endLine":  27,
+"endColumn":  108
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\OptionsValidator.vb",
+"region":  {
+"startLine":  27,
+"startColumn":  116,
+"endLine":  27,
+"endColumn":  117
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Metadata\\PE\\PEModuleSymbol.vb",
+"region":  {
+"startLine":  155,
+"startColumn":  85,
+"endLine":  155,
+"endColumn":  86
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\NamedTypeSymbol.vb",
+"region":  {
+"startLine":  167,
+"startColumn":  152,
+"endLine":  167,
+"endColumn":  153
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceNamespaceSymbol.vb",
+"region":  {
+"startLine":  654,
+"startColumn":  95,
+"endLine":  654,
+"endColumn":  96
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceNamespaceSymbol.vb",
+"region":  {
+"startLine":  654,
+"startColumn":  101,
+"endLine":  654,
+"endColumn":  102
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourcePropertySymbol.vb",
+"region":  {
+"startLine":  187,
+"startColumn":  41,
+"endLine":  187,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourcePropertySymbol.vb",
+"region":  {
+"startLine":  263,
+"startColumn":  33,
+"endLine":  263,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Syntax\\SyntaxFacts.vb",
+"region":  {
+"startLine":  541,
+"startColumn":  65,
+"endLine":  541,
+"endColumn":  66
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Syntax\\SyntaxFacts.vb",
+"region":  {
+"startLine":  541,
+"startColumn":  71,
+"endLine":  541,
+"endColumn":  72
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Syntax\\SyntaxNodeFactories.vb",
+"region":  {
+"startLine":  336,
+"startColumn":  138,
+"endLine":  336,
+"endColumn":  139
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Syntax\\SyntaxNodeFactories.vb",
+"region":  {
+"startLine":  336,
+"startColumn":  145,
+"endLine":  336,
+"endColumn":  146
+}
+}
+},
+{
+"id":  "S1645",
+"message":  "Switch this use of the \"+\" operator to the \"\u0026\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Syntax\\SyntaxNormalizer.vb",
+"region":  {
+"startLine":  94,
+"startColumn":  84,
+"endLine":  94,
+"endColumn":  85
+}
+}
+}
+]
+}

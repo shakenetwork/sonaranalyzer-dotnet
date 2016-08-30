@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S1125",
+"message":  "Remove the unnecessary Boolean literal(s).",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\DocumentExtensions.cs",
+"region":  {
+"startLine":  117,
+"startColumn":  132,
+"endLine":  117,
+"endColumn":  136
+}
+}
+},
+{
+"id":  "S1125",
+"message":  "Remove the unnecessary Boolean literal(s).",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\SemanticEquivalence.cs",
+"region":  {
+"startLine":  79,
+"startColumn":  27,
+"endLine":  79,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1125",
+"message":  "Remove the unnecessary Boolean literal(s).",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\SymbolKey\\SymbolKey.SymbolKeyReader.cs",
+"region":  {
+"startLine":  413,
+"startColumn":  57,
+"endLine":  413,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S1125",
+"message":  "Remove the unnecessary Boolean literal(s).",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\SymbolKey\\SymbolKey.SymbolKeyReader.cs",
+"region":  {
+"startLine":  417,
+"startColumn":  54,
+"endLine":  417,
+"endColumn":  61
+}
+}
+}
+]
+}

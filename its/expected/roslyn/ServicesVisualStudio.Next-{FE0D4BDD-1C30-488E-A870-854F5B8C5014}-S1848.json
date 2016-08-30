@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1848",
+"message":  "Either remove this useless object instantiation of class \"LazyToolTip\" or use it.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Next\\FindReferences\\StreamingFindReferencesPresenter.LazyToolTip.cs",
+"region":  {
+"startLine":  48,
+"startColumn":  17,
+"endLine":  48,
+"endColumn":  58
+}
+}
+}
+]
+}

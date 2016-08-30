@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\SolutionTests\\ProjectDependencyGraphTests.cs",
+"region":  {
+"startLine":  161,
+"startColumn":  25,
+"endLine":  161,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\SolutionTests\\SolutionTests.cs",
+"region":  {
+"startLine":  234,
+"startColumn":  25,
+"endLine":  234,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\UtilityTest\\EditDistanceTests.cs",
+"region":  {
+"startLine":  289,
+"startColumn":  25,
+"endLine":  289,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\WorkspaceTests\\FileSet.cs",
+"region":  {
+"startLine":  50,
+"startColumn":  25,
+"endLine":  50,
+"endColumn":  27
+}
+}
+}
+]
+}

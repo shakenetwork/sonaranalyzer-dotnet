@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S3241",
+"message":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\Editor\\InteractiveWindow.UIThreadOnly.cs",
+"region":  {
+"startLine":  2312,
+"startColumn":  21,
+"endLine":  2312,
+"endColumn":  25
+}
+}
+}
+]
+}

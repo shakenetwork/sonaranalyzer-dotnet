@@ -1,0 +1,1668 @@
+{
+"issues":  [
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\BuckStopsHereBinder.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  14,
+"endLine":  15,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\LocalScopeBinder.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  14,
+"endLine":  13,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\SwitchBinder.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  14,
+"endLine":  15,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Binder\\SwitchBinder_BindPatternSwitch.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  14,
+"endLine":  15,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\BoundTree\\BoundNode.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  23,
+"endLine":  9,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\BoundTree\\BoundNodeExtensions.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  21,
+"endLine":  11,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\BoundTree\\BoundStatementExtensions.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  21,
+"endLine":  9,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Compiler\\ClsComplianceChecker.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  14,
+"endLine":  18,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Compiler\\MethodBodySynthesizer.Lowered.cs",
+"region":  {
+"startLine":  206,
+"startColumn":  22,
+"endLine":  206,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Compiler\\MethodBodySynthesizer.Lowered.cs",
+"region":  {
+"startLine":  251,
+"startColumn":  21,
+"endLine":  251,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Declarations\\DeclarationKind.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  21,
+"endLine":  23,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\EditAndContinue\\CSharpDefinitionMap.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  21,
+"endLine":  20,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Emitter\\Model\\SpecializedGenericNestedTypeInstanceReference.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  16,
+"endLine":  26,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Errors\\MessageID.cs",
+"region":  {
+"startLine":  151,
+"startColumn":  21,
+"endLine":  151,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\FlowAnalysis\\AbstractFlowPass.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  23,
+"endLine":  17,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\LanguageVersion.cs",
+"region":  {
+"startLine":  77,
+"startColumn":  21,
+"endLine":  77,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\AsyncRewriter\\AsyncRewriter.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  14,
+"endLine":  9,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\IteratorRewriter\\IteratorRewriter.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  14,
+"endLine":  12,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LocalRewriter.cs",
+"region":  {
+"startLine":  282,
+"startColumn":  25,
+"endLine":  282,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_LocalDeclaration.cs",
+"region":  {
+"startLine":  85,
+"startColumn":  25,
+"endLine":  85,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Lowering\\StateMachineRewriter\\SynthesizedStateMachineMethod.cs",
+"region":  {
+"startLine":  114,
+"startColumn":  18,
+"endLine":  114,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Parser\\LexerCache.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  14,
+"endLine":  14,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\AliasSymbol.cs",
+"region":  {
+"startLine":  213,
+"startColumn":  18,
+"endLine":  213,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\AnonymousTypes\\PublicSymbols\\AnonymousType.TypePublicSymbol.cs",
+"region":  {
+"startLine":  292,
+"startColumn":  22,
+"endLine":  292,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\AnonymousTypes\\SynthesizedSymbols\\AnonymousType.ConstructorSymbol.cs",
+"region":  {
+"startLine":  76,
+"startColumn":  22,
+"endLine":  76,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\AnonymousTypes\\SynthesizedSymbols\\AnonymousType.EqualsMethodSymbol.cs",
+"region":  {
+"startLine":  63,
+"startColumn":  22,
+"endLine":  63,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\AnonymousTypes\\SynthesizedSymbols\\AnonymousType.FieldSymbol.cs",
+"region":  {
+"startLine":  88,
+"startColumn":  22,
+"endLine":  88,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\AnonymousTypes\\SynthesizedSymbols\\AnonymousType.GetHashCodeMethodSymbol.cs",
+"region":  {
+"startLine":  58,
+"startColumn":  22,
+"endLine":  58,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\AnonymousTypes\\SynthesizedSymbols\\AnonymousType.PropertyAccessorSymbol.cs",
+"region":  {
+"startLine":  68,
+"startColumn":  22,
+"endLine":  68,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\AnonymousTypes\\SynthesizedSymbols\\AnonymousType.PropertySymbol.cs",
+"region":  {
+"startLine":  119,
+"startColumn":  22,
+"endLine":  119,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\AnonymousTypes\\SynthesizedSymbols\\AnonymousType.TemplateSymbol.cs",
+"region":  {
+"startLine":  406,
+"startColumn":  22,
+"endLine":  406,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\AnonymousTypes\\SynthesizedSymbols\\AnonymousType.ToStringMethodSymbol.cs",
+"region":  {
+"startLine":  58,
+"startColumn":  22,
+"endLine":  58,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\ConstructedNamedTypeSymbol.cs",
+"region":  {
+"startLine":  128,
+"startColumn":  18,
+"endLine":  128,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\DynamicTypeSymbol.cs",
+"region":  {
+"startLine":  110,
+"startColumn":  18,
+"endLine":  110,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\DynamicTypeSymbol.cs",
+"region":  {
+"startLine":  118,
+"startColumn":  18,
+"endLine":  118,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\EnumConversions.cs",
+"region":  {
+"startLine":  7,
+"startColumn":  21,
+"endLine":  7,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\ErrorMethodSymbol.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  18,
+"endLine":  32,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\ErrorMethodSymbol.cs",
+"region":  {
+"startLine":  77,
+"startColumn":  18,
+"endLine":  77,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\ErrorMethodSymbol.cs",
+"region":  {
+"startLine":  200,
+"startColumn":  18,
+"endLine":  200,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\ErrorMethodSymbol.cs",
+"region":  {
+"startLine":  205,
+"startColumn":  18,
+"endLine":  205,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\ErrorMethodSymbol.cs",
+"region":  {
+"startLine":  218,
+"startColumn":  18,
+"endLine":  218,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\ErrorMethodSymbol.cs",
+"region":  {
+"startLine":  223,
+"startColumn":  16,
+"endLine":  223,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\ErrorMethodSymbol.cs",
+"region":  {
+"startLine":  228,
+"startColumn":  18,
+"endLine":  228,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\ErrorMethodSymbol.cs",
+"region":  {
+"startLine":  233,
+"startColumn":  18,
+"endLine":  233,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\ErrorMethodSymbol.cs",
+"region":  {
+"startLine":  238,
+"startColumn":  18,
+"endLine":  238,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\ErrorMethodSymbol.cs",
+"region":  {
+"startLine":  243,
+"startColumn":  18,
+"endLine":  243,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\ErrorPropertySymbol.cs",
+"region":  {
+"startLine":  76,
+"startColumn":  18,
+"endLine":  76,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\MergedNamespaceSymbol.cs",
+"region":  {
+"startLine":  221,
+"startColumn":  18,
+"endLine":  221,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\MergedNamespaceSymbol.cs",
+"region":  {
+"startLine":  226,
+"startColumn":  16,
+"endLine":  226,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PEAssemblySymbol.cs",
+"region":  {
+"startLine":  252,
+"startColumn":  18,
+"endLine":  252,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PEEventSymbol.cs",
+"region":  {
+"startLine":  462,
+"startColumn":  18,
+"endLine":  462,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PEFieldSymbol.cs",
+"region":  {
+"startLine":  512,
+"startColumn":  18,
+"endLine":  512,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PEGlobalNamespaceSymbol.cs",
+"region":  {
+"startLine":  97,
+"startColumn":  18,
+"endLine":  97,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PEModuleSymbol.cs",
+"region":  {
+"startLine":  618,
+"startColumn":  18,
+"endLine":  618,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PENestedNamespaceSymbol.cs",
+"region":  {
+"startLine":  134,
+"startColumn":  18,
+"endLine":  134,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PEPropertySymbol.cs",
+"region":  {
+"startLine":  668,
+"startColumn":  18,
+"endLine":  668,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Metadata\\PE\\PETypeParameterSymbol.cs",
+"region":  {
+"startLine":  365,
+"startColumn":  18,
+"endLine":  365,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\PointerTypeSymbol.cs",
+"region":  {
+"startLine":  123,
+"startColumn":  18,
+"endLine":  123,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\PointerTypeSymbol.cs",
+"region":  {
+"startLine":  131,
+"startColumn":  18,
+"endLine":  131,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\ReducedExtensionMethodSymbol.cs",
+"region":  {
+"startLine":  271,
+"startColumn":  18,
+"endLine":  271,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\ReducedExtensionMethodSymbol.cs",
+"region":  {
+"startLine":  276,
+"startColumn":  18,
+"endLine":  276,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\ReducedExtensionMethodSymbol.cs",
+"region":  {
+"startLine":  289,
+"startColumn":  18,
+"endLine":  289,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\ReducedExtensionMethodSymbol.cs",
+"region":  {
+"startLine":  465,
+"startColumn":  20,
+"endLine":  465,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\ReducedExtensionMethodSymbol.cs",
+"region":  {
+"startLine":  483,
+"startColumn":  20,
+"endLine":  483,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\RefKindExtensions.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  21,
+"endLine":  10,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Retargeting\\RetargetingAssemblySymbol.cs",
+"region":  {
+"startLine":  268,
+"startColumn":  18,
+"endLine":  268,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Retargeting\\RetargetingEventSymbol.cs",
+"region":  {
+"startLine":  183,
+"startColumn":  18,
+"endLine":  183,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Retargeting\\RetargetingFieldSymbol.cs",
+"region":  {
+"startLine":  139,
+"startColumn":  18,
+"endLine":  139,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Retargeting\\RetargetingMethodSymbol.cs",
+"region":  {
+"startLine":  305,
+"startColumn":  18,
+"endLine":  305,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Retargeting\\RetargetingModuleSymbol.cs",
+"region":  {
+"startLine":  281,
+"startColumn":  18,
+"endLine":  281,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Retargeting\\RetargetingNamedTypeSymbol.cs",
+"region":  {
+"startLine":  379,
+"startColumn":  18,
+"endLine":  379,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Retargeting\\RetargetingNamespaceSymbol.cs",
+"region":  {
+"startLine":  230,
+"startColumn":  18,
+"endLine":  230,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Retargeting\\RetargetingPropertySymbol.cs",
+"region":  {
+"startLine":  244,
+"startColumn":  18,
+"endLine":  244,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Retargeting\\RetargetingTypeParameterSymbol.cs",
+"region":  {
+"startLine":  100,
+"startColumn":  18,
+"endLine":  100,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\SignatureOnlyMethodSymbol.cs",
+"region":  {
+"startLine":  134,
+"startColumn":  18,
+"endLine":  134,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\SignatureOnlyMethodSymbol.cs",
+"region":  {
+"startLine":  136,
+"startColumn":  18,
+"endLine":  136,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\SignatureOnlyParameterSymbol.cs",
+"region":  {
+"startLine":  73,
+"startColumn":  18,
+"endLine":  73,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\ImplicitNamedTypeSymbol.cs",
+"region":  {
+"startLine":  140,
+"startColumn":  18,
+"endLine":  140,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\ImplicitNamedTypeSymbol.cs",
+"region":  {
+"startLine":  145,
+"startColumn":  18,
+"endLine":  145,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\ImplicitNamedTypeSymbol.cs",
+"region":  {
+"startLine":  150,
+"startColumn":  18,
+"endLine":  150,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\ImplicitNamedTypeSymbol.cs",
+"region":  {
+"startLine":  165,
+"startColumn":  18,
+"endLine":  165,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\ImplicitNamedTypeSymbol.cs",
+"region":  {
+"startLine":  170,
+"startColumn":  18,
+"endLine":  170,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\LambdaSymbol.cs",
+"region":  {
+"startLine":  100,
+"startColumn":  18,
+"endLine":  100,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\LambdaSymbol.cs",
+"region":  {
+"startLine":  105,
+"startColumn":  18,
+"endLine":  105,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\LambdaSymbol.cs",
+"region":  {
+"startLine":  110,
+"startColumn":  18,
+"endLine":  110,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\LambdaSymbol.cs",
+"region":  {
+"startLine":  347,
+"startColumn":  16,
+"endLine":  347,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\LocalFunctionSymbol.cs",
+"region":  {
+"startLine":  241,
+"startColumn":  16,
+"endLine":  241,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\LocalFunctionSymbol.cs",
+"region":  {
+"startLine":  422,
+"startColumn":  16,
+"endLine":  422,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceAssemblySymbol.cs",
+"region":  {
+"startLine":  153,
+"startColumn":  18,
+"endLine":  153,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceAssemblySymbol.cs",
+"region":  {
+"startLine":  1484,
+"startColumn":  16,
+"endLine":  1484,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceClonedParameterSymbol.cs",
+"region":  {
+"startLine":  114,
+"startColumn":  16,
+"endLine":  114,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceDestructorSymbol.cs",
+"region":  {
+"startLine":  135,
+"startColumn":  18,
+"endLine":  135,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceDestructorSymbol.cs",
+"region":  {
+"startLine":  148,
+"startColumn":  18,
+"endLine":  148,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceMemberMethodSymbol.cs",
+"region":  {
+"startLine":  350,
+"startColumn":  19,
+"endLine":  350,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceModuleSymbol.cs",
+"region":  {
+"startLine":  197,
+"startColumn":  18,
+"endLine":  197,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceModuleSymbol.cs",
+"region":  {
+"startLine":  202,
+"startColumn":  18,
+"endLine":  202,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceModuleSymbol.cs",
+"region":  {
+"startLine":  466,
+"startColumn":  16,
+"endLine":  466,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol.cs",
+"region":  {
+"startLine":  470,
+"startColumn":  16,
+"endLine":  470,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol.cs",
+"region":  {
+"startLine":  623,
+"startColumn":  18,
+"endLine":  623,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol.cs",
+"region":  {
+"startLine":  844,
+"startColumn":  18,
+"endLine":  844,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol.cs",
+"region":  {
+"startLine":  849,
+"startColumn":  18,
+"endLine":  849,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol.cs",
+"region":  {
+"startLine":  858,
+"startColumn":  18,
+"endLine":  858,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol.cs",
+"region":  {
+"startLine":  893,
+"startColumn":  18,
+"endLine":  893,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol.cs",
+"region":  {
+"startLine":  935,
+"startColumn":  18,
+"endLine":  935,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol.cs",
+"region":  {
+"startLine":  953,
+"startColumn":  18,
+"endLine":  953,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol_Bases.cs",
+"region":  {
+"startLine":  30,
+"startColumn":  18,
+"endLine":  30,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourceNamedTypeSymbol_Bases.cs",
+"region":  {
+"startLine":  60,
+"startColumn":  18,
+"endLine":  60,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourcePropertySymbol.cs",
+"region":  {
+"startLine":  1004,
+"startColumn":  16,
+"endLine":  1004,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourcePropertySymbol.cs",
+"region":  {
+"startLine":  1198,
+"startColumn":  18,
+"endLine":  1198,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\SourcePropertySymbol.cs",
+"region":  {
+"startLine":  1203,
+"startColumn":  18,
+"endLine":  1203,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Source\\ThisParameterSymbol.cs",
+"region":  {
+"startLine":  142,
+"startColumn":  18,
+"endLine":  142,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\SubstitutedParameterSymbol.cs",
+"region":  {
+"startLine":  78,
+"startColumn":  16,
+"endLine":  78,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\SubstitutedParameterSymbol.cs",
+"region":  {
+"startLine":  96,
+"startColumn":  16,
+"endLine":  96,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Synthesized\\GeneratedNames.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  21,
+"endLine":  13,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Synthesized\\SynthesizedSealedPropertyAccessor.cs",
+"region":  {
+"startLine":  290,
+"startColumn":  18,
+"endLine":  290,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Synthesized\\SynthesizedSealedPropertyAccessor.cs",
+"region":  {
+"startLine":  303,
+"startColumn":  18,
+"endLine":  303,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Synthesized\\SynthesizedStaticConstructor.cs",
+"region":  {
+"startLine":  281,
+"startColumn":  16,
+"endLine":  281,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Synthesized\\SynthesizedStaticConstructor.cs",
+"region":  {
+"startLine":  289,
+"startColumn":  18,
+"endLine":  289,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Synthesized\\SynthesizedStaticConstructor.cs",
+"region":  {
+"startLine":  298,
+"startColumn":  18,
+"endLine":  298,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Synthesized\\SynthesizedStaticConstructor.cs",
+"region":  {
+"startLine":  303,
+"startColumn":  18,
+"endLine":  303,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Synthesized\\SynthesizedStaticConstructor.cs",
+"region":  {
+"startLine":  344,
+"startColumn":  18,
+"endLine":  344,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Tuples\\TupleErrorFieldSymbol.cs",
+"region":  {
+"startLine":  110,
+"startColumn":  25,
+"endLine":  110,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"sealed\" is redundant in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\Tuples\\TupleTypeSymbol.cs",
+"region":  {
+"startLine":  682,
+"startColumn":  18,
+"endLine":  682,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Symbols\\TypeParameterSymbolExtensions.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  21,
+"endLine":  12,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\CSharpSyntaxNode.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  21,
+"endLine":  24,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\InternalSyntax\\StructuredTriviaSyntax.cs",
+"region":  {
+"startLine":  7,
+"startColumn":  23,
+"endLine":  7,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Syntax\\StructuredTriviaSyntax.cs",
+"region":  {
+"startLine":  8,
+"startColumn":  21,
+"endLine":  8,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Portable\\Utilities\\FunctionExtensions.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  21,
+"endLine":  11,
+"endColumn":  28
+}
+}
+}
+]
+}

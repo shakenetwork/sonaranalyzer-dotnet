@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S3241",
+"message":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\Diagnostics\\EngineV2\\DiagnosticIncrementalAnalyzer.StateManager.cs",
+"region":  {
+"startLine":  172,
+"startColumn":  20,
+"endLine":  172,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S3241",
+"message":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\GenerateType\\AbstractGenerateTypeService.State.cs",
+"region":  {
+"startLine":  333,
+"startColumn":  21,
+"endLine":  333,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3241",
+"message":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\SolutionCrawlerProgressReporter.cs",
+"region":  {
+"startLine":  74,
+"startColumn":  20,
+"endLine":  74,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S3241",
+"message":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\Core\\Portable\\SolutionCrawler\\SolutionCrawlerProgressReporter.cs",
+"region":  {
+"startLine":  85,
+"startColumn":  20,
+"endLine":  85,
+"endColumn":  24
+}
+}
+}
+]
+}

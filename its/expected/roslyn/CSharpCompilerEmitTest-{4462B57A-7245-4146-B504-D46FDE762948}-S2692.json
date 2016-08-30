@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2692",
+"message":  "0 is a valid index, but this check ignores it.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Emit\\Emit\\EditAndContinue\\LocalSlotMappingTests.cs",
+"region":  {
+"startLine":  1460,
+"startColumn":  81,
+"endLine":  1460,
+"endColumn":  84
+}
+}
+}
+]
+}

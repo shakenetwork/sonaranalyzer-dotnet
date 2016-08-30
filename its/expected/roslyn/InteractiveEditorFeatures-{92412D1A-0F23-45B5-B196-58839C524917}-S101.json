@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S101",
+"message":  "Rename class \"CSharpVBInteractiveCommandsContentTypes\" to match camel case naming rules, consider using \"CSharpVbInteractiveCommandsContentTypes\".",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\EditorFeatures\\Core\\Extensibility\\Interactive\\CSharpVBInteractiveCommandContentTypes.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  27,
+"endLine":  13,
+"endColumn":  66
+}
+}
+}
+]
+}

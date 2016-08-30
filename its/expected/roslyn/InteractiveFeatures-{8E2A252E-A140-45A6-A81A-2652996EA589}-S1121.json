@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"_readErrorOutputThread\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\Interactive\\Features\\Interactive\\Core\\InteractiveHost.RemoteService.cs",
+"region":  {
+"startLine":  153,
+"startColumn":  60,
+"endLine":  153,
+"endColumn":  61
+}
+}
+}
+]
+}

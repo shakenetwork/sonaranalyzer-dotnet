@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S2357",
+"message":  "Make \"LastAccessed\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Remote\\Core\\Services\\AssetService.cs",
+"region":  {
+"startLine":  164,
+"startColumn":  29,
+"endLine":  164,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Object\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Remote\\Core\\Services\\AssetService.cs",
+"region":  {
+"startLine":  167,
+"startColumn":  36,
+"endLine":  167,
+"endColumn":  42
+}
+}
+}
+]
+}

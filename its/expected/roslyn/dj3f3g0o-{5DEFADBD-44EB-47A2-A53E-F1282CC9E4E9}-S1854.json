@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"text\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\LanguageService\\CSharpHelpContextService.cs",
+"region":  {
+"startLine":  109,
+"startColumn":  25,
+"endLine":  109,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"isFirst\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\ObjectBrowser\\DescriptionBuilder.cs",
+"region":  {
+"startLine":  391,
+"startColumn":  25,
+"endLine":  391,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"foundHierarchy\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\CSharp\\Impl\\ProjectSystemShim\\CSharpProjectShim.ICSharpProjectSite.cs",
+"region":  {
+"startLine":  80,
+"startColumn":  32,
+"endLine":  80,
+"endColumn":  38
+}
+}
+}
+]
+}

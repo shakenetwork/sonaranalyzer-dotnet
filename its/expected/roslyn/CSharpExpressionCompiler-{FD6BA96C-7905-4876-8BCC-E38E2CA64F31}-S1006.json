@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1006",
+"message":  "Add the default parameter value defined in the overridden method.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\Symbols\\EELocalSymbolBase.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  113,
+"endLine":  31,
+"endColumn":  124
+}
+}
+},
+{
+"id":  "S1006",
+"message":  "Add the default parameter value defined in the overridden method.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\Symbols\\EENamedTypeSymbol.cs",
+"region":  {
+"startLine":  289,
+"startColumn":  107,
+"endLine":  289,
+"endColumn":  125
+}
+}
+}
+]
+}

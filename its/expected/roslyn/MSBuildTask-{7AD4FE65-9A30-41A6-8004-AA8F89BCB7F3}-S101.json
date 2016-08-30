@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S101",
+"message":  "Rename struct \"STARTUPINFO\" to match camel case naming rules, consider using \"Startupinfo\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\NativeMethods.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  21,
+"endLine":  10,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename struct \"PROCESS_INFORMATION\" to match camel case naming rules, consider using \"ProcessInformation\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\NativeMethods.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  21,
+"endLine":  33,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"RCWForCurrentContext\" to match camel case naming rules, consider using \"RcwForCurrentContext\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\MSBuildTask\\RCWForCurrentContext.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  20,
+"endLine":  15,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"VBError\" to match camel case naming rules, consider using \"VbError\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\MSBuildTask\\Vbc.cs",
+"region":  {
+"startLine":  1111,
+"startColumn":  23,
+"endLine":  1111,
+"endColumn":  30
+}
+}
+}
+]
+}

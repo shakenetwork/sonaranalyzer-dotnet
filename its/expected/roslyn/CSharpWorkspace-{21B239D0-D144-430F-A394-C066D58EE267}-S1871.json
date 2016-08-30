@@ -1,0 +1,316 @@
+{
+"issues":  [
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"92\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\CodeGeneration\\CSharpDeclarationComparer.cs",
+"region":  {
+"startLine":  122,
+"startColumn":  17,
+"endLine":  124,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"206\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\CodeGeneration\\CSharpSyntaxGenerator.cs",
+"region":  {
+"startLine":  208,
+"startColumn":  17,
+"endLine":  208,
+"endColumn":  79
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"186\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\CodeGeneration\\CSharpSyntaxGenerator.cs",
+"region":  {
+"startLine":  209,
+"startColumn":  17,
+"endLine":  209,
+"endColumn":  74
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"1487\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\CodeGeneration\\CSharpSyntaxGenerator.cs",
+"region":  {
+"startLine":  1490,
+"startColumn":  17,
+"endLine":  1491,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"2932\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\CodeGeneration\\CSharpSyntaxGenerator.cs",
+"region":  {
+"startLine":  2934,
+"startColumn":  17,
+"endLine":  2935,
+"endColumn":  100
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this case with the identical one on line \"3347\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\CodeGeneration\\CSharpSyntaxGenerator.cs",
+"region":  {
+"startLine":  3349,
+"startColumn":  17,
+"endLine":  3350,
+"endColumn":  88
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this branch with the identical one on line \"382\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\CastExpressionSyntaxExtensions.cs",
+"region":  {
+"startLine":  387,
+"startColumn":  13,
+"endLine":  391,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this branch with the identical one on line \"163\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  168,
+"startColumn":  17,
+"endLine":  171,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this branch with the identical one on line \"163\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  175,
+"startColumn":  17,
+"endLine":  178,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this branch with the identical one on line \"371\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  375,
+"startColumn":  17,
+"endLine":  377,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this branch with the identical one on line \"392\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  396,
+"startColumn":  17,
+"endLine":  398,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this branch with the identical one on line \"414\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  418,
+"startColumn":  17,
+"endLine":  420,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this branch with the identical one on line \"414\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  422,
+"startColumn":  17,
+"endLine":  424,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this branch with the identical one on line \"414\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.cs",
+"region":  {
+"startLine":  428,
+"startColumn":  17,
+"endLine":  430,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this branch with the identical one on line \"362\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Extensions\\SemanticModelExtensions.cs",
+"region":  {
+"startLine":  366,
+"startColumn":  21,
+"endLine":  368,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this branch with the identical one on line \"400\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\ElasticTriviaFormattingRule.cs",
+"region":  {
+"startLine":  407,
+"startColumn":  13,
+"endLine":  409,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this branch with the identical one on line \"400\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\ElasticTriviaFormattingRule.cs",
+"region":  {
+"startLine":  413,
+"startColumn":  13,
+"endLine":  415,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this branch with the identical one on line \"433\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Formatting\\Rules\\ElasticTriviaFormattingRule.cs",
+"region":  {
+"startLine":  445,
+"startColumn":  13,
+"endLine":  447,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this branch with the identical one on line \"63\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Utilities\\UsingsAndExternAliasesDirectiveComparer.cs",
+"region":  {
+"startLine":  71,
+"startColumn":  13,
+"endLine":  73,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this branch with the identical one on line \"67\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Utilities\\UsingsAndExternAliasesDirectiveComparer.cs",
+"region":  {
+"startLine":  75,
+"startColumn":  13,
+"endLine":  77,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this branch with the identical one on line \"63\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Utilities\\UsingsAndExternAliasesDirectiveComparer.cs",
+"region":  {
+"startLine":  79,
+"startColumn":  13,
+"endLine":  81,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this branch with the identical one on line \"67\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Utilities\\UsingsAndExternAliasesDirectiveComparer.cs",
+"region":  {
+"startLine":  83,
+"startColumn":  13,
+"endLine":  85,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this branch with the identical one on line \"63\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Utilities\\UsingsAndExternAliasesDirectiveComparer.cs",
+"region":  {
+"startLine":  87,
+"startColumn":  13,
+"endLine":  89,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S1871",
+"message":  "Either merge this branch with the identical one on line \"67\" or change one of the implementations.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Utilities\\UsingsAndExternAliasesDirectiveComparer.cs",
+"region":  {
+"startLine":  91,
+"startColumn":  13,
+"endLine":  93,
+"endColumn":  14
+}
+}
+}
+]
+}

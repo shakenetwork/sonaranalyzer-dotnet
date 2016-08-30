@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S1659",
+"message":  "Declare \"lo\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Shared\\GlobalAssemblyCacheHelpers\\FusionAssemblyIdentity.cs",
+"region":  {
+"startLine":  207,
+"startColumn":  22,
+"endLine":  207,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"shadowCopyDirectory\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\Core\\Hosting\\AssemblyLoader\\MetadataShadowCopyProvider.cs",
+"region":  {
+"startLine":  462,
+"startColumn":  50,
+"endLine":  462,
+"endColumn":  69
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"ignoreVisibility\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\Core\\Hosting\\ObjectFormatter\\CommonObjectFormatter.Visitor.cs",
+"region":  {
+"startLine":  359,
+"startColumn":  46,
+"endLine":  359,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"callableOnly\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Scripting\\Core\\Hosting\\ObjectFormatter\\CommonObjectFormatter.Visitor.cs",
+"region":  {
+"startLine":  774,
+"startColumn":  44,
+"endLine":  774,
+"endColumn":  56
+}
+}
+}
+]
+}

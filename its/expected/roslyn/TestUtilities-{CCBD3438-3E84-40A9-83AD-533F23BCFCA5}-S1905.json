@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"SyntaxToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Syntax\\TokenUtilities.cs",
+"region":  {
+"startLine":  61,
+"startColumn":  72,
+"endLine":  61,
+"endColumn":  83
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"SyntaxToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Syntax\\TokenUtilities.cs",
+"region":  {
+"startLine":  65,
+"startColumn":  72,
+"endLine":  65,
+"endColumn":  83
+}
+}
+}
+]
+}

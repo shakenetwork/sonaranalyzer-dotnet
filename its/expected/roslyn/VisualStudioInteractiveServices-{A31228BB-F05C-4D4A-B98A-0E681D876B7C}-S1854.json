@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"docView\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\InteractiveServices\\Interactive\\CommonVsUtils.cs",
+"region":  {
+"startLine":  73,
+"startColumn":  28,
+"endLine":  73,
+"endColumn":  34
+}
+}
+}
+]
+}

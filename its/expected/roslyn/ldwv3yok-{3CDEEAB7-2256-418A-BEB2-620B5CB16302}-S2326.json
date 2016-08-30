@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S2326",
+"message":  "\"TRegionDirectiveTriviaSyntax\" is not used in the class.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Extensibility\\BraceMatching\\AbstractDirectiveTriviaBraceMatcher.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  9,
+"endLine":  13,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2326",
+"message":  "\"TEndRegionDirectiveTriviaSyntax\" is not used in the class.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Extensibility\\BraceMatching\\AbstractDirectiveTriviaBraceMatcher.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  39,
+"endLine":  13,
+"endColumn":  70
+}
+}
+}
+]
+}

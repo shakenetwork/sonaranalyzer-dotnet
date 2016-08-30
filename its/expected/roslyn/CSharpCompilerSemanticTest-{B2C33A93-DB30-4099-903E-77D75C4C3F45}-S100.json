@@ -1,0 +1,381 @@
+{
+"issues":  [
+{
+"id":  "S100",
+"message":  "Rename method \"AutoPropInitialization7c\" to match camel case naming rules, consider using \"AutoPropInitialization7C\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\FlowAnalysis\\FlowDiagnosticTests.cs",
+"region":  {
+"startLine":  1502,
+"startColumn":  21,
+"endLine":  1502,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"DateFlowAnalyzeForLocalWithInvalidRHS\" to match camel case naming rules, consider using \"DateFlowAnalyzeForLocalWithInvalidRhs\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\FlowAnalysis\\RegionAnalysisTests.cs",
+"region":  {
+"startLine":  2395,
+"startColumn":  21,
+"endLine":  2395,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"EnsureAccessCheckWithBadIVTDenies\" to match camel case naming rules, consider using \"EnsureAccessCheckWithBadIvtDenies\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\AccessCheckTests.cs",
+"region":  {
+"startLine":  805,
+"startColumn":  21,
+"endLine":  805,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"RefValueTest01a\" to match camel case naming rules, consider using \"RefValueTest01A\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\ArglistTests.cs",
+"region":  {
+"startLine":  604,
+"startColumn":  21,
+"endLine":  604,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"ILMethodArgListParameterCount\" to match camel case naming rules, consider using \"IlMethodArgListParameterCount\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\ArglistTests.cs",
+"region":  {
+"startLine":  851,
+"startColumn":  21,
+"endLine":  851,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TasklikeA3n\" to match camel case naming rules, consider using \"TasklikeA3N\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingAsyncTasklikeTests.cs",
+"region":  {
+"startLine":  216,
+"startColumn":  21,
+"endLine":  216,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TasklikeA5s\" to match camel case naming rules, consider using \"TasklikeA5S\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingAsyncTasklikeTests.cs",
+"region":  {
+"startLine":  226,
+"startColumn":  21,
+"endLine":  226,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TasklikeA5a\" to match camel case naming rules, consider using \"TasklikeA5A\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\BindingAsyncTasklikeTests.cs",
+"region":  {
+"startLine":  231,
+"startColumn":  21,
+"endLine":  231,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestBug7196a\" to match camel case naming rules, consider using \"TestBug7196A\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\ConditionalOperatorTests.cs",
+"region":  {
+"startLine":  677,
+"startColumn":  21,
+"endLine":  677,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestBug7196b\" to match camel case naming rules, consider using \"TestBug7196B\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\ConditionalOperatorTests.cs",
+"region":  {
+"startLine":  739,
+"startColumn":  21,
+"endLine":  739,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestBug7196c\" to match camel case naming rules, consider using \"TestBug7196C\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\ConditionalOperatorTests.cs",
+"region":  {
+"startLine":  805,
+"startColumn":  21,
+"endLine":  805,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestBug7196d\" to match camel case naming rules, consider using \"TestBug7196D\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\ConditionalOperatorTests.cs",
+"region":  {
+"startLine":  881,
+"startColumn":  21,
+"endLine":  881,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"LookupSymbolsAtEOF\" to match camel case naming rules, consider using \"LookupSymbolsAtEof\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\LookupTests.cs",
+"region":  {
+"startLine":  1270,
+"startColumn":  21,
+"endLine":  1270,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"NegBindLHSCStyleArray\" to match camel case naming rules, consider using \"NegBindLhscStyleArray\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\MethodBodyModelTests.cs",
+"region":  {
+"startLine":  296,
+"startColumn":  21,
+"endLine":  296,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestNonLiftedUDCOnStruct\" to match camel case naming rules, consider using \"TestNonLiftedUdcOnStruct\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NullableConversionTests.cs",
+"region":  {
+"startLine":  173,
+"startColumn":  21,
+"endLine":  173,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestImplicitLiftedUDCOnStruct\" to match camel case naming rules, consider using \"TestImplicitLiftedUdcOnStruct\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NullableConversionTests.cs",
+"region":  {
+"startLine":  217,
+"startColumn":  21,
+"endLine":  217,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestExplicitUnliftedUDC\" to match camel case naming rules, consider using \"TestExplicitUnliftedUdc\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NullableConversionTests.cs",
+"region":  {
+"startLine":  252,
+"startColumn":  21,
+"endLine":  252,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"TestImplicitUDCInNullCoalescingOperand\" to match camel case naming rules, consider using \"TestImplicitUdcInNullCoalescingOperand\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NullableConversionTests.cs",
+"region":  {
+"startLine":  284,
+"startColumn":  21,
+"endLine":  284,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"NestedIndexerInitializerMDArray\" to match camel case naming rules, consider using \"NestedIndexerInitializerMdArray\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\ObjectAndCollectionInitializerTests.cs",
+"region":  {
+"startLine":  2255,
+"startColumn":  21,
+"endLine":  2255,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"Whidbey133503a\" to match camel case naming rules, consider using \"Whidbey133503A\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\OverloadResolutionTests.cs",
+"region":  {
+"startLine":  6273,
+"startColumn":  21,
+"endLine":  6273,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"Whidbey133503b\" to match camel case naming rules, consider using \"Whidbey133503B\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\OverloadResolutionTests.cs",
+"region":  {
+"startLine":  6335,
+"startColumn":  21,
+"endLine":  6335,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"Repro737971a\" to match camel case naming rules, consider using \"Repro737971A\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\OverloadResolutionTests.cs",
+"region":  {
+"startLine":  7238,
+"startColumn":  21,
+"endLine":  7238,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"Repro737971b\" to match camel case naming rules, consider using \"Repro737971B\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\OverloadResolutionTests.cs",
+"region":  {
+"startLine":  7279,
+"startColumn":  21,
+"endLine":  7279,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"JointSubsumption02b\" to match camel case naming rules, consider using \"JointSubsumption02B\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\PatternSwitchTests.cs",
+"region":  {
+"startLine":  321,
+"startColumn":  21,
+"endLine":  321,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"AddressOfSemanticModelAPIs\" to match camel case naming rules, consider using \"AddressOfSemanticModelApIs\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\UnsafeTests.cs",
+"region":  {
+"startLine":  3868,
+"startColumn":  21,
+"endLine":  3868,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"DereferenceSemanticModelAPIs\" to match camel case naming rules, consider using \"DereferenceSemanticModelApIs\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\UnsafeTests.cs",
+"region":  {
+"startLine":  4145,
+"startColumn":  21,
+"endLine":  4145,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"PointerMemberAccessSemanticModelAPIs\" to match camel case naming rules, consider using \"PointerMemberAccessSemanticModelApIs\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\UnsafeTests.cs",
+"region":  {
+"startLine":  4449,
+"startColumn":  21,
+"endLine":  4449,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"PointerElementAccessSemanticModelAPIs\" to match camel case naming rules, consider using \"PointerElementAccessSemanticModelApIs\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\UnsafeTests.cs",
+"region":  {
+"startLine":  4700,
+"startColumn":  21,
+"endLine":  4700,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"GenericUDConversionVersusPredefinedConversion\" to match camel case naming rules, consider using \"GenericUdConversionVersusPredefinedConversion\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\UserDefinedConversionTests.cs",
+"region":  {
+"startLine":  1527,
+"startColumn":  21,
+"endLine":  1527,
+"endColumn":  66
+}
+}
+}
+]
+}

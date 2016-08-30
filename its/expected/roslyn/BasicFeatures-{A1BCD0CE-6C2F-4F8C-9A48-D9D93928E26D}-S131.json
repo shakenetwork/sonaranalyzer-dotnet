@@ -1,0 +1,368 @@
+{
+"issues":  [
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Syntax\\LambdaUtilities.vb",
+"region":  {
+"startLine":  14,
+"startColumn":  13,
+"endLine":  14,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Syntax\\LambdaUtilities.vb",
+"region":  {
+"startLine":  122,
+"startColumn":  13,
+"endLine":  122,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Syntax\\LambdaUtilities.vb",
+"region":  {
+"startLine":  435,
+"startColumn":  17,
+"endLine":  435,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Syntax\\LambdaUtilities.vb",
+"region":  {
+"startLine":  532,
+"startColumn":  13,
+"endLine":  532,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\ChangeSignature\\VisualBasicChangeSignatureService.vb",
+"region":  {
+"startLine":  34,
+"startColumn":  13,
+"endLine":  34,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\CodeFixes\\AddImport\\VisualBasicAddImportCodeFixProvider.vb",
+"region":  {
+"startLine":  211,
+"startColumn":  21,
+"endLine":  211,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\CodeLens\\VisualBasicDisplayInfoService.vb",
+"region":  {
+"startLine":  30,
+"startColumn":  13,
+"endLine":  30,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\CodeRefactorings\\InvertIf\\InvertIfCodeRefactoringProvider.vb",
+"region":  {
+"startLine":  454,
+"startColumn":  13,
+"endLine":  454,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\Completion\\CompletionProviders\\HandlesClauseCompletionProvider.vb",
+"region":  {
+"startLine":  91,
+"startColumn":  13,
+"endLine":  91,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\Completion\\SuggestionMode\\VisualBasicSuggestionModeCompletionProvider.vb",
+"region":  {
+"startLine":  110,
+"startColumn":  17,
+"endLine":  110,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\Diagnostics\\Analyzers\\VisualBasicPreferFrameworkTypeDiagnosticAnalyzer.vb",
+"region":  {
+"startLine":  34,
+"startColumn":  13,
+"endLine":  34,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\EditAndContinue\\BreakpointSpans.vb",
+"region":  {
+"startLine":  442,
+"startColumn":  13,
+"endLine":  442,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\EditAndContinue\\SyntaxUtilities.vb",
+"region":  {
+"startLine":  165,
+"startColumn":  13,
+"endLine":  165,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\EditAndContinue\\VisualBasicEditAndContinueAnalyzer.vb",
+"region":  {
+"startLine":  29,
+"startColumn":  17,
+"endLine":  29,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\EditAndContinue\\VisualBasicEditAndContinueAnalyzer.vb",
+"region":  {
+"startLine":  976,
+"startColumn":  13,
+"endLine":  976,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\EditAndContinue\\VisualBasicEditAndContinueAnalyzer.vb",
+"region":  {
+"startLine":  2021,
+"startColumn":  21,
+"endLine":  2021,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\EditAndContinue\\VisualBasicEditAndContinueAnalyzer.vb",
+"region":  {
+"startLine":  2788,
+"startColumn":  21,
+"endLine":  2788,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\EditAndContinue\\VisualBasicEditAndContinueAnalyzer.vb",
+"region":  {
+"startLine":  2887,
+"startColumn":  17,
+"endLine":  2887,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\EditAndContinue\\VisualBasicEditAndContinueAnalyzer.vb",
+"region":  {
+"startLine":  3019,
+"startColumn":  17,
+"endLine":  3019,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\EditAndContinue\\VisualBasicEditAndContinueAnalyzer.vb",
+"region":  {
+"startLine":  3049,
+"startColumn":  13,
+"endLine":  3049,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\EditAndContinue\\VisualBasicEditAndContinueAnalyzer.vb",
+"region":  {
+"startLine":  3127,
+"startColumn":  17,
+"endLine":  3127,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\ExtractMethod\\Extensions.vb",
+"region":  {
+"startLine":  191,
+"startColumn":  17,
+"endLine":  191,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\ExtractMethod\\VisualBasicMethodExtractor.TriviaResult.vb",
+"region":  {
+"startLine":  57,
+"startColumn":  17,
+"endLine":  57,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\ExtractMethod\\VisualBasicMethodExtractor.TriviaResult.vb",
+"region":  {
+"startLine":  97,
+"startColumn":  17,
+"endLine":  97,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\GenerateMember\\GenerateParameterizedMember\\VisualBasicGenerateParameterizedMemberService.vb",
+"region":  {
+"startLine":  34,
+"startColumn":  17,
+"endLine":  34,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\MetadataAsSource\\VisualBasicMetadataAsSourceService.vb",
+"region":  {
+"startLine":  118,
+"startColumn":  17,
+"endLine":  118,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\SignatureHelp\\AddRemoveHandlerSignatureHelpProvider.vb",
+"region":  {
+"startLine":  15,
+"startColumn":  13,
+"endLine":  15,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\SignatureHelp\\CastExpressionSignatureHelpProvider.vb",
+"region":  {
+"startLine":  15,
+"startColumn":  13,
+"endLine":  15,
+"endColumn":  19
+}
+}
+}
+]
+}

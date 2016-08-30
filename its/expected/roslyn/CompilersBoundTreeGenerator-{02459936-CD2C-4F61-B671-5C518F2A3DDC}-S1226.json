@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"name\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\BoundTreeGenerator\\BoundNodeClassWriter.cs",
+"region":  {
+"startLine":  982,
+"startColumn":  17,
+"endLine":  982,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"name\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\BoundTreeGenerator\\BoundNodeClassWriter.cs",
+"region":  {
+"startLine":  1596,
+"startColumn":  17,
+"endLine":  1596,
+"endColumn":  21
+}
+}
+}
+]
+}

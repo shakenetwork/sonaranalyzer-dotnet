@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1643",
+"message":  "Use a StringBuilder instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\NullableTests.cs",
+"region":  {
+"startLine":  1270,
+"startColumn":  21,
+"endLine":  1270,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S1643",
+"message":  "Use a StringBuilder instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\OperatorTests.cs",
+"region":  {
+"startLine":  1387,
+"startColumn":  21,
+"endLine":  1387,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1643",
+"message":  "Use a StringBuilder instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Semantic\\Semantics\\OperatorTests.cs",
+"region":  {
+"startLine":  1389,
+"startColumn":  17,
+"endLine":  1389,
+"endColumn":  51
+}
+}
+}
+]
+}

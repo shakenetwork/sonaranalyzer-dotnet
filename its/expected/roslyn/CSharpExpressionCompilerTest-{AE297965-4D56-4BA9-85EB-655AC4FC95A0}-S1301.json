@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Test\\ExpressionCompiler\\UsingDebugInfoTests.cs",
+"region":  {
+"startLine":  352,
+"startColumn":  17,
+"endLine":  352,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Test\\ExpressionCompiler\\UsingDebugInfoTests.cs",
+"region":  {
+"startLine":  380,
+"startColumn":  17,
+"endLine":  380,
+"endColumn":  23
+}
+}
+}
+]
+}

@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S100",
+"message":  "Rename method \"InvokeOnUIThread\" to match camel case naming rules, consider using \"InvokeOnUiThread\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\TestUtilities\\InProcess\\InProcComponent.cs",
+"region":  {
+"startLine":  29,
+"startColumn":  31,
+"endLine":  29,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"InvokeOnUIThread\" to match camel case naming rules, consider using \"InvokeOnUiThread\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\TestUtilities\\InProcess\\InProcComponent.cs",
+"region":  {
+"startLine":  34,
+"startColumn":  28,
+"endLine":  34,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"GetDTE\" to match camel case naming rules, consider using \"GetDte\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\TestUtilities\\InProcess\\InProcComponent.cs",
+"region":  {
+"startLine":  58,
+"startColumn":  30,
+"endLine":  58,
+"endColumn":  36
+}
+}
+}
+]
+}

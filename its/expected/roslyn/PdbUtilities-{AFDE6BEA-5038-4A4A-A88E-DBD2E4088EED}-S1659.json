@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1659",
+"message":  "Declare \"count\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Metadata\\MetadataVisualizer.cs",
+"region":  {
+"startLine":  259,
+"startColumn":  24,
+"endLine":  259,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"endLine\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Pdb\\PdbToXml.cs",
+"region":  {
+"startLine":  1323,
+"startColumn":  40,
+"endLine":  1323,
+"endColumn":  47
+}
+}
+}
+]
+}

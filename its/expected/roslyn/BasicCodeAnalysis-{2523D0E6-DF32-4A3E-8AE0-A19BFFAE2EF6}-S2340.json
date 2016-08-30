@@ -1,0 +1,1278 @@
+{
+"issues":  [
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Analysis\\FlowAnalysis\\AbstractFlowPass.vb",
+"region":  {
+"startLine":  2108,
+"startColumn":  13,
+"endLine":  2108,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Analysis\\FlowAnalysis\\AbstractFlowPass.vb",
+"region":  {
+"startLine":  2153,
+"startColumn":  13,
+"endLine":  2153,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Analysis\\FlowAnalysis\\DataFlowPass.vb",
+"region":  {
+"startLine":  1568,
+"startColumn":  13,
+"endLine":  1568,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Attributes.vb",
+"region":  {
+"startLine":  730,
+"startColumn":  17,
+"endLine":  730,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Expressions.vb",
+"region":  {
+"startLine":  3981,
+"startColumn":  13,
+"endLine":  3981,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Operators.vb",
+"region":  {
+"startLine":  140,
+"startColumn":  13,
+"endLine":  140,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Statements.vb",
+"region":  {
+"startLine":  1020,
+"startColumn":  13,
+"endLine":  1020,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Statements.vb",
+"region":  {
+"startLine":  1608,
+"startColumn":  21,
+"endLine":  1608,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Statements.vb",
+"region":  {
+"startLine":  1646,
+"startColumn":  21,
+"endLine":  1646,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\Binder_Utils.vb",
+"region":  {
+"startLine":  1262,
+"startColumn":  13,
+"endLine":  1262,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\BinderFactory.vb",
+"region":  {
+"startLine":  95,
+"startColumn":  13,
+"endLine":  95,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\MemberSemanticModel.vb",
+"region":  {
+"startLine":  1203,
+"startColumn":  13,
+"endLine":  1203,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\MethodBodySemanticModel.vb",
+"region":  {
+"startLine":  46,
+"startColumn":  13,
+"endLine":  46,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\BoundTree\\BoundExpressionExtensions.vb",
+"region":  {
+"startLine":  493,
+"startColumn":  13,
+"endLine":  493,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\BoundTree\\BoundTreeRewriter.vb",
+"region":  {
+"startLine":  116,
+"startColumn":  13,
+"endLine":  116,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\CodeGen\\EmitOperators.vb",
+"region":  {
+"startLine":  153,
+"startColumn":  13,
+"endLine":  153,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\CodeGen\\Optimizer\\StackScheduler.Analyzer.vb",
+"region":  {
+"startLine":  906,
+"startColumn":  17,
+"endLine":  906,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\CodeGen\\Optimizer\\StackScheduler.Analyzer.vb",
+"region":  {
+"startLine":  922,
+"startColumn":  17,
+"endLine":  922,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\CodeGen\\Optimizer\\StackScheduler.Rewriter.vb",
+"region":  {
+"startLine":  70,
+"startColumn":  17,
+"endLine":  70,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\CodeGen\\Optimizer\\StackScheduler.Rewriter.vb",
+"region":  {
+"startLine":  84,
+"startColumn":  17,
+"endLine":  84,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\CommandLine\\VisualBasicCommandLineParser.vb",
+"region":  {
+"startLine":  1738,
+"startColumn":  21,
+"endLine":  1738,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Compilation\\MethodCompiler.vb",
+"region":  {
+"startLine":  319,
+"startColumn":  13,
+"endLine":  319,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Compilation\\MethodCompiler.vb",
+"region":  {
+"startLine":  1007,
+"startColumn":  13,
+"endLine":  1007,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Compilation\\SyntaxTreeSemanticModel.vb",
+"region":  {
+"startLine":  557,
+"startColumn":  13,
+"endLine":  557,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Compilation\\SyntaxTreeSemanticModel.vb",
+"region":  {
+"startLine":  1613,
+"startColumn":  13,
+"endLine":  1613,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Compilation\\SyntaxTreeSemanticModel.vb",
+"region":  {
+"startLine":  1829,
+"startColumn":  13,
+"endLine":  1829,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Lowering\\LambdaRewriter\\LambdaRewriter.vb",
+"region":  {
+"startLine":  1305,
+"startColumn":  13,
+"endLine":  1305,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_AssignmentOperator.vb",
+"region":  {
+"startLine":  353,
+"startColumn":  17,
+"endLine":  353,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_BinaryOperators.vb",
+"region":  {
+"startLine":  97,
+"startColumn":  13,
+"endLine":  97,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\OptionsValidator.vb",
+"region":  {
+"startLine":  79,
+"startColumn":  13,
+"endLine":  79,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\BlockContexts\\CompilationUnitContext.vb",
+"region":  {
+"startLine":  36,
+"startColumn":  13,
+"endLine":  36,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\BlockContexts\\InterfaceDeclarationBlockContext.vb",
+"region":  {
+"startLine":  26,
+"startColumn":  13,
+"endLine":  26,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\BlockContexts\\TypeBlockContext.vb",
+"region":  {
+"startLine":  30,
+"startColumn":  13,
+"endLine":  30,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseConditional.vb",
+"region":  {
+"startLine":  402,
+"startColumn":  17,
+"endLine":  402,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseExpression.vb",
+"region":  {
+"startLine":  128,
+"startColumn":  21,
+"endLine":  128,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseExpression.vb",
+"region":  {
+"startLine":  454,
+"startColumn":  13,
+"endLine":  454,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseExpression.vb",
+"region":  {
+"startLine":  1387,
+"startColumn":  13,
+"endLine":  1387,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseExpression.vb",
+"region":  {
+"startLine":  1463,
+"startColumn":  13,
+"endLine":  1463,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseExpression.vb",
+"region":  {
+"startLine":  1840,
+"startColumn":  13,
+"endLine":  1840,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseInterpolatedString.vb",
+"region":  {
+"startLine":  29,
+"startColumn":  13,
+"endLine":  29,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseQuery.vb",
+"region":  {
+"startLine":  52,
+"startColumn":  13,
+"endLine":  52,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseQuery.vb",
+"region":  {
+"startLine":  240,
+"startColumn":  13,
+"endLine":  240,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseQuery.vb",
+"region":  {
+"startLine":  286,
+"startColumn":  13,
+"endLine":  286,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseQuery.vb",
+"region":  {
+"startLine":  407,
+"startColumn":  13,
+"endLine":  407,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseQuery.vb",
+"region":  {
+"startLine":  694,
+"startColumn":  13,
+"endLine":  694,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseQuery.vb",
+"region":  {
+"startLine":  861,
+"startColumn":  13,
+"endLine":  861,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseQuery.vb",
+"region":  {
+"startLine":  970,
+"startColumn":  13,
+"endLine":  970,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseQuery.vb",
+"region":  {
+"startLine":  1012,
+"startColumn":  13,
+"endLine":  1012,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\Parser.vb",
+"region":  {
+"startLine":  237,
+"startColumn":  13,
+"endLine":  237,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\Parser.vb",
+"region":  {
+"startLine":  259,
+"startColumn":  13,
+"endLine":  259,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\Parser.vb",
+"region":  {
+"startLine":  401,
+"startColumn":  13,
+"endLine":  401,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\Parser.vb",
+"region":  {
+"startLine":  1885,
+"startColumn":  13,
+"endLine":  1885,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\Parser.vb",
+"region":  {
+"startLine":  1976,
+"startColumn":  13,
+"endLine":  1976,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\Parser.vb",
+"region":  {
+"startLine":  2157,
+"startColumn":  13,
+"endLine":  2157,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\Parser.vb",
+"region":  {
+"startLine":  2163,
+"startColumn":  17,
+"endLine":  2163,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\Parser.vb",
+"region":  {
+"startLine":  2414,
+"startColumn":  17,
+"endLine":  2414,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\Parser.vb",
+"region":  {
+"startLine":  2512,
+"startColumn":  17,
+"endLine":  2512,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\Parser.vb",
+"region":  {
+"startLine":  2944,
+"startColumn":  13,
+"endLine":  2944,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\Parser.vb",
+"region":  {
+"startLine":  3334,
+"startColumn":  13,
+"endLine":  3334,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\Parser.vb",
+"region":  {
+"startLine":  3451,
+"startColumn":  13,
+"endLine":  3451,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\Parser.vb",
+"region":  {
+"startLine":  3499,
+"startColumn":  13,
+"endLine":  3499,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\Parser.vb",
+"region":  {
+"startLine":  4288,
+"startColumn":  13,
+"endLine":  4288,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\Parser.vb",
+"region":  {
+"startLine":  4340,
+"startColumn":  25,
+"endLine":  4340,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\Parser.vb",
+"region":  {
+"startLine":  4481,
+"startColumn":  17,
+"endLine":  4481,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\Parser.vb",
+"region":  {
+"startLine":  4563,
+"startColumn":  13,
+"endLine":  4563,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\Parser.vb",
+"region":  {
+"startLine":  4702,
+"startColumn":  13,
+"endLine":  4702,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\Parser.vb",
+"region":  {
+"startLine":  4859,
+"startColumn":  13,
+"endLine":  4859,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\Parser.vb",
+"region":  {
+"startLine":  5461,
+"startColumn":  17,
+"endLine":  5461,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseStatement.vb",
+"region":  {
+"startLine":  258,
+"startColumn":  17,
+"endLine":  258,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseStatement.vb",
+"region":  {
+"startLine":  722,
+"startColumn":  17,
+"endLine":  722,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseStatement.vb",
+"region":  {
+"startLine":  1284,
+"startColumn":  13,
+"endLine":  1284,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseXml.vb",
+"region":  {
+"startLine":  122,
+"startColumn":  13,
+"endLine":  122,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseXml.vb",
+"region":  {
+"startLine":  469,
+"startColumn":  13,
+"endLine":  469,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseXml.vb",
+"region":  {
+"startLine":  592,
+"startColumn":  13,
+"endLine":  592,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseXml.vb",
+"region":  {
+"startLine":  699,
+"startColumn":  17,
+"endLine":  699,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseXml.vb",
+"region":  {
+"startLine":  927,
+"startColumn":  13,
+"endLine":  927,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseXml.vb",
+"region":  {
+"startLine":  1119,
+"startColumn":  13,
+"endLine":  1119,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseXml.vb",
+"region":  {
+"startLine":  1205,
+"startColumn":  13,
+"endLine":  1205,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseXml.vb",
+"region":  {
+"startLine":  1746,
+"startColumn":  13,
+"endLine":  1746,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseXml.vb",
+"region":  {
+"startLine":  1862,
+"startColumn":  17,
+"endLine":  1862,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Parser\\ParseXml.vb",
+"region":  {
+"startLine":  1965,
+"startColumn":  13,
+"endLine":  1965,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Blender.vb",
+"region":  {
+"startLine":  117,
+"startColumn":  17,
+"endLine":  117,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Blender.vb",
+"region":  {
+"startLine":  340,
+"startColumn":  13,
+"endLine":  340,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Scanner.vb",
+"region":  {
+"startLine":  850,
+"startColumn":  21,
+"endLine":  850,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\ScannerXml.vb",
+"region":  {
+"startLine":  23,
+"startColumn":  13,
+"endLine":  23,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\XmlDocComments.vb",
+"region":  {
+"startLine":  187,
+"startColumn":  13,
+"endLine":  187,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\AccessCheck.vb",
+"region":  {
+"startLine":  567,
+"startColumn":  13,
+"endLine":  567,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\AccessCheck.vb",
+"region":  {
+"startLine":  976,
+"startColumn":  13,
+"endLine":  976,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\Conversions.vb",
+"region":  {
+"startLine":  3666,
+"startColumn":  13,
+"endLine":  3666,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\TypeInference\\TypeArgumentInference.vb",
+"region":  {
+"startLine":  737,
+"startColumn":  17,
+"endLine":  737,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\AnonymousTypes\\SynthesizedSymbols\\AnonymousTypeOrDelegateTemplateSymbol.vb",
+"region":  {
+"startLine":  324,
+"startColumn":  17,
+"endLine":  324,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Retargeting\\RetargetingModuleSymbol.vb",
+"region":  {
+"startLine":  181,
+"startColumn":  13,
+"endLine":  181,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\QuickAttributeChecker.vb",
+"region":  {
+"startLine":  111,
+"startColumn":  13,
+"endLine":  111,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Tuples\\TupleTypeSymbol.vb",
+"region":  {
+"startLine":  649,
+"startColumn":  13,
+"endLine":  649,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\TypeSymbolExtensions.vb",
+"region":  {
+"startLine":  290,
+"startColumn":  21,
+"endLine":  290,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\TypeSymbolExtensions.vb",
+"region":  {
+"startLine":  555,
+"startColumn":  13,
+"endLine":  555,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Syntax\\SyntaxFactory.vb",
+"region":  {
+"startLine":  1040,
+"startColumn":  13,
+"endLine":  1040,
+"endColumn":  15
+}
+}
+},
+{
+"id":  "S2340",
+"message":  "Use a structured loop instead.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Syntax\\SyntaxNodeExtensions.vb",
+"region":  {
+"startLine":  251,
+"startColumn":  13,
+"endLine":  251,
+"endColumn":  15
+}
+}
+}
+]
+}

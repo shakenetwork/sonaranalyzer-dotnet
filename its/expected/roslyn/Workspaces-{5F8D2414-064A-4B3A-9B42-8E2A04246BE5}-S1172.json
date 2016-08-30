@@ -1,0 +1,563 @@
+{
+"issues":  [
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"sender\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CorLightup.cs",
+"region":  {
+"startLine":  185,
+"startColumn":  39,
+"endLine":  185,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"type\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PortableShim.cs",
+"region":  {
+"startLine":  67,
+"startColumn":  35,
+"endLine":  67,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this parameter \"type\", whose value is ignored in the method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Serialization\\ObjectWriter.cs",
+"region":  {
+"startLine":  590,
+"startColumn":  41,
+"endLine":  590,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Diagnostics\\DiagnosticDataSerializer.cs",
+"region":  {
+"startLine":  163,
+"startColumn":  87,
+"endLine":  163,
+"endColumn":  122
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Execution\\Serializer_Asset.cs",
+"region":  {
+"startLine":  247,
+"startColumn":  71,
+"endLine":  247,
+"endColumn":  106
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\FindReferences\\DependentProjectsFinder.cs",
+"region":  {
+"startLine":  384,
+"startColumn":  120,
+"endLine":  384,
+"endColumn":  155
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"symbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\FindReferences\\Finders\\AbstractReferenceFinder.cs",
+"region":  {
+"startLine":  440,
+"startColumn":  13,
+"endLine":  440,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"project\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\FindReferences\\Finders\\NamespaceSymbolReferenceFinder.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  83,
+"endLine":  31,
+"endColumn":  98
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"symbolToMatch\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\SymbolFinder_Hierarchy.cs",
+"region":  {
+"startLine":  417,
+"startColumn":  13,
+"endLine":  417,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"version\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\SymbolTree\\SymbolTreeInfo.cs",
+"region":  {
+"startLine":  280,
+"startColumn":  32,
+"endLine":  280,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\SymbolTree\\SymbolTreeInfo_Serialization.cs",
+"region":  {
+"startLine":  148,
+"startColumn":  13,
+"endLine":  148,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"token\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Formatting\\BottomUpBaseIndentationFinder.cs",
+"region":  {
+"startLine":  181,
+"startColumn":  30,
+"endLine":  181,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"tokenStream\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Formatting\\Engine\\AbstractFormatEngine.cs",
+"region":  {
+"startLine":  518,
+"startColumn":  13,
+"endLine":  518,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"trivia1\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Formatting\\TriviaEngine\\AbstractTriviaFormatter.cs",
+"region":  {
+"startLine":  537,
+"startColumn":  49,
+"endLine":  537,
+"endColumn":  69
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Rename\\ConflictEngine\\ConflictResolver.cs",
+"region":  {
+"startLine":  101,
+"startColumn":  132,
+"endLine":  101,
+"endColumn":  167
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"documentId\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Rename\\ConflictEngine\\ConflictResolver.Session.cs",
+"region":  {
+"startLine":  444,
+"startColumn":  17,
+"endLine":  444,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"newDocument\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Rename\\ConflictEngine\\ConflictResolver.Session.cs",
+"region":  {
+"startLine":  455,
+"startColumn":  17,
+"endLine":  455,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"isRenameInStrings\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Rename\\RenameLocation.ReferenceProcessing.cs",
+"region":  {
+"startLine":  451,
+"startColumn":  17,
+"endLine":  451,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"isRenameInComments\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Rename\\RenameLocation.ReferenceProcessing.cs",
+"region":  {
+"startLine":  452,
+"startColumn":  17,
+"endLine":  452,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\ICodeDefinitionFactoryExtensions_CreateEqualsMethod.cs",
+"region":  {
+"startLine":  166,
+"startColumn":  90,
+"endLine":  166,
+"endColumn":  125
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"containingType\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\ICodeDefinitionFactoryExtensions_CreateGetHashCodeMethod.cs",
+"region":  {
+"startLine":  38,
+"startColumn":  13,
+"endLine":  38,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\ICodeDefinitionFactoryExtensions_CreateGetHashCodeMethod.cs",
+"region":  {
+"startLine":  40,
+"startColumn":  13,
+"endLine":  40,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\INamedTypeSymbolExtensions.cs",
+"region":  {
+"startLine":  120,
+"startColumn":  128,
+"endLine":  120,
+"endColumn":  163
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\INamedTypeSymbolExtensions.cs",
+"region":  {
+"startLine":  142,
+"startColumn":  127,
+"endLine":  142,
+"endColumn":  162
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"classOrStructType\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\INamedTypeSymbolExtensions.cs",
+"region":  {
+"startLine":  319,
+"startColumn":  13,
+"endLine":  319,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\INamedTypeSymbolExtensions.cs",
+"region":  {
+"startLine":  321,
+"startColumn":  13,
+"endLine":  321,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"symbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\ISymbolExtensions.cs",
+"region":  {
+"startLine":  701,
+"startColumn":  13,
+"endLine":  701,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"symbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\ISymbolExtensions.cs",
+"region":  {
+"startLine":  763,
+"startColumn":  13,
+"endLine":  763,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"enumType\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Utilities\\EnumValueUtilities.cs",
+"region":  {
+"startLine":  121,
+"startColumn":  48,
+"endLine":  121,
+"endColumn":  73
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"x\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Utilities\\SymbolEquivalenceComparer.EquivalenceVisitor.cs",
+"region":  {
+"startLine":  163,
+"startColumn":  52,
+"endLine":  163,
+"endColumn":  72
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"y\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Utilities\\SymbolEquivalenceComparer.EquivalenceVisitor.cs",
+"region":  {
+"startLine":  163,
+"startColumn":  74,
+"endLine":  163,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"compilation\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\SymbolKey\\SymbolKey.cs",
+"region":  {
+"startLine":  204,
+"startColumn":  13,
+"endLine":  204,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"ignoreAssemblyKey\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\SymbolKey\\SymbolKey.cs",
+"region":  {
+"startLine":  205,
+"startColumn":  13,
+"endLine":  205,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"typeKind\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\SymbolKey\\SymbolKey.NamedTypeSymbolKey.cs",
+"region":  {
+"startLine":  60,
+"startColumn":  17,
+"endLine":  60,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\SimpleTaskQueue.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  79,
+"endLine":  32,
+"endColumn":  114
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"project\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Versions\\Extensions.cs",
+"region":  {
+"startLine":  62,
+"startColumn":  13,
+"endLine":  62,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"projectVersion\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Versions\\Extensions.cs",
+"region":  {
+"startLine":  63,
+"startColumn":  13,
+"endLine":  63,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"versionGetter\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Versions\\Extensions.cs",
+"region":  {
+"startLine":  66,
+"startColumn":  13,
+"endLine":  66,
+"endColumn":  101
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Host\\TaskScheduler\\WorkspaceTaskSchedulerFactory.cs",
+"region":  {
+"startLine":  59,
+"startColumn":  59,
+"endLine":  59,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"solutionServices\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Solution\\DocumentState.cs",
+"region":  {
+"startLine":  122,
+"startColumn":  13,
+"endLine":  122,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"solutionServices\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Solution\\DocumentState.cs",
+"region":  {
+"startLine":  139,
+"startColumn":  13,
+"endLine":  139,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"solutionServices\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Solution\\DocumentState.cs",
+"region":  {
+"startLine":  526,
+"startColumn":  112,
+"endLine":  526,
+"endColumn":  145
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"state\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Solution\\SolutionState.CompilationTracker.cs",
+"region":  {
+"startLine":  472,
+"startColumn":  41,
+"endLine":  472,
+"endColumn":  52
+}
+}
+}
+]
+}

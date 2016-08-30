@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S100",
+"message":  "Rename method \"GetCPCDirectoryPath\" to match camel case naming rules, consider using \"GetCpcDirectoryPath\".",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Perf\\Utilities\\TestUtilities.cs",
+"region":  {
+"startLine":  39,
+"startColumn":  30,
+"endLine":  39,
+"endColumn":  49
+}
+}
+}
+]
+}

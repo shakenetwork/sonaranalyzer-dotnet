@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S107",
+"message":  "Constructor has 9 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Next\\FindReferences\\StreamingFindReferencesPresenter.cs",
+"region":  {
+"startLine":  44,
+"startColumn":  48,
+"endLine":  53,
+"endColumn":  108
+}
+}
+},
+{
+"id":  "S107",
+"message":  "Constructor has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Next\\FindReferences\\StreamingFindReferencesPresenter.DocumentLocationEntry.cs",
+"region":  {
+"startLine":  39,
+"startColumn":  37,
+"endLine":  47,
+"endColumn":  60
+}
+}
+}
+]
+}

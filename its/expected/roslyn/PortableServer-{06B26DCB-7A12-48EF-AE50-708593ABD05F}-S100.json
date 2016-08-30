@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S100",
+"message":  "Rename method \"HandleCompletedGCTask\" to match camel case naming rules, consider using \"HandleCompletedGcTask\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Server\\ServerShared\\ServerDispatcher.cs",
+"region":  {
+"startLine":  235,
+"startColumn":  22,
+"endLine":  235,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"MaybeCreateGCTask\" to match camel case naming rules, consider using \"MaybeCreateGcTask\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Server\\ServerShared\\ServerDispatcher.cs",
+"region":  {
+"startLine":  251,
+"startColumn":  22,
+"endLine":  251,
+"endColumn":  39
+}
+}
+}
+]
+}

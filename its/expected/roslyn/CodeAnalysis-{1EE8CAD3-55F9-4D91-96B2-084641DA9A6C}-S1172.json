@@ -1,0 +1,290 @@
+{
+"issues":  [
+{
+"id":  "S1172",
+"message":  "Remove this parameter \"endLabelIndex\", whose value is ignored in the method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\SwitchIntegralJumpTableEmitter.cs",
+"region":  {
+"startLine":  243,
+"startColumn":  68,
+"endLine":  243,
+"endColumn":  85
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"sender\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CorLightup.cs",
+"region":  {
+"startLine":  185,
+"startColumn":  39,
+"endLine":  185,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalysisResultBuilder.cs",
+"region":  {
+"startLine":  341,
+"startColumn":  13,
+"endLine":  341,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"driver\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalysisState.cs",
+"region":  {
+"startLine":  229,
+"startColumn":  136,
+"endLine":  229,
+"endColumn":  157
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalysisState.cs",
+"region":  {
+"startLine":  229,
+"startColumn":  159,
+"endLine":  229,
+"endColumn":  194
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerDriver.cs",
+"region":  {
+"startLine":  976,
+"startColumn":  179,
+"endLine":  976,
+"endColumn":  214
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerDriver.cs",
+"region":  {
+"startLine":  1106,
+"startColumn":  13,
+"endLine":  1106,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"isSyntaxDiagnostic\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerExecutor.cs",
+"region":  {
+"startLine":  1362,
+"startColumn":  115,
+"endLine":  1362,
+"endColumn":  138
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this parameter \"analysisScope\", whose value is ignored in the method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerExecutor.cs",
+"region":  {
+"startLine":  1444,
+"startColumn":  126,
+"endLine":  1444,
+"endColumn":  153
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this parameter \"analysisScope\", whose value is ignored in the method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerExecutor.cs",
+"region":  {
+"startLine":  1453,
+"startColumn":  98,
+"endLine":  1453,
+"endColumn":  125
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this parameter \"analysisScope\", whose value is ignored in the method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerExecutor.cs",
+"region":  {
+"startLine":  1461,
+"startColumn":  98,
+"endLine":  1461,
+"endColumn":  125
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this parameter \"analysisScope\", whose value is ignored in the method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerExecutor.cs",
+"region":  {
+"startLine":  1469,
+"startColumn":  125,
+"endLine":  1469,
+"endColumn":  152
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this parameter \"analysisScope\", whose value is ignored in the method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalyzerExecutor.cs",
+"region":  {
+"startLine":  1477,
+"startColumn":  132,
+"endLine":  1477,
+"endColumn":  159
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"cancellationToken\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\CompilationWithAnalyzers.cs",
+"region":  {
+"startLine":  854,
+"startColumn":  167,
+"endLine":  854,
+"endColumn":  202
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"symbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\SuppressMessageAttributeState.cs",
+"region":  {
+"startLine":  249,
+"startColumn":  110,
+"endLine":  249,
+"endColumn":  124
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"symbol\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\SuppressMessageAttributeState.cs",
+"region":  {
+"startLine":  285,
+"startColumn":  92,
+"endLine":  285,
+"endColumn":  106
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this parameter \"replace\", whose value is ignored in the method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\DeltaMetadataWriter.cs",
+"region":  {
+"startLine":  176,
+"startColumn":  136,
+"endLine":  176,
+"endColumn":  156
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"type\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PortableShim.cs",
+"region":  {
+"startLine":  67,
+"startColumn":  35,
+"endLine":  67,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"analyzer\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\RuleSet\\RuleSetProcessor.cs",
+"region":  {
+"startLine":  181,
+"startColumn":  91,
+"endLine":  181,
+"endColumn":  106
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"space\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\RuleSet\\RuleSetProcessor.cs",
+"region":  {
+"startLine":  181,
+"startColumn":  108,
+"endLine":  181,
+"endColumn":  120
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this parameter \"type\", whose value is ignored in the method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Serialization\\ObjectWriter.cs",
+"region":  {
+"startLine":  590,
+"startColumn":  41,
+"endLine":  590,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"bytes\".",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\CustomDebugInfoReader.cs",
+"region":  {
+"startLine":  287,
+"startColumn":  40,
+"endLine":  287,
+"endColumn":  52
+}
+}
+}
+]
+}

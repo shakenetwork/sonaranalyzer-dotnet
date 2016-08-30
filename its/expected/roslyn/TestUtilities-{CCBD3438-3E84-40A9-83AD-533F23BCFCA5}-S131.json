@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S131",
+"message":  "Add a \"default\" clause to this \"switch\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Assert\\DiffUtil.cs",
+"region":  {
+"startLine":  55,
+"startColumn":  21,
+"endLine":  55,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"default\" clause to this \"switch\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\Utilities\\Shared\\Metadata\\ILBuilderVisualizer.cs",
+"region":  {
+"startLine":  253,
+"startColumn":  13,
+"endLine":  253,
+"endColumn":  19
+}
+}
+}
+]
+}

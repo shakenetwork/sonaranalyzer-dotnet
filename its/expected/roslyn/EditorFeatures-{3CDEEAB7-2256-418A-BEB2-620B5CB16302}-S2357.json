@@ -1,0 +1,602 @@
+{
+"issues":  [
+{
+"id":  "S2357",
+"message":  "Make \"Span\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Debugging\\DebugDataTipInfo.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  34,
+"endLine":  9,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Text\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Debugging\\DebugDataTipInfo.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  32,
+"endLine":  10,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Debugging\\DebugLocationInfo.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  32,
+"endLine":  9,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"LineOffset\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Debugging\\DebugLocationInfo.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  29,
+"endLine":  10,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"MinimumRunPointInMS\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\ForegroundNotification\\ForegroundNotificationService.cs",
+"region":  {
+"startLine":  208,
+"startColumn":  33,
+"endLine":  208,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"DoWorkAction\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\ForegroundNotification\\ForegroundNotificationService.cs",
+"region":  {
+"startLine":  209,
+"startColumn":  36,
+"endLine":  209,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"DoWorkFunc\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\ForegroundNotification\\ForegroundNotificationService.cs",
+"region":  {
+"startLine":  210,
+"startColumn":  40,
+"endLine":  210,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"AsyncToken\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\ForegroundNotification\\ForegroundNotificationService.cs",
+"region":  {
+"startLine":  211,
+"startColumn":  41,
+"endLine":  211,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"CancellationToken\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\ForegroundNotification\\ForegroundNotificationService.cs",
+"region":  {
+"startLine":  212,
+"startColumn":  47,
+"endLine":  212,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ReplacementText\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\InlineRename\\AbstractInlineRenameUndoManager.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  27,
+"endLine":  20,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SelectionAnchorPoint\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\InlineRename\\AbstractInlineRenameUndoManager.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  24,
+"endLine":  21,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SelectionActivePoint\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\InlineRename\\AbstractInlineRenameUndoManager.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  24,
+"endLine":  22,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TrackingSpan\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\InlineRename\\RenameTrackingSpan.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  39,
+"endLine":  9,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Type\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\InlineRename\\RenameTrackingSpan.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  40,
+"endLine":  10,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"PresentationItem\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\Controller.Session_FilterModel.cs",
+"region":  {
+"startLine":  343,
+"startColumn":  50,
+"endLine":  343,
+"endColumn":  66
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"MatchedFilterText\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\Controller.Session_FilterModel.cs",
+"region":  {
+"startLine":  344,
+"startColumn":  38,
+"endLine":  344,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"FilterText\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\Controller.Session_FilterModel.cs",
+"region":  {
+"startLine":  345,
+"startColumn":  40,
+"endLine":  345,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TextSpan\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\ViewTextSpan.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  34,
+"endLine":  22,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SubjectBufferSnapshot\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\ViewTextSpan.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  39,
+"endLine":  33,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ViewSnapshot\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\ViewTextSpan.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  39,
+"endLine":  36,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SubjectBufferToTextViewDirection\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\ViewTextSpan.cs",
+"region":  {
+"startLine":  41,
+"startColumn":  44,
+"endLine":  41,
+"endColumn":  76
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SourceProjectId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\MetadataAsSource\\MetadataAsSourceGeneratedFileInfo.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  35,
+"endLine":  13,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Workspace\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\MetadataAsSource\\MetadataAsSourceGeneratedFileInfo.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  35,
+"endLine":  14,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"AssemblyIdentity\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\MetadataAsSource\\MetadataAsSourceGeneratedFileInfo.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  42,
+"endLine":  16,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"LanguageName\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\MetadataAsSource\\MetadataAsSourceGeneratedFileInfo.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  32,
+"endLine":  17,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"References\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\MetadataAsSource\\MetadataAsSourceGeneratedFileInfo.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  59,
+"endLine":  18,
+"endColumn":  69
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TemporaryFilePath\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\MetadataAsSource\\MetadataAsSourceGeneratedFileInfo.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  32,
+"endLine":  20,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"FileService\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\MetadataAsSource\\MetadataAsSourceWorkspace.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  53,
+"endLine":  9,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"OldSolution\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\SolutionChangeSummary.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  34,
+"endLine":  9,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NewSolution\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\SolutionChangeSummary.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  34,
+"endLine":  10,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TotalFilesAffected\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\SolutionChangeSummary.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  29,
+"endLine":  12,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TotalProjectsAffected\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\SolutionChangeSummary.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  29,
+"endLine":  13,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ProjectId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\SolutionPreviewItem.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  35,
+"endLine":  11,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"DocumentId\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\SolutionPreviewItem.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  36,
+"endLine":  12,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"LazyPreview\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\SolutionPreviewItem.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  63,
+"endLine":  13,
+"endColumn":  74
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Text\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\SolutionPreviewItem.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  32,
+"endLine":  14,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ChangeSummary\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\SolutionPreviewResult.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  47,
+"endLine":  16,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"TextVersion\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\TodoComment\\AbstractTodoCommentIncrementalAnalyzer.cs",
+"region":  {
+"startLine":  195,
+"startColumn":  42,
+"endLine":  195,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SyntaxVersion\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\TodoComment\\AbstractTodoCommentIncrementalAnalyzer.cs",
+"region":  {
+"startLine":  196,
+"startColumn":  42,
+"endLine":  196,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Items\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\TodoComment\\AbstractTodoCommentIncrementalAnalyzer.cs",
+"region":  {
+"startLine":  197,
+"startColumn":  54,
+"endLine":  197,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Data\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Workspaces\\ProjectCacheService.SimpleMRUCache.cs",
+"region":  {
+"startLine":  79,
+"startColumn":  40,
+"endLine":  79,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"LastTouched\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Workspaces\\ProjectCacheService.SimpleMRUCache.cs",
+"region":  {
+"startLine":  80,
+"startColumn":  33,
+"endLine":  80,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Snapshot\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Tagging\\Utilities\\TagSpanIntervalTree.IntervalIntrospector.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  43,
+"endLine":  12,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Tag\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Tagging\\Utilities\\TagSpanIntervalTree.TagNode.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  34,
+"endLine":  13,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Span\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Tagging\\Utilities\\TagSpanIntervalTree.TagNode.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  43,
+"endLine":  14,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"StackTrace\" private.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Tagging\\AbstractAsynchronousTaggerProvider.cs",
+"region":  {
+"startLine":  84,
+"startColumn":  32,
+"endLine":  84,
+"endColumn":  42
+}
+}
+}
+]
+}

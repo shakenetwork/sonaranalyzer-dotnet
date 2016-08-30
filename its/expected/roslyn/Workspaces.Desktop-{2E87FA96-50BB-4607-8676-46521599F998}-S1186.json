@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\MSBuild\\CSharp\\CSharpProjectFileLoader.CSharpProjectFile.cs",
+"region":  {
+"startLine":  225,
+"startColumn":  29,
+"endLine":  225,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Desktop\\Workspace\\MSBuild\\VisualBasic\\VisualBasicProjectFileLoader.cs",
+"region":  {
+"startLine":  254,
+"startColumn":  29,
+"endLine":  254,
+"endColumn":  48
+}
+}
+}
+]
+}

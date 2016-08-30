@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\CodeAnalysis.Metadata\\CustomDebugInfoReader.cs",
+"region":  {
+"startLine":  700,
+"startColumn":  21,
+"endLine":  700,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Metadata\\MetadataVisualizer.cs",
+"region":  {
+"startLine":  1499,
+"startColumn":  25,
+"endLine":  1499,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Pdb\\Token2SourceLineExporter.cs",
+"region":  {
+"startLine":  1417,
+"startColumn":  17,
+"endLine":  1417,
+"endColumn":  23
+}
+}
+}
+]
+}

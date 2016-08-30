@@ -1,0 +1,121 @@
+{
+"issues":  [
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"pSpan[0].iEndLine\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\AbstractVsTextViewFilter.cs",
+"region":  {
+"startLine":  34,
+"startColumn":  53,
+"endLine":  34,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"pSpan[0].iEndIndex\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\AbstractVsTextViewFilter.cs",
+"region":  {
+"startLine":  35,
+"startColumn":  55,
+"endLine":  35,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"lambdaMap\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\EditAndContinue\\VsENCRebuildableProjectImpl.cs",
+"region":  {
+"startLine":  1129,
+"startColumn":  44,
+"endLine":  1129,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"hr\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\LanguageService\\AbstractLanguageService%602.VsCodeWindowManager.cs",
+"region":  {
+"startLine":  154,
+"startColumn":  44,
+"endLine":  154,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"pData[0].SelectedImage\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Preview\\FileChange.cs",
+"region":  {
+"startLine":  231,
+"startColumn":  53,
+"endLine":  231,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"pData[0].SelectedImage\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Preview\\PreviewEngine.cs",
+"region":  {
+"startLine":  302,
+"startColumn":  57,
+"endLine":  302,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"pData[0].SelectedImage\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Preview\\ReferenceChange.cs",
+"region":  {
+"startLine":  119,
+"startColumn":  53,
+"endLine":  119,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"pData[0].SelectedImage\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Preview\\SpanChange.cs",
+"region":  {
+"startLine":  83,
+"startColumn":  53,
+"endLine":  83,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S1121",
+"message":  "Extract the assignment of \"pData[0].SelectedImage\" from this expression.",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Preview\\TopLevelChange.cs",
+"region":  {
+"startLine":  147,
+"startColumn":  53,
+"endLine":  147,
+"endColumn":  54
+}
+}
+}
+]
+}

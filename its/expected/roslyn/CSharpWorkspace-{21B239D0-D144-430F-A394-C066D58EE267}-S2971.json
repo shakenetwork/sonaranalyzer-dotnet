@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"Any\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\CodeGeneration\\CSharpCodeGenerationHelpers.cs",
+"region":  {
+"startLine":  190,
+"startColumn":  46,
+"endLine":  190,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"LastOrDefault\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\CodeGeneration\\FieldGenerator.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  32,
+"endLine":  22,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2971",
+"message":  "Drop \"Where\" and move the condition into the \"LastOrDefault\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CSharp\\Portable\\Utilities\\SpeculationAnalyzer.cs",
+"region":  {
+"startLine":  61,
+"startColumn":  18,
+"endLine":  61,
+"endColumn":  23
+}
+}
+}
+]
+}

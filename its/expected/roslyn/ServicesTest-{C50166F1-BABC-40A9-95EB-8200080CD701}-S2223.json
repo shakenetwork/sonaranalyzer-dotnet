@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"s_DisposalCount\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\Host\\WorkspaceServices\\TestTemporaryStorageService.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  31,
+"endLine":  33,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"s_DisposalCount\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\CoreTest\\Host\\WorkspaceServices\\TestTemporaryStorageService.cs",
+"region":  {
+"startLine":  84,
+"startColumn":  31,
+"endLine":  84,
+"endColumn":  46
+}
+}
+}
+]
+}

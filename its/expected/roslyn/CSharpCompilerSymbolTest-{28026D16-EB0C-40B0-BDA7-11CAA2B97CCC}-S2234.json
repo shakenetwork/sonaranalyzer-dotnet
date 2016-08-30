@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S2234",
+"message":  "Parameters to \"CanUnify\" have the same names but not the same order as the method arguments.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\TypeUnificationTests.cs",
+"region":  {
+"startLine":  420,
+"startColumn":  41,
+"endLine":  420,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2234",
+"message":  "Parameters to \"CanUnify\" have the same names but not the same order as the method arguments.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\TypeUnificationTests.cs",
+"region":  {
+"startLine":  426,
+"startColumn":  42,
+"endLine":  426,
+"endColumn":  50
+}
+}
+}
+]
+}

@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"keepAlive\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Server\\VBCSCompilerTests\\CompilerServerApiTest.cs",
+"region":  {
+"startLine":  315,
+"startColumn":  96,
+"endLine":  315,
+"endColumn":  111
+}
+}
+}
+]
+}

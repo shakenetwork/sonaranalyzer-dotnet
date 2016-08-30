@@ -1,0 +1,368 @@
+{
+"issues":  [
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\CaseCorrection\\VisualBasicCaseCorrectionService.Rewriter.vb",
+"region":  {
+"startLine":  113,
+"startColumn":  45,
+"endLine":  113,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\CodeCleanup\\Providers\\AddMissingTokensCodeCleanupProvider.vb",
+"region":  {
+"startLine":  598,
+"startColumn":  25,
+"endLine":  598,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\CodeCleanup\\Providers\\NormalizeModifiersOrOperatorsCodeCleanupProvider.vb",
+"region":  {
+"startLine":  364,
+"startColumn":  25,
+"endLine":  364,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\CodeCleanup\\Providers\\NormalizeModifiersOrOperatorsCodeCleanupProvider.vb",
+"region":  {
+"startLine":  396,
+"startColumn":  25,
+"endLine":  396,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.vb",
+"region":  {
+"startLine":  21,
+"startColumn":  21,
+"endLine":  21,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\ContextQuery\\SyntaxTreeExtensions.vb",
+"region":  {
+"startLine":  26,
+"startColumn":  21,
+"endLine":  26,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\SemanticModelExtensions.vb",
+"region":  {
+"startLine":  121,
+"startColumn":  21,
+"endLine":  121,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\SyntaxNodeExtensions.vb",
+"region":  {
+"startLine":  535,
+"startColumn":  21,
+"endLine":  535,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\SyntaxNodeExtensions.vb",
+"region":  {
+"startLine":  867,
+"startColumn":  21,
+"endLine":  867,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\SyntaxNodeExtensions.vb",
+"region":  {
+"startLine":  869,
+"startColumn":  21,
+"endLine":  869,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\SyntaxTreeExtensions.vb",
+"region":  {
+"startLine":  303,
+"startColumn":  21,
+"endLine":  303,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Formatting\\Engine\\Trivia\\TriviaDataFactory.CodeShapeAnalyzer.vb",
+"region":  {
+"startLine":  300,
+"startColumn":  33,
+"endLine":  300,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Formatting\\Engine\\Trivia\\TriviaDataFactory.CodeShapeAnalyzer.vb",
+"region":  {
+"startLine":  310,
+"startColumn":  29,
+"endLine":  310,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Formatting\\Rules\\BaseFormattingRule.vb",
+"region":  {
+"startLine":  60,
+"startColumn":  21,
+"endLine":  60,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Formatting\\Rules\\NodeBasedFormattingRule.vb",
+"region":  {
+"startLine":  287,
+"startColumn":  21,
+"endLine":  287,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\LanguageServices\\VisualBasicSyntaxFactsService.vb",
+"region":  {
+"startLine":  1226,
+"startColumn":  25,
+"endLine":  1226,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\LanguageServices\\VisualBasicSyntaxFactsService.vb",
+"region":  {
+"startLine":  1235,
+"startColumn":  25,
+"endLine":  1235,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\LanguageServices\\VisualBasicSyntaxFactsService.vb",
+"region":  {
+"startLine":  1245,
+"startColumn":  25,
+"endLine":  1245,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\LanguageServices\\VisualBasicSyntaxFactsService.vb",
+"region":  {
+"startLine":  1253,
+"startColumn":  21,
+"endLine":  1253,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\LanguageServices\\VisualBasicSyntaxFactsService.vb",
+"region":  {
+"startLine":  1259,
+"startColumn":  21,
+"endLine":  1259,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Rename\\VisualBasicRenameRewriterLanguageService.vb",
+"region":  {
+"startLine":  126,
+"startColumn":  29,
+"endLine":  126,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Rename\\VisualBasicRenameRewriterLanguageService.vb",
+"region":  {
+"startLine":  428,
+"startColumn":  29,
+"endLine":  428,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Rename\\VisualBasicRenameRewriterLanguageService.vb",
+"region":  {
+"startLine":  431,
+"startColumn":  29,
+"endLine":  431,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Rename\\VisualBasicRenameRewriterLanguageService.vb",
+"region":  {
+"startLine":  434,
+"startColumn":  29,
+"endLine":  434,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Rename\\VisualBasicRenameRewriterLanguageService.vb",
+"region":  {
+"startLine":  438,
+"startColumn":  29,
+"endLine":  438,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Simplification\\VisualBasicEscapingReducer.vb",
+"region":  {
+"startLine":  174,
+"startColumn":  33,
+"endLine":  174,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Utilities\\DirectiveWalker.vb",
+"region":  {
+"startLine":  90,
+"startColumn":  21,
+"endLine":  90,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S3385",
+"message":  "Remove this \"Exit\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Utilities\\NameSyntaxIterator.vb",
+"region":  {
+"startLine":  37,
+"startColumn":  21,
+"endLine":  37,
+"endColumn":  31
+}
+}
+}
+]
+}

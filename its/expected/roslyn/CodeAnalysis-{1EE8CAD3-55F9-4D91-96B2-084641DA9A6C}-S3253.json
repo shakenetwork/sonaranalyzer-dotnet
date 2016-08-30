@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S3253",
+"message":  "Remove this redundant constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Desktop\\DesktopAssemblyIdentityComparer.Fx.cs",
+"region":  {
+"startLine":  48,
+"startColumn":  13,
+"endLine":  50,
+"endColumn":  14
+}
+}
+},
+{
+"id":  "S3253",
+"message":  "Remove this redundant constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\MarshalPseudoCustomAttributeData.cs",
+"region":  {
+"startLine":  29,
+"startColumn":  9,
+"endLine":  31,
+"endColumn":  10
+}
+}
+}
+]
+}

@@ -1,0 +1,134 @@
+{
+"issues":  [
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"emitOptions\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp.Desktop\\CSharpTestBase.cs",
+"region":  {
+"startLine":  209,
+"startColumn":  17,
+"endLine":  209,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"filename\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp.Desktop\\CSharpTestBase.cs",
+"region":  {
+"startLine":  512,
+"startColumn":  37,
+"endLine":  512,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"outputName\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp.Desktop\\CSharpTestBase.cs",
+"region":  {
+"startLine":  848,
+"startColumn":  61,
+"endLine":  848,
+"endColumn":  77
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"filterTree\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp.Desktop\\CSharpTestBase.cs",
+"region":  {
+"startLine":  848,
+"startColumn":  79,
+"endLine":  848,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"ensureEnglishUICulture\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp.Desktop\\CSharpTestBase.cs",
+"region":  {
+"startLine":  848,
+"startColumn":  97,
+"endLine":  848,
+"endColumn":  126
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"outputName\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp.Desktop\\CSharpTestBase.cs",
+"region":  {
+"startLine":  853,
+"startColumn":  61,
+"endLine":  853,
+"endColumn":  77
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"filterTree\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp.Desktop\\CSharpTestBase.cs",
+"region":  {
+"startLine":  853,
+"startColumn":  79,
+"endLine":  853,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"compilations\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\MetadataTestHelpers.cs",
+"region":  {
+"startLine":  29,
+"startColumn":  44,
+"endLine":  29,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"bytes\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\MetadataTestHelpers.cs",
+"region":  {
+"startLine":  29,
+"startColumn":  64,
+"endLine":  29,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"options\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\CSharp\\MetadataTestHelpers.cs",
+"region":  {
+"startLine":  29,
+"startColumn":  91,
+"endLine":  29,
+"endColumn":  104
+}
+}
+}
+]
+}

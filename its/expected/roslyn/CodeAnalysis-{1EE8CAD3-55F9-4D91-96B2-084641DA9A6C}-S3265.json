@@ -1,0 +1,147 @@
+{
+"issues":  [
+{
+"id":  "S3265",
+"message":  "Remove this bitwise operation; the enum \"Characteristics\" is not marked with \"Flags\" attribute.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\Compilation.cs",
+"region":  {
+"startLine":  1419,
+"startColumn":  33,
+"endLine":  1419,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3265",
+"message":  "Remove this bitwise operation; the enum \"Characteristics\" is not marked with \"Flags\" attribute.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\Compilation.cs",
+"region":  {
+"startLine":  1425,
+"startColumn":  33,
+"endLine":  1425,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3265",
+"message":  "Remove this bitwise operation; the enum \"Characteristics\" is not marked with \"Flags\" attribute.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\Compilation.cs",
+"region":  {
+"startLine":  1433,
+"startColumn":  37,
+"endLine":  1433,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S3265",
+"message":  "Remove this bitwise operation; the enum \"System.Reflection.MethodImplAttributes\" is not marked with \"Flags\" attribute.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\NoPia\\VtblGap.cs",
+"region":  {
+"startLine":  102,
+"startColumn":  67,
+"endLine":  102,
+"endColumn":  68
+}
+}
+},
+{
+"id":  "S3265",
+"message":  "Remove this bitwise operation; the enum \"MethodImplAttributes\" is not marked with \"Flags\" attribute.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\PEModule.cs",
+"region":  {
+"startLine":  2980,
+"startColumn":  40,
+"endLine":  2980,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3265",
+"message":  "Remove this bitwise operation; the enum \"MethodImplAttributes\" is not marked with \"Flags\" attribute.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\CommonAttributeData.cs",
+"region":  {
+"startLine":  305,
+"startColumn":  115,
+"endLine":  305,
+"endColumn":  116
+}
+}
+},
+{
+"id":  "S3265",
+"message":  "Remove this bitwise operation; the enum \"MethodImplAttributes\" is not marked with \"Flags\" attribute.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\CommonMethodWellKnownAttributeData.cs",
+"region":  {
+"startLine":  94,
+"startColumn":  28,
+"endLine":  94,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S3265",
+"message":  "Remove this bitwise operation; the enum \"MethodImplAttributes\" is not marked with \"Flags\" attribute.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\CommonMethodWellKnownAttributeData.cs",
+"region":  {
+"startLine":  104,
+"startColumn":  69,
+"endLine":  104,
+"endColumn":  70
+}
+}
+},
+{
+"id":  "S3265",
+"message":  "Remove this bitwise operation; the enum \"MethodImplAttributes\" is not marked with \"Flags\" attribute.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\CommonMethodWellKnownAttributeData.cs",
+"region":  {
+"startLine":  106,
+"startColumn":  36,
+"endLine":  106,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S3265",
+"message":  "Remove this bitwise operation; the enum \"MethodImplAttributes\" is not marked with \"Flags\" attribute.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\CommonMethodWellKnownAttributeData.cs",
+"region":  {
+"startLine":  113,
+"startColumn":  120,
+"endLine":  113,
+"endColumn":  121
+}
+}
+},
+{
+"id":  "S3265",
+"message":  "Remove this bitwise operation; the enum \"MethodImplAttributes\" is not marked with \"Flags\" attribute.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\CommonMethodWellKnownAttributeData.cs",
+"region":  {
+"startLine":  115,
+"startColumn":  36,
+"endLine":  115,
+"endColumn":  38
+}
+}
+}
+]
+}

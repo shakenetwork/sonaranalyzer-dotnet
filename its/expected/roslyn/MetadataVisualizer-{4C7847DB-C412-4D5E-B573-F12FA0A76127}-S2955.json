@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\Hash.cs",
+"region":  {
+"startLine":  59,
+"startColumn":  30,
+"endLine":  59,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\Hash.cs",
+"region":  {
+"startLine":  83,
+"startColumn":  30,
+"endLine":  83,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\Hash.cs",
+"region":  {
+"startLine":  109,
+"startColumn":  30,
+"endLine":  109,
+"endColumn":  34
+}
+}
+}
+]
+}

@@ -1,0 +1,134 @@
+{
+"issues":  [
+{
+"id":  "S2357",
+"message":  "Make \"Value\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Collections\\CachingFactoryTests.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  33,
+"endLine":  13,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Value\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Collections\\CachingFactoryTests.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  33,
+"endLine":  20,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NestingLevel\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\MetadataHelpersTests.cs",
+"region":  {
+"startLine":  54,
+"startColumn":  33,
+"endLine":  54,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"GenericParamsConfig\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\MetadataHelpersTests.cs",
+"region":  {
+"startLine":  55,
+"startColumn":  46,
+"endLine":  55,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"PointerCount\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\MetadataHelpersTests.cs",
+"region":  {
+"startLine":  56,
+"startColumn":  33,
+"endLine":  56,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ArrayKind\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\MetadataHelpersTests.cs",
+"region":  {
+"startLine":  57,
+"startColumn":  39,
+"endLine":  57,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"AssemblyQualified\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\MetadataHelpersTests.cs",
+"region":  {
+"startLine":  58,
+"startColumn":  34,
+"endLine":  58,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"Name\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\PEWriter\\UsedNamespaceOrTypeTests.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  36,
+"endLine":  18,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IntData\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\RealParserTests.cs",
+"region":  {
+"startLine":  605,
+"startColumn":  25,
+"endLine":  605,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"FloatData\" private.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\RealParserTests.cs",
+"region":  {
+"startLine":  607,
+"startColumn":  26,
+"endLine":  607,
+"endColumn":  35
+}
+}
+}
+]
+}

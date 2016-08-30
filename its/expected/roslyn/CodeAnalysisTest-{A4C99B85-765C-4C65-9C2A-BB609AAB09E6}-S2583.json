@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S2583",
+"message":  "Change this condition so that it does not always evaluate to \"true\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\MetadataReferences\\FusionAssemblyIdentityComparer.cs",
+"region":  {
+"startLine":  66,
+"startColumn":  28,
+"endLine":  66,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2583",
+"message":  "Change this condition so that it does not always evaluate to \"true\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Shared\\GlobalAssemblyCacheHelpers\\FusionAssemblyIdentity.cs",
+"region":  {
+"startLine":  541,
+"startColumn":  25,
+"endLine":  541,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2583",
+"message":  "Change this condition so that it does not always evaluate to \"true\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Shared\\GlobalAssemblyCacheHelpers\\FusionAssemblyIdentity.cs",
+"region":  {
+"startLine":  555,
+"startColumn":  33,
+"endLine":  555,
+"endColumn":  52
+}
+}
+}
+]
+}

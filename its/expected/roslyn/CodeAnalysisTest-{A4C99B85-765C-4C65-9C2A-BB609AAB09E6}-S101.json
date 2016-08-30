@@ -1,0 +1,82 @@
+{
+"issues":  [
+{
+"id":  "S101",
+"message":  "Rename class \"TestAnalyzerCSVB\" to match camel case naming rules, consider using \"TestAnalyzerCsvb\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\AnalyzerFileReferenceTests.cs",
+"region":  {
+"startLine":  368,
+"startColumn":  18,
+"endLine":  368,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"BinaryOperatorVBTestAnalyzer\" to match camel case naming rules, consider using \"BinaryOperatorVbTestAnalyzer\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Diagnostics\\OperationTestAnalyzer.cs",
+"region":  {
+"startLine":  1596,
+"startColumn":  18,
+"endLine":  1596,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"ForLoopConditionCrashVBTestAnalyzer\" to match camel case naming rules, consider using \"ForLoopConditionCrashVbTestAnalyzer\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Diagnostics\\OperationTestAnalyzer.cs",
+"region":  {
+"startLine":  1947,
+"startColumn":  18,
+"endLine":  1947,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"StringTextTest_UTF8\" to match camel case naming rules, consider using \"StringTextTest_Utf8\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Text\\StringTextTest_UTF8.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  18,
+"endLine":  11,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"StringTextTest_UTF8NoBOM\" to match camel case naming rules, consider using \"StringTextTest_Utf8NoBom\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CodeAnalysisTest\\Text\\StringTextTest_UTF8NoBOM.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  18,
+"endLine":  11,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"CANOF\" to match camel case naming rules, consider using \"Canof\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Shared\\GlobalAssemblyCacheHelpers\\FusionAssemblyIdentity.cs",
+"region":  {
+"startLine":  67,
+"startColumn":  30,
+"endLine":  67,
+"endColumn":  35
+}
+}
+}
+]
+}

@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S100",
+"message":  "Rename method \"CompilerBinariesAreAnyCPU\" to match camel case naming rules, consider using \"CompilerBinariesAreAnyCpu\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\CommandLine\\CommandLineTests.cs",
+"region":  {
+"startLine":  142,
+"startColumn":  21,
+"endLine":  142,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"PreferredUILang\" to match camel case naming rules, consider using \"PreferredUiLang\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\CommandLine\\CommandLineTests.cs",
+"region":  {
+"startLine":  7472,
+"startColumn":  21,
+"endLine":  7472,
+"endColumn":  36
+}
+}
+}
+]
+}

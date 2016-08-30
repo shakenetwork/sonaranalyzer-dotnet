@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S3253",
+"message":  "Remove this redundant constructor.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestFormattingRuleFactoryServiceFactory.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  9,
+"endLine":  18,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S3253",
+"message":  "Remove this redundant constructor.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test\\Workspaces\\TestWorkspaceFixture.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  9,
+"endLine":  24,
+"endColumn":  10
+}
+}
+}
+]
+}

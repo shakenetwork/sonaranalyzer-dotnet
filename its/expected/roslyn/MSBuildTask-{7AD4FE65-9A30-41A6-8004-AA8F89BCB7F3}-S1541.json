@@ -1,0 +1,160 @@
+{
+"issues":  [
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\BuildClient.cs",
+"region":  {
+"startLine":  143,
+"startColumn":  40,
+"endLine":  143,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\CommandLine\\BuildProtocol.cs",
+"region":  {
+"startLine":  321,
+"startColumn":  49,
+"endLine":  321,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\MSBuildTask\\CanonicalError.cs",
+"region":  {
+"startLine":  266,
+"startColumn":  31,
+"endLine":  266,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\MSBuildTask\\CommandLineBuilderExtension.cs",
+"region":  {
+"startLine":  197,
+"startColumn":  23,
+"endLine":  197,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\MSBuildTask\\Csc.cs",
+"region":  {
+"startLine":  296,
+"startColumn":  30,
+"endLine":  296,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\MSBuildTask\\Csc.cs",
+"region":  {
+"startLine":  466,
+"startColumn":  22,
+"endLine":  466,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\MSBuildTask\\Csc.cs",
+"region":  {
+"startLine":  659,
+"startColumn":  59,
+"endLine":  659,
+"endColumn":  79
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\MSBuildTask\\ManagedCompiler.cs",
+"region":  {
+"startLine":  890,
+"startColumn":  29,
+"endLine":  890,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\MSBuildTask\\Vbc.cs",
+"region":  {
+"startLine":  403,
+"startColumn":  42,
+"endLine":  403,
+"endColumn":  65
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\MSBuildTask\\Vbc.cs",
+"region":  {
+"startLine":  664,
+"startColumn":  23,
+"endLine":  664,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\MSBuildTask\\Vbc.cs",
+"region":  {
+"startLine":  818,
+"startColumn":  22,
+"endLine":  818,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\MSBuildTask\\Vbc.cs",
+"region":  {
+"startLine":  993,
+"startColumn":  59,
+"endLine":  993,
+"endColumn":  79
+}
+}
+}
+]
+}

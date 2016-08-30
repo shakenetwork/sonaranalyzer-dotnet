@@ -1,0 +1,459 @@
+{
+"issues":  [
+{
+"id":  "S101",
+"message":  "Rename class \"ILBuilder\" to match camel case naming rules, consider using \"IlBuilder\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\BasicBlock.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  28,
+"endLine":  12,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"ILBuilder\" to match camel case naming rules, consider using \"IlBuilder\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\EmitState.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  28,
+"endLine":  9,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"ILBuilder\" to match camel case naming rules, consider using \"IlBuilder\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ILBuilder.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  35,
+"endLine":  14,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename struct \"ILMarker\" to match camel case naming rules, consider using \"IlMarker\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ILBuilder.cs",
+"region":  {
+"startLine":  1268,
+"startColumn":  24,
+"endLine":  1268,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"ILBuilder\" to match camel case naming rules, consider using \"IlBuilder\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ILBuilderConversions.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  28,
+"endLine":  11,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"ILBuilder\" to match camel case naming rules, consider using \"IlBuilder\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ILBuilderEmit.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  28,
+"endLine":  12,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"ILOpCodeExtensions\" to match camel case naming rules, consider using \"IlOpCodeExtensions\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\ILOpCodeExtensions.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  35,
+"endLine":  10,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"ILBuilder\" to match camel case naming rules, consider using \"IlBuilder\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\LabelInfo.cs",
+"region":  {
+"startLine":  7,
+"startColumn":  28,
+"endLine":  7,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"ILBuilder\" to match camel case naming rules, consider using \"IlBuilder\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\LocalScopeManager.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  28,
+"endLine":  14,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"_CultureInfo\" to match camel case naming rules, trim underscores from the name.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CorLightup.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  34,
+"endLine":  19,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"_RuntimeEnvironment\" to match camel case naming rules, trim underscores from the name.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CorLightup.cs",
+"region":  {
+"startLine":  52,
+"startColumn":  34,
+"endLine":  52,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"_Assembly\" to match camel case naming rules, trim underscores from the name.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CorLightup.cs",
+"region":  {
+"startLine":  64,
+"startColumn":  34,
+"endLine":  64,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"_Module\" to match camel case naming rules, trim underscores from the name.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CorLightup.cs",
+"region":  {
+"startLine":  89,
+"startColumn":  34,
+"endLine":  89,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"_ResolveEventArgs\" to match camel case naming rules, trim underscores from the name.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CorLightup.cs",
+"region":  {
+"startLine":  99,
+"startColumn":  34,
+"endLine":  99,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"_AppDomain\" to match camel case naming rules, trim underscores from the name.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CorLightup.cs",
+"region":  {
+"startLine":  112,
+"startColumn":  34,
+"endLine":  112,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"RESOURCE\" to match camel case naming rules, consider using \"Resource\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CvtRes.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  20,
+"endLine":  19,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"RESOURCE_STRING\" to match camel case naming rules, consider using \"ResourceString\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CvtRes.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  20,
+"endLine":  36,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"COFFResourceReader\" to match camel case naming rules, consider using \"CoffResourceReader\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CvtRes.cs",
+"region":  {
+"startLine":  168,
+"startColumn":  27,
+"endLine":  168,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename struct \"ICONDIRENTRY\" to match camel case naming rules, consider using \"Icondirentry\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CvtRes.cs",
+"region":  {
+"startLine":  302,
+"startColumn":  24,
+"endLine":  302,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"CommonPEModuleBuilder\" to match camel case naming rules, consider using \"CommonPeModuleBuilder\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\CommonPEModuleBuilder.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  29,
+"endLine":  18,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PEModuleBuilder\" to match camel case naming rules, consider using \"PeModuleBuilder\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\CommonPEModuleBuilder.cs",
+"region":  {
+"startLine":  396,
+"startColumn":  29,
+"endLine":  396,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename interface \"IPEDeltaAssemblyBuilder\" to match camel case naming rules, consider using \"IPeDeltaAssemblyBuilder\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\IPEDeltaAssemblyBuilder.cs",
+"region":  {
+"startLine":  7,
+"startColumn":  24,
+"endLine":  7,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"SHA1CryptoServiceProvider\" to match camel case naming rules, consider using \"Sha1CryptoServiceProvider\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\HashAlgorithms.cs",
+"region":  {
+"startLine":  40,
+"startColumn":  27,
+"endLine":  40,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"SHA256CryptoServiceProvider\" to match camel case naming rules, consider using \"Sha256CryptoServiceProvider\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\HashAlgorithms.cs",
+"region":  {
+"startLine":  48,
+"startColumn":  27,
+"endLine":  48,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"SHA384CryptoServiceProvider\" to match camel case naming rules, consider using \"Sha384CryptoServiceProvider\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\HashAlgorithms.cs",
+"region":  {
+"startLine":  56,
+"startColumn":  27,
+"endLine":  56,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"SHA512CryptoServiceProvider\" to match camel case naming rules, consider using \"Sha512CryptoServiceProvider\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\HashAlgorithms.cs",
+"region":  {
+"startLine":  64,
+"startColumn":  27,
+"endLine":  64,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"UICultureUtilities\" to match camel case naming rules, consider using \"UiCultureUtilities\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\UICultureUtilities.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  27,
+"endLine":  9,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PEAssembly\" to match camel case naming rules, consider using \"PeAssembly\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\PEAssembly.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  27,
+"endLine":  14,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PEModule\" to match camel case naming rules, consider using \"PeModule\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\PEModule.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  27,
+"endLine":  25,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"PEHashProvider\" to match camel case naming rules, consider using \"PeHashProvider\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\PEModule.cs",
+"region":  {
+"startLine":  103,
+"startColumn":  30,
+"endLine":  103,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename struct \"COR_FIELD_OFFSET\" to match camel case naming rules, consider using \"CorFieldOffset\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\NativePdbWriter\\PdbMetadataWrapper.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  21,
+"endLine":  13,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"SHA1\" to match camel case naming rules, consider using \"Sha1\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PortableShim.cs",
+"region":  {
+"startLine":  691,
+"startColumn":  31,
+"endLine":  691,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"SHA256\" to match camel case naming rules, consider using \"Sha256\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PortableShim.cs",
+"region":  {
+"startLine":  705,
+"startColumn":  31,
+"endLine":  705,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"SHA384\" to match camel case naming rules, consider using \"Sha384\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PortableShim.cs",
+"region":  {
+"startLine":  719,
+"startColumn":  31,
+"endLine":  719,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"SHA512\" to match camel case naming rules, consider using \"Sha512\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PortableShim.cs",
+"region":  {
+"startLine":  733,
+"startColumn":  31,
+"endLine":  733,
+"endColumn":  37
+}
+}
+}
+]
+}

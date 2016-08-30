@@ -1,0 +1,407 @@
+{
+"issues":  [
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\Hash.cs",
+"region":  {
+"startLine":  59,
+"startColumn":  30,
+"endLine":  59,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\Hash.cs",
+"region":  {
+"startLine":  83,
+"startColumn":  30,
+"endLine":  83,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\Hash.cs",
+"region":  {
+"startLine":  109,
+"startColumn":  30,
+"endLine":  109,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TNode)\" instead or add a constraint to \"TNode\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Differencing\\Edit.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  38,
+"endLine":  23,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TNode)\" instead or add a constraint to \"TNode\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Differencing\\Edit.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  38,
+"endLine":  24,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TNode)\" instead or add a constraint to \"TNode\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Differencing\\Edit.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  38,
+"endLine":  26,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TNode)\" instead or add a constraint to \"TNode\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Differencing\\Edit.cs",
+"region":  {
+"startLine":  27,
+"startColumn":  38,
+"endLine":  27,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TNode)\" instead or add a constraint to \"TNode\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Differencing\\Edit.cs",
+"region":  {
+"startLine":  70,
+"startColumn":  33,
+"endLine":  70,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TNode)\" instead or add a constraint to \"TNode\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Differencing\\Edit.cs",
+"region":  {
+"startLine":  70,
+"startColumn":  59,
+"endLine":  70,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TNode)\" instead or add a constraint to \"TNode\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Differencing\\Edit.cs",
+"region":  {
+"startLine":  71,
+"startColumn":  33,
+"endLine":  71,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TNode)\" instead or add a constraint to \"TNode\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Differencing\\Edit.cs",
+"region":  {
+"startLine":  71,
+"startColumn":  59,
+"endLine":  71,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TNode)\" instead or add a constraint to \"TNode\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Differencing\\Edit.cs",
+"region":  {
+"startLine":  77,
+"startColumn":  29,
+"endLine":  77,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TNode)\" instead or add a constraint to \"TNode\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Differencing\\Edit.cs",
+"region":  {
+"startLine":  82,
+"startColumn":  29,
+"endLine":  82,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TSymbol)\" instead or add a constraint to \"TSymbol\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\FindSymbols\\SymbolFinder.cs",
+"region":  {
+"startLine":  194,
+"startColumn":  27,
+"endLine":  194,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Formatting\\Engine\\AbstractFormatEngine.cs",
+"region":  {
+"startLine":  228,
+"startColumn":  40,
+"endLine":  228,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TExpressionSyntax)\" instead or add a constraint to \"TExpressionSyntax\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\AbstractSpeculationAnalyzer.cs",
+"region":  {
+"startLine":  205,
+"startColumn":  48,
+"endLine":  205,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TExpressionSyntax)\" instead or add a constraint to \"TExpressionSyntax\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\AbstractSpeculationAnalyzer.cs",
+"region":  {
+"startLine":  207,
+"startColumn":  43,
+"endLine":  207,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TExpressionSyntax)\" instead or add a constraint to \"TExpressionSyntax\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\AbstractSpeculationAnalyzer.cs",
+"region":  {
+"startLine":  223,
+"startColumn":  48,
+"endLine":  223,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TExpressionSyntax)\" instead or add a constraint to \"TExpressionSyntax\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\AbstractSpeculationAnalyzer.cs",
+"region":  {
+"startLine":  225,
+"startColumn":  43,
+"endLine":  225,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TExpressionSyntax)\" instead or add a constraint to \"TExpressionSyntax\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\AbstractSpeculationAnalyzer.cs",
+"region":  {
+"startLine":  235,
+"startColumn":  48,
+"endLine":  235,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TExpressionSyntax)\" instead or add a constraint to \"TExpressionSyntax\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\AbstractSpeculationAnalyzer.cs",
+"region":  {
+"startLine":  237,
+"startColumn":  43,
+"endLine":  237,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TExpressionSyntax)\" instead or add a constraint to \"TExpressionSyntax\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\AbstractSpeculationAnalyzer.cs",
+"region":  {
+"startLine":  247,
+"startColumn":  48,
+"endLine":  247,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TExpressionSyntax)\" instead or add a constraint to \"TExpressionSyntax\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\AbstractSpeculationAnalyzer.cs",
+"region":  {
+"startLine":  249,
+"startColumn":  43,
+"endLine":  249,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TExpressionSyntax)\" instead or add a constraint to \"TExpressionSyntax\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\AbstractSpeculationAnalyzer.cs",
+"region":  {
+"startLine":  257,
+"startColumn":  48,
+"endLine":  257,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TExpressionSyntax)\" instead or add a constraint to \"TExpressionSyntax\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\AbstractSpeculationAnalyzer.cs",
+"region":  {
+"startLine":  259,
+"startColumn":  43,
+"endLine":  259,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TExpressionSyntax)\" instead or add a constraint to \"TExpressionSyntax\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\AbstractSpeculationAnalyzer.cs",
+"region":  {
+"startLine":  805,
+"startColumn":  58,
+"endLine":  805,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TExpressionSyntax)\" instead or add a constraint to \"TExpressionSyntax\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\AbstractSpeculationAnalyzer.cs",
+"region":  {
+"startLine":  826,
+"startColumn":  36,
+"endLine":  826,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TExpressionSyntax)\" instead or add a constraint to \"TExpressionSyntax\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\AbstractSpeculationAnalyzer.cs",
+"region":  {
+"startLine":  885,
+"startColumn":  29,
+"endLine":  885,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\CompilerUtilities\\ImmutableHashMap.cs",
+"region":  {
+"startLine":  1130,
+"startColumn":  30,
+"endLine":  1130,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TLanguageService)\" instead or add a constraint to \"TLanguageService\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Host\\HostLanguageServices.cs",
+"region":  {
+"startLine":  35,
+"startColumn":  28,
+"endLine":  35,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(TWorkspaceService)\" instead or add a constraint to \"TWorkspaceService\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Workspace\\Host\\HostWorkspaceServices.cs",
+"region":  {
+"startLine":  39,
+"startColumn":  28,
+"endLine":  39,
+"endColumn":  32
+}
+}
+}
+]
+}

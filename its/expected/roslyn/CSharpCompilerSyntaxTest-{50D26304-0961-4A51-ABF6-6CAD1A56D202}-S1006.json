@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S1006",
+"message":  "Add the default parameter value defined in the overridden method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Syntax\\Diagnostics\\DiagnosticTest.MockSyntaxTree.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  66,
+"endLine":  24,
+"endColumn":  83
+}
+}
+},
+{
+"id":  "S1006",
+"message":  "Add the default parameter value defined in the overridden method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Syntax\\Diagnostics\\DiagnosticTest.MockSyntaxTree.cs",
+"region":  {
+"startLine":  55,
+"startColumn":  72,
+"endLine":  55,
+"endColumn":  89
+}
+}
+},
+{
+"id":  "S1006",
+"message":  "Remove the default parameter value to match the signature of overridden method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Syntax\\Parsing\\AsyncParsingTests.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  95,
+"endLine":  20,
+"endColumn":  101
+}
+}
+},
+{
+"id":  "S1006",
+"message":  "Remove the default parameter value to match the signature of overridden method.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Syntax\\Parsing\\AwaitParsingTests.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  95,
+"endLine":  18,
+"endColumn":  101
+}
+}
+}
+]
+}

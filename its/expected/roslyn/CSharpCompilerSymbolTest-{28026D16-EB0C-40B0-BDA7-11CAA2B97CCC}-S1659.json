@@ -1,0 +1,264 @@
+{
+"issues":  [
+{
+"id":  "S1659",
+"message":  "Declare \"t2\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\ReferenceManagerTests.cs",
+"region":  {
+"startLine":  862,
+"startColumn":  28,
+"endLine":  862,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"t3\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\ReferenceManagerTests.cs",
+"region":  {
+"startLine":  862,
+"startColumn":  32,
+"endLine":  862,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"path2\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\ReferenceManagerTests.cs",
+"region":  {
+"startLine":  1241,
+"startColumn":  43,
+"endLine":  1241,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"resolved2\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Compilation\\ReferenceManagerTests.cs",
+"region":  {
+"startLine":  1242,
+"startColumn":  36,
+"endLine":  1242,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"_core\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\CompilationCreationTests.cs",
+"region":  {
+"startLine":  2624,
+"startColumn":  44,
+"endLine":  2624,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"_system\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\CompilationCreationTests.cs",
+"region":  {
+"startLine":  2624,
+"startColumn":  51,
+"endLine":  2624,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"_base1Class\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Metadata\\PE\\DynamicTransformsTests.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  46,
+"endLine":  17,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"_base2Class\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Metadata\\PE\\DynamicTransformsTests.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  59,
+"endLine":  17,
+"endColumn":  70
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"_derivedClass\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Metadata\\PE\\DynamicTransformsTests.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  72,
+"endLine":  17,
+"endColumn":  85
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"_innerClass\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Metadata\\PE\\DynamicTransformsTests.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  46,
+"endLine":  18,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"_innerInnerClass\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Metadata\\PE\\DynamicTransformsTests.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  59,
+"endLine":  18,
+"endColumn":  75
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"_inner2Class\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Metadata\\PE\\DynamicTransformsTests.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  47,
+"endLine":  19,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"_innerInner2Class\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Metadata\\PE\\DynamicTransformsTests.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  61,
+"endLine":  19,
+"endColumn":  78
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"_inner3Class\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Metadata\\PE\\DynamicTransformsTests.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  47,
+"endLine":  20,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"_intType\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Metadata\\PE\\DynamicTransformsTests.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  46,
+"endLine":  21,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"c2\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Retargeting\\RetargetCustomAttributes.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  51,
+"endLine":  19,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"c2MscorlibAssemblyRef\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Retargeting\\RetargetCustomAttributes.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  58,
+"endLine":  20,
+"endColumn":  79
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"newMsCorLib_debuggerTypeProxyAttributeType\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Retargeting\\RetargetCustomAttributes.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  80,
+"endLine":  21,
+"endColumn":  122
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"newMsCorLib_debuggerTypeProxyAttributeCtor\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Retargeting\\RetargetCustomAttributes.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  77,
+"endLine":  22,
+"endColumn":  119
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"newMsCorLib_systemType\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\CSharp\\Test\\Symbol\\Symbols\\Retargeting\\RetargetCustomAttributes.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  60,
+"endLine":  23,
+"endColumn":  82
+}
+}
+}
+]
+}

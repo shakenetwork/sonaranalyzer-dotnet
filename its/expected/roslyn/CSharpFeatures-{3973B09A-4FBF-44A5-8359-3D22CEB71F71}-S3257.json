@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S3257",
+"message":  "Remove the type specification; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\InlineTemporary\\InlineTemporaryCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  558,
+"startColumn":  18,
+"endLine":  558,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the type specification; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\CodeRefactorings\\InlineTemporary\\InlineTemporaryCodeRefactoringProvider.cs",
+"region":  {
+"startLine":  558,
+"startColumn":  38,
+"endLine":  558,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S3257",
+"message":  "Remove the array type; it is redundant.",
+"location":  {
+"uri":  "roslyn\\src\\Features\\CSharp\\Portable\\ExtractMethod\\CSharpMethodExtractor.Analyzer.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  97,
+"endLine":  19,
+"endColumn":  100
+}
+}
+}
+]
+}

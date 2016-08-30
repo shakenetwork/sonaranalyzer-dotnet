@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S2259",
+"message":  "\"documentsToMergeMap\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\CodeFixes\\FixAllOccurrences\\BatchFixAllProvider.cs",
+"region":  {
+"startLine":  285,
+"startColumn":  29,
+"endLine":  285,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"updatedContainingType\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Shared\\Extensions\\ITypeSymbolExtensions.SubstituteTypesVisitor.cs",
+"region":  {
+"startLine":  81,
+"startColumn":  30,
+"endLine":  81,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"newType\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\AbstractSpeculationAnalyzer.cs",
+"region":  {
+"startLine":  390,
+"startColumn":  29,
+"endLine":  390,
+"endColumn":  36
+}
+}
+}
+]
+}

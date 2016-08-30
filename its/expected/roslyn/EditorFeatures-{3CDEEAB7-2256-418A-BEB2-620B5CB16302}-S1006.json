@@ -1,0 +1,134 @@
+{
+"issues":  [
+{
+"id":  "S1006",
+"message":  "Add the default parameter value defined in the overridden method.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Extensibility\\BraceMatching\\AbstractDirectiveTriviaBraceMatcher.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  116,
+"endLine":  26,
+"endColumn":  133
+}
+}
+},
+{
+"id":  "S1006",
+"message":  "Add the default parameter value defined in the overridden method.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\BraceMatching\\AbstractBraceMatcher.cs",
+"region":  {
+"startLine":  56,
+"startColumn":  31,
+"endLine":  56,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1006",
+"message":  "Add the default parameter value defined in the overridden method.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\BraceMatching\\BraceMatchingService.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  123,
+"endLine":  26,
+"endColumn":  140
+}
+}
+},
+{
+"id":  "S1006",
+"message":  "Remove the default parameter value to match the signature of overridden method.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\EditAndContinue\\EditAndContinueDiagnosticUpdateSource.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  172,
+"endLine":  42,
+"endColumn":  179
+}
+}
+},
+{
+"id":  "S1006",
+"message":  "Remove the default parameter value to match the signature of overridden method.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\EditAndContinue\\EditAndContinueDiagnosticUpdateSource.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  217,
+"endLine":  42,
+"endColumn":  245
+}
+}
+},
+{
+"id":  "S1006",
+"message":  "Add the default parameter value defined in the overridden method.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\InlineRename\\InlineRenameService.cs",
+"region":  {
+"startLine":  47,
+"startColumn":  31,
+"endLine":  47,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S1006",
+"message":  "Add the default parameter value defined in the overridden method.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\MetadataAsSource\\SymbolMappingServiceFactory.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  118,
+"endLine":  24,
+"endColumn":  135
+}
+}
+},
+{
+"id":  "S1006",
+"message":  "Add the default parameter value defined in the overridden method.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\MetadataAsSource\\SymbolMappingServiceFactory.cs",
+"region":  {
+"startLine":  35,
+"startColumn":  120,
+"endLine":  35,
+"endColumn":  137
+}
+}
+},
+{
+"id":  "S1006",
+"message":  "Add the default parameter value defined in the overridden method.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\SymbolMapping\\SymbolMappingServiceFactory.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  124,
+"endLine":  21,
+"endColumn":  141
+}
+}
+},
+{
+"id":  "S1006",
+"message":  "Add the default parameter value defined in the overridden method.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\SymbolMapping\\SymbolMappingServiceFactory.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  114,
+"endLine":  33,
+"endColumn":  131
+}
+}
+}
+]
+}

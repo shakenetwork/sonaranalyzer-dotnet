@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S2259",
+"message":  "\"matchingDirectives\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Extensibility\\BraceMatching\\AbstractDirectiveTriviaBraceMatcher.cs",
+"region":  {
+"startLine":  44,
+"startColumn":  61,
+"endLine":  44,
+"endColumn":  79
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"textBuffer\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\RenameTracking\\RenameTrackingTaggerProvider.cs",
+"region":  {
+"startLine":  94,
+"startColumn":  25,
+"endLine":  94,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2259",
+"message":  "\"document\" is null on at least one execution path.",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\RenameTracking\\RenameTrackingTaggerProvider.RenameTrackingCommitter.cs",
+"region":  {
+"startLine":  80,
+"startColumn":  80,
+"endLine":  80,
+"endColumn":  88
+}
+}
+}
+]
+}

@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S131",
+"message":  "Add a \"default\" clause to this \"switch\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\CompilationContext.cs",
+"region":  {
+"startLine":  1136,
+"startColumn":  17,
+"endLine":  1136,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"default\" clause to this \"switch\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\CSharpInstructionDecoder.cs",
+"region":  {
+"startLine":  99,
+"startColumn":  13,
+"endLine":  99,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S131",
+"message":  "Add a \"default\" clause to this \"switch\" statement.",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Source\\ExpressionCompiler\\EvaluationContext.cs",
+"region":  {
+"startLine":  439,
+"startColumn":  13,
+"endLine":  439,
+"endColumn":  19
+}
+}
+}
+]
+}

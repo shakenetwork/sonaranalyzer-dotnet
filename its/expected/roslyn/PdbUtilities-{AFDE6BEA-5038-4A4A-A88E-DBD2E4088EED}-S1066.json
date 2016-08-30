@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Dependencies\\PooledObjects\\ObjectPool%601.cs",
+"region":  {
+"startLine":  166,
+"startColumn":  21,
+"endLine":  166,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
+"uri":  "roslyn\\src\\Test\\PdbUtilities\\Pdb\\Token2SourceLineExporter.cs",
+"region":  {
+"startLine":  612,
+"startColumn":  25,
+"endLine":  612,
+"endColumn":  27
+}
+}
+}
+]
+}

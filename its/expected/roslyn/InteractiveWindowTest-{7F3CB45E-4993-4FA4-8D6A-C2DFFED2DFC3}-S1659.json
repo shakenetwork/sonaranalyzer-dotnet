@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1659",
+"message":  "Declare \"commandSpan\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\EditorTest\\InteractiveWindowTests.cs",
+"region":  {
+"startLine":  94,
+"startColumn":  38,
+"endLine":  94,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S1659",
+"message":  "Declare \"argsSpan\" in a separate statement.",
+"location":  {
+"uri":  "roslyn\\src\\InteractiveWindow\\EditorTest\\InteractiveWindowTests.cs",
+"region":  {
+"startLine":  94,
+"startColumn":  51,
+"endLine":  94,
+"endColumn":  59
+}
+}
+}
+]
+}

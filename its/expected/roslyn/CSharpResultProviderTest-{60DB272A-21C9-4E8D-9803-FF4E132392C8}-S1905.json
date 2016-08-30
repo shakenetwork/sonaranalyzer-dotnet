@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"int\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Test\\ResultProvider\\ValueFormattingTests.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  48,
+"endLine":  21,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"int\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Test\\ResultProvider\\ValueFormattingTests.cs",
+"region":  {
+"startLine":  22,
+"startColumn":  49,
+"endLine":  22,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"double\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Test\\ResultProvider\\ValueFormattingTests.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  47,
+"endLine":  37,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"double\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\CSharp\\Test\\ResultProvider\\ValueFormattingTests.cs",
+"region":  {
+"startLine":  39,
+"startColumn":  46,
+"endLine":  39,
+"endColumn":  52
+}
+}
+}
+]
+}

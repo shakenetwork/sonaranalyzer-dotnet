@@ -1,0 +1,381 @@
+{
+"issues":  [
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_shadowCopyDirectoryMutex\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Shared\\ShadowCopyAnalyzerAssemblyLoader.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  27,
+"endLine":  11,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_cancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\AnalyzerDependency\\AnalyzerDependencyCheckingService.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  27,
+"endLine":  20,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_previewWorkspace\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Preview\\PreviewUpdater.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  28,
+"endLine":  13,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_previewWorkspace\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Preview\\PreviewUpdater.PreviewDialogWorkspace.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  28,
+"endLine":  11,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_previewWorkspace\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Preview\\PreviewUpdater.Tagger.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  28,
+"endLine":  17,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_gate\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Progression\\GraphBuilder.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  35,
+"endLine":  23,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_shutdownCancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Remote\\RemoteHostClientServiceFactory.RemoteHostClientService.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  22,
+"endLine":  17,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_event\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Remote\\RemoteHostClientServiceFactory.SolutionChecksumUpdator.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  23,
+"endLine":  16,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_primarySessionId\", \"_shutdownCancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.AbstractTable.cs",
+"region":  {
+"startLine":  8,
+"startColumn":  28,
+"endLine":  8,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_primarySessionId\", \"_shutdownCancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.AbstractTableAccessor.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  28,
+"endLine":  9,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_primarySessionId\", \"_shutdownCancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  28,
+"endLine":  12,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_primarySessionId\", \"_shutdownCancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.DocumentTable.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  28,
+"endLine":  9,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_primarySessionId\", \"_shutdownCancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.DocumentTableAccessor.cs",
+"region":  {
+"startLine":  8,
+"startColumn":  28,
+"endLine":  8,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_primarySessionId\", \"_shutdownCancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.IdentifierLocationTable.cs",
+"region":  {
+"startLine":  7,
+"startColumn":  28,
+"endLine":  7,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_primarySessionId\", \"_shutdownCancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.IdentifierLocationTableAccessor.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  28,
+"endLine":  10,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_primarySessionId\", \"_shutdownCancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.IdentifierTable.cs",
+"region":  {
+"startLine":  7,
+"startColumn":  28,
+"endLine":  7,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_primarySessionId\", \"_shutdownCancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.NameTable.cs",
+"region":  {
+"startLine":  7,
+"startColumn":  28,
+"endLine":  7,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_primarySessionId\", \"_shutdownCancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.OpenSession.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  28,
+"endLine":  9,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_primarySessionId\", \"_shutdownCancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.Pool.cs",
+"region":  {
+"startLine":  8,
+"startColumn":  28,
+"endLine":  8,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_primarySessionId\", \"_shutdownCancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.ProjectDocumentTable.cs",
+"region":  {
+"startLine":  7,
+"startColumn":  28,
+"endLine":  7,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_primarySessionId\", \"_shutdownCancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.ProjectDocumentTableAccessor.cs",
+"region":  {
+"startLine":  8,
+"startColumn":  28,
+"endLine":  8,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_primarySessionId\", \"_shutdownCancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.ProjectTable.cs",
+"region":  {
+"startLine":  7,
+"startColumn":  28,
+"endLine":  7,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_primarySessionId\", \"_shutdownCancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.ProjectTableAccessor.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  28,
+"endLine":  9,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_primarySessionId\", \"_shutdownCancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.SolutionTable.cs",
+"region":  {
+"startLine":  8,
+"startColumn":  28,
+"endLine":  8,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_primarySessionId\", \"_shutdownCancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.SolutionTableAccessor.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  28,
+"endLine":  9,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_primarySessionId\", \"_shutdownCancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.StringNameTableAccessor.cs",
+"region":  {
+"startLine":  8,
+"startColumn":  28,
+"endLine":  8,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_primarySessionId\", \"_shutdownCancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Implementation\\Workspace\\Esent\\EsentStorage.TableKinds.cs",
+"region":  {
+"startLine":  5,
+"startColumn":  28,
+"endLine":  5,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_tokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Packaging\\PackageInstallerServiceFactory.cs",
+"region":  {
+"startLine":  39,
+"startColumn":  28,
+"endLine":  39,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_tokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Def\\Packaging\\PackageInstallerServiceFactory_UndoRedo.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  28,
+"endLine":  9,
+"endColumn":  51
+}
+}
+}
+]
+}

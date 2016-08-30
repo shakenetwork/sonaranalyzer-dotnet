@@ -1,0 +1,212 @@
+{
+"issues":  [
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_cancellationSource\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\CallHierarchy\\Finders\\AbstractCallFinder.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  29,
+"endLine":  15,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_reportChangeCancellationSource\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Classification\\SyntacticClassificationTaggerProvider.TagComputer.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  32,
+"endLine":  32,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_reportChangeCancellationSource\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Classification\\SyntacticClassificationTaggerProvider.TagComputer.LastLineCache.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  32,
+"endLine":  11,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_hasItemsGate\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\ForegroundNotification\\ForegroundNotificationService.cs",
+"region":  {
+"startLine":  239,
+"startColumn":  23,
+"endLine":  239,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_cancellationTokenSource\", \"_conflictResolutionTaskCancellationSource\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\InlineRename\\InlineRenameSession.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  28,
+"endLine":  28,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_cancellationTokenSource\", \"_conflictResolutionTaskCancellationSource\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\InlineRename\\InlineRenameSession.OpenTextBufferManager.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  28,
+"endLine":  21,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_cancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\Presentation\\ToolTipProvider.cs",
+"region":  {
+"startLine":  52,
+"startColumn":  23,
+"endLine":  52,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_tasks\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\Completion\\PrioritizedTaskScheduler.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  20,
+"endLine":  11,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_stopTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Intellisense\\ModelComputation.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  20,
+"endLine":  13,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_gate\", \"_mutex\", \"_workspace\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\MetadataAsSource\\MetadataAsSourceFileService.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  20,
+"endLine":  20,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_modelTaskCancellationSource\", \"_selectedItemInfoTaskCancellationSource\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\NavigationBar\\NavigationBarController.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  28,
+"endLine":  28,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_modelTaskCancellationSource\", \"_selectedItemInfoTaskCancellationSource\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\NavigationBar\\NavigationBarController_ModelComputation.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  28,
+"endLine":  17,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_cancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\RenameTracking\\RenameTrackingTaggerProvider.TrackingSession.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  23,
+"endLine":  32,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_gate\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Implementation\\Workspaces\\ProjectCacheService.SimpleMRUCache.cs",
+"region":  {
+"startLine":  90,
+"startColumn":  23,
+"endLine":  90,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_source\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Preview\\PreviewSolutionCrawlerRegistrationService.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  24,
+"endLine":  37,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_cancellationTokenSource\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Core\\Shared\\Threading\\AsynchronousSerialWorkQueue.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  20,
+"endLine":  25,
+"endColumn":  47
+}
+}
+}
+]
+}

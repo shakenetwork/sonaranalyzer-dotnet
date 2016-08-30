@@ -1,0 +1,459 @@
+{
+"issues":  [
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Binding\\AbstractLookupSymbolsInfo.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  29,
+"endLine":  11,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\PrivateImplementationDetails.cs",
+"region":  {
+"startLine":  470,
+"startColumn":  29,
+"endLine":  470,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to an interface.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CodeGen\\VariableSlotAllocator.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  29,
+"endLine":  9,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Collections\\CachingFactory.cs",
+"region":  {
+"startLine":  211,
+"startColumn":  29,
+"endLine":  211,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Collections\\SmallDictionary.cs",
+"region":  {
+"startLine":  114,
+"startColumn":  32,
+"endLine":  114,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Collections\\SmallDictionary.cs",
+"region":  {
+"startLine":  155,
+"startColumn":  32,
+"endLine":  155,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to an interface.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\CommandLine\\ErrorLogger.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  29,
+"endLine":  18,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\CommonSyntaxAndDeclarationManager.cs",
+"region":  {
+"startLine":  7,
+"startColumn":  29,
+"endLine":  7,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to an interface.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\ControlFlowAnalysis.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  27,
+"endLine":  11,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to an interface.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\DataFlowAnalysis.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  27,
+"endLine":  14,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\OperationVisitor.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  27,
+"endLine":  11,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\OperationVisitor.cs",
+"region":  {
+"startLine":  411,
+"startColumn":  27,
+"endLine":  411,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Compilation\\OperationWalker.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  27,
+"endLine":  11,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ConstantValueSpecialized.cs",
+"region":  {
+"startLine":  232,
+"startColumn":  32,
+"endLine":  232,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to an interface.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AdditionalText.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  27,
+"endLine":  11,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\AnalysisState.SyntaxReferenceAnalyzerStateData.cs",
+"region":  {
+"startLine":  117,
+"startColumn":  33,
+"endLine":  117,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\CompilationEvent.cs",
+"region":  {
+"startLine":  5,
+"startColumn":  29,
+"endLine":  5,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\DiagnosticAnalyzerAction.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  29,
+"endLine":  9,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\DiagnosticAnalyzer\\DiagnosticStartAnalysisScope.cs",
+"region":  {
+"startLine":  489,
+"startColumn":  29,
+"endLine":  489,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to an interface.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\EditAndContinue\\LambdaSyntaxFacts.cs",
+"region":  {
+"startLine":  5,
+"startColumn":  29,
+"endLine":  5,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to an interface.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\NoPia\\CommonEmbeddedMember.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  33,
+"endLine":  32,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to an interface.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Emit\\NoPia\\EmbeddedTypesManager.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  29,
+"endLine":  13,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\InternalUtilities\\HashAlgorithms.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  29,
+"endLine":  10,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to an interface.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\MetadataReader\\SymbolFactory.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  29,
+"endLine":  9,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\PEWriter\\ReferenceIndexer.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  29,
+"endLine":  11,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to an interface.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\ReferenceManager\\CommonReferenceManager.State.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  29,
+"endLine":  15,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to an interface.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Serialization\\ObjectBinder.cs",
+"region":  {
+"startLine":  7,
+"startColumn":  29,
+"endLine":  7,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\AnonymousTypes\\CommonAnonymousTypeManager.cs",
+"region":  {
+"startLine":  5,
+"startColumn":  29,
+"endLine":  5,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\CommonParameterEarlyWellKnownAttributeData.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  29,
+"endLine":  10,
+"endColumn":  71
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\EarlyWellKnownAttributeData.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  29,
+"endLine":  15,
+"endColumn":  56
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\Attributes\\WellKnownAttributeData.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  29,
+"endLine":  12,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\SymbolVisitor%601.cs",
+"region":  {
+"startLine":  5,
+"startColumn":  27,
+"endLine":  5,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Symbols\\SymbolVisitor.cs",
+"region":  {
+"startLine":  5,
+"startColumn":  27,
+"endLine":  5,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Syntax\\SyntaxWalker.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  27,
+"endLine":  11,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to an interface.",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Core\\Portable\\Text\\SourceTextContainer.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  27,
+"endLine":  11,
+"endColumn":  46
+}
+}
+}
+]
+}

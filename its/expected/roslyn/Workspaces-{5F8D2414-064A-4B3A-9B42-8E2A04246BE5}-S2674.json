@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S2674",
+"message":  "Check the return value of the \"Read\" call to see how many bytes were read.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Execution\\AbstractReferenceSerializationService.cs",
+"region":  {
+"startLine":  438,
+"startColumn":  17,
+"endLine":  438,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2674",
+"message":  "Check the return value of the \"Read\" call to see how many bytes were read.",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\Core\\Portable\\Utilities\\SerializableBytes.cs",
+"region":  {
+"startLine":  308,
+"startColumn":  17,
+"endLine":  308,
+"endColumn":  74
+}
+}
+}
+]
+}
