@@ -20,7 +20,7 @@
 
     <PropertyGroup Condition="$(SonarLintRegressionTestRunning)">
       <!-- Set the path to the SARIF report -->
-      <ErrorLog>$(MSBuildStartupDirectory)\output\$(PROJECT)\$(MSBuildProjectName)-$(ProjectGuid).json</ErrorLog>
+      <ErrorLog>$(MSBuildStartupDirectory)\output\$(PROJECT)\$(AssemblyName)-$(ProjectGuid).json</ErrorLog>
       
       <!-- Override the ruleset with all SonarAnalyzer rules -->
       <ResolvedCodeAnalysisRuleSet>$(MSBuildStartupDirectory)\output\AllSonarLintRules.ruleset</ResolvedCodeAnalysisRuleSet>
