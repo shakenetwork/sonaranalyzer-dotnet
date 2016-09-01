@@ -1,4 +1,7 @@
 
+#nuget restore
+& $env:NUGET_PATH restore SonarLint.sln
+
 #build tests
 & $env:MSBUILD_PATH /p:configuration=Release /p:DeployExtension=false /p:ZipPackageCompressionLevel=normal /v:m
 
