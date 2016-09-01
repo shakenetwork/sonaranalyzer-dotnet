@@ -23,7 +23,7 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyVersion("1.18.0")]
 [assembly: AssemblyFileVersion("1.18.0.0")]
-[assembly: AssemblyInformationalVersion("1.18.0")]
+[assembly: AssemblyInformationalVersion("Version:1.18.0.0 Branch:not-set Sha1:not-set")]
 
 [assembly: AssemblyConfiguration("")]
 
