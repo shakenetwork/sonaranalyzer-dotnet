@@ -1,6 +1,7 @@
 ﻿Module Module1
     Sub Main()
-        Dim foo() As String ' Noncompliant
+        Dim foo() As String ' Noncompliant {{Move the array designator from the variable to the type.}}
+'           ^^^^^
         Dim foo2() As String() ' Noncompliant
         Dim foo3(5)() As String ' Noncompliant
         Dim foo4() As New String()

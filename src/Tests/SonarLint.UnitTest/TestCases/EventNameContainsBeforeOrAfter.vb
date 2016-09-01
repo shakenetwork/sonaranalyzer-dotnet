@@ -1,5 +1,6 @@
 ﻿Class Foo
-    Event BeforeClose() ' Noncompliant
+    Event BeforeClose() ' Noncompliant {{Rename this event to remove the "Before" prefix.}}
+'         ^^^^^^^^^^^
     Event afterClose()  ' Noncompliant
     Event Closing()
     Public Custom Event BeforeClose2 As EventHandler ' Noncompliant

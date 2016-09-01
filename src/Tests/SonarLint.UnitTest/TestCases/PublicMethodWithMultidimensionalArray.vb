@@ -2,7 +2,8 @@
 
 Namespace Tests.Diagnostics
     Public Interface IFace
-        Sub Method6(a As Integer()()) ' Noncompliant
+        Sub Method6(a As Integer()()) ' Noncompliant {{Make this method private or simplify its parameters to not use multidimensional arrays.}}
+'           ^^^^^^^
     End Interface
 
     Public Class Base

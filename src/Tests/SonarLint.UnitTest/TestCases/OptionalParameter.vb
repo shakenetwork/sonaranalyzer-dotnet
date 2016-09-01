@@ -4,7 +4,8 @@ Namespace Tests.Diagnostics
     Public Class OptionalParameter
 
         Public Sub New(Optional ByVal i As Integer = 5, 'Noncompliant
-                       Optional ByVal j As Integer = 5) 'Noncompliant
+                       Optional ByVal j As Integer = 5) 'Noncompliant {{Use the overloading mechanism instead of the optional parameters.}}
+'                      ^^^^^^^^
         End Sub
         Public Function F(Optional ByVal i As Integer = 5) 'Noncompliant
         End Function

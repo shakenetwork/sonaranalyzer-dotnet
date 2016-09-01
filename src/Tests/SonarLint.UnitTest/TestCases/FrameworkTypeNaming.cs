@@ -6,7 +6,7 @@ namespace Tests.Diagnostics
 
     }
     class AttributeOne : Attribute // Noncompliant {{Make this class name end with "Attribute".}}
-                                   //        ^^^^^^^^^^^^
+//        ^^^^^^^^^^^^
     {
 
     }

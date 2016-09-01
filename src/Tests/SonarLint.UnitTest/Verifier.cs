@@ -47,7 +47,12 @@ namespace SonarLint.UnitTest
         private static readonly MetadataReference systemLinqAssembly = MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location);
         private static readonly MetadataReference systemNetAssembly = MetadataReference.CreateFromFile(typeof(WebClient).Assembly.Location);
 
-        private const string EXPECTED_ISSUE_LOCATION_PATTERN = @"^//\s*(\^+)\s*$";
+        private const string EXPECTED_ISSUE_LOCATION_PATTERN = @"\s*(\^+)\s*";
+        private const string COMMENT_START_CSHARP = @"//";
+        private const string COMMENT_START_VBNET = @"'";
+
+        private const string EXPECTED_ISSUE_LOCATION_PATTERN_CSHARP = @"^" + COMMENT_START_CSHARP + EXPECTED_ISSUE_LOCATION_PATTERN + "$";
+        private const string EXPECTED_ISSUE_LOCATION_PATTERN_VBNET = @"^" + COMMENT_START_VBNET + EXPECTED_ISSUE_LOCATION_PATTERN + "$";
         private const string NONCOMPLIANT_START = "Noncompliant";
         private const string FIXED_MESSAGE = "Fixed";
         private const string NONCOMPLIANT_PATTERN = NONCOMPLIANT_START + @".*";
@@ -94,7 +99,11 @@ namespace SonarLint.UnitTest
                     var compilation = project.GetCompilationAsync().Result;
                     var diagnostics = GetDiagnostics(compilation, diagnosticAnalyzer);
                     var expectedIssues = ExpectedIssues(compilation.SyntaxTrees.First());
-                    var expectedLocations = ExpectedIssueLocations(compilation.SyntaxTrees.First());
+
+                    var language = file.Extension == CSharpFileExtension
+                        ? LanguageNames.CSharp
+                        : LanguageNames.VisualBasic;
+                    var expectedLocations = ExpectedIssueLocations(compilation.SyntaxTrees.First(), language);
 
                     foreach (var diagnostic in diagnostics)
                     {
@@ -238,12 +247,16 @@ namespace SonarLint.UnitTest
                 ? LanguageNames.CSharp
                 : LanguageNames.VisualBasic;
 
+            var locationPattern = file.Extension == CSharpFileExtension
+                ? EXPECTED_ISSUE_LOCATION_PATTERN_CSHARP
+                : EXPECTED_ISSUE_LOCATION_PATTERN_VBNET;
+
             var lines = File.ReadAllText(file.FullName, Encoding.UTF8)
                 .Split(new[] { Environment.NewLine}, StringSplitOptions.None);
 
             if (removeAnalysisComments)
             {
-                lines = lines.Where(l => !Regex.IsMatch(l, EXPECTED_ISSUE_LOCATION_PATTERN)).ToArray();
+                lines = lines.Where(l => !Regex.IsMatch(l, locationPattern)).ToArray();
                 lines = lines.Select(l => {
                     var match = Regex.Match(l, NONCOMPLIANT_PATTERN);
                     return match.Success ? l.Replace(match.Groups[0].Value, FIXED_MESSAGE) : l;
@@ -343,16 +356,26 @@ namespace SonarLint.UnitTest
             }
         }
 
-        private static Dictionary<int, ExactIssueLocation> ExpectedIssueLocations(SyntaxTree syntaxTree)
+        private static Dictionary<int, ExactIssueLocation> ExpectedIssueLocations(SyntaxTree syntaxTree, string language)
         {
             var exactLocations = new Dictionary<int, ExactIssueLocation>();
+
+            var locationPattern = language == LanguageNames.CSharp
+                ? EXPECTED_ISSUE_LOCATION_PATTERN_CSHARP
+                : EXPECTED_ISSUE_LOCATION_PATTERN_VBNET;
 
             foreach (var line in syntaxTree.GetText().Lines)
             {
                 var lineText = line.ToString();
-                var match = Regex.Match(lineText, EXPECTED_ISSUE_LOCATION_PATTERN);
+                var match = Regex.Match(lineText, locationPattern);
                 if (!match.Success)
                 {
+                    var commentStart = language == LanguageNames.CSharp ? COMMENT_START_CSHARP : COMMENT_START_VBNET;
+                    if (Regex.IsMatch(lineText, commentStart + EXPECTED_ISSUE_LOCATION_PATTERN + "$"))
+                    {
+                        Assert.Fail("Line matches expected location pattern, but doesn't start at the beginning of the line.");
+                    }
+
                     continue;
                 }
 

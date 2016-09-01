@@ -3,7 +3,8 @@
     Public Class PropertyGetterWithThrow
         Public Property Foo() As Integer
             Get
-                Throw New NotImplementedException  ' Noncompliant
+                Throw New NotImplementedException  ' Noncompliant {{Remove the exception throwing from this property getter, or refactor the property into a method.}}
+'               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             End Get
             Set(ByVal value As Integer)
                 ' ... some code ...

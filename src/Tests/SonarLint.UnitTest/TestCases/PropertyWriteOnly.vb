@@ -1,7 +1,8 @@
 ﻿Namespace Tests.Diagnostics
 
     Public Class PropertyWriteOnly
-        WriteOnly Property Foo() As Integer ' Noncompliant
+        WriteOnly Property Foo() As Integer ' Noncompliant {{Provide a getter for "Foo" or replace the property with a "SetFoo" method.}}
+'                          ^^^
             Set(ByVal value As Integer)
                 ' ... some code ...
             End Set

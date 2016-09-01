@@ -4,7 +4,8 @@
 
         Public Sub New(n As Integer)
 
-            Select Case n ' Noncompliant
+            Select Case n ' Noncompliant {{Add a "Case Else" clause to this "Select" statement.}}
+'           ^^^^^^
             End Select
 
             Select Case n ' Noncompliant

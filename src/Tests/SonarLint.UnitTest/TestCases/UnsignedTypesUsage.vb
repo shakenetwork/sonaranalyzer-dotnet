@@ -2,7 +2,8 @@
 
 Module Module1
     Sub Main()
-        Dim foo1 As UShort   ' Noncompliant
+        Dim foo1 As UShort   ' Noncompliant {{Change this unsigned type to "Short".}}
+'                   ^^^^^^
         Dim foo2 As UInteger ' Noncompliant
         Dim foo3 As ULong    ' Noncompliant
         Dim foo4 As System.UInt64 ' Noncompliant

@@ -8,7 +8,8 @@ Namespace Tests.Diagnostics
             Dim str2 = "	"
             Dim i = 1
             Do
-                str += "a"           ' Noncompliant
+                str += "a"           ' Noncompliant {{Use a StringBuilder instead.}}
+'               ^^^^^^^^^^
                 str = str + "a"      ' Noncompliant
 
                 str &= "a"           ' Noncompliant

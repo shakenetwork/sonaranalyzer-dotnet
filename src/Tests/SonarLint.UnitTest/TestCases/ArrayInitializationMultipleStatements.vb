@@ -1,7 +1,8 @@
 ﻿Module Module1
     Sub Main()
         Dim Const i As Integer = 0
-        Dim f2(i) As String ' Noncompliant
+        Dim f2(i) As String ' Noncompliant {{Refactor this code to use the "... = {}" syntax.}}
+'       ^^^^^^^^^^^^^^^^^^^
         f2(0) = "foo"
         Dim f As String
         Dim foo(1) As String      ' Noncompliant

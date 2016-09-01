@@ -1,5 +1,6 @@
 ﻿Namespace Tests.Diagnostics
-    Public Enum MyEnum ' Noncompliant
+    Public Enum MyEnum ' Noncompliant {{Rename this enumeration to remove the "Enum" suffix.}}
+'               ^^^^^^
         Value
     End Enum
     Public Enum MyFlags ' Noncompliant

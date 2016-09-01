@@ -1,7 +1,8 @@
 ﻿Namespace Tests.Diagnostics
     Class SingleStatementPerLine
         Sub Main()
-            Dim a = 0 : Dim b = 0  ' Noncompliant
+            Dim a = 0 : Dim b = 0  ' Noncompliant {{Reformat the code to have only one statement per line.}}
+'           ^^^^^^^^^^^^^^^^^^^^^
         End Sub
         Sub New()
             If someCondition Then : doSomething() ' Noncompliant

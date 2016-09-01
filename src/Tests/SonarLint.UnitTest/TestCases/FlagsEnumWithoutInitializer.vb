@@ -1,7 +1,8 @@
 ﻿Namespace Tests.Diagnostics
 
     <System.Flags()>
-    Enum FruitType    ' Noncompliant
+    Enum FruitType    ' Noncompliant {{Initialize all the members of this "Flags" enumeration.}}
+'        ^^^^^^^^^
         Banana
         Orange = 5
         Strawberry

@@ -2,7 +2,7 @@
     Sub Main()
         Dim i = 1
 
-        Do                        ' Noncompliant
+        Do                        ' Noncompliant {{Use a structured loop instead.}}
             If i = 10 Then
                 Exit Do
             End If
