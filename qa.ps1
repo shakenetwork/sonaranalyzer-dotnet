@@ -7,7 +7,7 @@ $password = convertto-securestring -String "$env:REPOX_QAPUBLICADMIN_PASSWORD" -
 $cred = new-object -typename System.Management.Automation.PSCredential -argumentlist $env:REPOX_QAPUBLICADMIN_USERNAME, $password
 $ARTIFACTORY_SRC_REPO="sonarsource-nuget-qa"
 $url = "$env:ARTIFACTORY_URL/$ARTIFACTORY_SRC_REPO/$ARTIFACT"
-Invoke-WebRequest -UseBasicParsing -Uri $url -Credential $cred
+Invoke-WebRequest -UseBasicParsing -Uri $url -Credential $cred -OutFile $env:FILENAME
 
 #unzip nuget package
 $zipName=$env:FILENAME.Substring(0, $env:FILENAME.LastIndexOf('.'))+".zip"
