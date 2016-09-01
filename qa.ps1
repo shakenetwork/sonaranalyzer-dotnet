@@ -29,4 +29,6 @@ mv analyzers\*.dll src\SonarLint.CSharp\bin\Release
 & $env:VSTEST_PATH .\src\Tests\SonarLint.UnitTest\bin\Release\SonarLint.UnitTest.dll
  
 #run regression-test
-cmd /c $currentdir\its\regression-test.bat
+cd its
+git submodule update --init --recursive --depth 1
+cmd /c .\regression-test.bat
