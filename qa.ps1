@@ -29,4 +29,4 @@ mv analyzers\*.dll src\SonarLint.CSharp\bin\Release
 & $env:VSTEST_PATH .\src\Tests\SonarLint.UnitTest\bin\Release\SonarLint.UnitTest.dll
  
 #run regression-test
-Invoke-Item .\its\regression-test.bat
+cmd /c $currentdir\its\regression-test.bat
