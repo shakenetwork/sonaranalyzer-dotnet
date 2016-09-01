@@ -1,0 +1,69 @@
+{
+"issues":  [
+{
+"id":  "S2363",
+"message":  "Rename \"s_commonTestSource_ConditionalAttrDefs\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Emit\\Attributes\\AttributeTests_Conditional.vb",
+"region":  {
+"startLine":  27,
+"startColumn":  33,
+"endLine":  27,
+"endColumn":  71
+}
+}
+},
+{
+"id":  "S2363",
+"message":  "Rename \"s_commonTestSource_ConditionalAttributesApplied\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Emit\\Attributes\\AttributeTests_Conditional.vb",
+"region":  {
+"startLine":  90,
+"startColumn":  33,
+"endLine":  90,
+"endColumn":  80
+}
+}
+},
+{
+"id":  "S2363",
+"message":  "Rename \"s_commonTestSource_ConditionalMethodDefs\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Emit\\Attributes\\AttributeTests_Conditional.vb",
+"region":  {
+"startLine":  436,
+"startColumn":  33,
+"endLine":  436,
+"endColumn":  73
+}
+}
+},
+{
+"id":  "S2363",
+"message":  "Rename \"s_commonTestSource_ConditionalMethodCalls\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Emit\\Attributes\\AttributeTests_Conditional.vb",
+"region":  {
+"startLine":  519,
+"startColumn":  33,
+"endLine":  519,
+"endColumn":  74
+}
+}
+},
+{
+"id":  "S2363",
+"message":  "Rename \"s_commonExpectedOutput_ConditionalMethodsTest\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Emit\\Attributes\\AttributeTests_Conditional.vb",
+"region":  {
+"startLine":  548,
+"startColumn":  33,
+"endLine":  548,
+"endColumn":  78
+}
+}
+}
+]
+}

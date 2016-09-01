@@ -91,6 +91,7 @@
     <Compile Include="Metrics\Metrics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\*.cs" />
+    <Compile Include="Rules\Naming\*.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SonarLint\SonarLint.csproj">

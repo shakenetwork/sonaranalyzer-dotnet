@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S2363",
+"message":  "Rename \"Format\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\CodeLens\\VisualBasicDisplayInfoService.vb",
+"region":  {
+"startLine":  13,
+"startColumn":  33,
+"endLine":  13,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S2363",
+"message":  "Rename \"MinimalFormatWithoutGenerics\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\Completion\\CompletionProviders\\ImplementsClauseCompletionProvider.vb",
+"region":  {
+"startLine":  266,
+"startColumn":  33,
+"endLine":  266,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S2363",
+"message":  "Rename \"s_itemRules_preselect\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\Completion\\CompletionProviders\\SymbolCompletionProvider.vb",
+"region":  {
+"startLine":  91,
+"startColumn":  33,
+"endLine":  91,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S2363",
+"message":  "Rename \"s_TitleAndMessageFormat\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\Diagnostics\\Analyzers\\VisualBasicRemoveUnnecessaryImportsDiagnosticAnalyzer.vb",
+"region":  {
+"startLine":  14,
+"startColumn":  33,
+"endLine":  14,
+"endColumn":  56
+}
+}
+}
+]
+}

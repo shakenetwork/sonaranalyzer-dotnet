@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S2363",
+"message":  "Rename \"s_sourceLocalTypes1_IL\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Retargeting\\NoPia.vb",
+"region":  {
+"startLine":  48,
+"startColumn":  33,
+"endLine":  48,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2363",
+"message":  "Rename \"s_sourceLocalTypes2_IL\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Retargeting\\NoPia.vb",
+"region":  {
+"startLine":  81,
+"startColumn":  33,
+"endLine":  81,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S2363",
+"message":  "Rename \"s_sourceLocalTypes3_IL\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Retargeting\\NoPia.vb",
+"region":  {
+"startLine":  116,
+"startColumn":  33,
+"endLine":  116,
+"endColumn":  55
+}
+}
+}
+]
+}
