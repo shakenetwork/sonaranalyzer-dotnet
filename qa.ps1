@@ -10,8 +10,8 @@ $url = "$env:ARTIFACTORY_URL/$ARTIFACTORY_SRC_REPO/$ARTIFACT"
 Invoke-WebRequest -Uri $url -Credential $cred
 
 #unzip nuget package
-$zipName=$env:ARTIFACT.Substring(0, $env:ARTIFACT.LastIndexOf('.'))+".zip"
-mv $env:ARTIFACT $zipName
+$zipName=$env:FILENAME.Substring(0, $env:FILENAME.LastIndexOf('.'))+".zip"
+mv $env:FILENAME $zipName
 $shell_app=new-object -com shell.application
 $currentdir=(Get-Item -Path ".\" -Verbose).FullName
 $destination = $shell_app.NameSpace($currentdir)
