@@ -27,7 +27,7 @@ $currentdir=(Get-Item -Path ".\" -Verbose).FullName
 $destination = $shell_app.NameSpace($currentdir)
 $zip_file = $shell_app.NameSpace("$currentdir\$zipName")
 Write-Host "Unzipping $currentdir\$zipName"
-$destination.CopyHere($zip_file.Items())
+$destination.CopyHere($zip_file.Items(), 0x14) 
 
 #move dlls to correct locations
 Write-Host "Installing downloaded dlls"
