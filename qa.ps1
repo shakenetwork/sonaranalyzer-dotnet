@@ -12,7 +12,7 @@ del %USERPROFILE%\AppData\Local\Microsoft\MSBuild\14.0\Microsoft.Common.targets\
 $password = convertto-securestring -String "$env:REPOX_QAPUBLICADMIN_PASSWORD" -AsPlainText -Force
 $cred = new-object -typename System.Management.Automation.PSCredential -argumentlist $env:REPOX_QAPUBLICADMIN_USERNAME, $password
 $ARTIFACTORY_SRC_REPO="sonarsource-nuget-qa"
-$url = "$env:ARTIFACTORY_URL/$ARTIFACTORY_SRC_REPO/$FILENAME"
+$url = "$env:ARTIFACTORY_URL/$ARTIFACTORY_SRC_REPO/$env:FILENAME"
 Write-Host "Downloading $url"
 Invoke-WebRequest -UseBasicParsing -Uri $url -Credential $cred -OutFile $env:FILENAME
 
