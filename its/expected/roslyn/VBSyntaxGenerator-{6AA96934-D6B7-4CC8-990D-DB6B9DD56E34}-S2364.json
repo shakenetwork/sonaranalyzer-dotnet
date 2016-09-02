@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2364",
+"message":  "Rename \"_VBKeywords\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\Util\\WriteUtils.vb",
+"region":  {
+"startLine":  711,
+"startColumn":  22,
+"endLine":  711,
+"endColumn":  33
+}
+}
+}
+]
+}

@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S2364",
+"message":  "Rename \"_ZERO4\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Semantic\\Semantics\\FieldInitializerBindingTests.vb",
+"region":  {
+"startLine":  849,
+"startColumn":  26,
+"endLine":  849,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2364",
+"message":  "Rename \"_ONE4\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Semantic\\Semantics\\FieldInitializerBindingTests.vb",
+"region":  {
+"startLine":  850,
+"startColumn":  26,
+"endLine":  850,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2364",
+"message":  "Rename \"_ZERO1\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Semantic\\Semantics\\FieldInitializerBindingTests.vb",
+"region":  {
+"startLine":  852,
+"startColumn":  26,
+"endLine":  852,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2364",
+"message":  "Rename \"_ONE1\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Semantic\\Semantics\\FieldInitializerBindingTests.vb",
+"region":  {
+"startLine":  853,
+"startColumn":  26,
+"endLine":  853,
+"endColumn":  31
+}
+}
+}
+]
+}

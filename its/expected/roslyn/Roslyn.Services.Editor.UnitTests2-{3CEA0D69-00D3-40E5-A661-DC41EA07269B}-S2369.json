@@ -1,0 +1,199 @@
+{
+"issues":  [
+{
+"id":  "S2369",
+"message":  "Rename \"checkpoint\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\IntelliSense\\CSharpCompletionCommandHandlerTests.vb",
+"region":  {
+"startLine":  1462,
+"startColumn":  20,
+"endLine":  1462,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"_exportProvider\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Rename\\RenameTestHelpers.vb",
+"region":  {
+"startLine":  25,
+"startColumn":  16,
+"endLine":  25,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"_canNavigateToLineAndOffset\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  11,
+"startColumn":  16,
+"endLine":  11,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"_canNavigateToPosition\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  12,
+"startColumn":  16,
+"endLine":  12,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"_canNavigateToSpan\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  13,
+"startColumn":  16,
+"endLine":  13,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"_triedNavigationToLineAndOffset\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  15,
+"startColumn":  16,
+"endLine":  15,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"_triedNavigationToPosition\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  16,
+"startColumn":  16,
+"endLine":  16,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"_triedNavigationToSpan\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  17,
+"startColumn":  16,
+"endLine":  17,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"_documentId\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  19,
+"startColumn":  16,
+"endLine":  19,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"_options\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  20,
+"startColumn":  16,
+"endLine":  20,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"_line\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  21,
+"startColumn":  16,
+"endLine":  21,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"_offset\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  22,
+"startColumn":  16,
+"endLine":  22,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"_span\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  23,
+"startColumn":  16,
+"endLine":  23,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"_position\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  24,
+"startColumn":  16,
+"endLine":  24,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"_positionVirtualSpace\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\Test2\\Utilities\\GoToHelpers\\MockDocumentNavigationService.vb",
+"region":  {
+"startLine":  25,
+"startColumn":  16,
+"endLine":  25,
+"endColumn":  37
+}
+}
+}
+]
+}

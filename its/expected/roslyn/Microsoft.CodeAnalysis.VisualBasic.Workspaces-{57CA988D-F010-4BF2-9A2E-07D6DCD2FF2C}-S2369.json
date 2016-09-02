@@ -1,0 +1,108 @@
+{
+"issues":  [
+{
+"id":  "S2369",
+"message":  "Rename \"_spans\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\CodeCleanup\\Providers\\AbstractTokensCodeCleanupProvider.vb",
+"region":  {
+"startLine":  37,
+"startColumn":  32,
+"endLine":  37,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"_cancellationToken\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\CodeCleanup\\Providers\\AbstractTokensCodeCleanupProvider.vb",
+"region":  {
+"startLine":  38,
+"startColumn":  32,
+"endLine":  38,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"_underStructuredTrivia\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\CodeCleanup\\Providers\\AbstractTokensCodeCleanupProvider.vb",
+"region":  {
+"startLine":  41,
+"startColumn":  23,
+"endLine":  41,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"_original\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Formatting\\Engine\\Trivia\\TriviaDataFactory.AbstractLineBreakTrivia.vb",
+"region":  {
+"startLine":  21,
+"startColumn":  32,
+"endLine":  21,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"_newString\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Formatting\\Engine\\Trivia\\TriviaDataFactory.AbstractLineBreakTrivia.vb",
+"region":  {
+"startLine":  22,
+"startColumn":  32,
+"endLine":  22,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"_alwaysSimplify\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Simplification\\AbstractVisualBasicSimplifier.AbstractExpressionRewriter.vb",
+"region":  {
+"startLine":  17,
+"startColumn":  23,
+"endLine":  17,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"typeComparer\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Utilities\\NameSyntaxComparer.vb",
+"region":  {
+"startLine":  18,
+"startColumn":  16,
+"endLine":  18,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"nameComparer\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Utilities\\TypeSyntaxComparer.vb",
+"region":  {
+"startLine":  17,
+"startColumn":  16,
+"endLine":  17,
+"endColumn":  28
+}
+}
+}
+]
+}

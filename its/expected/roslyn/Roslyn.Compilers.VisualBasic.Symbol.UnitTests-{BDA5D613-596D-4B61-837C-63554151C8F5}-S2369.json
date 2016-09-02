@@ -1,0 +1,134 @@
+{
+"issues":  [
+{
+"id":  "S2369",
+"message":  "Rename \"c1\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Retargeting\\RetargetingCustomAttributes.vb",
+"region":  {
+"startLine":  28,
+"startColumn":  20,
+"endLine":  28,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"c2\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Retargeting\\RetargetingCustomAttributes.vb",
+"region":  {
+"startLine":  29,
+"startColumn":  20,
+"endLine":  29,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"c1MscorLibAssemblyRef\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Retargeting\\RetargetingCustomAttributes.vb",
+"region":  {
+"startLine":  30,
+"startColumn":  20,
+"endLine":  30,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"c2MscorlibAssemblyRef\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Retargeting\\RetargetingCustomAttributes.vb",
+"region":  {
+"startLine":  31,
+"startColumn":  20,
+"endLine":  31,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"OldMsCorLib_debuggerTypeProxyAttributeType\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Retargeting\\RetargetingCustomAttributes.vb",
+"region":  {
+"startLine":  32,
+"startColumn":  20,
+"endLine":  32,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"NewMsCorLib_debuggerTypeProxyAttributeType\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Retargeting\\RetargetingCustomAttributes.vb",
+"region":  {
+"startLine":  33,
+"startColumn":  20,
+"endLine":  33,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"OldMsCorLib_debuggerTypeProxyAttributeCtor\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Retargeting\\RetargetingCustomAttributes.vb",
+"region":  {
+"startLine":  34,
+"startColumn":  20,
+"endLine":  34,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"NewMsCorLib_debuggerTypeProxyAttributeCtor\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Retargeting\\RetargetingCustomAttributes.vb",
+"region":  {
+"startLine":  35,
+"startColumn":  20,
+"endLine":  35,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"OldMsCorLib_systemType\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Retargeting\\RetargetingCustomAttributes.vb",
+"region":  {
+"startLine":  36,
+"startColumn":  20,
+"endLine":  36,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"NewMsCorLib_systemType\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Symbol\\SymbolsTests\\Retargeting\\RetargetingCustomAttributes.vb",
+"region":  {
+"startLine":  37,
+"startColumn":  20,
+"endLine":  37,
+"endColumn":  42
+}
+}
+}
+]
+}

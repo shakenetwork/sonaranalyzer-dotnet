@@ -1,0 +1,238 @@
+{
+"issues":  [
+{
+"id":  "S2364",
+"message":  "Rename \"_checkCallsForUnsafeJITOptimization\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\CodeGen\\CodeGenerator.vb",
+"region":  {
+"startLine":  37,
+"startColumn":  17,
+"endLine":  37,
+"endColumn":  52
+}
+}
+},
+{
+"id":  "S2364",
+"message":  "Rename \"_disableJITOptimization\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Emit\\PEModuleBuilder.vb",
+"region":  {
+"startLine":  17,
+"startColumn":  26,
+"endLine":  17,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2364",
+"message":  "Rename \"_F\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Lowering\\AsyncRewriter\\AsyncRewriter.SpillFieldAllocator.vb",
+"region":  {
+"startLine":  23,
+"startColumn":  30,
+"endLine":  23,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2364",
+"message":  "Rename \"_reported_ERR_CannotUseOnErrorGotoWithClosure\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Lowering\\LambdaRewriter\\LambdaRewriter.vb",
+"region":  {
+"startLine":  102,
+"startColumn":  17,
+"endLine":  102,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S2364",
+"message":  "Rename \"_KeywordsObjs\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\Scanner.vb",
+"region":  {
+"startLine":  57,
+"startColumn":  26,
+"endLine":  57,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S2364",
+"message":  "Rename \"_IsScanningXmlDoc\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\XmlDocComments.vb",
+"region":  {
+"startLine":  15,
+"startColumn":  17,
+"endLine":  15,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2364",
+"message":  "Rename \"_Id\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\Operators.vb",
+"region":  {
+"startLine":  26,
+"startColumn":  30,
+"endLine":  26,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2364",
+"message":  "Rename \"_delegateRelaxationLevelMask_Assert1\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\OverloadResolution.vb",
+"region":  {
+"startLine":  502,
+"startColumn":  17,
+"endLine":  502,
+"endColumn":  95
+}
+}
+},
+{
+"id":  "S2364",
+"message":  "Rename \"_delegateRelaxationLevelMask_Assert2\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\OverloadResolution.vb",
+"region":  {
+"startLine":  503,
+"startColumn":  17,
+"endLine":  503,
+"endColumn":  96
+}
+}
+},
+{
+"id":  "S2364",
+"message":  "Rename \"_inferenceLevelMask_Assert1\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\OverloadResolution.vb",
+"region":  {
+"startLine":  506,
+"startColumn":  17,
+"endLine":  506,
+"endColumn":  77
+}
+}
+},
+{
+"id":  "S2364",
+"message":  "Rename \"_inferenceLevelMask_Assert2\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\OverloadResolution.vb",
+"region":  {
+"startLine":  507,
+"startColumn":  17,
+"endLine":  507,
+"endColumn":  78
+}
+}
+},
+{
+"id":  "S2364",
+"message":  "Rename \"_hasSTAThreadAttribute\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Attributes\\WellKnownAttributeData\\MethodWellKnownAttributeData.vb",
+"region":  {
+"startLine":  18,
+"startColumn":  17,
+"endLine":  18,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S2364",
+"message":  "Rename \"_hasMTAThreadAttribute\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Attributes\\WellKnownAttributeData\\MethodWellKnownAttributeData.vb",
+"region":  {
+"startLine":  33,
+"startColumn":  17,
+"endLine":  33,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S2364",
+"message":  "Rename \"_WithEventsContainerOpt\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\HandledEvent.vb",
+"region":  {
+"startLine":  45,
+"startColumn":  26,
+"endLine":  45,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2364",
+"message":  "Rename \"_WithEventsSourcePropertyOpt\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\HandledEvent.vb",
+"region":  {
+"startLine":  49,
+"startColumn":  26,
+"endLine":  49,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S2364",
+"message":  "Rename \"s_AssemblyForWhichCurrentThreadIsComputingKeys\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceAssemblySymbol.vb",
+"region":  {
+"startLine":  845,
+"startColumn":  24,
+"endLine":  845,
+"endColumn":  70
+}
+}
+},
+{
+"id":  "S2364",
+"message":  "Rename \"s_SymbolsBuildingMembersAndInitializers\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Source\\SourceMemberContainerTypeSymbol.vb",
+"region":  {
+"startLine":  1699,
+"startColumn":  24,
+"endLine":  1699,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S2364",
+"message":  "Rename \"ForbiddenNames\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\Tuples\\TupleTypeSymbol.vb",
+"region":  {
+"startLine":  545,
+"startColumn":  24,
+"endLine":  545,
+"endColumn":  38
+}
+}
+}
+]
+}

@@ -1,0 +1,69 @@
+{
+"issues":  [
+{
+"id":  "S2369",
+"message":  "Rename \"_oldFlags\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Test\\EditAndContinue\\VsReadOnlyDocumentTrackerTests.vb",
+"region":  {
+"startLine":  181,
+"startColumn":  20,
+"endLine":  181,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"expectedCanGoToDefinition\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Test\\FindResults\\FindResultsTests.vb",
+"region":  {
+"startLine":  220,
+"startColumn":  29,
+"endLine":  220,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"expectedCanGoToReference\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Test\\FindResults\\FindResultsTests.vb",
+"region":  {
+"startLine":  221,
+"startColumn":  29,
+"endLine":  221,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"snippetSpanInSurfaceBuffer\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Test\\Snippets\\TestExpansionClient.vb",
+"region":  {
+"startLine":  12,
+"startColumn":  16,
+"endLine":  12,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S2369",
+"message":  "Rename \"endSpanInSurfaceBuffer\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Test\\Snippets\\TestExpansionClient.vb",
+"region":  {
+"startLine":  13,
+"startColumn":  16,
+"endLine":  13,
+"endColumn":  38
+}
+}
+}
+]
+}
