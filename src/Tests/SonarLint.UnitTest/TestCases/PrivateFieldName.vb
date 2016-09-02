@@ -11,5 +11,7 @@
 
     Private Shared _fooFooFFFFoooFF As Integer ' Noncompliant
     Private Shared _fooFooFFFoooF As Integer ' Noncompliant
+    Private Const _fooFooFFFoooFFF As Integer
+    Private Shared ReadOnly _fooFooFFFFoooFFF As Integer
 
 End Class

@@ -19,16 +19,12 @@
  */
 
 using System.Collections.Immutable;
-using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.VisualBasic;
-using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
-using System;
-using System.Text.RegularExpressions;
 
 namespace SonarLint.Rules.VisualBasic
 {
@@ -37,7 +33,7 @@ namespace SonarLint.Rules.VisualBasic
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Convention)]
-    public class PrivateFieldName : ParameterLoadingDiagnosticAnalyzer
+    public sealed class PrivateFieldName : FieldNameChecker
     {
         internal const string DiagnosticId = "S2364";
         internal const string Title = "\"Private\" fields should comply with a naming convention";
@@ -45,9 +41,6 @@ namespace SonarLint.Rules.VisualBasic
             "Shared coding conventions allow teams to collaborate efficiently. This rule checks that all \"Private\" fields " +
             "names match a provided regular expression.";
         internal const string MessageFormat = "Rename \"{0}\" to match the regular expression: \"{1}\".";
-        internal const string Category = SonarLint.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
@@ -61,37 +54,13 @@ namespace SonarLint.Rules.VisualBasic
 
         [RuleParameter("format", PropertyType.String,
             "Regular expression used to check the non-private field names against.", DefaultPattern)]
-        public string Pattern { get; set; } = DefaultPattern;
+        public override string Pattern { get; set; } = DefaultPattern;
 
-        protected override void Initialize(ParameterLoadingAnalysisContext context)
+        protected override bool IsCandidateSymbol(IFieldSymbol symbol)
         {
-            context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
-                    var fieldDeclaration = (FieldDeclarationSyntax)c.Node;
-                    foreach (var name in fieldDeclaration.Declarators.SelectMany(v => v.Names))
-                    {
-                        var symbol = c.SemanticModel.GetDeclaredSymbol(name) as IFieldSymbol;
-                        if (IsCandidateSymbol(symbol) &&
-                            !IsRegexMatch(symbol.Name, Pattern))
-                        {
-                            c.ReportDiagnostic(Diagnostic.Create(Rule, name.GetLocation(), symbol.Name, Pattern));
-                        }
-                    }
-                },
-                SyntaxKind.FieldDeclaration);
-        }
-
-        private static bool IsRegexMatch(string name, string pattern)
-        {
-            return Regex.IsMatch(name, pattern);
-        }
-
-        private static bool IsCandidateSymbol(IFieldSymbol symbol)
-        {
-            return symbol != null &&
-                symbol.DeclaredAccessibility == Accessibility.Private &&
-                (!symbol.IsShared() || !symbol.IsReadOnly);
+            return symbol.DeclaredAccessibility == Accessibility.Private &&
+                !symbol.IsConst &&
+                !(symbol.IsShared() && symbol.IsReadOnly);
         }
     }
 }
