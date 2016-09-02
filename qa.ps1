@@ -1,6 +1,6 @@
 
 #cleanup
-del %USERPROFILE%\AppData\Local\Microsoft\MSBuild\14.0\Microsoft.Common.targets\ImportBefore\SonarLint.Testing.ImportBefore.targets 2>NUL
+del %USERPROFILE%\AppData\Local\Microsoft\MSBuild\14.0\Microsoft.Common.targets\ImportBefore\SonarLint.Testing.ImportBefore.targets 
 
 #nuget restore
 & $env:NUGET_PATH restore SonarLint.sln
@@ -12,7 +12,8 @@ del %USERPROFILE%\AppData\Local\Microsoft\MSBuild\14.0\Microsoft.Common.targets\
 $password = convertto-securestring -String "$env:REPOX_QAPUBLICADMIN_PASSWORD" -AsPlainText -Force
 $cred = new-object -typename System.Management.Automation.PSCredential -argumentlist $env:REPOX_QAPUBLICADMIN_USERNAME, $password
 $ARTIFACTORY_SRC_REPO="sonarsource-nuget-qa"
-$url = "$env:ARTIFACTORY_URL/$ARTIFACTORY_SRC_REPO/$ARTIFACT"
+$url = "$env:ARTIFACTORY_URL/$ARTIFACTORY_SRC_REPO/$FILENAME"
+Write-Host "Downloading $url"
 Invoke-WebRequest -UseBasicParsing -Uri $url -Credential $cred -OutFile $env:FILENAME
 
 #unzip nuget package
@@ -22,16 +23,20 @@ $shell_app=new-object -com shell.application
 $currentdir=(Get-Item -Path ".\" -Verbose).FullName
 $destination = $shell_app.NameSpace($currentdir)
 $zip_file = $shell_app.NameSpace("$currentdir\$zipName")
+Write-Host "Unzipping $currentdir\$zipName"
 $destination.CopyHere($zip_file.Items())
 
 #move dlls to correct locations
+Write-Host "Installing downloaded dlls"
 mv analyzers\*.dll src\SonarLint.CSharp\bin\Release
 
 #run tests
+Write-Host "Start tests"
 & $env:VSTEST_PATH .\src\Tests\SonarLint.SonarQube.Integration.UnitTest\bin\Release\SonarLint.SonarQube.Integration.UnitTest.dll
 & $env:VSTEST_PATH .\src\Tests\SonarLint.UnitTest\bin\Release\SonarLint.UnitTest.dll
  
 #run regression-test
+Write-Host "Start regression tests"
 cd its
 git submodule update --init --recursive --depth 1
 cmd /c .\regression-test.bat
