@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S2370",
+"message":  "Rename \"typeNameFormatWithGenerics\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\ExpressionSyntaxExtensions.vb",
+"region":  {
+"startLine":  20,
+"startColumn":  25,
+"endLine":  20,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2370",
+"message":  "Rename \"typeNameFormatWithoutGenerics\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\Extensions\\ExpressionSyntaxExtensions.vb",
+"region":  {
+"startLine":  28,
+"startColumn":  25,
+"endLine":  28,
+"endColumn":  54
+}
+}
+}
+]
+}
