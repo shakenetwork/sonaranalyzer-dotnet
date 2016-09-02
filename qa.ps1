@@ -29,6 +29,14 @@ $zip_file = $shell_app.NameSpace("$currentdir\$zipName")
 Write-Host "Unzipping $currentdir\$zipName"
 $destination.CopyHere($zip_file.Items(), 0x14) 
 
+#get sha1
+$productversion=ls .\analyzers\SonarAnalyzer.dll | % { $_.versioninfo.productversion }
+$sha1=$productversion.Substring($productversion.LastIndexOf('Sha1:')+5)
+Write-Host "Checking out $sha1"
+#checkout commit
+git pull origin master
+git checkout -f $sha1
+
 #move dlls to correct locations
 Write-Host "Installing downloaded dlls"
 Move-Item .\analyzers\*.dll .\src\SonarLint.CSharp\bin\Release -force
