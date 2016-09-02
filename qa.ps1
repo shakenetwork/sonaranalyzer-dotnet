@@ -11,6 +11,7 @@ del %USERPROFILE%\AppData\Local\Microsoft\MSBuild\14.0\Microsoft.Common.targets\
 #download nuget package
 $ARTIFACTORY_SRC_REPO="sonarsource-nuget-qa"
 $url = "$env:ARTIFACTORY_URL/$ARTIFACTORY_SRC_REPO/$env:FILENAME"
+Write-Host "Downloading $url"
 $pair = "$($env:REPOX_QAPUBLICADMIN_USERNAME):$($env:REPOX_QAPUBLICADMIN_PASSWORD)"
 $encodedCreds = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes($pair))
 $basicAuthValue = "Basic $encodedCreds"
@@ -20,7 +21,7 @@ Invoke-WebRequest -UseBasicParsing -Uri "$url" -Headers $Headers -OutFile $env:F
 
 #unzip nuget package
 $zipName=$env:FILENAME.Substring(0, $env:FILENAME.LastIndexOf('.'))+".zip"
-mv $env:FILENAME $zipName
+Move-Item $env:FILENAME $zipName -force
 $shell_app=new-object -com shell.application
 $currentdir=(Get-Item -Path ".\" -Verbose).FullName
 $destination = $shell_app.NameSpace($currentdir)
@@ -30,7 +31,7 @@ $destination.CopyHere($zip_file.Items())
 
 #move dlls to correct locations
 Write-Host "Installing downloaded dlls"
-mv analyzers\*.dll src\SonarLint.CSharp\bin\Release
+Move-Item .\analyzers\*.dll .\src\SonarLint.CSharp\bin\Release -force
 
 #run tests
 Write-Host "Start tests"
