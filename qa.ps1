@@ -9,12 +9,13 @@ del %USERPROFILE%\AppData\Local\Microsoft\MSBuild\14.0\Microsoft.Common.targets\
 & $env:MSBUILD_PATH /p:configuration=Release /p:DeployExtension=false /p:ZipPackageCompressionLevel=normal /v:m
 
 #download nuget package
-$password = convertto-securestring -String "$env:REPOX_QAPUBLICADMIN_PASSWORD" -AsPlainText -Force
-$cred = new-object -typename System.Management.Automation.PSCredential -argumentlist $env:REPOX_QAPUBLICADMIN_USERNAME, $password
-$ARTIFACTORY_SRC_REPO="sonarsource-nuget-qa"
 $url = "$env:ARTIFACTORY_URL/$ARTIFACTORY_SRC_REPO/$env:FILENAME"
-Write-Host "Downloading $url"
-Invoke-WebRequest -UseBasicParsing -Uri $url -Credential $cred -OutFile $env:FILENAME
+$pair = "$($env:REPOX_QAPUBLICADMIN_USERNAME):$($env:REPOX_QAPUBLICADMIN_PASSWORD)"
+$encodedCreds = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes($pair))
+$basicAuthValue = "Basic $encodedCreds"
+$Headers = @{Authorization = $basicAuthValue}
+Invoke-WebRequest -UseBasicParsing -Uri "$url" -Headers $Headers -OutFile $env:FILENAME
+
 
 #unzip nuget package
 $zipName=$env:FILENAME.Substring(0, $env:FILENAME.LastIndexOf('.'))+".zip"
