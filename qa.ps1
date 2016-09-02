@@ -1,4 +1,7 @@
 
+#cleanup
+del %USERPROFILE%\AppData\Local\Microsoft\MSBuild\14.0\Microsoft.Common.targets\ImportBefore\SonarLint.Testing.ImportBefore.targets 2>NUL
+
 #nuget restore
 & $env:NUGET_PATH restore SonarLint.sln
 
