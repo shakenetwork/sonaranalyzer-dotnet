@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S101",
+"message":  "Rename this class to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Binding\\SyntheticBoundTrees\\AnonymousTypeSyntheticMethods.vb",
+"region":  {
+"startLine":  180,
+"startColumn":  46,
+"endLine":  180,
+"endColumn":  89
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename this class to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\BoundTree\\BoundNewT.vb",
+"region":  {
+"startLine":  10,
+"startColumn":  26,
+"endLine":  10,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename this class to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\BoundTree\\Expression.vb",
+"region":  {
+"startLine":  1358,
+"startColumn":  26,
+"endLine":  1358,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename this class to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\AnonymousTypes\\SynthesizedSymbols\\AnonymousType_IEquatable_EqualsMethodSymbol.vb",
+"region":  {
+"startLine":  9,
+"startColumn":  46,
+"endLine":  9,
+"endColumn":  89
+}
+}
+}
+]
+}
