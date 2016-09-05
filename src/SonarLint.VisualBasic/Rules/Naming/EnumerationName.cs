@@ -19,50 +19,56 @@
  */
 
 using System.Collections.Immutable;
-using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.VisualBasic;
-using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
-using System;
-using System.Text.RegularExpressions;
+using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 
 namespace SonarLint.Rules.VisualBasic
 {
     [DiagnosticAnalyzer(LanguageNames.VisualBasic)]
     [SqaleConstantRemediation("5min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, true)]
     [Tags(Tag.Convention)]
-    public sealed class PrivateSharedReadonlyFieldName : FieldNameChecker
+    public class EnumerationName : ParameterLoadingDiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S2363";
-        internal const string Title = "\"Private Shared ReadOnly\" fields should comply with a naming convention";
+        internal const string DiagnosticId = "S2342";
+        internal const string Title = "Enumeration types should comply with a naming convention";
         internal const string Description =
-            "Shared coding conventions allow teams to collaborate efficiently. This rule checks that all " +
-            "\"Private Shared ReadOnly\" field names comply with the provided regular expression.";
-        internal const string MessageFormat = "Rename \"{0}\" to match the regular expression: \"{1}\".";
+            "Shared coding conventions allow teams to collaborate efficiently. " +
+            "This rule checks that all \"Enum\" names match a provided regular expression.";
+        internal const string MessageFormat = "Rename this enumeration to match the regular expression: \"{0}\".";
+        internal const string Category = SonarLint.Common.Category.Maintainability;
+        internal const Severity RuleSeverity = Severity.Minor;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
+                RuleSeverity.ToDiagnosticSeverity(), false,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
 
         [RuleParameter("format", PropertyType.String,
-            "Regular expression used to check the \"Private Shared ReadOnly\" field names against.", CamelCasingPatternWithOptionalPrefixes)]
-        public override string Pattern { get; set; } = CamelCasingPatternWithOptionalPrefixes;
+            "Regular expression used to check the enumeration type names against.", FieldNameChecker.PascalCasingPattern)]
+        public string Pattern { get; set; } = FieldNameChecker.PascalCasingPattern;
 
-        protected override bool IsCandidateSymbol(IFieldSymbol symbol)
+        protected override void Initialize(ParameterLoadingAnalysisContext context)
         {
-            return symbol.DeclaredAccessibility == Accessibility.Private &&
-                symbol.IsShared() &&
-                symbol.IsReadOnly;
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c =>
+                {
+                    var enumDeclaration = (EnumStatementSyntax)c.Node;
+                    if (!FieldNameChecker.IsRegexMatch(enumDeclaration.Identifier.ValueText, Pattern))
+                    {
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, enumDeclaration.Identifier.GetLocation(), Pattern));
+                    }
+                },
+                SyntaxKind.EnumStatement);
         }
     }
 }

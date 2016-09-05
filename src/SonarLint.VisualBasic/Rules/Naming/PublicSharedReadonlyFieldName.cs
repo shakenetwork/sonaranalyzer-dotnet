@@ -50,11 +50,9 @@ namespace SonarLint.Rules.VisualBasic
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
 
-        private const string DefaultPattern = "^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$";
-
         [RuleParameter("format", PropertyType.String,
-            "Regular expression used to check the non-private \"Shared ReadOnly\" field names against.", DefaultPattern)]
-        public override string Pattern { get; set; } = DefaultPattern;
+            "Regular expression used to check the non-private \"Shared ReadOnly\" field names against.", PascalCasingPattern)]
+        public override string Pattern { get; set; } = PascalCasingPattern;
 
         protected override bool IsCandidateSymbol(IFieldSymbol symbol)
         {

@@ -50,11 +50,9 @@ namespace SonarLint.Rules.VisualBasic
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
 
-        private const string DefaultPattern = "^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$";
-
         [RuleParameter("format", PropertyType.String,
-            "Regular expression used to check the private field names against.", DefaultPattern)]
-        public override string Pattern { get; set; } = DefaultPattern;
+            "Regular expression used to check the private field names against.", CamelCasingPatternWithOptionalPrefixes)]
+        public override string Pattern { get; set; } = CamelCasingPatternWithOptionalPrefixes;
 
         protected override bool IsCandidateSymbol(IFieldSymbol symbol)
         {
