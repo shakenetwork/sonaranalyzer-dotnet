@@ -53,7 +53,7 @@ namespace SonarLint.Rules.VisualBasic
         private const string DefaultPattern = "^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$";
 
         [RuleParameter("format", PropertyType.String,
-            "Regular expression used to check the non-private field names against.", DefaultPattern)]
+            "Regular expression used to check the private field names against.", DefaultPattern)]
         public override string Pattern { get; set; } = DefaultPattern;
 
         protected override bool IsCandidateSymbol(IFieldSymbol symbol)
