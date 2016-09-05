@@ -31,10 +31,10 @@ namespace SonarLint.Rules.VisualBasic
     public abstract class FieldNameChecker : ParameterLoadingDiagnosticAnalyzer
     {
         private const string MaxTwoLongIdPattern = "([A-Z]{2})?";
-        internal const string PascalCasingInternalPattern = "([A-Z]{1,3}[a-z0-9]+)*";
+        internal const string PascalCasingInternalPattern = "([A-Z]{1,3}[a-z0-9]+)*" + MaxTwoLongIdPattern;
         private const string CamelCasingInternalPattern = "[a-z][a-z0-9]*" + PascalCasingInternalPattern;
-        internal const string PascalCasingPattern = "^" + PascalCasingInternalPattern + MaxTwoLongIdPattern + "$";
-        internal const string CamelCasingPatternWithOptionalPrefixes = "^(s_|_)?" + CamelCasingInternalPattern + MaxTwoLongIdPattern + "$";
+        internal const string PascalCasingPattern = "^" + PascalCasingInternalPattern + "$";
+        internal const string CamelCasingPatternWithOptionalPrefixes = "^(s_|_)?" + CamelCasingInternalPattern + "$";
 
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
