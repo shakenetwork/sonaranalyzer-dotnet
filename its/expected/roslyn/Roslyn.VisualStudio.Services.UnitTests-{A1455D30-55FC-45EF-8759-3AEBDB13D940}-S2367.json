@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2367",
+"message":  "Rename \"E_FAIL\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\Core\\Test\\CodeModel\\AbstractCodeElementTests%601.vb",
+"region":  {
+"startLine":  85,
+"startColumn":  25,
+"endLine":  85,
+"endColumn":  31
+}
+}
+}
+]
+}

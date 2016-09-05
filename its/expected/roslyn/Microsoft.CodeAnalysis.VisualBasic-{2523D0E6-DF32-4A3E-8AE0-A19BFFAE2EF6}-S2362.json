@@ -1,0 +1,238 @@
+{
+"issues":  [
+{
+"id":  "S2362",
+"message":  "Rename \"s_IL_OP_CODE_ROW_LENGTH\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\CodeGen\\EmitStatement.vb",
+"region":  {
+"startLine":  542,
+"startColumn":  23,
+"endLine":  542,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2362",
+"message":  "Rename \"s_activeHandler_None\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_UnstructuredExceptionHandling.vb",
+"region":  {
+"startLine":  14,
+"startColumn":  23,
+"endLine":  14,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2362",
+"message":  "Rename \"s_activeHandler_ResumeNext\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_UnstructuredExceptionHandling.vb",
+"region":  {
+"startLine":  15,
+"startColumn":  23,
+"endLine":  15,
+"endColumn":  49
+}
+}
+},
+{
+"id":  "S2362",
+"message":  "Rename \"s_activeHandler_FirstNonReservedOnErrorGotoIndex\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_UnstructuredExceptionHandling.vb",
+"region":  {
+"startLine":  16,
+"startColumn":  23,
+"endLine":  16,
+"endColumn":  71
+}
+}
+},
+{
+"id":  "S2362",
+"message":  "Rename \"s_activeHandler_FirstOnErrorResumeNextIndex\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Lowering\\LocalRewriter\\LocalRewriter_UnstructuredExceptionHandling.vb",
+"region":  {
+"startLine":  17,
+"startColumn":  23,
+"endLine":  17,
+"endColumn":  66
+}
+}
+},
+{
+"id":  "S2362",
+"message":  "Rename \"s_CHARPROP_LENGTH\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\QuickTokenAccumulator.vb",
+"region":  {
+"startLine":  133,
+"startColumn":  23,
+"endLine":  133,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S2362",
+"message":  "Rename \"s_PAGE_NUM_SHIFT\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\ScannerBuffer.vb",
+"region":  {
+"startLine":  59,
+"startColumn":  23,
+"endLine":  59,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S2362",
+"message":  "Rename \"s_PAGE_NUM\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\ScannerBuffer.vb",
+"region":  {
+"startLine":  60,
+"startColumn":  23,
+"endLine":  60,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S2362",
+"message":  "Rename \"s_PAGE_NUM_MASK\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\ScannerBuffer.vb",
+"region":  {
+"startLine":  61,
+"startColumn":  23,
+"endLine":  61,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2362",
+"message":  "Rename \"s_PAGE_SHIFT\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\ScannerBuffer.vb",
+"region":  {
+"startLine":  63,
+"startColumn":  23,
+"endLine":  63,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S2362",
+"message":  "Rename \"s_PAGE_SIZE\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\ScannerBuffer.vb",
+"region":  {
+"startLine":  64,
+"startColumn":  23,
+"endLine":  64,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2362",
+"message":  "Rename \"s_PAGE_MASK\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\ScannerBuffer.vb",
+"region":  {
+"startLine":  65,
+"startColumn":  23,
+"endLine":  65,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2362",
+"message":  "Rename \"s_NOT_PAGE_MASK\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Scanner\\ScannerBuffer.vb",
+"region":  {
+"startLine":  66,
+"startColumn":  23,
+"endLine":  66,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2362",
+"message":  "Rename \"s_delegateRelaxationLevelMask_AssertZero\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\OverloadResolution.vb",
+"region":  {
+"startLine":  501,
+"startColumn":  23,
+"endLine":  501,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S2362",
+"message":  "Rename \"s_inferenceLevelMask_AssertZero\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Semantics\\OverloadResolution.vb",
+"region":  {
+"startLine":  505,
+"startColumn":  23,
+"endLine":  505,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S2362",
+"message":  "Rename \"s_Cr\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\SymbolDisplay\\ObjectDisplay.vb",
+"region":  {
+"startLine":  19,
+"startColumn":  23,
+"endLine":  19,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S2362",
+"message":  "Rename \"s_Lf\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\SymbolDisplay\\ObjectDisplay.vb",
+"region":  {
+"startLine":  21,
+"startColumn":  23,
+"endLine":  21,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S2362",
+"message":  "Rename \"s_CRC32_poly\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Portable\\Symbols\\AnonymousTypes\\CRC32.vb",
+"region":  {
+"startLine":  56,
+"startColumn":  23,
+"endLine":  56,
+"endColumn":  35
+}
+}
+}
+]
+}

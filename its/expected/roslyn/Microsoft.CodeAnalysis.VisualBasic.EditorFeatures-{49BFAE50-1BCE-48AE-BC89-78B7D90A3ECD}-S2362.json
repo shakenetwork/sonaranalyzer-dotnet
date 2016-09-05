@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S2362",
+"message":  "Rename \"s_DWCH_SQ\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\VisualBasic\\TodoComment\\BasicTodoCommentIncrementalAnalyzerProvider.vb",
+"region":  {
+"startLine":  98,
+"startColumn":  23,
+"endLine":  98,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S2362",
+"message":  "Rename \"s_DWCH_LSMART_Q\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\VisualBasic\\TodoComment\\BasicTodoCommentIncrementalAnalyzerProvider.vb",
+"region":  {
+"startLine":  99,
+"startColumn":  23,
+"endLine":  99,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2362",
+"message":  "Rename \"s_DWCH_RSMART_Q\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\VisualBasic\\TodoComment\\BasicTodoCommentIncrementalAnalyzerProvider.vb",
+"region":  {
+"startLine":  100,
+"startColumn":  23,
+"endLine":  100,
+"endColumn":  38
+}
+}
+}
+]
+}

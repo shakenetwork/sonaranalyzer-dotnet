@@ -1,0 +1,82 @@
+{
+"issues":  [
+{
+"id":  "S2362",
+"message":  "Rename \"Style_QualifyFieldAccess\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\Options\\VisualBasicSettingsManagerOptionSerializer.vb",
+"region":  {
+"startLine":  40,
+"startColumn":  23,
+"endLine":  40,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2362",
+"message":  "Rename \"Style_QualifyPropertyAccess\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\Options\\VisualBasicSettingsManagerOptionSerializer.vb",
+"region":  {
+"startLine":  41,
+"startColumn":  23,
+"endLine":  41,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S2362",
+"message":  "Rename \"Style_QualifyMethodAccess\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\Options\\VisualBasicSettingsManagerOptionSerializer.vb",
+"region":  {
+"startLine":  42,
+"startColumn":  23,
+"endLine":  42,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2362",
+"message":  "Rename \"Style_QualifyEventAccess\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\Options\\VisualBasicSettingsManagerOptionSerializer.vb",
+"region":  {
+"startLine":  43,
+"startColumn":  23,
+"endLine":  43,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S2362",
+"message":  "Rename \"Style_PreferIntrinsicPredefinedTypeKeywordInDeclaration\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\Options\\VisualBasicSettingsManagerOptionSerializer.vb",
+"region":  {
+"startLine":  44,
+"startColumn":  23,
+"endLine":  44,
+"endColumn":  78
+}
+}
+},
+{
+"id":  "S2362",
+"message":  "Rename \"Style_PreferIntrinsicPredefinedTypeKeywordInMemberAccess\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\Options\\VisualBasicSettingsManagerOptionSerializer.vb",
+"region":  {
+"startLine":  45,
+"startColumn":  23,
+"endLine":  45,
+"endColumn":  79
+}
+}
+}
+]
+}
