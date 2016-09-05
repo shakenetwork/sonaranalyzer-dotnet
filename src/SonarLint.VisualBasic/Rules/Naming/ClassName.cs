@@ -34,14 +34,14 @@ namespace SonarLint.Rules.VisualBasic
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [Rule(DiagnosticId, RuleSeverity, Title, true)]
     [Tags(Tag.Convention)]
-    public class InterfaceName : ParameterLoadingDiagnosticAnalyzer
+    public class ClassName : ParameterLoadingDiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S114";
-        internal const string Title = "Interface names should comply with a naming convention";
+        internal const string DiagnosticId = "S101";
+        internal const string Title = "Class names should comply with a naming convention";
         internal const string Description =
-            "Shared coding conventions allow teams to collaborate efficiently. " +
-            "This rule allows to check that all interface names match a provided regular expression.";
-        internal const string MessageFormat = "Rename this interface to match the regular expression: \"{0}\".";
+            "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. " +
+            "This rule allows to check that all class names match a provided regular expression.";
+        internal const string MessageFormat = "Rename this class to match the regular expression: \"{0}\".";
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
 
@@ -53,24 +53,22 @@ namespace SonarLint.Rules.VisualBasic
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
 
-        private const string DefaultPattern = "^I" + FieldNameChecker.PascalCasingInternalPattern + "$";
-
         [RuleParameter("format", PropertyType.String,
-            "Regular expression used to check the interface names against.", DefaultPattern)]
-        public string Pattern { get; set; } = DefaultPattern;
+            "Regular expression used to check the class names against.", FieldNameChecker.PascalCasingPattern)]
+        public string Pattern { get; set; } = FieldNameChecker.PascalCasingPattern;
 
         protected override void Initialize(ParameterLoadingAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
-                    var declaration = (InterfaceStatementSyntax)c.Node;
+                    var declaration = (ClassStatementSyntax)c.Node;
                     if (!FieldNameChecker.IsRegexMatch(declaration.Identifier.ValueText, Pattern))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, declaration.Identifier.GetLocation(), Pattern));
                     }
                 },
-                SyntaxKind.InterfaceStatement);
+                SyntaxKind.ClassStatement);
         }
     }
 }

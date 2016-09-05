@@ -19,7 +19,6 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarLint.Rules.CSharp;
 
 namespace SonarLint.UnitTest.Rules
 {
@@ -30,8 +29,8 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void ClassName()
         {
-            var diagnostic = new ClassName();
-            Verifier.VerifyAnalyzer(@"TestCases\ClassName.cs", diagnostic);
+            Verifier.VerifyAnalyzer(@"TestCases\ClassName.cs", new SonarLint.Rules.CSharp.ClassName());
+            Verifier.VerifyAnalyzer(@"TestCases\ClassName.vb", new SonarLint.Rules.VisualBasic.ClassName());
         }
     }
 }
