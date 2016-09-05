@@ -66,8 +66,9 @@ namespace SonarLint.Rules.VisualBasic
                 c =>
                 {
                     var declaration = (NamespaceStatementSyntax)c.Node;
-                    var declarationName = declaration.Name.ToString();
-                    if (!FieldNameChecker.IsRegexMatch(declarationName, Pattern))
+                    var declarationName = declaration.Name?.ToString();
+                    if (declarationName != null &&
+                        !FieldNameChecker.IsRegexMatch(declarationName, Pattern))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, declaration.Name.GetLocation(), Pattern));
                     }

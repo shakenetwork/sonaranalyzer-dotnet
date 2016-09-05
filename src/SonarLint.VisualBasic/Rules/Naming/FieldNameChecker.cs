@@ -34,6 +34,7 @@ namespace SonarLint.Rules.VisualBasic
         internal const string PascalCasingInternalPattern = "([A-Z]{1,3}[a-z0-9]+)*" + MaxTwoLongIdPattern;
         private const string CamelCasingInternalPattern = "[a-z][a-z0-9]*" + PascalCasingInternalPattern;
         internal const string PascalCasingPattern = "^" + PascalCasingInternalPattern + "$";
+        internal const string CamelCasingPattern = "^" + CamelCasingInternalPattern + "$";
         internal const string CamelCasingPatternWithOptionalPrefixes = "^(s_|_)?" + CamelCasingInternalPattern + "$";
 
         internal const string Category = SonarLint.Common.Category.Maintainability;
@@ -55,7 +56,7 @@ namespace SonarLint.Rules.VisualBasic
                 c =>
                 {
                     var fieldDeclaration = (FieldDeclarationSyntax)c.Node;
-                    foreach (var name in fieldDeclaration.Declarators.SelectMany(v => v.Names))
+                    foreach (var name in fieldDeclaration.Declarators.SelectMany(v => v.Names).Where(n => n != null))
                     {
                         var symbol = c.SemanticModel.GetDeclaredSymbol(name) as IFieldSymbol;
                         if (symbol != null &&
