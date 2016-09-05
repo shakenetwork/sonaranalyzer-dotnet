@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\CodeRefactorings\\InvertIf\\InvertIfCodeRefactoringProvider.vb",
+"region":  {
+"startLine":  132,
+"startColumn":  17,
+"endLine":  132,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\GenerateMember\\GenerateParameterizedMember\\VisualBasicGenerateParameterizedMemberService.vb",
+"region":  {
+"startLine":  163,
+"startColumn":  21,
+"endLine":  163,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\GenerateMember\\GenerateParameterizedMember\\VisualBasicGenerateParameterizedMemberService.vb",
+"region":  {
+"startLine":  167,
+"startColumn":  29,
+"endLine":  167,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Features\\VisualBasic\\Portable\\SignatureHelp\\GenericNameSignatureHelpProvider.vb",
+"region":  {
+"startLine":  104,
+"startColumn":  17,
+"endLine":  104,
+"endColumn":  29
+}
+}
+}
+]
+}

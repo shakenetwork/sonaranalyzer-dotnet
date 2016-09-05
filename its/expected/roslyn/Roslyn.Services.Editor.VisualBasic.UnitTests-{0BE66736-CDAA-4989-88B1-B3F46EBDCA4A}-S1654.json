@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1654",
+"message":  "Rename this parameter to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\VisualBasicTest\\CodeActions\\MoveType\\BasicMoveTypeTestsBase.vb",
+"region":  {
+"startLine":  15,
+"startColumn":  13,
+"endLine":  15,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1654",
+"message":  "Rename this parameter to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\EditorFeatures\\VisualBasicTest\\CodeActions\\MoveType\\BasicMoveTypeTestsBase.vb",
+"region":  {
+"startLine":  16,
+"startColumn":  13,
+"endLine":  16,
+"endColumn":  31
+}
+}
+}
+]
+}

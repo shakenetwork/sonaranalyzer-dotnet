@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1654",
+"message":  "Rename this parameter to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Tools\\Source\\CompilerGeneratorTools\\Source\\VisualBasicSyntaxGenerator\\RedNodes\\RedNodeWriter.vb",
+"region":  {
+"startLine":  532,
+"startColumn":  68,
+"endLine":  532,
+"endColumn":  76
+}
+}
+}
+]
+}

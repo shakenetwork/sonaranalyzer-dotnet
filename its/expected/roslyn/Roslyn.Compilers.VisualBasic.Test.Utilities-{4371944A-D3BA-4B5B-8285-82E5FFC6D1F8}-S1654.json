@@ -1,0 +1,82 @@
+{
+"issues":  [
+{
+"id":  "S1654",
+"message":  "Rename this parameter to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\BasicTestBase.vb",
+"region":  {
+"startLine":  326,
+"startColumn":  57,
+"endLine":  326,
+"endColumn":  66
+}
+}
+},
+{
+"id":  "S1654",
+"message":  "Rename this parameter to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\CompilationTestUtils.vb",
+"region":  {
+"startLine":  1129,
+"startColumn":  35,
+"endLine":  1129,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1654",
+"message":  "Rename this parameter to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\ParserTestUtilities.vb",
+"region":  {
+"startLine":  242,
+"startColumn":  45,
+"endLine":  242,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S1654",
+"message":  "Rename this parameter to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\ParserTestUtilities.vb",
+"region":  {
+"startLine":  998,
+"startColumn":  41,
+"endLine":  998,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1654",
+"message":  "Rename this parameter to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\ParserTestUtilities.vb",
+"region":  {
+"startLine":  998,
+"startColumn":  72,
+"endLine":  998,
+"endColumn":  79
+}
+}
+},
+{
+"id":  "S1654",
+"message":  "Rename this parameter to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\Test\\Utilities\\VisualBasic\\ParserTestUtilities.vb",
+"region":  {
+"startLine":  1007,
+"startColumn":  34,
+"endLine":  1007,
+"endColumn":  38
+}
+}
+}
+]
+}

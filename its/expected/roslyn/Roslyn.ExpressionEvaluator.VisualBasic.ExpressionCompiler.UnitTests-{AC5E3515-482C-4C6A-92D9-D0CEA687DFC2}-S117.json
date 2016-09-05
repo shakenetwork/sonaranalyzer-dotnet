@@ -1,0 +1,342 @@
+{
+"issues":  [
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\ExpressionCompilerTests.vb",
+"region":  {
+"startLine":  260,
+"startColumn":  17,
+"endLine":  260,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\ExpressionCompilerTests.vb",
+"region":  {
+"startLine":  261,
+"startColumn":  17,
+"endLine":  261,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\ExpressionCompilerTests.vb",
+"region":  {
+"startLine":  263,
+"startColumn":  17,
+"endLine":  263,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\ExpressionCompilerTests.vb",
+"region":  {
+"startLine":  265,
+"startColumn":  17,
+"endLine":  265,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\ExpressionCompilerTests.vb",
+"region":  {
+"startLine":  266,
+"startColumn":  17,
+"endLine":  266,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\HoistedMeTests.vb",
+"region":  {
+"startLine":  550,
+"startColumn":  25,
+"endLine":  550,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\HoistedMeTests.vb",
+"region":  {
+"startLine":  607,
+"startColumn":  25,
+"endLine":  607,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\LocalsTests.vb",
+"region":  {
+"startLine":  1086,
+"startColumn":  25,
+"endLine":  1086,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\LocalsTests.vb",
+"region":  {
+"startLine":  1087,
+"startColumn":  25,
+"endLine":  1087,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\LocalsTests.vb",
+"region":  {
+"startLine":  1088,
+"startColumn":  25,
+"endLine":  1088,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\PseudoVariableTests.vb",
+"region":  {
+"startLine":  767,
+"startColumn":  17,
+"endLine":  767,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\PseudoVariableTests.vb",
+"region":  {
+"startLine":  858,
+"startColumn":  17,
+"endLine":  858,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\PseudoVariableTests.vb",
+"region":  {
+"startLine":  859,
+"startColumn":  17,
+"endLine":  859,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\PseudoVariableTests.vb",
+"region":  {
+"startLine":  860,
+"startColumn":  17,
+"endLine":  860,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\PseudoVariableTests.vb",
+"region":  {
+"startLine":  862,
+"startColumn":  17,
+"endLine":  862,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\PseudoVariableTests.vb",
+"region":  {
+"startLine":  863,
+"startColumn":  17,
+"endLine":  863,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\PseudoVariableTests.vb",
+"region":  {
+"startLine":  864,
+"startColumn":  17,
+"endLine":  864,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\ReferencedModulesTests.vb",
+"region":  {
+"startLine":  40,
+"startColumn":  17,
+"endLine":  40,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\ReferencedModulesTests.vb",
+"region":  {
+"startLine":  41,
+"startColumn":  17,
+"endLine":  41,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\ReferencedModulesTests.vb",
+"region":  {
+"startLine":  58,
+"startColumn":  17,
+"endLine":  58,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\ReferencedModulesTests.vb",
+"region":  {
+"startLine":  59,
+"startColumn":  17,
+"endLine":  59,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\ReferencedModulesTests.vb",
+"region":  {
+"startLine":  179,
+"startColumn":  17,
+"endLine":  179,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\ReferencedModulesTests.vb",
+"region":  {
+"startLine":  184,
+"startColumn":  17,
+"endLine":  184,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\ReferencedModulesTests.vb",
+"region":  {
+"startLine":  185,
+"startColumn":  17,
+"endLine":  185,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\ReferencedModulesTests.vb",
+"region":  {
+"startLine":  187,
+"startColumn":  17,
+"endLine":  187,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S117",
+"message":  "Rename this local variable to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\ExpressionEvaluator\\VisualBasic\\Test\\ExpressionCompiler\\ReferencedModulesTests.vb",
+"region":  {
+"startLine":  313,
+"startColumn":  17,
+"endLine":  313,
+"endColumn":  29
+}
+}
+}
+]
+}

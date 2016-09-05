@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S1654",
+"message":  "Rename this parameter to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\CodeGeneration\\VisualBasicSyntaxGenerator.vb",
+"region":  {
+"startLine":  3496,
+"startColumn":  82,
+"endLine":  3496,
+"endColumn":  87
+}
+}
+},
+{
+"id":  "S1654",
+"message":  "Rename this parameter to match the regular expression: \"^[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\Workspaces\\VisualBasic\\Portable\\CodeGeneration\\VisualBasicSyntaxGenerator.vb",
+"region":  {
+"startLine":  3506,
+"startColumn":  82,
+"endLine":  3506,
+"endColumn":  87
+}
+}
+}
+]
+}
