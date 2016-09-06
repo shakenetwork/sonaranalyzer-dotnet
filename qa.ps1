@@ -33,8 +33,13 @@ $destination.CopyHere($zip_file.Items(), 0x14)
 $productversion=ls .\analyzers\SonarAnalyzer.dll | % { $_.versioninfo.productversion }
 $sha1=$productversion.Substring($productversion.LastIndexOf('Sha1:')+5)
 Write-Host "Checking out $sha1"
+
+if (($env:GITHUB_BRANCH -eq "master") -or ($env:GITHUB_BRANCH -eq "refs/heads/master")) {
+    $env:GITHUB_BRANCH=$env:GITHUB_BRANCH.Substring(11)
+}
+
 #checkout commit
-git pull origin master
+git pull origin $env:GITHUB_BRANCH
 git checkout -f $sha1
 
 #move dlls to correct locations
