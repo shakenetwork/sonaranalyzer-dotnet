@@ -18,22 +18,22 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.Diagnostics;
+using SonarLint.Common;
+using SonarLint.Common.Sqale;
+using SonarLint.Helpers;
 
-namespace SonarLint.UnitTest.Rules
+namespace SonarLint.Rules.VisualBasic
 {
-    [TestClass]
-    public class LineLengthTest
+    [DiagnosticAnalyzer(LanguageNames.VisualBasic)]
+    [SqaleConstantRemediation("1min")]
+    [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
+    [Tags(Tag.Convention)]
+    public class LineLength : LineLengthBase
     {
-        [TestMethod]
-        [TestCategory("Rule")]
-        public void LineLength()
-        {
-            var diagnosticCs = new SonarLint.Rules.CSharp.LineLength {Maximum = 127};
-            Verifier.VerifyAnalyzer(@"TestCases\LineLength.cs", diagnosticCs);
-
-            var diagnosticVb = new SonarLint.Rules.VisualBasic.LineLength { Maximum = 127 };
-            Verifier.VerifyAnalyzer(@"TestCases\LineLength.vb", diagnosticVb);
-        }
+        protected override GeneratedCodeRecognizer GeneratedCodeRecognizer =>
+            Helpers.VisualBasic.GeneratedCodeRecognizer.Instance;
     }
 }
