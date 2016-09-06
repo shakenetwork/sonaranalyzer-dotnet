@@ -34,14 +34,14 @@ namespace SonarLint.Rules.VisualBasic
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [Rule(DiagnosticId, RuleSeverity, Title, true)]
     [Tags(Tag.Convention)]
-    public class FunctionName : ParameterLoadingDiagnosticAnalyzer
+    public class EventHandlerName : ParameterLoadingDiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S1542";
-        internal const string Title = "Function names should comply with a naming convention";
+        internal const string DiagnosticId = "S2347";
+        internal const string Title = "Event handlers should comply with a naming convention";
         internal const string Description =
-            "Shared naming conventions allow teams to collaborate efficiently. " +
-            "This rule checks that all subroutine and function names match a provided regular expression.";
-        internal const string MessageFormat = "Rename {0} \"{1}\" to match the regular expression: \"{2}\".";
+            "Shared coding conventions allow teams to collaborate efficiently. " +
+            "This rule checks that all even handler names match a provided regular expression.";
+        internal const string MessageFormat = "Rename event handler \"{0}\" to match the regular expression: \"{1}\".";
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
 
@@ -53,9 +53,12 @@ namespace SonarLint.Rules.VisualBasic
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
 
+        private const string DefaultPattern = "^(([a-z][a-z0-9]*)?" + FieldNameChecker.PascalCasingInternalPattern + "_)?" +
+            FieldNameChecker.PascalCasingInternalPattern + "$";
+
         [RuleParameter("format", PropertyType.String,
-            "Regular expression used to check the function names against.", FieldNameChecker.PascalCasingPattern)]
-        public string Pattern { get; set; } = FieldNameChecker.PascalCasingPattern;
+            "Regular expression used to check the even handler names against.", DefaultPattern)]
+        public string Pattern { get; set; } = DefaultPattern;
 
         protected override void Initialize(ParameterLoadingAnalysisContext context)
         {
@@ -63,26 +66,26 @@ namespace SonarLint.Rules.VisualBasic
                 c =>
                 {
                     var methodDeclaration = (MethodStatementSyntax)c.Node;
-                    if (!FieldNameChecker.IsRegexMatch(methodDeclaration.Identifier.ValueText, Pattern))
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, methodDeclaration.Identifier.GetLocation(),
-                            "function", methodDeclaration.Identifier.ValueText, Pattern));
-                    }
-                },
-                SyntaxKind.FunctionStatement);
-
-            context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
-                    var methodDeclaration = (MethodStatementSyntax)c.Node;
                     if (!FieldNameChecker.IsRegexMatch(methodDeclaration.Identifier.ValueText, Pattern) &&
-                        !EventHandlerName.IsEventHandler(methodDeclaration, c.SemanticModel))
+                        IsEventHandler(methodDeclaration, c.SemanticModel))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, methodDeclaration.Identifier.GetLocation(),
-                            "procedure", methodDeclaration.Identifier.ValueText, Pattern));
+                            methodDeclaration.Identifier.ValueText, Pattern));
                     }
                 },
                 SyntaxKind.SubStatement);
+        }
+
+        internal static bool IsEventHandler(MethodStatementSyntax declaration, SemanticModel semanticModel)
+        {
+            if (declaration.HandlesClause != null)
+            {
+                return true;
+            }
+
+            var symbol = semanticModel.GetDeclaredSymbol(declaration);
+            return symbol != null &&
+                symbol.IsProbablyEventHandler();
         }
     }
 }
