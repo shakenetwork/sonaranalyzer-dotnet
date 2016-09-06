@@ -1,0 +1,82 @@
+{
+"issues":  [
+{
+"id":  "S1542",
+"message":  "Rename procedure \"SetStreamForPDB\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\ProjectSystemShim\\Interop\\IVbCompilerProject.vb",
+"region":  {
+"startLine":  58,
+"startColumn":  13,
+"endLine":  58,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1542",
+"message":  "Rename function \"ENCRebuild\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\ProjectSystemShim\\Interop\\IVbCompilerProject.vb",
+"region":  {
+"startLine":  170,
+"startColumn":  18,
+"endLine":  170,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1542",
+"message":  "Rename function \"ENCRebuild\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\ProjectSystemShim\\TempPECompiler.TempPEProject.vb",
+"region":  {
+"startLine":  125,
+"startColumn":  29,
+"endLine":  125,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1542",
+"message":  "Rename procedure \"SetStreamForPDB\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\ProjectSystemShim\\TempPECompiler.TempPEProject.vb",
+"region":  {
+"startLine":  216,
+"startColumn":  24,
+"endLine":  216,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1542",
+"message":  "Rename function \"ENCRebuild\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\ProjectSystemShim\\VisualBasicProject.vb",
+"region":  {
+"startLine":  231,
+"startColumn":  25,
+"endLine":  231,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S1542",
+"message":  "Rename procedure \"SetStreamForPDB\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
+"location":  {
+"uri":  "roslyn\\src\\VisualStudio\\VisualBasic\\Impl\\ProjectSystemShim\\VisualBasicProject.vb",
+"region":  {
+"startLine":  440,
+"startColumn":  20,
+"endLine":  440,
+"endColumn":  35
+}
+}
+}
+]
+}

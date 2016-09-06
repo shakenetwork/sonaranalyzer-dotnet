@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S2373",
+"message":  "Rename \"S\" to match the regular expression: \"^T(([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?)?\".",
+"location":  {
+"uri":  "roslyn\\src\\Compilers\\VisualBasic\\Test\\Emit\\ExpressionTrees\\Sources\\QueryHelper.vb",
+"region":  {
+"startLine":  57,
+"startColumn":  40,
+"endLine":  57,
+"endColumn":  41
+}
+}
+}
+]
+}
