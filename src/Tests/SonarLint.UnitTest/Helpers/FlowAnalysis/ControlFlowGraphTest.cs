@@ -1573,12 +1573,6 @@ namespace NS
 
             var cw0 = blocks
                 .First(block => block.Instructions.Any(n => n.ToString() == "cw0")) as BranchBlock;
-            var cw1 = blocks
-                .First(block => block.Instructions.Any(n => n.ToString() == "cw1")) as JumpBlock;
-            var cw2 = blocks
-                .First(block => block.Instructions.Any(n => n.ToString() == "cw2")) as JumpBlock;
-            var cw3 = blocks
-                .First(block => block.Instructions.Any(n => n.ToString() == "cw3"));
 
             var caseA = blocks[1] as JumpBlock;
             var caseEmptyString = blocks[2] as JumpBlock;

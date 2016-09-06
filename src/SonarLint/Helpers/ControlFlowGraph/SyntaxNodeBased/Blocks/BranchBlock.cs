@@ -29,8 +29,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
     {
         internal BranchBlock(SyntaxNode branchingNode, params Block[] successors)
         {
-            if (branchingNode == null &&
-                !(this is BinaryBranchingSimpleBlock))
+            if (branchingNode == null)
             {
                 throw new ArgumentNullException(nameof(branchingNode));
             }

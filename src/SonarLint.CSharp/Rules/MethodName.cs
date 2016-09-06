@@ -82,7 +82,12 @@ namespace SonarLint.Rules.CSharp
         private static void CheckDeclarationName(MemberDeclarationSyntax member, SyntaxToken identifier, SyntaxNodeAnalysisContext context)
         {
             var symbol = context.SemanticModel.GetDeclaredSymbol(member);
-            if (ClassName.IsTypeComRelated(symbol?.ContainingType) ||
+            if (symbol == null)
+            {
+                return;
+            }
+
+            if (ClassName.IsTypeComRelated(symbol.ContainingType) ||
                 symbol.IsInterfaceImplementationOrMemberOverride() ||
                 symbol.IsExtern)
             {
