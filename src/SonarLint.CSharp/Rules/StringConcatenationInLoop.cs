@@ -28,6 +28,7 @@ using SonarLint.Rules.Common;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using SonarLint.Helpers;
+using SonarLint.Helpers.CSharp;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -71,6 +72,6 @@ namespace SonarLint.Rules.CSharp
 
         protected override ImmutableArray<SyntaxKind> CompoundAssignmentKinds => compoundAssignmentKinds;
 
-        protected sealed override GeneratedCodeRecognizer GeneratedCodeRecognizer => Helpers.CSharp.GeneratedCodeRecognizer.Instance;
+        protected sealed override Helpers.GeneratedCodeRecognizer GeneratedCodeRecognizer => Helpers.CSharp.GeneratedCodeRecognizer.Instance;
     }
 }
