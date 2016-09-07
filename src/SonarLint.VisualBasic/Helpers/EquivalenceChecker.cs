@@ -18,25 +18,23 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.VisualBasic;
 
-namespace SonarLint.UnitTest.Rules
+namespace SonarLint.Helpers.VisualBasic
 {
-    [TestClass]
-    public class SelfAssignmentTest
+    internal static class EquivalenceChecker
     {
-        [TestMethod]
-        [TestCategory("Rule")]
-        public void SelfAssignment_CSharp()
+        public static bool AreEquivalent(SyntaxNode node1, SyntaxNode node2)
         {
-            Verifier.VerifyAnalyzer(@"TestCases\SelfAssignment.cs", new SonarLint.Rules.CSharp.SelfAssignment());
+            return Common.EquivalenceChecker.AreEquivalent(node1, node2,
+                (n1, n2) => SyntaxFactory.AreEquivalent(n1, n2));
         }
 
-        [TestMethod]
-        [TestCategory("Rule")]
-        public void SelfAssignment_VisualBasic()
+        public static bool AreEquivalent(SyntaxList<SyntaxNode> nodeList1, SyntaxList<SyntaxNode> nodeList2)
         {
-            Verifier.VerifyAnalyzer(@"TestCases\SelfAssignment.vb", new SonarLint.Rules.VisualBasic.SelfAssignment());
+            return Common.EquivalenceChecker.AreEquivalent(nodeList1, nodeList2,
+                (n1, n2) => SyntaxFactory.AreEquivalent(n1, n2));
         }
     }
 }

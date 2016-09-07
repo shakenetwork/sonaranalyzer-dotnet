@@ -26,6 +26,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarLint.Helpers;
+using SonarLint.Helpers.CSharp;
 
 namespace SonarLint.UnitTest.Helpers
 {

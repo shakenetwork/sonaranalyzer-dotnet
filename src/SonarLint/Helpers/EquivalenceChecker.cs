@@ -18,25 +18,36 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.CodeAnalysis;
+using System;
 
-namespace SonarLint.UnitTest.Rules
+namespace SonarLint.Helpers.Common
 {
-    [TestClass]
-    public class SelfAssignmentTest
+    internal static class EquivalenceChecker
     {
-        [TestMethod]
-        [TestCategory("Rule")]
-        public void SelfAssignment_CSharp()
+        public static bool AreEquivalent(SyntaxNode node1, SyntaxNode node2, Func<SyntaxNode, SyntaxNode, bool> nodeComparator)
         {
-            Verifier.VerifyAnalyzer(@"TestCases\SelfAssignment.cs", new SonarLint.Rules.CSharp.SelfAssignment());
+            return node1.Language == node2.Language &&
+                nodeComparator(node1, node2);
         }
 
-        [TestMethod]
-        [TestCategory("Rule")]
-        public void SelfAssignment_VisualBasic()
+        public static bool AreEquivalent(SyntaxList<SyntaxNode> nodeList1, SyntaxList<SyntaxNode> nodeList2,
+            Func<SyntaxNode, SyntaxNode, bool> nodeComparator)
         {
-            Verifier.VerifyAnalyzer(@"TestCases\SelfAssignment.vb", new SonarLint.Rules.VisualBasic.SelfAssignment());
+            if (nodeList1.Count != nodeList2.Count)
+            {
+                return false;
+            }
+
+            for (var i = 0; i < nodeList1.Count; i++)
+            {
+                if (!AreEquivalent(nodeList1[i], nodeList2[i], nodeComparator))
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
     }
 }

@@ -4,17 +4,17 @@ There is no reason to re-assign a variable to itself. Either this statement is r
 
 <h2>Noncompliant Code Example</h2>
 <pre>
-public void setName(string name)
+public void SetName(string name)
 {
-    name = name;
+  name = name;
 }
 </pre>
 
 <h2>Compliant Solution</h2>
 <pre>
-public void setName(string name)
+public void SetName(string name)
 {
-    this.name = name;
+  this.name = name;
 }
 </pre>
 
