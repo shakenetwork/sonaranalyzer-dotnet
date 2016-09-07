@@ -19,48 +19,21 @@
  */
 
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
-using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
 using SonarLint.Helpers.CSharp;
 
 namespace SonarLint.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
-    [SqaleConstantRemediation("10min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Design, Tag.Suspicious)]
-    public class ConditionalStructureSameImplementation : SonarDiagnosticAnalyzer
+    public class ConditionalStructureSameImplementation : ConditionalStructureSameImplementationBase
     {
-        internal const string DiagnosticId = "S1871";
-        internal const string Title = "Two branches in the same conditional structure should not have exactly the same " +
-                                      "implementation";
-        internal const string Description =
-            "Having two \"cases\" in the same \"switch\" statement or branches in the same " +
-            "\"if\" structure with the same implementation is at best duplicate code, and at " +
-            "worst a coding error.If the same logic is truly needed for both instances, then " +
-            "in an \"if\" structure they should be combined, or for a \"switch\", one should " +
-            "fall through to the other.";
-        internal const string MessageFormat = "Either merge this {1} with the identical one on line \"{0}\" or change one of the implementations.";
-        internal const string Category = SonarLint.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
-
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
-
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
-
         protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
@@ -126,10 +99,10 @@ namespace SonarLint.Rules.CSharp
         private static void ReportSyntaxNode(SyntaxNodeAnalysisContext context, SyntaxNode node, SyntaxNode precedingNode, string errorMessageDiscriminator)
         {
             context.ReportDiagnostic(Diagnostic.Create(
-                           Rule,
-                           node.GetLocation(),
-                           precedingNode.GetLineNumberToReport(),
-                           errorMessageDiscriminator));
+                Rule,
+                node.GetLocation(),
+                precedingNode.GetLineNumberToReport(),
+                errorMessageDiscriminator));
         }
     }
 }

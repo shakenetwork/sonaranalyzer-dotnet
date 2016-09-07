@@ -19,7 +19,6 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarLint.Rules.CSharp;
 
 namespace SonarLint.UnitTest.Rules
 {
@@ -28,16 +27,34 @@ namespace SonarLint.UnitTest.Rules
     {
         [TestMethod]
         [TestCategory("Rule")]
-        public void ConditionalStructureSameImplementation_If()
+        public void ConditionalStructureSameImplementation_If_CSharp()
         {
-            Verifier.VerifyAnalyzer(@"TestCases\ConditionalStructureSameImplementation_If.cs", new ConditionalStructureSameImplementation());
+            Verifier.VerifyAnalyzer(@"TestCases\ConditionalStructureSameImplementation_If.cs",
+                new SonarLint.Rules.CSharp.ConditionalStructureSameImplementation());
         }
 
         [TestMethod]
         [TestCategory("Rule")]
-        public void ConditionalStructureSameImplementation_Switch()
+        public void ConditionalStructureSameImplementation_Switch_CSharp()
         {
-            Verifier.VerifyAnalyzer(@"TestCases\ConditionalStructureSameImplementation_Switch.cs", new ConditionalStructureSameImplementation());
+            Verifier.VerifyAnalyzer(@"TestCases\ConditionalStructureSameImplementation_Switch.cs",
+                new SonarLint.Rules.CSharp.ConditionalStructureSameImplementation());
+        }
+
+        [TestMethod]
+        [TestCategory("Rule")]
+        public void ConditionalStructureSameImplementation_If_VisualBasic()
+        {
+            Verifier.VerifyAnalyzer(@"TestCases\ConditionalStructureSameImplementation_If.vb",
+                new SonarLint.Rules.VisualBasic.ConditionalStructureSameImplementation());
+        }
+
+        [TestMethod]
+        [TestCategory("Rule")]
+        public void ConditionalStructureSameImplementation_Switch_VisualBasic()
+        {
+            Verifier.VerifyAnalyzer(@"TestCases\ConditionalStructureSameImplementation_Switch.vb",
+                new SonarLint.Rules.VisualBasic.ConditionalStructureSameImplementation());
         }
     }
 }
