@@ -39,7 +39,7 @@ namespace SonarLint.Rules.VisualBasic
     [Tags(Tag.Clumsy)]
     public class ArrayInitializationMultipleStatements : SonarDiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S2351";
+        internal const string DiagnosticId = "S2429";
         internal const string Title = "Arrays should be initialized using the \"... = {}\" syntax";
         internal const string Description =
             "The \"... = {}\" syntax is more compact, more readable and less error-prone.";
