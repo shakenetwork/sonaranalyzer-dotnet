@@ -19,26 +19,26 @@
  */
 
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.CodeAnalysis.VisualBasic;
+using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
-using SonarLint.Helpers.CSharp;
+using SonarLint.Helpers.VisualBasic;
 
-namespace SonarLint.Rules.CSharp
+namespace SonarLint.Rules.VisualBasic
 {
-    [DiagnosticAnalyzer(LanguageNames.CSharp)]
+    [DiagnosticAnalyzer(LanguageNames.VisualBasic)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     public class BinaryOperationWithIdenticalExpressions : BinaryOperationWithIdenticalExpressionsBase
     {
         private static readonly SyntaxKind[] SyntaxKindsToCheckBinary =
         {
             SyntaxKind.SubtractExpression,
-            SyntaxKind.DivideExpression, SyntaxKind.ModuloExpression,
-            SyntaxKind.LogicalOrExpression, SyntaxKind.LogicalAndExpression,
-            SyntaxKind.BitwiseOrExpression, SyntaxKind.BitwiseAndExpression, SyntaxKind.ExclusiveOrExpression,
+            SyntaxKind.DivideExpression, SyntaxKind.ModuloExpression, SyntaxKind.IntegerDivideExpression,
+            SyntaxKind.OrElseExpression, SyntaxKind.AndAlsoExpression,
+            SyntaxKind.OrExpression, SyntaxKind.AndExpression, SyntaxKind.ExclusiveOrExpression,
             SyntaxKind.EqualsExpression, SyntaxKind.NotEqualsExpression,
             SyntaxKind.LessThanExpression, SyntaxKind.LessThanOrEqualExpression,
             SyntaxKind.GreaterThanExpression, SyntaxKind.GreaterThanOrEqualExpression
@@ -46,9 +46,9 @@ namespace SonarLint.Rules.CSharp
 
         private static readonly SyntaxKind[] SyntaxKindsToCheckAssignment =
         {
-            SyntaxKind.SubtractAssignmentExpression,
-            SyntaxKind.DivideAssignmentExpression, SyntaxKind.ModuloAssignmentExpression,
-            SyntaxKind.OrAssignmentExpression, SyntaxKind.AndAssignmentExpression, SyntaxKind.ExclusiveOrAssignmentExpression
+            SyntaxKind.SubtractAssignmentStatement,
+            SyntaxKind.DivideAssignmentStatement,
+            SyntaxKind.IntegerDivideAssignmentStatement
         };
 
         protected override void Initialize(SonarAnalysisContext context)
@@ -64,7 +64,7 @@ namespace SonarLint.Rules.CSharp
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
-                    var expression = (AssignmentExpressionSyntax)c.Node;
+                    var expression = (AssignmentStatementSyntax)c.Node;
                     ReportIfExpressionsMatch(c, expression.Left, expression.Right, expression.OperatorToken);
                 },
                 SyntaxKindsToCheckAssignment);

@@ -18,27 +18,25 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.VisualBasic.Syntax;
+using Microsoft.CodeAnalysis.VisualBasic;
 
-namespace SonarLint.UnitTest.Rules
+namespace SonarLint.Helpers
 {
-    [TestClass]
-    public class BinaryOperationWithIdenticalExpressionsTest
+    internal static class SyntaxHelper
     {
-        [TestMethod]
-        [TestCategory("Rule")]
-        public void BinaryOperationWithIdenticalExpressions_CSharp()
+        public static ExpressionSyntax RemoveParentheses(this ExpressionSyntax expression)
         {
-            Verifier.VerifyAnalyzer(@"TestCases\BinaryOperationWithIdenticalExpressions.cs",
-                new SonarLint.Rules.CSharp.BinaryOperationWithIdenticalExpressions());
-        }
-
-        [TestMethod]
-        [TestCategory("Rule")]
-        public void BinaryOperationWithIdenticalExpressions_VisualBasic()
-        {
-            Verifier.VerifyAnalyzer(@"TestCases\BinaryOperationWithIdenticalExpressions.vb",
-                new SonarLint.Rules.VisualBasic.BinaryOperationWithIdenticalExpressions());
+            var currentExpression = expression;
+            var parentheses = expression as ParenthesizedExpressionSyntax;
+            while (parentheses != null)
+            {
+                currentExpression = parentheses.Expression;
+                parentheses = currentExpression as ParenthesizedExpressionSyntax;
+            }
+            return currentExpression;
         }
     }
 }

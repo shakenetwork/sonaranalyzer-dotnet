@@ -89,6 +89,7 @@
     <Compile Include="Helpers\DiagnosticAnalyzerContextHelper.cs" />
     <Compile Include="Helpers\EquivalenceChecker.cs" />
     <Compile Include="Helpers\GeneratedCodeRecognizer.cs" />
+    <Compile Include="Helpers\SyntaxHelper.cs" />
     <Compile Include="Metrics\Metrics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\*.cs" />

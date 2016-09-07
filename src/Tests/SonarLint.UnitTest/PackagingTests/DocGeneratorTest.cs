@@ -40,7 +40,7 @@ namespace SonarLint.UnitTest.PackagingTests
             var crossReferenceCount = GetNumberOfCrossReferences(AnalyzerLanguage.CSharp);
             Assert.AreEqual(4, crossReferenceCount);
             crossReferenceCount = GetNumberOfCrossReferences(AnalyzerLanguage.VisualBasic);
-            Assert.AreEqual(0, crossReferenceCount);
+            Assert.AreEqual(1, crossReferenceCount);
         }
 
         [TestMethod]
