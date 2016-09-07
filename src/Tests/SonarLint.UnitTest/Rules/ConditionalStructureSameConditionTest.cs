@@ -19,7 +19,6 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarLint.Rules.CSharp;
 
 namespace SonarLint.UnitTest.Rules
 {
@@ -28,9 +27,18 @@ namespace SonarLint.UnitTest.Rules
     {
         [TestMethod]
         [TestCategory("Rule")]
-        public void ConditionalStructureSameCondition()
+        public void ConditionalStructureSameCondition_CSharp()
         {
-            Verifier.VerifyAnalyzer(@"TestCases\ConditionalStructureSameCondition.cs", new ConditionalStructureSameCondition());
+            Verifier.VerifyAnalyzer(@"TestCases\ConditionalStructureSameCondition.cs",
+                new SonarLint.Rules.CSharp.ConditionalStructureSameCondition());
+        }
+
+        [TestMethod]
+        [TestCategory("Rule")]
+        public void ConditionalStructureSameCondition_VisualBasic()
+        {
+            Verifier.VerifyAnalyzer(@"TestCases\ConditionalStructureSameCondition.vb",
+                new SonarLint.Rules.VisualBasic.ConditionalStructureSameCondition());
         }
     }
 }

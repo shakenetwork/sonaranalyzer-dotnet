@@ -18,10 +18,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Linq;
-using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.VisualBasic.Syntax;
-using Microsoft.CodeAnalysis.VisualBasic;
 
 namespace SonarLint.Helpers
 {
