@@ -18,18 +18,17 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.CodeAnalysis.VisualBasic;
+using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Helpers;
-using SonarLint.Helpers.CSharp;
+using SonarLint.Helpers.VisualBasic;
 using SonarLint.Common;
 
-namespace SonarLint.Rules.CSharp
+namespace SonarLint.Rules.VisualBasic
 {
-    [DiagnosticAnalyzer(LanguageNames.CSharp)]
+    [DiagnosticAnalyzer(LanguageNames.VisualBasic)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     public class SelfAssignment : SelfAssignmentBase
     {
@@ -38,19 +37,13 @@ namespace SonarLint.Rules.CSharp
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
-                    var expression = (AssignmentExpressionSyntax) c.Node;
-
-                    if (expression.Parent is InitializerExpressionSyntax)
-                    {
-                        return;
-                    }
-
+                    var expression = (AssignmentStatementSyntax) c.Node;
                     if (EquivalenceChecker.AreEquivalent(expression.Left, expression.Right))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, c.Node.GetLocation()));
                     }
                 },
-                SyntaxKind.SimpleAssignmentExpression);
+                SyntaxKind.SimpleAssignmentStatement);
         }
     }
 }
