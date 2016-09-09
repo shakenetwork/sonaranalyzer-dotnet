@@ -39,6 +39,9 @@ namespace Tests.Diagnostics
             var interf = (IMyInterface2)interfaceRef;
             interf = (IMyInterface2)class1;
             var o = (object)interfaceRef;
+
+            IEnumerable<int> list = null;
+            var l = (List<int>)list; // Compliant
         }
     }
 }

@@ -4,45 +4,6 @@
 "id":  "S3215",
 "message":  "Remove this cast and edit the interface to add the missing functionality.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteSystemDaemon.cs",
-"region":  {
-"startLine":  143,
-"startColumn":  29,
-"endLine":  143,
-"endColumn":  77
-}
-}
-},
-{
-"id":  "S3215",
-"message":  "Remove this cast and edit the interface to add the missing functionality.",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteWatcher.cs",
-"region":  {
-"startLine":  275,
-"startColumn":  34,
-"endLine":  275,
-"endColumn":  119
-}
-}
-},
-{
-"id":  "S3215",
-"message":  "Remove this cast and edit the interface to add the missing functionality.",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
-"region":  {
-"startLine":  547,
-"startColumn":  38,
-"endLine":  547,
-"endColumn":  106
-}
-}
-},
-{
-"id":  "S3215",
-"message":  "Remove this cast and edit the interface to add the missing functionality.",
-"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
 "region":  {
 "startLine":  238,
@@ -62,32 +23,6 @@
 "startColumn":  28,
 "endLine":  256,
 "endColumn":  40
-}
-}
-},
-{
-"id":  "S3215",
-"message":  "Remove this cast and edit the interface to add the missing functionality.",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Helios\\HeliosTcpTransport.cs",
-"region":  {
-"startLine":  247,
-"startColumn":  21,
-"endLine":  247,
-"endColumn":  45
-}
-}
-},
-{
-"id":  "S3215",
-"message":  "Remove this cast and edit the interface to add the missing functionality.",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TransportAdapters.cs",
-"region":  {
-"startLine":  52,
-"startColumn":  25,
-"endLine":  52,
-"endColumn":  64
 }
 }
 }

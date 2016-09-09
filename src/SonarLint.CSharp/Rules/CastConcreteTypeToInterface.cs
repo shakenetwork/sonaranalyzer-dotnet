@@ -26,6 +26,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Linq;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -82,6 +83,7 @@ namespace SonarLint.Rules.CSharp
             SyntaxNodeAnalysisContext context)
         {
             if (!castedFrom.Is(TypeKind.Interface) ||
+                !castedFrom.DeclaringSyntaxReferences.Any() ||
                 !castedTo.Is(TypeKind.Class) ||
                 castedTo.Is(KnownType.System_Object))
             {
