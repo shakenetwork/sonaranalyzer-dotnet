@@ -12,8 +12,8 @@ namespace Tests.Diagnostics
             {
                 var sLoop = "";
 
-                s = s + "a";  // Noncompliant
-//              ^^^^^^^^^^^
+                s = s + "a" + "b";  // Noncompliant
+//              ^^^^^^^^^^^^^^^^^
                 s += "a";     // Noncompliant {{Use a StringBuilder instead.}}
                 sLoop += "a"; // Compliant
 

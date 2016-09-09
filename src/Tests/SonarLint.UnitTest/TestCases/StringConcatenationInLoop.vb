@@ -10,7 +10,7 @@ Namespace Tests.Diagnostics
             Do
                 str += "a"           ' Noncompliant {{Use a StringBuilder instead.}}
 '               ^^^^^^^^^^
-                str = str + "a"      ' Noncompliant
+                str = str + "a" + "c" ' Noncompliant
 
                 str &= "a"           ' Noncompliant
                 str = str & "a"      ' Noncompliant

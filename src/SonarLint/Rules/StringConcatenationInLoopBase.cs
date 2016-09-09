@@ -24,6 +24,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Helpers;
 using System.Linq;
+using System;
 
 namespace SonarLint.Rules.Common
 {
@@ -78,21 +79,44 @@ namespace SonarLint.Rules.Common
             }
 
             var addExpression = GetRight(assignment) as TBinaryExpression;
-            if (addExpression == null ||
-                !ExpressionIsConcatenation(addExpression) ||
-                !AreEquivalent(GetLeft(assignment), GetLeft(addExpression)))
+            if (addExpression == null)
+            {
+                return;
+            }
+
+            var assigned = GetLeft(assignment);
+            var leftOfConcatenation = GetInnerMostLeftOfConcatenation(addExpression);
+            if (leftOfConcatenation == null ||
+                !AreEquivalent(assigned, leftOfConcatenation))
             {
                 return;
             }
 
             SyntaxNode nearestLoop;
             if (!TryGetNearestLoop(assignment, out nearestLoop) ||
-                IsDefinedInLoop(GetLeft(assignment), nearestLoop, context.SemanticModel))
+                IsDefinedInLoop(assigned, nearestLoop, context.SemanticModel))
             {
                 return;
             }
 
             context.ReportDiagnostic(Diagnostic.Create(Rule, assignment.GetLocation()));
+        }
+
+        private SyntaxNode GetInnerMostLeftOfConcatenation(TBinaryExpression binaryExpression)
+        {
+            var nestedLeft = GetLeft(binaryExpression);
+            var nestedBinary = nestedLeft as TBinaryExpression;
+            while (nestedBinary != null)
+            {
+                if (!IsExpressionConcatenation(nestedBinary))
+                {
+                    return null;
+                }
+
+                nestedLeft = GetLeft(nestedBinary);
+                nestedBinary = nestedLeft as TBinaryExpression;
+            }
+            return nestedLeft;
         }
 
         private void CheckCompoundAssignment(SyntaxNodeAnalysisContext context)
@@ -119,7 +143,7 @@ namespace SonarLint.Rules.Common
             context.ReportDiagnostic(Diagnostic.Create(Rule, addAssignment.GetLocation()));
         }
 
-        protected abstract bool ExpressionIsConcatenation(TBinaryExpression addExpression);
+        protected abstract bool IsExpressionConcatenation(TBinaryExpression addExpression);
         protected abstract SyntaxNode GetLeft(TAssignmentExpression assignment);
         protected abstract SyntaxNode GetRight(TAssignmentExpression assignment);
         protected abstract SyntaxNode GetLeft(TBinaryExpression binary);

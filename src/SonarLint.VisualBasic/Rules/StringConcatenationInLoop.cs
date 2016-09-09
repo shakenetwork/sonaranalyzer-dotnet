@@ -39,7 +39,7 @@ namespace SonarLint.Rules.VisualBasic
     public class StringConcatenationInLoop
         : StringConcatenationInLoopBase<SyntaxKind, AssignmentStatementSyntax, BinaryExpressionSyntax>
     {
-        protected override bool ExpressionIsConcatenation(BinaryExpressionSyntax addExpression)
+        protected override bool IsExpressionConcatenation(BinaryExpressionSyntax addExpression)
         {
             return addExpression.IsKind(SyntaxKind.AddExpression) ||
                 addExpression.IsKind(SyntaxKind.ConcatenateExpression);

@@ -40,7 +40,7 @@ namespace SonarLint.Rules.CSharp
     public class StringConcatenationInLoop
         : StringConcatenationInLoopBase<SyntaxKind, AssignmentExpressionSyntax, BinaryExpressionSyntax>
     {
-        protected override bool ExpressionIsConcatenation(BinaryExpressionSyntax addExpression) =>
+        protected override bool IsExpressionConcatenation(BinaryExpressionSyntax addExpression) =>
             addExpression.IsKind(SyntaxKind.AddExpression);
 
         protected override SyntaxNode GetLeft(AssignmentExpressionSyntax assignment) => assignment.Left;
