@@ -4,13 +4,19 @@ Module Module1
     Sub Main()
         Dim foo1 As UShort   ' Noncompliant {{Change this unsigned type to "Short".}}
 '                   ^^^^^^
-        Dim foo2 As UInteger ' Noncompliant
-        Dim foo3 As ULong    ' Noncompliant
+        Dim foo2 As UInteger ' Noncompliant {{Change this unsigned type to "Integer".}}
+        Dim foo3 As ULong    ' Noncompliant {{Change this unsigned type to "Long".}}
         Dim foo4 As System.UInt64 ' Noncompliant
+'                   ^^^^^^^^^^^^^
         Dim foo5 As UInt64 ' Noncompliant
         Dim foo6 As UInt64() ' Noncompliant
+'                   ^^^^^^
         Dim foo7 As UInt64? ' Noncompliant
+'                   ^^^^^^
         Dim foo7 As Nullable(Of UInt64) ' Noncompliant
+'                               ^^^^^^
+        UInt32.MaxValue ' Noncompliant
+'       ^^^^^^
     End Sub
 
     Sub Main2()

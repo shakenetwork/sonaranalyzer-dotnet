@@ -53,7 +53,7 @@ namespace SonarLint.Rules.VisualBasic
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -66,7 +66,7 @@ namespace SonarLint.Rules.VisualBasic
                         return;
                     }
 
-                    var typeSymbol = c.SemanticModel.GetTypeInfo(typeSyntax).Type;
+                    var typeSymbol = c.SemanticModel.GetSymbolInfo(typeSyntax).Symbol as ITypeSymbol;
                     if (typeSymbol.IsAny(KnownType.UnsignedIntegers))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, typeSyntax.GetLocation(),
