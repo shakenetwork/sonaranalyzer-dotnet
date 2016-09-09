@@ -291,5 +291,30 @@ namespace Tests.Diagnostics
             var y = 5; // Noncompliant
             y = 6; // Noncompliant
         }
+
+        private class NameOfTest
+        {
+            private int MyProp2
+            {
+                get
+                {
+                    var i = 10; // Compliant
+                    if (nameof(((i))) == "i")
+                    {
+                        i = 11;
+                    }
+                    else
+                    {
+                        i = 12;
+                    }
+                    Console.WriteLine(i);
+                }
+            }
+
+            private static string nameof(int i)
+            {
+                return "some text";
+            }
+        }
     }
 }

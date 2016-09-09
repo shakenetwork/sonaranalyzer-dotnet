@@ -257,7 +257,7 @@ namespace SonarLint.Rules.CSharp
                 }
 
                 var propertyAccess = expr.GetSelfOrTopParenthesizedExpression();
-                if (propertyAccess.IsInNameofCall())
+                if (propertyAccess.IsInNameofCall(semanticModel))
                 {
                     return false;
                 }

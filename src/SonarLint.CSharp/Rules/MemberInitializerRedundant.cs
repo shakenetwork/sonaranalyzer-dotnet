@@ -331,7 +331,7 @@ namespace SonarLint.Rules.CSharp
                     return true;
                 }
 
-                if (IsReadAccess(parenthesized))
+                if (IsReadAccess(parenthesized, semanticModel))
                 {
                     isRead = true;
                     return true;
@@ -346,10 +346,10 @@ namespace SonarLint.Rules.CSharp
                 return argument != null && argument.RefOrOutKeyword.IsKind(SyntaxKind.OutKeyword);
             }
 
-            private static bool IsReadAccess(ExpressionSyntax parenthesized)
+            private static bool IsReadAccess(ExpressionSyntax parenthesized, SemanticModel semanticModel)
             {
                 return !IsBeingAssigned(parenthesized) &&
-                    !parenthesized.IsInNameofCall();
+                    !parenthesized.IsInNameofCall(semanticModel);
             }
 
             private bool IsMemberUsedInsideLambda(SyntaxNode instruction)

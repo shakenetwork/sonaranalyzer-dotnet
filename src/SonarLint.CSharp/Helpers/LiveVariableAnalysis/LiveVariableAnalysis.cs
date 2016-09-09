@@ -153,7 +153,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 return;
             }
 
-            if (!identifier.GetSelfOrTopParenthesizedExpression().IsInNameofCall() &&
+            if (!identifier.GetSelfOrTopParenthesizedExpression().IsInNameofCall(semanticModel) &&
                 IsLocalScoped(symbol))
             {
                 if (IsOutArgument(identifier))

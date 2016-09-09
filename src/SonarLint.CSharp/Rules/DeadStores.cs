@@ -221,7 +221,7 @@ namespace SonarLint.Rules.CSharp
                     return;
                 }
 
-                if (!identifier.GetSelfOrTopParenthesizedExpression().IsInNameofCall() &&
+                if (!identifier.GetSelfOrTopParenthesizedExpression().IsInNameofCall(context.SemanticModel) &&
                     LiveVariableAnalysis.IsLocalScoped(symbol, declaration))
                 {
                     if (LiveVariableAnalysis.IsOutArgument(identifier))
