@@ -19,6 +19,7 @@
  */
 
 using Microsoft.CodeAnalysis.VisualBasic.Syntax;
+using System.Linq;
 
 namespace SonarLint.Helpers
 {
@@ -35,5 +36,35 @@ namespace SonarLint.Helpers
             }
             return currentExpression;
         }
+
+        public static ExpressionSyntax GetSelfOrTopParenthesizedExpression(this ExpressionSyntax node)
+        {
+            var current = node;
+            var parent = current.Parent as ParenthesizedExpressionSyntax;
+            while (parent != null)
+            {
+                current = parent;
+                parent = current.Parent as ParenthesizedExpressionSyntax;
+            }
+            return current;
+        }
+
+        #region Statement
+
+        public static StatementSyntax GetPrecedingStatement(this StatementSyntax currentStatement)
+        {
+            var children = currentStatement.Parent.ChildNodes().ToList();
+            var index = children.IndexOf(currentStatement);
+            return index == 0 ? null : children[index - 1] as StatementSyntax;
+        }
+
+        public static StatementSyntax GetSucceedingStatement(this StatementSyntax currentStatement)
+        {
+            var children = currentStatement.Parent.ChildNodes().ToList();
+            var index = children.IndexOf(currentStatement);
+            return index == children.Count - 1 ? null : children[index + 1] as StatementSyntax;
+        }
+
+        #endregion
     }
 }
