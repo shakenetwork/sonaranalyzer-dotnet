@@ -19,7 +19,6 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarLint.Rules.CSharp;
 
 namespace SonarLint.UnitTest.Rules
 {
@@ -28,10 +27,18 @@ namespace SonarLint.UnitTest.Rules
     {
         [TestMethod]
         [TestCategory("Rule")]
-        public void ExpressionComplexity()
+        public void ExpressionComplexity_CSharp()
         {
-            var diagnostic = new ExpressionComplexity {Maximum = 3};
+            var diagnostic = new SonarLint.Rules.CSharp.ExpressionComplexity { Maximum = 3};
             Verifier.VerifyAnalyzer(@"TestCases\ExpressionComplexity.cs", diagnostic);
+        }
+
+        [TestMethod]
+        [TestCategory("Rule")]
+        public void ExpressionComplexity_VisualBasic()
+        {
+            var diagnostic = new SonarLint.Rules.VisualBasic.ExpressionComplexity { Maximum = 3 };
+            Verifier.VerifyAnalyzer(@"TestCases\ExpressionComplexity.vb", diagnostic);
         }
     }
 }

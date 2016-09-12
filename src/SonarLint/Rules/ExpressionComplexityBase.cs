@@ -95,6 +95,7 @@ namespace SonarLint.Rules
         }
 
         protected abstract bool IsComplexityIncreasingKind(SyntaxNode node);
+
         protected abstract bool IsCompoundExpression(SyntaxNode node);
     }
 }

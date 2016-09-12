@@ -1,0 +1,13 @@
+<p>
+    Complex boolean expressions are hard to read and so to maintain.
+</p>
+
+<h2>Noncompliant Code Example</h2>
+<p>With the default threshold value 3</p>
+<pre>
+If True And False Or True Then 'Compliant
+  If True AndAlso True Or False OrElse True Xor False Then 'Noncompliant
+
+  End If
+End If
+</pre>
