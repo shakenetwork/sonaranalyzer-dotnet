@@ -63,9 +63,6 @@ namespace SonarLint.Rules.CSharp
             SyntaxKind.LogicalAndExpression,
             SyntaxKind.LogicalOrExpression);
 
-        protected override bool IsNotExpression(SyntaxNode node) =>
-            !(node is ExpressionSyntax);
-
         protected override bool IsComplexityIncreasingKind(SyntaxNode node) =>
             ComplexityIncreasingKinds.Contains(node.Kind());
 
