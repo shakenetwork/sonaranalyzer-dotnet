@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace Tests.Diagnostics
 {
@@ -20,9 +23,21 @@ namespace Tests.Diagnostics
 
             for (var i = a1 ? (b1==0 ? (c1 ? (d1 ? 1 : 1) : 1) : 1) : 1; i < 1; i++) {} // Noncompliant
 
-            bool[] foo = {
+            IEnumerable<bool> foo = {
                 true && true && true && true && true, // Noncompliant
                 true && true && true && true
+            };
+
+            foo = new List<bool>
+            {
+                true && true && true && true && true, // Noncompliant
+                true && true && true && true
+            };
+
+            var x = new Dictionary<string, bool>
+            {
+                {"a", true && true && true && true && true }, // Noncompliant
+                { "b",  true && true && true && true }
             };
 
             var e2 = true | false | true | false;

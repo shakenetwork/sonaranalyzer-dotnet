@@ -19,115 +19,57 @@
  */
 
 using System.Collections.Immutable;
-using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
-using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("30min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.UnitTestability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.BrainOverload)]
-    public class ExpressionComplexity : ParameterLoadingDiagnosticAnalyzer
+    [Rule(DiagnosticId, RuleSeverity, Title, false)]
+    public class ExpressionComplexity : ExpressionComplexityBase<ExpressionSyntax>
     {
-        internal const string DiagnosticId = "S1067";
-        internal const string Title = "Expressions should not be too complex";
         internal const string Description =
            "The complexity of an expression is defined by the number of \"&&\", \"||\" and \"condition ? ifTrue : ifFalse\" operators it contains. " +
             "A single expression's complexity should not become too high to keep the code readable.";
-        internal const string MessageFormat = "Reduce the number of conditional operators ({1}) used in the expression (maximum allowed {0}).";
-        internal const string Category = SonarLint.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
+                RuleSeverity.ToDiagnosticSeverity(), false,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
 
-        private const int DefaultValueMaximum = 3;
+        public override GeneratedCodeRecognizer GeneratedCodeRecognizer => Helpers.CSharp.GeneratedCodeRecognizer.Instance;
 
-        [RuleParameter("max", PropertyType.Integer, "Maximum number of allowed conditional operators in an expression", DefaultValueMaximum)]
-        public int Maximum { get; set; } = DefaultValueMaximum;
-
-        private static readonly IImmutableSet<SyntaxKind> CompoundExpressionKinds = ImmutableHashSet.Create(
+        private static readonly ISet<SyntaxKind> CompoundExpressionKinds = ImmutableHashSet.Create(
             SyntaxKind.SimpleLambdaExpression,
-            SyntaxKind.ArrayInitializerExpression,
             SyntaxKind.AnonymousMethodExpression,
+
+            SyntaxKind.ArrayInitializerExpression,
+            SyntaxKind.CollectionInitializerExpression,
+            SyntaxKind.ComplexElementInitializerExpression,
             SyntaxKind.ObjectInitializerExpression,
+
             SyntaxKind.InvocationExpression);
 
-        protected override void Initialize(ParameterLoadingAnalysisContext context)
-        {
-            context.RegisterSyntaxTreeActionInNonGenerated(
-                c =>
-                {
-                    var root = c.Tree.GetRoot();
+        private static readonly ISet<SyntaxKind> ComplexityIncreasingKinds = ImmutableHashSet.Create(
+            SyntaxKind.ConditionalExpression,
+            SyntaxKind.LogicalAndExpression,
+            SyntaxKind.LogicalOrExpression);
 
-                    var rootExpressions =
-                        root
-                        .DescendantNodes(e2 => !(e2 is ExpressionSyntax))
-                        .Where(
-                            e =>
-                                e is ExpressionSyntax &&
-                                !IsCompoundExpression(e));
+        protected override bool IsNotExpression(SyntaxNode node) =>
+            !(node is ExpressionSyntax);
 
-                    var compoundExpressionsDescendants =
-                        root
-                        .DescendantNodes()
-                        .Where(IsCompoundExpression)
-                        .SelectMany(
-                            e =>
-                                e
-                                .DescendantNodes(
-                                    e2 =>
-                                        e == e2 ||
-                                        !(e2 is ExpressionSyntax))
-                                .Where(
-                                    e2 =>
-                                        e2 is ExpressionSyntax &&
-                                        !IsCompoundExpression(e2)));
+        protected override bool IsComplexityIncreasingKind(SyntaxNode node) =>
+            ComplexityIncreasingKinds.Contains(node.Kind());
 
-                    var expressionsToCheck = rootExpressions.Concat(compoundExpressionsDescendants);
-
-                    var complexExpressions =
-                        expressionsToCheck
-                        .Select(
-                            e =>
-                            new
-                            {
-                                Expression = e,
-                                Complexity =
-                                    e
-                                    .DescendantNodesAndSelf(e2 => !IsCompoundExpression(e2))
-                                    .Count(
-                                        e2 =>
-                                            e2.IsKind(SyntaxKind.ConditionalExpression) ||
-                                            e2.IsKind(SyntaxKind.LogicalAndExpression) ||
-                                            e2.IsKind(SyntaxKind.LogicalOrExpression))
-                            })
-                        .Where(e => e.Complexity > Maximum);
-
-                    foreach (var complexExpression in complexExpressions)
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, complexExpression.Expression.GetLocation(), Maximum, complexExpression.Complexity));
-                    }
-                });
-        }
-
-        private static bool IsCompoundExpression(SyntaxNode node)
-        {
-            return CompoundExpressionKinds.Any(node.IsKind);
-        }
+        protected override bool IsCompoundExpression(SyntaxNode node) =>
+            CompoundExpressionKinds.Contains(node.Kind());
     }
 }
