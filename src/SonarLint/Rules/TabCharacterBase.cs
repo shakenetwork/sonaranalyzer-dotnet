@@ -26,7 +26,7 @@ using SonarLint.Helpers;
 
 namespace SonarLint.Rules
 {
-    public abstract class TabCharacterBase : SonarDiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
+    public abstract class TabCharacterBase : SonarDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S105";
         protected const string Title = "Tabulation characters should not be used";
@@ -64,6 +64,5 @@ namespace SonarLint.Rules
         }
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
-        GeneratedCodeRecognizer IMultiLanguageDiagnosticAnalyzer.GeneratedCodeRecognizer => GeneratedCodeRecognizer;
     }
 }

@@ -31,7 +31,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("1h")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.UnitTestability)]
     [Tags(Tag.BrainOverload)]
-    public abstract class FunctionComplexityBase : ParameterLoadingDiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
+    public abstract class FunctionComplexityBase : ParameterLoadingDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S1541";
         protected const string Description =
@@ -49,7 +49,6 @@ namespace SonarLint.Rules
         public int Maximum { get; set; } = DefaultValueMaximum;
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
-        GeneratedCodeRecognizer IMultiLanguageDiagnosticAnalyzer.GeneratedCodeRecognizer => GeneratedCodeRecognizer;
 
         protected abstract override void Initialize(ParameterLoadingAnalysisContext context);
 

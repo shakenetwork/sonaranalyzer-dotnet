@@ -27,7 +27,7 @@ using System.Collections.Generic;
 
 namespace SonarLint.Rules
 {
-    public abstract class EnumNameHasEnumSuffixBase : SonarDiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
+    public abstract class EnumNameHasEnumSuffixBase : SonarDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S2344";
         protected const string Title = "Enumeration type names should not have \"Flags\" or \"Enum\" suffixes";
@@ -47,7 +47,6 @@ namespace SonarLint.Rules
         protected static readonly IEnumerable<string> NameEndings = ImmutableArray.Create("enum", "flags");
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
-        GeneratedCodeRecognizer IMultiLanguageDiagnosticAnalyzer.GeneratedCodeRecognizer => GeneratedCodeRecognizer;
     }
 
     public abstract class EnumNameHasEnumSuffixBase<TLanguageKindEnum> : EnumNameHasEnumSuffixBase

@@ -26,7 +26,7 @@ using SonarLint.Helpers;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class PublicMethodWithMultidimensionalArrayBase : SonarDiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
+    public abstract class PublicMethodWithMultidimensionalArrayBase : SonarDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S2368";
         protected const string Title = "Public methods should not have multidimensional array parameters";
@@ -48,7 +48,6 @@ namespace SonarLint.Rules.Common
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
-        GeneratedCodeRecognizer IMultiLanguageDiagnosticAnalyzer.GeneratedCodeRecognizer => GeneratedCodeRecognizer;
     }
 
     public abstract class PublicMethodWithMultidimensionalArrayBase<TLanguageKindEnum, TMethodSyntax> : PublicMethodWithMultidimensionalArrayBase

@@ -26,7 +26,7 @@ using SonarLint.Helpers;
 
 namespace SonarLint.Rules
 {
-    public abstract class ParameterAssignedToBase : SonarDiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
+    public abstract class ParameterAssignedToBase : SonarDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S1226";
         protected const string Title = "Method parameters and caught exceptions should not be reassigned";
@@ -53,7 +53,6 @@ namespace SonarLint.Rules
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
-        GeneratedCodeRecognizer IMultiLanguageDiagnosticAnalyzer.GeneratedCodeRecognizer => GeneratedCodeRecognizer;
     }
 
     public abstract class ParameterAssignedToBase<TLanguageKindEnum, TAssignmentStatementSyntax> : ParameterAssignedToBase

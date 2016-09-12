@@ -26,7 +26,7 @@ using SonarLint.Helpers;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class SwitchWithoutDefaultBase : SonarDiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
+    public abstract class SwitchWithoutDefaultBase : SonarDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S131";
         protected const string Title = "\"switch/Select\" statements should end with a \"default/Case Else\" clause";
@@ -49,7 +49,6 @@ namespace SonarLint.Rules.Common
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
-        GeneratedCodeRecognizer IMultiLanguageDiagnosticAnalyzer.GeneratedCodeRecognizer => GeneratedCodeRecognizer;
     }
 
     public abstract class SwitchWithoutDefaultBase<TLanguageKindEnum> : SwitchWithoutDefaultBase

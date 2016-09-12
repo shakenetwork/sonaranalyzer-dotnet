@@ -28,7 +28,7 @@ using System;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class StringConcatenationInLoopBase : SonarDiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
+    public abstract class StringConcatenationInLoopBase : SonarDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S1643";
         protected const string Title = "Strings should not be concatenated using \"+\" in a loop";
@@ -48,7 +48,6 @@ namespace SonarLint.Rules.Common
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
-        GeneratedCodeRecognizer IMultiLanguageDiagnosticAnalyzer.GeneratedCodeRecognizer => GeneratedCodeRecognizer;
     }
 
     public abstract class StringConcatenationInLoopBase<TLanguageKindEnum, TAssignmentExpression, TBinaryExpression>

@@ -27,7 +27,7 @@ using System.Collections.Generic;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class FlagsEnumWithoutInitializerBase : SonarDiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
+    public abstract class FlagsEnumWithoutInitializerBase : SonarDiagnosticAnalyzer
     {
         protected const int AllowedEmptyMemberCount = 3;
 
@@ -60,7 +60,6 @@ namespace SonarLint.Rules.Common
         }
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
-        GeneratedCodeRecognizer IMultiLanguageDiagnosticAnalyzer.GeneratedCodeRecognizer => GeneratedCodeRecognizer;
     }
 
     public abstract class FlagsEnumWithoutInitializerBase<TLanguageKindEnum, TEnumDeclarationSyntax, TEnumMemberDeclarationSyntax> : FlagsEnumWithoutInitializerBase

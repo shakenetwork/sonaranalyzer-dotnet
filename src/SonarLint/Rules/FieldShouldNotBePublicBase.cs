@@ -27,7 +27,7 @@ using System.Collections.Generic;
 
 namespace SonarLint.Rules
 {
-    public abstract class FieldShouldNotBePublicBase : SonarDiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
+    public abstract class FieldShouldNotBePublicBase : SonarDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S2357";
         protected const string Title = "Fields should be private";
@@ -59,7 +59,6 @@ namespace SonarLint.Rules
         }
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
-        GeneratedCodeRecognizer IMultiLanguageDiagnosticAnalyzer.GeneratedCodeRecognizer => GeneratedCodeRecognizer;
     }
 
     public abstract class FieldShouldNotBePublicBase<TLanguageKindEnum, TFieldDeclarationSyntax, TVariableSyntax> : FieldShouldNotBePublicBase
