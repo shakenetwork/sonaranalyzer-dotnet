@@ -24,49 +24,58 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.CSharp;
-using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Collections.Immutable;
 
 namespace SonarLint.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("1h")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.UnitTestability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.BrainOverload)]
     public class FunctionComplexity : FunctionComplexityBase
     {
+        protected const string Title = "Methods and properties should not be too complex";
+        protected static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
+                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
+                helpLinkUri: DiagnosticId.GetHelpLink(),
+                description: Description);
+
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
+
         protected override void Initialize(ParameterLoadingAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c => CheckComplexity<MethodDeclarationSyntax>(c, m => m.Identifier.GetLocation()),
+                c => CheckComplexity<MethodDeclarationSyntax>(c, m => m.Identifier.GetLocation(), "method"),
                 SyntaxKind.MethodDeclaration);
 
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c => CheckComplexity<OperatorDeclarationSyntax>(c, o => o.OperatorKeyword.GetLocation()),
+                c => CheckComplexity<PropertyDeclarationSyntax>(c, p => p.ExpressionBody, p => p.Identifier.GetLocation(), "property"),
+                SyntaxKind.PropertyDeclaration);
+
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c => CheckComplexity<OperatorDeclarationSyntax>(c, o => o.OperatorKeyword.GetLocation(), "operator"),
                 SyntaxKind.OperatorDeclaration);
 
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c => CheckComplexity<ConstructorDeclarationSyntax>(c, co => co.Identifier.GetLocation()),
+                c => CheckComplexity<ConstructorDeclarationSyntax>(c, co => co.Identifier.GetLocation(), "constructor"),
                 SyntaxKind.ConstructorDeclaration);
 
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c => CheckComplexity<DestructorDeclarationSyntax>(c, d => d.Identifier.GetLocation()),
+                c => CheckComplexity<DestructorDeclarationSyntax>(c, d => d.Identifier.GetLocation(), "destructor"),
                 SyntaxKind.DestructorDeclaration);
 
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c => CheckComplexity<AccessorDeclarationSyntax>(c, a => a.Keyword.GetLocation()),
+                c => CheckComplexity<AccessorDeclarationSyntax>(c, a => a.Keyword.GetLocation(), "accessor"),
                 SyntaxKind.GetAccessorDeclaration,
                 SyntaxKind.SetAccessorDeclaration,
                 SyntaxKind.AddAccessorDeclaration,
                 SyntaxKind.RemoveAccessorDeclaration);
         }
 
-        protected override int GetComplexity(SyntaxNode node)
-        {
-            return new Metrics(node.SyntaxTree).GetComplexity(node);
-        }
+        protected override int GetComplexity(SyntaxNode node) =>
+            new Metrics(node.SyntaxTree).GetComplexity(node);
 
-        protected sealed override GeneratedCodeRecognizer GeneratedCodeRecognizer => Helpers.CSharp.GeneratedCodeRecognizer.Instance;
+        protected sealed override GeneratedCodeRecognizer GeneratedCodeRecognizer =>
+            Helpers.CSharp.GeneratedCodeRecognizer.Instance;
     }
 }

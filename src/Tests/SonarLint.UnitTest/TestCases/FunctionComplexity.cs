@@ -4,7 +4,7 @@ namespace Tests.Diagnostics
 {
     public class FunctionComplexity
     {
-        public FunctionComplexity() // Noncompliant {{The Cyclomatic Complexity of this method is 4 which is greater than 3 authorized.}}
+        public FunctionComplexity() // Noncompliant {{The Cyclomatic Complexity of this constructor is 4 which is greater than 3 authorized.}}
 //             ^^^^^^^^^^^^^^^^^^
         {
             if (false) { }
@@ -72,5 +72,9 @@ namespace Tests.Diagnostics
             if (false) { }
             return null;
         }
+
+        public int Method23(bool x) => x || x || x || x || x; // Noncompliant
+
+        public int Prop => x || x || x || x || x; // Noncompliant
     }
 }

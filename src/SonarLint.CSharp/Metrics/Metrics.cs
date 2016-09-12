@@ -101,6 +101,7 @@ namespace SonarLint.Common.CSharp
                     .Count(
                         n =>
                             // TODO What about the null coalescing operator?
+                            // TODO why differentiate between expression bodied and block bodied methods?
                             ComplexityIncreasingKinds.Contains(n.Kind()) ||
                             IsReturnButNotLast(n) ||
                             IsFunctionWithBody(n));
