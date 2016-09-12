@@ -20,22 +20,22 @@
 
 using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Helpers;
 using System;
+using Microsoft.CodeAnalysis.VisualBasic;
+using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 
-namespace SonarLint.Rules.CSharp
+namespace SonarLint.Rules.VisualBasic
 {
-    [DiagnosticAnalyzer(LanguageNames.CSharp)]
+    [DiagnosticAnalyzer(LanguageNames.VisualBasic)]
     [Rule(DiagnosticId, RuleSeverity, Title, true)]
     public class FunctionNestingDepth : FunctionNestingDepthBase
     {
-        internal const string Title = "Control flow statements \"if\", \"for\", \"foreach\", \"do\", \"while\", \"switch\" and \"try\" should not be nested too deeply";
+        internal const string Title = "Control flow statements \"If\", \"For\", \"For Each\", \"Do\", \"While\", \"Select\" and \"Try\" should not be nested too deeply";
         internal const string Description =
-            "Nested \"if\", \"switch\", \"for\", \"foreach\", \"while\", \"do\", and \"try\" statements are key ingredients for making what's known as \"Spaghetti code\". " +
+            "Nested \"If\", \"Select\", \"For\", \"For Each\", \"While\", \"Do\", and \"Try\" statements are key ingredients for making what's known as \"Spaghetti code\". " +
             "Such code is hard to read, refactor and therefore maintain.";
 
         internal static readonly DiagnosticDescriptor Rule =
@@ -48,20 +48,20 @@ namespace SonarLint.Rules.CSharp
 
         private const int DefaultValueMaximum = 3;
 
-        [RuleParameter("max", PropertyType.Integer,
+        [RuleParameter("maximumNestingLevel", PropertyType.Integer,
             "Maximum allowed control flow statement nesting depth.", DefaultValueMaximum)]
         public int Maximum { get; set; } = DefaultValueMaximum;
 
         private static readonly SyntaxKind[] FunctionKinds =
         {
-            SyntaxKind.MethodDeclaration,
-            SyntaxKind.OperatorDeclaration,
-            SyntaxKind.ConstructorDeclaration,
-            SyntaxKind.DestructorDeclaration,
-            SyntaxKind.GetAccessorDeclaration,
-            SyntaxKind.SetAccessorDeclaration,
-            SyntaxKind.AddAccessorDeclaration,
-            SyntaxKind.RemoveAccessorDeclaration
+            SyntaxKind.SubBlock,
+            SyntaxKind.FunctionBlock,
+            SyntaxKind.OperatorBlock,
+            SyntaxKind.ConstructorBlock,
+            SyntaxKind.GetAccessorBlock,
+            SyntaxKind.SetAccessorBlock,
+            SyntaxKind.AddHandlerAccessorBlock,
+            SyntaxKind.RemoveHandlerAccessorBlock
         };
 
         protected override void Initialize(ParameterLoadingAnalysisContext context) =>
@@ -73,7 +73,7 @@ namespace SonarLint.Rules.CSharp
             walker.Visit(context.Node);
         }
 
-        private class NestingDepthWalker : CSharpSyntaxWalker
+        private class NestingDepthWalker : VisualBasicSyntaxWalker
         {
             private readonly NestingDepthCounter counter;
 
@@ -82,30 +82,26 @@ namespace SonarLint.Rules.CSharp
                 counter = new NestingDepthCounter(maximumNestingDepth, actionMaximumExceeded);
             }
 
-            public override void VisitIfStatement(IfStatementSyntax node)
-            {
-                var isPartOfChainedElseIfClause = node.Parent != null && node.Parent.IsKind(SyntaxKind.ElseClause);
-                if (isPartOfChainedElseIfClause)
-                {
-                    base.VisitIfStatement(node);
-                }
-                else
-                {
-                    counter.CheckNesting(node.IfKeyword, () => base.VisitIfStatement(node));
-                }
-            }
+            public override void VisitMultiLineIfBlock(MultiLineIfBlockSyntax node) =>
+                counter.CheckNesting(node.IfStatement.IfKeyword, () => base.VisitMultiLineIfBlock(node));
 
-            public override void VisitForStatement(ForStatementSyntax node) => counter.CheckNesting(node.ForKeyword, () => base.VisitForStatement(node));
+            public override void VisitForBlock(ForBlockSyntax node) =>
+                counter.CheckNesting(node.ForStatement.ForKeyword, () => base.VisitForBlock(node));
 
-            public override void VisitForEachStatement(ForEachStatementSyntax node) => counter.CheckNesting(node.ForEachKeyword, () => base.VisitForEachStatement(node));
+            public override void VisitForEachBlock(ForEachBlockSyntax node) =>
+                counter.CheckNesting(node.ForEachStatement.ForKeyword, () => base.VisitForEachBlock(node));
 
-            public override void VisitWhileStatement(WhileStatementSyntax node) => counter.CheckNesting(node.WhileKeyword, () => base.VisitWhileStatement(node));
+            public override void VisitWhileBlock(WhileBlockSyntax node) =>
+                counter.CheckNesting(node.WhileStatement.WhileKeyword, () => base.VisitWhileBlock(node));
 
-            public override void VisitDoStatement(DoStatementSyntax node) => counter.CheckNesting(node.DoKeyword, () => base.VisitDoStatement(node));
+            public override void VisitDoLoopBlock(DoLoopBlockSyntax node) =>
+                counter.CheckNesting(node.DoStatement.DoKeyword, () => base.VisitDoLoopBlock(node));
 
-            public override void VisitSwitchStatement(SwitchStatementSyntax node) => counter.CheckNesting(node.SwitchKeyword, () => base.VisitSwitchStatement(node));
+            public override void VisitSelectBlock(SelectBlockSyntax node) =>
+                counter.CheckNesting(node.SelectStatement.SelectKeyword, () => base.VisitSelectBlock(node));
 
-            public override void VisitTryStatement(TryStatementSyntax node) => counter.CheckNesting(node.TryKeyword, () => base.VisitTryStatement(node));
+            public override void VisitTryBlock(TryBlockSyntax node) =>
+                counter.CheckNesting(node.TryStatement.TryKeyword, () => base.VisitTryBlock(node));
         }
     }
 }

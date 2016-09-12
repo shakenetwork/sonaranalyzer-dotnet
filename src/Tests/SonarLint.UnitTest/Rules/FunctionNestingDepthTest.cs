@@ -19,7 +19,6 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarLint.Rules.CSharp;
 
 namespace SonarLint.UnitTest.Rules
 {
@@ -28,10 +27,18 @@ namespace SonarLint.UnitTest.Rules
     {
         [TestMethod]
         [TestCategory("Rule")]
-        public void FunctionNestingDepth()
+        public void FunctionNestingDepth_CSharp()
         {
-            var diagnostic = new FunctionNestingDepth { Maximum = 3 };
+            var diagnostic = new SonarLint.Rules.CSharp.FunctionNestingDepth { Maximum = 3 };
             Verifier.VerifyAnalyzer(@"TestCases\FunctionNestingDepth.cs", diagnostic);
+        }
+
+        [TestMethod]
+        [TestCategory("Rule")]
+        public void FunctionNestingDepth_VisualBasic()
+        {
+            var diagnostic = new SonarLint.Rules.VisualBasic.FunctionNestingDepth { Maximum = 3 };
+            Verifier.VerifyAnalyzer(@"TestCases\FunctionNestingDepth.vb", diagnostic);
         }
     }
 }
