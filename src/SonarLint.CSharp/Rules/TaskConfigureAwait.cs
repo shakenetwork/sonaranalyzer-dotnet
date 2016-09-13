@@ -78,7 +78,7 @@ namespace SonarLint.Rules.CSharp
                     }
 
                     var type = c.SemanticModel.GetTypeInfo(expression).Type;
-                    if (type.Is(KnownType.System_Threading_Tasks_Task))
+                    if (type.DerivesFrom(KnownType.System_Threading_Tasks_Task))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, expression.GetLocation()));
                     }
