@@ -415,7 +415,9 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         {
             // foreach variable is not a VariableDeclarator, so we need to assign a value to it
             var foreachVariableSymbol = SemanticModel.GetDeclaredSymbol(binaryBranchBlock.BranchingNode);
-            var newProgramState = SetNewSymbolicValueIfLocal(foreachVariableSymbol, new SymbolicValue(), programState);
+            var sv = new SymbolicValue();
+            var newProgramState = SetNonNullConstraintIfValueType(foreachVariableSymbol, sv, programState);
+            newProgramState = SetNewSymbolicValueIfLocal(foreachVariableSymbol, sv, newProgramState);
 
             EnqueueAllSuccessors(binaryBranchBlock, newProgramState);
         }
@@ -575,6 +577,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
             var sv = symbolicValueFactory(leftSymbol, rightSymbol);
             newProgramState = newProgramState.PushValue(sv);
+            newProgramState = SetNonNullConstraintIfValueType(symbol, sv, newProgramState);
             return SetNewSymbolicValueIfLocal(symbol, sv, newProgramState);
         }
 
@@ -631,33 +634,36 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             if (argument == null ||
                 argument.RefOrOutKeyword.IsKind(SyntaxKind.None))
             {
-                return newProgramState;
+                return SetNonNullConstraintIfValueType(symbol, sv, newProgramState);
             }
 
             newProgramState = newProgramState.PopValue();
             sv = new SymbolicValue();
             newProgramState = newProgramState.PushValue(sv);
+            newProgramState = SetNonNullConstraintIfValueType(symbol, sv, newProgramState);
             return SetNewSymbolicValueIfLocal(symbol, sv, newProgramState);
         }
 
-        private ProgramState VisitPostfixIncrement(PostfixUnaryExpressionSyntax unary, ProgramState newProgramState)
+        private ProgramState VisitPostfixIncrement(PostfixUnaryExpressionSyntax unary, ProgramState programState)
         {
-            var leftSymbol = SemanticModel.GetSymbolInfo(unary.Operand).Symbol;
+            var symbol = SemanticModel.GetSymbolInfo(unary.Operand).Symbol;
 
             // Do not change the stacked value
             var sv = new SymbolicValue();
-            return SetNewSymbolicValueIfLocal(leftSymbol, sv, newProgramState);
+            var newProgramState = SetNonNullConstraintIfValueType(symbol, sv, programState);
+            return SetNewSymbolicValueIfLocal(symbol, sv, newProgramState);
         }
 
         private ProgramState VisitPrefixIncrement(PrefixUnaryExpressionSyntax unary, ProgramState programState)
         {
             var newProgramState = programState;
-            var leftSymbol = SemanticModel.GetSymbolInfo(unary.Operand).Symbol;
+            var symbol = SemanticModel.GetSymbolInfo(unary.Operand).Symbol;
             newProgramState = newProgramState.PopValue();
 
             var sv = new SymbolicValue();
             newProgramState = newProgramState.PushValue(sv);
-            return SetNewSymbolicValueIfLocal(leftSymbol, sv, newProgramState);
+            newProgramState = SetNonNullConstraintIfValueType(symbol, sv, newProgramState);
+            return SetNewSymbolicValueIfLocal(symbol, sv, newProgramState);
         }
 
         private ProgramState VisitOpAssignment(AssignmentExpressionSyntax assignment, ProgramState programState)
@@ -668,8 +674,8 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
             var sv = new SymbolicValue();
             newProgramState = newProgramState.PushValue(sv);
-            newProgramState = SetNewSymbolicValueIfLocal(leftSymbol, sv, newProgramState);
-            return newProgramState;
+            newProgramState = SetNonNullConstraintIfValueType(leftSymbol, sv, newProgramState);
+            return SetNewSymbolicValueIfLocal(leftSymbol, sv, newProgramState);
         }
 
         private ProgramState VisitSimpleAssignment(AssignmentExpressionSyntax assignment, ProgramState programState)
@@ -680,13 +686,9 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             newProgramState = newProgramState.PopValue();
 
             var leftSymbol = SemanticModel.GetSymbolInfo(assignment.Left).Symbol;
-            if (leftSymbol != null &&
-                IsLocalScoped(leftSymbol))
-            {
-                newProgramState = newProgramState.SetSymbolicValue(leftSymbol, sv);
-            }
-
-            return newProgramState.PushValue(sv);
+            newProgramState = newProgramState.PushValue(sv);
+            newProgramState = SetNewSymbolicValueIfLocal(leftSymbol, sv, newProgramState);
+            return SetNonNullConstraintIfValueType(leftSymbol, sv, newProgramState);
         }
 
         private ProgramState VisitVariableDeclarator(VariableDeclaratorSyntax declarator, ProgramState programState)
@@ -701,12 +703,12 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
             var leftSymbol = SemanticModel.GetDeclaredSymbol(declarator);
             if (leftSymbol != null &&
-                 IsLocalScoped(leftSymbol))
+                IsLocalScoped(leftSymbol))
             {
                 newProgramState = newProgramState.SetSymbolicValue(leftSymbol, sv);
             }
 
-            return newProgramState;
+            return SetNonNullConstraintIfValueType(leftSymbol, sv, newProgramState);
         }
 
         #endregion

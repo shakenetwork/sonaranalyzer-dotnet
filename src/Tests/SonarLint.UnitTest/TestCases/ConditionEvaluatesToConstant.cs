@@ -702,6 +702,21 @@ namespace Tests.Diagnostics
             }
         }
 
+        int field;
+        int GetValue() { return 42; }
+        public void NullabiltyTest()
+        {
+            if (field == null)  // Noncompliant
+            {
+            }
+
+            int i = GetValue();
+            if (i == null)      // Noncompliant
+            {
+
+            }
+        }
+
         enum MyEnum
         {
             One, Two

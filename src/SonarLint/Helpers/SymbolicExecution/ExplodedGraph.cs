@@ -329,18 +329,14 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 
         protected ProgramState SetNewSymbolicValueIfLocal(ISymbol symbol, SymbolicValue symbolicValue, ProgramState programState)
         {
-            if (IsLocalScoped(symbol))
-            {
-                var newProgramState = programState.SetSymbolicValue(symbol, symbolicValue);
-                return SetNonNullConstraintIfValueType(symbol, symbolicValue, newProgramState);
-            }
-
-            return programState;
+            return IsLocalScoped(symbol)
+                ? programState.SetSymbolicValue(symbol, symbolicValue)
+                : programState;
         }
 
-        private static ProgramState SetNonNullConstraintIfValueType(ISymbol symbol, SymbolicValue symbolicValue, ProgramState programState)
+        protected static ProgramState SetNonNullConstraintIfValueType(ISymbol symbol, SymbolicValue symbolicValue, ProgramState programState)
         {
-            return IsNonNullableValueType(symbol)
+            return IsNonNullableValueType(symbol) && !symbolicValue.HasConstraint(ObjectConstraint.NotNull, programState)
                 ? symbolicValue.SetConstraint(ObjectConstraint.NotNull, programState)
                 : programState;
         }

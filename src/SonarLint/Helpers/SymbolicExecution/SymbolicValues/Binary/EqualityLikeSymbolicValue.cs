@@ -85,6 +85,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 
             SymbolicValueConstraint oldConstraint;
             if (TryGetConstraint(currentProgramState, out oldConstraint) &&
+                oldConstraint is BoolConstraint /* could also be ObjectConstraint.NotNull, which can be overridden */ &&
                 oldConstraint != constraint)
             {
                 return Enumerable.Empty<ProgramState>();
