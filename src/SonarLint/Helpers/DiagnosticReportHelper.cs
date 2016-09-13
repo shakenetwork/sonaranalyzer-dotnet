@@ -49,7 +49,7 @@ namespace SonarLint.Helpers
         private const string HelpLinkPattern = "http://vs.sonarlint.org/rules/index.html#version={0}&ruleId={1}";
         public static string GetHelpLink(this string ruleId)
         {
-            var productVersion = FileVersionInfo.GetVersionInfo(typeof(DiagnosticReportHelper).Assembly.Location).ProductVersion;
+            var productVersion = FileVersionInfo.GetVersionInfo(typeof(DiagnosticReportHelper).Assembly.Location).FileVersion;
             return string.Format(HelpLinkPattern, productVersion, ruleId);
         }
 

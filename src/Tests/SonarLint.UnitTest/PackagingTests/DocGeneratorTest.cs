@@ -48,7 +48,7 @@ namespace SonarLint.UnitTest.PackagingTests
         public void CheckNumberOfCrossLinks()
         {
             var crossReferenceCount = GetNumberOfCrossReferences(AnalyzerLanguage.VisualBasic) + GetNumberOfCrossReferences(AnalyzerLanguage.CSharp);
-            var productVersion = FileVersionInfo.GetVersionInfo(typeof(Program).Assembly.Location).ProductVersion;
+            var productVersion = FileVersionInfo.GetVersionInfo(typeof(Program).Assembly.Location).FileVersion;
             var json = Program.GenerateRuleJson(productVersion);
 
             var commonSubUrl = RuleImplementationMeta.HelpLinkPattern.Replace("{1}", string.Empty);

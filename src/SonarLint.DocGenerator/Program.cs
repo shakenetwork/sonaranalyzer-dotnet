@@ -32,7 +32,7 @@ namespace SonarLint.DocGenerator
     {
         public static void Main()
         {
-            var productVersion = FileVersionInfo.GetVersionInfo(typeof(Program).Assembly.Location).ProductVersion;
+            var productVersion = FileVersionInfo.GetVersionInfo(typeof(Program).Assembly.Location).FileVersion;
             WriteRuleJson(productVersion);
         }
 
