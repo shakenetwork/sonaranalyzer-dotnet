@@ -23,21 +23,27 @@ using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarLint.Runner;
 using SonarLint.Helpers;
+using System.IO;
 
 namespace SonarLint.UnitTest
 {
     [TestClass]
     public class ConfigurationTest
     {
+        public TestContext TestContext { get; set; }
+
         [TestMethod]
         public void Configuration()
         {
+            var tempInputFilePath = Path.Combine(TestContext.DeploymentDirectory, ParameterLoader.ParameterConfigurationFileName);
+            File.Copy(Path.Combine(ProgramTest.TestResourcesFolderName, "SonarLint.Cs.xml"), tempInputFilePath, true);
+
             var conf = new Configuration(
-                $@"TestResources\{ParameterLoader.ParameterConfigurationFileName}",
+                tempInputFilePath,
                 Common.AnalyzerLanguage.CSharp);
 
             conf.IgnoreHeaderComments.Should().BeTrue();
-            conf.Files.Should().BeEquivalentTo("TestResources\\TestInput.cs");
+            conf.Files.Should().BeEquivalentTo(ProgramTest.TestInputPath +".cs");
 
             string[] expectedAnalyzerIds =
             {

@@ -26,18 +26,24 @@ using System.Xml;
 using Microsoft.CodeAnalysis;
 using SonarLint.Helpers;
 using SonarLint.Common;
+using System.IO;
+using Google.Protobuf;
 
 namespace SonarLint.Runner
 {
     public static class Program
     {
+        internal const string AnalysisOutputFileName = "analysis-output.xml";
+        internal const string TokenInfosFileName = "token-infos.dat";
+        internal const string TokenReferenceInfosFileName = "token-reference-infos.dat";
+
         public static int Main(string[] args)
         {
             if (args.Length != 3)
             {
                 Write("Expected parameters: ");
                 Write("[Input configuration path]");
-                Write("[Output file path]");
+                Write("[Output folder path]");
                 Write("[AnalyzerLanguage: 'cs' for C#, 'vbnet' for VB.Net]");
 
                 return -1;
@@ -57,101 +63,118 @@ namespace SonarLint.Runner
                 IndentChars = "  "
             };
 
-            using (var xmlOut = XmlWriter.Create(args[1], xmlOutSettings))
+            var outputDirectory = args[1];
+            Directory.CreateDirectory(outputDirectory);
+
+            using (var xmlOut = XmlWriter.Create(Path.Combine(outputDirectory, AnalysisOutputFileName), xmlOutSettings))
             {
                 xmlOut.WriteComment("This XML format is not an API");
                 xmlOut.WriteStartElement("AnalysisOutput");
 
                 xmlOut.WriteStartElement("Files");
                 var currentFileIndex = 0;
-                foreach (var file in configuration.Files)
+
+                using (var tokenInfoStream = File.Create(Path.Combine(outputDirectory, TokenInfosFileName)))
+                using (var tokenReferenceInfoStream = File.Create(Path.Combine(outputDirectory, TokenReferenceInfosFileName)))
                 {
-                    xmlOut.Flush();
-                    Write(currentFileIndex + "/" + configuration.Files.Count + " files analyzed, starting to analyze: " + file);
-                    currentFileIndex++;
-
-                    try
+                    foreach (var file in configuration.Files)
                     {
-                        var solution = CompilationHelper.GetSolutionFromFiles(file, language);
+                        #region Single file processing
 
-                        var compilation = solution.Projects.First().GetCompilationAsync().Result;
-                        var syntaxTree = compilation.SyntaxTrees.First();
+                        xmlOut.Flush();
+                        Write(currentFileIndex + "/" + configuration.Files.Count + " files analyzed, starting to analyze: " + file);
+                        currentFileIndex++;
 
-                        var metrics = language == AnalyzerLanguage.CSharp
-                            ? (MetricsBase)new Common.CSharp.Metrics(syntaxTree)
-                            : new Common.VisualBasic.Metrics(syntaxTree);
-
-                        xmlOut.WriteStartElement("File");
-                        xmlOut.WriteElementString("Path", file);
-
-                        xmlOut.WriteStartElement("Metrics");
-
-                        xmlOut.WriteElementString("Lines", metrics.LineCount.ToString(CultureInfo.InvariantCulture));
-                        xmlOut.WriteElementString("Classes", metrics.ClassCount.ToString(CultureInfo.InvariantCulture));
-                        xmlOut.WriteElementString("Accessors", metrics.AccessorCount.ToString(CultureInfo.InvariantCulture));
-                        xmlOut.WriteElementString("Statements", metrics.StatementCount.ToString(CultureInfo.InvariantCulture));
-                        xmlOut.WriteElementString("Functions", metrics.FunctionCount.ToString(CultureInfo.InvariantCulture));
-                        xmlOut.WriteElementString("PublicApi", metrics.PublicApiCount.ToString(CultureInfo.InvariantCulture));
-                        xmlOut.WriteElementString("PublicUndocumentedApi", metrics.PublicUndocumentedApiCount.ToString(CultureInfo.InvariantCulture));
-
-                        var complexity = metrics.Complexity;
-                        xmlOut.WriteElementString("Complexity", complexity.ToString(CultureInfo.InvariantCulture));
-
-                        // TODO This is a bit ridiculous, but is how SonarQube works
-                        var fileComplexityDistribution = new Distribution(0, 5, 10, 20, 30, 60, 90);
-                        fileComplexityDistribution.Add(complexity);
-                        xmlOut.WriteElementString("FileComplexityDistribution", fileComplexityDistribution.ToString());
-
-                        xmlOut.WriteElementString("FunctionComplexityDistribution", metrics.FunctionComplexityDistribution.ToString());
-
-                        var comments = metrics.GetComments(configuration.IgnoreHeaderComments);
-                        xmlOut.WriteStartElement("Comments");
-                        xmlOut.WriteStartElement("NoSonar");
-                        foreach (var line in comments.NoSonar)
+                        try
                         {
-                            xmlOut.WriteElementString("Line", line.ToString(CultureInfo.InvariantCulture));
-                        }
-                        xmlOut.WriteEndElement();
-                        xmlOut.WriteStartElement("NonBlank");
-                        foreach (var line in comments.NonBlank)
-                        {
-                            xmlOut.WriteElementString("Line", line.ToString(CultureInfo.InvariantCulture));
-                        }
-                        xmlOut.WriteEndElement();
-                        xmlOut.WriteEndElement();
+                            var solution = CompilationHelper.GetSolutionFromFiles(file, language);
 
-                        xmlOut.WriteStartElement("LinesOfCode");
-                        foreach (var line in metrics.LinesOfCode)
-                        {
-                            xmlOut.WriteElementString("Line", line.ToString(CultureInfo.InvariantCulture));
-                        }
-                        xmlOut.WriteEndElement();
+                            var compilation = solution.Projects.First().GetCompilationAsync().Result;
+                            var syntaxTree = compilation.SyntaxTrees.First();
 
-                        xmlOut.WriteEndElement();
+                            var tokenCollector = new TokenCollector(file, solution.GetDocument(syntaxTree), solution.Workspace);
 
-                        xmlOut.WriteStartElement("Issues");
+                            tokenCollector.FileTokenInfo.WriteDelimitedTo(tokenInfoStream);
+                            tokenCollector.FileTokenReferenceInfo.WriteDelimitedTo(tokenReferenceInfoStream);
 
-                        foreach (var diagnostic in diagnosticsRunner.GetDiagnostics(compilation))
-                        {
-                            xmlOut.WriteStartElement("Issue");
-                            xmlOut.WriteElementString("Id", diagnostic.Id);
-                            if (diagnostic.Location != Location.None)
+                            var metrics = language == AnalyzerLanguage.CSharp
+                                ? (MetricsBase)new Common.CSharp.Metrics(syntaxTree)
+                                : new Common.VisualBasic.Metrics(syntaxTree);
+
+                            xmlOut.WriteStartElement("File");
+                            xmlOut.WriteElementString("Path", file);
+
+                            xmlOut.WriteStartElement("Metrics");
+
+                            xmlOut.WriteElementString("Lines", metrics.LineCount.ToString(CultureInfo.InvariantCulture));
+                            xmlOut.WriteElementString("Classes", metrics.ClassCount.ToString(CultureInfo.InvariantCulture));
+                            xmlOut.WriteElementString("Accessors", metrics.AccessorCount.ToString(CultureInfo.InvariantCulture));
+                            xmlOut.WriteElementString("Statements", metrics.StatementCount.ToString(CultureInfo.InvariantCulture));
+                            xmlOut.WriteElementString("Functions", metrics.FunctionCount.ToString(CultureInfo.InvariantCulture));
+                            xmlOut.WriteElementString("PublicApi", metrics.PublicApiCount.ToString(CultureInfo.InvariantCulture));
+                            xmlOut.WriteElementString("PublicUndocumentedApi", metrics.PublicUndocumentedApiCount.ToString(CultureInfo.InvariantCulture));
+
+                            var complexity = metrics.Complexity;
+                            xmlOut.WriteElementString("Complexity", complexity.ToString(CultureInfo.InvariantCulture));
+
+                            // TODO This is a bit ridiculous, but is how SonarQube works
+                            var fileComplexityDistribution = new Distribution(0, 5, 10, 20, 30, 60, 90);
+                            fileComplexityDistribution.Add(complexity);
+                            xmlOut.WriteElementString("FileComplexityDistribution", fileComplexityDistribution.ToString());
+
+                            xmlOut.WriteElementString("FunctionComplexityDistribution", metrics.FunctionComplexityDistribution.ToString());
+
+                            var comments = metrics.GetComments(configuration.IgnoreHeaderComments);
+                            xmlOut.WriteStartElement("Comments");
+                            xmlOut.WriteStartElement("NoSonar");
+                            foreach (var line in comments.NoSonar)
                             {
-                                xmlOut.WriteElementString("Line", diagnostic.GetLineNumberToReport().ToString(CultureInfo.InvariantCulture));
+                                xmlOut.WriteElementString("Line", line.ToString(CultureInfo.InvariantCulture));
                             }
-                            xmlOut.WriteElementString("Message", diagnostic.GetMessage());
+                            xmlOut.WriteEndElement();
+                            xmlOut.WriteStartElement("NonBlank");
+                            foreach (var line in comments.NonBlank)
+                            {
+                                xmlOut.WriteElementString("Line", line.ToString(CultureInfo.InvariantCulture));
+                            }
+                            xmlOut.WriteEndElement();
+                            xmlOut.WriteEndElement();
+
+                            xmlOut.WriteStartElement("LinesOfCode");
+                            foreach (var line in metrics.LinesOfCode)
+                            {
+                                xmlOut.WriteElementString("Line", line.ToString(CultureInfo.InvariantCulture));
+                            }
+                            xmlOut.WriteEndElement();
+
+                            xmlOut.WriteEndElement();
+
+                            xmlOut.WriteStartElement("Issues");
+
+                            foreach (var diagnostic in diagnosticsRunner.GetDiagnostics(compilation))
+                            {
+                                xmlOut.WriteStartElement("Issue");
+                                xmlOut.WriteElementString("Id", diagnostic.Id);
+                                if (diagnostic.Location != Location.None)
+                                {
+                                    xmlOut.WriteElementString("Line", diagnostic.GetLineNumberToReport().ToString(CultureInfo.InvariantCulture));
+                                }
+                                xmlOut.WriteElementString("Message", diagnostic.GetMessage());
+                                xmlOut.WriteEndElement();
+                            }
+
+                            xmlOut.WriteEndElement();
+
                             xmlOut.WriteEndElement();
                         }
+                        catch (Exception e)
+                        {
+                            Console.Error.WriteLine("Failed to analyze the file: " + file);
+                            Console.Error.WriteLine(e);
+                            return 1;
+                        }
 
-                        xmlOut.WriteEndElement();
-
-                        xmlOut.WriteEndElement();
-                    }
-                    catch (Exception e)
-                    {
-                        Console.Error.WriteLine("Failed to analyze the file: " + file);
-                        Console.Error.WriteLine(e);
-                        return 1;
+                        #endregion
                     }
                 }
 

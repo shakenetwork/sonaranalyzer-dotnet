@@ -19,5 +19,6 @@
     <file src="bin\Release\*.dll" target="assembly\" />
     <file src="bin\Release\*.exe" target="assembly\" />
     <file src="bin\Release\*.exe.config" target="assembly\" />
+    <file src="bin\Release\Protobuf\*.proto" target="protobuf\" />
   </files>
 </package>

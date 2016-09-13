@@ -2,8 +2,9 @@
     ' FIXME: fix this issue
     ' TODO: I need to fix this
     Public Function MyMethod() As Integer
+        Dim x = 5
         If 1 = 1 Then
-            Return 5
+            Return x
         End If
 
         Return 6

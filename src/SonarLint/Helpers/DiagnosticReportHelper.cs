@@ -20,6 +20,7 @@
 
 using System.Diagnostics;
 using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.Text;
 
 namespace SonarLint.Helpers
 {
@@ -39,7 +40,12 @@ namespace SonarLint.Helpers
 
         private static int GetLineNumberToReport(this Location self)
         {
-            return self.GetLineSpan().StartLinePosition.Line + 1;
+            return self.GetLineSpan().StartLinePosition.GetLineNumberToReport();
+        }
+
+        public static int GetLineNumberToReport(this LinePosition self)
+        {
+            return self.Line + 1;
         }
 
         #endregion

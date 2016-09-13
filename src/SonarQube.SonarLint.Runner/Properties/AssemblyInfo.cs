@@ -19,8 +19,10 @@
  */
 
 using System.Reflection;
+using System.Runtime.CompilerServices;
 
 [assembly: AssemblyTitle("SonarLint.Runner")]
 [assembly: AssemblyProduct("SonarLint.Runner")]
 [assembly: AssemblyDescription("")]
 
+[assembly: InternalsVisibleTo("SonarLint.SonarQube.Integration.UnitTest" + Signing.InternalsVisibleToPublicKey)]

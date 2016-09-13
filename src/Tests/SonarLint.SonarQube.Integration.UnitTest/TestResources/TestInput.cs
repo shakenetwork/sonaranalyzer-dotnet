@@ -5,9 +5,10 @@
     //TODO: I need to fix this
     public int MyMethod()
     {
+        var x = 5;
         if (1==1)
         {
-            return 5;
+            return x;
         }
 
         return 6;

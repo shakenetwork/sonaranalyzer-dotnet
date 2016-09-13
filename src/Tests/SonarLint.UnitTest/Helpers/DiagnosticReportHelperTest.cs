@@ -43,6 +43,7 @@ namespace SonarLint.UnitTest.Helpers
             var syntaxTree = CSharpSyntaxTree.ParseText(Source);
             var method = syntaxTree.GetRoot().DescendantNodes().OfType<ClassDeclarationSyntax>().First();
             method.GetLineNumberToReport().ShouldBeEquivalentTo(3);
+            method.GetLocation().GetLineSpan().StartLinePosition.GetLineNumberToReport().ShouldBeEquivalentTo(3);
         }
     }
 }
