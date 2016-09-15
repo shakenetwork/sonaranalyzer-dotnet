@@ -141,7 +141,7 @@ function CreateIssueReports
   # AD0001's stack traces in the message are unstable
   # CS???? messages are not of interest
   $issuesByRule = $allIssues |
-    Where-Object { $_.id -match '^S[0-9]+$' } |                  # Keep SonarLint rules only
+    Where-Object { $_.id -match '^S[0-9]+$' } |                  # Keep SonarAnalyzer rules only
     Sort-Object @{Expression={$_.location.uri}},                 # Regroup same file issues
                 @{Expression={$_.location.region.startLine}},    # Sort by source position
                 @{Expression={$_.location.region.startColumn}},  # .. idem

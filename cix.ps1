@@ -18,8 +18,8 @@ if ($env:IS_PULLREQUEST -eq "true") {
         /d:sonar.analysis.mode=issues `
         /d:sonar.scanAllFiles=true
 
-    & $env:NUGET_PATH restore SonarLint.sln
-    & $env:MSBUILD_PATH SonarLint.sln /t:rebuild /p:Configuration=Release /p:DeployExtension=false
+    & $env:NUGET_PATH restore SonarAnalyzer.sln
+    & $env:MSBUILD_PATH SonarAnalyzer.sln /t:rebuild /p:Configuration=Release /p:DeployExtension=false
 
     .\MSBuild.SonarQube.Runner end /d:sonar.login=$env:SONAR_TOKEN
 
@@ -48,13 +48,13 @@ if ($env:IS_PULLREQUEST -eq "true") {
         & $env:MSBUILD_PATH  build/ChangeVersion.proj
 
         #build
-        & $env:NUGET_PATH restore SonarLint.sln
-        & $env:MSBUILD_PATH SonarLint.sln /t:rebuild /p:Configuration=Release /p:DeployExtension=false /p:defineConstants=SignAssembly /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=$env:CERT_PATH
+        & $env:NUGET_PATH restore SonarAnalyzer.sln
+        & $env:MSBUILD_PATH SonarAnalyzer.sln /p:configuration=Release /p:DeployExtension=false /p:ZipPackageCompressionLevel=normal /v:m /p:defineConstants=SignAssembly /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=$env:CERT_PATH
 
         #Generate the XML descriptor files for the C# plugin
-        pushd src\SonarQube.SonarLint.Descriptor\bin\Release
-        .\SonarLint.Descriptor.exe cs
-        .\SonarLint.Descriptor.exe vbnet
+        pushd src\SonarAnalyzer.RuleDescriptorGenerator\bin\Release
+        .\SonarAnalyzer.RuleDescriptorGenerator.exe cs
+        .\SonarAnalyzer.RuleDescriptorGenerator.exe vbnet
         popd
 
         #generate packages

@@ -21,13 +21,13 @@ REM Setup output folder
 rmdir /S /Q output 2>NUL
 mkdir output
 
-REM Generate the SonarLint all rules ruleset
-powershell.exe -executionpolicy bypass ./AllRulesGenerator.ps1 > output/AllSonarLintRules.ruleset
+REM Generate the SonarAnalyzer all rules ruleset
+powershell.exe -executionpolicy bypass ./AllRulesGenerator.ps1 > output/AllSonarAnalyzerRules.ruleset
 if not %ERRORLEVEL%==0 goto ps_error
 
 REM Install the imports before targets file
 mkdir %USERPROFILE%\AppData\Local\Microsoft\MSBuild\14.0\Microsoft.Common.targets\ImportBefore 2>NUL
-copy SonarLint.Testing.ImportBefore.targets %USERPROFILE%\AppData\Local\Microsoft\MSBuild\14.0\Microsoft.Common.targets\ImportBefore
+copy SonarAnalyzer.Testing.ImportBefore.targets %USERPROFILE%\AppData\Local\Microsoft\MSBuild\14.0\Microsoft.Common.targets\ImportBefore
 
 REM Building projects
 echo Building: Akka.NET
@@ -91,7 +91,7 @@ REM Cleanup
 :cleanup
 
 REM Uninstall the imports before targets file
-del %USERPROFILE%\AppData\Local\Microsoft\MSBuild\14.0\Microsoft.Common.targets\ImportBefore\SonarLint.Testing.ImportBefore.targets 2>NUL
+del %USERPROFILE%\AppData\Local\Microsoft\MSBuild\14.0\Microsoft.Common.targets\ImportBefore\SonarAnalyzer.Testing.ImportBefore.targets 2>NUL
 
 REM Restore current working directory
 popd

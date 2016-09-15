@@ -23,49 +23,49 @@
       <ExpectedMatchCount>1</ExpectedMatchCount>
     </AssemblyInformationalVersion>
 
-    <VsixVersion Include="$(SolutionRoot)\src\SonarLint.Vsix\source.extension.vsixmanifest">
+    <VsixVersion Include="$(SolutionRoot)\src\SonarAnalyzer.Vsix\source.extension.vsixmanifest">
       <Find>(?&lt;=Identity.*Version=")([^"]*)</Find>
       <ReplaceWith>$(VsixVersion)</ReplaceWith>
       <ExpectedMatchCount>1</ExpectedMatchCount>
     </VsixVersion>
-    <VsixReleaseNotes Include="$(SolutionRoot)\src\SonarLint.Vsix\source.extension.vsixmanifest">
+    <VsixReleaseNotes Include="$(SolutionRoot)\src\SonarAnalyzer.Vsix\source.extension.vsixmanifest">
       <Find>(?&lt;=&lt;ReleaseNotes&gt;http:\/\/www\.sonarlint\.org\/visualstudio\/rules\/index.html#version=)([^&lt;]*)</Find>
       <ReplaceWith>$(AssemblyFileVersion)</ReplaceWith>
       <ExpectedMatchCount>1</ExpectedMatchCount>
     </VsixReleaseNotes>
 
-    <NugetAnalyzer Include="$(SolutionRoot)\src\SonarLint.Vsix\SonarAnalyzer.CSharp.nuspec">
+    <NugetAnalyzer Include="$(SolutionRoot)\src\SonarAnalyzer.Vsix\SonarAnalyzer.CSharp.nuspec">
       <Find>(?&lt;=&lt;version&gt;)([^&lt;]*)</Find>
       <ReplaceWith>$(NugetVersion)</ReplaceWith>
       <ExpectedMatchCount>1</ExpectedMatchCount>
     </NugetAnalyzer>
-    <NugetReleaseNotes Include="$(SolutionRoot)\src\SonarLint.Vsix\SonarAnalyzer.CSharp.nuspec">
+    <NugetReleaseNotes Include="$(SolutionRoot)\src\SonarAnalyzer.Vsix\SonarAnalyzer.CSharp.nuspec">
       <Find>(?&lt;=&lt;releaseNotes&gt;http:\/\/www\.sonarlint\.org\/visualstudio\/rules\/index.html#version=)([^&lt;]*)</Find>
       <ReplaceWith>$(AssemblyFileVersion)</ReplaceWith>
       <ExpectedMatchCount>1</ExpectedMatchCount>
     </NugetReleaseNotes>
-    <NugetAnalyzer Include="$(SolutionRoot)\src\SonarLint.Vsix\SonarAnalyzer.VisualBasic.nuspec">
+    <NugetAnalyzer Include="$(SolutionRoot)\src\SonarAnalyzer.Vsix\SonarAnalyzer.VisualBasic.nuspec">
       <Find>(?&lt;=&lt;version&gt;)([^&lt;]*)</Find>
       <ReplaceWith>$(NugetVersion)</ReplaceWith>
       <ExpectedMatchCount>1</ExpectedMatchCount>
     </NugetAnalyzer>
-    <NugetReleaseNotes Include="$(SolutionRoot)\src\SonarLint.Vsix\SonarAnalyzer.VisualBasic.nuspec">
+    <NugetReleaseNotes Include="$(SolutionRoot)\src\SonarAnalyzer.Vsix\SonarAnalyzer.VisualBasic.nuspec">
       <Find>(?&lt;=&lt;releaseNotes&gt;http:\/\/www\.sonarlint\.org\/visualstudio\/rules\/index.html#version=)([^&lt;]*)</Find>
       <ReplaceWith>$(AssemblyFileVersion)</ReplaceWith>
       <ExpectedMatchCount>1</ExpectedMatchCount>
     </NugetReleaseNotes>
 
-    <NugetRunner Include="$(SolutionRoot)\src\SonarQube.SonarLint.Runner\Runner.nuspec">
+    <NugetRunner Include="$(SolutionRoot)\src\SonarAnalyzer.Scanner\Scanner.nuspec">
       <Find>(?&lt;=&lt;version&gt;)([^&lt;]*)</Find>
       <ReplaceWith>$(NugetVersion)</ReplaceWith>
       <ExpectedMatchCount>1</ExpectedMatchCount>
     </NugetRunner>
-    <NugetDescriptorCs Include="$(SolutionRoot)\src\SonarQube.SonarLint.Descriptor\Descriptor.cs.nuspec">
+    <NugetDescriptorCs Include="$(SolutionRoot)\src\SonarAnalyzer.RuleDescriptorGenerator\Descriptor.cs.nuspec">
       <Find>(?&lt;=&lt;version&gt;)([^&lt;]*)</Find>
       <ReplaceWith>$(NugetVersion)</ReplaceWith>
       <ExpectedMatchCount>1</ExpectedMatchCount>
     </NugetDescriptorCs>
-	<NugetDescriptorVbNet Include="$(SolutionRoot)\src\SonarQube.SonarLint.Descriptor\Descriptor.vbnet.nuspec">
+	<NugetDescriptorVbNet Include="$(SolutionRoot)\src\SonarAnalyzer.RuleDescriptorGenerator\Descriptor.vbnet.nuspec">
       <Find>(?&lt;=&lt;version&gt;)([^&lt;]*)</Find>
       <ReplaceWith>$(NugetVersion)</ReplaceWith>
       <ExpectedMatchCount>1</ExpectedMatchCount>

@@ -6,7 +6,7 @@ function ExtractAnalyzerPerformancesFromLogs
 
   return $buildLogsPaths |
     Foreach-Object { Get-Content $_ } |
-    Where-Object { $_ -match '^\s*<?([0-9.]+)\s*<?[0-9]+\s*(SonarLint\..*)$' -and ($matches[1] -ne '0.001') } |
+    Where-Object { $_ -match '^\s*<?([0-9.]+)\s*<?[0-9]+\s*(SonarAnalyzer\..*)$' -and ($matches[1] -ne '0.001') } |
     Foreach-Object {
       New-Object PSObject -Property @{
         Rule = $matches[2];

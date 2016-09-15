@@ -1,5 +1,5 @@
 ﻿/*
- * SonarLint for Visual Studio
+ * SonarAnalyzer for .NET
  * Copyright (C) 2015-2016 SonarSource SA
  * mailto:contact@sonarsource.com
  *

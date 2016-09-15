@@ -1,16 +1,16 @@
 $ErrorActionPreference = "Stop"
 
 #cleanup
-$strFileName="%USERPROFILE%\AppData\Local\Microsoft\MSBuild\14.0\Microsoft.Common.targets\ImportBefore\SonarLint.Testing.ImportBefore.targets" 
+$strFileName="%USERPROFILE%\AppData\Local\Microsoft\MSBuild\14.0\Microsoft.Common.targets\ImportBefore\SonarAnalyzer.Testing.ImportBefore.targets" 
 If (Test-Path $strFileName){
 	Remove-Item $strFileName
 }
 
 #nuget restore
-& $env:NUGET_PATH restore SonarLint.sln
+& $env:NUGET_PATH restore SonarAnalyzer.sln
 
 #build tests
-& $env:MSBUILD_PATH /p:configuration=Release /p:DeployExtension=false /p:ZipPackageCompressionLevel=normal /v:m /p:defineConstants=SignAssembly /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=$env:CERT_PATH
+& $env:MSBUILD_PATH SonarAnalyzer.sln /p:configuration=Release /p:DeployExtension=false /p:ZipPackageCompressionLevel=normal /v:m /p:defineConstants=SignAssembly /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=$env:CERT_PATH
 
 #download nuget package
 $ARTIFACTORY_SRC_REPO="sonarsource-nuget-qa"
@@ -69,21 +69,21 @@ git checkout -f $sha1
 Write-Host "Installing downloaded dlls"
 $dllpath="empty"
 if ($env:FILENAME -like '*CSharp*') {
-    $dllpath="SonarLint.CSharp"
+    $dllpath="SonarAnalyzer.CSharp"
 }
 if ($env:FILENAME -like '*VisualBasic*') {
-    $dllpath="SonarLint.VisualBasic"
+    $dllpath="SonarAnalyzer.VisualBasic"
 }
-if ($env:FILENAME -like '*Runner*') {
-    $dllpath="SonarQube.SonarLint.Runner"
+if ($env:FILENAME -like '*Scanner*') {
+    $dllpath="SonarAnalyzer.Scanner"
 }
 Copy-Item .\analyzers\*.dll .\src\$dllpath\bin\Release -force
 Copy-Item .\analyzers\*.dll .\its\binaries -force
 
 #run tests
 Write-Host "Start tests"
-& $env:VSTEST_PATH .\src\Tests\SonarLint.SonarQube.Integration.UnitTest\bin\Release\SonarLint.SonarQube.Integration.UnitTest.dll
-& $env:VSTEST_PATH .\src\Tests\SonarLint.UnitTest\bin\Release\SonarLint.UnitTest.dll
+& $env:VSTEST_PATH .\src\Tests\SonarAnalyzer.Platform.Integration.UnitTest\bin\Release\SonarAnalyzer.Platform.Integration.UnitTest.dll
+& $env:VSTEST_PATH .\src\Tests\SonarAnalyzer.UnitTest\bin\Release\SonarAnalyzer.UnitTest.dll
  
 #run regression-test
 Write-Host "Start regression tests"

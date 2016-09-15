@@ -1,5 +1,5 @@
 ﻿/*
- * SonarLint for Visual Studio
+ * SonarAnalyzer for .NET
  * Copyright (C) 2015-2016 SonarSource SA
  * mailto:contact@sonarsource.com
  *
@@ -29,7 +29,7 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyCompany("SonarSource")]
 [assembly: AssemblyCopyright("Copyright © 2015-2016 SonarSource SA")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("SonarLint, SonarQube, SonarSource")]
 [assembly: AssemblyCulture("")]
 
 [assembly: ComVisible(false)]
