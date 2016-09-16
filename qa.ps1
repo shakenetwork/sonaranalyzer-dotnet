@@ -40,7 +40,7 @@ if (Test-Path .\analyzers\SonarAnalyzer.dll -eq "true") {
   }   
 }
 
-if ($productversion eq "empty") {
+if ($productversion -eq "empty") {
     Write-Host "Couldn't determine sha1"
     exit 1
 } 
