@@ -1,3 +1,5 @@
+$ErrorActionPreference = "Stop"
+
 #download MSBuild
     $url = "https://github.com/SonarSource-VisualStudio/sonar-msbuild-runner/releases/download/2.0/MSBuild.SonarQube.Runner-2.0.zip"
     $output = "MSBuild.SonarQube.Runner.zip"    
