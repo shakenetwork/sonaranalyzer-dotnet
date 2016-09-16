@@ -50,10 +50,14 @@ if ($productversion -eq "empty") {
 
 $sha1=$productversion.Substring($productversion.LastIndexOf('Sha1:')+5)
 Write-Host "Checking out $sha1"
+$s="SHA1=$sha1"
+$s | out-file ".\sha1.properties"
 
 if (($env:GITHUB_BRANCH -eq "master") -or ($env:GITHUB_BRANCH -eq "refs/heads/master")) {
     $env:GITHUB_BRANCH=$env:GITHUB_BRANCH.Substring(11)
 }
+$s="GITHUB_BRANCH=$env:GITHUB_BRANCH"
+$s | out-file ".\branch.properties"
 
 #checkout commit
 git pull origin $env:GITHUB_BRANCH
