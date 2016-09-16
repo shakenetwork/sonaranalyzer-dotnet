@@ -53,10 +53,12 @@ Write-Host "Checking out $sha1"
 $s="SHA1=$sha1"
 $s | out-file ".\sha1.properties"
 
+Write-Host "GITHUB_BRANCH $env:GITHUB_BRANCH"
 if (($env:GITHUB_BRANCH -eq "master") -or ($env:GITHUB_BRANCH -eq "refs/heads/master")) {
     $env:GITHUB_BRANCH=$env:GITHUB_BRANCH.Substring(11)
 }
 $s="GITHUB_BRANCH=$env:GITHUB_BRANCH"
+Write-Host "$s"
 $s | out-file ".\branch.properties"
 
 #checkout commit
