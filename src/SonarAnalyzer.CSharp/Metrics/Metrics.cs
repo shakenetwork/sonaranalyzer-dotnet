@@ -39,17 +39,63 @@ namespace SonarAnalyzer.Common.CSharp
                 throw new ArgumentException(InitalizationErrorTextPattern, nameof(tree));
             }
         }
-        protected override Func<string, bool> HasValidCommentContent => line => line.Any(char.IsLetter);
-        protected override Func<SyntaxToken, bool> IsEndOfFile => token => token.IsKind(SyntaxKind.EndOfFileToken);
-        protected override Func<SyntaxToken, bool> IsNoneToken => token => token.IsKind(SyntaxKind.None);
-        protected override Func<SyntaxTrivia, bool> IsCommentTrivia => trivia => TriviaKinds.Contains(trivia.Kind());
-        protected override Func<SyntaxNode, bool> IsClass => node => ClassKinds.Contains(node.Kind());
-        protected override Func<SyntaxNode, bool> IsAccessor => node => AccessorKinds.Contains(node.Kind());
-        protected override Func<SyntaxNode, bool> IsStatement => node => node is StatementSyntax && !node.IsKind(SyntaxKind.Block);
-        protected override Func<SyntaxNode, bool> IsFunction => node => FunctionKinds.Contains(node.Kind());
-        protected override Func<SyntaxNode, bool> IsFunctionWithBody => node =>
-            IsFunction(node) &&
-            node.ChildNodes().Any(c => c.IsKind(SyntaxKind.Block));
+
+        protected override bool IsEndOfFile(SyntaxToken token) => token.IsKind(SyntaxKind.EndOfFileToken);
+
+        protected override bool IsNoneToken(SyntaxToken token) => token.IsKind(SyntaxKind.None);
+
+        protected override bool IsCommentTrivia(SyntaxTrivia trivia) => TriviaKinds.Contains(trivia.Kind());
+
+        protected override bool IsClass(SyntaxNode node) => ClassKinds.Contains(node.Kind());
+
+        protected override bool IsStatement(SyntaxNode node) => node is StatementSyntax && !node.IsKind(SyntaxKind.Block);
+
+        protected override bool IsFunction(SyntaxNode node)
+        {
+            var property = node as PropertyDeclarationSyntax;
+            if (property != null && property.ExpressionBody != null)
+            {
+                return true;
+            }
+
+            var method = node as MethodDeclarationSyntax;
+            if (method != null && method.ExpressionBody != null)
+            {
+                return true;
+            }
+
+            if (FunctionKinds.Contains(node.Kind()) &&
+                node.ChildNodes().Any(c => c.IsKind(SyntaxKind.Block)))
+            {
+                // Non-abstract, non-interface methods
+                return true;
+            }
+
+            var accessor = node as AccessorDeclarationSyntax;
+            if (accessor != null)
+            {
+                if (accessor.Body != null)
+                {
+                    return true;
+                }
+
+                var prop = accessor.Parent.Parent as BasePropertyDeclarationSyntax;
+                if (prop == null)
+                {
+                    // Unexpected
+                    return false;
+                }
+
+                if (prop.Modifiers.Any(m => m.IsKind(SyntaxKind.AbstractKeyword)))
+                {
+                    return false;
+                }
+
+                return !(prop.Parent is InterfaceDeclarationSyntax);
+            }
+
+            return false;
+        }
 
         protected override IEnumerable<SyntaxNode> PublicApiNodes
         {
@@ -94,22 +140,12 @@ namespace SonarAnalyzer.Common.CSharp
             }
         }
 
-        public override int GetComplexity(SyntaxNode node)
-        {
-            return node
-                    .DescendantNodesAndSelf()
-                    .Count(
-                        n =>
-                            // TODO What about the null coalescing operator?
-                            // TODO why differentiate between expression bodied and block bodied methods?
-                            ComplexityIncreasingKinds.Contains(n.Kind()) ||
-                            IsReturnButNotLast(n) ||
-                            IsFunctionWithBody(n));
-        }
-        private bool IsReturnButNotLast(SyntaxNode node)
-        {
-            return node.IsKind(SyntaxKind.ReturnStatement) && !IsLastStatement(node);
-        }
+        protected override bool IsReturnButNotLast(SyntaxNode node) =>
+            node.IsKind(SyntaxKind.ReturnStatement) && !IsLastStatement(node);
+
+        protected override bool IsComplexityIncreasingKind(SyntaxNode node) =>
+            ComplexityIncreasingKinds.Contains(node.Kind());
+
         private bool IsLastStatement(SyntaxNode node)
         {
             var nextToken = node.GetLastToken().GetNextToken();
@@ -117,38 +153,31 @@ namespace SonarAnalyzer.Common.CSharp
                 IsFunction(nextToken.Parent.Parent);
         }
 
-        private static readonly SyntaxKind[] TriviaKinds =
-        {
+        private static readonly ISet<SyntaxKind> TriviaKinds = ImmutableHashSet.Create(
             SyntaxKind.SingleLineCommentTrivia,
             SyntaxKind.MultiLineCommentTrivia,
             SyntaxKind.SingleLineDocumentationCommentTrivia,
             SyntaxKind.MultiLineDocumentationCommentTrivia
-        };
-        private static readonly SyntaxKind[] ClassKinds =
-        {
-            SyntaxKind.ClassDeclaration
-        };
-        private static readonly SyntaxKind[] AccessorKinds =
-        {
-            SyntaxKind.GetAccessorDeclaration,
-            SyntaxKind.SetAccessorDeclaration,
-            SyntaxKind.AddAccessorDeclaration,
-            SyntaxKind.RemoveAccessorDeclaration
-        };
-        private static readonly SyntaxKind[] FunctionKinds =
-        {
+        );
+
+        private static readonly ISet<SyntaxKind> ClassKinds = ImmutableHashSet.Create(
+            SyntaxKind.ClassDeclaration,
+            SyntaxKind.StructDeclaration,
+            SyntaxKind.InterfaceDeclaration
+        );
+
+        private static readonly ISet<SyntaxKind> FunctionKinds = ImmutableHashSet.Create(
             SyntaxKind.ConstructorDeclaration,
             SyntaxKind.DestructorDeclaration,
             SyntaxKind.MethodDeclaration,
-            SyntaxKind.OperatorDeclaration,
-            SyntaxKind.GetAccessorDeclaration,
-            SyntaxKind.SetAccessorDeclaration,
-            SyntaxKind.AddAccessorDeclaration,
-            SyntaxKind.RemoveAccessorDeclaration
-        };
-        private static readonly SyntaxKind[] ComplexityIncreasingKinds =
-        {
+            SyntaxKind.OperatorDeclaration
+        );
+
+        private static readonly ISet<SyntaxKind> ComplexityIncreasingKinds = ImmutableHashSet.Create(
             SyntaxKind.IfStatement,
+            SyntaxKind.CoalesceExpression,
+            SyntaxKind.ConditionalAccessExpression,
+            SyntaxKind.ConditionalExpression,
             SyntaxKind.SwitchStatement,
             SyntaxKind.LabeledStatement,
             SyntaxKind.WhileStatement,
@@ -158,6 +187,6 @@ namespace SonarAnalyzer.Common.CSharp
             SyntaxKind.LogicalAndExpression,
             SyntaxKind.LogicalOrExpression,
             SyntaxKind.CaseSwitchLabel
-        };
+        );
     }
 }

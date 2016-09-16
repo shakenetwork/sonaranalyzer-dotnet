@@ -58,7 +58,7 @@ namespace SonarAnalyzer.Common
             }
         }
 
-        protected abstract Func<SyntaxToken, bool> IsEndOfFile { get; }
+        protected abstract bool IsEndOfFile(SyntaxToken token);
 
         #endregion
 
@@ -113,55 +113,31 @@ namespace SonarAnalyzer.Common
             return new FileComments(noSonar.ToImmutableHashSet(), nonBlank.ToImmutableHashSet());
         }
 
-        protected abstract Func<string, bool> HasValidCommentContent { get; }
-        protected abstract Func<SyntaxToken, bool> IsNoneToken { get; }
-        protected abstract Func<SyntaxTrivia, bool> IsCommentTrivia { get; }
+        private static bool HasValidCommentContent(string content) => content.Any(char.IsLetter) || content.Any(char.IsDigit);
+
+        protected abstract bool IsNoneToken(SyntaxToken token);
+
+        protected abstract bool IsCommentTrivia(SyntaxTrivia trivia);
 
         #endregion
 
         #region Classes, Accessors, Functions, Statements
 
+        protected abstract bool IsClass(SyntaxNode node);
+
+        protected abstract bool IsStatement(SyntaxNode node);
+
+        protected abstract bool IsFunction(SyntaxNode node);
+
         public int ClassCount => ClassNodes.Count();
 
-        public IEnumerable<SyntaxNode> ClassNodes
-        {
-            get
-            {
-                return tree.GetRoot()
-                    .DescendantNodes()
-                    .Where(IsClass);
-            }
-        }
+        public IEnumerable<SyntaxNode> ClassNodes => tree.GetRoot().DescendantNodes().Where(IsClass);
 
-        protected abstract Func<SyntaxNode, bool> IsClass { get; }
-
-        protected abstract Func<SyntaxNode, bool> IsAccessor { get; }
-
-        public int StatementCount
-        {
-            get
-            {
-                return tree.GetRoot()
-                    .DescendantNodes()
-                    .Count(IsStatement);
-            }
-        }
-        protected abstract Func<SyntaxNode, bool> IsStatement { get; }
+        public int StatementCount => tree.GetRoot().DescendantNodes().Count(IsStatement);
 
         public int FunctionCount => FunctionNodes.Count();
 
-        public IEnumerable<SyntaxNode> FunctionNodes
-        {
-            get
-            {
-                return tree.GetRoot()
-                    .DescendantNodes()
-                    .Where(n => IsFunctionWithBody(n) || IsAccessor(n));
-            }
-        }
-
-        protected abstract Func<SyntaxNode, bool> IsFunction { get; }
-        protected abstract Func<SyntaxNode, bool> IsFunctionWithBody { get; }
+        public IEnumerable<SyntaxNode> FunctionNodes => tree.GetRoot().DescendantNodes().Where(IsFunction);
 
         #endregion
 
@@ -177,9 +153,17 @@ namespace SonarAnalyzer.Common
 
         #region Complexity
 
+        protected abstract bool IsReturnButNotLast(SyntaxNode node);
+
+        protected abstract bool IsComplexityIncreasingKind(SyntaxNode node);
+
         public int Complexity => GetComplexity(tree.GetRoot());
 
-        public abstract int GetComplexity(SyntaxNode node);
+        public int GetComplexity(SyntaxNode node) => node.DescendantNodesAndSelf()
+            .Count(n =>
+                IsComplexityIncreasingKind(n) ||
+                IsReturnButNotLast(n) ||
+                IsFunction(n));
 
         public Distribution FunctionComplexityDistribution
         {

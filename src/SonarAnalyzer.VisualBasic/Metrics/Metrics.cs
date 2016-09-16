@@ -24,6 +24,7 @@ using Microsoft.CodeAnalysis.VisualBasic;
 using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 
 namespace SonarAnalyzer.Common.VisualBasic
@@ -39,37 +40,41 @@ namespace SonarAnalyzer.Common.VisualBasic
             }
         }
 
-        protected override Func<string, bool> HasValidCommentContent => line => line.Any(char.IsLetter) || line.Any(char.IsDigit);
-        protected override Func<SyntaxToken, bool> IsEndOfFile => token => token.IsKind(SyntaxKind.EndOfFileToken);
-        protected override Func<SyntaxToken, bool> IsNoneToken => token => token.IsKind(SyntaxKind.None);
-        protected override Func<SyntaxTrivia, bool> IsCommentTrivia => trivia => TriviaKinds.Contains(trivia.Kind());
-        protected override Func<SyntaxNode, bool> IsClass => node => ClassKinds.Contains(node.Kind());
-        protected override Func<SyntaxNode, bool> IsAccessor => node => AccessorKinds.Contains(node.Kind());
-        protected override Func<SyntaxNode, bool> IsStatement => node => node is ExecutableStatementSyntax;
-        protected override Func<SyntaxNode, bool> IsFunction => node => FunctionKinds.Contains(node.Kind());
-        protected override Func<SyntaxNode, bool> IsFunctionWithBody => node =>
-            IsFunction(node) &&
-            MethodBlocks.Contains(node.Parent.Kind());
+        protected override bool IsEndOfFile(SyntaxToken token) => token.IsKind(SyntaxKind.EndOfFileToken);
 
-        protected override IEnumerable<SyntaxNode> PublicApiNodes => new SyntaxNode[0]; // not calculated for VB.Net
+        protected override bool IsNoneToken(SyntaxToken token) => token.IsKind(SyntaxKind.None);
 
-        public override int GetComplexity(SyntaxNode node)
+        protected override bool IsCommentTrivia(SyntaxTrivia trivia) => TriviaKinds.Contains(trivia.Kind());
+
+        protected override bool IsClass(SyntaxNode node) => ClassKinds.Contains(node.Kind());
+
+        protected override bool IsStatement(SyntaxNode node) => node is ExecutableStatementSyntax;
+
+        protected override bool IsFunction(SyntaxNode node)
         {
-            var possibleNodes = node
-                    .DescendantNodesAndSelf()
-                    .Where(n =>
-                        !n.Parent.IsKind(SyntaxKind.InterfaceBlock) &&
-                        ComplexityIncreasingKinds.Contains(n.Kind()));
-
-            return possibleNodes.Count(n => !IsFunctionLikeLastReturnStatement(n));
-        }
-        private static bool IsFunctionLikeLastReturnStatement(SyntaxNode node)
-        {
-            if (!BranchKinds.Contains(node.Kind()))
+            if (!FunctionKinds.Contains(node.Kind()) ||
+                !MethodBlocks.Contains(node.Parent.Kind()) ||
+                node.Parent.Parent.IsKind(SyntaxKind.InterfaceBlock))
             {
                 return false;
             }
 
+            var method = node as MethodBaseSyntax;
+            if (method != null && method.Modifiers.Any(m => m.IsKind(SyntaxKind.MustOverrideKeyword)))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        protected override IEnumerable<SyntaxNode> PublicApiNodes => Enumerable.Empty<SyntaxNode>(); // Not calculated for VB.Net
+
+        protected override bool IsComplexityIncreasingKind(SyntaxNode node) =>
+            ComplexityIncreasingKinds.Contains(node.Kind());
+
+        protected override bool IsReturnButNotLast(SyntaxNode node)
+        {
             if (!node.IsKind(SyntaxKind.ReturnStatement))
             {
                 return false;
@@ -78,79 +83,69 @@ namespace SonarAnalyzer.Common.VisualBasic
             var blockType = node.Parent.GetType();
             if (!BlockTypes.Any(bType => bType.IsAssignableFrom(blockType)))
             {
-                return false;
+                return true;
             }
 
             if (!IsFunctionLike(node.Parent))
             {
-                return false;
+                return true;
             }
 
             var nextToken = node.GetLastToken().GetNextToken();
             var nextNode = nextToken.Parent;
 
-            return nextToken.IsKind(SyntaxKind.EndKeyword) &&
-                node.Parent == nextNode.Parent;
+            return !nextToken.IsKind(SyntaxKind.EndKeyword) ||
+                node.Parent != nextNode.Parent;
         }
 
-        private static Func<SyntaxNode, bool> IsFunctionLike =>
-            node => node.IsKind(SyntaxKind.FunctionBlock) ||
-                node.IsKind(SyntaxKind.MultiLineFunctionLambdaExpression) ||
-                node.IsKind(SyntaxKind.SingleLineFunctionLambdaExpression) ||
-                node.IsKind(SyntaxKind.GetAccessorBlock);
+        private static bool IsFunctionLike(SyntaxNode node) =>
+            node.IsKind(SyntaxKind.FunctionBlock) ||
+            node.IsKind(SyntaxKind.OperatorBlock) ||
+            node.IsKind(SyntaxKind.MultiLineFunctionLambdaExpression) ||
+            node.IsKind(SyntaxKind.SingleLineFunctionLambdaExpression) ||
+            node.IsKind(SyntaxKind.GetAccessorBlock);
 
 
-        private static readonly SyntaxKind[] TriviaKinds =
-        {
+        private static readonly ISet<SyntaxKind> TriviaKinds = ImmutableHashSet.Create(
             SyntaxKind.CommentTrivia,
             SyntaxKind.DocumentationCommentExteriorTrivia,
             SyntaxKind.DocumentationCommentTrivia
-        };
-        private static readonly SyntaxKind[] ClassKinds =
-        {
+        );
+
+        private static readonly ISet<SyntaxKind> ClassKinds = ImmutableHashSet.Create(
             SyntaxKind.ClassBlock,
-            SyntaxKind.InterfaceBlock
-            //todo: this should also be considered as a class, but it was not in the VB.Net plugin
-            //SyntaxKind.ModuleBlock
-        };
-        private static readonly SyntaxKind[] AccessorKinds =
-        {
-            SyntaxKind.GetAccessorStatement,
-            SyntaxKind.SetAccessorStatement
-            //todo not included in VB.NET plugin
-            //SyntaxKind.RaiseEventAccessorStatement,
-            //SyntaxKind.AddHandlerAccessorStatement,
-            //SyntaxKind.RemoveHandlerAccessorStatement
-        };
-        private static readonly SyntaxKind[] FunctionKinds =
-        {
+            SyntaxKind.StructureBlock,
+            SyntaxKind.InterfaceBlock,
+            SyntaxKind.ModuleBlock
+        );
+
+        private static readonly ISet<SyntaxKind> FunctionKinds = ImmutableHashSet.Create(
             SyntaxKind.SubNewStatement,
             SyntaxKind.SubStatement,
             SyntaxKind.FunctionStatement,
-            // todo not counted in the VB.Net plugin
-            //SyntaxKind.OperatorStatement,
-            //SyntaxKind.GetAccessorStatement,
-            //SyntaxKind.SetAccessorStatement,
-            //SyntaxKind.RaiseEventAccessorStatement,
-            //SyntaxKind.AddHandlerAccessorStatement,
-            //SyntaxKind.RemoveHandlerAccessorStatement,
+            SyntaxKind.OperatorStatement,
+            SyntaxKind.GetAccessorStatement,
+            SyntaxKind.SetAccessorStatement,
+            SyntaxKind.RaiseEventAccessorStatement,
+            SyntaxKind.AddHandlerAccessorStatement,
+            SyntaxKind.RemoveHandlerAccessorStatement,
             SyntaxKind.DeclareSubStatement,
             SyntaxKind.DeclareFunctionStatement
-        };
-        private static readonly SyntaxKind[] MethodBlocks =
-        {
+        );
+
+        private static readonly ISet<SyntaxKind> MethodBlocks = ImmutableHashSet.Create(
             SyntaxKind.ConstructorBlock,
             SyntaxKind.FunctionBlock,
             SyntaxKind.SubBlock,
-            SyntaxKind.OperatorBlock
-            //SyntaxKind.GetAccessorBlock,
-            //SyntaxKind.SetAccessorBlock,
-            //SyntaxKind.RaiseEventAccessorBlock,
-            //SyntaxKind.AddHandlerAccessorBlock,
-            //SyntaxKind.RemoveHandlerAccessorBlock
-        };
-        private static readonly Type[] BlockTypes =
-        {
+            SyntaxKind.OperatorBlock,
+            SyntaxKind.GetAccessorBlock,
+            SyntaxKind.SetAccessorBlock,
+            SyntaxKind.RaiseEventAccessorBlock,
+            SyntaxKind.AddHandlerAccessorBlock,
+            SyntaxKind.RemoveHandlerAccessorBlock
+        );
+
+        private static readonly ISet<Type> BlockTypes = ImmutableHashSet.Create(
             typeof(MethodBlockBaseSyntax),
             typeof(CaseBlockSyntax),
             typeof(CatchBlockSyntax),
@@ -167,44 +162,12 @@ namespace SonarAnalyzer.Common.VisualBasic
             typeof(WhileBlockSyntax),
             typeof(WithBlockSyntax),
             typeof(MultiLineLambdaExpressionSyntax)
-        };
-        private static readonly SyntaxKind[] BranchKinds = {
-            SyntaxKind.GoToStatement,
+        );
 
-            SyntaxKind.ExitDoStatement,
-            SyntaxKind.ExitForStatement,
-            SyntaxKind.ExitFunctionStatement,
-            //not in VB.Net plugin
-            //SyntaxKind.ExitOperatorStatement,
-            SyntaxKind.ExitPropertyStatement,
-            SyntaxKind.ExitSelectStatement,
-            SyntaxKind.ExitSubStatement,
-            SyntaxKind.ExitTryStatement,
-            SyntaxKind.ExitWhileStatement,
-
-            SyntaxKind.ContinueDoStatement,
-            SyntaxKind.ContinueForStatement,
-            SyntaxKind.ContinueWhileStatement,
-
-            SyntaxKind.StopStatement,
-
-            SyntaxKind.ReturnStatement,
-
-            SyntaxKind.AndAlsoExpression,
-            SyntaxKind.OrElseExpression,
-
-            SyntaxKind.EndStatement
-        };
-        private static readonly SyntaxKind[] ComplexityIncreasingKinds =
-        {
-            SyntaxKind.SubStatement,
-            SyntaxKind.FunctionStatement,
-            SyntaxKind.DeclareSubStatement,
-            SyntaxKind.DeclareFunctionStatement,
-            SyntaxKind.SubNewStatement,
-
+        private static readonly ISet<SyntaxKind> ComplexityIncreasingKinds = ImmutableHashSet.Create(
             SyntaxKind.IfStatement,
             SyntaxKind.SingleLineIfStatement,
+            SyntaxKind.TernaryConditionalExpression,
             SyntaxKind.CaseStatement,
 
             SyntaxKind.WhileStatement,
@@ -233,8 +196,7 @@ namespace SonarAnalyzer.Common.VisualBasic
             SyntaxKind.ExitDoStatement,
             SyntaxKind.ExitForStatement,
             SyntaxKind.ExitFunctionStatement,
-            //not in VB.Net plugin
-            //SyntaxKind.ExitOperatorStatement,
+            SyntaxKind.ExitOperatorStatement,
             SyntaxKind.ExitPropertyStatement,
             SyntaxKind.ExitSelectStatement,
             SyntaxKind.ExitSubStatement,
@@ -247,12 +209,10 @@ namespace SonarAnalyzer.Common.VisualBasic
 
             SyntaxKind.StopStatement,
 
-            SyntaxKind.ReturnStatement,
-
             SyntaxKind.AndAlsoExpression,
             SyntaxKind.OrElseExpression,
 
             SyntaxKind.EndStatement
-        };
+        );
     }
 }
