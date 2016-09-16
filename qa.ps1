@@ -35,10 +35,10 @@ $destination.CopyHere($zip_file.Items(), 0x14)
 
 #get sha1
 $productversion="empty"
-if (Test-Path .\analyzers\SonarAnalyzer.dll -eq "true") {
+if (Test-Path .\analyzers\SonarAnalyzer.dll) {
   $productversion=ls .\analyzers\SonarAnalyzer.dll | % { $_.versioninfo.productversion }
 }else{
-  if (Test-Path .\assembly\SonarAnalyzer.dll -eq "true") {
+  if (Test-Path .\assembly\SonarAnalyzer.dll) {
     $productversion=ls .\assembly\SonarAnalyzer.dll | % { $_.versioninfo.productversion }
   }   
 }
