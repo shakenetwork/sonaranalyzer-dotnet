@@ -31,7 +31,7 @@ namespace SonarAnalyzer.UnitTest.Common
         [TestCategory(MetricsTest.MetricsTestCategoryName)]
         public void Distribution()
         {
-            var distribution = new Distribution(0, 10, 20);
+            var distribution = new Distribution(new[] { 0, 10, 20 });
             distribution.Ranges.Should().BeEquivalentTo(0, 10, 20);
             distribution.Values.Should().BeEquivalentTo(0, 0, 0);
             distribution.ToString().Should().BeEquivalentTo("0=0;10=0;20=0");
@@ -60,7 +60,7 @@ namespace SonarAnalyzer.UnitTest.Common
             distribution.Values.Should().BeEquivalentTo(3, 2, 1);
             distribution.ToString().Should().BeEquivalentTo("0=3;10=2;20=1");
 
-            distribution = new Distribution(7, 13);
+            distribution = new Distribution(new[] { 7, 13 });
             distribution.Ranges.Should().BeEquivalentTo(7, 13);
             distribution.Values.Should().BeEquivalentTo(0, 0);
             distribution.ToString().Should().BeEquivalentTo("7=0;13=0");

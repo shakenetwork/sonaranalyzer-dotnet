@@ -115,10 +115,19 @@ namespace SonarAnalyzer.Runner
                             xmlOut.WriteElementString("PublicUndocumentedApi", metrics.PublicUndocumentedApiCount.ToString(CultureInfo.InvariantCulture));
 
                             var complexity = metrics.Complexity;
+                            // Overall file complexity
                             xmlOut.WriteElementString("Complexity", complexity.ToString(CultureInfo.InvariantCulture));
 
+                            // Complexity in functions
+                            xmlOut.WriteElementString("ComplexityInFunctions", metrics.FunctionNodes
+                                .Sum(f => metrics.GetComplexity(f)).ToString(CultureInfo.InvariantCulture));
+
+                            // Complexity in classes
+                            xmlOut.WriteElementString("ComplexityInClasses", metrics.ClassNodes
+                                .Sum(c => metrics.GetComplexity(c)).ToString(CultureInfo.InvariantCulture));
+
                             // TODO This is a bit ridiculous, but is how SonarQube works
-                            var fileComplexityDistribution = new Distribution(0, 5, 10, 20, 30, 60, 90);
+                            var fileComplexityDistribution = new Distribution(Distribution.FileComplexityRange);
                             fileComplexityDistribution.Add(complexity);
                             xmlOut.WriteElementString("FileComplexityDistribution", fileComplexityDistribution.ToString());
 

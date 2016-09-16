@@ -18,6 +18,9 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
+using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Globalization;
 using System.Linq;
 
@@ -25,16 +28,22 @@ namespace SonarAnalyzer.Common
 {
     public class Distribution
     {
-        // TODO Do we want this to be immutable?
-        public int[] Ranges { private set; get; }
+        internal static readonly IEnumerable<int> FileComplexityRange = ImmutableArray.Create(0, 5, 10, 20, 30, 60, 90);
+        internal static readonly IEnumerable<int> FunctionComplexityRange = ImmutableArray.Create(1, 2, 4, 6, 8, 10, 12);
 
-        public int[] Values { private set; get; }
+        internal ImmutableArray<int> Ranges { private set; get; }
 
-        public Distribution(params int[] ranges)
+        public IList<int> Values { private set; get; }
+
+        public Distribution(IEnumerable<int> ranges)
         {
-            // TODO Check not empty, and sorted
-            Ranges = ranges;
-            Values = new int[ranges.Length];
+            if (ranges == null)
+            {
+                throw new ArgumentNullException(nameof(ranges));
+            }
+
+            Ranges = ranges.OrderBy(i => i).ToImmutableArray();
+            Values = new int[Ranges.Length];
         }
 
         public void Add(int value)

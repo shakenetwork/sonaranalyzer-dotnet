@@ -121,15 +121,18 @@ namespace SonarAnalyzer.Common
 
         #region Classes, Accessors, Functions, Statements
 
-        public int ClassCount
+        public int ClassCount => ClassNodes.Count();
+
+        public IEnumerable<SyntaxNode> ClassNodes
         {
             get
             {
                 return tree.GetRoot()
                     .DescendantNodes()
-                    .Count(IsClass);
+                    .Where(IsClass);
             }
         }
+
         protected abstract Func<SyntaxNode, bool> IsClass { get; }
 
         public int AccessorCount
@@ -191,7 +194,7 @@ namespace SonarAnalyzer.Common
         {
             get
             {
-                var distribution = new Distribution(1, 2, 4, 6, 8, 10, 12);
+                var distribution = new Distribution(Distribution.FunctionComplexityRange);
                 foreach (var node in FunctionNodes)
                 {
                     distribution.Add(GetComplexity(node));
