@@ -1,7 +1,10 @@
 $ErrorActionPreference = "Stop"
 
 #cleanup
-del %USERPROFILE%\AppData\Local\Microsoft\MSBuild\14.0\Microsoft.Common.targets\ImportBefore\SonarLint.Testing.ImportBefore.targets 
+$strFileName="%USERPROFILE%\AppData\Local\Microsoft\MSBuild\14.0\Microsoft.Common.targets\ImportBefore\SonarLint.Testing.ImportBefore.targets" 
+If (Test-Path $strFileName){
+	Remove-Item $strFileName
+}
 
 #nuget restore
 & $env:NUGET_PATH restore SonarLint.sln
