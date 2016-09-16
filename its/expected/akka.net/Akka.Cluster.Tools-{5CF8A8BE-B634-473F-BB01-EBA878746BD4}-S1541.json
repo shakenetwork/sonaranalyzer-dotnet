@@ -2,7 +2,7 @@
 "issues":  [
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 19 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 20 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterReceptionist.cs",
 "region":  {
@@ -22,6 +22,19 @@
 "startLine":  130,
 "startColumn":  16,
 "endLine":  130,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Internal\\Topics.cs",
+"region":  {
+"startLine":  104,
+"startColumn":  33,
+"endLine":  104,
 "endColumn":  41
 }
 }

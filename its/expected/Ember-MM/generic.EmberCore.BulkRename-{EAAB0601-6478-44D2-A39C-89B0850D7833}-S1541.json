@@ -2,7 +2,7 @@
 "issues":  [
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this function is 31 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this function is 33 which is greater than 10 authorized.",
 "location":  {
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.BulkRename\\clsAPIRenamer.vb",
 "region":  {
@@ -15,7 +15,7 @@
 },
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this procedure is 21 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this procedure is 28 which is greater than 10 authorized.",
 "location":  {
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.BulkRename\\clsAPIRenamer.vb",
 "region":  {
@@ -54,6 +54,19 @@
 },
 {
 "id":  "S1541",
+"message":  "The Cyclomatic Complexity of this procedure is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Ember-MM\\Addons\\generic.EmberCore.BulkRename\\clsAPIRenamer.vb",
+"region":  {
+"startLine":  579,
+"startColumn":  5,
+"endLine":  579,
+"endColumn":  147
+}
+}
+},
+{
+"id":  "S1541",
 "message":  "The Cyclomatic Complexity of this function is 11 which is greater than 10 authorized.",
 "location":  {
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.BulkRename\\clsAPIRenamer.vb",
@@ -80,7 +93,7 @@
 },
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this procedure is 28 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this procedure is 32 which is greater than 10 authorized.",
 "location":  {
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.BulkRename\\dlgBulkRename.vb",
 "region":  {
