@@ -1,3 +1,4 @@
+$ErrorActionPreference = "Stop"
 
 #cleanup
 del %USERPROFILE%\AppData\Local\Microsoft\MSBuild\14.0\Microsoft.Common.targets\ImportBefore\SonarLint.Testing.ImportBefore.targets 
@@ -30,7 +31,20 @@ Write-Host "Unzipping $currentdir\$zipName"
 $destination.CopyHere($zip_file.Items(), 0x14) 
 
 #get sha1
-$productversion=ls .\analyzers\SonarAnalyzer.dll | % { $_.versioninfo.productversion }
+$productversion="empty"
+if (Test-Path .\analyzers\SonarAnalyzer.dll -eq "true") {
+  $productversion=ls .\analyzers\SonarAnalyzer.dll | % { $_.versioninfo.productversion }
+}else{
+  if (Test-Path .\assembly\SonarAnalyzer.dll -eq "true") {
+    $productversion=ls .\assembly\SonarAnalyzer.dll | % { $_.versioninfo.productversion }
+  }   
+}
+
+if ($productversion eq "empty") {
+    Write-Host "Couldn't determine sha1"
+    exit 1
+} 
+
 $sha1=$productversion.Substring($productversion.LastIndexOf('Sha1:')+5)
 Write-Host "Checking out $sha1"
 
@@ -44,7 +58,16 @@ git checkout -f $sha1
 
 #move dlls to correct locations
 Write-Host "Installing downloaded dlls"
-Move-Item .\analyzers\*.dll .\src\SonarLint.CSharp\bin\Release -force
+if ($string -like '*CSharp*') {
+    $dllpath="SonarLint.CSharp"
+}
+if ($string -like '*VisualBasic*') {
+    $dllpath="SonarLint.VisualBasic"
+}
+if ($string -like '*Runner*') {
+    $dllpath="SonarQube.SonarLint.Runner"
+}
+Move-Item .\analyzers\*.dll .\src\$dllpath\bin\Release -force
 
 #run tests
 Write-Host "Start tests"
