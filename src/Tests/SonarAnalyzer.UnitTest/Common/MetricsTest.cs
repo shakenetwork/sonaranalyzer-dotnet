@@ -229,36 +229,30 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
         [TestCategory(MetricsTestCategoryName)]
         public void Accessors()
         {
-            Accessors(AnalyzerLanguage.CSharp, "").Should().Be(0);
-            Accessors(AnalyzerLanguage.CSharp, "class MyClass { public int MyField; public MyClass() {} public int MyMethod() { return 42; } }").Should().Be(0);
-            Accessors(AnalyzerLanguage.CSharp, "class MyClass { public int MyProperty { get; } }").Should().Be(1);
-            Accessors(AnalyzerLanguage.CSharp, "class MyClass { public int MyProperty { get; set; } }").Should().Be(2);
-            Accessors(AnalyzerLanguage.CSharp, "class MyClass { public int MyProperty { get { return 0; } set { } } }").Should().Be(2);
-            Accessors(AnalyzerLanguage.CSharp, "class MyClass { public event EventHandler OnSomething { add { } remove {} }").Should().Be(2);
+            Functions(AnalyzerLanguage.CSharp, "").Should().Be(0);
+            Functions(AnalyzerLanguage.CSharp, "class MyClass { public int MyProperty { get; } }").Should().Be(1);
+            Functions(AnalyzerLanguage.CSharp, "class MyClass { public int MyProperty { get; set; } }").Should().Be(2);
+            Functions(AnalyzerLanguage.CSharp, "class MyClass { public int MyProperty { get { return 0; } set { } } }").Should().Be(2);
+            Functions(AnalyzerLanguage.CSharp, "class MyClass { public event EventHandler OnSomething { add { } remove {} }").Should().Be(2);
 
-            Accessors(AnalyzerLanguage.VisualBasic, "").Should().Be(0);
-            Accessors(AnalyzerLanguage.VisualBasic,
-                "Class MyClass \n Public MyField As Integer \n Public Sub New() \n End Sub \n " +
-                "Public Function MyFunc() \n Return 42 \n End Function \n End Class")
-                .Should().Be(0);
-            Accessors(AnalyzerLanguage.VisualBasic,
+
+            Functions(AnalyzerLanguage.VisualBasic, "").Should().Be(0);
+            Functions(AnalyzerLanguage.VisualBasic,
                 "Class MyClass \n Public ReadOnly Property MyProperty As Integer \n End Class").Should().Be(0); //Is this the expected?
-            Accessors(AnalyzerLanguage.VisualBasic,
+            Functions(AnalyzerLanguage.VisualBasic,
                 "Class MyClass \n Public Property MyProperty As Integer \n End Class")
                 .Should().Be(0); //Is this the expected?
-            Accessors(AnalyzerLanguage.VisualBasic,
+            Functions(AnalyzerLanguage.VisualBasic,
                 "Class MyClass \n Public Property MyProperty As Integer \n Get \n Return 0 \n End " +
                 "Get \n Set(value As Integer) \n End Set \n End Property \n End Class")
                 .Should().Be(2);
-            Accessors(AnalyzerLanguage.VisualBasic,
+            Functions(AnalyzerLanguage.VisualBasic,
                 "Class MyClass \n Public Custom Event Click As EventHandler \n AddHandler(ByVal value As EventHandler) \n " +
                 "EventHandlerList.Add(value) \n End AddHandler \n RemoveHandler(ByVal value As EventHandler) \n " +
                 "EventHandlerList.Remove(value) \n End RemoveHandler \n " +
                 "RaiseEvent(ByVal sender As Object, ByVal e As EventArgs) \n End RaiseEvent \n End Event \n End Class")
                 .Should().Be(0);
         }
-
-        private static int Accessors(AnalyzerLanguage language, string text) => MetricsFor(language, text).AccessorCount;
 
         [TestMethod]
         [TestCategory(MetricsTestCategoryName)]
@@ -334,7 +328,6 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
             Functions(AnalyzerLanguage.CSharp, "").Should().Be(0);
             Functions(AnalyzerLanguage.CSharp, "class MyClass { }").Should().Be(0);
             Functions(AnalyzerLanguage.CSharp, "abstract class MyClass { public abstract void MyMethod1(); }").Should().Be(0);
-            Functions(AnalyzerLanguage.CSharp, "class MyClass { public int MyProperty1 { get; set; } }").Should().Be(0);
             Functions(AnalyzerLanguage.CSharp, "class MyClass { static MyClass() { } }").Should().Be(1);
             Functions(AnalyzerLanguage.CSharp, "class MyClass { public MyClass() { } }").Should().Be(1);
             Functions(AnalyzerLanguage.CSharp, "class MyClass { ~MyClass() { } }").Should().Be(1);
@@ -355,16 +348,6 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
             Functions(AnalyzerLanguage.VisualBasic, "Class MyClass \n Protected Overrides Sub Finalize() \n End Sub \n End Class").Should().Be(1);
             Functions(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod2() \n End Sub \n End Class").Should().Be(1);
             Functions(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public Shared Operator +(a As MyClass) As MyClass \n Return a \n End Operator \n End Class").Should().Be(0);
-            Functions(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public ReadOnly Property MyProperty2() As Integer \n Get \n Return 0 \n End Get \n End Property \n End Class").Should().Be(0);
-            Functions(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public WriteOnly Property MyProperty3() As Integer \n Set \n End Set \n End Property \n End Class").Should().Be(0);
-            Functions(AnalyzerLanguage.VisualBasic,
-                "Class MyClass \n Public Property MyProperty4() As Integer \n Get \n Return 0 \n End " +
-                "Get \n Set \n End Set \n End Property \n End Class")
-                .Should().Be(0);
-            Functions(AnalyzerLanguage.VisualBasic,
-                "Class MyClass \n Public Custom Event OnSomething As EventHandler \n AddHandler(ByVal value As EventHandler) \n End " +
-                "AddHandler \n RemoveHandler(ByVal value As EventHandler) \n End RemoveHandler \n End Event \n End Class")
-                .Should().Be(0);
         }
 
         private static int Functions(AnalyzerLanguage language, string text) => MetricsFor(language, text).FunctionCount;

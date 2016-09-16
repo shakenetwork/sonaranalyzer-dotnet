@@ -135,15 +135,6 @@ namespace SonarAnalyzer.Common
 
         protected abstract Func<SyntaxNode, bool> IsClass { get; }
 
-        public int AccessorCount
-        {
-            get
-            {
-                return tree.GetRoot()
-                    .DescendantNodes()
-                    .Count(IsAccessor);
-            }
-        }
         protected abstract Func<SyntaxNode, bool> IsAccessor { get; }
 
         public int StatementCount
@@ -165,7 +156,7 @@ namespace SonarAnalyzer.Common
             {
                 return tree.GetRoot()
                     .DescendantNodes()
-                    .Where(IsFunctionWithBody);
+                    .Where(n => IsFunctionWithBody(n) || IsAccessor(n));
             }
         }
 
