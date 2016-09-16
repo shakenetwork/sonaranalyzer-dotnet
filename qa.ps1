@@ -61,13 +61,14 @@ git checkout -f $sha1
 
 #move dlls to correct locations
 Write-Host "Installing downloaded dlls"
-if ($string -like '*CSharp*') {
+$dllpath="empty"
+if ($env:FILENAME -like '*CSharp*') {
     $dllpath="SonarLint.CSharp"
 }
-if ($string -like '*VisualBasic*') {
+if ($env:FILENAME -like '*VisualBasic*') {
     $dllpath="SonarLint.VisualBasic"
 }
-if ($string -like '*Runner*') {
+if ($env:FILENAME -like '*Runner*') {
     $dllpath="SonarQube.SonarLint.Runner"
 }
 Move-Item .\analyzers\*.dll .\src\$dllpath\bin\Release -force
