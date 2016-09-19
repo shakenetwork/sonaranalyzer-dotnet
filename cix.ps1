@@ -49,7 +49,7 @@ if ($env:IS_PULLREQUEST -eq "true") {
 
         #build
         & $env:NUGET_PATH restore SonarLint.sln
-        & $env:MSBUILD_PATH SonarLint.sln /t:rebuild /p:Configuration=Release /p:DeployExtension=false
+        & $env:MSBUILD_PATH SonarLint.sln /t:rebuild /p:Configuration=Release /p:DeployExtension=false /p:defineConstants=SignAssembly /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=%CERT_PATH%
 
         #Generate the XML descriptor files for the C# plugin
         pushd src\SonarQube.SonarLint.Descriptor\bin\Release
