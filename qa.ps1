@@ -10,7 +10,7 @@ If (Test-Path $strFileName){
 & $env:NUGET_PATH restore SonarLint.sln
 
 #build tests
-& $env:MSBUILD_PATH /p:configuration=Release /p:DeployExtension=false /p:ZipPackageCompressionLevel=normal /v:m /p:defineConstants=SignAssembly /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=%CERT_PATH%
+& $env:MSBUILD_PATH /p:configuration=Release /p:DeployExtension=false /p:ZipPackageCompressionLevel=normal /v:m /p:defineConstants=SignAssembly /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=$env:CERT_PATH
 
 #download nuget package
 $ARTIFACTORY_SRC_REPO="sonarsource-nuget-qa"
