@@ -59,5 +59,5 @@ del $env:APPDATA\NuGet\NuGet.Config
 $apikey = $env:ARTIFACTORY_DEPLOY_USERNAME+":"+$env:ARTIFACTORY_DEPLOY_PASSWORD
 & $env:NUGET_PATH setapikey $apikey -Source repox
 
-& $env:NUGET_PATH push "SonarAnalyzer.CSharp.$env:BUILD_NAME.nupkg" -Source repox
-& $env:NUGET_PATH push "SonarAnalyzer.VisualBasic.$env:BUILD_NAME.nupkg" -Source repox
+& $env:NUGET_PATH push "SonarAnalyzer.CSharp.$env:RELEASE_NAME.nupkg" -Source repox
+& $env:NUGET_PATH push "SonarAnalyzer.VisualBasic.$env:RELEASE_NAME.nupkg" -Source repox
