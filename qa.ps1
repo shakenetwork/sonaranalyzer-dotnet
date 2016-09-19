@@ -77,7 +77,8 @@ if ($env:FILENAME -like '*VisualBasic*') {
 if ($env:FILENAME -like '*Runner*') {
     $dllpath="SonarQube.SonarLint.Runner"
 }
-Move-Item .\analyzers\*.dll .\src\$dllpath\bin\Release -force
+Copy-Item .\analyzers\*.dll .\src\$dllpath\bin\Release -force
+Copy-Item .\analyzers\*.dll .\its\binaries -force
 
 #run tests
 Write-Host "Start tests"
