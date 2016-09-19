@@ -46,10 +46,18 @@ function CreateRelease([string] $productName, [string] $version, [string] $expec
     [System.IO.File]::WriteAllLines("$workDir\$productName.nuspec", $fileContent, $Utf8NoBomEncoding)
 
     # repack with the new name
-    &$(env:NUGET_PATH) pack $workDir\$productName.nuspec
+    & $env:NUGET_PATH pack $workDir\$productName.nuspec
 }
 
 CreateRelease -productName "SonarAnalyzer.CSharp" -version $(env:BUILD_NAME) -expectedSha1 $(env:SHA1) -releaseVersion $(env:RELEASE_NAME)
 CreateRelease -productName "SonarAnalyzer.VisualBasic" -version $(env:BUILD_NAME) -expectedSha1 $(env:SHA1) -releaseVersion $(env:RELEASE_NAME)
 
 # push to repox
+#setup Nuget.config
+del $env:APPDATA\NuGet\NuGet.Config
+& $env:NUGET_PATH sources Add -Name repox -Source https://repox.sonarsource.com/api/nuget/sonarsource-nuget-qa/
+$apikey = $env:ARTIFACTORY_DEPLOY_USERNAME+":"+$env:ARTIFACTORY_DEPLOY_PASSWORD
+& $env:NUGET_PATH setapikey $apikey -Source repox
+
+& $env:NUGET_PATH push "SonarAnalyzer.CSharp.$(env:BUILD_NAME).nupkg" -Source repox
+& $env:NUGET_PATH push "SonarAnalyzer.VisualBasic.$(env:BUILD_NAME).nupkg" -Source repox
