@@ -2,14 +2,14 @@ $ErrorActionPreference = "Stop"
 
 #download MSBuild
     $url = "https://github.com/SonarSource-VisualStudio/sonar-msbuild-runner/releases/download/2.0/MSBuild.SonarQube.Runner-2.0.zip"
-    $output = "..\MSBuild.SonarQube.Runner.zip"    
+    $output = ".\MSBuild.SonarQube.Runner.zip"    
     Invoke-WebRequest -Uri $url -OutFile $output
-    unzip -o ..\MSBuild.SonarQube.Runner.zip
+    unzip -o .\MSBuild.SonarQube.Runner.zip
 
 if ($env:IS_PULLREQUEST -eq "true") { 
     write-host -f green "in a pull request"
 
-    ..\MSBuild.SonarQube.Runner begin /k:sonaranalyzer-csharp-vbnet /n:"SonarAnalyzer for C#" /v:latest `
+    .\MSBuild.SonarQube.Runner begin /k:sonaranalyzer-csharp-vbnet /n:"SonarAnalyzer for C#" /v:latest `
         /d:sonar.host.url=$env:SONAR_HOST_URL `
         /d:sonar.login=$env:SONAR_TOKEN `
         /d:sonar.github.pullRequest=$env:PULL_REQUEST `
@@ -18,10 +18,10 @@ if ($env:IS_PULLREQUEST -eq "true") {
         /d:sonar.analysis.mode=issues `
         /d:sonar.scanAllFiles=true
 
-    & $env:NUGET_PATH restore ..\SonarAnalyzer.sln
-    & $env:MSBUILD_PATH ..\SonarAnalyzer.sln /t:rebuild /p:Configuration=Release /p:DeployExtension=false
+    & $env:NUGET_PATH restore .\SonarAnalyzer.sln
+    & $env:MSBUILD_PATH .\SonarAnalyzer.sln /t:rebuild /p:Configuration=Release /p:DeployExtension=false
 
-    ..\MSBuild.SonarQube.Runner end /d:sonar.login=$env:SONAR_TOKEN
+    .\MSBuild.SonarQube.Runner end /d:sonar.login=$env:SONAR_TOKEN
 
 } else {
     if (($env:GITHUB_BRANCH -eq "master") -or ($env:GITHUB_BRANCH -eq "refs/heads/master")) {
@@ -42,17 +42,17 @@ if ($env:IS_PULLREQUEST -eq "true") {
         $sha1 = "$env:GIT_SHA1"
 
         #Append build number to the versions
-        (Get-Content ..\build\Version.props) -replace '<NugetVersion>\$\(MainVersion\)</NugetVersion>', "<NugetVersion>`$(MainVersion)-build$buildversion</NugetVersion>" | Set-Content ..\build\Version.props
-        (Get-Content ..\build\Version.props) -replace '<AssemblyFileVersion>\$\(MainVersion\)\.0</AssemblyFileVersion>', "<AssemblyFileVersion>`$(MainVersion).$unpaddedBuildversion</AssemblyFileVersion>" | Set-Content ..\build\Version.props
-        (Get-Content ..\build\Version.props) -replace '<AssemblyInformationalVersion>Version:\$\(AssemblyFileVersion\) Branch:not-set Sha1:not-set</AssemblyInformationalVersion>', "<AssemblyInformationalVersion>Version:`$(AssemblyFileVersion) Branch:$branchName Sha1:$sha1</AssemblyInformationalVersion>" | Set-Content ..\build\Version.props
-        & $env:MSBUILD_PATH  ..\build\ChangeVersion.proj
+        (Get-Content .\build\Version.props) -replace '<NugetVersion>\$\(MainVersion\)</NugetVersion>', "<NugetVersion>`$(MainVersion)-build$buildversion</NugetVersion>" | Set-Content .\build\Version.props
+        (Get-Content .\build\Version.props) -replace '<AssemblyFileVersion>\$\(MainVersion\)\.0</AssemblyFileVersion>', "<AssemblyFileVersion>`$(MainVersion).$unpaddedBuildversion</AssemblyFileVersion>" | Set-Content .\build\Version.props
+        (Get-Content .\build\Version.props) -replace '<AssemblyInformationalVersion>Version:\$\(AssemblyFileVersion\) Branch:not-set Sha1:not-set</AssemblyInformationalVersion>', "<AssemblyInformationalVersion>Version:`$(AssemblyFileVersion) Branch:$branchName Sha1:$sha1</AssemblyInformationalVersion>" | Set-Content .\build\Version.props
+        & $env:MSBUILD_PATH  .\build\ChangeVersion.proj
 
         #build
-        & $env:NUGET_PATH restore ..\SonarAnalyzer.sln
-        & $env:MSBUILD_PATH ..\SonarAnalyzer.sln /p:configuration=Release /p:DeployExtension=false /p:ZipPackageCompressionLevel=normal /v:m /p:defineConstants=SignAssembly /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=$env:CERT_PATH
+        & $env:NUGET_PATH restore .\SonarAnalyzer.sln
+        & $env:MSBUILD_PATH .\SonarAnalyzer.sln /p:configuration=Release /p:DeployExtension=false /p:ZipPackageCompressionLevel=normal /v:m /p:defineConstants=SignAssembly /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=$env:CERT_PATH
 
         #Generate the XML descriptor files for the C# plugin
-        pushd ..\src\SonarAnalyzer.RuleDescriptorGenerator\bin\Release
+        pushd .\src\SonarAnalyzer.RuleDescriptorGenerator\bin\Release
         .\SonarAnalyzer.RuleDescriptorGenerator.exe cs
         .\SonarAnalyzer.RuleDescriptorGenerator.exe vbnet
         popd
