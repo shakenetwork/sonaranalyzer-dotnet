@@ -58,7 +58,7 @@ if ($env:IS_PULLREQUEST -eq "true") {
         popd
 
         #generate packages
-        $files = Get-ChildItem ..\src -recurse *.nuspec
+        $files = Get-ChildItem .\src -recurse *.nuspec
         foreach ($file in $files) {
             $output = $file.directoryname+"\bin\Release"
             & $env:NUGET_PATH pack $file.fullname -NoPackageAnalysis -OutputDirectory $output
