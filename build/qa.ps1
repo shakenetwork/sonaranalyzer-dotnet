@@ -7,10 +7,10 @@ If (Test-Path $strFileName){
 }
 
 #nuget restore
-& $env:NUGET_PATH restore SonarAnalyzer.sln
+& $env:NUGET_PATH restore ..\SonarAnalyzer.sln
 
 #build tests
-& $env:MSBUILD_PATH SonarAnalyzer.sln /p:configuration=Release /p:DeployExtension=false /p:ZipPackageCompressionLevel=normal /v:m /p:defineConstants=SignAssembly /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=$env:CERT_PATH
+& $env:MSBUILD_PATH ..\SonarAnalyzer.sln /p:configuration=Release /p:DeployExtension=false /p:ZipPackageCompressionLevel=normal /v:m /p:defineConstants=SignAssembly /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=$env:CERT_PATH
 
 #download nuget package
 $ARTIFACTORY_SRC_REPO="sonarsource-nuget-qa"
@@ -27,19 +27,19 @@ Invoke-WebRequest -UseBasicParsing -Uri "$url" -Headers $Headers -OutFile $env:F
 $zipName=$env:FILENAME.Substring(0, $env:FILENAME.LastIndexOf('.'))+".zip"
 Move-Item $env:FILENAME $zipName -force
 $shell_app=new-object -com shell.application
-$currentdir=(Get-Item -Path ".\" -Verbose).FullName
-$destination = $shell_app.NameSpace($currentdir)
-$zip_file = $shell_app.NameSpace("$currentdir\$zipName")
-Write-Host "Unzipping $currentdir\$zipName"
+$baseDir=(Get-Item -Path "..\" -Verbose).FullName
+$destination = $shell_app.NameSpace($baseDir)
+$zip_file = $shell_app.NameSpace("$baseDir\$zipName")
+Write-Host "Unzipping $baseDir\$zipName"
 $destination.CopyHere($zip_file.Items(), 0x14) 
 
 #get sha1
 $productversion="empty"
-if (Test-Path .\analyzers\SonarAnalyzer.dll) {
-  $productversion=ls .\analyzers\SonarAnalyzer.dll | % { $_.versioninfo.productversion }
+if (Test-Path ..\analyzers\SonarAnalyzer.dll) {
+  $productversion=ls ..\analyzers\SonarAnalyzer.dll | % { $_.versioninfo.productversion }
 }else{
-  if (Test-Path .\assembly\SonarAnalyzer.dll) {
-    $productversion=ls .\assembly\SonarAnalyzer.dll | % { $_.versioninfo.productversion }
+  if (Test-Path ..\assembly\SonarAnalyzer.dll) {
+    $productversion=ls ..\assembly\SonarAnalyzer.dll | % { $_.versioninfo.productversion }
   }   
 }
 
@@ -51,7 +51,7 @@ if ($productversion -eq "empty") {
 $sha1=$productversion.Substring($productversion.LastIndexOf('Sha1:')+5)
 Write-Host "Checking out $sha1"
 $s="SHA1=$sha1"
-$s | out-file ".\sha1.properties"
+$s | out-file "..\sha1.properties"
 
 Write-Host "GITHUB_BRANCH $env:GITHUB_BRANCH"
 if (($env:GITHUB_BRANCH -eq "master") -or ($env:GITHUB_BRANCH -eq "refs/heads/master")) {
@@ -59,7 +59,7 @@ if (($env:GITHUB_BRANCH -eq "master") -or ($env:GITHUB_BRANCH -eq "refs/heads/ma
 }
 $s="GITHUB_BRANCH=$env:GITHUB_BRANCH"
 Write-Host "$s"
-$s | out-file ".\branch.properties"
+$s | out-file "..\branch.properties"
 
 #checkout commit
 git pull origin $env:GITHUB_BRANCH
@@ -77,16 +77,16 @@ if ($env:FILENAME -like '*VisualBasic*') {
 if ($env:FILENAME -like '*Scanner*') {
     $dllpath="SonarAnalyzer.Scanner"
 }
-Copy-Item .\analyzers\*.dll .\src\$dllpath\bin\Release -force
-Copy-Item .\analyzers\*.dll .\its\binaries -force
+Copy-Item ..\analyzers\*.dll ..\src\$dllpath\bin\Release -force
+Copy-Item ..\analyzers\*.dll ..\its\binaries -force
 
 #run tests
 Write-Host "Start tests"
-& $env:VSTEST_PATH .\src\Tests\SonarAnalyzer.Platform.Integration.UnitTest\bin\Release\SonarAnalyzer.Platform.Integration.UnitTest.dll
-& $env:VSTEST_PATH .\src\Tests\SonarAnalyzer.UnitTest\bin\Release\SonarAnalyzer.UnitTest.dll
+& $env:VSTEST_PATH ..\src\Tests\SonarAnalyzer.Platform.Integration.UnitTest\bin\Release\SonarAnalyzer.Platform.Integration.UnitTest.dll
+& $env:VSTEST_PATH ..\src\Tests\SonarAnalyzer.UnitTest\bin\Release\SonarAnalyzer.UnitTest.dll
  
 #run regression-test
 Write-Host "Start regression tests"
 cd its
 git submodule update --init --recursive --depth 1
-cmd /c .\regression-test.bat
+cmd /c ..\regression-test.bat
