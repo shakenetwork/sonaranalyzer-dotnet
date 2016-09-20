@@ -77,16 +77,17 @@ if ($env:FILENAME -like '*VisualBasic*') {
 if ($env:FILENAME -like '*Scanner*') {
     $dllpath="SonarAnalyzer.Scanner"
 }
+Write-Host "Copying analyzers"
 Copy-Item .\analyzers\*.dll .\src\$dllpath\bin\Release -force
 Copy-Item .\analyzers\*.dll .\its\binaries -force
 
 #run tests
 Write-Host "Start tests"
-& $env:VSTEST_PATH .\src\Tests\SonarAnalyzer.Platform.Integration.UnitTest\bin\Release\SonarAnalyzer.Platform.Integration.UnitTest.dll
-& $env:VSTEST_PATH .\src\Tests\SonarAnalyzer.UnitTest\bin\Release\SonarAnalyzer.UnitTest.dll
+& $env:VSTEST_PATH ..\src\Tests\SonarAnalyzer.Platform.Integration.UnitTest\bin\Release\SonarAnalyzer.Platform.Integration.UnitTest.dll
+& $env:VSTEST_PATH ..\src\Tests\SonarAnalyzer.UnitTest\bin\Release\SonarAnalyzer.UnitTest.dll
  
 #run regression-test
 Write-Host "Start regression tests"
-cd its
+cd ..\its
 git submodule update --init --recursive --depth 1
 cmd /c .\regression-test.bat
