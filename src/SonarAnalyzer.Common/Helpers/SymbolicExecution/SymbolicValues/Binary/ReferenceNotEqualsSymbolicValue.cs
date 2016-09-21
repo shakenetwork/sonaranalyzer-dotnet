@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
 
         public override string ToString()
         {
-            return $"!RefEq({leftOperand}, {rightOperand})";
+            return $"!RefEq({LeftOperand}, {RightOperand})";
         }
     }
 }

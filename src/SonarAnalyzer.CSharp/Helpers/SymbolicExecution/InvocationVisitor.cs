@@ -20,8 +20,8 @@
 
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis;
-using System;
 using System.Collections.Immutable;
+using System;
 
 namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
 {
@@ -90,11 +90,14 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
             SymbolicValue arg1;
             SymbolicValue arg2;
 
-            return programState
+            var newProgramState = programState
                 .PopValue(out arg1)
                 .PopValue(out arg2)
-                .PopValue()
-                .PushValue(new ValueEqualsSymbolicValue(arg1, arg2));
+                .PopValue();
+
+            var equals = new ValueEqualsSymbolicValue(arg1, arg2);
+            newProgramState = newProgramState.PushValue(equals);
+            return SetConstraintOnValueEquals(equals, newProgramState);
         }
 
         private ProgramState HandleReferenceEqualsCall(InvocationExpressionSyntax invocation, ProgramState programState)
@@ -107,9 +110,11 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
                 .PopValue(out arg2)
                 .PopValue();
 
-            var refEquals = new ReferenceEqualsSymbolicValue(arg1, arg2);
-            newProgramState = newProgramState.PushValue(refEquals);
-            return SetConstraintOnReferenceEquals(refEquals, invocation, arg1, arg2, newProgramState);
+            return new ReferenceEqualsConstraintHandler(arg1, arg2,
+                    invocation.ArgumentList.Arguments[0].Expression,
+                    invocation.ArgumentList.Arguments[1].Expression,
+                    newProgramState, semanticModel)
+                .PushWithConstraint();
         }
 
         private static ProgramState HandleInstanceEqualsCall(ProgramState programState)
@@ -127,63 +132,9 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
                 ? memberAccess.MemberExpression
                 : SymbolicValue.This;
 
-            return newProgramState.PushValue(new ValueEqualsSymbolicValue(arg1, arg2));
-        }
-
-        private ProgramState SetConstraintOnReferenceEquals(ReferenceEqualsSymbolicValue refEquals, InvocationExpressionSyntax invocation,
-            SymbolicValue arg1, SymbolicValue arg2, ProgramState programState)
-        {
-            if (AreBothArgumentsNull(arg1, arg2, programState))
-            {
-                return refEquals.SetConstraint(BoolConstraint.True, programState);
-            }
-
-            if (IsAnyArgumentNonNullValueType(invocation, arg1, arg2, programState) ||
-                ArgumentsHaveDifferentNullability(arg1, arg2, programState))
-            {
-                return refEquals.SetConstraint(BoolConstraint.False, programState);
-            }
-
-            if (arg1 == arg2)
-            {
-                return refEquals.SetConstraint(BoolConstraint.True, programState);
-            }
-
-            return programState;
-        }
-
-        private static bool ArgumentsHaveDifferentNullability(SymbolicValue arg1, SymbolicValue arg2, ProgramState programState)
-        {
-            return arg1.HasConstraint(ObjectConstraint.Null, programState) && arg2.HasConstraint(ObjectConstraint.NotNull, programState) ||
-                arg1.HasConstraint(ObjectConstraint.NotNull, programState) && arg2.HasConstraint(ObjectConstraint.Null, programState);
-        }
-
-        private bool IsAnyArgumentNonNullValueType(InvocationExpressionSyntax invocation,
-            SymbolicValue arg1, SymbolicValue arg2, ProgramState programState)
-        {
-            var type1 = semanticModel.GetTypeInfo(invocation.ArgumentList.Arguments[0].Expression).Type;
-            var type2 = semanticModel.GetTypeInfo(invocation.ArgumentList.Arguments[1].Expression).Type;
-
-            if (type1 == null ||
-                type2 == null)
-            {
-                return false;
-            }
-
-            return IsValueNotNull(arg1, type1, programState) ||
-                IsValueNotNull(arg2, type2, programState);
-        }
-
-        private static bool IsValueNotNull(SymbolicValue arg, ITypeSymbol type, ProgramState programState)
-        {
-            return arg.HasConstraint(ObjectConstraint.NotNull, programState) &&
-                type.IsValueType;
-        }
-
-        private static bool AreBothArgumentsNull(SymbolicValue arg1, SymbolicValue arg2, ProgramState programState)
-        {
-            return arg1.HasConstraint(ObjectConstraint.Null, programState) &&
-                arg2.HasConstraint(ObjectConstraint.Null, programState);
+            var equals = new ValueEqualsSymbolicValue(arg1, arg2);
+            newProgramState = newProgramState.PushValue(equals);
+            return SetConstraintOnValueEquals(equals, newProgramState);
         }
 
         private static readonly ImmutableHashSet<string> IsNullMethodNames = ImmutableHashSet.Create(
@@ -219,6 +170,100 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
                 methodSymbol.ContainingType.Is(KnownType.System_Object) &&
                 methodSymbol.IsStatic &&
                 methodSymbol.Name == EqualsLiteral;
+        }
+
+        internal static ProgramState SetConstraintOnValueEquals(ValueEqualsSymbolicValue equals,
+            ProgramState programState)
+        {
+            if (equals.LeftOperand == equals.RightOperand)
+            {
+                return equals.SetConstraint(BoolConstraint.True, programState);
+            }
+
+            return programState;
+        }
+
+        internal class ReferenceEqualsConstraintHandler
+        {
+            private readonly ExpressionSyntax expressionLeft;
+            private readonly ExpressionSyntax expressionRight;
+            private readonly ProgramState programState;
+            private readonly SemanticModel semanticModel;
+            private readonly SymbolicValue valueLeft;
+            private readonly SymbolicValue valueRight;
+
+            public ReferenceEqualsConstraintHandler(SymbolicValue valueLeft, SymbolicValue valueRight,
+                ExpressionSyntax expressionLeft, ExpressionSyntax expressionRight,
+                ProgramState programState, SemanticModel semanticModel)
+            {
+                this.valueLeft = valueLeft;
+                this.valueRight = valueRight;
+                this.expressionLeft = expressionLeft;
+                this.expressionRight = expressionRight;
+                this.programState = programState;
+                this.semanticModel = semanticModel;
+            }
+
+            public ProgramState PushWithConstraint()
+            {
+                var refEquals = new ReferenceEqualsSymbolicValue(valueLeft, valueRight);
+                var newProgramState = programState.PushValue(refEquals);
+                return SetConstraint(refEquals, newProgramState);
+            }
+
+            private ProgramState SetConstraint(ReferenceEqualsSymbolicValue refEquals, ProgramState programState)
+            {
+                if (AreBothArgumentsNull())
+                {
+                    return refEquals.SetConstraint(BoolConstraint.True, programState);
+                }
+
+                if (IsAnyArgumentNonNullValueType() ||
+                    ArgumentsHaveDifferentNullability())
+                {
+                    return refEquals.SetConstraint(BoolConstraint.False, programState);
+                }
+
+                if (valueLeft == valueRight)
+                {
+                    return refEquals.SetConstraint(BoolConstraint.True, programState);
+                }
+
+                return programState;
+            }
+
+            private bool ArgumentsHaveDifferentNullability()
+            {
+                return valueLeft.HasConstraint(ObjectConstraint.Null, programState) && valueRight.HasConstraint(ObjectConstraint.NotNull, programState) ||
+                    valueLeft.HasConstraint(ObjectConstraint.NotNull, programState) && valueRight.HasConstraint(ObjectConstraint.Null, programState);
+            }
+
+            private bool IsAnyArgumentNonNullValueType()
+            {
+                var type1 = semanticModel.GetTypeInfo(expressionLeft).Type;
+                var type2 = semanticModel.GetTypeInfo(expressionRight).Type;
+
+                if (type1 == null ||
+                    type2 == null)
+                {
+                    return false;
+                }
+
+                return IsValueNotNull(valueLeft, type1, programState) ||
+                    IsValueNotNull(valueRight, type2, programState);
+            }
+
+            private static bool IsValueNotNull(SymbolicValue arg, ITypeSymbol type, ProgramState programState)
+            {
+                return arg.HasConstraint(ObjectConstraint.NotNull, programState) &&
+                    type.IsValueType;
+            }
+
+            private bool AreBothArgumentsNull()
+            {
+                return valueLeft.HasConstraint(ObjectConstraint.Null, programState) &&
+                    valueRight.HasConstraint(ObjectConstraint.Null, programState);
+            }
         }
     }
 }

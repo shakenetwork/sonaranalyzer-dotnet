@@ -36,12 +36,12 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
         {
             if (boolConstraint == BoolConstraint.True)
             {
-                return rightOperand.TrySetConstraint(leftConstraint, programState)
-                    .SelectMany(ps => leftOperand.TrySetConstraint(rightConstraint, ps));
+                return RightOperand.TrySetConstraint(leftConstraint, programState)
+                    .SelectMany(ps => LeftOperand.TrySetConstraint(rightConstraint, ps));
             }
 
-            return rightOperand.TrySetConstraint(leftConstraint?.OppositeForLogicalNot, programState)
-                .SelectMany(ps => leftOperand.TrySetConstraint(rightConstraint?.OppositeForLogicalNot, ps));
+            return RightOperand.TrySetConstraint(leftConstraint?.OppositeForLogicalNot, programState)
+                .SelectMany(ps => LeftOperand.TrySetConstraint(rightConstraint?.OppositeForLogicalNot, ps));
         }
     }
 }

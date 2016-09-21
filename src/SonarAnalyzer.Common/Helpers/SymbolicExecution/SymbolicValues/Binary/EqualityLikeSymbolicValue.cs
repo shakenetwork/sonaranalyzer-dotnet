@@ -72,7 +72,7 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
 
         internal BinaryRelationship GetRelationship(BoolConstraint boolConstraint)
         {
-            return GetNormalizedRelationship(boolConstraint, leftOperand, rightOperand);
+            return GetNormalizedRelationship(boolConstraint, LeftOperand, RightOperand);
         }
 
         public override IEnumerable<ProgramState> TrySetConstraint(SymbolicValueConstraint constraint, ProgramState currentProgramState)
@@ -92,9 +92,9 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
             }
 
             SymbolicValueConstraint leftConstraint;
-            var leftHasConstraint = leftOperand.TryGetConstraint(currentProgramState, out leftConstraint);
+            var leftHasConstraint = LeftOperand.TryGetConstraint(currentProgramState, out leftConstraint);
             SymbolicValueConstraint rightConstraint;
-            var rightHasConstraint = rightOperand.TryGetConstraint(currentProgramState, out rightConstraint);
+            var rightHasConstraint = RightOperand.TryGetConstraint(currentProgramState, out rightConstraint);
 
             var relationship = GetRelationship(boolConstraint);
 

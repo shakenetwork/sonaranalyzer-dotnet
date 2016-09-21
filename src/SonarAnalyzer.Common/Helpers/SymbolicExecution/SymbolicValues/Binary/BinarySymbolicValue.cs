@@ -22,13 +22,13 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
 {
     public class BinarySymbolicValue : SymbolicValue
     {
-        protected readonly SymbolicValue leftOperand;
-        protected readonly SymbolicValue rightOperand;
+        public SymbolicValue LeftOperand { get; }
+        public SymbolicValue RightOperand { get; }
 
         public BinarySymbolicValue(SymbolicValue leftOperand, SymbolicValue rightOperand)
         {
-            this.leftOperand = leftOperand;
-            this.rightOperand = rightOperand;
+            this.LeftOperand = leftOperand;
+            this.RightOperand = rightOperand;
         }
     }
 }

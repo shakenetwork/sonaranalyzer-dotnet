@@ -213,9 +213,11 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.CSharp
                     break;
 
                 case SyntaxKind.EqualsExpression:
+                    var binary = (BinaryExpressionSyntax)instruction;
                     newProgramState = IsOperatorOnObject(instruction)
-                        ? VisitBinaryOperator(newProgramState, (l, r) => new ReferenceEqualsSymbolicValue(l, r))
-                        : VisitBinaryOperator(newProgramState, (l, r) => new ValueEqualsSymbolicValue(l, r));
+                        ? VisitReferenceEquals(binary, newProgramState)
+                        : VisitValueEquals(newProgramState);
+
                     break;
 
                 case SyntaxKind.NotEqualsExpression:
@@ -549,6 +551,33 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.CSharp
             var operatorSymbol = SemanticModel.GetSymbolInfo(instruction).Symbol as IMethodSymbol;
             return operatorSymbol != null &&
                 operatorSymbol.ContainingType.Is(KnownType.System_Object);
+        }
+
+        private static ProgramState VisitValueEquals(ProgramState programState)
+        {
+            SymbolicValue leftSymbol;
+            SymbolicValue rightSymbol;
+
+            var newProgramState = programState
+                .PopValue(out rightSymbol)
+                .PopValue(out leftSymbol);
+
+            var equals = new ValueEqualsSymbolicValue(leftSymbol, rightSymbol);
+            newProgramState = newProgramState.PushValue(equals);
+            return InvocationVisitor.SetConstraintOnValueEquals(equals, newProgramState);
+        }
+
+        private ProgramState VisitReferenceEquals(BinaryExpressionSyntax equals, ProgramState programState)
+        {
+            SymbolicValue leftSymbol;
+            SymbolicValue rightSymbol;
+
+            var newProgramState = programState
+                .PopValue(out rightSymbol)
+                .PopValue(out leftSymbol);
+
+            return new InvocationVisitor.ReferenceEqualsConstraintHandler(leftSymbol, rightSymbol,
+                equals.Left, equals.Right, newProgramState, SemanticModel).PushWithConstraint();
         }
 
         private static ProgramState VisitBinaryOperator(ProgramState programState,

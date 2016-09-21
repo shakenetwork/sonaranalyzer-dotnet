@@ -41,21 +41,21 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
 
             if (boolConstraint == BoolConstraint.False)
             {
-                return leftOperand.TrySetConstraint(BoolConstraint.False, currentProgramState)
-                    .SelectMany(ps => rightOperand.TrySetConstraint(BoolConstraint.False, ps));
+                return LeftOperand.TrySetConstraint(BoolConstraint.False, currentProgramState)
+                    .SelectMany(ps => RightOperand.TrySetConstraint(BoolConstraint.False, ps));
             }
 
-            return leftOperand.TrySetConstraint(BoolConstraint.True, currentProgramState)
-                    .SelectMany(ps => rightOperand.TrySetConstraint(BoolConstraint.False, ps))
-                .Union(leftOperand.TrySetConstraint(BoolConstraint.False, currentProgramState)
-                    .SelectMany(ps => rightOperand.TrySetConstraint(BoolConstraint.True, ps)))
-                .Union(leftOperand.TrySetConstraint(BoolConstraint.True, currentProgramState)
-                    .SelectMany(ps => rightOperand.TrySetConstraint(BoolConstraint.True, ps)));
+            return LeftOperand.TrySetConstraint(BoolConstraint.True, currentProgramState)
+                    .SelectMany(ps => RightOperand.TrySetConstraint(BoolConstraint.False, ps))
+                .Union(LeftOperand.TrySetConstraint(BoolConstraint.False, currentProgramState)
+                    .SelectMany(ps => RightOperand.TrySetConstraint(BoolConstraint.True, ps)))
+                .Union(LeftOperand.TrySetConstraint(BoolConstraint.True, currentProgramState)
+                    .SelectMany(ps => RightOperand.TrySetConstraint(BoolConstraint.True, ps)));
         }
 
         public override string ToString()
         {
-            return leftOperand + " | " + rightOperand;
+            return LeftOperand + " | " + RightOperand;
         }
     }
 }

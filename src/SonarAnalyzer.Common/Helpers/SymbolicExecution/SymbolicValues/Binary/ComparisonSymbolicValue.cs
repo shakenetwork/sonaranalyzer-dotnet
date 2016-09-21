@@ -54,7 +54,7 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
 
         private BinaryRelationship GetRelationship(BoolConstraint boolConstraint)
         {
-            var relationship = new ComparisonRelationship(comparisonKind, leftOperand, rightOperand);
+            var relationship = new ComparisonRelationship(comparisonKind, LeftOperand, RightOperand);
 
             return boolConstraint == BoolConstraint.True
                 ? relationship
@@ -66,7 +66,7 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
             var op = comparisonKind == ComparisonKind.Less
                 ? "<"
                 : "<=";
-            return $"{op}({leftOperand}, {rightOperand})";
+            return $"{op}({LeftOperand}, {RightOperand})";
         }
     }
 }

@@ -717,6 +717,25 @@ namespace Tests.Diagnostics
             }
         }
 
+        public void EqualsTest32(object o)
+        {
+            var o2 = o;
+            if (o == o2) { } // Noncompliant
+            if (object.ReferenceEquals(o, o2)) { } // Noncompliant
+            if (o.Equals(o2)) { } // Noncompliant
+            if (object.Equals(o2, o)) { } // Noncompliant
+
+
+            int i = 1;
+            int j = i;
+            if (i == j) // Noncompliant
+            {
+            }
+
+            if (i.Equals(j)) { } // Noncompliant
+            if (object.Equals(i, j)) { } // Noncompliant
+        }
+
         enum MyEnum
         {
             One, Two
