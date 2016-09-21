@@ -113,7 +113,7 @@ function ReleaseAll(
                     -version $buildVersion -expectedSha1 $sha1  -releaseVersion $releaseVersion -additionalNugetFileContent $scannerContent -nugetPath $nugetPath
 }
 
-ReleaseAll -buildVersion $env:BUILD_NAME -sha1 $env:SHA1 -releaseVersion $env:RELEASE_NAME -nugetPath $env:NUGET_PATH
+ReleaseAll -buildVersion $env:PROMOTED_VERSION -sha1 $env:SHA1 -releaseVersion $env:RELEASE_VERSION -nugetPath $env:NUGET_PATH
 
 # for local testing:
 # $releaseVersion = "1.19.0-alpha01"
@@ -142,8 +142,8 @@ del $env:APPDATA\NuGet\NuGet.Config
 $apikey = $env:ARTIFACTORY_DEPLOY_USERNAME+":"+$env:ARTIFACTORY_DEPLOY_PASSWORD
 & $env:NUGET_PATH setapikey $apikey -Source repox
 
-pushToRepox -productName "SonarAnalyzer.CSharp" -releaseVersion $env:RELEASE_NAME -nugetPath $env:NUGET_PATH
-pushToRepox -productName "SonarAnalyzer.VisualBasic" -releaseVersion $env:RELEASE_NAME -nugetPath $env:NUGET_PATH
-pushToRepox -productName "SonarAnalyzer.RuleDocGenerator.CSharp" -releaseVersion $env:RELEASE_NAME -nugetPath $env:NUGET_PATH
-pushToRepox -productName "SonarAnalyzer.RuleDocGenerator.VisualBasic" -releaseVersion $env:RELEASE_NAME -nugetPath $env:NUGET_PATH
-pushToRepox -productName "SonarAnalyzer.Scanner" -releaseVersion $env:RELEASE_NAME -nugetPath $env:NUGET_PATH
+pushToRepox -productName "SonarAnalyzer.CSharp"                         -releaseVersion $env:RELEASE_VERSION -nugetPath $env:NUGET_PATH
+pushToRepox -productName "SonarAnalyzer.VisualBasic"                    -releaseVersion $env:RELEASE_VERSION -nugetPath $env:NUGET_PATH
+pushToRepox -productName "SonarAnalyzer.RuleDocGenerator.CSharp"        -releaseVersion $env:RELEASE_VERSION -nugetPath $env:NUGET_PATH
+pushToRepox -productName "SonarAnalyzer.RuleDocGenerator.VisualBasic"   -releaseVersion $env:RELEASE_VERSION -nugetPath $env:NUGET_PATH
+pushToRepox -productName "SonarAnalyzer.Scanner"                        -releaseVersion $env:RELEASE_VERSION -nugetPath $env:NUGET_PATH
