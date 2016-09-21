@@ -1,4 +1,12 @@
-function CreateRelease([string] $productName, [string] $version, [string] $expectedSha1, [string] $releaseVersion)
+$ErrorActionPreference = "Stop"
+
+function CreateRelease(
+    [string] $productName, 
+    [string] $version, 
+    [string] $expectedSha1, 
+    [string] $releaseVersion, 
+    [string] $additionalNugetFileContent,
+    [string] $nugetPath)
 {
     # delete NuGet file if exists
     If (Test-Path "$productName.$version.nupkg"){
@@ -25,39 +33,117 @@ function CreateRelease([string] $productName, [string] $version, [string] $expec
     $destination.CopyHere($zip_file.Items(), 0x14) 
 
     # get sha1
-    $productversion=ls $workDir\analyzers\SonarAnalyzer.dll | % { $_.versioninfo.productversion }
-    $sha1=$productversion.Substring($productversion.LastIndexOf('Sha1:')+5)
-    if ($sha1 -ne $expectedSha1){
-        Write-Host "SHA1 doesn't match expected"
-        return
+    $productVersion = ""
+    If (Test-Path "$workDir\analyzers"){
+        $productversion=ls $workDir\analyzers\SonarAnalyzer.dll | % { $_.versioninfo.productversion }
+    }
+    ElseIf (Test-Path "$workDir\assembly"){
+        $productversion=ls $workDir\assembly\SonarAnalyzer.dll | % { $_.versioninfo.productversion }
+    }
+    Else {
+        If (-Not ($productName.StartsWith("SonarAnalyzer.RuleDocGenerator."))){
+            Write-Error "Can't find Sha1"
+            return
+        }
+    }
+
+    If ($productVersion -ne "") {
+        $sha1=$productversion.Substring($productversion.LastIndexOf('Sha1:')+5)
+        if ($sha1 -ne $expectedSha1){
+            Write-Error "SHA1 doesn't match expected ($sha1)"
+            return
+        }
     }
 
     # change content of nuspec file
     (Get-Content $workDir\$productName.nuspec) -replace "<version>$version</version>", "<version>$releaseVersion</version>" | Set-Content $workDir\$productName.nuspec
 
     $additionalContent = "<files>
-     <file src=""analyzers\SonarAnalyzer.dll"" target=""analyzers"" />
-     <file src=""analyzers\$productName.dll"" target=""analyzers"" />
+     <file src=""analyzers\*.dll"" target=""analyzers\"" />
      <file src=""tools\*.ps1"" target=""tools\"" />
+     <file src=""xml\*.xml"" target=""xml\"" />
+     <file src=""assembly\*.*"" target=""assembly\"" />
+     <file src=""protobuf\*.proto"" target=""protobuf\"" />
     </files>"
 
-    $fileContent = (Get-Content $workDir\$productName.nuspec) -replace "</metadata>", "</metadata>$additionalContent"
+    $fileContent = (Get-Content $workDir\$productName.nuspec) -replace "</metadata>", "</metadata>$additionalNugetFileContent"
     $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding($False)
     [System.IO.File]::WriteAllLines("$workDir\$productName.nuspec", $fileContent, $Utf8NoBomEncoding)
 
     # repack with the new name
-    & $env:NUGET_PATH pack $workDir\$productName.nuspec
+    & $nugetPath pack $workDir\$productName.nuspec
+    If($LASTEXITCODE -ne 0) { Write-Error "Packaging failed on $productName" Return }
 }
 
-CreateRelease -productName "SonarAnalyzer.CSharp" -version $env:BUILD_NAME -expectedSha1 $env:SHA1 -releaseVersion $env:RELEASE_NAME
-CreateRelease -productName "SonarAnalyzer.VisualBasic" -version $env:BUILD_NAME -expectedSha1 $env:SHA1 -releaseVersion $env:RELEASE_NAME
+function ReleaseAll(
+    [string] $buildVersion, 
+    [string] $sha1, 
+    [string] $releaseVersion, 
+    [string] $nugetPath)
+{
+    $analyzerContent = "<files>
+     <file src=""analyzers\*.dll"" target=""analyzers\"" />
+     <file src=""tools\*.ps1"" target=""tools\"" />
+    </files>"
+
+    $descriptorContent =  "<files>
+     <file src=""xml\*.xml"" target=""xml\"" />
+    </files>"
+
+    $scannerContent =  "<files>
+     <file src=""assembly\*.*"" target=""assembly\"" />
+     <file src=""protobuf\*.proto"" target=""protobuf\"" />
+    </files>"
+
+
+    # analyzers
+    CreateRelease   -productName "SonarAnalyzer.VisualBasic" `
+                    -version $buildVersion -expectedSha1 $sha1 -releaseVersion $releaseVersion -additionalNugetFileContent $analyzerContent -nugetPath $nugetPath
+    CreateRelease   -productName "SonarAnalyzer.CSharp" `
+                    -version $buildVersion -expectedSha1 $sha1 -releaseVersion $releaseVersion -additionalNugetFileContent $analyzerContent -nugetPath $nugetPath
+
+    # descriptors
+    CreateRelease   -productName "SonarAnalyzer.RuleDocGenerator.VisualBasic" `
+                    -version $buildVersion -expectedSha1 $sha1 -releaseVersion $releaseVersion -additionalNugetFileContent $descriptorContent -nugetPath $nugetPath
+    CreateRelease   -productName "SonarAnalyzer.RuleDocGenerator.CSharp" `
+                    -version $buildVersion -expectedSha1 $sha1 -releaseVersion $releaseVersion -additionalNugetFileContent $descriptorContent -nugetPath $nugetPath
+
+    # scanner
+    CreateRelease   -productName "SonarAnalyzer.Scanner" `
+                    -version $buildVersion -expectedSha1 $sha1  -releaseVersion $releaseVersion -additionalNugetFileContent $scannerContent -nugetPath $nugetPath
+}
+
+ReleaseAll -buildVersion $env:BUILD_NAME -sha1 $env:SHA1 -releaseVersion $env:RELEASE_NAME -nugetPath $env:NUGET_PATH
+
+# for local testing:
+# $releaseVersion = "1.19.0-alpha01"
+# ReleaseAll -buildVersion "1.19.0-build00932" -sha1 "d5b415b237f694b166f6ece8b0404fedd58a21fe" -releaseVersion $releaseVersion -nugetPath "nuget"
+
+function pushToRepox(
+    [string] $productName,
+    [string] $releaseVersion,
+    [string] $nugetPath)
+{
+    & $nugetPath push "$productName.$releaseVersion.nupkg" -Source repox
+    If($LASTEXITCODE -ne 0) { Write-Error "push failed for $productName" Return }
+
+    #compute artifact name from filename
+    $artifact=$productName
+    $filePath="$productName.$releaseVersion.nupkg"
+    #upload to maven repo
+    & "$env:WINDOWS_MVN_HOME\bin\mvn.bat" deploy:deploy-file -DgroupId="org.sonarsource.dotnet" -DartifactId="$artifact" -Dversion="$version" -Dpackaging="nupkg" -Dfile="$filePath" -DrepositoryId="sonarsource-public-qa" -Durl="https://repox.sonarsource.com/sonarsource-public-qa"
+    If($LASTEXITCODE -ne 0) { Write-Error "maven deploy failed for $productName" Return }
+}
 
 # push to repox
-#setup Nuget.config
+# setup Nuget.config
 del $env:APPDATA\NuGet\NuGet.Config
 & $env:NUGET_PATH sources Add -Name repox -Source https://repox.sonarsource.com/api/nuget/sonarsource-nuget-qa/
 $apikey = $env:ARTIFACTORY_DEPLOY_USERNAME+":"+$env:ARTIFACTORY_DEPLOY_PASSWORD
 & $env:NUGET_PATH setapikey $apikey -Source repox
 
-& $env:NUGET_PATH push "SonarAnalyzer.CSharp.$env:RELEASE_NAME.nupkg" -Source repox
-& $env:NUGET_PATH push "SonarAnalyzer.VisualBasic.$env:RELEASE_NAME.nupkg" -Source repox
+pushToRepox -productName "SonarAnalyzer.CSharp" -releaseVersion $env:RELEASE_NAME -nugetPath $env:NUGET_PATH
+pushToRepox -productName "SonarAnalyzer.VisualBasic" -releaseVersion $env:RELEASE_NAME -nugetPath $env:NUGET_PATH
+pushToRepox -productName "SonarAnalyzer.RuleDocGenerator.CSharp" -releaseVersion $env:RELEASE_NAME -nugetPath $env:NUGET_PATH
+pushToRepox -productName "SonarAnalyzer.RuleDocGenerator.VisualBasic" -releaseVersion $env:RELEASE_NAME -nugetPath $env:NUGET_PATH
+pushToRepox -productName "SonarAnalyzer.Scanner" -releaseVersion $env:RELEASE_NAME -nugetPath $env:NUGET_PATH
