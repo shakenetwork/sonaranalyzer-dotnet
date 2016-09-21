@@ -72,7 +72,10 @@ function CreateRelease(
 
     # repack with the new name
     & $nugetPath pack $workDir\$productName.nuspec
-    If($LASTEXITCODE -ne 0) { Write-Error "Packaging failed on $productName" Return }
+    If($LASTEXITCODE -ne 0) {
+        Write-Error "Packaging failed on $productName"
+        Return
+    }
 }
 
 function ReleaseAll(
@@ -125,14 +128,20 @@ function pushToRepox(
     [string] $nugetPath)
 {
     & $nugetPath push "$productName.$releaseVersion.nupkg" -Source repox
-    If($LASTEXITCODE -ne 0) { Write-Error "push failed for $productName" Return }
+    If($LASTEXITCODE -ne 0) {
+        Write-Error "push failed for $productName"
+        Return
+    }
 
     #compute artifact name from filename
     $artifact=$productName
     $filePath="$productName.$releaseVersion.nupkg"
     #upload to maven repo
     & "$env:WINDOWS_MVN_HOME\bin\mvn.bat" deploy:deploy-file -DgroupId="org.sonarsource.dotnet" -DartifactId="$artifact" -Dversion="$version" -Dpackaging="nupkg" -Dfile="$filePath" -DrepositoryId="sonarsource-public-qa" -Durl="https://repox.sonarsource.com/sonarsource-public-qa"
-    If($LASTEXITCODE -ne 0) { Write-Error "maven deploy failed for $productName" Return }
+    If($LASTEXITCODE -ne 0) {
+        Write-Error "maven deploy failed for $productName"
+        Return
+    }
 }
 
 # push to repox
