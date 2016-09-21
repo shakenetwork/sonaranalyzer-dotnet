@@ -137,7 +137,7 @@ function pushToRepox(
     $artifact=$productName
     $filePath="$productName.$releaseVersion.nupkg"
     #upload to maven repo
-    & "$env:WINDOWS_MVN_HOME\bin\mvn.bat" deploy:deploy-file -DgroupId="org.sonarsource.dotnet" -DartifactId="$artifact" -Dversion="$version" -Dpackaging="nupkg" -Dfile="$filePath" -DrepositoryId="sonarsource-public-qa" -Durl="https://repox.sonarsource.com/sonarsource-public-qa"
+    & "$env:WINDOWS_MVN_HOME\bin\mvn.bat" deploy:deploy-file -DgroupId="org.sonarsource.dotnet" -DartifactId="$artifact" -Dversion="$releaseVersion" -Dpackaging="nupkg" -Dfile="$filePath" -DrepositoryId="sonarsource-public-qa" -Durl="https://repox.sonarsource.com/sonarsource-public-qa"
     If($LASTEXITCODE -ne 0) {
         Write-Error "maven deploy failed for $productName"
         Return
