@@ -27,6 +27,7 @@ using System.Linq;
 using SonarAnalyzer.Protobuf;
 using Google.Protobuf;
 using System.Collections.Generic;
+using System;
 
 namespace SonarAnalyzer.Integration.UnitTest
 {
@@ -60,12 +61,18 @@ namespace SonarAnalyzer.Integration.UnitTest
             CheckNotExpected(textActual);
 
             CheckCollectedTokens(".cs",
-                new ExpectedTokenInfo
+                3, new[]
                 {
-                    TokenCount = 34,
-                    DeclarationIndex = 2,
-                    ReferenceCount = 3,
-                    ReferenceIndex = 2
+                    new ExpectedReferenceInfo { Index = 0, NumberOfReferences = 2 },
+                    new ExpectedReferenceInfo { Index = 1, NumberOfReferences = 0 },
+                    new ExpectedReferenceInfo { Index = 2, NumberOfReferences = 1 }
+                },
+                60, new[]
+                {
+                    new ExpectedTokenInfo { Index = 0, Kind = TokenType.Comment, Text = "///" },
+                    new ExpectedTokenInfo { Index = 23, Kind = TokenType.TypeName, Text = "TTTestClass" },
+                    new ExpectedTokenInfo { Index = 46, Kind = TokenType.TypeName, Text = "TTTestClass" },
+                    new ExpectedTokenInfo { Index = 33, Kind = TokenType.Keyword, Text = "var" }
                 });
         }
 
@@ -81,32 +88,47 @@ namespace SonarAnalyzer.Integration.UnitTest
                 AnalyzerLanguage.VisualBasic.ToString()});
 
             CheckCollectedTokens(".vb",
-                new ExpectedTokenInfo
+                4, new[]
                 {
-                    TokenCount = 31,
-                    DeclarationIndex = 2,
-                    ReferenceCount = 3,
-                    ReferenceIndex = 2
+                    new ExpectedReferenceInfo { Index = 0, NumberOfReferences = 2 },
+                    new ExpectedReferenceInfo { Index = 1, NumberOfReferences = 0 },
+                    new ExpectedReferenceInfo { Index = 2, NumberOfReferences = 1 },
+                    new ExpectedReferenceInfo { Index = 3, NumberOfReferences = 0 }
+                },
+                57, new[]
+                {
+                    new ExpectedTokenInfo { Index = 0, Kind = TokenType.Comment, Text = "'''" },
+                    new ExpectedTokenInfo { Index = 23, Kind = TokenType.TypeName, Text = "TTTestClass" },
+                    new ExpectedTokenInfo { Index = 41, Kind = TokenType.TypeName, Text = "TTTestClass" },
+                    new ExpectedTokenInfo { Index = 40, Kind = TokenType.Keyword, Text = "New" }
                 });
         }
 
         private class ExpectedTokenInfo
         {
-            public int TokenCount { get; set; }
-            public int DeclarationIndex { get; set; }
-            public int ReferenceCount { get; internal set; }
-            public int ReferenceIndex { get; internal set; }
+            public int Index { get; set; }
+            public string Text { get; set; }
+            public TokenType Kind { get; set; }
         }
 
-        private void CheckCollectedTokens(string extension, ExpectedTokenInfo expectedTokenInfo)
+        private class ExpectedReferenceInfo
+        {
+            public int Index { get; set; }
+            public int NumberOfReferences { get; set; }
+        }
+
+        private void CheckCollectedTokens(string extension,
+            int totalReferenceCount, IEnumerable<ExpectedReferenceInfo> expectedReferences,
+            int totalTokenCount, IEnumerable<ExpectedTokenInfo> expectedTokens)
         {
             var testFileContent = File.ReadAllLines(TestInputPath + extension);
 
-            CheckTokenInfoFile(testFileContent, extension, expectedTokenInfo);
-            CheckTokenReferenceFile(testFileContent, extension, expectedTokenInfo);
+            CheckTokenInfoFile(testFileContent, extension, totalTokenCount, expectedTokens);
+            CheckTokenReferenceFile(testFileContent, extension, totalReferenceCount, expectedReferences);
         }
 
-        private void CheckTokenReferenceFile(string[] testInputFileLines, string extension, ExpectedTokenInfo expectedTokenInfo)
+        private void CheckTokenReferenceFile(string[] testFileContent, string extension,
+            int totalReferenceCount, IEnumerable<ExpectedReferenceInfo> expectedReferences)
         {
             var refInfos = new List<FileTokenReferenceInfo>();
 
@@ -123,25 +145,28 @@ namespace SonarAnalyzer.Integration.UnitTest
             Assert.AreEqual(1, refInfos.Count);
             var refInfo = refInfos.First();
             Assert.AreEqual(TestInputPath + extension, refInfo.FilePath);
-            Assert.AreEqual(expectedTokenInfo.ReferenceCount, refInfo.Reference.Count);
+            Assert.AreEqual(totalReferenceCount, refInfo.Reference.Count);
 
-            var declarationPosition = refInfo.Reference[expectedTokenInfo.ReferenceIndex].Declaration;
-            Assert.AreEqual(declarationPosition.StartLine, declarationPosition.EndLine);
-            var tokenText = testInputFileLines[declarationPosition.StartLine - 1].Substring(
-                declarationPosition.StartOffset,
-                declarationPosition.EndOffset - declarationPosition.StartOffset);
-            Assert.AreEqual("x", tokenText);
+            foreach (var expectedReference in expectedReferences)
+            {
+                var declarationPosition = refInfo.Reference[expectedReference.Index].Declaration;
+                Assert.AreEqual(declarationPosition.StartLine, declarationPosition.EndLine);
+                var tokenText = testFileContent[declarationPosition.StartLine - 1].Substring(
+                    declarationPosition.StartOffset,
+                    declarationPosition.EndOffset - declarationPosition.StartOffset);
 
-            Assert.AreEqual(1, refInfo.Reference[2].Reference.Count);
-            var referencePosition = refInfo.Reference[2].Reference[0];
-            Assert.AreEqual(referencePosition.StartLine, referencePosition.EndLine);
-            tokenText = testInputFileLines[referencePosition.StartLine - 1].Substring(
-                referencePosition.StartOffset,
-                referencePosition.EndOffset - referencePosition.StartOffset);
-            Assert.AreEqual("x", tokenText);
+                Assert.AreEqual(expectedReference.NumberOfReferences, refInfo.Reference[expectedReference.Index].Reference.Count);
+                foreach (var reference in refInfo.Reference[expectedReference.Index].Reference)
+                {
+                    Assert.AreEqual(reference.StartLine, reference.EndLine);
+                    var refText = testFileContent[reference.StartLine - 1].Substring(
+                        reference.StartOffset,
+                        reference.EndOffset - reference.StartOffset);
+                    Assert.AreEqual(tokenText, refText);
+                }
+            }
         }
-
-        private void CheckTokenInfoFile(string[] testInputFileLines, string extension, ExpectedTokenInfo expectedTokenInfo)
+        private void CheckTokenInfoFile(string[] testInputFileLines, string extension, int totalTokenCount, IEnumerable<ExpectedTokenInfo> expectedTokens)
         {
             var tokenInfos = new List<FileTokenInfo>();
 
@@ -158,15 +183,19 @@ namespace SonarAnalyzer.Integration.UnitTest
             Assert.AreEqual(1, tokenInfos.Count);
             var token = tokenInfos.First();
             Assert.AreEqual(TestInputPath + extension, token.FilePath);
-            Assert.AreEqual(expectedTokenInfo.TokenCount, token.TokenInfo.Count);
-            Assert.AreEqual(TokenType.DeclarationName, token.TokenInfo[expectedTokenInfo.DeclarationIndex].TokenType);
+            Assert.AreEqual(totalTokenCount, token.TokenInfo.Count);
 
-            var tokenPosition = token.TokenInfo[expectedTokenInfo.DeclarationIndex].TextRange;
-            Assert.AreEqual(tokenPosition.StartLine, tokenPosition.EndLine);
-            var tokenText = testInputFileLines[tokenPosition.StartLine - 1].Substring(
-                tokenPosition.StartOffset,
-                tokenPosition.EndOffset - tokenPosition.StartOffset);
-            Assert.AreEqual("TTTestClass", tokenText);
+            foreach (var expectedToken in expectedTokens)
+            {
+                Assert.AreEqual(expectedToken.Kind, token.TokenInfo[expectedToken.Index].TokenType);
+
+                var tokenPosition = token.TokenInfo[expectedToken.Index].TextRange;
+                Assert.AreEqual(tokenPosition.StartLine, tokenPosition.EndLine);
+                var tokenText = testInputFileLines[tokenPosition.StartLine - 1].Substring(
+                    tokenPosition.StartOffset,
+                    tokenPosition.EndOffset - tokenPosition.StartOffset);
+                Assert.AreEqual(expectedToken.Text, tokenText);
+            }
         }
 
         private void CheckExpected(string textActual)
@@ -174,13 +203,13 @@ namespace SonarAnalyzer.Integration.UnitTest
             var expectedContent = new[]
             {
                 $@"<AnalysisOutput><Files><File><Path>{TestInputPath}.cs</Path>",
-                @"<Metrics><Lines>17</Lines>",
-                @"<Issue><Id>S1134</Id><Line>3</Line>",
-                @"<Issue><Id>S1135</Id><Line>5</Line>",
-                @"<Id>S101</Id><Line>1</Line><Message>Renameclass""TTTestClass""tomatchcamelcasenamingrules,considerusing""TtTestClass"".</Message>",
-                @"<Id>S103</Id><Line>11</Line><Message>Splitthis21characterslongline(whichisgreaterthan10authorized).</Message>",
-                @"<Id>S103</Id><Line>14</Line><Message>Splitthis17characterslongline(whichisgreaterthan10authorized).</Message>",
-                @"<Id>S104</Id><Line>1</Line><Message>Thisfilehas17lines,whichisgreaterthan10authorized.Splititintosmallerfiles.</Message>"
+                @"<Metrics><Lines>21</Lines>",
+                @"<Issue><Id>S1134</Id><Line>6</Line>",
+                @"<Issue><Id>S1135</Id><Line>8</Line>",
+                @"<Id>S101</Id><Line>4</Line><Message>Renameclass""TTTestClass""tomatchcamelcasenamingrules,considerusing""TtTestClass"".</Message>",
+                @"<Id>S103</Id><Line>15</Line><Message>Splitthis21characterslongline(whichisgreaterthan10authorized).</Message>",
+                @"<Id>S103</Id><Line>18</Line><Message>Splitthis17characterslongline(whichisgreaterthan10authorized).</Message>",
+                @"<Id>S104</Id><Line>1</Line><Message>Thisfilehas21lines,whichisgreaterthan10authorized.Splititintosmallerfiles.</Message>"
             };
 
             foreach (var expected in expectedContent)
@@ -196,7 +225,7 @@ namespace SonarAnalyzer.Integration.UnitTest
         {
             var notExpectedContent = new[]
             {
-                @"<Id>S1116</Id><Line>14</Line>"
+                @"<Id>S1116</Id><Line>15</Line>"
             };
 
             foreach (var notExpected in notExpectedContent)

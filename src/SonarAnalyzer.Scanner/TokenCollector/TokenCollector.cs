@@ -54,7 +54,7 @@ namespace SonarAnalyzer.Runner
             this.filePath = filePath;
             this.root = document.GetSyntaxRootAsync().Result;
             this.semanticModel = document.GetSemanticModelAsync().Result;
-            this.classifiedSpans = Classifier.GetClassifiedSpans(semanticModel, root.Span, workspace);
+            this.classifiedSpans = Classifier.GetClassifiedSpans(semanticModel, root.FullSpan, workspace);
         }
 
         private class SymbolReferenceInfo
@@ -102,7 +102,7 @@ namespace SonarAnalyzer.Runner
         {
             get
             {
-                var tokenInfo = new FileTokenInfo
+                var fileTokenInfo = new FileTokenInfo
                 {
                     FilePath = filePath
                 };
@@ -113,15 +113,15 @@ namespace SonarAnalyzer.Runner
                         ? ClassificationTypeMapping[classifiedSpan.ClassificationType]
                         : TokenType.Unknown;
 
-                    var tokenInfoInFile = new TokenInfoInFile
+                    var tokenInfo = new TokenInfo
                     {
                         TokenType = tokenType,
                         TextRange = GetTextRange(Location.Create(root.SyntaxTree, classifiedSpan.TextSpan).GetLineSpan())
                     };
-                    tokenInfo.TokenInfo.Add(tokenInfoInFile);
+                    fileTokenInfo.TokenInfo.Add(tokenInfo);
                 }
 
-                return tokenInfo;
+                return fileTokenInfo;
             }
         }
 
@@ -187,13 +187,30 @@ namespace SonarAnalyzer.Runner
                 if (node != null)
                 {
                     var symbol = semanticModel.GetSymbolInfo(node).Symbol;
-                    if (symbol != null &&
-                        symbol.DeclaringSyntaxReferences.Any())
+                    if (symbol == null)
+                    {
+                        return null;
+                    }
+
+                    if (symbol.DeclaringSyntaxReferences.Any())
                     {
                         return new SymbolReferenceInfo
                         {
                             IdentifierToken = token,
                             Symbol = symbol,
+                            IsDeclaration = false
+                        };
+                    }
+
+                    var ctorSymbol = symbol as IMethodSymbol;
+                    if (ctorSymbol != null &&
+                        ctorSymbol.MethodKind == MethodKind.Constructor &&
+                        ctorSymbol.IsImplicitlyDeclared)
+                    {
+                        return new SymbolReferenceInfo
+                        {
+                            IdentifierToken = token,
+                            Symbol = ctorSymbol.ContainingType,
                             IsDeclaration = false
                         };
                     }
@@ -204,16 +221,27 @@ namespace SonarAnalyzer.Runner
 
         private static readonly IDictionary<string, TokenType> ClassificationTypeMapping = new Dictionary<string, TokenType>
         {
-            { ClassificationTypeNames.ClassName, TokenType.DeclarationName },
-            { ClassificationTypeNames.DelegateName, TokenType.DeclarationName },
-            { ClassificationTypeNames.EnumName, TokenType.DeclarationName },
-            { ClassificationTypeNames.InterfaceName, TokenType.DeclarationName },
-            { ClassificationTypeNames.ModuleName, TokenType.DeclarationName },
-            { ClassificationTypeNames.StructName, TokenType.DeclarationName },
+            { ClassificationTypeNames.ClassName, TokenType.TypeName },
+            { ClassificationTypeNames.DelegateName, TokenType.TypeName },
+            { ClassificationTypeNames.EnumName, TokenType.TypeName },
+            { ClassificationTypeNames.InterfaceName, TokenType.TypeName },
+            { ClassificationTypeNames.ModuleName, TokenType.TypeName },
+            { ClassificationTypeNames.StructName, TokenType.TypeName },
 
-            { ClassificationTypeNames.TypeParameterName, TokenType.TypeParameter },
-            { ClassificationTypeNames.Identifier, TokenType.Identifier },
+            { ClassificationTypeNames.TypeParameterName, TokenType.TypeName },
+
             { ClassificationTypeNames.Comment, TokenType.Comment },
+            { ClassificationTypeNames.XmlDocCommentAttributeName, TokenType.Comment },
+            { ClassificationTypeNames.XmlDocCommentAttributeQuotes, TokenType.Comment },
+            { ClassificationTypeNames.XmlDocCommentAttributeValue, TokenType.Comment },
+            { ClassificationTypeNames.XmlDocCommentCDataSection, TokenType.Comment },
+            { ClassificationTypeNames.XmlDocCommentComment, TokenType.Comment },
+            { ClassificationTypeNames.XmlDocCommentDelimiter, TokenType.Comment },
+            { ClassificationTypeNames.XmlDocCommentEntityReference, TokenType.Comment },
+            { ClassificationTypeNames.XmlDocCommentName, TokenType.Comment },
+            { ClassificationTypeNames.XmlDocCommentProcessingInstruction, TokenType.Comment },
+            { ClassificationTypeNames.XmlDocCommentText, TokenType.Comment },
+
             { ClassificationTypeNames.NumericLiteral, TokenType.NumericLiteral },
 
             { ClassificationTypeNames.StringLiteral, TokenType.StringLiteral },

@@ -25,27 +25,26 @@ namespace SonarAnalyzer.Protobuf {
           string.Concat(
             "ChNGaWxlVG9rZW5JbmZvLnByb3RvEg1zb25hcmFuYWx5emVyIlsKCVRleHRS",
             "YW5nZRISCgpzdGFydF9saW5lGAEgASgFEhAKCGVuZF9saW5lGAIgASgFEhQK",
-            "DHN0YXJ0X29mZnNldBgDIAEoBRISCgplbmRfb2Zmc2V0GAQgASgFItMBCg1G",
-            "aWxlVG9rZW5JbmZvEhEKCWZpbGVfcGF0aBgBIAEoCRJACgp0b2tlbl9pbmZv",
-            "GAIgAygLMiwuc29uYXJhbmFseXplci5GaWxlVG9rZW5JbmZvLlRva2VuSW5m",
-            "b0luRmlsZRptCg9Ub2tlbkluZm9JbkZpbGUSLAoKdG9rZW5fdHlwZRgBIAEo",
-            "DjIYLnNvbmFyYW5hbHl6ZXIuVG9rZW5UeXBlEiwKCnRleHRfcmFuZ2UYAiAB",
-            "KAsyGC5zb25hcmFuYWx5emVyLlRleHRSYW5nZSLkAQoWRmlsZVRva2VuUmVm",
-            "ZXJlbmNlSW5mbxIRCglmaWxlX3BhdGgYASABKAkSSAoJcmVmZXJlbmNlGAIg",
-            "AygLMjUuc29uYXJhbmFseXplci5GaWxlVG9rZW5SZWZlcmVuY2VJbmZvLlN5",
-            "bWJvbFJlZmVyZW5jZRptCg9TeW1ib2xSZWZlcmVuY2USLQoLZGVjbGFyYXRp",
-            "b24YASABKAsyGC5zb25hcmFuYWx5emVyLlRleHRSYW5nZRIrCglyZWZlcmVu",
-            "Y2UYAiADKAsyGC5zb25hcmFuYWx5emVyLlRleHRSYW5nZSqVAQoJVG9rZW5U",
-            "eXBlEgsKB1VOS05PV04QABIUChBERUNMQVJBVElPTl9OQU1FEAESDgoKSURF",
-            "TlRJRklFUhACEhMKD05VTUVSSUNfTElURVJBTBADEhIKDlNUUklOR19MSVRF",
-            "UkFMEAQSCwoHS0VZV09SRBAFEgsKB0NPTU1FTlQQBhISCg5UWVBFX1BBUkFN",
-            "RVRFUhAHQjwKH29yZy5zb25hcnNvdXJjZS5kb3RuZXQucHJvdG9jb2xIAaoC",
-            "FlNvbmFyQW5hbHl6ZXIuUHJvdG9idWZiBnByb3RvMw=="));
+            "DHN0YXJ0X29mZnNldBgDIAEoBRISCgplbmRfb2Zmc2V0GAQgASgFIscBCg1G",
+            "aWxlVG9rZW5JbmZvEhEKCWZpbGVfcGF0aBgBIAEoCRI6Cgp0b2tlbl9pbmZv",
+            "GAIgAygLMiYuc29uYXJhbmFseXplci5GaWxlVG9rZW5JbmZvLlRva2VuSW5m",
+            "bxpnCglUb2tlbkluZm8SLAoKdG9rZW5fdHlwZRgBIAEoDjIYLnNvbmFyYW5h",
+            "bHl6ZXIuVG9rZW5UeXBlEiwKCnRleHRfcmFuZ2UYAiABKAsyGC5zb25hcmFu",
+            "YWx5emVyLlRleHRSYW5nZSLkAQoWRmlsZVRva2VuUmVmZXJlbmNlSW5mbxIR",
+            "CglmaWxlX3BhdGgYASABKAkSSAoJcmVmZXJlbmNlGAIgAygLMjUuc29uYXJh",
+            "bmFseXplci5GaWxlVG9rZW5SZWZlcmVuY2VJbmZvLlN5bWJvbFJlZmVyZW5j",
+            "ZRptCg9TeW1ib2xSZWZlcmVuY2USLQoLZGVjbGFyYXRpb24YASABKAsyGC5z",
+            "b25hcmFuYWx5emVyLlRleHRSYW5nZRIrCglyZWZlcmVuY2UYAiADKAsyGC5z",
+            "b25hcmFuYWx5emVyLlRleHRSYW5nZSpqCglUb2tlblR5cGUSCwoHVU5LTk9X",
+            "ThAAEg0KCVRZUEVfTkFNRRABEhMKD05VTUVSSUNfTElURVJBTBADEhIKDlNU",
+            "UklOR19MSVRFUkFMEAQSCwoHS0VZV09SRBAFEgsKB0NPTU1FTlQQBkJLCh9v",
+            "cmcuc29uYXJzb3VyY2UuZG90bmV0LnByb3RvYnVmQg1Tb25hckFuYWx5emVy",
+            "SAGqAhZTb25hckFuYWx5emVyLlByb3RvYnVmYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SonarAnalyzer.Protobuf.TokenType), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::SonarAnalyzer.Protobuf.TextRange), global::SonarAnalyzer.Protobuf.TextRange.Parser, new[]{ "StartLine", "EndLine", "StartOffset", "EndOffset" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SonarAnalyzer.Protobuf.FileTokenInfo), global::SonarAnalyzer.Protobuf.FileTokenInfo.Parser, new[]{ "FilePath", "TokenInfo" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::SonarAnalyzer.Protobuf.FileTokenInfo.Types.TokenInfoInFile), global::SonarAnalyzer.Protobuf.FileTokenInfo.Types.TokenInfoInFile.Parser, new[]{ "TokenType", "TextRange" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SonarAnalyzer.Protobuf.FileTokenInfo), global::SonarAnalyzer.Protobuf.FileTokenInfo.Parser, new[]{ "FilePath", "TokenInfo" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::SonarAnalyzer.Protobuf.FileTokenInfo.Types.TokenInfo), global::SonarAnalyzer.Protobuf.FileTokenInfo.Types.TokenInfo.Parser, new[]{ "TokenType", "TextRange" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::SonarAnalyzer.Protobuf.FileTokenReferenceInfo), global::SonarAnalyzer.Protobuf.FileTokenReferenceInfo.Parser, new[]{ "FilePath", "Reference" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::SonarAnalyzer.Protobuf.FileTokenReferenceInfo.Types.SymbolReference), global::SonarAnalyzer.Protobuf.FileTokenReferenceInfo.Types.SymbolReference.Parser, new[]{ "Declaration", "Reference" }, null, null, null)})
           }));
     }
@@ -55,13 +54,11 @@ namespace SonarAnalyzer.Protobuf {
   #region Enums
   public enum TokenType {
     [pbr::OriginalName("UNKNOWN")] Unknown = 0,
-    [pbr::OriginalName("DECLARATION_NAME")] DeclarationName = 1,
-    [pbr::OriginalName("IDENTIFIER")] Identifier = 2,
+    [pbr::OriginalName("TYPE_NAME")] TypeName = 1,
     [pbr::OriginalName("NUMERIC_LITERAL")] NumericLiteral = 3,
     [pbr::OriginalName("STRING_LITERAL")] StringLiteral = 4,
     [pbr::OriginalName("KEYWORD")] Keyword = 5,
     [pbr::OriginalName("COMMENT")] Comment = 6,
-    [pbr::OriginalName("TYPE_PARAMETER")] TypeParameter = 7,
   }
 
   #endregion
@@ -297,10 +294,10 @@ namespace SonarAnalyzer.Protobuf {
 
     /// <summary>Field number for the "token_info" field.</summary>
     public const int TokenInfoFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::SonarAnalyzer.Protobuf.FileTokenInfo.Types.TokenInfoInFile> _repeated_tokenInfo_codec
-        = pb::FieldCodec.ForMessage(18, global::SonarAnalyzer.Protobuf.FileTokenInfo.Types.TokenInfoInFile.Parser);
-    private readonly pbc::RepeatedField<global::SonarAnalyzer.Protobuf.FileTokenInfo.Types.TokenInfoInFile> tokenInfo_ = new pbc::RepeatedField<global::SonarAnalyzer.Protobuf.FileTokenInfo.Types.TokenInfoInFile>();
-    public pbc::RepeatedField<global::SonarAnalyzer.Protobuf.FileTokenInfo.Types.TokenInfoInFile> TokenInfo {
+    private static readonly pb::FieldCodec<global::SonarAnalyzer.Protobuf.FileTokenInfo.Types.TokenInfo> _repeated_tokenInfo_codec
+        = pb::FieldCodec.ForMessage(18, global::SonarAnalyzer.Protobuf.FileTokenInfo.Types.TokenInfo.Parser);
+    private readonly pbc::RepeatedField<global::SonarAnalyzer.Protobuf.FileTokenInfo.Types.TokenInfo> tokenInfo_ = new pbc::RepeatedField<global::SonarAnalyzer.Protobuf.FileTokenInfo.Types.TokenInfo>();
+    public pbc::RepeatedField<global::SonarAnalyzer.Protobuf.FileTokenInfo.Types.TokenInfo> TokenInfo {
       get { return tokenInfo_; }
     }
 
@@ -382,9 +379,9 @@ namespace SonarAnalyzer.Protobuf {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public static partial class Types {
       [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-      public sealed partial class TokenInfoInFile : pb::IMessage<TokenInfoInFile> {
-        private static readonly pb::MessageParser<TokenInfoInFile> _parser = new pb::MessageParser<TokenInfoInFile>(() => new TokenInfoInFile());
-        public static pb::MessageParser<TokenInfoInFile> Parser { get { return _parser; } }
+      public sealed partial class TokenInfo : pb::IMessage<TokenInfo> {
+        private static readonly pb::MessageParser<TokenInfo> _parser = new pb::MessageParser<TokenInfo>(() => new TokenInfo());
+        public static pb::MessageParser<TokenInfo> Parser { get { return _parser; } }
 
         public static pbr::MessageDescriptor Descriptor {
           get { return global::SonarAnalyzer.Protobuf.FileTokenInfo.Descriptor.NestedTypes[0]; }
@@ -394,19 +391,19 @@ namespace SonarAnalyzer.Protobuf {
           get { return Descriptor; }
         }
 
-        public TokenInfoInFile() {
+        public TokenInfo() {
           OnConstruction();
         }
 
         partial void OnConstruction();
 
-        public TokenInfoInFile(TokenInfoInFile other) : this() {
+        public TokenInfo(TokenInfo other) : this() {
           tokenType_ = other.tokenType_;
           TextRange = other.textRange_ != null ? other.TextRange.Clone() : null;
         }
 
-        public TokenInfoInFile Clone() {
-          return new TokenInfoInFile(this);
+        public TokenInfo Clone() {
+          return new TokenInfo(this);
         }
 
         /// <summary>Field number for the "token_type" field.</summary>
@@ -430,10 +427,10 @@ namespace SonarAnalyzer.Protobuf {
         }
 
         public override bool Equals(object other) {
-          return Equals(other as TokenInfoInFile);
+          return Equals(other as TokenInfo);
         }
 
-        public bool Equals(TokenInfoInFile other) {
+        public bool Equals(TokenInfo other) {
           if (ReferenceEquals(other, null)) {
             return false;
           }
@@ -478,7 +475,7 @@ namespace SonarAnalyzer.Protobuf {
           return size;
         }
 
-        public void MergeFrom(TokenInfoInFile other) {
+        public void MergeFrom(TokenInfo other) {
           if (other == null) {
             return;
           }

@@ -22,7 +22,8 @@ syntax = "proto3";
 package sonaranalyzer;
 
 option csharp_namespace = "SonarAnalyzer.Protobuf";
-option java_package = "org.sonarsource.dotnet.protocol";
+option java_package = "org.sonarsource.dotnet.protobuf";
+option java_outer_classname = "SonarAnalyzer";
 
 option optimize_for = SPEED;
 
@@ -37,13 +38,11 @@ message TextRange {
 
 enum TokenType {
   UNKNOWN = 0;
-  DECLARATION_NAME = 1;
-  IDENTIFIER = 2;
+  TYPE_NAME = 1;
   NUMERIC_LITERAL = 3;
   STRING_LITERAL = 4;
   KEYWORD = 5;
   COMMENT = 6;
-  TYPE_PARAMETER = 7;
 }
 
 // Naming convention:
@@ -52,12 +51,12 @@ enum TokenType {
 message FileTokenInfo {
   string file_path = 1;
 
-  message TokenInfoInFile {
+  message TokenInfo {
     TokenType token_type = 1;
     TextRange text_range = 2;
   }
 
-  repeated TokenInfoInFile token_info = 2;
+  repeated TokenInfo token_info = 2;
 }
 
 message FileTokenReferenceInfo {

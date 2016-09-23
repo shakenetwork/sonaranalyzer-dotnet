@@ -1,4 +1,7 @@
-﻿public class TTTestClass
+﻿/// <summary>
+/// <seealso cref="TTTestClass"/>
+/// </summary>
+public class TTTestClass
 {
     // FIXME: fix this issue
 
@@ -8,6 +11,7 @@
         var x = 5;
         if (1==1)
         {
+            new TTTestClass();
             return x;
         }
 
