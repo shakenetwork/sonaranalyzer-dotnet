@@ -159,30 +159,45 @@ namespace SonarAnalyzer.Rules.CSharp
             private ProgramState ProcessElementAccess(ProgramState programState, ElementAccessExpressionSyntax elementAccess)
             {
                 var identifier = elementAccess.Expression as IdentifierNameSyntax;
-                return ProcessAccessExpression(identifier, elementAccess, programState);
-            }
-
-            private ProgramState ProcessMemberAccess(ProgramState programState, MemberAccessExpressionSyntax memberAccess)
-            {
-                var identifier = memberAccess.Expression as IdentifierNameSyntax;
-                return ProcessAccessExpression(identifier, memberAccess, programState);
-            }
-
-            private ProgramState ProcessAccessExpression(IdentifierNameSyntax identifier, ExpressionSyntax expression, ProgramState programState)
-            {
                 if (identifier == null)
                 {
                     return programState;
                 }
 
                 var symbol = semanticModel.GetSymbolInfo(identifier).Symbol;
-                if (IsNullableValueType(symbol) ||
-                    IsExtensionMethod(expression, semanticModel))
+                if (symbol == null)
                 {
                     return programState;
                 }
 
                 return ProcessIdentifier(programState, identifier, symbol);
+            }
+
+            private ProgramState ProcessMemberAccess(ProgramState programState, MemberAccessExpressionSyntax memberAccess)
+            {
+                var identifier = memberAccess.Expression as IdentifierNameSyntax;
+                if (identifier == null)
+                {
+                    return programState;
+                }
+
+                var symbol = semanticModel.GetSymbolInfo(identifier).Symbol;
+                if (symbol == null)
+                {
+                    return programState;
+                }
+                if ((IsNullableValueType(symbol) && !IsGetTypeCall(memberAccess)) ||
+                    IsExtensionMethod(memberAccess, semanticModel))
+                {
+                    return programState;
+                }
+
+                return ProcessIdentifier(programState, identifier, symbol);
+            }
+
+            private static bool IsGetTypeCall(MemberAccessExpressionSyntax memberAccess)
+            {
+                return memberAccess.Name.Identifier.ValueText == "GetType";
             }
 
             private ProgramState ProcessIdentifier(ProgramPoint programPoint, ProgramState programState, IdentifierNameSyntax identifier)

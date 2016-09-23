@@ -234,6 +234,19 @@ namespace Tests.Diagnostics
                 Console.WriteLine(arr[10, 10]);
             }
         }
+
+        void NullableGetTypeCall()
+        {
+            int? i = null;
+            var v = i.HasValue;
+            var s = i.ToString();
+
+            i = 5;
+            var t = i.GetType();
+
+            i = null;
+            var t = i.GetType(); // Noncompliant
+        }
     }
 
     static class Extensions
