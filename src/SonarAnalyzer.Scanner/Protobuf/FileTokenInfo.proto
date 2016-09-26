@@ -39,10 +39,10 @@ message TextRange {
 enum TokenType {
   UNKNOWN = 0;
   TYPE_NAME = 1;
-  NUMERIC_LITERAL = 3;
-  STRING_LITERAL = 4;
-  KEYWORD = 5;
-  COMMENT = 6;
+  NUMERIC_LITERAL = 2;
+  STRING_LITERAL = 3;
+  KEYWORD = 4;
+  COMMENT = 5;
 }
 
 // Naming convention:

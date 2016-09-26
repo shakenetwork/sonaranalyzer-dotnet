@@ -36,8 +36,8 @@ namespace SonarAnalyzer.Protobuf {
             "ZRptCg9TeW1ib2xSZWZlcmVuY2USLQoLZGVjbGFyYXRpb24YASABKAsyGC5z",
             "b25hcmFuYWx5emVyLlRleHRSYW5nZRIrCglyZWZlcmVuY2UYAiADKAsyGC5z",
             "b25hcmFuYWx5emVyLlRleHRSYW5nZSpqCglUb2tlblR5cGUSCwoHVU5LTk9X",
-            "ThAAEg0KCVRZUEVfTkFNRRABEhMKD05VTUVSSUNfTElURVJBTBADEhIKDlNU",
-            "UklOR19MSVRFUkFMEAQSCwoHS0VZV09SRBAFEgsKB0NPTU1FTlQQBkJLCh9v",
+            "ThAAEg0KCVRZUEVfTkFNRRABEhMKD05VTUVSSUNfTElURVJBTBACEhIKDlNU",
+            "UklOR19MSVRFUkFMEAMSCwoHS0VZV09SRBAEEgsKB0NPTU1FTlQQBUJLCh9v",
             "cmcuc29uYXJzb3VyY2UuZG90bmV0LnByb3RvYnVmQg1Tb25hckFuYWx5emVy",
             "SAGqAhZTb25hckFuYWx5emVyLlByb3RvYnVmYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -55,10 +55,10 @@ namespace SonarAnalyzer.Protobuf {
   public enum TokenType {
     [pbr::OriginalName("UNKNOWN")] Unknown = 0,
     [pbr::OriginalName("TYPE_NAME")] TypeName = 1,
-    [pbr::OriginalName("NUMERIC_LITERAL")] NumericLiteral = 3,
-    [pbr::OriginalName("STRING_LITERAL")] StringLiteral = 4,
-    [pbr::OriginalName("KEYWORD")] Keyword = 5,
-    [pbr::OriginalName("COMMENT")] Comment = 6,
+    [pbr::OriginalName("NUMERIC_LITERAL")] NumericLiteral = 2,
+    [pbr::OriginalName("STRING_LITERAL")] StringLiteral = 3,
+    [pbr::OriginalName("KEYWORD")] Keyword = 4,
+    [pbr::OriginalName("COMMENT")] Comment = 5,
   }
 
   #endregion
