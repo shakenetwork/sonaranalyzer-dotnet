@@ -51,7 +51,13 @@ if ($productversion -eq "empty") {
 $sha1=$productversion.Substring($productversion.LastIndexOf('Sha1:')+5)
 Write-Host "Checking out $sha1"
 $s="SHA1=$sha1"
-$s | out-file ".\sha1.properties"
+#store the sha1 in a unix property file to update burgr
+$s | out-file -encoding utf8 ".\sha1.properties"
+Get-ChildItem .\sha1.properties | ForEach-Object {
+  $contents = [IO.File]::ReadAllText($_) -replace "`r`n?", "`n"
+  $utf8 = New-Object System.Text.UTF8Encoding $false
+  [IO.File]::WriteAllText($_, $contents, $utf8)
+}
 
 Write-Host "GITHUB_BRANCH $env:GITHUB_BRANCH"
 if (($env:GITHUB_BRANCH -eq "master") -or ($env:GITHUB_BRANCH -eq "refs/heads/master")) {
