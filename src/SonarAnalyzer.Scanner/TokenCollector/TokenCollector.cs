@@ -125,6 +125,35 @@ namespace SonarAnalyzer.Runner
             }
         }
 
+        public CopyPasteTokenInfo FileTokenCpdInfo
+        {
+            get
+            {
+                var cpdTokenInfo = new CopyPasteTokenInfo
+                {
+                    FilePath = filePath
+                };
+
+                var tokens = this.root.DescendantTokens(n => !n.IsUsingDirective(), false);
+
+                foreach (var token in tokens)
+                {
+                    var tokenInfo = new CopyPasteTokenInfo.Types.TokenInfo
+                    {
+                        TokenType = token.GetCpdValue(),
+                        TextRange = GetTextRange(Location.Create(root.SyntaxTree, token.Span).GetLineSpan())
+                    };
+
+                    if (!string.IsNullOrWhiteSpace(tokenInfo.TokenType))
+                    {
+                        cpdTokenInfo.TokenInfo.Add(tokenInfo);
+                    }
+                }
+
+                return cpdTokenInfo;
+            }
+        }
+
         private SymbolReference GetSymbolReference(IEnumerable<SymbolReferenceInfo> allReference)
         {
             var declaration = allReference.FirstOrDefault(r => r.IsDeclaration);
@@ -249,7 +278,6 @@ namespace SonarAnalyzer.Runner
 
             { ClassificationTypeNames.Keyword, TokenType.Keyword },
             { ClassificationTypeNames.PreprocessorKeyword, TokenType.Keyword }
-        };
+        }.ToImmutableDictionary();
     }
-
 }

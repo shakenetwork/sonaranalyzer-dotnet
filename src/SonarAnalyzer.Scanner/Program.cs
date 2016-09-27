@@ -36,6 +36,7 @@ namespace SonarAnalyzer.Runner
         internal const string AnalysisOutputFileName = "analysis-output.xml";
         internal const string TokenInfosFileName = "token-infos.dat";
         internal const string TokenReferenceInfosFileName = "token-reference-infos.dat";
+        internal const string CopyPasteTokenInfosFileName = "token-cpd-infos.dat";
 
         public static int Main(string[] args)
         {
@@ -76,6 +77,7 @@ namespace SonarAnalyzer.Runner
 
                 using (var tokenInfoStream = File.Create(Path.Combine(outputDirectory, TokenInfosFileName)))
                 using (var tokenReferenceInfoStream = File.Create(Path.Combine(outputDirectory, TokenReferenceInfosFileName)))
+                using (var tokenCpdInfoStream = File.Create(Path.Combine(outputDirectory, CopyPasteTokenInfosFileName)))
                 {
                     foreach (var file in configuration.Files)
                     {
@@ -96,6 +98,7 @@ namespace SonarAnalyzer.Runner
 
                             tokenCollector.FileTokenInfo.WriteDelimitedTo(tokenInfoStream);
                             tokenCollector.FileTokenReferenceInfo.WriteDelimitedTo(tokenReferenceInfoStream);
+                            tokenCollector.FileTokenCpdInfo.WriteDelimitedTo(tokenCpdInfoStream);
 
                             var metrics = language == AnalyzerLanguage.CSharp
                                 ? (MetricsBase)new Common.CSharp.Metrics(syntaxTree)

@@ -69,3 +69,14 @@ message FileTokenReferenceInfo {
 
   repeated SymbolReference reference = 2;
 }
+
+message CopyPasteTokenInfo {
+  string file_path = 1;
+
+  message TokenInfo {
+    string token_type = 1;
+    TextRange text_range = 2;
+  }
+
+  repeated TokenInfo token_info = 2;
+}

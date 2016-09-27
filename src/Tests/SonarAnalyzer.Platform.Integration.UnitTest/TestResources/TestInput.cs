@@ -1,4 +1,6 @@
-﻿/// <summary>
+﻿using System;
+using M = Math;
+/// <summary>
 /// <seealso cref="TTTestClass"/>
 /// </summary>
 public class TTTestClass
@@ -6,16 +8,19 @@ public class TTTestClass
     // FIXME: fix this issue
 
     //TODO: I need to fix this
-    public int MyMethod()
+    public object MyMethod()
     {
+        using (y = null)
+        { }
+
         var x = 5;
         if (1==1)
         {
             new TTTestClass();
-            return x;
+            return "" + x;
         }
 
-        return 6;
+        return 'c';
         ;
     }
 }

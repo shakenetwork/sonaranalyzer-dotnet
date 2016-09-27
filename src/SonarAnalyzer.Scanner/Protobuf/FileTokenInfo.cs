@@ -35,17 +35,22 @@ namespace SonarAnalyzer.Protobuf {
             "bmFseXplci5GaWxlVG9rZW5SZWZlcmVuY2VJbmZvLlN5bWJvbFJlZmVyZW5j",
             "ZRptCg9TeW1ib2xSZWZlcmVuY2USLQoLZGVjbGFyYXRpb24YASABKAsyGC5z",
             "b25hcmFuYWx5emVyLlRleHRSYW5nZRIrCglyZWZlcmVuY2UYAiADKAsyGC5z",
-            "b25hcmFuYWx5emVyLlRleHRSYW5nZSpqCglUb2tlblR5cGUSCwoHVU5LTk9X",
-            "ThAAEg0KCVRZUEVfTkFNRRABEhMKD05VTUVSSUNfTElURVJBTBACEhIKDlNU",
-            "UklOR19MSVRFUkFMEAMSCwoHS0VZV09SRBAEEgsKB0NPTU1FTlQQBUJLCh9v",
-            "cmcuc29uYXJzb3VyY2UuZG90bmV0LnByb3RvYnVmQg1Tb25hckFuYWx5emVy",
-            "SAGqAhZTb25hckFuYWx5emVyLlByb3RvYnVmYgZwcm90bzM="));
+            "b25hcmFuYWx5emVyLlRleHRSYW5nZSK3AQoSQ29weVBhc3RlVG9rZW5JbmZv",
+            "EhEKCWZpbGVfcGF0aBgBIAEoCRI/Cgp0b2tlbl9pbmZvGAIgAygLMisuc29u",
+            "YXJhbmFseXplci5Db3B5UGFzdGVUb2tlbkluZm8uVG9rZW5JbmZvGk0KCVRv",
+            "a2VuSW5mbxISCgp0b2tlbl90eXBlGAEgASgJEiwKCnRleHRfcmFuZ2UYAiAB",
+            "KAsyGC5zb25hcmFuYWx5emVyLlRleHRSYW5nZSpqCglUb2tlblR5cGUSCwoH",
+            "VU5LTk9XThAAEg0KCVRZUEVfTkFNRRABEhMKD05VTUVSSUNfTElURVJBTBAC",
+            "EhIKDlNUUklOR19MSVRFUkFMEAMSCwoHS0VZV09SRBAEEgsKB0NPTU1FTlQQ",
+            "BUJLCh9vcmcuc29uYXJzb3VyY2UuZG90bmV0LnByb3RvYnVmQg1Tb25hckFu",
+            "YWx5emVySAGqAhZTb25hckFuYWx5emVyLlByb3RvYnVmYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SonarAnalyzer.Protobuf.TokenType), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::SonarAnalyzer.Protobuf.TextRange), global::SonarAnalyzer.Protobuf.TextRange.Parser, new[]{ "StartLine", "EndLine", "StartOffset", "EndOffset" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SonarAnalyzer.Protobuf.FileTokenInfo), global::SonarAnalyzer.Protobuf.FileTokenInfo.Parser, new[]{ "FilePath", "TokenInfo" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::SonarAnalyzer.Protobuf.FileTokenInfo.Types.TokenInfo), global::SonarAnalyzer.Protobuf.FileTokenInfo.Types.TokenInfo.Parser, new[]{ "TokenType", "TextRange" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SonarAnalyzer.Protobuf.FileTokenReferenceInfo), global::SonarAnalyzer.Protobuf.FileTokenReferenceInfo.Parser, new[]{ "FilePath", "Reference" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::SonarAnalyzer.Protobuf.FileTokenReferenceInfo.Types.SymbolReference), global::SonarAnalyzer.Protobuf.FileTokenReferenceInfo.Types.SymbolReference.Parser, new[]{ "Declaration", "Reference" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::SonarAnalyzer.Protobuf.FileTokenReferenceInfo), global::SonarAnalyzer.Protobuf.FileTokenReferenceInfo.Parser, new[]{ "FilePath", "Reference" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::SonarAnalyzer.Protobuf.FileTokenReferenceInfo.Types.SymbolReference), global::SonarAnalyzer.Protobuf.FileTokenReferenceInfo.Types.SymbolReference.Parser, new[]{ "Declaration", "Reference" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SonarAnalyzer.Protobuf.CopyPasteTokenInfo), global::SonarAnalyzer.Protobuf.CopyPasteTokenInfo.Parser, new[]{ "FilePath", "TokenInfo" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::SonarAnalyzer.Protobuf.CopyPasteTokenInfo.Types.TokenInfo), global::SonarAnalyzer.Protobuf.CopyPasteTokenInfo.Types.TokenInfo.Parser, new[]{ "TokenType", "TextRange" }, null, null, null)})
           }));
     }
     #endregion
@@ -763,6 +768,271 @@ namespace SonarAnalyzer.Protobuf {
               }
               case 18: {
                 reference_.AddEntriesFrom(input, _repeated_reference_codec);
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+  public sealed partial class CopyPasteTokenInfo : pb::IMessage<CopyPasteTokenInfo> {
+    private static readonly pb::MessageParser<CopyPasteTokenInfo> _parser = new pb::MessageParser<CopyPasteTokenInfo>(() => new CopyPasteTokenInfo());
+    public static pb::MessageParser<CopyPasteTokenInfo> Parser { get { return _parser; } }
+
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SonarAnalyzer.Protobuf.FileTokenInfoReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    public CopyPasteTokenInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    public CopyPasteTokenInfo(CopyPasteTokenInfo other) : this() {
+      filePath_ = other.filePath_;
+      tokenInfo_ = other.tokenInfo_.Clone();
+    }
+
+    public CopyPasteTokenInfo Clone() {
+      return new CopyPasteTokenInfo(this);
+    }
+
+    /// <summary>Field number for the "file_path" field.</summary>
+    public const int FilePathFieldNumber = 1;
+    private string filePath_ = "";
+    public string FilePath {
+      get { return filePath_; }
+      set {
+        filePath_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "token_info" field.</summary>
+    public const int TokenInfoFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::SonarAnalyzer.Protobuf.CopyPasteTokenInfo.Types.TokenInfo> _repeated_tokenInfo_codec
+        = pb::FieldCodec.ForMessage(18, global::SonarAnalyzer.Protobuf.CopyPasteTokenInfo.Types.TokenInfo.Parser);
+    private readonly pbc::RepeatedField<global::SonarAnalyzer.Protobuf.CopyPasteTokenInfo.Types.TokenInfo> tokenInfo_ = new pbc::RepeatedField<global::SonarAnalyzer.Protobuf.CopyPasteTokenInfo.Types.TokenInfo>();
+    public pbc::RepeatedField<global::SonarAnalyzer.Protobuf.CopyPasteTokenInfo.Types.TokenInfo> TokenInfo {
+      get { return tokenInfo_; }
+    }
+
+    public override bool Equals(object other) {
+      return Equals(other as CopyPasteTokenInfo);
+    }
+
+    public bool Equals(CopyPasteTokenInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (FilePath != other.FilePath) return false;
+      if(!tokenInfo_.Equals(other.tokenInfo_)) return false;
+      return true;
+    }
+
+    public override int GetHashCode() {
+      int hash = 1;
+      if (FilePath.Length != 0) hash ^= FilePath.GetHashCode();
+      hash ^= tokenInfo_.GetHashCode();
+      return hash;
+    }
+
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (FilePath.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FilePath);
+      }
+      tokenInfo_.WriteTo(output, _repeated_tokenInfo_codec);
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (FilePath.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FilePath);
+      }
+      size += tokenInfo_.CalculateSize(_repeated_tokenInfo_codec);
+      return size;
+    }
+
+    public void MergeFrom(CopyPasteTokenInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.FilePath.Length != 0) {
+        FilePath = other.FilePath;
+      }
+      tokenInfo_.Add(other.tokenInfo_);
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            FilePath = input.ReadString();
+            break;
+          }
+          case 18: {
+            tokenInfo_.AddEntriesFrom(input, _repeated_tokenInfo_codec);
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the CopyPasteTokenInfo message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public static partial class Types {
+      [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+      public sealed partial class TokenInfo : pb::IMessage<TokenInfo> {
+        private static readonly pb::MessageParser<TokenInfo> _parser = new pb::MessageParser<TokenInfo>(() => new TokenInfo());
+        public static pb::MessageParser<TokenInfo> Parser { get { return _parser; } }
+
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::SonarAnalyzer.Protobuf.CopyPasteTokenInfo.Descriptor.NestedTypes[0]; }
+        }
+
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        public TokenInfo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        public TokenInfo(TokenInfo other) : this() {
+          tokenType_ = other.tokenType_;
+          TextRange = other.textRange_ != null ? other.TextRange.Clone() : null;
+        }
+
+        public TokenInfo Clone() {
+          return new TokenInfo(this);
+        }
+
+        /// <summary>Field number for the "token_type" field.</summary>
+        public const int TokenTypeFieldNumber = 1;
+        private string tokenType_ = "";
+        public string TokenType {
+          get { return tokenType_; }
+          set {
+            tokenType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "text_range" field.</summary>
+        public const int TextRangeFieldNumber = 2;
+        private global::SonarAnalyzer.Protobuf.TextRange textRange_;
+        public global::SonarAnalyzer.Protobuf.TextRange TextRange {
+          get { return textRange_; }
+          set {
+            textRange_ = value;
+          }
+        }
+
+        public override bool Equals(object other) {
+          return Equals(other as TokenInfo);
+        }
+
+        public bool Equals(TokenInfo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (TokenType != other.TokenType) return false;
+          if (!object.Equals(TextRange, other.TextRange)) return false;
+          return true;
+        }
+
+        public override int GetHashCode() {
+          int hash = 1;
+          if (TokenType.Length != 0) hash ^= TokenType.GetHashCode();
+          if (textRange_ != null) hash ^= TextRange.GetHashCode();
+          return hash;
+        }
+
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (TokenType.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(TokenType);
+          }
+          if (textRange_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(TextRange);
+          }
+        }
+
+        public int CalculateSize() {
+          int size = 0;
+          if (TokenType.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(TokenType);
+          }
+          if (textRange_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(TextRange);
+          }
+          return size;
+        }
+
+        public void MergeFrom(TokenInfo other) {
+          if (other == null) {
+            return;
+          }
+          if (other.TokenType.Length != 0) {
+            TokenType = other.TokenType;
+          }
+          if (other.textRange_ != null) {
+            if (textRange_ == null) {
+              textRange_ = new global::SonarAnalyzer.Protobuf.TextRange();
+            }
+            TextRange.MergeFrom(other.TextRange);
+          }
+        }
+
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+              case 10: {
+                TokenType = input.ReadString();
+                break;
+              }
+              case 18: {
+                if (textRange_ == null) {
+                  textRange_ = new global::SonarAnalyzer.Protobuf.TextRange();
+                }
+                input.ReadMessage(textRange_);
                 break;
               }
             }

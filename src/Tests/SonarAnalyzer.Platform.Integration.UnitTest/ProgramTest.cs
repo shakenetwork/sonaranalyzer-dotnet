@@ -67,13 +67,15 @@ namespace SonarAnalyzer.Integration.UnitTest
                     new ExpectedReferenceInfo { Index = 1, NumberOfReferences = 0 },
                     new ExpectedReferenceInfo { Index = 2, NumberOfReferences = 1 }
                 },
-                60, new[]
+                78, new[]
                 {
-                    new ExpectedTokenInfo { Index = 0, Kind = TokenType.Comment, Text = "///" },
-                    new ExpectedTokenInfo { Index = 23, Kind = TokenType.TypeName, Text = "TTTestClass" },
-                    new ExpectedTokenInfo { Index = 46, Kind = TokenType.TypeName, Text = "TTTestClass" },
-                    new ExpectedTokenInfo { Index = 33, Kind = TokenType.Keyword, Text = "var" }
-                });
+                    new ExpectedTokenInfo { Index = 8, Kind = TokenType.Comment, Text = "///" },
+                    new ExpectedTokenInfo { Index = 31, Kind = TokenType.TypeName, Text = "TTTestClass" },
+                    new ExpectedTokenInfo { Index = 62, Kind = TokenType.TypeName, Text = "TTTestClass" },
+                    new ExpectedTokenInfo { Index = 49, Kind = TokenType.Keyword, Text = "var" }
+                },
+                @"public class TTTestClass { public object MyMethod ( ) { using ( y = null ) { } var x = $num ; " +
+                "if ( $num == $num ) { new TTTestClass ( ) ; return $str + x ; } return $char ; ; } }");
         }
 
         [TestMethod]
@@ -95,13 +97,15 @@ namespace SonarAnalyzer.Integration.UnitTest
                     new ExpectedReferenceInfo { Index = 2, NumberOfReferences = 1 },
                     new ExpectedReferenceInfo { Index = 3, NumberOfReferences = 0 }
                 },
-                57, new[]
+                67, new[]
                 {
-                    new ExpectedTokenInfo { Index = 0, Kind = TokenType.Comment, Text = "'''" },
-                    new ExpectedTokenInfo { Index = 23, Kind = TokenType.TypeName, Text = "TTTestClass" },
-                    new ExpectedTokenInfo { Index = 41, Kind = TokenType.TypeName, Text = "TTTestClass" },
-                    new ExpectedTokenInfo { Index = 40, Kind = TokenType.Keyword, Text = "New" }
-                });
+                    new ExpectedTokenInfo { Index = 8, Kind = TokenType.Comment, Text = "'''" },
+                    new ExpectedTokenInfo { Index = 31, Kind = TokenType.TypeName, Text = "TTTestClass" },
+                    new ExpectedTokenInfo { Index = 49, Kind = TokenType.TypeName, Text = "TTTestClass" },
+                    new ExpectedTokenInfo { Index = 48, Kind = TokenType.Keyword, Text = "New" }
+                },
+                "Public Class TTTestClass Public Function MyMethod ( ) As Object Dim x = $num Dim y = New TTTestClass " +
+                "If $num = $num Then Return x + $str End If Return $char End Function End Class");
         }
 
         private class ExpectedTokenInfo
@@ -119,12 +123,33 @@ namespace SonarAnalyzer.Integration.UnitTest
 
         private void CheckCollectedTokens(string extension,
             int totalReferenceCount, IEnumerable<ExpectedReferenceInfo> expectedReferences,
-            int totalTokenCount, IEnumerable<ExpectedTokenInfo> expectedTokens)
+            int totalTokenCount, IEnumerable<ExpectedTokenInfo> expectedTokens,
+            string tokenCpdExpected)
         {
             var testFileContent = File.ReadAllLines(TestInputPath + extension);
 
             CheckTokenInfoFile(testFileContent, extension, totalTokenCount, expectedTokens);
             CheckTokenReferenceFile(testFileContent, extension, totalReferenceCount, expectedReferences);
+            CheckCpdTokens(tokenCpdExpected);
+        }
+
+        private void CheckCpdTokens(string tokenCpdExpected)
+        {
+            var cpdInfos = new List<CopyPasteTokenInfo>();
+
+            using (var input = File.OpenRead(Path.Combine(OutputFolderName, Program.CopyPasteTokenInfosFileName)))
+            {
+                while (input.Position != input.Length)
+                {
+                    var cpd = new CopyPasteTokenInfo();
+                    cpd.MergeDelimitedFrom(input);
+                    cpdInfos.Add(cpd);
+                }
+            }
+
+            Assert.AreEqual(1, cpdInfos.Count);
+            var actual = string.Join(" ", cpdInfos[0].TokenInfo.Select(ti => ti.TokenType));
+            Assert.AreEqual(tokenCpdExpected, actual);
         }
 
         private void CheckTokenReferenceFile(string[] testFileContent, string extension,
@@ -203,13 +228,13 @@ namespace SonarAnalyzer.Integration.UnitTest
             var expectedContent = new[]
             {
                 $@"<AnalysisOutput><Files><File><Path>{TestInputPath}.cs</Path>",
-                @"<Metrics><Lines>21</Lines>",
-                @"<Issue><Id>S1134</Id><Line>6</Line>",
-                @"<Issue><Id>S1135</Id><Line>8</Line>",
-                @"<Id>S101</Id><Line>4</Line><Message>Renameclass""TTTestClass""tomatchcamelcasenamingrules,considerusing""TtTestClass"".</Message>",
-                @"<Id>S103</Id><Line>15</Line><Message>Splitthis21characterslongline(whichisgreaterthan10authorized).</Message>",
-                @"<Id>S103</Id><Line>18</Line><Message>Splitthis17characterslongline(whichisgreaterthan10authorized).</Message>",
-                @"<Id>S104</Id><Line>1</Line><Message>Thisfilehas21lines,whichisgreaterthan10authorized.Splititintosmallerfiles.</Message>"
+                @"<Metrics><Lines>26</Lines>",
+                @"<Issue><Id>S1134</Id><Line>8</Line>",
+                @"<Issue><Id>S1135</Id><Line>10</Line>",
+                @"<Id>S101</Id><Line>6</Line><Message>Renameclass""TTTestClass""tomatchcamelcasenamingrules,considerusing""TtTestClass"".</Message>",
+                @"<Id>S103</Id><Line>20</Line><Message>Splitthis26characterslongline(whichisgreaterthan10authorized).</Message>",
+                @"<Id>S103</Id><Line>23</Line><Message>Splitthis19characterslongline(whichisgreaterthan10authorized).</Message>",
+                @"<Id>S104</Id><Line>1</Line><Message>Thisfilehas26lines,whichisgreaterthan10authorized.Splititintosmallerfiles.</Message>"
             };
 
             foreach (var expected in expectedContent)
