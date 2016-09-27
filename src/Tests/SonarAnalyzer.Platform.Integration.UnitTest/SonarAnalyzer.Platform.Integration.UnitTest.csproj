@@ -135,7 +135,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="ConfigurationTest.cs" />
-    <Compile Include="ProgramTest.cs" />
+    <Compile Include="EndToEnd_VisualBasic.cs" />
+    <Compile Include="EndToEnd_CSharp.cs" />
     <Compile Include="DiagnosticRunnerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

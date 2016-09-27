@@ -46,7 +46,7 @@ namespace SonarAnalyzer.Common
             Values = new int[Ranges.Length];
         }
 
-        public void Add(int value)
+        public Distribution Add(int value)
         {
             var i = Ranges.Length - 1;
 
@@ -56,6 +56,8 @@ namespace SonarAnalyzer.Common
             }
 
             Values[i]++;
+
+            return this;
         }
 
         public override string ToString()

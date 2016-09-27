@@ -26,9 +26,6 @@ using SonarAnalyzer.Protobuf;
 using System.Collections.Immutable;
 using SonarAnalyzer.Helpers;
 
-using static SonarAnalyzer.Protobuf.FileTokenInfo.Types;
-using static SonarAnalyzer.Protobuf.FileTokenReferenceInfo.Types;
-
 namespace SonarAnalyzer.Runner
 {
     public class TokenCollector
@@ -57,18 +54,18 @@ namespace SonarAnalyzer.Runner
             this.classifiedSpans = Classifier.GetClassifiedSpans(semanticModel, root.FullSpan, workspace);
         }
 
-        private class SymbolReferenceInfo
+        private class SymRefInfo
         {
             public SyntaxToken IdentifierToken { get; set; }
             public ISymbol Symbol { get; set; }
             public bool IsDeclaration { get; set; }
         }
 
-        public FileTokenReferenceInfo FileTokenReferenceInfo
+        public SymbolReferenceInfo SymbolReferenceInfo
         {
             get
             {
-                var allReferences = new List<SymbolReferenceInfo>();
+                var allReferences = new List<SymRefInfo>();
 
                 foreach (var classifiedSpan in classifiedSpans)
                 {
@@ -80,7 +77,7 @@ namespace SonarAnalyzer.Runner
                     }
                 }
 
-                var tokenReferenceInfo = new FileTokenReferenceInfo
+                var symbolReferenceInfo = new SymbolReferenceInfo
                 {
                     FilePath = filePath
                 };
@@ -90,19 +87,19 @@ namespace SonarAnalyzer.Runner
                     var sr = GetSymbolReference(allReference);
                     if (sr != null)
                     {
-                        tokenReferenceInfo.Reference.Add(sr);
+                        symbolReferenceInfo.Reference.Add(sr);
                     }
                 }
 
-                return tokenReferenceInfo;
+                return symbolReferenceInfo;
             }
         }
 
-        public FileTokenInfo FileTokenInfo
+        public TokenTypeInfo TokenTypeInfo
         {
             get
             {
-                var fileTokenInfo = new FileTokenInfo
+                var tokenTypeInfo = new TokenTypeInfo
                 {
                     FilePath = filePath
                 };
@@ -113,19 +110,19 @@ namespace SonarAnalyzer.Runner
                         ? ClassificationTypeMapping[classifiedSpan.ClassificationType]
                         : TokenType.Unknown;
 
-                    var tokenInfo = new TokenInfo
+                    var tokenInfo = new TokenTypeInfo.Types.TokenInfo
                     {
                         TokenType = tokenType,
                         TextRange = GetTextRange(Location.Create(root.SyntaxTree, classifiedSpan.TextSpan).GetLineSpan())
                     };
-                    fileTokenInfo.TokenInfo.Add(tokenInfo);
+                    tokenTypeInfo.TokenInfo.Add(tokenInfo);
                 }
 
-                return fileTokenInfo;
+                return tokenTypeInfo;
             }
         }
 
-        public CopyPasteTokenInfo FileTokenCpdInfo
+        public CopyPasteTokenInfo CopyPasteTokenInfo
         {
             get
             {
@@ -140,11 +137,11 @@ namespace SonarAnalyzer.Runner
                 {
                     var tokenInfo = new CopyPasteTokenInfo.Types.TokenInfo
                     {
-                        TokenType = token.GetCpdValue(),
+                        TokenValue = token.GetCpdValue(),
                         TextRange = GetTextRange(Location.Create(root.SyntaxTree, token.Span).GetLineSpan())
                     };
 
-                    if (!string.IsNullOrWhiteSpace(tokenInfo.TokenType))
+                    if (!string.IsNullOrWhiteSpace(tokenInfo.TokenValue))
                     {
                         cpdTokenInfo.TokenInfo.Add(tokenInfo);
                     }
@@ -154,7 +151,7 @@ namespace SonarAnalyzer.Runner
             }
         }
 
-        private SymbolReference GetSymbolReference(IEnumerable<SymbolReferenceInfo> allReference)
+        private SymbolReferenceInfo.Types.SymbolReference GetSymbolReference(IEnumerable<SymRefInfo> allReference)
         {
             var declaration = allReference.FirstOrDefault(r => r.IsDeclaration);
             if (declaration == null)
@@ -162,7 +159,7 @@ namespace SonarAnalyzer.Runner
                 return null;
             }
 
-            var sr = new SymbolReference
+            var sr = new SymbolReferenceInfo.Types.SymbolReference
             {
                 Declaration = GetTextRange(Location.Create(root.SyntaxTree, declaration.IdentifierToken.Span).GetLineSpan())
             };
@@ -176,7 +173,7 @@ namespace SonarAnalyzer.Runner
             return sr;
         }
 
-        private static TextRange GetTextRange(FileLinePositionSpan lineSpan)
+        internal static TextRange GetTextRange(FileLinePositionSpan lineSpan)
         {
             return new TextRange
             {
@@ -187,7 +184,7 @@ namespace SonarAnalyzer.Runner
             };
         }
 
-        private SymbolReferenceInfo ProcessToken(SyntaxToken token)
+        private SymRefInfo ProcessToken(SyntaxToken token)
         {
             if (!token.IsKind(Microsoft.CodeAnalysis.CSharp.SyntaxKind.IdentifierToken) &&
                 !token.IsKind(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind.IdentifierToken))
@@ -202,7 +199,7 @@ namespace SonarAnalyzer.Runner
             {
                 if (DeclarationKinds.Contains(declaredSymbol.Kind))
                 {
-                    return new SymbolReferenceInfo
+                    return new SymRefInfo
                     {
                         IdentifierToken = token,
                         Symbol = declaredSymbol,
@@ -223,7 +220,7 @@ namespace SonarAnalyzer.Runner
 
                     if (symbol.DeclaringSyntaxReferences.Any())
                     {
-                        return new SymbolReferenceInfo
+                        return new SymRefInfo
                         {
                             IdentifierToken = token,
                             Symbol = symbol,
@@ -236,7 +233,7 @@ namespace SonarAnalyzer.Runner
                         ctorSymbol.MethodKind == MethodKind.Constructor &&
                         ctorSymbol.IsImplicitlyDeclared)
                     {
-                        return new SymbolReferenceInfo
+                        return new SymRefInfo
                         {
                             IdentifierToken = token,
                             Symbol = ctorSymbol.ContainingType,

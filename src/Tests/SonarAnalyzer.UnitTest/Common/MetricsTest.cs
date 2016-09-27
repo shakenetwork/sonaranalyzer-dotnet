@@ -81,7 +81,7 @@ line 4"")
 End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
         }
 
-        private static IImmutableSet<int> LinesOfCode(AnalyzerLanguage language, string text) => MetricsFor(language, text).LinesOfCode;
+        private static IImmutableSet<int> LinesOfCode(AnalyzerLanguage language, string text) => MetricsFor(language, text).CodeLines;
 
         [TestMethod]
         [TestCategory(MetricsTestCategoryName)]

@@ -36,14 +36,14 @@ namespace SonarAnalyzer.Integration.UnitTest
         public void Configuration()
         {
             var tempInputFilePath = Path.Combine(TestContext.DeploymentDirectory, ParameterLoader.ParameterConfigurationFileName);
-            File.Copy(Path.Combine(ProgramTest.TestResourcesFolderName, "SonarLint.Cs.xml"), tempInputFilePath, true);
+            File.Copy(Path.Combine(EndToEnd_CSharp.TestResourcesFolderName, "SonarLint.Cs.xml"), tempInputFilePath, true);
 
             var conf = new Configuration(
                 tempInputFilePath,
                 Common.AnalyzerLanguage.CSharp);
 
             conf.IgnoreHeaderComments.Should().BeTrue();
-            conf.Files.Should().BeEquivalentTo(ProgramTest.TestInputPath +".cs");
+            conf.Files.Should().BeEquivalentTo(EndToEnd_CSharp.TestInputPath +".cs");
 
             string[] expectedAnalyzerIds =
             {

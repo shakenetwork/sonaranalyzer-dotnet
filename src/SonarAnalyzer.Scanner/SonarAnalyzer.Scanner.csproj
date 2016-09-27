@@ -104,17 +104,19 @@
     </Compile>
     <Compile Include="CompilationHelper.cs" />
     <Compile Include="Configuration.cs" />
+    <Compile Include="Protobuf\AnalyzerReport.cs">
+      <SonarQubeExclude>true</SonarQubeExclude>
+    </Compile>
     <Compile Include="TokenCollector\TokenHelper.cs" />
     <Compile Include="DiagnosticsRunner.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TokenCollector\TokenCollector.cs" />
-    <Compile Include="Protobuf\FileTokenInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Protobuf\build.bat" />
-    <None Include="Protobuf\FileTokenInfo.proto">
+    <None Include="Protobuf\AnalyzerReport.proto">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Scanner.nuspec">
@@ -148,6 +150,10 @@
   <PropertyGroup>
     <PostBuildEvent>
     </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>cd $(ProjectDir)Protobuf
+build.bat</PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
