@@ -58,28 +58,30 @@ if ($productversion -eq "empty") {
     exit 1
 } 
 
+#find the sha1 
 $sha1=$productversion.Substring($productversion.LastIndexOf('Sha1:')+5)
 Write-Host "Checking out $sha1"
 $s="SHA1=$sha1"
-#store the sha1 in a unix property file to update burgr
 $s | out-file -encoding utf8 ".\sha1.properties"
+#find the branch
+$GITHUB_BRANCH=$productversion.split("{ }")[1].Substring(7)
+Write-Host "GITHUB_BRANCH $GITHUB_BRANCH"
+if ($GITHUB_BRANCH.StartsWith("refs/heads/")) {
+    $GITHUB_BRANCH=$GITHUB_BRANCH.Substring(11)
+}
+$s="GITHUB_BRANCH=$GITHUB_BRANCH"
+Write-Host "$s"
+$s | out-file -encoding utf8 -append ".\sha1.properties"
+#convert sha1 property file to unix for jenkins compatiblity
 Get-ChildItem .\sha1.properties | ForEach-Object {
   $contents = [IO.File]::ReadAllText($_) -replace "`r`n?", "`n"
   $utf8 = New-Object System.Text.UTF8Encoding $false
   [IO.File]::WriteAllText($_, $contents, $utf8)
 }
 
-Write-Host "GITHUB_BRANCH $env:GITHUB_BRANCH"
-if (($env:GITHUB_BRANCH -eq "master") -or ($env:GITHUB_BRANCH -eq "refs/heads/master")) {
-    $env:GITHUB_BRANCH=$env:GITHUB_BRANCH.Substring(11)
-}
-$s="GITHUB_BRANCH=$env:GITHUB_BRANCH"
-Write-Host "$s"
-$s | out-file ".\branch.properties"
-
 #checkout commit
-#git pull origin $env:GITHUB_BRANCH
-#testExitCode
+git pull origin $GITHUB_BRANCH
+testExitCode
 git checkout -f $sha1
 testExitCode
 
