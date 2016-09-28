@@ -78,8 +78,8 @@ Write-Host "$s"
 $s | out-file ".\branch.properties"
 
 #checkout commit
-git pull origin $env:GITHUB_BRANCH
-testExitCode
+#git pull origin $env:GITHUB_BRANCH
+#testExitCode
 git checkout -f $sha1
 testExitCode
 
