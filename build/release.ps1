@@ -1,5 +1,12 @@
 $ErrorActionPreference = "Stop"
 
+function testExitCode(){
+    If($LASTEXITCODE -ne 0) {
+        write-host -f green "lastexitcode: $LASTEXITCODE"
+        exit $LASTEXITCODE
+    }
+}
+
 function CreateRelease(
     [string] $productName, 
     [string] $version, 
@@ -72,10 +79,7 @@ function CreateRelease(
 
     # repack with the new name
     & $nugetPath pack $workDir\$productName.nuspec
-    If($LASTEXITCODE -ne 0) {
-        Write-Error "Packaging failed on $productName"
-        exit 1
-    }
+    testExitCode
 }
 
 function ReleaseAll(
@@ -130,28 +134,24 @@ function pushToRepox(
     [string] $nugetPath)
 {
     & $nugetPath push "$productName.$releaseVersion.nupkg" -Source repox
-    If($LASTEXITCODE -ne 0) {
-        Write-Error "push failed for $productName"
-        exit 1
-    }
+    testExitCode
 
     #compute artifact name from filename
     $artifact=$productName
     $filePath="$productName.$releaseVersion.nupkg"
     #upload to maven repo
     & "$env:WINDOWS_MVN_HOME\bin\mvn.bat" deploy:deploy-file -DgroupId="org.sonarsource.dotnet" -DartifactId="$artifact" -Dversion="$releaseVersion" -Dpackaging="nupkg" -Dfile="$filePath" -DrepositoryId="sonarsource-public-qa" -Durl="https://repox.sonarsource.com/sonarsource-public-qa"
-    If($LASTEXITCODE -ne 0) {
-        Write-Error "maven deploy failed for $productName"
-        exit 1
-    }
+    testExitCode
 }
 
 # push to repox
 # setup Nuget.config
 del $env:APPDATA\NuGet\NuGet.Config
 & $env:NUGET_PATH sources Add -Name repox -Source https://repox.sonarsource.com/api/nuget/sonarsource-nuget-qa/
+testExitCode
 $apikey = $env:ARTIFACTORY_DEPLOY_USERNAME+":"+$env:ARTIFACTORY_DEPLOY_PASSWORD
 & $env:NUGET_PATH setapikey $apikey -Source repox
+testExitCode
 
 pushToRepox -productName "SonarAnalyzer.CSharp"                         -releaseVersion $env:RELEASE_VERSION -nugetPath $env:NUGET_PATH
 pushToRepox -productName "SonarAnalyzer.VisualBasic"                    -releaseVersion $env:RELEASE_VERSION -nugetPath $env:NUGET_PATH

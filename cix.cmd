@@ -1,5 +1,3 @@
-powershell -ExecutionPolicy Unrestricted -File build/cix.ps1
-if errorlevel 1 (
-   echo Failure Reason Given is %errorlevel%
-   exit /b %errorlevel%
-)
+@PowerShell -NonInteractive -NoProfile -ExecutionPolicy Unrestricted -Command "& {.\build\cix.ps1; exit $LastExitCode }" 
+@echo From Cmd.exe: cix.ps1 exited with exit code %errorlevel%
+exit %errorlevel%

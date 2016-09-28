@@ -1,5 +1,13 @@
 $ErrorActionPreference = "Stop"
 
+function testExitCode(){
+    If($LASTEXITCODE -ne 0) {
+        write-host -f green "lastexitcode: $LASTEXITCODE"
+        exit $LASTEXITCODE
+    }
+}
+
+
 #cleanup
 $strFileName="%USERPROFILE%\AppData\Local\Microsoft\MSBuild\14.0\Microsoft.Common.targets\ImportBefore\SonarAnalyzer.Testing.ImportBefore.targets" 
 If (Test-Path $strFileName){
@@ -8,9 +16,11 @@ If (Test-Path $strFileName){
 
 #nuget restore
 & $env:NUGET_PATH restore .\SonarAnalyzer.sln
+testExitCode
 
 #build tests
 & $env:MSBUILD_PATH .\SonarAnalyzer.sln /p:configuration=Release /p:DeployExtension=false /p:ZipPackageCompressionLevel=normal /v:m /p:defineConstants=SignAssembly /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=$env:CERT_PATH
+testExitCode
 
 #download nuget package
 $ARTIFACTORY_SRC_REPO="sonarsource-nuget-qa"
@@ -69,7 +79,9 @@ $s | out-file ".\branch.properties"
 
 #checkout commit
 git pull origin $env:GITHUB_BRANCH
+testExitCode
 git checkout -f $sha1
+testExitCode
 
 #move dlls to correct locations
 Write-Host "Installing downloaded dlls"
@@ -90,10 +102,14 @@ Copy-Item .\analyzers\*.dll .\its\binaries -force
 #run tests
 Write-Host "Start tests"
 & $env:VSTEST_PATH .\src\Tests\SonarAnalyzer.Platform.Integration.UnitTest\bin\Release\SonarAnalyzer.Platform.Integration.UnitTest.dll
+testExitCode
 & $env:VSTEST_PATH .\src\Tests\SonarAnalyzer.UnitTest\bin\Release\SonarAnalyzer.UnitTest.dll
+testExitCode
  
 #run regression-test
 Write-Host "Start regression tests"
 cd .\its
 git submodule update --init --recursive --depth 1
+testExitCode
 cmd /c .\regression-test.bat
+testExitCode
