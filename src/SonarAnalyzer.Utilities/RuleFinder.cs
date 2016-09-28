@@ -67,9 +67,18 @@ namespace SonarAnalyzer.Utilities
         {
             return diagnosticAnalyzers;
         }
+
         public IEnumerable<Type> GetAnalyzerTypes(AnalyzerLanguage language)
         {
             return diagnosticAnalyzers
+                .Where(type => GetTargetLanguages(type).IsAlso(language));
+        }
+
+        public static IEnumerable<Type> GetUtilityAnalyzerTypes(AnalyzerLanguage language)
+        {
+            return PackagedRuleAssemblies
+                .SelectMany(assembly => assembly.GetTypes())
+                .Where(t => !t.IsAbstract && t.IsSubclassOf(typeof(Rules.UtilityAnalyzerBase)))
                 .Where(type => GetTargetLanguages(type).IsAlso(language));
         }
 

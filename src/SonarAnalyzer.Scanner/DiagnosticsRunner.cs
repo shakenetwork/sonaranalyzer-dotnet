@@ -60,9 +60,21 @@ namespace SonarAnalyzer.Runner
 
             using (var tokenSource = new CancellationTokenSource())
             {
+                var additionalFiles = new[] {
+                    new AnalyzerAdditionalFile(configuration.SonarLintAdditionalPath),
+                    new AnalyzerAdditionalFile(configuration.ProtoFolderAdditionalPath)}
+                    .Where(a => a.Path != null)
+                    .ToArray();
+
+                if (!string.IsNullOrEmpty(configuration.ProtoFolderAdditionalPath))
+                {
+                    var utilityAnalyzers = configuration.GetUtilityAnalyzers();
+                    diagnosticAnalyzers = diagnosticAnalyzers.Union(utilityAnalyzers).ToImmutableArray();
+                }
+
                 var compilationWithAnalyzer = modifiedCompilation.WithAnalyzers(
                     diagnosticAnalyzers,
-                    new AnalyzerOptions(ImmutableArray.Create<AdditionalText>(new AnalyzerAdditionalFile(configuration.Path))),
+                    new AnalyzerOptions(ImmutableArray.Create<AdditionalText>(additionalFiles)),
                     tokenSource.Token);
 
                 return compilationWithAnalyzer.GetAnalyzerDiagnosticsAsync().Result;

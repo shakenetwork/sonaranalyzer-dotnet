@@ -142,7 +142,12 @@ namespace SonarAnalyzer.Helpers
 
         public static bool ConfigurationFilePathMatchesExpected(string path)
         {
-            return new FileInfo(path).Name.Equals(ParameterConfigurationFileName, StringComparison.OrdinalIgnoreCase);
+            return ConfigurationFilePathMatchesExpected(path, ParameterConfigurationFileName);
+        }
+
+        public static bool ConfigurationFilePathMatchesExpected(string path, string fileName)
+        {
+            return new FileInfo(path).Name.Equals(fileName, StringComparison.OrdinalIgnoreCase);
         }
     }
 }

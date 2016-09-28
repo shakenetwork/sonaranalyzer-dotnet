@@ -25,45 +25,32 @@ using SonarAnalyzer.Common;
 using System.IO;
 using Google.Protobuf;
 using SonarAnalyzer.Protobuf;
+using System.Diagnostics;
 
 namespace SonarAnalyzer.Runner
 {
     public static class Program
     {
-        internal const string TokenTypeFileName = "token-type.pb";
-        internal const string SymbolReferenceFileName = "symbol-reference.pb";
-        internal const string CopyPasteTokenFileName = "token-cpd.pb";
         internal const string IssuesFileName = "issues.pb";
-        internal const string MetricsFileName = "metrics.pb";
 
-        public static int Main(string[] args)
+        public static int RunAnalysis(ScannerAnalyzerConfiguration conf)
         {
-            if (args.Length != 3)
-            {
-                Write("Expected parameters: ");
-                Write("[Input configuration path]");
-                Write("[Output folder path]");
-                Write("[AnalyzerLanguage: 'cs' for C#, 'vbnet' for VB.Net]");
+            var language = AnalyzerLanguage.Parse(conf.Language);
 
-                return -1;
-            }
+            Write($"SonarAnalyzer for {language.GetFriendlyName()} version {FileVersionInfo.GetVersionInfo(typeof(Program).Assembly.Location).FileVersion}");
 
-            var language = AnalyzerLanguage.Parse(args[2]);
-
-            Write($"SonarAnalyzer for {language.GetFriendlyName()} version {typeof(Program).Assembly.GetName().Version}");
-
-            var configuration = new Configuration(args[0], language);
+            var configuration = new Configuration(conf.InputConfigurationPath, conf.WorkDirectoryConfigFilePath, language);
             var diagnosticsRunner = new DiagnosticsRunner(configuration);
 
-            var outputDirectory = args[1];
+            var outputDirectory = conf.OutputFolderPath;
             Directory.CreateDirectory(outputDirectory);
 
             var currentFileIndex = 0;
 
-            using (var tokentypeStream = File.Create(Path.Combine(outputDirectory, TokenTypeFileName)))
-            using (var symRefStream = File.Create(Path.Combine(outputDirectory, SymbolReferenceFileName)))
-            using (var cpdStream = File.Create(Path.Combine(outputDirectory, CopyPasteTokenFileName)))
-            using (var metricsStream = File.Create(Path.Combine(outputDirectory, MetricsFileName)))
+            using (var tokentypeStream = File.Create(Path.Combine(outputDirectory, Rules.TokenTypeAnalyzerBase.TokenTypeFileName)))
+            using (var symRefStream = File.Create(Path.Combine(outputDirectory, Rules.SymbolReferenceAnalyzerBase.SymbolReferenceFileName)))
+            using (var cpdStream = File.Create(Path.Combine(outputDirectory, Rules.CopyPasteTokenAnalyzerBase.CopyPasteTokenFileName)))
+            using (var metricsStream = File.Create(Path.Combine(outputDirectory, Rules.MetricsAnalyzerBase.MetricsFileName)))
             using (var issuesStream = File.Create(Path.Combine(outputDirectory, IssuesFileName)))
             {
                 foreach (var file in configuration.Files)
@@ -80,7 +67,7 @@ namespace SonarAnalyzer.Runner
                         var compilation = solution.Projects.First().GetCompilationAsync().Result;
                         var syntaxTree = compilation.SyntaxTrees.First();
 
-                        var tokenCollector = new TokenCollector(file, solution.GetDocument(syntaxTree), solution.Workspace);
+                        var tokenCollector = new TokenCollector(file, solution.GetDocument(syntaxTree));
 
                         tokenCollector.TokenTypeInfo.WriteDelimitedTo(tokentypeStream);
                         tokenCollector.SymbolReferenceInfo.WriteDelimitedTo(symRefStream);
@@ -90,30 +77,7 @@ namespace SonarAnalyzer.Runner
                             ? (MetricsBase)new Common.CSharp.Metrics(syntaxTree)
                             : new Common.VisualBasic.Metrics(syntaxTree);
 
-                        var complexity = metrics.Complexity;
-
-                        var metricsInfo = new MetricsInfo()
-                        {
-                            FilePath = file,
-                            ClassCount = metrics.ClassCount,
-                            StatementCount = metrics.StatementCount,
-                            FunctionCount = metrics.FunctionCount,
-                            PublicApiCount = metrics.PublicApiCount,
-                            PublicUndocumentedApiCount = metrics.PublicUndocumentedApiCount,
-
-                            Complexity = complexity,
-                            ComplexityInClasses = metrics.ClassNodes.Sum(metrics.GetComplexity),
-                            ComplexityInFunctions = metrics.FunctionNodes.Sum(metrics.GetComplexity),
-
-                            FileComplexityDistribution = new Distribution(Distribution.FileComplexityRange).Add(complexity).ToString(),
-                            FunctionComplexityDistribution = metrics.FunctionComplexityDistribution.ToString()
-                        };
-
-                        var comments = metrics.GetComments(configuration.IgnoreHeaderComments);
-                        metricsInfo.NoSonarComment.AddRange(comments.NoSonar);
-                        metricsInfo.NonBlankComment.AddRange(comments.NonBlank);
-
-                        metricsInfo.CodeLine.AddRange(metrics.CodeLines);
+                        var metricsInfo = Rules.MetricsAnalyzerBase.CalculateMetrics(metrics, file, configuration.IgnoreHeaderComments);
 
                         metricsInfo.WriteDelimitedTo(metricsStream);
 
@@ -132,7 +96,7 @@ namespace SonarAnalyzer.Runner
 
                             if (diagnostic.Location != Location.None)
                             {
-                                issue.Location = TokenCollector.GetTextRange(diagnostic.Location.GetLineSpan());
+                                issue.Location = Rules.UtilityAnalyzerBase.GetTextRange(diagnostic.Location.GetLineSpan());
                             }
 
                             issuesInFile.Issue.Add(issue);
@@ -149,9 +113,29 @@ namespace SonarAnalyzer.Runner
 
                     #endregion
                 }
-
-                return 0;
             }
+
+            return 0;
+        }
+
+        public static int Main(string[] args)
+        {
+            if (args.Length != 3)
+            {
+                Write("Expected parameters: ");
+                Write("[Input configuration path]");
+                Write("[Output folder path]");
+                Write("[AnalyzerLanguage: 'cs' for C#, 'vbnet' for VB.Net]");
+
+                return -1;
+            }
+
+            return RunAnalysis(new ScannerAnalyzerConfiguration
+            {
+                InputConfigurationPath = args[0],
+                OutputFolderPath = args[1],
+                Language = args[2]
+            });
         }
 
         private static void Write(string text)

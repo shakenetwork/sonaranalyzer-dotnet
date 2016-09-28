@@ -33,26 +33,31 @@ namespace SonarAnalyzer.Runner
     public class Configuration
     {
         private readonly ImmutableArray<DiagnosticAnalyzer> analyzers;
+        private readonly AnalyzerLanguage language;
 
-        public string Path { get; private set; }
+        public string SonarLintAdditionalPath { get; private set; }
+        public string ProtoFolderAdditionalPath { get; private set; }
 
         public bool IgnoreHeaderComments { get; }
         public IImmutableList<string> Files { get; }
         public IImmutableSet<string> AnalyzerIds { get; }
 
-        public Configuration(string path, AnalyzerLanguage language)
+        public Configuration(string sonarLintFilePath, string protoFolderFilePath, AnalyzerLanguage language)
         {
-            if (!ParameterLoader.ConfigurationFilePathMatchesExpected(path))
+            if (!ParameterLoader.ConfigurationFilePathMatchesExpected(sonarLintFilePath))
             {
                 throw new ArgumentException(
                     $"Input configuration doesn't match expected file name: '{ParameterLoader.ParameterConfigurationFileName}'",
-                    nameof(path));
+                    nameof(sonarLintFilePath));
             }
 
-            Path = path;
+            this.language = language;
+            ProtoFolderAdditionalPath = protoFolderFilePath;
+
+            SonarLintAdditionalPath = sonarLintFilePath;
             analyzers = ImmutableArray.Create(GetAnalyzers(language).ToArray());
 
-            var xml = XDocument.Load(path);
+            var xml = XDocument.Load(sonarLintFilePath);
             var settings = ParseSettings(xml);
             IgnoreHeaderComments = "true".Equals(settings[$"sonar.{language}.ignoreHeaderComments"], StringComparison.OrdinalIgnoreCase);
 
@@ -60,8 +65,6 @@ namespace SonarAnalyzer.Runner
 
             AnalyzerIds = xml.Descendants("Rule").Select(e => e.Elements("Key").Single().Value).ToImmutableHashSet();
         }
-
-
 
         private static ImmutableDictionary<string, string> ParseSettings(XContainer xml)
         {
@@ -85,14 +88,29 @@ namespace SonarAnalyzer.Runner
                 .ToImmutableDictionary(e => e.Key, e => e.Value);
         }
 
-
-
         public ImmutableArray<DiagnosticAnalyzer> GetAnalyzers()
         {
             var builder = ImmutableArray.CreateBuilder<DiagnosticAnalyzer>();
 
             foreach (var analyzer in analyzers
                 .Where(analyzer => AnalyzerIds.Contains(analyzer.SupportedDiagnostics.Single().Id)))
+            {
+                builder.Add(analyzer);
+            }
+
+            return builder.ToImmutable();
+        }
+
+        public ImmutableArray<DiagnosticAnalyzer> GetUtilityAnalyzers()
+        {
+            var builder = ImmutableArray.CreateBuilder<DiagnosticAnalyzer>();
+
+            var utilityAnalyzerTypes = RuleFinder.GetUtilityAnalyzerTypes(language)
+                .Where(t => !t.IsAbstract)
+                .ToList();
+
+            foreach (var analyzer in utilityAnalyzerTypes
+                    .Select(type => (DiagnosticAnalyzer)Activator.CreateInstance(type)))
             {
                 builder.Add(analyzer);
             }

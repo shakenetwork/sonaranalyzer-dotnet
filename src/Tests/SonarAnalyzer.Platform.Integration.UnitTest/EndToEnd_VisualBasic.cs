@@ -45,22 +45,25 @@ namespace SonarAnalyzer.Integration.UnitTest
             var tempInputFilePath = Path.Combine(TestContext.DeploymentDirectory, ParameterLoader.ParameterConfigurationFileName);
             File.Copy(Path.Combine(EndToEnd_CSharp.TestResourcesFolderName, "SonarLint.Vb.xml"), tempInputFilePath, true);
 
-            Program.Main(new[] {
-                tempInputFilePath,
-                EndToEnd_CSharp.OutputFolderName,
-                AnalyzerLanguage.VisualBasic.ToString()});
+            Program.RunAnalysis(new ScannerAnalyzerConfiguration
+            {
+                InputConfigurationPath = tempInputFilePath,
+                OutputFolderPath = EndToEnd_CSharp.OutputFolderName,
+                Language = AnalyzerLanguage.VisualBasic.ToString(),
+                WorkDirectoryConfigFilePath = Path.Combine(EndToEnd_CSharp.TestResourcesFolderName, "ProjectOutFolderPath.txt")
+            });
         }
 
         [TestMethod]
         public void Token_Types_Computed_VisualBasic()
         {
             var testFileContent = File.ReadAllLines(EndToEnd_CSharp.TestInputPath + extension);
-            EndToEnd_CSharp.CheckTokenInfoFile(testFileContent, extension, 67, new[]
+            EndToEnd_CSharp.CheckTokenInfoFile(testFileContent, extension, 32, new[]
                 {
-                    new EndToEnd_CSharp.ExpectedTokenInfo { Index = 8, Kind = TokenType.Comment, Text = "'''" },
-                    new EndToEnd_CSharp.ExpectedTokenInfo { Index = 31, Kind = TokenType.TypeName, Text = "TTTestClass" },
-                    new EndToEnd_CSharp.ExpectedTokenInfo { Index = 49, Kind = TokenType.TypeName, Text = "TTTestClass" },
-                    new EndToEnd_CSharp.ExpectedTokenInfo { Index = 48, Kind = TokenType.Keyword, Text = "New" }
+                    new EndToEnd_CSharp.ExpectedTokenInfo { Index = 7, Kind = TokenType.Comment, Text = "' FIXME: fix this issue" },
+                    new EndToEnd_CSharp.ExpectedTokenInfo { Index = 6, Kind = TokenType.TypeName, Text = "TTTestClass" },
+                    new EndToEnd_CSharp.ExpectedTokenInfo { Index = 17, Kind = TokenType.TypeName, Text = "TTTestClass" },
+                    new EndToEnd_CSharp.ExpectedTokenInfo { Index = 16, Kind = TokenType.Keyword, Text = "New" }
                 });
         }
 
@@ -78,7 +81,7 @@ namespace SonarAnalyzer.Integration.UnitTest
             var testFileContent = File.ReadAllLines(EndToEnd_CSharp.TestInputPath + extension);
             EndToEnd_CSharp.CheckTokenReferenceFile(testFileContent, extension, 4, new[]
                 {
-                    new EndToEnd_CSharp.ExpectedReferenceInfo { Index = 0, NumberOfReferences = 2 },
+                    new EndToEnd_CSharp.ExpectedReferenceInfo { Index = 0, NumberOfReferences = 1 },
                     new EndToEnd_CSharp.ExpectedReferenceInfo { Index = 1, NumberOfReferences = 0 },
                     new EndToEnd_CSharp.ExpectedReferenceInfo { Index = 2, NumberOfReferences = 1 },
                     new EndToEnd_CSharp.ExpectedReferenceInfo { Index = 3, NumberOfReferences = 0 }

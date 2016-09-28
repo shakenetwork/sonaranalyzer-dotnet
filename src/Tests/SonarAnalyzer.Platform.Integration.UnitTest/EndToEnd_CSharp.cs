@@ -50,10 +50,13 @@ namespace SonarAnalyzer.Integration.UnitTest
             var tempInputFilePath = Path.Combine(TestContext.DeploymentDirectory, ParameterLoader.ParameterConfigurationFileName);
             File.Copy(Path.Combine(TestResourcesFolderName, "SonarLint.Cs.xml"), tempInputFilePath, true);
 
-            Program.Main(new[] {
-                tempInputFilePath,
-                OutputFolderName,
-                AnalyzerLanguage.CSharp.ToString()});
+            Program.RunAnalysis(new ScannerAnalyzerConfiguration
+            {
+                InputConfigurationPath = tempInputFilePath,
+                OutputFolderPath = OutputFolderName,
+                Language = AnalyzerLanguage.CSharp.ToString(),
+                WorkDirectoryConfigFilePath = Path.Combine(TestResourcesFolderName, "ProjectOutFolderPath.txt")
+            });
         }
 
         internal class ExpectedTokenInfo
@@ -73,12 +76,12 @@ namespace SonarAnalyzer.Integration.UnitTest
         public void Token_Types_Computed_CSharp()
         {
             var testFileContent = File.ReadAllLines(TestInputPath + extension);
-            CheckTokenInfoFile(testFileContent, extension, 78, new[]
+            CheckTokenInfoFile(testFileContent, extension, 23, new[]
                 {
-                    new ExpectedTokenInfo { Index = 8, Kind = TokenType.Comment, Text = "///" },
-                    new ExpectedTokenInfo { Index = 31, Kind = TokenType.TypeName, Text = "TTTestClass" },
-                    new ExpectedTokenInfo { Index = 62, Kind = TokenType.TypeName, Text = "TTTestClass" },
-                    new ExpectedTokenInfo { Index = 49, Kind = TokenType.Keyword, Text = "var" }
+                    new ExpectedTokenInfo { Index = 6, Kind = TokenType.Comment, Text = "// FIXME: fix this issue" },
+                    new ExpectedTokenInfo { Index = 5, Kind = TokenType.TypeName, Text = "TTTestClass" },
+                    new ExpectedTokenInfo { Index = 18, Kind = TokenType.TypeName, Text = "TTTestClass" },
+                    new ExpectedTokenInfo { Index = 12, Kind = TokenType.Keyword, Text = "var" }
                 });
         }
 
@@ -95,7 +98,7 @@ namespace SonarAnalyzer.Integration.UnitTest
             var testFileContent = File.ReadAllLines(TestInputPath + extension);
             CheckTokenReferenceFile(testFileContent, extension, 3, new[]
                 {
-                    new ExpectedReferenceInfo { Index = 0, NumberOfReferences = 2 },
+                    new ExpectedReferenceInfo { Index = 0, NumberOfReferences = 1 },
                     new ExpectedReferenceInfo { Index = 1, NumberOfReferences = 0 },
                     new ExpectedReferenceInfo { Index = 2, NumberOfReferences = 1 }
                 });
@@ -103,7 +106,7 @@ namespace SonarAnalyzer.Integration.UnitTest
 
         internal static void CheckCpdTokens(string tokenCpdExpected)
         {
-            var cpdInfos = GetDeserializedData<CopyPasteTokenInfo>(Path.Combine(OutputFolderName, Program.CopyPasteTokenFileName));
+            var cpdInfos = GetDeserializedData<CopyPasteTokenInfo>(Path.Combine(OutputFolderName, Rules.CopyPasteTokenAnalyzerBase.CopyPasteTokenFileName));
 
             Assert.AreEqual(1, cpdInfos.Count);
             var actual = string.Join(" ", cpdInfos[0].TokenInfo.Select(ti => ti.TokenValue));
@@ -113,7 +116,7 @@ namespace SonarAnalyzer.Integration.UnitTest
         internal static void CheckTokenReferenceFile(string[] testFileContent, string extension,
             int totalReferenceCount, IEnumerable<ExpectedReferenceInfo> expectedReferences)
         {
-            var refInfos = GetDeserializedData<SymbolReferenceInfo>(Path.Combine(OutputFolderName, Program.SymbolReferenceFileName));
+            var refInfos = GetDeserializedData<SymbolReferenceInfo>(Path.Combine(OutputFolderName, Rules.SymbolReferenceAnalyzerBase.SymbolReferenceFileName));
 
             Assert.AreEqual(1, refInfos.Count);
             var refInfo = refInfos.First();
@@ -142,7 +145,7 @@ namespace SonarAnalyzer.Integration.UnitTest
 
         internal static void CheckTokenInfoFile(string[] testInputFileLines, string extension, int totalTokenCount, IEnumerable<ExpectedTokenInfo> expectedTokens)
         {
-            var tokenInfos = GetDeserializedData<TokenTypeInfo>(Path.Combine(OutputFolderName, Program.TokenTypeFileName));
+            var tokenInfos = GetDeserializedData<TokenTypeInfo>(Path.Combine(OutputFolderName, Rules.TokenTypeAnalyzerBase.TokenTypeFileName));
 
             Assert.AreEqual(1, tokenInfos.Count);
             var token = tokenInfos.First();
@@ -165,7 +168,7 @@ namespace SonarAnalyzer.Integration.UnitTest
         [TestMethod]
         public void Metrics_Are_Present()
         {
-            var metrics = GetDeserializedData<MetricsInfo>(Path.Combine(OutputFolderName, Program.MetricsFileName));
+            var metrics = GetDeserializedData<MetricsInfo>(Path.Combine(OutputFolderName, Rules.MetricsAnalyzerBase.MetricsFileName));
 
             Assert.AreEqual(1, metrics.Count);
             var m = metrics.First();

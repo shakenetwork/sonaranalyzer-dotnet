@@ -40,6 +40,7 @@ namespace SonarAnalyzer.Integration.UnitTest
 
             var conf = new Configuration(
                 tempInputFilePath,
+                null,
                 Common.AnalyzerLanguage.CSharp);
 
             conf.IgnoreHeaderComments.Should().BeTrue();

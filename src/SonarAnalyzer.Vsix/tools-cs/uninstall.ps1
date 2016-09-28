@@ -12,6 +12,15 @@ if ($project.DTE.Version -eq '14.0')
         $analyzersPath = split-path -path $toolsPath -parent
         $analyzersPath = join-path $analyzersPath "analyzers"
 
+        $analyzerFilePath = join-path $analyzersPath "Google.Protobuf.dll"
+        try
+        {
+            $project.Object.AnalyzerReferences.Remove($analyzerFilePath)
+        }
+        catch
+        {
+        }
+
         $analyzerFilePath = join-path $analyzersPath "SonarAnalyzer.dll"
         try
         {

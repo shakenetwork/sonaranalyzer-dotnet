@@ -30,95 +30,45 @@ namespace SonarAnalyzer.Runner
 {
     public class TokenCollector
     {
-        private static readonly ISet<SymbolKind> DeclarationKinds = ImmutableHashSet.Create(
-            SymbolKind.Event,
-            SymbolKind.Field,
-            SymbolKind.Local,
-            SymbolKind.Method,
-            SymbolKind.NamedType,
-            SymbolKind.Parameter,
-            SymbolKind.Property,
-            SymbolKind.TypeParameter);
 
-        private readonly SyntaxNode root;
+        private readonly SyntaxTree tree;
         private readonly SemanticModel semanticModel;
-        private readonly IEnumerable<ClassifiedSpan> classifiedSpans;
 
         private readonly string filePath;
 
-        public TokenCollector(string filePath, Document document, Workspace workspace)
+        public TokenCollector(string filePath, Document document)
         {
             this.filePath = filePath;
-            this.root = document.GetSyntaxRootAsync().Result;
+            this.tree = document.GetSyntaxTreeAsync().Result;
             this.semanticModel = document.GetSemanticModelAsync().Result;
-            this.classifiedSpans = Classifier.GetClassifiedSpans(semanticModel, root.FullSpan, workspace);
-        }
-
-        private class SymRefInfo
-        {
-            public SyntaxToken IdentifierToken { get; set; }
-            public ISymbol Symbol { get; set; }
-            public bool IsDeclaration { get; set; }
         }
 
         public SymbolReferenceInfo SymbolReferenceInfo
         {
             get
             {
-                var allReferences = new List<SymRefInfo>();
+                var analyzer = tree.GetRoot().Language == LanguageNames.CSharp
+                    ? (Rules.SymbolReferenceAnalyzerBase)new Rules.CSharp.SymbolReferenceAnalyzer()
+                    : new Rules.VisualBasic.SymbolReferenceAnalyzer();
 
-                foreach (var classifiedSpan in classifiedSpans)
-                {
-                    var token = root.FindToken(classifiedSpan.TextSpan.Start, findInsideTrivia: true);
-                    var reference = ProcessToken(token);
-                    if (reference != null)
-                    {
-                        allReferences.Add(reference);
-                    }
-                }
-
-                var symbolReferenceInfo = new SymbolReferenceInfo
-                {
-                    FilePath = filePath
-                };
-
-                foreach (var allReference in allReferences.GroupBy(r => r.Symbol))
-                {
-                    var sr = GetSymbolReference(allReference);
-                    if (sr != null)
-                    {
-                        symbolReferenceInfo.Reference.Add(sr);
-                    }
-                }
-
-                return symbolReferenceInfo;
+                var message = Rules.SymbolReferenceAnalyzerBase.CalculateSymbolReferenceInfo(tree, semanticModel, t => IsIdentifier(t), t => analyzer.GetBindableParent(t));
+                message.FilePath = filePath;
+                return message;
             }
         }
+
 
         public TokenTypeInfo TokenTypeInfo
         {
             get
             {
-                var tokenTypeInfo = new TokenTypeInfo
-                {
-                    FilePath = filePath
-                };
+                var analyzer = tree.GetRoot().Language == LanguageNames.CSharp
+                    ? (Rules.TokenTypeAnalyzerBase)new Rules.CSharp.TokenTypeAnalyzer()
+                    : new Rules.VisualBasic.TokenTypeAnalyzer();
 
-                foreach (var classifiedSpan in classifiedSpans)
-                {
-                    var tokenType = ClassificationTypeMapping.ContainsKey(classifiedSpan.ClassificationType)
-                        ? ClassificationTypeMapping[classifiedSpan.ClassificationType]
-                        : TokenType.Unknown;
-
-                    var tokenInfo = new TokenTypeInfo.Types.TokenInfo
-                    {
-                        TokenType = tokenType,
-                        TextRange = GetTextRange(Location.Create(root.SyntaxTree, classifiedSpan.TextSpan).GetLineSpan())
-                    };
-                    tokenTypeInfo.TokenInfo.Add(tokenInfo);
-                }
-
-                return tokenTypeInfo;
+                var message = analyzer.GetTokenTypeInfo(tree, semanticModel);
+                message.FilePath = filePath;
+                return message;
             }
         }
 
@@ -126,155 +76,20 @@ namespace SonarAnalyzer.Runner
         {
             get
             {
-                var cpdTokenInfo = new CopyPasteTokenInfo
-                {
-                    FilePath = filePath
-                };
+                var analyzer = tree.GetRoot().Language == LanguageNames.CSharp
+                    ? (Rules.CopyPasteTokenAnalyzerBase)new Rules.CSharp.CopyPasteTokenAnalyzer()
+                    : new Rules.VisualBasic.CopyPasteTokenAnalyzer();
 
-                var tokens = this.root.DescendantTokens(n => !n.IsUsingDirective(), false);
-
-                foreach (var token in tokens)
-                {
-                    var tokenInfo = new CopyPasteTokenInfo.Types.TokenInfo
-                    {
-                        TokenValue = token.GetCpdValue(),
-                        TextRange = GetTextRange(Location.Create(root.SyntaxTree, token.Span).GetLineSpan())
-                    };
-
-                    if (!string.IsNullOrWhiteSpace(tokenInfo.TokenValue))
-                    {
-                        cpdTokenInfo.TokenInfo.Add(tokenInfo);
-                    }
-                }
-
-                return cpdTokenInfo;
+                var message = analyzer.CalculateTokenInfo(tree);
+                message.FilePath = filePath;
+                return message;
             }
         }
 
-        private SymbolReferenceInfo.Types.SymbolReference GetSymbolReference(IEnumerable<SymRefInfo> allReference)
+        private static bool IsIdentifier(SyntaxToken token)
         {
-            var declaration = allReference.FirstOrDefault(r => r.IsDeclaration);
-            if (declaration == null)
-            {
-                return null;
-            }
-
-            var sr = new SymbolReferenceInfo.Types.SymbolReference
-            {
-                Declaration = GetTextRange(Location.Create(root.SyntaxTree, declaration.IdentifierToken.Span).GetLineSpan())
-            };
-
-            var references = allReference.Where(r => !r.IsDeclaration).Select(r => r.IdentifierToken);
-            foreach (var reference in references)
-            {
-                sr.Reference.Add(GetTextRange(Location.Create(root.SyntaxTree, reference.Span).GetLineSpan()));
-            }
-
-            return sr;
+            return token.IsKind(Microsoft.CodeAnalysis.CSharp.SyntaxKind.IdentifierToken) ||
+                token.IsKind(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind.IdentifierToken);
         }
-
-        internal static TextRange GetTextRange(FileLinePositionSpan lineSpan)
-        {
-            return new TextRange
-            {
-                StartLine = lineSpan.StartLinePosition.GetLineNumberToReport(),
-                EndLine = lineSpan.EndLinePosition.GetLineNumberToReport(),
-                StartOffset = lineSpan.StartLinePosition.Character,
-                EndOffset = lineSpan.EndLinePosition.Character
-            };
-        }
-
-        private SymRefInfo ProcessToken(SyntaxToken token)
-        {
-            if (!token.IsKind(Microsoft.CodeAnalysis.CSharp.SyntaxKind.IdentifierToken) &&
-                !token.IsKind(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind.IdentifierToken))
-            {
-                // For the time being, we only handle identifer tokens.
-                // We could also handle keywords, such as this, base
-                return null;
-            }
-
-            var declaredSymbol = semanticModel.GetDeclaredSymbol(token.Parent);
-            if (declaredSymbol != null)
-            {
-                if (DeclarationKinds.Contains(declaredSymbol.Kind))
-                {
-                    return new SymRefInfo
-                    {
-                        IdentifierToken = token,
-                        Symbol = declaredSymbol,
-                        IsDeclaration = true
-                    };
-                }
-            }
-            else
-            {
-                var node = token.GetBindableParent();
-                if (node != null)
-                {
-                    var symbol = semanticModel.GetSymbolInfo(node).Symbol;
-                    if (symbol == null)
-                    {
-                        return null;
-                    }
-
-                    if (symbol.DeclaringSyntaxReferences.Any())
-                    {
-                        return new SymRefInfo
-                        {
-                            IdentifierToken = token,
-                            Symbol = symbol,
-                            IsDeclaration = false
-                        };
-                    }
-
-                    var ctorSymbol = symbol as IMethodSymbol;
-                    if (ctorSymbol != null &&
-                        ctorSymbol.MethodKind == MethodKind.Constructor &&
-                        ctorSymbol.IsImplicitlyDeclared)
-                    {
-                        return new SymRefInfo
-                        {
-                            IdentifierToken = token,
-                            Symbol = ctorSymbol.ContainingType,
-                            IsDeclaration = false
-                        };
-                    }
-                }
-            }
-            return null;
-        }
-
-        private static readonly IDictionary<string, TokenType> ClassificationTypeMapping = new Dictionary<string, TokenType>
-        {
-            { ClassificationTypeNames.ClassName, TokenType.TypeName },
-            { ClassificationTypeNames.DelegateName, TokenType.TypeName },
-            { ClassificationTypeNames.EnumName, TokenType.TypeName },
-            { ClassificationTypeNames.InterfaceName, TokenType.TypeName },
-            { ClassificationTypeNames.ModuleName, TokenType.TypeName },
-            { ClassificationTypeNames.StructName, TokenType.TypeName },
-
-            { ClassificationTypeNames.TypeParameterName, TokenType.TypeName },
-
-            { ClassificationTypeNames.Comment, TokenType.Comment },
-            { ClassificationTypeNames.XmlDocCommentAttributeName, TokenType.Comment },
-            { ClassificationTypeNames.XmlDocCommentAttributeQuotes, TokenType.Comment },
-            { ClassificationTypeNames.XmlDocCommentAttributeValue, TokenType.Comment },
-            { ClassificationTypeNames.XmlDocCommentCDataSection, TokenType.Comment },
-            { ClassificationTypeNames.XmlDocCommentComment, TokenType.Comment },
-            { ClassificationTypeNames.XmlDocCommentDelimiter, TokenType.Comment },
-            { ClassificationTypeNames.XmlDocCommentEntityReference, TokenType.Comment },
-            { ClassificationTypeNames.XmlDocCommentName, TokenType.Comment },
-            { ClassificationTypeNames.XmlDocCommentProcessingInstruction, TokenType.Comment },
-            { ClassificationTypeNames.XmlDocCommentText, TokenType.Comment },
-
-            { ClassificationTypeNames.NumericLiteral, TokenType.NumericLiteral },
-
-            { ClassificationTypeNames.StringLiteral, TokenType.StringLiteral },
-            { ClassificationTypeNames.VerbatimStringLiteral, TokenType.StringLiteral },
-
-            { ClassificationTypeNames.Keyword, TokenType.Keyword },
-            { ClassificationTypeNames.PreprocessorKeyword, TokenType.Keyword }
-        }.ToImmutableDictionary();
     }
 }

@@ -33,10 +33,10 @@ namespace SonarAnalyzer.UnitTest.PackagingTests
             const string vsixFileName = "SonarAnalyzer.vsix";
 #if DEBUG
             const string pathEnding = @"bin\Debug";
-            const int approxFileSize = 1200 * 1024;
+            const int approxFileSize = 1521 * 1024;
 #else
             const string pathEnding = @"bin\Release";
-            const int approxFileSize = 380 * 1024;
+            const int approxFileSize = 501 * 1024;
 #endif
 
             var currentDirectory = Directory.GetCurrentDirectory();

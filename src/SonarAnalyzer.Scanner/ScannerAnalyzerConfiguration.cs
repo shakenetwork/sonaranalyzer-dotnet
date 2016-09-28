@@ -1,4 +1,4 @@
-﻿/*
+/*
  * SonarAnalyzer for .NET
  * Copyright (C) 2015-2016 SonarSource SA
  * mailto:contact@sonarsource.com
@@ -18,12 +18,13 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Reflection;
-using System.Runtime.CompilerServices;
-
-[assembly: AssemblyTitle("SonarAnalyzer C#")]
-[assembly: AssemblyProduct("SonarAnalyzer")]
-[assembly: AssemblyDescription("")]
-
-[assembly: InternalsVisibleTo("SonarAnalyzer.UnitTest" + Signing.InternalsVisibleToPublicKey)]
-[assembly: InternalsVisibleTo("SonarAnalyzer.Scanner" + Signing.InternalsVisibleToPublicKey)]
+namespace SonarAnalyzer.Runner
+{
+    public class ScannerAnalyzerConfiguration
+    {
+        public string InputConfigurationPath { get; set; }
+        public string OutputFolderPath { get; set; }
+        public string Language { get; set; }
+        public string WorkDirectoryConfigFilePath { get; set; }
+    }
+}

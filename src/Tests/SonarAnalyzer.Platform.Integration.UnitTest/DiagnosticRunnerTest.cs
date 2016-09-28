@@ -38,7 +38,7 @@ namespace SonarAnalyzer.Integration.UnitTest
             var tempInputFilePath = Path.Combine(TestContext.DeploymentDirectory, ParameterLoader.ParameterConfigurationFileName);
             File.Copy("TestResources\\ConfigurationTest.Empty.Cs.xml", tempInputFilePath, true);
 
-            var runner = new DiagnosticsRunner(new Configuration(tempInputFilePath, Common.AnalyzerLanguage.CSharp));
+            var runner = new DiagnosticsRunner(new Configuration(tempInputFilePath, null, Common.AnalyzerLanguage.CSharp));
 
             var solution = CompilationHelper.GetSolutionWithEmptyFile(Common.AnalyzerLanguage.CSharp);
 
@@ -55,7 +55,7 @@ namespace SonarAnalyzer.Integration.UnitTest
             var tempInputFilePath = Path.Combine(TestContext.DeploymentDirectory, ParameterLoader.ParameterConfigurationFileName);
             File.Copy("TestResources\\ConfigurationTest.Empty.VbNet.xml", tempInputFilePath, true);
 
-            var runner = new DiagnosticsRunner(new Configuration(tempInputFilePath, Common.AnalyzerLanguage.VisualBasic));
+            var runner = new DiagnosticsRunner(new Configuration(tempInputFilePath, null, Common.AnalyzerLanguage.VisualBasic));
 
             var solution = CompilationHelper.GetSolutionWithEmptyFile(Common.AnalyzerLanguage.VisualBasic);
 

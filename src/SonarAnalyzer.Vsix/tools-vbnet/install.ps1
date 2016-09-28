@@ -18,6 +18,9 @@ if($project.Type -ne "VB.NET")
 $analyzersPath = split-path -path $toolsPath -parent
 $analyzersPath = join-path $analyzersPath "analyzers"
 
+$analyzerFilePath = join-path $analyzersPath "Google.Protobuf.dll"
+$project.Object.AnalyzerReferences.Add($analyzerFilePath)
+
 $analyzerFilePath = join-path $analyzersPath "SonarAnalyzer.dll"
 $project.Object.AnalyzerReferences.Add($analyzerFilePath)
 
