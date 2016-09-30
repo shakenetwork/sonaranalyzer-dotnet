@@ -95,7 +95,6 @@ namespace SonarAnalyzer.Runner
                         var metricsInfo = new MetricsInfo()
                         {
                             FilePath = file,
-                            LineCount = metrics.LineCount,
                             ClassCount = metrics.ClassCount,
                             StatementCount = metrics.StatementCount,
                             FunctionCount = metrics.FunctionCount,

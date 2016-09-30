@@ -171,7 +171,6 @@ namespace SonarAnalyzer.Integration.UnitTest
             var m = metrics.First();
             Assert.AreEqual($"{TestInputPath}{extension}", m.FilePath);
 
-            Assert.AreEqual(26, m.LineCount);
             Assert.AreEqual(1, m.ClassCount);
         }
 
