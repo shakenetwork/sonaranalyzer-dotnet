@@ -65,14 +65,6 @@ function CreateRelease(
     # change content of nuspec file
     (Get-Content $workDir\$productName.nuspec) -replace "<version>$version</version>", "<version>$releaseVersion</version>" | Set-Content $workDir\$productName.nuspec
 
-    $additionalContent = "<files>
-     <file src=""analyzers\*.dll"" target=""analyzers\"" />
-     <file src=""tools\*.ps1"" target=""tools\"" />
-     <file src=""xml\*.xml"" target=""xml\"" />
-     <file src=""assembly\*.*"" target=""assembly\"" />
-     <file src=""protobuf\*.proto"" target=""protobuf\"" />
-    </files>"
-
     $fileContent = (Get-Content $workDir\$productName.nuspec) -replace "</metadata>", "</metadata>$additionalNugetFileContent"
     $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding($False)
     [System.IO.File]::WriteAllLines("$workDir\$productName.nuspec", $fileContent, $Utf8NoBomEncoding)
