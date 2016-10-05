@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -250,6 +251,42 @@ namespace Tests.TestCases
             {
                 p = 11;
             }
+        }
+    }
+
+    public class Intermediate : ISerializable
+    { }
+
+    [Serializable]
+    public class ProperImplementedSerializableClass : Intermediate
+    {
+        private string value;
+
+        private ProperImplementedSerializableClass(SerializationInfo info, StreamingContext context) // Compliant, because using the streaming context is not required for properly implementing the serializable constructor.
+        {
+            value = info.GetString("Value");
+        }
+    }
+
+    [Serializable]
+    public class NotProperImplementedSerializableClass : Intermediate
+    {
+        private StreamingContextStates state;
+
+        private NotProperImplementedSerializableClass(SerializationInfo info, StreamingContext context) // Noncompliant, because using the serialization info is required for properly implementing the serializable constructor.
+        {
+            state = context.State;
+        }
+    }
+
+    [Serializable]
+    public class NotProperImplementedSerializableClass
+    {
+        private string value;
+
+        private NotProperImplementedSerializableClass(SerializationInfo info, StreamingContext context) // Compliant, not ISerializable
+        {
+            value = info.GetString("Value");
         }
     }
 }

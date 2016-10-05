@@ -94,7 +94,8 @@ namespace SonarAnalyzer.Rules.CSharp
 
             var unusedParameters = GetUnusedParameters(declaration, methodSymbol, context.SemanticModel);
             if (unusedParameters.Any() &&
-                !IsUsedAsEventHandlerFunctionOrAction(methodSymbol, context.SemanticModel.Compilation))
+                !IsUsedAsEventHandlerFunctionOrAction(methodSymbol, context.SemanticModel.Compilation) &&
+                !IsCandidateSerializableConstructor(unusedParameters, methodSymbol))
             {
                 ReportOnUnusedParameters(declaration, unusedParameters, MessageUnused, context);
             }
@@ -242,6 +243,18 @@ namespace SonarAnalyzer.Rules.CSharp
 
             return !(expression.Parent is ExpressionSyntax) ||
                 (parentAsAssignment != null && object.ReferenceEquals(expression, parentAsAssignment.Right));
+        }
+
+        private static bool IsCandidateSerializableConstructor(IImmutableList<IParameterSymbol> unusedParameters, IMethodSymbol methodSymbol)
+        {
+            return unusedParameters.Count == 1 &&
+                methodSymbol.MethodKind == MethodKind.Constructor &&
+                methodSymbol.Parameters.Length == 2 &&
+                methodSymbol.Parameters.All(parameter => !parameter.IsOptional) &&
+                unusedParameters[0].Equals(methodSymbol.Parameters[1]) &&
+                methodSymbol.ContainingType.Implements(KnownType.System_Runtime_Serialization_ISerializable) &&
+                methodSymbol.Parameters[0].IsType(KnownType.System_Runtime_Serialization_SerializationInfo) &&
+                methodSymbol.Parameters[1].IsType(KnownType.System_Runtime_Serialization_StreamingContext);
         }
     }
 }
