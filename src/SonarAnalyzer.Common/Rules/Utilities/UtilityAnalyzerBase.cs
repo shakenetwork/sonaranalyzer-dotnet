@@ -36,26 +36,20 @@ namespace SonarAnalyzer.Rules
         internal const string IgnoreHeaderCommentsCSharp = "sonar.cs.ignoreHeaderComments";
         internal const string IgnoreHeaderCommentsVisualBasic = "sonar.vbnet.ignoreHeaderComments";
 
-        protected static readonly object parameterReadLock = new object();
-        private static volatile bool parametersAlreadyRead = false;
+        protected readonly object parameterReadLock = new object();
 
-        protected static bool IsAnalyzerEnabled { get; set; } = false;
+        protected bool IsAnalyzerEnabled { get; set; } = false;
 
-        protected static string WorkDirectoryBasePath { get; set; }
+        protected string WorkDirectoryBasePath { get; set; }
 
-        protected static Dictionary<string, bool> IgnoreHeaderComments { get; } = new Dictionary<string, bool>
+        protected Dictionary<string, bool> IgnoreHeaderComments { get; } = new Dictionary<string, bool>
             {
                 { IgnoreHeaderCommentsCSharp, false },
                 { IgnoreHeaderCommentsVisualBasic, false },
             };
 
-        protected static void ReadParameters(AnalyzerOptions options, string language)
+        protected void ReadParameters(AnalyzerOptions options, string language)
         {
-            if (parametersAlreadyRead)
-            {
-                return;
-            }
-
             var sonarLintAdditionalFile = options.AdditionalFiles
                 .FirstOrDefault(f => ParameterLoader.ConfigurationFilePathMatchesExpected(f.Path));
 
@@ -70,11 +64,6 @@ namespace SonarAnalyzer.Rules
 
             lock (parameterReadLock)
             {
-                if (parametersAlreadyRead)
-                {
-                    return;
-                }
-
                 var xml = XDocument.Load(sonarLintAdditionalFile.Path);
                 var settings = xml.Descendants("Setting");
                 ReadHeaderCommentProperties(settings);
@@ -88,18 +77,16 @@ namespace SonarAnalyzer.Rules
                     WorkDirectoryBasePath = Path.Combine(WorkDirectoryBasePath, "output-" + suffix);
                     IsAnalyzerEnabled = true;
                 }
-
-                parametersAlreadyRead = true;
             }
         }
 
-        private static void ReadHeaderCommentProperties(IEnumerable<XElement> settings)
+        private void ReadHeaderCommentProperties(IEnumerable<XElement> settings)
         {
             ReadHeaderCommentProperties(settings, IgnoreHeaderCommentsCSharp);
             ReadHeaderCommentProperties(settings, IgnoreHeaderCommentsVisualBasic);
         }
 
-        private static void ReadHeaderCommentProperties(IEnumerable<XElement> settings, string propertyName)
+        private void ReadHeaderCommentProperties(IEnumerable<XElement> settings, string propertyName)
         {
             string propertyStringValue = GetPropertyStringValue(settings, propertyName);
             bool propertyValue;
