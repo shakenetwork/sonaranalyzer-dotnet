@@ -174,17 +174,18 @@ namespace SonarAnalyzer.Rules
                     return;
                 }
 
+                if (token.ToString() == "var" &&
+                    VarSymbolKinds.Contains(symbol.Kind))
+                {
+                    CollectClassified(TokenType.Keyword, token.Span);
+                    return;
+                }
+
                 if (symbol.Kind == SymbolKind.NamedType ||
                     symbol.Kind == SymbolKind.TypeParameter)
                 {
-                    if (token.ToString() == "var")
-                    {
-                        CollectClassified(TokenType.Keyword, token.Span);
-                    }
-                    else
-                    {
-                        CollectClassified(TokenType.TypeName, token.Span);
-                    }
+                    CollectClassified(TokenType.TypeName, token.Span);
+                    return;
                 }
 
                 if (symbol.Kind == SymbolKind.DynamicType)
@@ -192,6 +193,12 @@ namespace SonarAnalyzer.Rules
                     CollectClassified(TokenType.Keyword, token.Span);
                 }
             }
+
+            private static readonly ISet<SymbolKind> VarSymbolKinds = ImmutableHashSet.Create(
+                SymbolKind.NamedType,
+                SymbolKind.TypeParameter,
+                SymbolKind.ArrayType,
+                SymbolKind.PointerType);
 
             private void ClassifyTrivia(SyntaxTrivia trivia)
             {
