@@ -106,13 +106,12 @@
     <Compile Include="Common\Sqale\*.cs" />
     <Compile Include="Common\FixAllProviders\*.cs" />
     <Compile Include="Common\*.cs" />
-    <Compile Include="Protobuf\AnalyzerReport.cs" />
+    <Compile Include="Protobuf\AnalyzerReport.cs">
+      <!-- Exclude the file from analysis -->
+      <SonarQubeExclude>true</SonarQubeExclude>
+    </Compile>
     <Compile Include="Rules\*.cs" />
-    <Compile Include="Rules\Utilities\TokenTypeAnalyzerBase.cs" />
-    <Compile Include="Rules\Utilities\SymbolReferenceAnalyzerBase.cs" />
-    <Compile Include="Rules\Utilities\CopyPasteTokenAnalyzerBase.cs" />
-    <Compile Include="Rules\Utilities\MetricsAnalyzerBase.cs" />
-    <Compile Include="Rules\Utilities\UtilityAnalyzerBase.cs" />
+    <Compile Include="Rules\Utilities\*.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
