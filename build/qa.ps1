@@ -7,20 +7,11 @@ function testExitCode(){
     }
 }
 
-
 #cleanup
 $strFileName="%USERPROFILE%\AppData\Local\Microsoft\MSBuild\14.0\Microsoft.Common.targets\ImportBefore\SonarAnalyzer.Testing.ImportBefore.targets" 
 If (Test-Path $strFileName){
 	Remove-Item $strFileName
 }
-
-#nuget restore
-& $env:NUGET_PATH restore .\SonarAnalyzer.sln
-testExitCode
-
-#build tests
-& $env:MSBUILD_PATH .\SonarAnalyzer.sln /p:configuration=Release /p:DeployExtension=false /p:ZipPackageCompressionLevel=normal /v:m /p:defineConstants=SignAssembly /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=$env:CERT_PATH
-testExitCode
 
 #download nuget package
 $ARTIFACTORY_SRC_REPO="sonarsource-nuget-qa"
@@ -31,7 +22,6 @@ $encodedCreds = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.G
 $basicAuthValue = "Basic $encodedCreds"
 $Headers = @{Authorization = $basicAuthValue}
 Invoke-WebRequest -UseBasicParsing -Uri "$url" -Headers $Headers -OutFile $env:FILENAME
-
 
 #unzip nuget package
 $zipName=$env:FILENAME.Substring(0, $env:FILENAME.LastIndexOf('.'))+".zip"
@@ -83,6 +73,14 @@ Get-ChildItem .\sha1.properties | ForEach-Object {
 git pull origin $GITHUB_BRANCH
 testExitCode
 git checkout -f $sha1
+testExitCode
+
+#nuget restore
+& $env:NUGET_PATH restore .\SonarAnalyzer.sln
+testExitCode
+
+#build tests
+& $env:MSBUILD_PATH .\SonarAnalyzer.sln /p:configuration=Release /p:DeployExtension=false /p:ZipPackageCompressionLevel=normal /v:m /p:defineConstants=SignAssembly /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=$env:CERT_PATH
 testExitCode
 
 #move dlls to correct locations
