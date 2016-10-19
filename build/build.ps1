@@ -36,7 +36,7 @@ if ($env:IS_PULLREQUEST -eq "true") {
     testExitCode
 
 } else {
-    if (($env:GITHUB_BRANCH -eq "master") -or ($env:GITHUB_BRANCH -eq "refs/heads/master")) {
+    #if (($env:GITHUB_BRANCH -eq "master") -or ($env:GITHUB_BRANCH -eq "refs/heads/master")) {
         write-host -f green "Building master branch"
 
         #setup Nuget.config
@@ -95,13 +95,23 @@ if ($env:IS_PULLREQUEST -eq "true") {
             #compute artifact name from filename
             $artifact=$file.name.replace($file.extension,"").replace(".$version","")
             $filePath=$file.fullname
-            #upload to maven repo
-            & "$env:WINDOWS_MVN_HOME\bin\mvn.bat" deploy:deploy-file -DgroupId="org.sonarsource.dotnet" -DartifactId="$artifact" -Dversion="$version" -Dpackaging="nupkg" -Dfile="$filePath" -DrepositoryId="sonarsource-public-qa" -Durl="https://repox.sonarsource.com/sonarsource-public-qa"
-            testExitCode
+            (Get-Content .\poms\$artifact\pom.xml) -replace "file-$artifact", "$filePath" | Set-Content .\poms\$artifact\pom.xml          
         }
-    } else {
-        write-host -f green "not on master"
-    }
+        #upload to maven repo        
+        cd poms
+        write-host -f green  "set version $version in pom.xml"
+        $command = "mvn versions:set -DgenerateBackupPoms=false -DnewVersion='$version'"
+        iex $command
+        write-host -f green  "set version $version in env VAR PROJECT_VERSION for artifactory buildinfo metadata"
+        $env:PROJECT_VERSION=$version
+        write-host -f green  "set the buildnumber to this job build number"
+        $env:BUILD_ID=$env:BUILD_NUMBER
+        write-host -f green  "Deploy to repox with $version"    
+        $command = 'mvn deploy -Pdeploy-sonarsource -B -e -V'
+        iex $command
+    #} else {
+    #    write-host -f green "not on master"
+    #}
 
 }
 
