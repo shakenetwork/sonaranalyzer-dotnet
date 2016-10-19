@@ -237,6 +237,8 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.CSharp
                 case SyntaxKind.RefValueExpression:
 
                 case SyntaxKind.MemberBindingExpression:
+
+                case SyntaxKind.AwaitExpression:
                     newProgramState = newProgramState.PopValue();
                     newProgramState = newProgramState.PushValue(new SymbolicValue());
                     break;
@@ -351,7 +353,6 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.CSharp
 
                 case SyntaxKind.CastExpression:
 
-                case SyntaxKind.AwaitExpression:
                 case SyntaxKind.CheckedExpression:
                 case SyntaxKind.UncheckedExpression:
                     // Do nothing

@@ -736,6 +736,15 @@ namespace Tests.Diagnostics
             if (object.Equals(i, j)) { } // Noncompliant
         }
 
+        async Task Test_Await_Constraint(object o, Task t)
+        {
+            if (t != null)
+            {
+                var o = await t;
+                if (o == null) { } // Compliant, might be null
+            }
+        }
+
         enum MyEnum
         {
             One, Two
