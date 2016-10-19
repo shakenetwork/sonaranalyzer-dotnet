@@ -161,8 +161,8 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
                 return this;
             }
 
-            var newStack = ImmutableStack.Create(
-                ExpressionStack.Skip(numberOfValuesToPop).ToArray());
+            var newStack = ImmutableStack.CreateRange(
+                ExpressionStack.Skip(numberOfValuesToPop).Reverse());
 
             return new ProgramState(
                 Values,

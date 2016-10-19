@@ -247,6 +247,21 @@ namespace Tests.Diagnostics
             i = null;
             var t = i.GetType(); // Noncompliant
         }
+
+        static void MultiplePop()
+        {
+            MyClass o = null;
+            o = new MyClass
+            {
+                MyProperty = ""
+            };
+            o.ToString(); // Compliant
+        }
+
+        class MyClass
+        {
+            public string MyProperty { get; set; }
+        }
     }
 
     static class Extensions
