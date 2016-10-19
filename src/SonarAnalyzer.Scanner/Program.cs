@@ -102,7 +102,10 @@ namespace SonarAnalyzer.Runner
                             issuesInFile.Issue.Add(issue);
                         }
 
-                        issuesInFile.WriteDelimitedTo(issuesStream);
+                        if (issuesInFile.Issue.Any())
+                        {
+                            issuesInFile.WriteDelimitedTo(issuesStream);
+                        }
                     }
                     catch (Exception e)
                     {

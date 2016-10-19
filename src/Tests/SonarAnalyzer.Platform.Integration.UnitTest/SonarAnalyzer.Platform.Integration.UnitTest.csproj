@@ -138,6 +138,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="ConfigurationTest.cs" />
+    <Compile Include="EndToEnd_NoIssue.cs" />
     <Compile Include="EndToEnd_VisualBasic.cs" />
     <Compile Include="EndToEnd_CSharp.cs" />
     <Compile Include="DiagnosticRunnerTest.cs" />

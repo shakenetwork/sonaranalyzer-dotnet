@@ -214,7 +214,7 @@ namespace SonarAnalyzer.Integration.UnitTest
         }
 
 
-        private static List<TMessage> GetDeserializedData<TMessage>(string filePath)
+        internal static List<TMessage> GetDeserializedData<TMessage>(string filePath)
             where TMessage : IMessage, new()
         {
             var messages = new List<TMessage>();
