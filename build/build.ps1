@@ -36,7 +36,7 @@ if ($env:IS_PULLREQUEST -eq "true") {
     testExitCode
 
 } else {
-    #if (($env:GITHUB_BRANCH -eq "master") -or ($env:GITHUB_BRANCH -eq "refs/heads/master")) {
+    if (($env:GITHUB_BRANCH -eq "master") -or ($env:GITHUB_BRANCH -eq "refs/heads/master")) {
         write-host -f green "Building master branch"
 
         #setup Nuget.config
@@ -86,6 +86,17 @@ if ($env:IS_PULLREQUEST -eq "true") {
         [xml]$versionProps = Get-Content .\build\Version.props
         $version = $versionProps.Project.PropertyGroup.MainVersion+"-build$buildversion"
 
+        #write version to property file
+        $s="VERSION=$version"
+        Write-Host "$s"
+        $s | out-file -encoding utf8 -append ".\version.properties"
+        #convert sha1 property file to unix for jenkins compatiblity
+        Get-ChildItem .\version.properties | ForEach-Object {
+        $contents = [IO.File]::ReadAllText($_) -replace "`r`n?", "`n"
+        $utf8 = New-Object System.Text.UTF8Encoding $false
+        [IO.File]::WriteAllText($_, $contents, $utf8)
+        }
+
         #upload packages
         $files = Get-ChildItem src -recurse *.nupkg
         foreach ($file in $files) {    
@@ -109,9 +120,9 @@ if ($env:IS_PULLREQUEST -eq "true") {
         write-host -f green  "Deploy to repox with $version"    
         $command = 'mvn deploy -Pdeploy-sonarsource -B -e -V'
         iex $command
-    #} else {
-    #    write-host -f green "not on master"
-    #}
+    } else {
+        write-host -f green "not on master"
+    }
 
 }
 

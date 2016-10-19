@@ -13,6 +13,8 @@ If (Test-Path $strFileName){
 	Remove-Item $strFileName
 }
 
+$env:FILENAME="$env:ARTIFACT.$env:VERSION.nupkg"
+
 #download nuget package
 $ARTIFACTORY_SRC_REPO="sonarsource-nuget-qa"
 $url = "$env:ARTIFACTORY_URL/$ARTIFACTORY_SRC_REPO/$env:FILENAME"
