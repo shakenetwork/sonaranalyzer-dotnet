@@ -131,7 +131,7 @@ function pushToRepox(
     #compute artifact name from filename
     $artifact=$productName
     $file = Get-ChildItem "$productName.$releaseVersion.nupkg"
-    $filePath=file.FullName    
+    $filePath=$file.FullName    
     (Get-Content .\build\poms\$artifact\pom.xml) -replace "file-$artifact", "$filePath" | Set-Content .\build\poms\$artifact\pom.xml
 }
 
