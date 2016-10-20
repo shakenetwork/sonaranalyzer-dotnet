@@ -130,10 +130,8 @@ function pushToRepox(
 
     #compute artifact name from filename
     $artifact=$productName
-    $filePath="$productName.$releaseVersion.nupkg"
-    #upload to maven repo
-    & "$env:WINDOWS_MVN_HOME\bin\mvn.bat" deploy:deploy-file -DgroupId="org.sonarsource.dotnet" -DartifactId="$artifact" -Dversion="$releaseVersion" -Dpackaging="nupkg" -Dfile="$filePath" -DrepositoryId="sonarsource-public-qa" -Durl="https://repox.sonarsource.com/sonarsource-public-qa"
-    testExitCode
+    $filePath="$productName.$releaseVersion.nupkg"    
+    (Get-Content .\build\poms\$artifact\pom.xml) -replace "file-$artifact", "$filePath" | Set-Content .\build\poms\$artifact\pom.xml
 }
 
 # push to repox
@@ -150,3 +148,18 @@ pushToRepox -productName "SonarAnalyzer.VisualBasic"                    -release
 pushToRepox -productName "SonarAnalyzer.RuleDocGenerator.CSharp"        -releaseVersion $env:RELEASE_VERSION -nugetPath $env:NUGET_PATH
 pushToRepox -productName "SonarAnalyzer.RuleDocGenerator.VisualBasic"   -releaseVersion $env:RELEASE_VERSION -nugetPath $env:NUGET_PATH
 pushToRepox -productName "SonarAnalyzer.Scanner"                        -releaseVersion $env:RELEASE_VERSION -nugetPath $env:NUGET_PATH
+
+        
+#upload to maven repo
+$version = $env:RELEASE_VERSION        
+cd build\poms
+write-host -f green  "set version $version in pom.xml"
+$command = "mvn versions:set -DgenerateBackupPoms=false -DnewVersion='$version'"
+iex $command
+write-host -f green  "set version $version in env VAR PROJECT_VERSION for artifactory buildinfo metadata"
+$env:PROJECT_VERSION=$version
+write-host -f green  "set the buildnumber to this job build number"
+$env:BUILD_ID=$version
+write-host -f green  "Deploy to repox with $version"    
+$command = 'mvn deploy -Pdeploy-sonarsource -B -e -V'
+iex $command
