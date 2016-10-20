@@ -106,10 +106,10 @@ if ($env:IS_PULLREQUEST -eq "true") {
             #compute artifact name from filename
             $artifact=$file.name.replace($file.extension,"").replace(".$version","")
             $filePath=$file.fullname
-            (Get-Content .\poms\$artifact\pom.xml) -replace "file-$artifact", "$filePath" | Set-Content .\poms\$artifact\pom.xml          
+            (Get-Content .\build\poms\$artifact\pom.xml) -replace "file-$artifact", "$filePath" | Set-Content .\build\poms\$artifact\pom.xml          
         }
         #upload to maven repo        
-        cd poms
+        cd build\poms
         write-host -f green  "set version $version in pom.xml"
         $command = "mvn versions:set -DgenerateBackupPoms=false -DnewVersion='$version'"
         iex $command
