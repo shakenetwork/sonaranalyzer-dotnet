@@ -247,11 +247,7 @@ namespace SonarAnalyzer.Rules.CSharp
                     continue;
                 }
 
-                var baseCtor = ctor.SemanticModel.GetSymbolInfo(ctor.SyntaxNode.Initializer).Symbol;
-                if (baseCtor != null)
-                {
-                    usedSymbols.Add(baseCtor);
-                }
+                usedSymbols.UnionWith(GetAllCandidateSymbols(ctor.SemanticModel.GetSymbolInfo(ctor.SyntaxNode.Initializer)));
             }
         }
 
@@ -324,21 +320,33 @@ namespace SonarAnalyzer.Rules.CSharp
                 allNodes = allNodes.Concat(nodes);
             }
 
-            foreach (var node in allNodes)
+            var candidateSymbols = allNodes
+                .Select(n => n.SemanticModel.GetSymbolInfo(n.SyntaxNode))
+                .SelectMany(s => GetAllCandidateSymbols(s))
+                .Select(s => GetOriginalSymbol(s))
+                .Where(s => s != null);
+
+            usedSymbols.UnionWith(candidateSymbols);
+        }
+
+        private static ISymbol GetOriginalSymbol(ISymbol candidateSymbol)
+        {
+            var symbol = candidateSymbol;
+            var methodSymbol = symbol as IMethodSymbol;
+
+            if (methodSymbol?.MethodKind == MethodKind.ReducedExtension)
             {
-                var symbol = node.SemanticModel.GetSymbolInfo(node.SyntaxNode).Symbol;
-                var methodSymbol = symbol as IMethodSymbol;
-
-                if (methodSymbol?.MethodKind == MethodKind.ReducedExtension)
-                {
-                    symbol = methodSymbol.ReducedFrom;
-                }
-
-                if (symbol != null)
-                {
-                    usedSymbols.Add(symbol.OriginalDefinition);
-                }
+                symbol = methodSymbol.ReducedFrom;
             }
+
+            return symbol?.OriginalDefinition;
+        }
+
+        private static IEnumerable<ISymbol> GetAllCandidateSymbols(SymbolInfo symbolInfo)
+        {
+            return new[] { symbolInfo.Symbol }
+                .Concat(symbolInfo.CandidateSymbols)
+                .Where(s => s != null);
         }
 
         private static VariableDeclarationSyntax GetVariableDeclaration(SyntaxNode syntax)

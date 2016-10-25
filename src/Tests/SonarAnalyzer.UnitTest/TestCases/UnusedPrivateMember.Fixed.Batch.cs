@@ -76,4 +76,15 @@ namespace Tests.Diagnostics
     {
         private static void MyMethod<T>(this T self) { "".MyMethod<string>(); }
     }
+
+    public class NonExactMatch
+    {
+        private static void M(int i) { }    // Compliant, might be called
+        private static void M(string i) { } // Compliant, might be called
+
+        public static void Call(dynamic d)
+        {
+            M(d);
+        }
+    }
 }
