@@ -7,6 +7,8 @@
         foo2 = {"a", "b", "c"}
         Dim foo3 = New A() {New B()} ' Compliant
         foo3 = New A() {New B(), New A()} ' Noncompliant
+
+        Dim myObjects As Object() = New Object(3) {} ' Compliant
     End Sub
 
 End Module

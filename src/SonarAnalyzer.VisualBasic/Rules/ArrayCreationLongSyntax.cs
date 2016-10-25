@@ -60,7 +60,8 @@ namespace SonarAnalyzer.Rules.VisualBasic
                 c =>
                 {
                     var arrayCreation = (ArrayCreationExpressionSyntax)c.Node;
-                    if (arrayCreation.Initializer == null)
+                    if (arrayCreation.Initializer == null ||
+                        HasSizeSpecifier(arrayCreation))
                     {
                         return;
                     }
@@ -91,6 +92,12 @@ namespace SonarAnalyzer.Rules.VisualBasic
                     }
                 },
                 SyntaxKind.ArrayCreationExpression);
+        }
+
+        private static bool HasSizeSpecifier(ArrayCreationExpressionSyntax arrayCreation)
+        {
+            return arrayCreation.ArrayBounds != null &&
+                arrayCreation.ArrayBounds.Arguments.Any();
         }
 
         private static bool AllTypesAreConvertible(SemanticModel semanticModel, ArrayCreationExpressionSyntax arrayCreation, IArrayTypeSymbol arrayType)
