@@ -6,7 +6,7 @@
 </p>
 
 <p>
-    Moreover, memory is not the only system resource which needs to managed in a timely fashion: The operating system can only handle having so
+    Moreover, memory is not the only system resource which needs to be managed in a timely fashion: The operating system can only handle having so
     many file descriptors (e.g. <code>FileStream</code>) or sockets (e.g. <code>WebClient</code>) open at any given time. Therefore, it is
     important to <code>Dispose</code> of them as soon as they are no longer needed, rather than relying on the garbage collector to call these
     objects' finalizers at some nondeterministic point in the future.
@@ -37,7 +37,6 @@
         <ul>
             <li><code>System.Net.Sockets.Socket</code></li>
             <li><code>System.Net.Sockets.TcpClient</code></li>
-            <li><code>System.Net.Sockets.TcpListener</code></li>
             <li><code>System.Net.Sockets.UdpClient</code></li>
         </ul>
     <li>

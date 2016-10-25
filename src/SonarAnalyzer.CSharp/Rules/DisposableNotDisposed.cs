@@ -69,7 +69,6 @@ namespace SonarAnalyzer.Rules.CSharp
             KnownType.System_Net_WebClient,
 
             KnownType.System_Net_Sockets_TcpClient,
-            KnownType.System_Net_Sockets_TcpListener,
             KnownType.System_Net_Sockets_UdpClient,
 
             KnownType.System_Drawing_Image,

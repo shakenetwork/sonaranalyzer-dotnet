@@ -97,7 +97,6 @@ namespace SonarAnalyzer.Helpers
         public static readonly KnownType System_Net_WebClient = new KnownType("System.Net.WebClient");
 
         public static readonly KnownType System_Net_Sockets_TcpClient = new KnownType("System.Net.Sockets.TcpClient");
-        public static readonly KnownType System_Net_Sockets_TcpListener = new KnownType("System.Net.Sockets.TcpListener");
         public static readonly KnownType System_Net_Sockets_UdpClient = new KnownType("System.Net.Sockets.UdpClient");
 
         public static readonly KnownType System_Drawing_Image = new KnownType("System.Drawing.Image");

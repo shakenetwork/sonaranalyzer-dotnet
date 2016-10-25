@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Net;
+using System.Net.Sockets;
 
 namespace Tests.Diagnostics
 {
@@ -16,6 +17,8 @@ namespace Tests.Diagnostics
         private FileStream field_fs8 = new FileStream(@"c:\foo.txt", FileMode.Open); // Compliant - passed to method using this
         FileStream field_fs9 = new FileStream(@"c:\foo.txt", FileMode.Open); // Noncompliant - effectively private
         private FileStream field_fs10 = new FileStream(@"c:\foo.txt", FileMode.Open); // Compliant - aliased in constructor initializer
+
+        private TcpListener listener = new TcpListener(9000); // Compliant, not IDisposable
 
         private class InnerClass
         {
