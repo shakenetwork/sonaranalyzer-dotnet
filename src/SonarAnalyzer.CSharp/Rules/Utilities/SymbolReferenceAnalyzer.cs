@@ -23,6 +23,7 @@ using SonarAnalyzer.Helpers;
 using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System.Linq;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
@@ -37,6 +38,20 @@ namespace SonarAnalyzer.Rules.CSharp
         internal override SyntaxNode GetBindableParent(SyntaxToken token)
         {
             return GetBindableParentNode(token);
+        }
+
+        internal override SyntaxToken? GetSetKeyword(ISymbol valuePropertySymbol)
+        {
+            if (!IsValuePropertyParameter(valuePropertySymbol))
+            {
+                return null;
+            }
+
+            var accessor = (valuePropertySymbol.ContainingSymbol as IMethodSymbol)
+                ?.DeclaringSyntaxReferences.FirstOrDefault()
+                ?.GetSyntax() as AccessorDeclarationSyntax;
+
+            return accessor?.Keyword;
         }
 
         private static SyntaxNode GetBindableParentNode(SyntaxToken token)

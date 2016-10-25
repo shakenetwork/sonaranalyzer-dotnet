@@ -70,6 +70,9 @@ namespace SonarAnalyzer.Integration.UnitTest
         {
             public int Index { get; set; }
             public int NumberOfReferences { get; set; }
+
+            public string DeclarationText { get; set; }
+            public string ReferenceText { get; set; }
         }
 
         [TestMethod]
@@ -98,11 +101,12 @@ namespace SonarAnalyzer.Integration.UnitTest
         public void Symbol_Reference_Computed_CSharp()
         {
             var testFileContent = File.ReadAllLines(TestInputPath + extension);
-            CheckTokenReferenceFile(testFileContent, extension, 5, new[]
+            CheckTokenReferenceFile(testFileContent, extension, 6, new[]
                 {
-                    new ExpectedReferenceInfo { Index = 0, NumberOfReferences = 1 },
-                    new ExpectedReferenceInfo { Index = 1, NumberOfReferences = 0 },
-                    new ExpectedReferenceInfo { Index = 2, NumberOfReferences = 1 }
+                    new ExpectedReferenceInfo { Index = 0, NumberOfReferences = 1, DeclarationText = "TTTestClass", ReferenceText = "TTTestClass"  },
+                    new ExpectedReferenceInfo { Index = 1, NumberOfReferences = 0, DeclarationText = "MyMethod" },
+                    new ExpectedReferenceInfo { Index = 2, NumberOfReferences = 1, DeclarationText = "x", ReferenceText = "x" },
+                    new ExpectedReferenceInfo { Index = 5, NumberOfReferences = 1, DeclarationText = "set", ReferenceText = "value" }
                 });
         }
 
@@ -133,6 +137,8 @@ namespace SonarAnalyzer.Integration.UnitTest
                     declarationPosition.StartOffset,
                     declarationPosition.EndOffset - declarationPosition.StartOffset);
 
+                Assert.AreEqual(expectedReference.DeclarationText, tokenText);
+
                 Assert.AreEqual(expectedReference.NumberOfReferences, refInfo.Reference[expectedReference.Index].Reference.Count);
                 foreach (var reference in refInfo.Reference[expectedReference.Index].Reference)
                 {
@@ -140,7 +146,7 @@ namespace SonarAnalyzer.Integration.UnitTest
                     var refText = testFileContent[reference.StartLine - 1].Substring(
                         reference.StartOffset,
                         reference.EndOffset - reference.StartOffset);
-                    Assert.AreEqual(tokenText, refText);
+                    Assert.AreEqual(expectedReference.ReferenceText, refText);
                 }
             }
         }

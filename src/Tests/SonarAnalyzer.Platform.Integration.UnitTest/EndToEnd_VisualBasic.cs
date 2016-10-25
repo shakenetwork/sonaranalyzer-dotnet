@@ -81,10 +81,10 @@ namespace SonarAnalyzer.Integration.UnitTest
             var testFileContent = File.ReadAllLines(EndToEnd_CSharp.TestInputPath + extension);
             EndToEnd_CSharp.CheckTokenReferenceFile(testFileContent, extension, 4, new[]
                 {
-                    new EndToEnd_CSharp.ExpectedReferenceInfo { Index = 0, NumberOfReferences = 1 },
-                    new EndToEnd_CSharp.ExpectedReferenceInfo { Index = 1, NumberOfReferences = 0 },
-                    new EndToEnd_CSharp.ExpectedReferenceInfo { Index = 2, NumberOfReferences = 1 },
-                    new EndToEnd_CSharp.ExpectedReferenceInfo { Index = 3, NumberOfReferences = 0 }
+                    new EndToEnd_CSharp.ExpectedReferenceInfo { Index = 0, NumberOfReferences = 1, DeclarationText = "TTTestClass", ReferenceText = "TTTestClass" },
+                    new EndToEnd_CSharp.ExpectedReferenceInfo { Index = 1, NumberOfReferences = 0, DeclarationText = "MyMethod" },
+                    new EndToEnd_CSharp.ExpectedReferenceInfo { Index = 2, NumberOfReferences = 1, DeclarationText = "x", ReferenceText = "x" },
+                    new EndToEnd_CSharp.ExpectedReferenceInfo { Index = 3, NumberOfReferences = 0, DeclarationText = "y", ReferenceText = "y" }
                 });
         }
     }

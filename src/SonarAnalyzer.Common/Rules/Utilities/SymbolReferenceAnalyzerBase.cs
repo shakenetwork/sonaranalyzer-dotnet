@@ -24,6 +24,7 @@ using SonarAnalyzer.Protobuf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.CodeAnalysis.Text;
 
 namespace SonarAnalyzer.Rules
 {
@@ -44,11 +45,11 @@ namespace SonarAnalyzer.Rules
 
         protected sealed override SymbolReferenceInfo GetMessage(SyntaxTree syntaxTree, SemanticModel semanticModel)
         {
-            return CalculateSymbolReferenceInfo(syntaxTree, semanticModel, IsIdentifier, GetBindableParent);
+            return CalculateSymbolReferenceInfo(syntaxTree, semanticModel, IsIdentifier, GetBindableParent, GetSetKeyword);
         }
 
         internal static SymbolReferenceInfo CalculateSymbolReferenceInfo(SyntaxTree syntaxTree, SemanticModel semanticModel,
-            Func<SyntaxToken, bool> isIdentifier, Func<SyntaxToken, SyntaxNode> getBindableParent)
+            Func<SyntaxToken, bool> isIdentifier, Func<SyntaxToken, SyntaxNode> getBindableParent, Func<ISymbol, SyntaxToken?> getSetKeyword)
         {
             var allReferences = new List<SymRefInfo>();
 
@@ -69,7 +70,7 @@ namespace SonarAnalyzer.Rules
 
             foreach (var allReference in allReferences.GroupBy(r => r.Symbol))
             {
-                var sr = GetSymbolReference(allReference, syntaxTree);
+                var sr = GetSymbolReference(allReference, syntaxTree, getSetKeyword);
                 if (sr != null)
                 {
                     symbolReferenceInfo.Reference.Add(sr);
@@ -79,17 +80,37 @@ namespace SonarAnalyzer.Rules
             return symbolReferenceInfo;
         }
 
-        private static SymbolReferenceInfo.Types.SymbolReference GetSymbolReference(IEnumerable<SymRefInfo> allReference, SyntaxTree tree)
+        private static SymbolReferenceInfo.Types.SymbolReference GetSymbolReference(IEnumerable<SymRefInfo> allReference, SyntaxTree tree,
+            Func<ISymbol, SyntaxToken?> getSetKeyword)
         {
             var declaration = allReference.FirstOrDefault(r => r.IsDeclaration);
+            TextSpan declarationSpan;
+
             if (declaration == null)
             {
-                return null;
+                var reference = allReference.FirstOrDefault();
+                if (reference == null)
+                {
+                    return null;
+                }
+
+                var setKeyword = getSetKeyword(reference.Symbol);
+
+                if (!setKeyword.HasValue)
+                {
+                    return null;
+                }
+
+                declarationSpan = setKeyword.Value.Span;
+            }
+            else
+            {
+                declarationSpan = declaration.IdentifierToken.Span;
             }
 
             var sr = new SymbolReferenceInfo.Types.SymbolReference
             {
-                Declaration = GetTextRange(Location.Create(tree, declaration.IdentifierToken.Span).GetLineSpan())
+                Declaration = GetTextRange(Location.Create(tree, declarationSpan).GetLineSpan())
             };
 
             var references = allReference.Where(r => !r.IsDeclaration).Select(r => r.IdentifierToken);
@@ -99,6 +120,11 @@ namespace SonarAnalyzer.Rules
             }
 
             return sr;
+        }
+
+        internal /* for MsBuild12 support */ virtual SyntaxToken? GetSetKeyword(ISymbol valuePropertySymbol)
+        {
+            return null;
         }
 
         private static readonly ISet<SymbolKind> DeclarationKinds = ImmutableHashSet.Create(
@@ -145,7 +171,8 @@ namespace SonarAnalyzer.Rules
                         return null;
                     }
 
-                    if (symbol.DeclaringSyntaxReferences.Any())
+                    if (symbol.DeclaringSyntaxReferences.Any() ||
+                        IsValuePropertyParameter(symbol))
                     {
                         return new SymRefInfo
                         {
@@ -170,6 +197,14 @@ namespace SonarAnalyzer.Rules
                 }
             }
             return null;
+        }
+
+        internal static bool IsValuePropertyParameter(ISymbol symbol)
+        {
+            var parameterSymbol = symbol as IParameterSymbol;
+            return parameterSymbol != null &&
+                parameterSymbol.IsImplicitlyDeclared &&
+                parameterSymbol.Name == "value";
         }
 
         internal /* for MsBuild12 support */ abstract SyntaxNode GetBindableParent(SyntaxToken token);

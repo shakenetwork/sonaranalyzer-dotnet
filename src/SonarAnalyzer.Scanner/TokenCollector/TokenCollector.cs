@@ -51,7 +51,8 @@ namespace SonarAnalyzer.Runner
                     ? (Rules.SymbolReferenceAnalyzerBase)new Rules.CSharp.SymbolReferenceAnalyzer()
                     : new Rules.VisualBasic.SymbolReferenceAnalyzer();
 
-                var message = Rules.SymbolReferenceAnalyzerBase.CalculateSymbolReferenceInfo(tree, semanticModel, t => IsIdentifier(t), t => analyzer.GetBindableParent(t));
+                var message = Rules.SymbolReferenceAnalyzerBase.CalculateSymbolReferenceInfo(tree, semanticModel, 
+                    t => IsIdentifier(t), t => analyzer.GetBindableParent(t), s => analyzer.GetSetKeyword(s));
                 message.FilePath = filePath;
                 return message;
             }
