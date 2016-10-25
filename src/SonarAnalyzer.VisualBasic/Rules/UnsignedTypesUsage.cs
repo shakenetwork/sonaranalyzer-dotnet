@@ -45,7 +45,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
         internal const string MessageFormat = "Change this unsigned type to \"{0}\".";
         internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
+        internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
