@@ -43,7 +43,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
             "Array literals are more compact than array creation expressions.";
         internal const string MessageFormat = "Use an array literal here instead.";
         internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Major;
+        internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
