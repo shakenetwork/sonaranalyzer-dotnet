@@ -76,12 +76,13 @@ namespace SonarAnalyzer.Integration.UnitTest
         public void Token_Types_Computed_CSharp()
         {
             var testFileContent = File.ReadAllLines(TestInputPath + extension);
-            CheckTokenInfoFile(testFileContent, extension, 23, new[]
+            CheckTokenInfoFile(testFileContent, extension, 31, new[]
                 {
                     new ExpectedTokenInfo { Index = 6, Kind = TokenType.Comment, Text = "// FIXME: fix this issue" },
                     new ExpectedTokenInfo { Index = 5, Kind = TokenType.TypeName, Text = "TTTestClass" },
                     new ExpectedTokenInfo { Index = 18, Kind = TokenType.TypeName, Text = "TTTestClass" },
-                    new ExpectedTokenInfo { Index = 12, Kind = TokenType.Keyword, Text = "var" }
+                    new ExpectedTokenInfo { Index = 12, Kind = TokenType.Keyword, Text = "var" },
+                    new ExpectedTokenInfo { Index = 30, Kind = TokenType.Keyword, Text = "value" }
                 });
         }
 
@@ -89,14 +90,15 @@ namespace SonarAnalyzer.Integration.UnitTest
         public void Cpd_Tokens_Computed_CSharp()
         {
             CheckCpdTokens(@"public class TTTestClass { public object MyMethod ( ) { using ( y = null ) { } var x = $num ; " +
-                "if ( $num == $num ) { new TTTestClass ( ) ; return $str + x ; } return $char ; ; } }");
+                "if ( $num == $num ) { new TTTestClass ( ) ; return $str + x ; } return $char ; ; } " +
+                "private int myVar ; public int MyProperty { get { return myVar ; } set { myVar = value ; } } }");
         }
 
         [TestMethod]
         public void Symbol_Reference_Computed_CSharp()
         {
             var testFileContent = File.ReadAllLines(TestInputPath + extension);
-            CheckTokenReferenceFile(testFileContent, extension, 3, new[]
+            CheckTokenReferenceFile(testFileContent, extension, 5, new[]
                 {
                     new ExpectedReferenceInfo { Index = 0, NumberOfReferences = 1 },
                     new ExpectedReferenceInfo { Index = 1, NumberOfReferences = 0 },

@@ -181,6 +181,14 @@ namespace SonarAnalyzer.Rules
                     return;
                 }
 
+                if (token.ToString() == "value" &&
+                    symbol.Kind == SymbolKind.Parameter &&
+                    symbol.IsImplicitlyDeclared)
+                {
+                    CollectClassified(TokenType.Keyword, token.Span);
+                    return;
+                }
+
                 if (symbol.Kind == SymbolKind.NamedType ||
                     symbol.Kind == SymbolKind.TypeParameter)
                 {

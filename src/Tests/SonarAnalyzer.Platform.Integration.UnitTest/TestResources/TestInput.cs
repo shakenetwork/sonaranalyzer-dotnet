@@ -23,4 +23,12 @@ public class TTTestClass
         return 'c';
         ;
     }
+
+    private int myVar;
+
+    public int MyProperty
+    {
+        get { return myVar; }
+        set { myVar = value; }
+    }
 }
