@@ -28,7 +28,7 @@ namespace Tests.Diagnostics
             {
                 maxAge = 43;
                 this.age = age;
-                this.Age = this.age;
+                (Age) = this.age;
                 Age2 = 44;
                 myEvent = (a, b) => { };
             }

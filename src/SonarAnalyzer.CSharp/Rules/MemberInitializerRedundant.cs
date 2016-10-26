@@ -250,7 +250,7 @@ namespace SonarAnalyzer.Rules.CSharp
                         case SyntaxKind.SimpleAssignmentExpression:
                             {
                                 var assignment = (AssignmentExpressionSyntax)instruction;
-                                if (IsMatchingMember(assignment.Left))
+                                if (IsMatchingMember(assignment.Left.RemoveParentheses()))
                                 {
                                     return true;
                                 }
