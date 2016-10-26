@@ -341,18 +341,7 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.CSharp
                     break;
 
                 case SyntaxKind.InvocationExpression:
-                    {
-                        var invocation = (InvocationExpressionSyntax)expression;
-                        var symbol = semanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
-                        if (symbol != null &&
-                            symbol.Name == "Assert" &&
-                            symbol.ContainingType.IsAny(ClassesToOmit))
-                        {
-                            break;
-                        }
-
-                        BuildInvocationExpression(invocation);
-                    }
+                    BuildInvocationExpression((InvocationExpressionSyntax)expression);
                     break;
 
                 case SyntaxKind.AnonymousObjectCreationExpression:
@@ -464,10 +453,6 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.CSharp
                     throw new NotImplementedException($"{expression.Kind()}");
             }
         }
-
-        private static readonly ImmutableHashSet<KnownType> ClassesToOmit = ImmutableHashSet.Create(
-            KnownType.System_Diagnostics_Debug,
-            KnownType.System_Diagnostics_Trace);
 
         #endregion
 
