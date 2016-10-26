@@ -262,6 +262,20 @@ namespace Tests.Diagnostics
         {
             public string MyProperty { get; set; }
         }
+
+        public void Assert1(object o1)
+        {
+            System.Diagnostics.Debug.Assert(o1 != null);
+            o1.ToString(); // Compliant
+            System.Diagnostics.Debug.Assert(o1 == null);
+            o1.ToString(); // Compliant
+        }
+
+        public void Assert2(object o1)
+        {
+            System.Diagnostics.Debug.Assert(o1 == null);
+            o1.ToString(); // Noncompliant
+        }
     }
 
     static class Extensions

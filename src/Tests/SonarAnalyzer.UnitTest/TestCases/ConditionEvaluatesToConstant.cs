@@ -754,5 +754,28 @@ namespace Tests.Diagnostics
         {
             public MyEnum myEnum;
         }
+
+        public void Assert(bool condition, object o1)
+        {
+            Debug.Assert(condition);
+
+            if (condition) // Noncompliant
+            {
+            }
+
+            Trace.Assert(condition); // Noncompliant
+//                       ^^^^^^^^^
+
+            if (o1 != null)
+            {
+                Debug.Assert(o1 == null, "Some message", "More details", 1, 2, 3); // Noncompliant
+//                           ^^^^^^^^^^
+            }
+        }
+        public void Assert(object o1)
+        {
+            System.Diagnostics.Debug.Assert(o1 != null);
+            System.Diagnostics.Debug.Assert(o1 == null); // Noncompliant
+        }
     }
 }

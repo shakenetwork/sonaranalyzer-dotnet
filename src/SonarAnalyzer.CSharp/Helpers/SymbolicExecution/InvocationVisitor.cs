@@ -32,35 +32,42 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
 
         private readonly InvocationExpressionSyntax invocation;
         private readonly SemanticModel semanticModel;
+        private readonly ProgramState programState;
 
-        public InvocationVisitor(InvocationExpressionSyntax invocation, SemanticModel semanticModel)
+        public InvocationVisitor(InvocationExpressionSyntax invocation, SemanticModel semanticModel, ProgramState programState)
         {
             this.invocation = invocation;
             this.semanticModel = semanticModel;
+            this.programState = programState;
         }
 
-        internal ProgramState GetChangedProgramState(ProgramState programState)
+        internal ProgramState ProcessInvocation()
         {
             var methodSymbol = semanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
 
             if (IsInstanceEqualsCall(methodSymbol))
             {
-                return HandleInstanceEqualsCall(programState);
+                return HandleInstanceEqualsCall();
             }
 
             if (IsStaticEqualsCall(methodSymbol))
             {
-                return HandleStaticEqualsCall(programState);
+                return HandleStaticEqualsCall();
             }
 
             if (IsReferenceEqualsCall(methodSymbol))
             {
-                return HandleReferenceEqualsCall(invocation, programState);
+                return HandleReferenceEqualsCall();
             }
 
             if (IsStringNullCheckMethod(methodSymbol))
             {
-                return HandleStringNullCheckMethod(programState);
+                return HandleStringNullCheckMethod();
+            }
+
+            if (IsAssert(methodSymbol))
+            {
+                return HandleAssertMethod();
             }
 
             return programState
@@ -68,7 +75,29 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
                 .PushValue(new SymbolicValue());
         }
 
-        private static ProgramState HandleStringNullCheckMethod(ProgramState programState)
+        private ProgramState HandleAssertMethod()
+        {
+            var argumentCount = invocation.ArgumentList?.Arguments.Count ?? 0;
+            if (argumentCount == 0)
+            {
+                return programState.PopValue()
+                    .PushValue(new SymbolicValue());
+            }
+
+            SymbolicValue arg1;
+
+            var newProgramState = programState
+                .PopValues(argumentCount - 1)
+                .PopValue(out arg1)
+                .PopValue()
+                .PushValue(new SymbolicValue());
+
+            AssertedValue = arg1;
+
+            return newProgramState;
+        }
+
+        private ProgramState HandleStringNullCheckMethod()
         {
             SymbolicValue arg1;
 
@@ -85,7 +114,7 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
             return newProgramState.PushValue(new SymbolicValue());
         }
 
-        private static ProgramState HandleStaticEqualsCall(ProgramState programState)
+        private ProgramState HandleStaticEqualsCall()
         {
             SymbolicValue arg1;
             SymbolicValue arg2;
@@ -100,7 +129,7 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
             return SetConstraintOnValueEquals(equals, newProgramState);
         }
 
-        private ProgramState HandleReferenceEqualsCall(InvocationExpressionSyntax invocation, ProgramState programState)
+        private ProgramState HandleReferenceEqualsCall()
         {
             SymbolicValue arg1;
             SymbolicValue arg2;
@@ -117,7 +146,7 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
                 .PushWithConstraint();
         }
 
-        private static ProgramState HandleInstanceEqualsCall(ProgramState programState)
+        private ProgramState HandleInstanceEqualsCall()
         {
             SymbolicValue arg1;
             SymbolicValue expression;
@@ -140,6 +169,27 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
         private static readonly ImmutableHashSet<string> IsNullMethodNames = ImmutableHashSet.Create(
             nameof(string.IsNullOrEmpty),
             nameof(string.IsNullOrWhiteSpace));
+
+        private bool IsAssert(IMethodSymbol methodSymbol)
+        {
+            if (methodSymbol != null &&
+                methodSymbol.Name == "Assert" &&
+                methodSymbol.ContainingType.IsAny(AssertContainerTypes))
+            {
+                IsAssertCall = true;
+                return true;
+            }
+
+            return false;
+        }
+
+        public SymbolicValue AssertedValue { get; private set; } = null;
+
+        public bool IsAssertCall { get; private set; } = false;
+
+        private static readonly ImmutableHashSet<KnownType> AssertContainerTypes = ImmutableHashSet.Create(
+            KnownType.System_Diagnostics_Debug,
+            KnownType.System_Diagnostics_Trace);
 
         private static bool IsStringNullCheckMethod(IMethodSymbol methodSymbol)
         {
