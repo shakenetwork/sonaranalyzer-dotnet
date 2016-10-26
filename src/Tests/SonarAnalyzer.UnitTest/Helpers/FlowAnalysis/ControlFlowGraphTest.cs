@@ -1720,8 +1720,8 @@ x = a < 2;  x = a <= 2;  x = a > 2;  x = a >= 2;       x = a == 2;  x = a != 2; 
 b = x | 2;  b = x & 2;   b = x ^ 2;  c = ""c"" + 'c';  c = a - b;   c = a * b;   c = a / b;   c = a % b;");
 
             VerifyMinimalCfg(cfg);
-            VerifyInstructions(cfg.EntryBlock, 0, "x", "a", "2", "a < 2", "x = a < 2");
-            VerifyInstructions(cfg.EntryBlock, 15 * 5, "c", "a", "b", "a % b", "c = a % b");
+            VerifyInstructions(cfg.EntryBlock, 0, "a", "2", "a < 2", "x = a < 2");
+            VerifyInstructions(cfg.EntryBlock, 15 * 4, "a", "b", "a % b", "c = a % b");
 
             cfg = Build("b |= 2;  b &= false;  b ^= 2;  c += b;  c -= b;  c *= b;  c /= b;  c %= b; s <<= 4;  s >>= 4;");
 
@@ -1732,16 +1732,16 @@ b = x | 2;  b = x & 2;   b = x ^ 2;  c = ""c"" + 'c';  c = a - b;   c = a * b;  
             cfg = Build("p = c++;  p = c--;  p = ++c;  p = --c;  p = +c;  p = -c;  p = !true;  p = ~1;  p = &c;  p = *c;");
 
             VerifyMinimalCfg(cfg);
-            VerifyInstructions(cfg.EntryBlock, 0, "p", "c", "c++", "p = c++");
-            VerifyInstructions(cfg.EntryBlock, 9 * 4, "p", "c", "*c", "p = *c");
+            VerifyInstructions(cfg.EntryBlock, 0, "c", "c++", "p = c++");
+            VerifyInstructions(cfg.EntryBlock, 9 * 3, "c", "*c", "p = *c");
 
             cfg = Build("o = null;");
             VerifyMinimalCfg(cfg);
-            VerifyAllInstructions(cfg.EntryBlock, "o", "null", "o = null");
+            VerifyAllInstructions(cfg.EntryBlock, "null", "o = null");
 
             cfg = Build("b = (b);");
             VerifyMinimalCfg(cfg);
-            VerifyAllInstructions(cfg.EntryBlock, "b", "b", "b = (b)");
+            VerifyAllInstructions(cfg.EntryBlock, "b", "b = (b)");
 
             cfg = Build(@"var t = typeof(int); var s = sizeof(int); var v = default(int);");
             VerifyMinimalCfg(cfg);
@@ -1749,15 +1749,15 @@ b = x | 2;  b = x & 2;   b = x ^ 2;  c = ""c"" + 'c';  c = a - b;   c = a * b;  
 
             cfg = Build(@"v = checked(1+1); v = unchecked(1+1);");
             VerifyMinimalCfg(cfg);
-            VerifyInstructions(cfg.EntryBlock, 3, "1+1", "checked(1+1)", "v = checked(1+1)");
-            VerifyInstructions(cfg.EntryBlock, 9, "1+1", "unchecked(1+1)", "v = unchecked(1+1)");
+            VerifyInstructions(cfg.EntryBlock, 2, "1+1", "checked(1+1)", "v = checked(1+1)");
+            VerifyInstructions(cfg.EntryBlock, 7, "1+1", "unchecked(1+1)", "v = unchecked(1+1)");
 
             cfg = Build("v = (int)1; v = 1 as object; v = 1 is int;");
             VerifyMinimalCfg(cfg);
             VerifyAllInstructions(cfg.EntryBlock,
-                "v", "1", "(int)1", "v = (int)1",
-                "v", "1", "1 as object", "v = 1 as object",
-                "v", "1", "1 is int", "v = 1 is int");
+                "1", "(int)1", "v = (int)1",
+                "1", "1 as object", "v = 1 as object",
+                "1", "1 is int", "v = 1 is int");
 
             cfg = Build(@"var s = $""Some {text}"";");
             VerifyMinimalCfg(cfg);
@@ -1777,12 +1777,10 @@ b = x | 2;  b = x & 2;   b = x ^ 2;  c = ""c"" + 'c';  c = a - b;   c = a * b;  
             cfg = Build("x = array[1,2,3]; x = array2[1][2];");
             VerifyMinimalCfg(cfg);
             VerifyAllInstructions(cfg.EntryBlock,
-                "x",
                 "array",
                 "1", "2", "3",
                 "array[1,2,3]",
                 "x = array[1,2,3]",
-                "x",
                 "array2",
                 "1",
                 "array2[1]",
@@ -1814,7 +1812,6 @@ b = x | 2;  b = x & 2;   b = x ^ 2;  c = ""c"" + 'c';  c = a - b;   c = a * b;  
             VerifyInstructions(cfg.EntryBlock, 0,
                 "5",
                 "new MyClass(5) { Prop1 = 10 }",
-                "Prop1",
                 "10",
                 "Prop1 = 10",
                 "{ Prop1 = 10 }");

@@ -100,7 +100,7 @@ namespace NS
             explodedGraph.Walk();
 
             Assert.IsTrue(explorationEnded);
-            Assert.AreEqual(11, numberOfProcessedInstructions);
+            Assert.AreEqual(9, numberOfProcessedInstructions);
             Assert.AreEqual(1, numberOfExitBlockReached);
         }
 
@@ -139,7 +139,7 @@ namespace NS
             explodedGraph.Walk();
 
             Assert.IsTrue(explorationEnded);
-            Assert.AreEqual(3, numberOfProcessedInstructions);
+            Assert.AreEqual(2, numberOfProcessedInstructions);
             Assert.AreEqual(1, numberOfExitBlockReached);
         }
 
@@ -228,7 +228,7 @@ namespace NS
             explodedGraph.Walk();
 
             Assert.IsTrue(explorationEnded);
-            Assert.AreEqual(10, numberOfProcessedInstructions);
+            Assert.AreEqual(8, numberOfProcessedInstructions);
             Assert.AreEqual(1, numberOfExitBlockReached);
             Assert.AreEqual(1, numberOfLastInstructionVisits);
         }

@@ -713,7 +713,10 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.CSharp
             var newProgramState = programState;
             SymbolicValue sv;
             newProgramState = newProgramState.PopValue(out sv);
-            newProgramState = newProgramState.PopValue();
+            if (!ControlFlowGraphBuilder.IsAssignmentWithSimpleLeftSide(assignment))
+            {
+                newProgramState = newProgramState.PopValue();
+            }
 
             var leftSymbol = SemanticModel.GetSymbolInfo(assignment.Left).Symbol;
             newProgramState = newProgramState.PushValue(sv);

@@ -208,6 +208,8 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.CSharp
             switch (expression.Kind())
             {
                 case SyntaxKind.SimpleAssignmentExpression:
+                    BuildSimpleAssignmentExpression((AssignmentExpressionSyntax)expression);
+                    break;
 
                 case SyntaxKind.OrAssignmentExpression:
                 case SyntaxKind.AndAssignmentExpression:
@@ -1023,6 +1025,21 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.CSharp
             currentBlock.ReversedInstructions.Add(expression);
             BuildExpression(expression.Right);
             BuildExpression(expression.Left);
+        }
+
+        private void BuildSimpleAssignmentExpression(AssignmentExpressionSyntax expression)
+        {
+            currentBlock.ReversedInstructions.Add(expression);
+            BuildExpression(expression.Right);
+            if (!IsAssignmentWithSimpleLeftSide(expression))
+            {
+                BuildExpression(expression.Left);
+            }
+        }
+
+        internal static bool IsAssignmentWithSimpleLeftSide(AssignmentExpressionSyntax assignment)
+        {
+            return assignment.Left.RemoveParentheses() is IdentifierNameSyntax;
         }
 
         private void BuildArrayType(ArrayTypeSyntax arrayType)

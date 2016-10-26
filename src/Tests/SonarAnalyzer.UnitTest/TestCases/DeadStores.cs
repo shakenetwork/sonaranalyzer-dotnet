@@ -292,6 +292,13 @@ namespace Tests.Diagnostics
             y = 6; // Noncompliant
         }
 
+        private void SimpleAssignment(bool b1, bool b2)
+        {
+            var x = false;  // Noncompliant
+            (x) = b1 && b2; // Noncompliant
+            x = b1 && b2;   // Noncompliant
+        }
+
         private class NameOfTest
         {
             private int MyProp2
