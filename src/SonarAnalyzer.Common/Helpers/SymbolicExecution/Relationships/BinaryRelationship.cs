@@ -19,7 +19,6 @@
  */
 
 using System.Collections.Generic;
-using System.Collections.Immutable;
 
 namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
 {
@@ -70,7 +69,7 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
 
         public abstract BinaryRelationship Negate();
 
-        protected bool AreOperandsMatching(BinaryRelationship other)
+        internal bool AreOperandsMatching(BinaryRelationship other)
         {
             return LeftOperand.Equals(other.LeftOperand) && RightOperand.Equals(other.RightOperand) ||
                 RightOperand.Equals(other.LeftOperand) && LeftOperand.Equals(other.RightOperand);

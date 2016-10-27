@@ -90,7 +90,7 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
 
         private ImmutableHashSet<BinaryRelationship> GetAllRelationshipsWith(BinaryRelationship relationship)
         {
-            var currentRelationships = new HashSet<BinaryRelationship>(Relationships);
+            var allRelationships = new HashSet<BinaryRelationship>(Relationships);
             var newRelationshipsToProcess = new Queue<BinaryRelationship>(new[] { relationship });
             var newRelationships = new List<BinaryRelationship>(new[] { relationship });
 
@@ -98,26 +98,107 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
             {
                 var newRelationship = newRelationshipsToProcess.Dequeue();
 
-                if (currentRelationships.Contains(newRelationship))
+                if (allRelationships.Contains(newRelationship))
                 {
                     continue;
                 }
 
-                if (newRelationship.IsContradicting(currentRelationships))
+                if (newRelationship.IsContradicting(allRelationships))
                 {
                     return null;
                 }
 
-                foreach (var transitive in newRelationship.GetTransitiveRelationships(currentRelationships))
+                foreach (var transitive in newRelationship.GetTransitiveRelationships(allRelationships))
                 {
                     newRelationshipsToProcess.Enqueue(transitive);
                     newRelationships.Add(transitive);
                 }
 
-                currentRelationships.Add(newRelationship);
+                allRelationships.Add(newRelationship);
             }
 
-            return currentRelationships.ToImmutableHashSet();
+            RemoveRedundantRelationships(allRelationships);
+
+            return allRelationships.ToImmutableHashSet();
+        }
+
+        private static void RemoveRedundantRelationships(HashSet<BinaryRelationship> relationships)
+        {
+            RemoveRedundantMatchingLessEquals(relationships);
+            RemoveRedundantLessEquals(relationships);
+            RemoveRedundantLessEqualWithNotEqual(relationships);
+        }
+
+        private static void RemoveRedundantLessEquals(HashSet<BinaryRelationship> relationships)
+        {
+            // a <= b && a < b  ->  a < b
+            var leComparisions = GetComparisions(relationships, ComparisonKind.LessOrEqual);
+            var lComparisions = GetComparisions(relationships, ComparisonKind.Less);
+            relationships.ExceptWith(leComparisions.Where(le => lComparisions.Any(l => le.AreOperandsMatching(l))));
+
+            // a <= b && a == b  ->  a == b
+            leComparisions = GetComparisions(relationships, ComparisonKind.LessOrEqual);
+            var equals = relationships.OfType<EqualsRelationship>();
+            relationships.ExceptWith(leComparisions.Where(le => equals.Any(e => le.AreOperandsMatching(e))));
+        }
+
+        private static void RemoveRedundantLessEqualWithNotEqual(HashSet<BinaryRelationship> relationships)
+        {
+            // a <= b && a != b  ->  a < b
+
+            var leComparisions = GetComparisions(relationships, ComparisonKind.LessOrEqual);
+            var notEquals = relationships.OfType<ValueNotEqualsRelationship>();
+
+            var toChange = new List<ComparisonRelationship>();
+            for (int i = 0; i < leComparisions.Count; i++)
+            {
+                var leComparision = leComparisions[i];
+                var matchingPairs = notEquals.Where(o => o.AreOperandsMatching(leComparision)).ToList();
+                if (matchingPairs.Any())
+                {
+                    relationships.ExceptWith(matchingPairs);
+                    toChange.Add(leComparision);
+                }
+            }
+
+            foreach (var item in toChange)
+            {
+                relationships.Remove(item);
+                relationships.Add(new ComparisonRelationship(ComparisonKind.Less, item.LeftOperand, item.RightOperand));
+            }
+        }
+
+        private static void RemoveRedundantMatchingLessEquals(HashSet<BinaryRelationship> relationships)
+        {
+            // a <= b && b <= a  ->  a == b
+
+            var leComparisions = GetComparisions(relationships, ComparisonKind.LessOrEqual);
+
+            var toChange = new List<ComparisonRelationship>();
+            for (int i = 0; i < leComparisions.Count; i++)
+            {
+                var leComparision = leComparisions[i];
+                var matchingPairs = leComparisions.Where(o => o.AreOperandsSwapped(leComparision)).ToList();
+                if (matchingPairs.Any())
+                {
+                    relationships.ExceptWith(matchingPairs);
+                    toChange.Add(leComparision);
+                }
+            }
+
+            foreach (var item in toChange)
+            {
+                relationships.Remove(item);
+                relationships.Add(new ValueEqualsRelationship(item.LeftOperand, item.RightOperand));
+            }
+        }
+
+        private static List<ComparisonRelationship> GetComparisions(HashSet<BinaryRelationship> relationships, ComparisonKind kind)
+        {
+            return relationships
+                .OfType<ComparisonRelationship>()
+                .Where(c => c.ComparisonKind == kind)
+                .ToList();
         }
 
         private bool IsRelationshipOnLocalValues(BinaryRelationship relationship)
