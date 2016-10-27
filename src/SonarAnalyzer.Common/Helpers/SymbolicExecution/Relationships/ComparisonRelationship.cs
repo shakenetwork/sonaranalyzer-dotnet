@@ -106,25 +106,20 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
         {
             foreach (var other in relationships)
             {
-                if (other is NotEqualsRelationship)
+                var comparison = other as ComparisonRelationship;
+                if (comparison != null)
                 {
-                    continue;
-                }
-
-                var equals = other as EqualsRelationship;
-                if (equals != null)
-                {
-                    var transitive = GetTransitiveRelationship(equals);
+                    var transitive = GetTransitiveRelationship(comparison);
                     if (transitive != null)
                     {
                         yield return transitive;
                     }
                 }
 
-                var comparison = other as ComparisonRelationship;
-                if (comparison != null)
+                var equals = other as EqualsRelationship;
+                if (equals != null)
                 {
-                    var transitive = GetTransitiveRelationship(comparison);
+                    var transitive = GetTransitiveRelationship(equals);
                     if (transitive != null)
                     {
                         yield return transitive;
@@ -153,23 +148,23 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
             }
         }
 
-        private ComparisonRelationship GetTransitiveRelationship(EqualsRelationship other)
+        private BinaryRelationship GetTransitiveRelationship(EqualsRelationship other)
         {
             if (LeftOperand.Equals(other.LeftOperand))
             {
-                return new ComparisonRelationship(ComparisonKind, other.RightOperand, RightOperand);
+                return CreateNewWithOperands(other.RightOperand, RightOperand);
             }
             else if (RightOperand.Equals(other.LeftOperand))
             {
-                return new ComparisonRelationship(ComparisonKind, LeftOperand, other.RightOperand);
+                return CreateNewWithOperands(LeftOperand, other.RightOperand);
             }
             else if (LeftOperand.Equals(other.RightOperand))
             {
-                return new ComparisonRelationship(ComparisonKind, other.LeftOperand, RightOperand);
+                return CreateNewWithOperands(other.LeftOperand, RightOperand);
             }
             else if (RightOperand.Equals(other.RightOperand))
             {
-                return new ComparisonRelationship(ComparisonKind, LeftOperand, other.LeftOperand);
+                return CreateNewWithOperands(LeftOperand, other.LeftOperand);
             }
             else
             {
@@ -217,6 +212,11 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
             hash = hash * 31 + ComparisonKind.GetHashCode();
             hash = hash * 31 + base.GetHashCode();
             return hash;
+        }
+
+        internal override BinaryRelationship CreateNewWithOperands(SymbolicValue leftOperand, SymbolicValue rightOperand)
+        {
+            return new ComparisonRelationship(ComparisonKind, leftOperand, rightOperand);
         }
     }
 }

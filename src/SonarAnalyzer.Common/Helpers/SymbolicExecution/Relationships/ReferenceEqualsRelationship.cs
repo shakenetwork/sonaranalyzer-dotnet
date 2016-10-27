@@ -19,6 +19,7 @@
  */
 
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 
 namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
@@ -55,6 +56,23 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
         public override string ToString()
         {
             return $"RefEq({LeftOperand}, {RightOperand})";
+        }
+
+        internal override IEnumerable<BinaryRelationship> GetTransitiveRelationships(ImmutableHashSet<BinaryRelationship> relationships)
+        {
+            foreach (var other in relationships)
+            {
+                var transitive = GetTransitiveRelationship(other, other);
+                if (transitive != null)
+                {
+                    yield return transitive;
+                }
+            }
+        }
+
+        internal override BinaryRelationship CreateNewWithOperands(SymbolicValue leftOperand, SymbolicValue rightOperand)
+        {
+            return new ReferenceEqualsRelationship(leftOperand, rightOperand);
         }
     }
 }

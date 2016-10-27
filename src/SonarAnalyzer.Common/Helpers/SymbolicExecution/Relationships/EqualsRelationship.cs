@@ -61,5 +61,29 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
             // todo
             return Enumerable.Empty<BinaryRelationship>();
         }
+
+        protected BinaryRelationship GetTransitiveRelationship(BinaryRelationship other, BinaryRelationship operatorfactory)
+        {
+            if (LeftOperand.Equals(other.LeftOperand))
+            {
+                return operatorfactory.CreateNewWithOperands(RightOperand, other.RightOperand);
+            }
+            else if (RightOperand.Equals(other.LeftOperand))
+            {
+                return operatorfactory.CreateNewWithOperands(LeftOperand, other.RightOperand);
+            }
+            else if (LeftOperand.Equals(other.RightOperand))
+            {
+                return operatorfactory.CreateNewWithOperands(other.LeftOperand, RightOperand);
+            }
+            else if (RightOperand.Equals(other.RightOperand))
+            {
+                return operatorfactory.CreateNewWithOperands(other.LeftOperand, LeftOperand);
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

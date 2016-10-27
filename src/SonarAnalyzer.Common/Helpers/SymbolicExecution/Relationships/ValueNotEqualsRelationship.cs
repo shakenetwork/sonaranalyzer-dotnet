@@ -69,5 +69,10 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
         {
             return $"!Eq({LeftOperand}, {RightOperand})";
         }
+
+        internal override BinaryRelationship CreateNewWithOperands(SymbolicValue leftOperand, SymbolicValue rightOperand)
+        {
+            return new ValueNotEqualsRelationship(leftOperand, rightOperand);
+        }
     }
 }

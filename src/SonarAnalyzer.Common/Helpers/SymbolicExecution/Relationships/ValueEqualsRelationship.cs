@@ -18,7 +18,9 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 
 namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
@@ -67,6 +69,37 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
         public override string ToString()
         {
             return $"Eq({LeftOperand}, {RightOperand})";
+        }
+
+        internal override BinaryRelationship CreateNewWithOperands(SymbolicValue leftOperand, SymbolicValue rightOperand)
+        {
+            return new ValueEqualsRelationship(leftOperand, rightOperand);
+        }
+
+        internal override IEnumerable<BinaryRelationship> GetTransitiveRelationships(ImmutableHashSet<BinaryRelationship> relationships)
+        {
+            foreach (var other in relationships)
+            {
+                var equals = other as EqualsRelationship;
+                if (equals != null)
+                {
+                    var transitive = GetTransitiveRelationship(equals, this);
+                    if (transitive != null)
+                    {
+                        yield return transitive;
+                    }
+                }
+
+                if (other is ComparisonRelationship ||
+                    other is ValueNotEqualsRelationship)
+                {
+                    var transitive = GetTransitiveRelationship(other, other);
+                    if (transitive != null)
+                    {
+                        yield return transitive;
+                    }
+                }
+            }
         }
     }
 }

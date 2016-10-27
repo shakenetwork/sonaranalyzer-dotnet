@@ -118,7 +118,7 @@ namespace Tests.Diagnostics
 
         public void Method8(bool cond)
         {
-            foreach (var item in new int[][] { { 1,2,3 } })
+            foreach (var item in new int[][] { { 1, 2, 3 } })
             {
                 foreach (var i in item)
                 {
@@ -489,7 +489,7 @@ namespace Tests.Diagnostics
 //                                 ^
             if (a && b) { if (a == b) { } } // Noncompliant
 //                            ^^^^^^
-            if (a && b && a == b) {  } // Noncompliant
+            if (a && b && a == b) { } // Noncompliant
 //                        ^^^^^^
 
             a = true;
@@ -597,7 +597,7 @@ namespace Tests.Diagnostics
             return base.Equals(obj);
         }
 
-        public static bool operator==(ConditionEvaluatesToConstant a, ConditionEvaluatesToConstant b)
+        public static bool operator ==(ConditionEvaluatesToConstant a, ConditionEvaluatesToConstant b)
         {
             return false;
         }
@@ -809,6 +809,63 @@ namespace Tests.Diagnostics
             {
                 if (a < c) { }
             }
+        }
+
+        void RefEqTransitivity(Comp a, Comp b, Comp c)
+        {
+            if (a == b && b == c)
+            {
+                if (a != c) { } // Noncompliant
+            }
+            if (a.Equals(b) && b == c)
+            {
+                if (a != c) { }
+                if (a == c) { }
+                if (a.Equals(c)) { }  // Noncompliant
+                if (!a.Equals(c)) { } // Noncompliant
+            }
+            if (a > b && b == c)
+            {
+                if (a <= c) { } // Noncompliant
+            }
+        }
+
+        void ValueEqTransitivity(Comp a, Comp b, Comp c)
+        {
+            if (a == b && b.Equals(c))
+            {
+                if (a.Equals(c)) { } // Noncompliant
+            }
+            if (a.Equals(b) && b.Equals(c))
+            {
+                if (a != c) { }
+                if (a == c) { }
+                if (a.Equals(c)) { }  // Noncompliant
+                if (!a.Equals(c)) { } // Noncompliant
+            }
+            if (a > b && b.Equals(c))
+            {
+                if (a > c) { } // Noncompliant
+                if (a <= c) { } // Noncompliant
+            }
+            if (!a.Equals(b) && b.Equals(c))
+            {
+                if (a.Equals(c)) { } // Noncompliant
+                if (a == c) { } // Noncompliant
+            }
+            if (a != b && b.Equals(c))
+            {
+                if (a.Equals(c)) { }
+                if (a == c) { }
+            }
+        }
+
+        class Comp
+        {
+            public static bool operator <(Comp a, Comp b) { return true; }
+            public static bool operator >(Comp a, Comp b) { return true; }
+            public static bool operator >=(Comp a, Comp b) { return true; }
+            public static bool operator <=(Comp a, Comp b) { return true; }
         }
     }
 }

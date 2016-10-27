@@ -65,6 +65,8 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
             return hash;
         }
 
+        internal abstract BinaryRelationship CreateNewWithOperands(SymbolicValue leftOperand, SymbolicValue rightOperand);
+
         internal abstract bool IsContradicting(IEnumerable<BinaryRelationship> relationships);
         public abstract BinaryRelationship Negate();
 
