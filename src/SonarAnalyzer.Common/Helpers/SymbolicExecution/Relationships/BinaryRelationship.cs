@@ -18,7 +18,9 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 
 namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
 {
@@ -66,10 +68,12 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
         internal abstract bool IsContradicting(IEnumerable<BinaryRelationship> relationships);
         public abstract BinaryRelationship Negate();
 
-        protected bool AreOperandsMatching(BinaryRelationship rel2)
+        internal abstract IEnumerable<BinaryRelationship> GetTransitiveRelationships(ImmutableHashSet<BinaryRelationship> relationships);
+
+        protected bool AreOperandsMatching(BinaryRelationship other)
         {
-            return LeftOperand.Equals(rel2.LeftOperand) && RightOperand.Equals(rel2.RightOperand) ||
-                RightOperand.Equals(rel2.LeftOperand) && LeftOperand.Equals(rel2.RightOperand);
+            return LeftOperand.Equals(other.LeftOperand) && RightOperand.Equals(other.RightOperand) ||
+                RightOperand.Equals(other.LeftOperand) && LeftOperand.Equals(other.RightOperand);
         }
     }
 }

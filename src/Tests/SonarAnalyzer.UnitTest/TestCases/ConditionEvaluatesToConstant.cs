@@ -772,10 +772,43 @@ namespace Tests.Diagnostics
 //                           ^^^^^^^^^^
             }
         }
+        
         public void Assert(object o1)
         {
             System.Diagnostics.Debug.Assert(o1 != null);
             System.Diagnostics.Debug.Assert(o1 == null); // Noncompliant
+        }
+        
+        void ComparisonTransitivity(int a, int b, int c)
+        {
+            if (a == b && b < c)
+            {
+                if (a >= c) { } // Noncompliant
+            }
+            if (a == b && b <= c)
+            {
+                if (a > c) { } // Noncompliant
+            }
+            if (a > b && b > c)
+            {
+                if (a <= c) { } // Noncompliant
+            }
+            if (a > b && b >= c)
+            {
+                if (a <= c) { } // Noncompliant
+            }
+            if (a >= b && b >= c)
+            {
+                if (a < c) { } // Noncompliant
+            }
+            if (a >= b && c <= b)
+            {
+                if (a < c) { } // Noncompliant
+            }
+            if (a >= b && c >= b)
+            {
+                if (a < c) { }
+            }
         }
     }
 }

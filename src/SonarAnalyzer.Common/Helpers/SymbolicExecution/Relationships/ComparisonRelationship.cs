@@ -18,7 +18,9 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 
 namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
@@ -98,6 +100,81 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
             }
 
             return false;
+        }
+
+        internal override IEnumerable<BinaryRelationship> GetTransitiveRelationships(ImmutableHashSet<BinaryRelationship> relationships)
+        {
+            foreach (var other in relationships)
+            {
+                if (other is NotEqualsRelationship)
+                {
+                    continue;
+                }
+
+                var equals = other as EqualsRelationship;
+                if (equals != null)
+                {
+                    var transitive = GetTransitiveRelationship(equals);
+                    if (transitive != null)
+                    {
+                        yield return transitive;
+                    }
+                }
+
+                var comparison = other as ComparisonRelationship;
+                if (comparison != null)
+                {
+                    var transitive = GetTransitiveRelationship(comparison);
+                    if (transitive != null)
+                    {
+                        yield return transitive;
+                    }
+                }
+            }
+        }
+
+        private ComparisonRelationship GetTransitiveRelationship(ComparisonRelationship other)
+        {
+            var comparisonKind = ComparisonKind == ComparisonKind.LessOrEqual && other.ComparisonKind == ComparisonKind.LessOrEqual
+                    ? ComparisonKind.LessOrEqual
+                    : ComparisonKind.Less;
+
+            if (RightOperand.Equals(other.LeftOperand))
+            {
+                return new ComparisonRelationship(comparisonKind, LeftOperand, other.RightOperand);
+            }
+            else if (LeftOperand.Equals(other.RightOperand))
+            {
+                return new ComparisonRelationship(comparisonKind, other.LeftOperand, RightOperand);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        private ComparisonRelationship GetTransitiveRelationship(EqualsRelationship other)
+        {
+            if (LeftOperand.Equals(other.LeftOperand))
+            {
+                return new ComparisonRelationship(ComparisonKind, other.RightOperand, RightOperand);
+            }
+            else if (RightOperand.Equals(other.LeftOperand))
+            {
+                return new ComparisonRelationship(ComparisonKind, LeftOperand, other.RightOperand);
+            }
+            else if (LeftOperand.Equals(other.RightOperand))
+            {
+                return new ComparisonRelationship(ComparisonKind, other.LeftOperand, RightOperand);
+            }
+            else if (RightOperand.Equals(other.RightOperand))
+            {
+                return new ComparisonRelationship(ComparisonKind, LeftOperand, other.LeftOperand);
+            }
+            else
+            {
+                return null;
+            }
         }
 
         private bool AreOperandsSwapped(ComparisonRelationship rel)

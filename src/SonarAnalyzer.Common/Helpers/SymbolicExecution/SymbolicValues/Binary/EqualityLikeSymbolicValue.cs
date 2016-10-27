@@ -30,7 +30,7 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
         {
         }
 
-        internal BinaryRelationship GetNormalizedRelationship(BoolConstraint boolConstraint, SymbolicValue leftOperand, SymbolicValue rightOperand)
+        private BinaryRelationship GetNormalizedRelationship(BoolConstraint boolConstraint, SymbolicValue leftOperand, SymbolicValue rightOperand)
         {
             var invertCount = 0;
 
@@ -61,7 +61,7 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
 
         protected abstract BinaryRelationship GetRelationship(SymbolicValue left, SymbolicValue right);
 
-        internal BinaryRelationship GetRelationship(BoolConstraint boolConstraint, SymbolicValue left, SymbolicValue right)
+        private BinaryRelationship GetRelationship(BoolConstraint boolConstraint, SymbolicValue left, SymbolicValue right)
         {
             var equalsRelationship = GetRelationship(left, right);
 
@@ -70,7 +70,7 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
                 : equalsRelationship.Negate();
         }
 
-        internal BinaryRelationship GetRelationship(BoolConstraint boolConstraint)
+        private BinaryRelationship GetRelationship(BoolConstraint boolConstraint)
         {
             return GetNormalizedRelationship(boolConstraint, LeftOperand, RightOperand);
         }

@@ -67,27 +67,15 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
 
         internal ProgramState TrySetRelationship(BinaryRelationship relationship)
         {
-            if (Relationships.Contains(relationship))
+            // Only add new relationships, and ones that are on SV's that belong to a local symbol
+            if (Relationships.Contains(relationship) ||
+                !IsRelationshipOnLocalValues(relationship))
             {
                 return this;
             }
 
-            var leftOp = relationship.LeftOperand;
-            var rightOp = relationship.RightOperand;
-
-            // Only add relationships on SV's that belong to a local symbol
-            var localValues = Values.Values
-                .Except(ProtectedSymbolicValues)
-                .Concat(DistinguishedReferences)
-                .ToImmutableHashSet();
-
-            if (!localValues.Contains(leftOp) ||
-                !localValues.Contains(rightOp))
-            {
-                return this;
-            }
-
-            if (relationship.IsContradicting(Relationships))
+            var relationships = GetAllRelationshipsWith(relationship);
+            if (relationships == null)
             {
                 return null;
             }
@@ -97,7 +85,48 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
                 Constraints,
                 ProgramPointVisitCounts,
                 ExpressionStack,
-                Relationships.Add(relationship));
+                relationships);
+        }
+
+        private ImmutableHashSet<BinaryRelationship> GetAllRelationshipsWith(BinaryRelationship relationship)
+        {
+            var currentRelationships = Relationships;
+            var newRelationshipsToProcess = new Queue<BinaryRelationship>(new[] { relationship });
+
+            while (newRelationshipsToProcess.Any())
+            {
+                var newRelationship = newRelationshipsToProcess.Dequeue();
+
+                if (currentRelationships.Contains(newRelationship))
+                {
+                    continue;
+                }
+
+                if (newRelationship.IsContradicting(currentRelationships))
+                {
+                    return null;
+                }
+
+                foreach (var transitive in newRelationship.GetTransitiveRelationships(currentRelationships))
+                {
+                    newRelationshipsToProcess.Enqueue(transitive);
+                }
+
+                currentRelationships = currentRelationships.Add(newRelationship);
+            }
+
+            return currentRelationships;
+        }
+
+        private bool IsRelationshipOnLocalValues(BinaryRelationship relationship)
+        {
+            var localValues = Values.Values
+                .Except(ProtectedSymbolicValues)
+                .Concat(DistinguishedReferences)
+                .ToImmutableHashSet();
+
+            return localValues.Contains(relationship.LeftOperand) &&
+                localValues.Contains(relationship.RightOperand);
         }
 
         internal ProgramState(ImmutableDictionary<ISymbol, SymbolicValue> values,
