@@ -20,6 +20,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 
 namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
@@ -73,6 +74,18 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
         internal override BinaryRelationship CreateNewWithOperands(SymbolicValue leftOperand, SymbolicValue rightOperand)
         {
             return new ValueNotEqualsRelationship(leftOperand, rightOperand);
+        }
+
+        internal override IEnumerable<BinaryRelationship> GetTransitiveRelationships(ImmutableHashSet<BinaryRelationship> relationships)
+        {
+            foreach (var other in relationships.OfType<EqualsRelationship>())
+            {
+                var transitive = GetTransitiveRelationship(other, this);
+                if (transitive != null)
+                {
+                    yield return transitive;
+                }
+            }
         }
     }
 }

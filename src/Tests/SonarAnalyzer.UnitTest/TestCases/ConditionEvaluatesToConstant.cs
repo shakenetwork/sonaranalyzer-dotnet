@@ -860,6 +860,21 @@ namespace Tests.Diagnostics
             }
         }
 
+        void NeqEqTransitivity(object a, object b, object c)
+        {
+            if (a == c && a != b)
+            {
+                if (b == c) { } // Noncompliant
+                if (b.Equals(c)) { }
+            }
+
+            if (a == c && !a.Equals(b))
+            {
+                if (b == c) { }         // Noncompliant
+                if (b.Equals(c)) { }    // Noncompliant
+            }
+        }
+
         class Comp
         {
             public static bool operator <(Comp a, Comp b) { return true; }
