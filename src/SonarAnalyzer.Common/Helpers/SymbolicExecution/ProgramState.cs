@@ -90,8 +90,9 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
 
         private ImmutableHashSet<BinaryRelationship> GetAllRelationshipsWith(BinaryRelationship relationship)
         {
-            var currentRelationships = Relationships;
+            var currentRelationships = new HashSet<BinaryRelationship>(Relationships);
             var newRelationshipsToProcess = new Queue<BinaryRelationship>(new[] { relationship });
+            var newRelationships = new List<BinaryRelationship>(new[] { relationship });
 
             while (newRelationshipsToProcess.Any())
             {
@@ -110,12 +111,13 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
                 foreach (var transitive in newRelationship.GetTransitiveRelationships(currentRelationships))
                 {
                     newRelationshipsToProcess.Enqueue(transitive);
+                    newRelationships.Add(transitive);
                 }
 
-                currentRelationships = currentRelationships.Add(newRelationship);
+                currentRelationships.Add(newRelationship);
             }
 
-            return currentRelationships;
+            return currentRelationships.ToImmutableHashSet();
         }
 
         private bool IsRelationshipOnLocalValues(BinaryRelationship relationship)

@@ -18,7 +18,6 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
@@ -102,7 +101,7 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
             return false;
         }
 
-        internal override IEnumerable<BinaryRelationship> GetTransitiveRelationships(ImmutableHashSet<BinaryRelationship> relationships)
+        internal override IEnumerable<BinaryRelationship> GetTransitiveRelationships(IEnumerable<BinaryRelationship> relationships)
         {
             foreach (var other in relationships)
             {
@@ -152,19 +151,19 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
         {
             if (LeftOperand.Equals(other.LeftOperand))
             {
-                return CreateNewWithOperands(other.RightOperand, RightOperand);
+                return new ComparisonRelationship(ComparisonKind, other.RightOperand, RightOperand);
             }
             else if (RightOperand.Equals(other.LeftOperand))
             {
-                return CreateNewWithOperands(LeftOperand, other.RightOperand);
+                return new ComparisonRelationship(ComparisonKind, LeftOperand, other.RightOperand);
             }
             else if (LeftOperand.Equals(other.RightOperand))
             {
-                return CreateNewWithOperands(other.LeftOperand, RightOperand);
+                return new ComparisonRelationship(ComparisonKind, other.LeftOperand, RightOperand);
             }
             else if (RightOperand.Equals(other.RightOperand))
             {
-                return CreateNewWithOperands(LeftOperand, other.LeftOperand);
+                return new ComparisonRelationship(ComparisonKind, LeftOperand, other.LeftOperand);
             }
             else
             {
@@ -214,7 +213,7 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
             return hash;
         }
 
-        internal override BinaryRelationship CreateNewWithOperands(SymbolicValue leftOperand, SymbolicValue rightOperand)
+        internal override BinaryRelationship CreateNew(SymbolicValue leftOperand, SymbolicValue rightOperand)
         {
             return new ComparisonRelationship(ComparisonKind, leftOperand, rightOperand);
         }

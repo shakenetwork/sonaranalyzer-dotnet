@@ -18,7 +18,6 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
@@ -71,19 +70,19 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
             return $"Eq({LeftOperand}, {RightOperand})";
         }
 
-        internal override BinaryRelationship CreateNewWithOperands(SymbolicValue leftOperand, SymbolicValue rightOperand)
+        internal override BinaryRelationship CreateNew(SymbolicValue leftOperand, SymbolicValue rightOperand)
         {
             return new ValueEqualsRelationship(leftOperand, rightOperand);
         }
 
-        internal override IEnumerable<BinaryRelationship> GetTransitiveRelationships(ImmutableHashSet<BinaryRelationship> relationships)
+        internal override IEnumerable<BinaryRelationship> GetTransitiveRelationships(IEnumerable<BinaryRelationship> relationships)
         {
             foreach (var other in relationships)
             {
                 var equals = other as EqualsRelationship;
                 if (equals != null)
                 {
-                    var transitive = GetTransitiveRelationship(equals, this);
+                    var transitive = ComputeTransitiveRelationship(equals, this);
                     if (transitive != null)
                     {
                         yield return transitive;
@@ -93,7 +92,7 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
                 if (other is ComparisonRelationship ||
                     other is ValueNotEqualsRelationship)
                 {
-                    var transitive = GetTransitiveRelationship(other, other);
+                    var transitive = ComputeTransitiveRelationship(other, other);
                     if (transitive != null)
                     {
                         yield return transitive;

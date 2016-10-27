@@ -18,11 +18,6 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System;
-using System.Collections.Generic;
-using System.Collections.Immutable;
-using System.Linq;
-
 namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
 {
     public abstract class NotEqualsRelationship : BinaryRelationship
@@ -43,12 +38,6 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
             var right = RightOperand.GetHashCode();
 
             return EqualsRelationship.GetHashCodeMinMaxOrdered(left, right, GetType().GetHashCode());
-        }
-
-        internal override IEnumerable<BinaryRelationship> GetTransitiveRelationships(ImmutableHashSet<BinaryRelationship> relationships)
-        {
-            // todo
-            return Enumerable.Empty<BinaryRelationship>();
         }
     }
 }

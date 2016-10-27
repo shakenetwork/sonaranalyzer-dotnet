@@ -57,21 +57,17 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
             return $"!RefEq({LeftOperand}, {RightOperand})";
         }
 
-        internal override BinaryRelationship CreateNewWithOperands(SymbolicValue leftOperand, SymbolicValue rightOperand)
+        internal override BinaryRelationship CreateNew(SymbolicValue leftOperand, SymbolicValue rightOperand)
         {
             return new ReferenceNotEqualsRelationship(leftOperand, rightOperand);
         }
 
-        internal override IEnumerable<BinaryRelationship> GetTransitiveRelationships(ImmutableHashSet<BinaryRelationship> relationships)
+        internal override IEnumerable<BinaryRelationship> GetTransitiveRelationships(IEnumerable<BinaryRelationship> relationships)
         {
-            foreach (var other in relationships.OfType<ReferenceEqualsRelationship>())
-            {
-                var transitive = GetTransitiveRelationship(other, this);
-                if (transitive != null)
-                {
-                    yield return transitive;
-                }
-            }
+            return relationships
+                .OfType<ReferenceEqualsRelationship>()
+                .Select(other => ComputeTransitiveRelationship(other, this))
+                .Where(t => t != null);
         }
     }
 }

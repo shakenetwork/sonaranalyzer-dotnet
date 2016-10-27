@@ -18,7 +18,6 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 
@@ -65,12 +64,11 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
             return hash;
         }
 
-        internal abstract BinaryRelationship CreateNewWithOperands(SymbolicValue leftOperand, SymbolicValue rightOperand);
+        internal abstract BinaryRelationship CreateNew(SymbolicValue leftOperand, SymbolicValue rightOperand);
 
         internal abstract bool IsContradicting(IEnumerable<BinaryRelationship> relationships);
-        public abstract BinaryRelationship Negate();
 
-        internal abstract IEnumerable<BinaryRelationship> GetTransitiveRelationships(ImmutableHashSet<BinaryRelationship> relationships);
+        public abstract BinaryRelationship Negate();
 
         protected bool AreOperandsMatching(BinaryRelationship other)
         {
@@ -78,23 +76,25 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
                 RightOperand.Equals(other.LeftOperand) && LeftOperand.Equals(other.RightOperand);
         }
 
-        protected BinaryRelationship GetTransitiveRelationship(BinaryRelationship other, BinaryRelationship operatorfactory)
+        internal abstract IEnumerable<BinaryRelationship> GetTransitiveRelationships(IEnumerable<BinaryRelationship> relationships);
+
+        protected BinaryRelationship ComputeTransitiveRelationship(BinaryRelationship other, BinaryRelationship factory)
         {
             if (LeftOperand.Equals(other.LeftOperand))
             {
-                return operatorfactory.CreateNewWithOperands(RightOperand, other.RightOperand);
+                return factory.CreateNew(RightOperand, other.RightOperand);
             }
             else if (RightOperand.Equals(other.LeftOperand))
             {
-                return operatorfactory.CreateNewWithOperands(LeftOperand, other.RightOperand);
+                return factory.CreateNew(LeftOperand, other.RightOperand);
             }
             else if (LeftOperand.Equals(other.RightOperand))
             {
-                return operatorfactory.CreateNewWithOperands(other.LeftOperand, RightOperand);
+                return factory.CreateNew(other.LeftOperand, RightOperand);
             }
             else if (RightOperand.Equals(other.RightOperand))
             {
-                return operatorfactory.CreateNewWithOperands(other.LeftOperand, LeftOperand);
+                return factory.CreateNew(other.LeftOperand, LeftOperand);
             }
             else
             {
