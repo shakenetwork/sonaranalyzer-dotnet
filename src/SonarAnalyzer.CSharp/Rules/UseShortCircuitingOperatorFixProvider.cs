@@ -20,13 +20,13 @@
 
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CodeFixes;
-using Microsoft.CodeAnalysis.VisualBasic;
-using Microsoft.CodeAnalysis.VisualBasic.Syntax;
+using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using SonarAnalyzer.Rules.Common;
 
-namespace SonarAnalyzer.Rules.VisualBasic
+namespace SonarAnalyzer.Rules.CSharp
 {
-    [ExportCodeFixProvider(LanguageNames.VisualBasic)]
+    [ExportCodeFixProvider(LanguageNames.CSharp)]
     public class UseShortCircuitingOperatorFixProvider : UseShortCircuitingOperatorFixProviderBase<BinaryExpressionSyntax>
     {
         internal override bool IsCandidateExpression(BinaryExpressionSyntax expression)
@@ -36,9 +36,11 @@ namespace SonarAnalyzer.Rules.VisualBasic
 
         protected override BinaryExpressionSyntax GetShortCircuitingExpressionNode(BinaryExpressionSyntax expression)
         {
-            return expression.IsKind(SyntaxKind.AndExpression)
-                ? SyntaxFactory.AndAlsoExpression(expression.Left, expression.Right)
-                : SyntaxFactory.OrElseExpression(expression.Left, expression.Right);
+            var alternativeKind = expression.IsKind(SyntaxKind.BitwiseAndExpression)
+                ? SyntaxKind.LogicalAndExpression
+                : SyntaxKind.LogicalOrExpression;
+
+            return SyntaxFactory.BinaryExpression(alternativeKind, expression.Left, expression.Right);
         }
     }
 }

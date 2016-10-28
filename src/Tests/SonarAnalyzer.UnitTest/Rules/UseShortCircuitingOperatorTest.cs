@@ -19,7 +19,8 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarAnalyzer.Rules;
+using CS = SonarAnalyzer.Rules.CSharp;
+using VB = SonarAnalyzer.Rules.VisualBasic;
 
 namespace SonarAnalyzer.UnitTest.Rules
 {
@@ -27,19 +28,35 @@ namespace SonarAnalyzer.UnitTest.Rules
     public class UseShortCircuitingOperatorTest
     {
         [TestMethod, TestCategory("Rule")]
-        public void UseShortCircuitingOperators()
+        public void UseShortCircuitingOperators_VisualBasic()
         {
-            Verifier.VerifyAnalyzer(@"TestCases\UseShortCircuitingOperator.vb", new UseShortCircuitingOperator());
+            Verifier.VerifyAnalyzer(@"TestCases\UseShortCircuitingOperator.vb", new VB.UseShortCircuitingOperator());
         }
 
         [TestMethod, TestCategory("CodeFix")]
-        public void UseShortCircuitingOperators_CodeFix()
+        public void UseShortCircuitingOperators_VisualBasic_CodeFix()
         {
             Verifier.VerifyCodeFix(
                 @"TestCases\UseShortCircuitingOperator.vb",
                 @"TestCases\UseShortCircuitingOperator.Fixed.vb",
-                new UseShortCircuitingOperator(),
-                new UseShortCircuitingOperatorFixProvider());
+                new VB.UseShortCircuitingOperator(),
+                new VB.UseShortCircuitingOperatorFixProvider());
+        }
+
+        [TestMethod, TestCategory("Rule")]
+        public void UseShortCircuitingOperators_CSharp()
+        {
+            Verifier.VerifyAnalyzer(@"TestCases\UseShortCircuitingOperator.cs", new CS.UseShortCircuitingOperator());
+        }
+
+        [TestMethod, TestCategory("CodeFix")]
+        public void UseShortCircuitingOperators_CSharp_CodeFix()
+        {
+            Verifier.VerifyCodeFix(
+                @"TestCases\UseShortCircuitingOperator.cs",
+                @"TestCases\UseShortCircuitingOperator.Fixed.cs",
+                new CS.UseShortCircuitingOperator(),
+                new CS.UseShortCircuitingOperatorFixProvider());
         }
     }
 }

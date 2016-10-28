@@ -1,7 +1,7 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
-using Microsoft.CodeAnalysis.VisualBasic;
-using Microsoft.CodeAnalysis.VisualBasic.Syntax;
+using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using SonarAnalyzer.Common;
 using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
@@ -9,9 +9,9 @@ using SonarAnalyzer.Rules.Common;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 
-namespace SonarAnalyzer.Rules.VisualBasic
+namespace SonarAnalyzer.Rules.CSharp
 {
-    [DiagnosticAnalyzer(LanguageNames.VisualBasic)]
+    [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("5min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
@@ -35,23 +35,23 @@ namespace SonarAnalyzer.Rules.VisualBasic
 
         internal static readonly IDictionary<SyntaxKind, SyntaxKind> ShortCircuitingAlternative = new Dictionary<SyntaxKind, SyntaxKind>
         {
-            { SyntaxKind.AndExpression, SyntaxKind.AndAlsoExpression },
-            { SyntaxKind.OrExpression, SyntaxKind.OrElseExpression }
+            { SyntaxKind.BitwiseAndExpression, SyntaxKind.LogicalAndExpression },
+            { SyntaxKind.BitwiseOrExpression, SyntaxKind.LogicalOrExpression }
         }.ToImmutableDictionary();
 
         private static readonly IDictionary<SyntaxKind, string> OperatorNames = new Dictionary<SyntaxKind, string>
         {
-            { SyntaxKind.AndExpression, "And" },
-            { SyntaxKind.OrExpression, "Or" },
-            { SyntaxKind.AndAlsoExpression, "AndAlso" },
-            { SyntaxKind.OrElseExpression, "OrElse" },
+            { SyntaxKind.BitwiseAndExpression, "&" },
+            { SyntaxKind.BitwiseOrExpression, "|" },
+            { SyntaxKind.LogicalAndExpression, "&&" },
+            { SyntaxKind.LogicalOrExpression, "||" },
         }.ToImmutableDictionary();
 
         protected override GeneratedCodeRecognizer GeneratedCodeRecognizer =>
-             Helpers.VisualBasic.GeneratedCodeRecognizer.Instance;
+             Helpers.CSharp.GeneratedCodeRecognizer.Instance;
 
         protected override ImmutableArray<SyntaxKind> SyntaxKindsOfInterest => ImmutableArray.Create<SyntaxKind>(
-            SyntaxKind.AndExpression,
-            SyntaxKind.OrExpression);
+            SyntaxKind.BitwiseAndExpression,
+            SyntaxKind.BitwiseOrExpression);
     }
 }
