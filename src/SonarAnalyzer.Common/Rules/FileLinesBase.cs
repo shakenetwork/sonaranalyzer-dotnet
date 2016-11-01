@@ -22,7 +22,7 @@ using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
-using System.Linq;
+using Microsoft.CodeAnalysis.Text;
 
 namespace SonarAnalyzer.Rules
 {
@@ -64,8 +64,8 @@ namespace SonarAnalyzer.Rules
 
                     if (lines > Maximum)
                     {
-                        var firstLine = c.Tree.GetText().Lines.First();
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, c.Tree.GetLocation(firstLine.Span), Maximum, lines));
+                        c.ReportDiagnostic(Diagnostic.Create(Rule,
+                            Location.Create(c.Tree, TextSpan.FromBounds(0,0)), Maximum, lines));
                     }
                 });
         }
