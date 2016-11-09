@@ -110,6 +110,11 @@ namespace SonarAnalyzer.Rules.CSharp
                 return false;
             }
 
+            if (SymbolHelper.IsAnyAttributeInOverridingChain(propertySymbol))
+            {
+                return false;
+            }
+
             return CheckGetAccessorIfAny(propertySyntax, propertySymbol, semanticModel) &&
                 CheckSetAccessorIfAny(propertySyntax, propertySymbol, semanticModel);
         }
@@ -190,13 +195,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
             var methodSymbol = semanticModel.GetDeclaredSymbol(methodSyntax);
 
-            if (methodSymbol == null ||
-                !methodSymbol.IsOverride ||
-                methodSymbol.IsSealed ||
-                methodSymbol.OverriddenMethod == null ||
-                IgnoredMethodNames.Contains(methodSymbol.Name) ||
-                methodSymbol.Parameters.Any(p => p.HasExplicitDefaultValue) ||
-                methodSymbol.OverriddenMethod.Parameters.Any(p => p.HasExplicitDefaultValue))
+            if (IsMethodSymbolExcluded(methodSymbol))
             {
                 return false;
             }
@@ -219,6 +218,19 @@ namespace SonarAnalyzer.Rules.CSharp
             }
 
             return AreArgumentsMatchParameters(methodSymbol, semanticModel, expressionToCheck, invokedMethod);
+        }
+
+        private static bool IsMethodSymbolExcluded(IMethodSymbol methodSymbol)
+        {
+            return
+                methodSymbol == null ||
+                !methodSymbol.IsOverride ||
+                methodSymbol.IsSealed ||
+                methodSymbol.OverriddenMethod == null ||
+                IgnoredMethodNames.Contains(methodSymbol.Name) ||
+                methodSymbol.Parameters.Any(p => p.HasExplicitDefaultValue) ||
+                methodSymbol.OverriddenMethod.Parameters.Any(p => p.HasExplicitDefaultValue) ||
+                SymbolHelper.IsAnyAttributeInOverridingChain(methodSymbol);
         }
 
         private static bool HasDocumentationComment(SyntaxNode node)
