@@ -200,5 +200,37 @@ namespace SonarAnalyzer.Helpers
 
             return Enumerable.Empty<IParameterSymbol>();
         }
+
+        public static bool IsAnyAttributeInOverridingChain(IPropertySymbol propertySymbol)
+        {
+            return IsAnyAttributeInOverridingChain(propertySymbol, property => property.OverriddenProperty);
+        }
+
+        public static bool IsAnyAttributeInOverridingChain(IMethodSymbol methodSymbol)
+        {
+            return IsAnyAttributeInOverridingChain(methodSymbol, method => method.OverriddenMethod);
+        }
+
+        private static bool IsAnyAttributeInOverridingChain<TSymbol>(TSymbol symbol, Func<TSymbol, TSymbol> getOverriddenMember)
+            where TSymbol : class, ISymbol
+        {
+            var currentSymbol = symbol;
+            while (currentSymbol != null)
+            {
+                if (currentSymbol.GetAttributes().Any())
+                {
+                    return true;
+                }
+
+                if (!currentSymbol.IsOverride)
+                {
+                    return false;
+                }
+
+                currentSymbol = getOverriddenMember(currentSymbol);
+            }
+
+            return false;
+        }
     }
 }
