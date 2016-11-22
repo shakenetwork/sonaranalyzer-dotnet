@@ -221,6 +221,16 @@ namespace SonarAnalyzer.Integration.UnitTest
             Assert.IsFalse(fileIssues.First().Issue.Any(i => i.Id == "S1116"));
         }
 
+        [TestMethod]
+        public void Encoding_Reported()
+        {
+            var encodingInfos = GetDeserializedData<EncodingInfo>(Path.Combine(OutputFolderName, Rules.FileEncodingAnalyzerBase.EncodingFileName));
+            Assert.AreEqual(1, encodingInfos.Count);
+            var encodingInfo = encodingInfos.First();
+
+            Assert.AreEqual($"{TestInputPath}{extension}", encodingInfo.FilePath);
+            Assert.AreEqual("utf-8", encodingInfo.Encoding);
+        }
 
         internal static List<TMessage> GetDeserializedData<TMessage>(string filePath)
             where TMessage : IMessage, new()

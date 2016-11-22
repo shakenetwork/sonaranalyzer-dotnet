@@ -93,10 +93,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\*.cs" />
     <Compile Include="Rules\Naming\*.cs" />
-    <Compile Include="Rules\Utilities\CopyPasteTokenAnalyzer.cs" />
-    <Compile Include="Rules\Utilities\MetricsAnalyzer.cs" />
-    <Compile Include="Rules\Utilities\SymbolReferenceAnalyzer.cs" />
-    <Compile Include="Rules\Utilities\TokenTypeAnalyzer.cs" />
+    <Compile Include="Rules\Utilities\*.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SonarAnalyzer.Common\SonarAnalyzer.Common.csproj">

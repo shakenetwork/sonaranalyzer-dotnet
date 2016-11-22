@@ -51,6 +51,7 @@ namespace SonarAnalyzer.Runner
             using (var symRefStream = File.Create(Path.Combine(outputDirectory, Rules.SymbolReferenceAnalyzerBase.SymbolReferenceFileName)))
             using (var cpdStream = File.Create(Path.Combine(outputDirectory, Rules.CopyPasteTokenAnalyzerBase.CopyPasteTokenFileName)))
             using (var metricsStream = File.Create(Path.Combine(outputDirectory, Rules.MetricsAnalyzerBase.MetricsFileName)))
+            using (var encodingStream = File.Create(Path.Combine(outputDirectory, Rules.FileEncodingAnalyzerBase.EncodingFileName)))
             using (var issuesStream = File.Create(Path.Combine(outputDirectory, IssuesFileName)))
             {
                 foreach (var file in configuration.Files)
@@ -73,13 +74,25 @@ namespace SonarAnalyzer.Runner
                         tokenCollector.SymbolReferenceInfo.WriteDelimitedTo(symRefStream);
                         tokenCollector.CopyPasteTokenInfo.WriteDelimitedTo(cpdStream);
 
-                        var metrics = language == AnalyzerLanguage.CSharp
-                            ? (MetricsBase)new Common.CSharp.Metrics(syntaxTree)
-                            : new Common.VisualBasic.Metrics(syntaxTree);
+                        MetricsBase metrics;
+                        Rules.FileEncodingAnalyzerBase encodingCalculator;
+
+                        if (language == AnalyzerLanguage.CSharp)
+                        {
+                            metrics = new Common.CSharp.Metrics(syntaxTree);
+                            encodingCalculator = new Rules.CSharp.FileEncodingAnalyzer();
+                        }
+                        else
+                        {
+                            metrics = new Common.VisualBasic.Metrics(syntaxTree);
+                            encodingCalculator = new Rules.VisualBasic.FileEncodingAnalyzer();
+                        }
 
                         var metricsInfo = Rules.MetricsAnalyzerBase.CalculateMetrics(metrics, file, configuration.IgnoreHeaderComments);
-
                         metricsInfo.WriteDelimitedTo(metricsStream);
+
+                        var encodingInfo = Rules.FileEncodingAnalyzerBase.CalculateEncoding(encodingCalculator, syntaxTree, file);
+                        encodingInfo.WriteDelimitedTo(encodingStream);
 
                         var issuesInFile = new FileIssues
                         {

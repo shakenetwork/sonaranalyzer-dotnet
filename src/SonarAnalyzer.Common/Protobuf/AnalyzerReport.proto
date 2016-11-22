@@ -118,3 +118,8 @@ message FileIssues {
 
   repeated Issue issue = 2;
 }
+
+message EncodingInfo {
+  string file_path = 1;
+  string encoding = 2;
+}
