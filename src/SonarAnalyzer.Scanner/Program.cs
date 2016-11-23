@@ -63,7 +63,7 @@ namespace SonarAnalyzer.Runner
 
                     try
                     {
-                        var solution = CompilationHelper.GetSolutionFromFiles(file, language);
+                        var solution = CompilationHelper.GetSolutionFromFiles(file, configuration.Encoding, language);
 
                         var compilation = solution.Projects.First().GetCompilationAsync().Result;
                         var syntaxTree = compilation.SyntaxTrees.First();
@@ -154,7 +154,7 @@ namespace SonarAnalyzer.Runner
             });
         }
 
-        private static void Write(string text)
+        internal static void Write(string text)
         {
             Console.WriteLine(text);
         }

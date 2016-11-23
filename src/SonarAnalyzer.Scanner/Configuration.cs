@@ -27,6 +27,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
 using SonarAnalyzer.Utilities;
+using System.Text;
 
 namespace SonarAnalyzer.Runner
 {
@@ -37,6 +38,7 @@ namespace SonarAnalyzer.Runner
 
         public string SonarLintAdditionalPath { get; private set; }
         public string ProtoFolderAdditionalPath { get; private set; }
+        public Encoding Encoding { get; private set; }
 
         public bool IgnoreHeaderComments { get; }
         public IImmutableList<string> Files { get; }
@@ -64,6 +66,19 @@ namespace SonarAnalyzer.Runner
             Files = xml.Descendants("File").Select(e => e.Value).ToImmutableList();
 
             AnalyzerIds = xml.Descendants("Rule").Select(e => e.Elements("Key").Single().Value).ToImmutableHashSet();
+
+            if (settings.ContainsKey("sonar.sourceEncoding"))
+            {
+                try
+                {
+                    var encodingName = settings["sonar.sourceEncoding"];
+                    Encoding = Encoding.GetEncoding(encodingName);
+                }
+                catch (ArgumentException)
+                {
+                    Program.Write($"Could not get encoding '{settings["sonar.sourceEncoding"]}'");
+                }
+            }
         }
 
         private static ImmutableDictionary<string, string> ParseSettings(XContainer xml)
