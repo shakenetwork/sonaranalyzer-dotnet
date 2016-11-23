@@ -22,6 +22,7 @@ using System.IO;
 using System.Text;
 using Microsoft.CodeAnalysis;
 using SonarAnalyzer.Common;
+using Microsoft.CodeAnalysis.Text;
 
 namespace SonarAnalyzer.Runner
 {
@@ -29,7 +30,7 @@ namespace SonarAnalyzer.Runner
     {
         private static readonly MetadataReference SystemMetadataReference = MetadataReference.CreateFromFile(typeof(object).Assembly.Location);
 
-        public static Solution GetSolutionFromFiles(string filePath, AnalyzerLanguage language)
+        public static Solution GetSolutionFromFiles(string filePath, Encoding encoding, AnalyzerLanguage language)
         {
             using (var workspace = new AdhocWorkspace())
             {
@@ -38,11 +39,12 @@ namespace SonarAnalyzer.Runner
                 var project = workspace.CurrentSolution.AddProject("foo", "foo.dll", lang)
                     .AddMetadataReference(SystemMetadataReference);
 
-                var document = project.AddDocument(file.Name, Microsoft.CodeAnalysis.Text.SourceText.From(
-                    File.ReadAllText(file.FullName, Encoding.UTF8), Encoding.UTF8));
-                project = document.Project;
-
-                return project.Solution;
+                using (var fileStream = File.Open(file.FullName, FileMode.Open))
+                {
+                    var document = project.AddDocument(file.Name, SourceText.From(fileStream, encoding));
+                    project = document.Project;
+                    return project.Solution;
+                }
             }
         }
 
