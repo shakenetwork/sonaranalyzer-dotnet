@@ -18,27 +18,22 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System.Collections.Generic;
-using System.Collections.Immutable;
-using System.Linq;
-using System;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     using MemberUsage = SyntaxNodeSymbolSemanticModelTuple<SimpleNameSyntax, ISymbol>;
 
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("5min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Confusing)]
+    [Rule(DiagnosticId)]
     public class NotAssignedPrivateMember : SonarDiagnosticAnalyzer
     {
         /*
@@ -47,21 +42,12 @@ namespace SonarAnalyzer.Rules.CSharp
         */
 
         internal const string DiagnosticId = "S3459";
-        internal const string Title = "Unassigned members should be removed";
-        internal const string Description =
-            "Fields and auto-properties that are never assigned to hold the default values for their types. They are either pointless code or, more likely, mistakes.";
         internal const string MessageFormat = "Remove unassigned {0} \"{1}\", or set its value.";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         private static readonly Accessibility maxAccessibility = Accessibility.Private;
 

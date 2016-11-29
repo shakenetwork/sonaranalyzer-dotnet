@@ -18,42 +18,27 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 using SonarAnalyzer.Helpers.CSharp;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("2min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Confusing)]
+    [Rule(DiagnosticId)]
     public class RedundantConditionalAroundAssignment : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3440";
-        internal const string Title = "Variables should not be checked against the values they're about to be assigned";
-        internal const string Description =
-            "There's no point in checking a variable against the value you're about to assign it. Save the cycles and lines of code, " +
-            "and simply perform the assignment.";
         internal const string MessageFormat = "Remove this useless conditional.";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {

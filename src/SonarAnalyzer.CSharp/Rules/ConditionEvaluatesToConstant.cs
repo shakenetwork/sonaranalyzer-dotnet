@@ -23,7 +23,6 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 using System.Linq;
 using System;
@@ -36,31 +35,16 @@ namespace SonarAnalyzer.Rules.CSharp
     using ExplodedGraph = Helpers.FlowAnalysis.CSharp.ExplodedGraph;
 
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("15min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Bug, Tag.Cert, Tag.Cwe, Tag.Misra)]
+    [Rule(DiagnosticId)]
     public class ConditionEvaluatesToConstant : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2583";
-        internal const string Title = "Conditions should not unconditionally evaluate to \"true\" or to \"false\"";
-        internal const string Description =
-            "Conditional statements using a condition which cannot be anything but \"false\" have the effect of making blocks of code " +
-            "non-functional. If the condition cannot evaluate to anything but \"true\", the conditional statement is completely " +
-            "redundant, and makes the code less readable. It is quite likely that the code does not match the programmer's intent. " +
-            "Either the condition should be removed or it should be updated so that it does not always evaluate to \"true\" or \"false\".";
         internal const string MessageFormat = "Change this condition so that it does not always evaluate to \"{0}\".";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Critical;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -96,12 +80,12 @@ namespace SonarAnalyzer.Rules.CSharp
         {
             foreach (var alwaysTrue in conditionTrue.Except(conditionFalse))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, alwaysTrue.GetLocation(), "true"));
+                context.ReportDiagnostic(Diagnostic.Create(rule, alwaysTrue.GetLocation(), "true"));
             }
 
             foreach (var alwaysFalse in conditionFalse.Except(conditionTrue))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, alwaysFalse.GetLocation(), "false"));
+                context.ReportDiagnostic(Diagnostic.Create(rule, alwaysFalse.GetLocation(), "false"));
             }
         }
 

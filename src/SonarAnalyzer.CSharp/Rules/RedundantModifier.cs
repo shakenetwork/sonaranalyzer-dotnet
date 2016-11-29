@@ -18,44 +18,31 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
+using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Collections.Immutable;
-using System.Linq;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [SqaleConstantRemediation("2min")]
-    [Rule(DiagnosticId, RuleSeverity, Title, false)]
-    [Tags(Tag.Unused, Tag.Finding)]
+    [Rule(DiagnosticId)]
     public class RedundantModifier : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2333";
-        internal const string Title = "Redundant modifiers should be removed";
-        internal const string Description =
-            "Unnecessary keywords simply clutter the code and should be removed.";
         internal const string MessageFormat = "\"{0}\" is {1} in this context.";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Minor;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(ideVisibility), true,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description,
-                customTags: ideVisibility.ToCustomTags());
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, ideVisibility, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -229,7 +216,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
         private static void ReportOnUnsafeBlock(SyntaxNodeAnalysisContext context, Location issueLocation)
         {
-            context.ReportDiagnostic(Diagnostic.Create(Rule, issueLocation, "unsafe", "redundant"));
+            context.ReportDiagnostic(Diagnostic.Create(rule, issueLocation, "unsafe", "redundant"));
         }
 
         private static bool TryGetUnsafeKeyword(MemberDeclarationSyntax memberDeclaration, out SyntaxToken unsafeKeyword)
@@ -286,7 +273,7 @@ namespace SonarAnalyzer.Rules.CSharp
             }
 
             var keyword = classDeclaration.Modifiers.First(m => m.IsKind(SyntaxKind.PartialKeyword));
-            context.ReportDiagnostic(Diagnostic.Create(Rule, keyword.GetLocation(), "partial", "gratuitous"));
+            context.ReportDiagnostic(Diagnostic.Create(rule, keyword.GetLocation(), "partial", "gratuitous"));
         }
 
         private static SyntaxTokenList GetModifiers(MemberDeclarationSyntax memberDeclaration)
@@ -320,7 +307,7 @@ namespace SonarAnalyzer.Rules.CSharp
             if (modifiers.Any(m => m.IsKind(SyntaxKind.SealedKeyword)))
             {
                 var keyword = modifiers.First(m => m.IsKind(SyntaxKind.SealedKeyword));
-                context.ReportDiagnostic(Diagnostic.Create(Rule, keyword.GetLocation(), "sealed", "redundant"));
+                context.ReportDiagnostic(Diagnostic.Create(rule, keyword.GetLocation(), "sealed", "redundant"));
             }
         }
 
@@ -418,7 +405,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 if (isSimplyRendundant || !currentContextHasIntegralOperation)
                 {
                     var keywordToReport = isThisNodeChecked ? "checked" : "unchecked";
-                    context.ReportDiagnostic(Diagnostic.Create(Rule, tokenToReport.GetLocation(), keywordToReport, "redundant"));
+                    context.ReportDiagnostic(Diagnostic.Create(rule, tokenToReport.GetLocation(), keywordToReport, "redundant"));
                 }
 
                 isCurrentContextChecked = originalIsCurrentContextChecked;

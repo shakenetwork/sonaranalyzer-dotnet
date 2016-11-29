@@ -18,44 +18,27 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
+using System;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("10min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Bug)]
+    [Rule(DiagnosticId)]
     public class ShiftDynamicNotInteger : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3449";
-        internal const string Title = "Right operands of shift operators should be integers";
-        internal const string Description =
-            "Numbers can be shifted with the \"<<\" and \">>\" operators, but the right operand of the operation needs to be an \"int\" or a type " +
-            "that has an implicit conversion to \"int\". However, with \"dynamic\", the compiler's type checking is turned off, so you can pass " +
-            "anything to a shift operator and have it compile. And if the argument can't be converted to \"int\" at runtime, then a " +
-            "\"RuntimeBinderException\" will be raised.";
         internal const string MessageFormat = "Remove this erroneous shift, it will fail because \"{0}\" can't be implicitly converted to \"int\".";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Blocker;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -84,7 +67,7 @@ namespace SonarAnalyzer.Rules.CSharp
             {
                 var typeInMessage = GetTypeNameForMessage(right, typeOfRight, context.SemanticModel);
 
-                context.ReportDiagnostic(Diagnostic.Create(Rule, right.GetLocation(),
+                context.ReportDiagnostic(Diagnostic.Create(rule, right.GetLocation(),
                     typeInMessage));
             }
         }

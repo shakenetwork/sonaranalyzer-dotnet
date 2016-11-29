@@ -26,36 +26,22 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 using SonarAnalyzer.Helpers.CSharp;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [SqaleConstantRemediation("5min")]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Clumsy, Tag.Suspicious)]
+    [Rule(DiagnosticId)]
     public class ConditionalsWithSameCondition : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2760";
-        internal const string Title = "Sequential tests should not check the same condition";
-        internal const string Description =
-            "When the same condition is checked twice in a row, it is either confusing - why have separate checks? - or an error - some other " +
-            "condition should have been checked in the second test.";
         internal const string MessageFormat = "This condition was just checked on line {0}.";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = false;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -89,7 +75,7 @@ namespace SonarAnalyzer.Rules.CSharp
             if (EquivalenceChecker.AreEquivalent(currentExpression, previousExpression) &&
                 !ContainsPossibleUpdate(previousStatement, currentExpression, context.SemanticModel))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, currentExpression.GetLocation(),
+                context.ReportDiagnostic(Diagnostic.Create(rule, currentExpression.GetLocation(),
                     previousExpression.GetLineNumberToReport()));
             }
         }

@@ -18,34 +18,18 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
-using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
-using System.Collections.Generic;
 
 namespace SonarAnalyzer.Rules.Common
 {
     public abstract class UseShortCircuitingOperatorBase : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2178";
-        internal const string Title = "Short-circuit logic should be used in boolean contexts";
-        internal const string Description =
-            "The use of non-short-circuit logic in a boolean context is likely a mistake - one that could cause " +
-            "serious program errors as conditions are evaluated under the wrong circumstances.";
         internal const string MessageFormat = "Correct this \"{0}\" to \"{1}\".";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
-
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
-
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
 

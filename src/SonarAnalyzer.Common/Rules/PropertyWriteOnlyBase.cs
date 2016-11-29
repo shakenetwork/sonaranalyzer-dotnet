@@ -21,7 +21,6 @@
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
-using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.Common
@@ -29,22 +28,7 @@ namespace SonarAnalyzer.Rules.Common
     public abstract class PropertyWriteOnlyBase : SonarDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S2376";
-        protected const string Title = "Write-only properties should not be used";
-        protected const string Description =
-            "Properties with only setters are confusing and counterintuitive. Instead, a property getter should be added if possible, " +
-            "or the property should be replaced with a setter method.";
         protected const string MessageFormat = "Provide a getter for \"{0}\" or replace the property with a \"Set{0}\" method.";
-        protected const string Category = SonarAnalyzer.Common.Category.Design;
-        protected const Severity RuleSeverity = Severity.Major;
-        protected const bool IsActivatedByDefault = true;
-
-        protected static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
-
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
     }

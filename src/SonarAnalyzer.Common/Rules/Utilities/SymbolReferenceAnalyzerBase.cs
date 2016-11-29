@@ -18,13 +18,13 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
-using Microsoft.CodeAnalysis;
-using SonarAnalyzer.Protobuf;
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Text;
+using SonarAnalyzer.Protobuf;
 
 namespace SonarAnalyzer.Rules
 {
@@ -33,11 +33,11 @@ namespace SonarAnalyzer.Rules
         protected const string DiagnosticId = "S9999-symbolRef";
         protected const string Title = "Symbol reference calculator";
 
-        protected static readonly DiagnosticDescriptor Rule =
+        private static readonly DiagnosticDescriptor rule =
             new DiagnosticDescriptor(DiagnosticId, Title, string.Empty, string.Empty, DiagnosticSeverity.Warning,
                 true, customTags: WellKnownDiagnosticTags.NotConfigurable);
 
-        public sealed override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         internal const string SymbolReferenceFileName = "symbol-reference.pb";
 

@@ -26,37 +26,21 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("10min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.ArchitectureReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Bug, Tag.Cwe, Tag.DenialOfService, Tag.Security)]
+    [Rule(DiagnosticId)]
     public class DisposableMemberInNonDisposableClass : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2931";
-        internal const string Title = "Classes with \"IDisposable\" members should implement \"IDisposable\"";
-        internal const string Description =
-            "Classes with \"IDisposable\" members are responsible for cleaning up those members " +
-            "by calling their \"Dispose\" methods.The best practice here is for the owning class " +
-            "to itself implement \"IDisposable\" and call its members' \"Dispose\" methods from " +
-            "its own \"Dispose\" method.";
         internal const string MessageFormat = "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on {0}.";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Critical;
-        internal const bool IsActivatedByDefault = false;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         private static readonly Accessibility[] Accessibilities = { Accessibility.Protected, Accessibility.Private };
 

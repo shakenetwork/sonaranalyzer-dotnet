@@ -18,11 +18,10 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using SonarAnalyzer.Common;
 using SonarAnalyzer.Protobuf;
-using System.Linq;
 
 namespace SonarAnalyzer.Rules
 {
@@ -31,11 +30,11 @@ namespace SonarAnalyzer.Rules
         protected const string DiagnosticId = "S9999-metrics";
         protected const string Title = "Metrics calculator";
 
-        protected static readonly DiagnosticDescriptor Rule =
+        private static readonly DiagnosticDescriptor rule =
             new DiagnosticDescriptor(DiagnosticId, Title, string.Empty, string.Empty, DiagnosticSeverity.Warning,
                 true, customTags: WellKnownDiagnosticTags.NotConfigurable);
 
-        public sealed override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
+        protected override DiagnosticDescriptor Rule => rule;
 
         internal const string MetricsFileName = "metrics.pb";
 

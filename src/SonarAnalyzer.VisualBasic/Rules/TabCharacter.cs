@@ -21,18 +21,22 @@
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.VisualBasic
 {
     [DiagnosticAnalyzer(LanguageNames.VisualBasic)]
-    [SqaleConstantRemediation("2min")]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
-    [Tags(Tag.Convention)]
+    [Rule(DiagnosticId)]
     public class TabCharacter : TabCharacterBase
     {
+        protected const string DiagnosticId = "S105";
+        protected const string MessageFormat = "Replace all tab characters in this file by sequences of white-spaces.";
+
+        internal static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
+
+        protected override DiagnosticDescriptor Rule => rule;
+
         protected sealed override GeneratedCodeRecognizer GeneratedCodeRecognizer => Helpers.VisualBasic.GeneratedCodeRecognizer.Instance;
     }
 }

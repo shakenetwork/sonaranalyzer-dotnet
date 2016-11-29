@@ -18,34 +18,18 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
+using System.Collections.Generic;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
-using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
-using System.Collections.Generic;
 
 namespace SonarAnalyzer.Rules.Common
 {
     public abstract class MultipleVariableDeclarationBase : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1659";
-        protected const string Title = "Multiple variables should not be declared on the same line";
-        protected const string Description =
-            "Declaring multiple variable on one line is difficult to read.";
         protected const string MessageFormat = "Declare \"{0}\" in a separate statement.";
-        protected const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        protected const Severity RuleSeverity = Severity.Minor;
-        protected const bool IsActivatedByDefault = false;
-
-        protected static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
-
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
     }
@@ -63,7 +47,7 @@ namespace SonarAnalyzer.Rules.Common
                 c =>
                 {
                     var local = (TLocalDeclarationSyntax)c.Node;
-                    CheckAndReportVariables(GetIdentifiers(local).ToList(), c);
+                    CheckAndReportVariables(GetIdentifiers(local).ToList(), c, Rule);
                 },
                 LocalDeclarationKind);
 
@@ -72,12 +56,12 @@ namespace SonarAnalyzer.Rules.Common
                 c =>
                 {
                     var field = (TFieldDeclarationSyntax)c.Node;
-                    CheckAndReportVariables(GetIdentifiers(field).ToList(), c);
+                    CheckAndReportVariables(GetIdentifiers(field).ToList(), c, Rule);
                 },
                 FieldDeclarationKind);
         }
 
-        private static void CheckAndReportVariables(IList<SyntaxToken> variables, SyntaxNodeAnalysisContext context)
+        private static void CheckAndReportVariables(IList<SyntaxToken> variables, SyntaxNodeAnalysisContext context, DiagnosticDescriptor rule)
         {
             if (variables.Count <= 1)
             {
@@ -85,7 +69,7 @@ namespace SonarAnalyzer.Rules.Common
             }
             foreach (var variable in variables.Skip(1))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, variable.GetLocation(), variable.ValueText));
+                context.ReportDiagnostic(Diagnostic.Create(rule, variable.GetLocation(), variable.ValueText));
             }
         }
 

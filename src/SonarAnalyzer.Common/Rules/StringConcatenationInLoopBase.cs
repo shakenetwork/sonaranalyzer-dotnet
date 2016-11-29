@@ -19,33 +19,17 @@
  */
 
 using System.Collections.Immutable;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
-using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
-using System.Linq;
-using System;
 
 namespace SonarAnalyzer.Rules.Common
 {
     public abstract class StringConcatenationInLoopBase : SonarDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S1643";
-        protected const string Title = "Strings should not be concatenated using \"+\" in a loop";
-        protected const string Description =
-            "\"StringBuilder\" is more efficient than string concatenation, especially when the operator is repeated over and over as in loops.";
         protected const string MessageFormat = "Use a StringBuilder instead.";
-        protected const string Category = SonarAnalyzer.Common.Category.Performance;
-        protected const Severity RuleSeverity = Severity.Major;
-        protected const bool IsActivatedByDefault = true;
-
-        protected static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
-
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
     }

@@ -18,44 +18,28 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System.Linq;
-using System.Collections.Generic;
-using System.IO;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("10min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Pitfall, Tag.Unused)]
+    [Rule(DiagnosticId)]
     public class MethodOverloadOptionalParameter : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3427";
-        internal const string Title = "Method overloads with default parameter values should not overlap";
-        internal const string Description =
-            "The rules for method resolution are complex and perhaps not properly understood by all coders. Having " +
-            "overloads with optional parameter values make the matter even harder to understand. An overload with default " +
-            "parameter values can be hidden by one without the optional parameters.";
         internal const string MessageFormat =
             "This method signature overlaps the one defined on line {0}{1}, the default parameter value {2}.";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         private class ParameterHidingMethodInfo
         {

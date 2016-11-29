@@ -23,7 +23,6 @@ using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Rules.Common;
 using Microsoft.CodeAnalysis.VisualBasic;
 using Microsoft.CodeAnalysis.VisualBasic.Syntax;
@@ -32,12 +31,14 @@ using SonarAnalyzer.Helpers;
 namespace SonarAnalyzer.Rules.VisualBasic
 {
     [DiagnosticAnalyzer(LanguageNames.VisualBasic)]
-    [SqaleConstantRemediation("5min")]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.ArchitectureChangeability)]
-    [Tags(Tag.Cert, Tag.Cwe, Tag.Misra)]
+    [Rule(DiagnosticId)]
     public class SwitchWithoutDefault : SwitchWithoutDefaultBase<SyntaxKind>
     {
+        protected static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
+
+        protected override DiagnosticDescriptor Rule => rule;
+
         private static readonly ImmutableArray<SyntaxKind> kindsOfInterest = ImmutableArray.Create(SyntaxKind.SelectBlock);
         public override ImmutableArray<SyntaxKind> SyntaxKindsOfInterest => kindsOfInterest;
 

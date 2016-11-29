@@ -21,7 +21,6 @@
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
-using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.Common
@@ -29,21 +28,7 @@ namespace SonarAnalyzer.Rules.Common
     public abstract class PropertyGetterWithThrowBase : SonarDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S2372";
-        protected const string Title = "Exceptions should not be thrown from property getters";
-        protected const string Description =
-            "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.";
         protected const string MessageFormat = "Remove the exception throwing from this property getter, or refactor the property into a method.";
-        protected const string Category = SonarAnalyzer.Common.Category.Reliability;
-        protected const Severity RuleSeverity = Severity.Major;
-        protected const bool IsActivatedByDefault = true;
-
-        protected static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
-
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
     }

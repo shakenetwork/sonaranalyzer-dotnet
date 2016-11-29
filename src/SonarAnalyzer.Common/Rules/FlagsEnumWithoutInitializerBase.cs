@@ -21,7 +21,6 @@
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
-using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
 using System.Collections.Generic;
 
@@ -32,24 +31,7 @@ namespace SonarAnalyzer.Rules.Common
         protected const int AllowedEmptyMemberCount = 3;
 
         protected const string DiagnosticId = "S2345";
-        protected const string Title = "Flags enumerations should explicitly initialize all their members";
-        protected const string Description =
-            "Flags enumerations should not rely on the language to initialize the values of their members. Implicit initialization will set " +
-            "the first member to 0, and increment the value by one for each subsequent member. This implicit behavior does not allow members " +
-            "to be combined using the bitwise or operator. Instead, 0 and powers of two values, i.e. 1, 2, 4, 8, 16, etc. should be used to explicitly " +
-            "initialize all the members.";
         protected const string MessageFormat = "Initialize all the members of this \"Flags\" enumeration.";
-        protected const string Category = SonarAnalyzer.Common.Category.Reliability;
-        protected const Severity RuleSeverity = Severity.Critical;
-        protected const bool IsActivatedByDefault = true;
-
-        protected static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
-
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         internal static bool HasFlagsAttribute(SyntaxNode node, SemanticModel semanticModel)
         {

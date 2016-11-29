@@ -21,7 +21,6 @@
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Rules.Common;
 using System.Collections.Generic;
 using Microsoft.CodeAnalysis.CSharp;
@@ -31,12 +30,14 @@ using SonarAnalyzer.Helpers;
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("2min")]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
-    [Tags(Tag.Convention)]
+    [Rule(DiagnosticId)]
     public class PublicConstantField : PublicConstantFieldBase<SyntaxKind, FieldDeclarationSyntax, VariableDeclaratorSyntax>
     {
+        protected static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
+
+        protected override DiagnosticDescriptor Rule => rule;
+
         public override SyntaxKind FieldDeclarationKind => SyntaxKind.FieldDeclaration;
         public override string MessageArgument => "\"static\" read-only";
 

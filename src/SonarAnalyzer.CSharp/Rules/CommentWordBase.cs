@@ -18,22 +18,18 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
+using System.Collections.Generic;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
-using SonarAnalyzer.Helpers;
 using Microsoft.CodeAnalysis.Text;
-using System.Collections.Generic;
+using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     public abstract class CommentWordBase : SonarDiagnosticAnalyzer
     {
         protected abstract string Word { get; }
-        protected abstract DiagnosticDescriptor Rule { get; }
-
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         protected override void Initialize(SonarAnalysisContext context)
         {

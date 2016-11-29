@@ -18,45 +18,27 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("15min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.SynchronizationReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.MultiThreading, Tag.Suspicious)]
+    [Rule(DiagnosticId)]
     public class TaskConfigureAwait : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3216";
-        internal const string Title = "\"ConfigureAwait(false)\" should be used";
-        internal const string Description =
-            "After an \"await\"ed \"Task\" has executed, you can continue execution in the original, calling thread or " +
-            "any arbitrary thread. Unless the rest of the code needs the context from which the \"Task\" was spawned, " +
-            "\"Task.ConfigureAwait(false)\" should be used to keep execution in the \"Task\" thread to avoid the need " +
-            "of context switching and the possibility of deadlocks. This rule raises an issue when code in a class " +
-            "library \"await\"s a \"Task\" and continues execution in the main thread.";
         internal const string MessageFormat =
             "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = false;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {

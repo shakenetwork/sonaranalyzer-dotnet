@@ -18,45 +18,28 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System.Linq;
-using System.Collections.Generic;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("20min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Pitfall)]
+    [Rule(DiagnosticId)]
     public class InvocationResolvesToOverrideWithParams : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3220";
-        internal const string Title = "Method calls should not resolve ambiguously to overloads with \"params\"";
-        internal const string Description =
-            "The rules for method resolution are complex and perhaps not properly understood by all coders. The \"params\" keyword can make " +
-            "method declarations overlap in non-obvious ways, so that slight changes in the argument types of an invocation can resolve to " +
-            "different methods. This rule raises an issue when an invocation resolves to a method declaration with \"params\", but could also " +
-            "resolve to another non-\"params\" method too.";
         internal const string MessageFormat = "Review this call, which partially matches an overload without \"params\". The partial match is \"{0}\".";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -118,7 +101,7 @@ namespace SonarAnalyzer.Rules.CSharp
             if (otherMethod != null)
             {
                 context.ReportDiagnostic(Diagnostic.Create(
-                    Rule,
+                    rule,
                     node.GetLocation(),
                     otherMethod.ToMinimalDisplayString(context.SemanticModel, node.SpanStart)));
             }

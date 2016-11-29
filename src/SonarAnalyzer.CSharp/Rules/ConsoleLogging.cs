@@ -25,38 +25,23 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("5min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.SecurityFeatures)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Security, Tag.OwaspA6)]
+    [Rule(DiagnosticId)]
     public class ConsoleLogging : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2228";
-        internal const string Title = "Console logging should not be used";
-        internal const string Description =
-            "Debug statements are always useful during development. But include them in production " +
-            "code - particularly in code that runs client-side - and you run the risk of " +
-            "inadvertently exposing sensitive information.";
         internal const string MessageFormat = "Remove this logging statement.";
-        internal const string Category = SonarAnalyzer.Common.Category.Portability;
-        internal const Severity RuleSeverity = Severity.Critical;
-        internal const bool IsActivatedByDefault = false;
-
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
 
         private static readonly string[] BannedConsoleMembers = { "WriteLine", "Write" };
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
+
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {

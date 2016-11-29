@@ -21,7 +21,6 @@
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
-using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.Common
@@ -29,24 +28,7 @@ namespace SonarAnalyzer.Rules.Common
     public abstract class SwitchWithoutDefaultBase : SonarDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S131";
-        protected const string Title = "\"switch/Select\" statements should end with a \"default/Case Else\" clause";
-        protected const string Description =
-            "The requirement for a final \"default/Case Else\" clause is defensive programming. The clause should either " +
-            "take appropriate action, or contain a suitable comment as to why no action is taken. Even when the " +
-            "\"switch/Select\" covers all current values of an enumeration, a \"default/Case Else\" case should still be used because " +
-            "there is no guarantee that the enumeration won't be extended.";
         protected const string MessageFormat = "Add a \"{0}\" clause to this \"{1}\" statement.";
-        protected const string Category = SonarAnalyzer.Common.Category.Reliability;
-        protected const Severity RuleSeverity = Severity.Major;
-        protected const bool IsActivatedByDefault = false;
-
-        protected static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
-
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
     }

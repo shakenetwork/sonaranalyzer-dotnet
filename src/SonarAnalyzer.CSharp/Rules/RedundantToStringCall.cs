@@ -18,48 +18,32 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
+using System;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
-using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
-using SonarAnalyzer.Helpers;
-using System.Linq;
 using Microsoft.CodeAnalysis.Text;
-using System;
+using SonarAnalyzer.Common;
+using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("2min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, false)]
-    [Tags(Tag.Clumsy, Tag.Finding)]
+    [Rule(DiagnosticId)]
     public class RedundantToStringCall : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1858";
-        internal const string Title = "\"ToString()\" calls should not be redundant";
-        internal const string Description =
-            "Invoking a method designed to return a string representation of an object which is already a string is a waste of " +
-            "keystrokes. Similarly, explicitly invoking \"ToString()\" when the compiler would do it implicitly is also needless " +
-            "code-bloat.";
         internal const string MessageFormat = "There's no need to call \"ToString()\"{0}.";
         internal const string MessageCallOnString = " on a string";
         internal const string MessageCompiler = ", the compiler will do it for you";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Minor;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(ideVisibility), true,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description,
-                customTags: ideVisibility.ToCustomTags());
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, ideVisibility, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         private const string additionOperatorName = "op_Addition";
 
@@ -121,7 +105,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
                     if (methodSymbol.IsInType(KnownType.System_String))
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, location, MessageCallOnString));
+                        c.ReportDiagnostic(Diagnostic.Create(rule, location, MessageCallOnString));
                         return;
                     }
 
@@ -145,7 +129,7 @@ namespace SonarAnalyzer.Rules.CSharp
                     if (parameterLookup.TryGetParameterSymbol(stringFormatArgument, out argParameter) &&
                         argParameter.Name.StartsWith("arg", StringComparison.Ordinal))
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, location, MessageCompiler));
+                        c.ReportDiagnostic(Diagnostic.Create(rule, location, MessageCompiler));
                     }
                 },
                 SyntaxKind.InvocationExpression);
@@ -194,7 +178,7 @@ namespace SonarAnalyzer.Rules.CSharp
             var stringParameterIndex = (checkedSideIndex + 1) % 2;
             if (!DoesCollidingAdditionExist(subExpressionType, stringParameterIndex))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, location, MessageCompiler));
+                context.ReportDiagnostic(Diagnostic.Create(rule, location, MessageCompiler));
             }
         }
 

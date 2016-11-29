@@ -18,51 +18,37 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
+using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.Globalization;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
-using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
-using SonarAnalyzer.Helpers;
 using Microsoft.CodeAnalysis.Text;
-using System.Linq;
-using System.Collections.Generic;
-using System;
-using System.Globalization;
+using SonarAnalyzer.Common;
+using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("1min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Clumsy)]
+    [Rule(DiagnosticId)]
     public class RedundantInheritanceList : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1939";
-        internal const string Title = "Inheritance list should not be redundant";
-        internal const string Description =
-            "Redundant declarations should be removed because they needlessly clutter the code and can be confusing.";
+        internal const string MessageFormat = "{0}";
         internal const string MessageEnum = "\"int\" should not be explicitly used as the underlying type.";
         internal const string MessageObjectBase = "\"Object\" should not be explicitly extended.";
         internal const string MessageAlreadyImplements = "\"{0}\" implements \"{1}\" so \"{1}\" can be removed from the inheritance list.";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = true;
+        internal const string RedundantIndexKey = "redundantIndex";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, "{0}", Category,
-                RuleSeverity.ToDiagnosticSeverity(ideVisibility), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description,
-                customTags: ideVisibility.ToCustomTags());
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, ideVisibility, RspecStrings.ResourceManager);
 
-        internal const string RedundantIndexKey = "redundantIndex";
-
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -98,7 +84,7 @@ namespace SonarAnalyzer.Rules.CSharp
             if (baseTypeSymbol.Is(KnownType.System_Object))
             {
                 var location = GetLocationWithToken(baseTypeSyntax, classDeclaration.BaseList.Types);
-                context.ReportDiagnostic(Diagnostic.Create(Rule, location,
+                context.ReportDiagnostic(Diagnostic.Create(rule, location,
                     ImmutableDictionary<string, string>.Empty.Add(RedundantIndexKey, "0"),
                     MessageObjectBase));
             }
@@ -134,7 +120,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 return;
             }
 
-            context.ReportDiagnostic(Diagnostic.Create(Rule, enumDeclaration.BaseList.GetLocation(),
+            context.ReportDiagnostic(Diagnostic.Create(rule, enumDeclaration.BaseList.GetLocation(),
                 ImmutableDictionary<string, string>.Empty.Add(RedundantIndexKey, "0"),
                 MessageEnum));
         }
@@ -171,7 +157,7 @@ namespace SonarAnalyzer.Rules.CSharp
                     collidingDeclaration.ToMinimalDisplayString(context.SemanticModel, baseType.Type.SpanStart),
                     interfaceType.ToMinimalDisplayString(context.SemanticModel, baseType.Type.SpanStart));
 
-                context.ReportDiagnostic(Diagnostic.Create(Rule, location,
+                context.ReportDiagnostic(Diagnostic.Create(rule, location,
                     ImmutableDictionary<string, string>.Empty.Add(RedundantIndexKey, i.ToString(CultureInfo.InvariantCulture)),
                     message));
             }

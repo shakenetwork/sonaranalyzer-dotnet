@@ -21,7 +21,6 @@
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Rules.Common;
 using System.Linq;
 using System;
@@ -31,12 +30,14 @@ using SonarAnalyzer.Helpers;
 namespace SonarAnalyzer.Rules.VisualBasic
 {
     [DiagnosticAnalyzer(LanguageNames.VisualBasic)]
-    [SqaleConstantRemediation("1min")]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
-    [Tags(Tag.Convention)]
+    [Rule(DiagnosticId)]
     public class SingleStatementPerLine : SingleStatementPerLineBase<StatementSyntax>
     {
+        protected static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
+
+        protected override DiagnosticDescriptor Rule => rule;
+
         protected override bool StatementShouldBeExcluded(StatementSyntax statement)
         {
             return //statement == null ||

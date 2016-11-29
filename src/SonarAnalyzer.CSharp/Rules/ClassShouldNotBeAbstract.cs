@@ -25,39 +25,23 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("5min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Convention)]
+    [Rule(DiagnosticId)]
     public class ClassShouldNotBeAbstract : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1694";
-        internal const string Title = "An abstract class should have both abstract and concrete methods";
-        internal const string Description =
-            "The purpose of an abstract class is to provide some heritable behaviors while also defining methods which must be " +
-            "implemented by sub-classes. A class with no abstract methods that was made abstract purely to prevent instantiation " +
-            "should be converted to a concrete class (i.e. remove the \"abstract\" keyword) with a private constructor. A class " +
-            "with only abstract methods and no inheritable behavior should be converted to an interface.";
         internal const string MessageFormat = "Convert this \"abstract\" class to {0}.";
         internal const string MessageToInterface = "an interface";
         internal const string MessageToConcreteClass = "a concrete class with a private constructor";
-        internal const string Category = SonarAnalyzer.Common.Category.Design;
-        internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = false;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -116,7 +100,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 if (classDeclaration != null)
                 {
                     context.ReportDiagnosticIfNonGenerated(
-                        Diagnostic.Create(Rule, classDeclaration.Identifier.GetLocation(), message),
+                        Diagnostic.Create(rule, classDeclaration.Identifier.GetLocation(), message),
                         context.Compilation);
                 }
             }

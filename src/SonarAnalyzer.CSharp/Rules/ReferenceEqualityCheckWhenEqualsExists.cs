@@ -18,46 +18,29 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System.Linq;
-using System.Collections.Generic;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("2min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Cert, Tag.Cwe)]
+    [Rule(DiagnosticId)]
     public class ReferenceEqualityCheckWhenEqualsExists : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1698";
-        internal const string Title = "\"==\" should not be used when \"Equals\" is overridden";
-        internal const string Description =
-            "Using the equality \"==\" and inequality \"!=\" operators to compare two objects generally works. The operators can be " +
-            "overloaded, and therefore the comparison can resolve to the appropriate method. However, when the operators are used on " +
-            "interface instances, then \"==\" resolves to reference equality, which may result in unexpected behavior  if implementing " +
-            "classes override \"Equals\". Similarly, when a class overrides \"Equals\", but instances are compared with non-overloaded " +
-            "\"==\", there is a high chance that value comparison was meant instead of the reference one.";
         internal const string MessageFormat = "Consider using \"Equals\" if value comparison was intended.";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         private const string EqualsName = "Equals";
         private static readonly ISet<KnownType> AllowedTypes = ImmutableHashSet.Create(

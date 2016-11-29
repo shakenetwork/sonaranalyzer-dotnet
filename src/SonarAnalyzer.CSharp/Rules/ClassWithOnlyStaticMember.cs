@@ -18,50 +18,31 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System.Collections.Generic;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [SqaleConstantRemediation("10min")]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Design)]
+    [Rule(DiagnosticId)]
     public class ClassWithOnlyStaticMember : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1118";
-        internal const string Title = "Utility classes should not have public constructors";
-        internal const string Description =
-            "Utility classes, which are collections of \"static\" members, are not meant to be instantiated. Even \"abstract\" " +
-            "utility classes, which can be extended, should not have \"public\" constructors. C# adds an implicit public " +
-            "constructor to every class which does not explicitly define at least one constructor. Hence, at least one " +
-            "\"protected\" constructor should be defined if you wish to subclass this utility class. Or the \"static\" keyword " +
-            "should be added to the class declaration to prevent subclassing.";
+        internal const string MessageFormat = "{0}";
         internal const string MessageFormatConstructor = "Hide this public constructor by making it \"{0}\".";
         internal const string MessageFormatStaticClass =
             "Add a \"{0}\" constructor or the \"static\" keyword to the class declaration.";
-        internal const string Category = SonarAnalyzer.Common.Category.Design;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, "{0}", Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics
-        {
-            get { return ImmutableArray.Create(Rule); }
-        }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -96,7 +77,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 if (classDeclarationSyntax != null)
                 {
                     context.ReportDiagnosticIfNonGenerated(
-                        Diagnostic.Create(Rule, classDeclarationSyntax.Identifier.GetLocation(), reportMessage),
+                        Diagnostic.Create(rule, classDeclarationSyntax.Identifier.GetLocation(), reportMessage),
                         context.Compilation);
                 }
             }
@@ -130,7 +111,7 @@ namespace SonarAnalyzer.Rules.CSharp
                     if (constructorDeclaration != null)
                     {
                         context.ReportDiagnosticIfNonGenerated(
-                            Diagnostic.Create(Rule, constructorDeclaration.Identifier.GetLocation(), reportMessage),
+                            Diagnostic.Create(rule, constructorDeclaration.Identifier.GetLocation(), reportMessage),
                             context.Compilation);
                     }
                 }

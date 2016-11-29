@@ -21,21 +21,14 @@
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules
 {
-    [SqaleConstantRemediation("30min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.UnitTestability)]
-    [Tags(Tag.BrainOverload)]
     public abstract class ExpressionComplexityBase : ParameterLoadingDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1067";
-        internal const string Title = "Expressions should not be too complex";
         internal const string MessageFormat = "Reduce the number of conditional operators ({1}) used in the expression (maximum allowed {0}).";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Major;
 
         private const int DefaultValueMaximum = 3;
 

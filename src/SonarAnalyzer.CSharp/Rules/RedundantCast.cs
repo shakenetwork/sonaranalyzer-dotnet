@@ -18,46 +18,31 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
-using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
-using SonarAnalyzer.Helpers;
 using Microsoft.CodeAnalysis.Text;
-using System;
-using System.Collections.Generic;
+using SonarAnalyzer.Common;
+using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("5min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Clumsy)]
+    [Rule(DiagnosticId)]
     public class RedundantCast : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1905";
-        internal const string Title = "Redundant casts should not be used";
-        internal const string Description =
-            "Unnecessary casting expressions make the code harder to read and understand.";
         internal const string MessageFormat = "Remove this unnecessary cast to \"{0}\".";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(ideVisibility), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description,
-                customTags: ideVisibility.ToCustomTags());
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, ideVisibility, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         private static readonly ISet<string> CastIEnumerableMethods = ImmutableHashSet.Create(
             "Cast",
@@ -105,7 +90,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
             if (expressionType.Equals(castType))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, location,
+                context.ReportDiagnostic(Diagnostic.Create(rule, location,
                     castType.ToMinimalDisplayString(context.SemanticModel, expression.SpanStart)));
             }
         }
@@ -139,7 +124,7 @@ namespace SonarAnalyzer.Rules.CSharp
             if (elementType.Equals(castType))
             {
                 var methodCalledAsStatic = methodSymbol.MethodKind == MethodKind.Ordinary;
-                context.ReportDiagnostic(Diagnostic.Create(Rule, GetReportLocation(invocation, methodCalledAsStatic),
+                context.ReportDiagnostic(Diagnostic.Create(rule, GetReportLocation(invocation, methodCalledAsStatic),
                     returnType.ToMinimalDisplayString(context.SemanticModel, invocation.SpanStart)));
             }
         }

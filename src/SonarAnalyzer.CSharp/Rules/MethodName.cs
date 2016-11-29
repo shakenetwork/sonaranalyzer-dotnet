@@ -18,47 +18,34 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
+using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System.Linq;
-using System.Collections.Generic;
-using System;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     using CamelCaseConverter = ClassName.CamelCaseConverter;
 
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
-    [SqaleConstantRemediation("5min")]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Convention)]
+    [Rule(DiagnosticId)]
     public class MethodName : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S100";
-        internal const string Title = "Methods and properties should be named in camel case";
-        internal const string Description =
-            "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.";
         internal const string MessageFormat = "Rename {0} \"{1}\" to match camel case naming rules, {2}.";
         internal const string MessageFormatNonUnderscore = "consider using \"{0}\"";
         internal const string MessageFormatUnderscore = "trim underscores from the name";
-        internal const string Category = SonarAnalyzer.Common.Category.Naming;
-        internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -97,7 +84,7 @@ namespace SonarAnalyzer.Rules.CSharp
             if (identifier.ValueText.StartsWith("_", StringComparison.Ordinal) ||
                 identifier.ValueText.EndsWith("_", StringComparison.Ordinal))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(), MethodKindNameMapping[member.Kind()],
+                context.ReportDiagnostic(Diagnostic.Create(rule, identifier.GetLocation(), MethodKindNameMapping[member.Kind()],
                     identifier.ValueText, MessageFormatUnderscore));
                 return;
             }
@@ -106,7 +93,7 @@ namespace SonarAnalyzer.Rules.CSharp
             if (TryGetChangedName(identifier.ValueText, out suggestion))
             {
                 var messageEnding = string.Format(MessageFormatNonUnderscore, suggestion);
-                context.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(), MethodKindNameMapping[member.Kind()],
+                context.ReportDiagnostic(Diagnostic.Create(rule, identifier.GetLocation(), MethodKindNameMapping[member.Kind()],
                     identifier.ValueText, messageEnding));
             }
         }

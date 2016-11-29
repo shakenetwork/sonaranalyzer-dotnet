@@ -18,45 +18,29 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("5min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Confusing)]
+    [Rule(DiagnosticId)]
     public class FieldShadowsParentField : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2387";
-        internal const string Title = "Child class members should not shadow parent class members";
-        internal const string Description =
-            "Having a variable with the same name in two unrelated classes is fine, but do the same thing within a class " +
-            "hierarchy and you'll get confusion at best, chaos at worst. Perhaps even worse is the case where a child class " +
-            "field varies from the name of a parent class only by case.";
         internal const string MessageFormat = "{0}";
         internal const string MessageMatch = "\"{0}\" is the name of a field in \"{1}\".";
         internal const string MessageSimilar = "\"{0}\" differs only by case from \"{2}\" in \"{1}\".";
-        internal const string Category = SonarAnalyzer.Common.Category.Design;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = false;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -95,14 +79,14 @@ namespace SonarAnalyzer.Rules.CSharp
 
                 if (similarFields.Any(field => field.Name == fieldName))
                 {
-                    context.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclarator.Identifier.GetLocation(),
+                    context.ReportDiagnostic(Diagnostic.Create(rule, variableDeclarator.Identifier.GetLocation(),
                         string.Format(MessageMatch, fieldName, baseType.Name)));
                     return;
                 }
 
                 if (similarFields.Any())
                 {
-                    context.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclarator.Identifier.GetLocation(),
+                    context.ReportDiagnostic(Diagnostic.Create(rule, variableDeclarator.Identifier.GetLocation(),
                         string.Format(MessageSimilar, fieldName, baseType.Name, similarFields.First().Name)));
                     return;
                 }

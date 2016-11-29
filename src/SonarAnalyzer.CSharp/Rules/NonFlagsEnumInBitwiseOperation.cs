@@ -18,46 +18,30 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
+using System;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System.Linq;
-using System;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("2min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Convention)]
+    [Rule(DiagnosticId)]
     public class NonFlagsEnumInBitwiseOperation : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3265";
-        internal const string Title = "Non-flags enums should not be used in bitwise operations";
-        internal const string Description =
-            "\"enum\"s are usually used to identify distinct elements in a set of values. However \"enum\"s can be treated as bit fields and bitwise " +
-            "operations can be used on them to combine the values. This is a good way of specifying multiple elements of set with a single value. When " +
-            "\"enum\"s are used this way, it is a best practice to mark the \"enum\" with the \"FlagsAttribute\".";
         internal const string MessageFormat = "{0}";
         internal const string MessageRemove = "Remove this bitwise operation; the enum \"{0}\" is not marked with \"Flags\" attribute.";
         internal const string MessageChangeOrRemove = "Mark enum \"{0}\" with \"Flags\" attribute or remove this bitwise operation.";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -96,7 +80,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 var message = string.Format(messageFormat, friendlyTypeName);
 
                 var op = operatorSelector((T)context.Node);
-                context.ReportDiagnostic(Diagnostic.Create(Rule, op.GetLocation(), message));
+                context.ReportDiagnostic(Diagnostic.Create(rule, op.GetLocation(), message));
             }
         }
 

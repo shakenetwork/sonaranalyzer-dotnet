@@ -26,39 +26,22 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 using System.Collections.Generic;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
-    [SqaleConstantRemediation("10min")]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Bug, Tag.Cwe, Tag.DenialOfService, Tag.Security)]
+    [Rule(DiagnosticId)]
     public class DisposableNotDisposed : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2930";
-        internal const string Title = "\"IDisposables\" should be disposed";
-        internal const string Description =
-            "You can't rely on garbage collection to clean up everything. Specifically, you can't count on it to release " +
-            "non-memory resources such as \"File\"s. For that, there's the \"IDisposable\" interface, and the contract that " +
-            "\"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it's up to " +
-            "that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it's a local variable, then it " +
-            "should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.";
         internal const string MessageFormat = "\"Dispose\" of \"{0}\".";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Critical;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         private static readonly ISet<KnownType> TrackedTypes = new []
         {

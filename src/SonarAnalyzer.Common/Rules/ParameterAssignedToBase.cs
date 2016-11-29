@@ -21,7 +21,6 @@
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
-using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules
@@ -29,28 +28,7 @@ namespace SonarAnalyzer.Rules
     public abstract class ParameterAssignedToBase : SonarDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S1226";
-        protected const string Title = "Method parameters and caught exceptions should not be reassigned";
-        protected const string Description =
-            "While it is technically correct to assign to parameters from within method bodies, it is better to " +
-            "use temporary variables to store intermediate results. This rule will typically detect cases where a " +
-            "constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was " +
-            "forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will " +
-            "not be able to know whether the original parameter or some temporary variable is being accessed without " +
-            "going through the whole method. Moreover, some developers might also expect assignments of method " +
-            "parameters to be visible from callers, which is not the case and can confuse them. All parameters " +
-            "should be treated as read-only.";
         protected const string MessageFormat = "Introduce a new variable instead of reusing the parameter \"{0}\".";
-        protected const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        protected const Severity RuleSeverity = Severity.Major;
-        protected const bool IsActivatedByDefault = false;
-
-        protected static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
-
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
     }

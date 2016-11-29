@@ -18,49 +18,31 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System.Linq;
-using System.Collections.Generic;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("5min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Cert, Tag.Unpredictable)]
+    [Rule(DiagnosticId)]
     public class StringOperationWithoutCulture : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1449";
-        internal const string Title = "Culture should be specified for \"string\" operations";
-        internal const string Description =
-            "\"string.ToLower()\", \"ToUpper\", \"IndexOf\", \"LastIndexOf\", and \"Compare\" are all culture-dependent, " +
-            "as are some (floating point number and \"DateTime\"-related) calls to \"ToString\". Fortunately, all have variants which accept an argument " +
-            "specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, " +
-            "possibly creating problems with international characters. \"string.CompareTo()\" is also culture specific, but has no overload that " +
-            "takes a culture information, so instead it's better to use \"CompareOrdinal\", or \"Compare\" with culture. Calls without a " +
-            "culture may work fine in the system's \"home\" environment, but break in ways that are extremely difficult to diagnose for customers " +
-            "who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it's time to fix them.";
+        internal const string MessageFormat = "{0}";
         internal const string MessageDefineLocale = "Define the locale to be used in this string operation.";
         internal const string MessageChangeCompareTo = "Use \"CompareOrdinal\" or \"Compare\" with the locale specified instead of \"CompareTo\".";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, "{0}", Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {

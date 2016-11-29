@@ -18,47 +18,31 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System;
 using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 using SonarAnalyzer.Helpers.CSharp;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("5min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Clumsy)]
+    [Rule(DiagnosticId)]
     public class GetTypeWithIsAssignableFrom : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2219";
-        internal const string Title = "Runtime type checking should be simplified";
-        internal const string Description =
-            "To check the type of an object there are several options: \"is\", \"IsInstanceOfType\" or \"IsAssignableFrom\". Depending on whether " +
-            "the type is returned by a \"GetType()\" or \"typeof()\" call, the \"IsAssignableFrom()\" and \"IsInstanceOfType()\" might be simplified. " +
-            "Simplifying the calls make \"null\" checking unnecessary because both \"is\" and \"IsInstanceOfType\" performs it already.";
         internal const string MessageFormat = "Use {0} instead.";
         internal const string MessageIsOperator = "the \"is\" operator";
         internal const string MessageIsInstanceOfType = "the \"IsInstanceOfType()\" method";
         internal const string MessageNullCheck = "a \"null\" check";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         internal const string UseIsOperatorKey = "UseIsOperator";
         internal const string ShouldRemoveGetType = "ShouldRemoveGetType";
@@ -122,7 +106,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
             if (typeExpression.DerivesOrImplements(typeCastTo))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, binary.GetLocation(), MessageNullCheck));
+                context.ReportDiagnostic(Diagnostic.Create(rule, binary.GetLocation(), MessageNullCheck));
             }
         }
 
@@ -139,7 +123,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 return;
             }
 
-            context.ReportDiagnostic(Diagnostic.Create(Rule, location, MessageIsOperator));
+            context.ReportDiagnostic(Diagnostic.Create(rule, location, MessageIsOperator));
         }
 
         private static void CheckGetTypeAndTypeOfEquality(ExpressionSyntax sideA, ExpressionSyntax sideB, Location location,
@@ -164,7 +148,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 return;
             }
 
-            context.ReportDiagnostic(Diagnostic.Create(Rule, location, MessageIsOperator));
+            context.ReportDiagnostic(Diagnostic.Create(rule, location, MessageIsOperator));
         }
 
         private static void CheckForIsInstanceOfType(SyntaxNodeAnalysisContext context, InvocationExpressionSyntax invocation,
@@ -177,7 +161,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
             if (memberAccess.Expression is TypeOfExpressionSyntax)
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(),
+                context.ReportDiagnostic(Diagnostic.Create(rule, invocation.GetLocation(),
                     ImmutableDictionary<string, string>.Empty
                         .Add(UseIsOperatorKey, true.ToString())
                         .Add(ShouldRemoveGetType, false.ToString()),
@@ -197,7 +181,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
             if (memberAccess.Expression is TypeOfExpressionSyntax)
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(),
+                context.ReportDiagnostic(Diagnostic.Create(rule, invocation.GetLocation(),
                     ImmutableDictionary<string, string>.Empty
                         .Add(UseIsOperatorKey, true.ToString())
                         .Add(ShouldRemoveGetType, true.ToString()),
@@ -205,7 +189,7 @@ namespace SonarAnalyzer.Rules.CSharp
             }
             else
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(),
+                context.ReportDiagnostic(Diagnostic.Create(rule, invocation.GetLocation(),
                     ImmutableDictionary<string, string>.Empty
                         .Add(UseIsOperatorKey, false.ToString())
                         .Add(ShouldRemoveGetType, true.ToString()),

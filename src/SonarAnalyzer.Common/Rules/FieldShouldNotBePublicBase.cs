@@ -18,37 +18,18 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
-using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
-using System.Collections.Generic;
 
 namespace SonarAnalyzer.Rules
 {
     public abstract class FieldShouldNotBePublicBase : SonarDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S2357";
-        protected const string Title = "Fields should be private";
-        protected const string Description =
-            "Fields should not be part of an API, and therefore should always be private. Indeed, they " +
-            "cannot be added to an interface for instance, and validation cannot be added later on without " +
-            "breaking backward compatiblity. Instead, developers should encapsulate their fields into " +
-            "properties. Explicit property getters and setters can be introduced for validation purposes " +
-            "or to smooth the transition to a newer system.";
         protected const string MessageFormat = "Make \"{0}\" private.";
-        protected const string Category = SonarAnalyzer.Common.Category.Design;
-        protected const Severity RuleSeverity = Severity.Major;
-        protected const bool IsActivatedByDefault = false;
-
-        protected static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
-
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         protected static bool FieldIsRelevant(IFieldSymbol fieldSymbol)
         {

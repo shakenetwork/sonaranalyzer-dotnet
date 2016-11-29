@@ -27,38 +27,21 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
-    [SqaleConstantRemediation("10min")]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Misra, Tag.Pitfall)]
+    [Rule(DiagnosticId)]
     public class ForLoopCounterChanged : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S127";
-        internal const string Title = "\"for\" loop stop conditions should be invariant";
-        internal const string Description =
-            "\"for\" loop stop conditions must be invariant (i.e. true at both the beginning " +
-            "and ending of every loop iteration). Ideally, this means that the stop condition " +
-            "is set to a local variable just before the loop begins. Stop conditions that are " +
-            "not invariant are difficult to understand and maintain, and will likely lead to " +
-            "the introduction of errors in the future.";
         internal const string MessageFormat = "Do not update the loop counter \"{0}\" within the loop body.";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = false;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         private sealed class SideEffectExpression
         {

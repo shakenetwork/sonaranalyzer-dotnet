@@ -18,44 +18,25 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
+using System.Collections.Generic;
 using System.Linq;
 using Microsoft.CodeAnalysis;
-using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
-using System.Collections.Generic;
 
 namespace SonarAnalyzer.Rules.Common
 {
     public abstract class PublicConstantFieldBase : SonarDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S2339";
-        protected const string Title = "Public constant members should not be used";
-        protected const string Description =
-            "Constant members are copied at compile time to the call sites, instead of being fetched at runtime. " +
-            "This means that you should use constants to hold values that by definition will never change, such as " +
-            "\"Zero\". In practice, those cases are uncommon, and therefore it is generally better to avoid constant " +
-            "members.";
         protected const string MessageFormat = "Change this constant to a {0} property.";
-        protected const string Category = SonarAnalyzer.Common.Category.Reliability;
-        protected const Severity RuleSeverity = Severity.Major;
-        protected const bool IsActivatedByDefault = false;
-
-        protected static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
-
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
     }
 
     public abstract class PublicConstantFieldBase<TLanguageKindEnum, TFieldDeclarationSyntax, TFieldName> : PublicConstantFieldBase
         where TLanguageKindEnum : struct
-        where TFieldDeclarationSyntax: SyntaxNode
-        where TFieldName: SyntaxNode
+        where TFieldDeclarationSyntax : SyntaxNode
+        where TFieldName : SyntaxNode
     {
         protected override void Initialize(SonarAnalysisContext context)
         {

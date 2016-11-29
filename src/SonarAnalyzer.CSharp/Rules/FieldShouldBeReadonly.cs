@@ -25,7 +25,6 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 using System.Collections.Generic;
 
@@ -35,32 +34,16 @@ namespace SonarAnalyzer.Rules.CSharp
     using TypeDeclarationTuple = SyntaxNodeSemanticModelTuple<TypeDeclarationSyntax>;
 
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("2min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Confusing)]
+    [Rule(DiagnosticId)]
     public class FieldShouldBeReadonly : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2933";
-        internal const string Title = "Fields that are only assigned in the constructor should be \"readonly\"";
-        internal const string Description =
-            "\"readonly\" fields can only be assigned in a class constructor. If a class has " +
-            "a field that's not marked \"readonly\" but is only set in the constructor, it " +
-            "could cause confusion about the field's intended use. To avoid confusion, such " +
-            "fields should be marked \"readonly\" to make their intended use explicit, and to " +
-            "prevent future maintainers from inadvertently changing their use.";
         internal const string MessageFormat = "Make \"{0}\" \"readonly\".";
-        internal const string Category = SonarAnalyzer.Common.Category.Design;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         private static readonly ISet<SyntaxKind> assignmentKinds = ImmutableHashSet.Create(
             SyntaxKind.SimpleAssignmentExpression,

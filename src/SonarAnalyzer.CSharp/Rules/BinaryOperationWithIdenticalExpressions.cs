@@ -23,16 +23,20 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 using SonarAnalyzer.Helpers.CSharp;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
+    [Rule(DiagnosticId)]
     public class BinaryOperationWithIdenticalExpressions : BinaryOperationWithIdenticalExpressionsBase
     {
+        internal static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
+
+        protected override DiagnosticDescriptor Rule => rule;
+
         private static readonly SyntaxKind[] SyntaxKindsToCheckBinary =
         {
             SyntaxKind.SubtractExpression,
@@ -75,7 +79,7 @@ namespace SonarAnalyzer.Rules.CSharp
         {
             if (EquivalenceChecker.AreEquivalent(left.RemoveParentheses(), right.RemoveParentheses()))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, context.Node.GetLocation(), operatorToken));
+                context.ReportDiagnostic(Diagnostic.Create(rule, context.Node.GetLocation(), operatorToken));
             }
         }
     }

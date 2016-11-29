@@ -18,45 +18,32 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
+using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
-using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
-using SonarAnalyzer.Helpers;
 using Microsoft.CodeAnalysis.Text;
-using System.Linq;
-using System;
-using System.Collections.Generic;
+using SonarAnalyzer.Common;
+using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("1min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, false)]
-    [Tags(Tag.Clumsy, Tag.Finding)]
+    [Rule(DiagnosticId)]
     public class RedundantDeclaration : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3257";
-        internal const string Title = "Declarations and initializations should be as concise as possible";
-        internal const string Description =
-            "Unnecessarily verbose declarations and initializations make it harder to read the code, and should be simplified.";
         internal const string MessageFormat = "Remove the {0}; it is redundant.";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Minor;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(ideVisibility), true,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description,
-                customTags: ideVisibility.ToCustomTags());
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, ideVisibility, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         internal const string DiagnosticTypeKey = "diagnosticType";
 
@@ -130,7 +117,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
             foreach (var parameter in lambda.ParameterList.Parameters)
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, parameter.Type.GetLocation(),
+                context.ReportDiagnostic(Diagnostic.Create(rule, parameter.Type.GetLocation(),
                     ImmutableDictionary<string, string>.Empty.Add(DiagnosticTypeKey, RedundancyType.LambdaParameterType.ToString()),
                     "type specification"));
             }
@@ -235,7 +222,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
             foreach (var size in rankSpecifier.Sizes)
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, size.GetLocation(),
+                context.ReportDiagnostic(Diagnostic.Create(rule, size.GetLocation(),
                     ImmutableDictionary<string, string>.Empty.Add(DiagnosticTypeKey, RedundancyType.ArraySize.ToString()),
                     "array size specification"));
             }
@@ -272,7 +259,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 var location = Location.Create(array.SyntaxTree, TextSpan.FromBounds(
                     array.Type.ElementType.SpanStart, array.Type.RankSpecifiers.Last().SpanStart));
 
-                context.ReportDiagnostic(Diagnostic.Create(Rule, location,
+                context.ReportDiagnostic(Diagnostic.Create(rule, location,
                     ImmutableDictionary<string, string>.Empty.Add(DiagnosticTypeKey, RedundancyType.ArrayType.ToString()),
                     "array type"));
             }
@@ -293,7 +280,7 @@ namespace SonarAnalyzer.Rules.CSharp
             if (objectCreation.Initializer != null &&
                 !objectCreation.Initializer.Expressions.Any())
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, objectCreation.Initializer.GetLocation(),
+                context.ReportDiagnostic(Diagnostic.Create(rule, objectCreation.Initializer.GetLocation(),
                     ImmutableDictionary<string, string>.Empty.Add(DiagnosticTypeKey, RedundancyType.ObjectInitializer.ToString()),
                     "initializer"));
             }
@@ -426,7 +413,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
             if (!usedParameters.Intersect(methodSymbol.Parameters).Any())
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, anonymousMethod.ParameterList.GetLocation(),
+                context.ReportDiagnostic(Diagnostic.Create(rule, anonymousMethod.ParameterList.GetLocation(),
                     ImmutableDictionary<string, string>.Empty.Add(DiagnosticTypeKey, RedundancyType.DelegateParameterList.ToString()),
                     "parameter list"));
             }
@@ -476,7 +463,7 @@ namespace SonarAnalyzer.Rules.CSharp
         {
             var location = Location.Create(objectCreation.SyntaxTree,
                 TextSpan.FromBounds(objectCreation.SpanStart, objectCreation.Type.Span.End));
-            context.ReportDiagnostic(Diagnostic.Create(Rule, location,
+            context.ReportDiagnostic(Diagnostic.Create(rule, location,
                     ImmutableDictionary<string, string>.Empty.Add(DiagnosticTypeKey, redundancyType.ToString()),
                     message));
         }

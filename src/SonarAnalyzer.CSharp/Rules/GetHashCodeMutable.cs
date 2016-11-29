@@ -25,39 +25,22 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 using System.Collections.Generic;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("10min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Bug)]
+    [Rule(DiagnosticId)]
     public class GetHashCodeMutable : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2328";
-        internal const string Title = "\"GetHashCode\" should not reference mutable fields";
-        internal const string Description =
-            "\"GetHashCode\" is used to file an object in a \"Dictionary\" or \"Hashtable\". " +
-            "If \"GetHashCode\" uses non-\"readonly\" fields and those fields change after " +
-            "the object is stored, the object immediately becomes mis-filed in the " +
-            "\"Hashtable\". Any subsequent test to see if the object is in the \"Hashtable\" " +
-            "will return a false negative.";
         internal const string MessageFormat = "Remove this use of \"{0}\" from the \"GetHashCode\" declaration, or make it \"readonly\".";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Critical;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -129,7 +112,7 @@ namespace SonarAnalyzer.Rules.CSharp
             {
                 var firstPosition = identifierReferences.Select(id => id.SpanStart).Min();
                 var identifier = identifierReferences.First(id => id.SpanStart == firstPosition);
-                context.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(), identifier.Identifier.Text));
+                context.ReportDiagnostic(Diagnostic.Create(rule, identifier.GetLocation(), identifier.Identifier.Text));
             }
         }
 

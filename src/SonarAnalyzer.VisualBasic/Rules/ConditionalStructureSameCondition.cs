@@ -24,7 +24,6 @@ using Microsoft.CodeAnalysis.VisualBasic;
 using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 using SonarAnalyzer.Helpers.VisualBasic;
 using System.Collections.Generic;
@@ -32,9 +31,14 @@ using System.Collections.Generic;
 namespace SonarAnalyzer.Rules.VisualBasic
 {
     [DiagnosticAnalyzer(LanguageNames.VisualBasic)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
+    [Rule(DiagnosticId)]
     public class ConditionalStructureSameCondition : ConditionalStructureSameConditionBase
     {
+        internal static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
+
+        protected override DiagnosticDescriptor Rule => rule;
+
         protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
@@ -62,7 +66,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
             {
                 if (EquivalenceChecker.AreEquivalent(conditions[currentIndex], conditions[j]))
                 {
-                    context.ReportDiagnostic(Diagnostic.Create(Rule, conditions[currentIndex].GetLocation(),
+                    context.ReportDiagnostic(Diagnostic.Create(rule, conditions[currentIndex].GetLocation(),
                         conditions[j].GetLineNumberToReport()));
                     return;
                 }

@@ -20,42 +20,26 @@
 
 using System;
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("5min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Misra, Tag.Unused)]
+    [Rule(DiagnosticId)]
     public class CommentedOutCode : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S125";
-        internal const string Title = "Sections of code should not be \"commented out\"";
-        internal const string Description =
-            "Programmers should not comment out code as it bloats programs and reduces " +
-            "readability. Unused code should be deleted and can be retrieved from source " +
-            "control history if required.";
         internal const string MessageFormat = "Remove this commented out code.";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -95,7 +79,7 @@ namespace SonarAnalyzer.Rules.CSharp
                         continue;
                     }
 
-                    context.ReportDiagnostic(Diagnostic.Create(Rule, trivia.GetLocation()));
+                    context.ReportDiagnostic(Diagnostic.Create(rule, trivia.GetLocation()));
                     shouldReport = false;
                 }
             }
@@ -119,7 +103,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 var commentLineSpan = lineSpan.Intersection(comment.GetLocation().SourceSpan);
 
                 var location = Location.Create(context.Tree, commentLineSpan ?? lineSpan);
-                context.ReportDiagnostic(Diagnostic.Create(Rule, location));
+                context.ReportDiagnostic(Diagnostic.Create(rule, location));
                 return;
             }
         }

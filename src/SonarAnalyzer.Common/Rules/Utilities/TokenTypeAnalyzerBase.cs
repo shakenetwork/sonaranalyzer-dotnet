@@ -32,11 +32,11 @@ namespace SonarAnalyzer.Rules
         protected const string DiagnosticId = "S9999-token-type";
         protected const string Title = "Token type calculator";
 
-        protected static readonly DiagnosticDescriptor Rule =
+        private static readonly DiagnosticDescriptor rule =
             new DiagnosticDescriptor(DiagnosticId, Title, string.Empty, string.Empty, DiagnosticSeverity.Warning,
                 true, customTags: WellKnownDiagnosticTags.NotConfigurable);
 
-        public sealed override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
+        protected override DiagnosticDescriptor Rule => rule;
 
         internal const string TokenTypeFileName = "token-type.pb";
 

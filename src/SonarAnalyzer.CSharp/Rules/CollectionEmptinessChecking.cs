@@ -18,42 +18,27 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("2min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Clumsy)]
+    [Rule(DiagnosticId)]
     public class CollectionEmptinessChecking : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1155";
-        internal const string Title = "\"Any()\" should be used to test for emptiness";
-        internal const string Description =
-            "Using \".Count() > 0\" to test for emptiness works, but using \".Any()\" makes the " +
-            "intent clearer, and the code more readable.";
         internal const string MessageFormat = "Use \".Any()\" to test whether this \"IEnumerable<{0}>\" is empty or not.";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -108,7 +93,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 value == 0 &&
                 TryGetCountCall(count, context.SemanticModel, out reportLocation, out typeArgument))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, reportLocation, typeArgument));
+                context.ReportDiagnostic(Diagnostic.Create(rule, reportLocation, typeArgument));
             }
         }
         private static void CheckCountOne(ExpressionSyntax one, ExpressionSyntax count, SyntaxNodeAnalysisContext context)
@@ -120,7 +105,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 value == 1 &&
                 TryGetCountCall(count, context.SemanticModel, out reportLocation, out typeArgument))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, reportLocation, typeArgument));
+                context.ReportDiagnostic(Diagnostic.Create(rule, reportLocation, typeArgument));
             }
         }
 

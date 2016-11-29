@@ -26,37 +26,21 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("30min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.SecurityFeatures)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Cwe, Tag.OwaspA6, Tag.SansTop25Porous, Tag.Security)]
+    [Rule(DiagnosticId)]
     public class InsecureHashAlgorithm : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2070";
-        internal const string Title = "SHA-1 and Message-Digest hash algorithms should not be used";
-        internal const string Description =
-            "The MD5 algorithm and its successor, SHA-1, are no longer considered secure, because " +
-            "it is too easy to create hash collisions with them.That is, it takes too little " +
-            "computational effort to come up with a different input that produces the same MD5 or " +
-            "SHA-1 hash, and using the new, same-hash value gives an attacker the same access as " +
-            "if he had the originally-hashed value.This applies as well to the other Message-Digest" +
-            " algorithms: MD2, MD4, MD6.";
         internal const string MessageFormat = "Use a stronger encryption algorithm than {0}.";
-        internal const string Category = SonarAnalyzer.Common.Category.Security;
-        internal const Severity RuleSeverity = Severity.Critical;
-        internal const bool IsActivatedByDefault = false;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
+
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         private static readonly Dictionary<KnownType, string> InsecureHashAlgorithmTypeNames = new Dictionary<KnownType, string>
         {
@@ -69,8 +53,6 @@ namespace SonarAnalyzer.Rules.CSharp
             "System.Security.Cryptography.CryptoConfig.CreateFromName",
             "System.Security.Cryptography.HashAlgorithm.Create"
         };
-
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -97,7 +79,7 @@ namespace SonarAnalyzer.Rules.CSharp
             if (MethodNamesToReachHashAlgorithm.Contains(methodName) &&
                 TryGetAlgorithmName(invocation.ArgumentList, out algorithmName))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(), algorithmName));
+                context.ReportDiagnostic(Diagnostic.Create(rule, invocation.GetLocation(), algorithmName));
             }
         }
 
@@ -121,7 +103,7 @@ namespace SonarAnalyzer.Rules.CSharp
             var insecureHashAlgorithmType = InsecureHashAlgorithmTypeNames.FirstOrDefault(t => insecureArgorithmType.Is(t.Key));
             if (!insecureHashAlgorithmType.Equals(default(KeyValuePair<KnownType, string>)))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, objectCreation.Type.GetLocation(), insecureHashAlgorithmType.Value));
+                context.ReportDiagnostic(Diagnostic.Create(rule, objectCreation.Type.GetLocation(), insecureHashAlgorithmType.Value));
             }
         }
 

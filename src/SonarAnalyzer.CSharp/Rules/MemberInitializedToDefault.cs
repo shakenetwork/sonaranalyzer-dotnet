@@ -18,46 +18,30 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
+using System;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System;
 using SonarAnalyzer.Helpers.CSharp;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("2min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, false)]
-    [Tags(Tag.Finding)]
+    [Rule(DiagnosticId)]
     public class MemberInitializedToDefault : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3052";
-        internal const string Title = "Members should not be initialized to default values";
-        internal const string Description =
-            "The compiler automatically initializes class fields, auto-properties and events to their default values before setting them with any " +
-            "initialization values, so there is no need to explicitly set a member to its default value. Further, under the logic that cleaner code " +
-            "is better code, it's considered poor style to do so.";
         internal const string MessageFormat = "Remove this initialization to \"{0}\", the compiler will do that for you.";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Minor;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(ideVisibility), true,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description,
-                customTags: ideVisibility.ToCustomTags());
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, ideVisibility, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -89,7 +73,7 @@ namespace SonarAnalyzer.Rules.CSharp
             if (propertySymbol != null &&
                 IsDefaultValueInitializer(propertyDeclaration.Initializer, propertySymbol.Type))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, propertyDeclaration.Initializer.GetLocation(), propertySymbol.Name));
+                context.ReportDiagnostic(Diagnostic.Create(rule, propertyDeclaration.Initializer.GetLocation(), propertySymbol.Name));
                 return;
             }
         }
@@ -114,7 +98,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
                 if (IsDefaultValueInitializer(eventDeclaration.Initializer, eventSymbol.Type))
                 {
-                    context.ReportDiagnostic(Diagnostic.Create(Rule, eventDeclaration.Initializer.GetLocation(), eventSymbol.Name));
+                    context.ReportDiagnostic(Diagnostic.Create(rule, eventDeclaration.Initializer.GetLocation(), eventSymbol.Name));
                     return;
                 }
             }
@@ -132,7 +116,7 @@ namespace SonarAnalyzer.Rules.CSharp
                     !fieldSymbol.IsConst &&
                     IsDefaultValueInitializer(variableDeclarator.Initializer, fieldSymbol.Type))
                 {
-                    context.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclarator.Initializer.GetLocation(), fieldSymbol.Name));
+                    context.ReportDiagnostic(Diagnostic.Create(rule, variableDeclarator.Initializer.GetLocation(), fieldSymbol.Name));
                 }
             }
         }

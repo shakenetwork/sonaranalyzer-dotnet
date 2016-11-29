@@ -19,22 +19,15 @@
  */
 
 using Microsoft.CodeAnalysis;
-using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 using System;
 
 namespace SonarAnalyzer.Rules
 {
-    [SqaleConstantRemediation("10min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicChangeability)]
-    [Tags(Tag.BrainOverload)]
     public abstract class FunctionNestingDepthBase : ParameterLoadingDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S134";
         internal const string MessageFormat = "Refactor this code to not nest more than {0} control flow statements.";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Major;
 
         internal class NestingDepthCounter
         {

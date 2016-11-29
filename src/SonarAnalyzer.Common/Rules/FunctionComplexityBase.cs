@@ -23,24 +23,14 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
-using SonarAnalyzer.Common.Sqale;
 using System.Linq;
 
 namespace SonarAnalyzer.Rules
 {
-    [SqaleConstantRemediation("1h")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.UnitTestability)]
-    [Tags(Tag.BrainOverload)]
     public abstract class FunctionComplexityBase : ParameterLoadingDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S1541";
-        protected const string Description =
-           "The cyclomatic complexity of a method should not exceed a defined threshold. Complex code can perform poorly and will in any case " +
-            "be difficult to understand and therefore to maintain.";
         protected const string MessageFormat = "The Cyclomatic Complexity of this {2} is {1} which is greater than {0} authorized.";
-        protected const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        protected const Severity RuleSeverity = Severity.Major;
-        protected const bool IsActivatedByDefault = false;
 
         protected const int DefaultValueMaximum = 10;
 

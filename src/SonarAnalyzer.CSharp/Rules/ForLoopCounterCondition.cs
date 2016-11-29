@@ -19,7 +19,6 @@
  */
 
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using System.Globalization;
 using System.Linq;
 using Microsoft.CodeAnalysis;
@@ -27,40 +26,25 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
-    [SqaleConstantRemediation("20min")]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Suspicious)]
+    [Rule(DiagnosticId)]
     public class ForLoopCounterCondition : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1994";
-        internal const string Title =
-            "\"for\" loop incrementers should modify the variable being tested in the loop's stop condition";
-        internal const string Description =
-            "It is almost always an error when a \"for\" loop's stop condition and incrementer " +
-            "don't act on the same variable. Even when it is not, it could confuse future " +
-            "maintainers of the code, and should be avoided.";
+        internal const string MessageFormat = "{0}";
         internal const string MessageFormatNotEmpty =
             "This loop's stop condition tests {0} but the incrementer updates {1}.";
         internal const string MessageFormatEmpty =
             "This loop's stop incrementer updates {0} but the stop condition doesn't test any variables.";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = false;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, "{0}", Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {

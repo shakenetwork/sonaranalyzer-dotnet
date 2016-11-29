@@ -18,44 +18,32 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
+using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System.Collections.Generic;
-using System.Linq;
-using System;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("5min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [Rule(DiagnosticId, Severity.Major, Title, IsActivatedByDefault)]
-    [Tags(Tag.Pitfall)]
+    [Rule(DiagnosticId)]
     public class PrivateFieldUsedAsLocalVariable : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1450";
-        internal const string Title = "Private fields only used as local variables in methods should become local variables";
-        internal const string Description =
-            "When the value of a private field is always assigned to in a class' methods before being read, then it is not being used to store class information." +
-            " Therefore, it should become a local variable in the relevant methods to prevent any misunderstanding.";
         internal const string MessageFormat = "Remove the \"{0}\" field and declare it as a local variable in the relevant methods.";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const bool IsActivatedByDefault = true;
+        private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                DiagnosticSeverity.Info, IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description,
-                customTags: IdeVisibility.Hidden.ToCustomTags());
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, ideVisibility, RspecStrings.ResourceManager)
+                                       .WithSeverity(Severity.Info);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {

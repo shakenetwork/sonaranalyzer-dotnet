@@ -18,44 +18,30 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
-using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
-using SonarAnalyzer.Helpers;
 using Microsoft.CodeAnalysis.Text;
+using SonarAnalyzer.Common;
+using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("5min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Suspicious)]
+    [Rule(DiagnosticId)]
     public class TypeExaminationOnSystemType : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3443";
-        internal const string Title = "Type examining methods should be avoided on \"System.Type\" instances";
-        internal const string Description =
-            "If you call \"GetType()\" on a \"Type\" variable, the return value will always be \"typeof(System.Type)\". So there's no real point in making " +
-            "that call. The same applies to passing a type argument to \"IsInstanceOfType\". In both cases the results are entirely predictable.";
+        internal const string MessageFormat = "{0}";
         internal const string MessageGetType = "Remove this use of \"GetType\" on a \"System.Type\".";
         internal const string MessageIsInstanceOfType = "Pass an argument that is not a \"System.Type\" or consider using \"IsAssignableFrom\".";
         internal const string MessageIsInstanceOfTypeWithGetType = "Consider removing the \"GetType\" call, it's suspicious in an \"IsInstanceOfType\" call.";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, "{0}", Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -99,7 +85,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 ? MessageIsInstanceOfTypeWithGetType
                 : MessageIsInstanceOfType;
 
-            context.ReportDiagnostic(Diagnostic.Create(Rule, argument.GetLocation(), message));
+            context.ReportDiagnostic(Diagnostic.Create(rule, argument.GetLocation(), message));
         }
 
         private static void CheckGetTypeCallOnType(InvocationExpressionSyntax invocation, IMethodSymbol invokedMethod,
@@ -120,7 +106,7 @@ namespace SonarAnalyzer.Rules.CSharp
             }
 
             var location = Location.Create(memberCall.SyntaxTree, TextSpan.FromBounds(memberCall.OperatorToken.SpanStart, invocation.Span.End));
-            context.ReportDiagnostic(Diagnostic.Create(Rule, location, MessageGetType));
+            context.ReportDiagnostic(Diagnostic.Create(rule, location, MessageGetType));
         }
 
         private static bool IsGetTypeCall(IMethodSymbol invokedMethod)

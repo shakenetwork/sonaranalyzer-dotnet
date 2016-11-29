@@ -18,45 +18,27 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.ArchitectureReliability)]
-    [SqaleConstantRemediation("5min")]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Suspicious)]
+    [Rule(DiagnosticId)]
     public class EmptyMethod : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1186";
-        internal const string Title = "Methods should not be empty";
-        internal const string Description =
-            "There are several reasons for a method not to have a method body: It is an " +
-            "unintentional omission, and should be fixed. It is not yet, or never will be, " +
-            "supported. In this case a \"NotSupportedException\" should be thrown. The " +
-            "method is an intentionally-blank override. In this case a nested comment should " +
-            "explain the reason for the blank override.";
         internal const string MessageFormat = "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -73,7 +55,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 IsEmpty(methodNode.Body) &&
                 !ShouldMethodBeExcluded(methodNode, context.SemanticModel))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, methodNode.Identifier.GetLocation()));
+                context.ReportDiagnostic(Diagnostic.Create(rule, methodNode.Identifier.GetLocation()));
             }
         }
 

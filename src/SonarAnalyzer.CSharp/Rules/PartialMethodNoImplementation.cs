@@ -18,48 +18,29 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.Diagnostics;
-using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.CodeAnalysis.Diagnostics;
+using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("20min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Suspicious)]
+    [Rule(DiagnosticId)]
     public class PartialMethodNoImplementation : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3251";
-        internal const string Title = "Implementations should be provided for \"partial\" methods";
-        internal const string Description =
-            "\"partial\" methods allow an increased degree of flexibility in programming a system. Hooks can be added to generated code " +
-            "by invoking methods that define their signature, but might not have an implementation yet. But if the implementation is " +
-            "still missing when the code makes it to production, the compiler silently removes the call. In the best case scenario, " +
-            "such calls simply represent cruft, but in they worst case they are critical, missing functionality, the loss of which will " +
-            "lead to unexpected results at runtime.";
         internal const string MessageFormat = "Supply an implementation for {0} partial method{1}.";
         internal const string MessageAdditional = ", otherwise this call will be ignored";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(ideVisibility), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description,
-                customTags: ideVisibility.ToCustomTags());
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, ideVisibility, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -86,7 +67,7 @@ namespace SonarAnalyzer.Rules.CSharp
             if (methodSymbol != null &&
                 methodSymbol.PartialImplementationPart == null)
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, partialKeyword.GetLocation(), "this", string.Empty));
+                context.ReportDiagnostic(Diagnostic.Create(rule, partialKeyword.GetLocation(), "this", string.Empty));
             }
         }
 
@@ -118,7 +99,7 @@ namespace SonarAnalyzer.Rules.CSharp
             {
                 return;
             }
-            context.ReportDiagnostic(Diagnostic.Create(Rule, statement.GetLocation(), "the", MessageAdditional));
+            context.ReportDiagnostic(Diagnostic.Create(rule, statement.GetLocation(), "the", MessageAdditional));
         }
     }
 }

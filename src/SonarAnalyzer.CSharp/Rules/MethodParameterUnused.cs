@@ -18,50 +18,36 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 using SonarAnalyzer.Helpers.FlowAnalysis.Common;
 using SonarAnalyzer.Helpers.FlowAnalysis.CSharp;
-using System.Collections.Generic;
-using System.Collections.Immutable;
-using System.Linq;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     using LiveVariableAnalysis = Helpers.FlowAnalysis.CSharp.LiveVariableAnalysis;
 
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("5min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Misra, Tag.Unused)]
+    [Rule(DiagnosticId)]
     public class MethodParameterUnused : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1172";
-        internal const string Title = "Unused method parameters should be removed";
-        internal const string Description =
-            "Unused parameters are misleading. Whatever the value passed to such parameters is, the behavior will be the same.";
         internal const string MessageFormat = "Remove this {0}.";
         internal const string MessageUnused = "unused method parameter \"{0}\"";
         internal const string MessageDead = "parameter \"{0}\", whose value is ignored in the method";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(ideVisibility), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description,
-                customTags: ideVisibility.ToCustomTags());
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, ideVisibility, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         internal const string IsRemovableKey = "IsRemovable";
 
@@ -160,7 +146,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 if (parametersToReportOn.Contains(parameter.Symbol))
                 {
                     context.ReportDiagnostic(
-                        Diagnostic.Create(Rule, parameter.Syntax.GetLocation(),
+                        Diagnostic.Create(rule, parameter.Syntax.GetLocation(),
                         ImmutableDictionary<string, string>.Empty.Add(IsRemovableKey, isRemovable.ToString()),
                         string.Format(messagePattern, parameter.Symbol.Name)));
                 }

@@ -32,9 +32,14 @@ using Microsoft.CodeAnalysis.Text;
 namespace SonarAnalyzer.Rules.VisualBasic
 {
     [DiagnosticAnalyzer(LanguageNames.VisualBasic)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
+    [Rule(DiagnosticId)]
     public class ConditionalStructureSameImplementation : ConditionalStructureSameImplementationBase
     {
+        protected static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
+
+        protected override DiagnosticDescriptor Rule => rule;
+
         protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
@@ -108,7 +113,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
             var location = Location.Create(context.Node.SyntaxTree,
                 TextSpan.FromBounds(firstStatement.SpanStart, lastStatement.Span.End));
 
-            context.ReportDiagnostic(Diagnostic.Create(Rule,
+            context.ReportDiagnostic(Diagnostic.Create(rule,
                 location, locationProvider.First().GetLineNumberToReport(), constructType));
         }
     }

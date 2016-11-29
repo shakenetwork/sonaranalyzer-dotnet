@@ -18,40 +18,28 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
-using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
-using SonarAnalyzer.Helpers;
 using Microsoft.CodeAnalysis.Text;
-using System.Linq;
+using SonarAnalyzer.Common;
+using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("10min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.MaintainabilityCompliance)]
-    [Rule(DiagnosticId, RuleSeverity, Title, false)]
+    [Rule(DiagnosticId)]
     public class IssueSuppression : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1309";
-        internal const string Title = "Track uses of in-source issue suppressions";
-        internal const string Description =
-            "This rule allows you to track the usage of the \"SuppressMessage\" attributes and \"#pragma warning disable\" mechanism.";
         internal const string MessageFormat = "Do not suppress issues.";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Info;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), true,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -103,7 +91,7 @@ namespace SonarAnalyzer.Rules.CSharp
             {
                 var location = Location.Create(pragmaWarning.SyntaxTree,
                     TextSpan.FromBounds(pragmaWarning.SpanStart, pragmaWarning.DisableOrRestoreKeyword.Span.End));
-                c.ReportDiagnostic(Diagnostic.Create(Rule, location));
+                c.ReportDiagnostic(Diagnostic.Create(rule, location));
             }
         }
     }

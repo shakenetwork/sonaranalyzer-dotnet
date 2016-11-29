@@ -25,7 +25,6 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 using System.Collections.Generic;
 using SonarAnalyzer.Helpers.FlowAnalysis.CSharp;
@@ -36,31 +35,16 @@ using SonarAnalyzer.Helpers.FlowAnalysis;
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("30min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Bug)]
+    [Rule(DiagnosticId)]
     public class InfiniteRecursion : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2190";
-        internal const string Title = "Recursion should not be infinite";
-        internal const string Description =
-            "Recursion happens when control enters a loop that has no exit. This can happen a method invokes itself, when a pair of " +
-            "methods invoke each other, or when \"goto\"s are used to move between two segments of code. It can be a useful tool, but " +
-            "unless the method includes a provision to break out of the recursion and return, the recursion will continue until the " +
-            "stack overflows and the program crashes.";
         internal const string MessageFormat = "Add a way to break out of this {0}.";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Blocker;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -176,7 +160,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 var lastJumpLocation = reportOnOptions.Max(b => b.JumpNode.SpanStart);
                 var reportOn = reportOnOptions.First(b => b.JumpNode.SpanStart == lastJumpLocation);
 
-                analysisContext.ReportDiagnostic(Diagnostic.Create(Rule, reportOn.JumpNode.GetLocation(), declarationType));
+                analysisContext.ReportDiagnostic(Diagnostic.Create(rule, reportOn.JumpNode.GetLocation(), declarationType));
             }
         }
 
@@ -206,7 +190,7 @@ namespace SonarAnalyzer.Rules.CSharp
         {
             public CfgWalkerForMethod(RecursionAnalysisContext context)
                 : base(context.ControlFlowGraph, context.AnalyzedSymbol, context.SemanticModel,
-                      () => context.AnalysisContext.ReportDiagnostic(Diagnostic.Create(Rule, context.IssueLocation, "method's recursion")))
+                      () => context.AnalysisContext.ReportDiagnostic(Diagnostic.Create(rule, context.IssueLocation, "method's recursion")))
             {
             }
 
@@ -231,7 +215,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
             public CfgWalkerForProperty(RecursionAnalysisContext context, string reportOn, bool isSetAccessor)
                 : base(context.ControlFlowGraph, context.AnalyzedSymbol, context.SemanticModel,
-                      () => context.AnalysisContext.ReportDiagnostic(Diagnostic.Create(Rule, context.IssueLocation, reportOn)))
+                      () => context.AnalysisContext.ReportDiagnostic(Diagnostic.Create(rule, context.IssueLocation, reportOn)))
             {
                 isSet = isSetAccessor;
             }

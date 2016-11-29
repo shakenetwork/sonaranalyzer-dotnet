@@ -25,37 +25,22 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 using SonarAnalyzer.Helpers.CSharp;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
-    [SqaleConstantRemediation("2min")]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Clumsy)]
+    [Rule(DiagnosticId)]
     public class ConditionalSimplification : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3240";
-        internal const string Title = "The simplest possible condition syntax should be used";
-        internal const string Description =
-            "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That " +
-            "means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" " +
-            "for assignment to a single variable.";
         internal const string MessageFormat = "Use the \"{0}\" operator here.";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = false;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         internal const string IsNullCoalescingKey = "isNullCoalescing";
 
@@ -101,7 +86,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 possiblyNullCoalescing ? comparedToNull : null, context.SemanticModel,
                 comparedIsNullInTrue, out isNullCoalescing))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, ifStatement.IfKeyword.GetLocation(),
+                context.ReportDiagnostic(Diagnostic.Create(rule, ifStatement.IfKeyword.GetLocation(),
                     ImmutableDictionary<string, string>.Empty.Add(IsNullCoalescingKey, isNullCoalescing.ToString()),
                     isNullCoalescing ? "??" : "?:"));
             }
@@ -132,7 +117,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
             if (CanExpressionBeNullCoalescing(whenTrue, whenFalse, comparedToNull, context.SemanticModel, comparedIsNullInTrue))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, conditional.GetLocation(), "??"));
+                context.ReportDiagnostic(Diagnostic.Create(rule, conditional.GetLocation(), "??"));
             }
         }
 

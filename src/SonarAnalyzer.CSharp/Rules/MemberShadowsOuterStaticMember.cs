@@ -18,44 +18,28 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System;
-using System.Collections.Generic;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("10min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Design, Tag.Pitfall)]
+    [Rule(DiagnosticId)]
     public class MemberShadowsOuterStaticMember : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3218";
-        internal const string Title = "Inner class members should not shadow outer class \"static\" or type members";
-        internal const string Description =
-            "It's possible to name the members of an inner class the same as the \"static\" members of its enclosing class - " +
-            "possible, but a bad idea. That's because maintainers may be confused about which members are being used where. " +
-            "Instead the inner class' members should be renamed and all the references updated.";
         internal const string MessageFormat = "Rename this {0} to not shadow the outer class' member with the same name.";
-        internal const string Category = SonarAnalyzer.Common.Category.Design;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -131,13 +115,13 @@ namespace SonarAnalyzer.Rules.CSharp
                 var delegateSyntax = syntax as DelegateDeclarationSyntax;
                 if (delegateSyntax != null)
                 {
-                    context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, delegateSyntax.Identifier.GetLocation(), "delegate"));
+                    context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(rule, delegateSyntax.Identifier.GetLocation(), "delegate"));
                     continue;
                 }
                 var classSyntax = syntax as ClassDeclarationSyntax;
                 if (classSyntax != null)
                 {
-                    context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, classSyntax.Identifier.GetLocation(), "class"));
+                    context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(rule, classSyntax.Identifier.GetLocation(), "class"));
                     continue;
                 }
             }
@@ -225,7 +209,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 var location = locationSelector(propertyOrField);
                 if (location != null)
                 {
-                    context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, location, memberType));
+                    context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(rule, location, memberType));
                 }
             }
         }
@@ -247,7 +231,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 var location = locationSelector(eventOrMethod);
                 if (location != null)
                 {
-                    context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, location, memberType));
+                    context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(rule, location, memberType));
                 }
             }
         }

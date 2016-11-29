@@ -21,40 +21,26 @@
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using Microsoft.CodeAnalysis.CSharp;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("2min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [Rule(DiagnosticId, Severity.Minor, Title, IsActivatedByDefault)]
-    [Tags(Tag.Clumsy)]
+    [Rule(DiagnosticId)]
     public class MemberOverrideCallsBaseMember : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1185";
-        internal const string Title = "Overriding members should do more than simply call the same member in the super class";
-        internal const string Description =
-            "Overriding a member just to call the same member from the base class without performing any other actions is useless " +
-            "and misleading. The only time this is justified is in \"sealed\" overriding methods, where the effect is to lock in the " +
-            "parent class behavior.";
         internal const string MessageFormat = "Remove this {1} \"{0}\" to simply inherit its behavior.";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const bool IsActivatedByDefault = true;
+        private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                DiagnosticSeverity.Info, IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description,
-                customTags: IdeVisibility.Hidden.ToCustomTags());
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, ideVisibility, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         private static readonly string[] IgnoredMethodNames = { "Equals", "GetHashCode" };
 

@@ -20,7 +20,6 @@
 
 using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
-using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
 using System.Linq;
 using System.Collections.Generic;
@@ -30,19 +29,7 @@ namespace SonarAnalyzer.Rules
     public abstract class EnumNameHasEnumSuffixBase : SonarDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S2344";
-        protected const string Title = "Enumeration type names should not have \"Flags\" or \"Enum\" suffixes";
-        protected const string Description =
-            "The information that an enumeration type is actually an enumeration or a set of flags should not be duplicated in its name.";
         protected const string MessageFormat = "Rename this enumeration to remove the \"{0}\" suffix.";
-        protected const string Category = SonarAnalyzer.Common.Category.Naming;
-        protected const Severity RuleSeverity = Severity.Minor;
-        protected const bool IsActivatedByDefault = true;
-
-        protected static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
 
         protected static readonly IEnumerable<string> NameEndings = ImmutableArray.Create("enum", "flags");
 
@@ -52,8 +39,6 @@ namespace SonarAnalyzer.Rules
     public abstract class EnumNameHasEnumSuffixBase<TLanguageKindEnum> : EnumNameHasEnumSuffixBase
         where TLanguageKindEnum : struct
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
-
         protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(

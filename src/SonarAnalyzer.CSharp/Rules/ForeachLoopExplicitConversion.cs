@@ -18,44 +18,26 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("15min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Suspicious)]
+    [Rule(DiagnosticId)]
     public class ForeachLoopExplicitConversion : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3217";
-        internal const string Title = "\"Explicit\" conversions of \"foreach\" loops should not be used";
-        internal const string Description =
-            "The \"foreach\" statement was introduced in the C# language prior to generics. To make it easier to work with non-generic " +
-            "collections available at that time such as \"ArrayList\", the \"foreach\" statements allows to downcast the collection's " +
-            "element of type \"Object\" into any other type. The problem is that, to achieve that, the \"foreach\" statements silently " +
-            "performs \"explicit\" type conversion, which at runtime can result in an \"InvalidCastException\" to be thrown. C# code " +
-            "iterating on generic collections or arrays should not rely on \"foreach\" statement's silent \"explicit\" conversions.";
         internal const string MessageFormat = "Either change the type of \"{0}\" to \"{1}\" or iterate on a generic collection of type \"{2}\".";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {

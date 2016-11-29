@@ -18,45 +18,29 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
-using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
-using SonarAnalyzer.Helpers;
 using Microsoft.CodeAnalysis.Text;
-using System;
+using SonarAnalyzer.Common;
+using SonarAnalyzer.Helpers;
 using SonarAnalyzer.Helpers.CSharp;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
-    [SqaleConstantRemediation("2min")]
-    [Tags(Tag.Clumsy)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
+    [Rule(DiagnosticId)]
     public class BooleanLiteralUnnecessary : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1125";
-        internal const string Title = "Boolean literals should not be redundant";
-        internal const string Description =
-            "Redundant Boolean literals should be removed from expressions to improve readability.";
         internal const string MessageFormat = "Remove the unnecessary Boolean literal(s).";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(ideVisibility), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description,
-                customTags: ideVisibility.ToCustomTags());
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, ideVisibility, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -96,7 +80,7 @@ namespace SonarAnalyzer.Rules.CSharp
             if (forLoop.Condition != null &&
                 EquivalenceChecker.AreEquivalent(forLoop.Condition.RemoveParentheses(), SyntaxHelper.TrueLiteralExpression))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, forLoop.Condition.GetLocation()));
+                context.ReportDiagnostic(Diagnostic.Create(rule, forLoop.Condition.GetLocation()));
             }
         }
 
@@ -125,7 +109,7 @@ namespace SonarAnalyzer.Rules.CSharp
                     ? conditional.WhenTrue
                     : conditional.WhenFalse;
 
-                context.ReportDiagnostic(Diagnostic.Create(Rule, side.GetLocation()));
+                context.ReportDiagnostic(Diagnostic.Create(rule, side.GetLocation()));
                 return;
             }
 
@@ -138,7 +122,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 var location = Location.Create(conditional.SyntaxTree,
                     new TextSpan(conditional.WhenTrue.SpanStart, conditional.WhenFalse.Span.End - conditional.WhenTrue.SpanStart));
 
-                context.ReportDiagnostic(Diagnostic.Create(Rule, location));
+                context.ReportDiagnostic(Diagnostic.Create(rule, location));
                 return;
             }
         }
@@ -152,7 +136,7 @@ namespace SonarAnalyzer.Rules.CSharp
             if (EquivalenceChecker.AreEquivalent(logicalNotOperand, SyntaxHelper.TrueLiteralExpression) ||
                 EquivalenceChecker.AreEquivalent(logicalNotOperand, SyntaxHelper.FalseLiteralExpression))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, logicalNot.Operand.GetLocation()));
+                context.ReportDiagnostic(Diagnostic.Create(rule, logicalNot.Operand.GetLocation()));
             }
         }
 
@@ -275,7 +259,7 @@ namespace SonarAnalyzer.Rules.CSharp
                     ? CalculateExtendedLocation(binaryExpression, false)
                     : CalculateExtendedLocation(binaryExpression, reportOnTrue == leftIsTrue);
 
-                context.ReportDiagnostic(Diagnostic.Create(Rule, errorLocation));
+                context.ReportDiagnostic(Diagnostic.Create(rule, errorLocation));
                 return true;
             }
             return false;
@@ -350,7 +334,7 @@ namespace SonarAnalyzer.Rules.CSharp
                     break;
             }
 
-            context.ReportDiagnostic(Diagnostic.Create(Rule, location));
+            context.ReportDiagnostic(Diagnostic.Create(rule, location));
         }
 
         private static Location CalculateExtendedLocation(BinaryExpressionSyntax binaryExpression, bool leftSide)

@@ -26,33 +26,21 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
-    [SqaleConstantRemediation("2min")]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Cert, Tag.Cwe, Tag.Misra, Tag.Pitfall)]
+    [Rule(DiagnosticId)]
     public class UseCurlyBraces : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S121";
-        internal const string Title = "Control structures should use curly braces";
-        internal const string Description =
-            "While not technically incorrect, the omission of curly braces can be misleading, and may " +
-            "lead to the introduction of errors during maintenance.";
         internal const string MessageFormat = "Add curly braces around the nested statement(s) in this \"{0}\" block.";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = false;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
+
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         private sealed class CheckedKind
         {
@@ -110,8 +98,6 @@ namespace SonarAnalyzer.Rules.CSharp
                 Validator = node => ((WhileStatementSyntax)node).Statement.IsKind(SyntaxKind.Block),
                 IssueReportLocation = node => ((WhileStatementSyntax)node).WhileKeyword.GetLocation()
             });
-
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         protected override void Initialize(SonarAnalysisContext context)
         {

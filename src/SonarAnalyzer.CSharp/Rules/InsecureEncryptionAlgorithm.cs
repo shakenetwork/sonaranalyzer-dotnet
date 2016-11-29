@@ -18,6 +18,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
@@ -25,36 +26,21 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System.Collections.Generic;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("20min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.SecurityFeatures)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Cwe, Tag.OwaspA6, Tag.Security)]
+    [Rule(DiagnosticId)]
     public class InsecureEncryptionAlgorithm : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2278";
-        internal const string Title = "Neither DES (Data Encryption Standard) nor DESede (3DES) should be used";
-        internal const string Description =
-            "According to the US National Institute of Standards and Technology (NIST), the Data Encryption Standard (DES) is " +
-            "no longer considered secure";
         internal const string MessageFormat = "Use the recommended AES (Advanced Encryption Standard) instead.";
-        internal const string Category = SonarAnalyzer.Common.Category.Security;
-        internal const Severity RuleSeverity = Severity.Critical;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         private const string BaseEncryptionAlgorithmCreate = "System.Security.Cryptography.SymmetricAlgorithm.Create";
 
@@ -102,7 +88,7 @@ namespace SonarAnalyzer.Rules.CSharp
             if (MethodNamesToReachEncryptionAlgorithm.Contains(methodName) ||
                 IsBaseEncryptionCreateCalled(methodName, invocation.ArgumentList))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation()));
+                context.ReportDiagnostic(Diagnostic.Create(rule, invocation.GetLocation()));
             }
         }
 
@@ -121,7 +107,7 @@ namespace SonarAnalyzer.Rules.CSharp
             if (insecureArgorithmType != null &&
                 insecureArgorithmType.IsAny(BaseClassNamesForEncryptionAlgorithm))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, objectCreation.Type.GetLocation()));
+                context.ReportDiagnostic(Diagnostic.Create(rule, objectCreation.Type.GetLocation()));
             }
         }
 

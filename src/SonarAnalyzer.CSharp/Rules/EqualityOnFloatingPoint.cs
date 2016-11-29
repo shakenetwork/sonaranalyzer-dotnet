@@ -18,6 +18,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
@@ -25,40 +26,22 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System.Collections.Generic;
 using SonarAnalyzer.Helpers.CSharp;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("5min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Bug, Tag.Misra)]
+    [Rule(DiagnosticId)]
     public class EqualityOnFloatingPoint : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1244";
-        internal const string Title = "Floating point numbers should not be tested for equality";
-        internal const string Description =
-            "Floating point math is imprecise because of the challenges of storing such values " +
-            "in a binary representation.Even worse, floating point math is not associative; " +
-            "push a \"float\" or a \"double\" through a series of simple mathematical " +
-            "operations and the answer will be different based on the order of those operation " +
-            "because of the rounding that takes place at each step.";
         internal const string MessageFormat = "Do not check floating point {0} with exact values, use a range instead.";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Critical;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         private static readonly ISet<string> EqualityOperators = ImmutableHashSet.Create(
             "op_Equality",
@@ -102,7 +85,7 @@ namespace SonarAnalyzer.Rules.CSharp
             {
                 var messageEqualityPart = GetMessageEqualityPart(isEquality);
 
-                context.ReportDiagnostic(Diagnostic.Create(Rule, binaryExpression.GetLocation(), messageEqualityPart));
+                context.ReportDiagnostic(Diagnostic.Create(rule, binaryExpression.GetLocation(), messageEqualityPart));
             }
         }
 
@@ -123,7 +106,7 @@ namespace SonarAnalyzer.Rules.CSharp
             {
                 var messageEqualityPart = GetMessageEqualityPart(equals.IsKind(SyntaxKind.EqualsExpression));
 
-                context.ReportDiagnostic(Diagnostic.Create(Rule, equals.OperatorToken.GetLocation(), messageEqualityPart));
+                context.ReportDiagnostic(Diagnostic.Create(rule, equals.OperatorToken.GetLocation(), messageEqualityPart));
             }
         }
 

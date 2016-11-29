@@ -20,13 +20,11 @@
 
 using System;
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 using SonarAnalyzer.Helpers.FlowAnalysis.Common;
 using SonarAnalyzer.Helpers.FlowAnalysis.CSharp;
@@ -36,30 +34,16 @@ namespace SonarAnalyzer.Rules.CSharp
     using ExplodedGraph = Helpers.FlowAnalysis.CSharp.ExplodedGraph;
 
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
-    [SqaleConstantRemediation("10min")]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Bug)]
+    [Rule(DiagnosticId)]
     public class EmptyNullableValueAccess : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3655";
-        internal const string Title = "Empty nullable value should not be accessed";
-        internal const string Description =
-            "Nullable value types can hold either a value or \"null\". The value held in the nullable type can be accessed with " +
-            "the \"Value\" property, but \".Value\" throws an \"InvalidOperationException\" when if the nullable type's value is " +
-            "\"null\". To avoid the exception, a nullable type should always be tested before \".Value\" is accessed.";
         internal const string MessageFormat = "\"{0}\" is null on at least one execution path.";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Blocker;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         private const string ValueLiteral = "Value";
         private const string HasValueLiteral = "HasValue";
@@ -92,7 +76,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
             foreach (var nullIdentifier in nullIdentifiers)
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, nullIdentifier.Parent.GetLocation(), nullIdentifier.Identifier.ValueText));
+                context.ReportDiagnostic(Diagnostic.Create(rule, nullIdentifier.Parent.GetLocation(), nullIdentifier.Identifier.ValueText));
             }
         }
 

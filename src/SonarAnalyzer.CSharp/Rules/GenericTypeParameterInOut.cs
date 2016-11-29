@@ -18,6 +18,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
@@ -25,37 +26,21 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("5min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("api-design")]
+    [Rule(DiagnosticId)]
     public class GenericTypeParameterInOut : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3246";
-        internal const string Title = "Generic type parameters should be co/contravariant when possible";
-        internal const string Description =
-            "In the interests of making code as usable as possible, interfaces and delegates with generic parameters should " +
-            "use the \"out\" and \"in\" modifiers when possible to make the interfaces and delegates covariant and contravariant, " +
-            "respectively.";
         internal const string MessageFormat = "Add the \"{0}\" keyword to parameter \"{1}\" to make it \"{2}\".";
-        internal const string Category = SonarAnalyzer.Common.Category.Design;
-        internal const Severity RuleSeverity = Severity.Info;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -214,13 +199,13 @@ namespace SonarAnalyzer.Rules.CSharp
 
             if (variance == VarianceKind.In)
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, location, "in", typeParameter.Name, "contravariant"));
+                context.ReportDiagnostic(Diagnostic.Create(rule, location, "in", typeParameter.Name, "contravariant"));
                 return;
             }
 
             if (variance == VarianceKind.Out)
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, location, "out", typeParameter.Name, "covariant"));
+                context.ReportDiagnostic(Diagnostic.Create(rule, location, "out", typeParameter.Name, "covariant"));
                 return;
             }
         }

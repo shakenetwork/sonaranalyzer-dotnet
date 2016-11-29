@@ -22,7 +22,6 @@ using System;
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
-using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
 using System.Collections.Generic;
 
@@ -31,22 +30,7 @@ namespace SonarAnalyzer.Rules.Common
     public abstract class FlagsEnumZeroMemberBase : SonarDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S2346";
-        protected const string Title = "Flags enumerations zero-value members should be named \"None\"";
-        protected const string Description =
-            "Consisitent use of \"None\" in flags enumerations indicates that all flag values are cleared. The value 0 should not be " +
-            "used to indicate any other state, since there is no way to check that the bit 0 is set.";
         protected const string MessageFormat = "Rename \"{0}\" to \"None\".";
-        protected const string Category = SonarAnalyzer.Common.Category.Naming;
-        protected const Severity RuleSeverity = Severity.Minor;
-        protected const bool IsActivatedByDefault = true;
-
-        protected static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
-
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
     }

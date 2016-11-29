@@ -18,44 +18,26 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("2min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Bug, Tag.Cwe, Tag.SansTop25Risky, Tag.Security)]
+    [Rule(DiagnosticId)]
     public class LossOfFractionInDivision : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2184";
-        internal const string Title = "Result of integer division should not be assigned to floating point variable";
-        internal const string Description =
-            "When division is performed on \"int\"s, the result will always be an \"int\". You can assign that result to a \"double\", " +
-            "\"float\" or \"decimal\" with automatic type conversion, but having started as an \"int\", the result will likely not be " +
-            "what you expect. If the result of \"int\" division is assigned to a floating-point variable, precision will have been " +
-            "lost before the assignment. Instead, at least one operand should be cast or promoted to the final type before the " +
-            "operation takes place.";
         internal const string MessageFormat = "Cast one of the operands of this division to \"{0}\".";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Critical;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {

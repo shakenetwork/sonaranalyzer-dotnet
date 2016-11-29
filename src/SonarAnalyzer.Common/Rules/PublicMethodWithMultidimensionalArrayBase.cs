@@ -21,7 +21,6 @@
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
-using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.Common
@@ -29,30 +28,14 @@ namespace SonarAnalyzer.Rules.Common
     public abstract class PublicMethodWithMultidimensionalArrayBase : SonarDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S2368";
-        protected const string Title = "Public methods should not have multidimensional array parameters";
-        protected const string Description =
-            "Exposing methods with multidimensional array parameters require developers to have advanced knowledge about the language in " +
-            "order to be able to use them. Moreover, what exactly to pass to such parameters is not intuitive. Therefore, such methods " +
-            "should not be exposed, but can be used internally.";
         protected const string MessageFormat = "Make this method private or simplify its parameters to not use multidimensional arrays.";
-        protected const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        protected const Severity RuleSeverity = Severity.Major;
-        protected const bool IsActivatedByDefault = true;
-
-        protected static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
-
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
     }
 
     public abstract class PublicMethodWithMultidimensionalArrayBase<TLanguageKindEnum, TMethodSyntax> : PublicMethodWithMultidimensionalArrayBase
         where TLanguageKindEnum : struct
-        where TMethodSyntax: SyntaxNode
+        where TMethodSyntax : SyntaxNode
     {
         protected override void Initialize(SonarAnalysisContext context)
         {

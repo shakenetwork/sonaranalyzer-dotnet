@@ -18,47 +18,29 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.CodeAnalysis.Text;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System.Collections.Immutable;
-using System.Linq;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
-    [SqaleConstantRemediation("5min")]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Bug)]
+    [Rule(DiagnosticId)]
     public class MultilineBlocksWithoutBrace : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2681";
-        internal const string Title = "Multiline blocks should be enclosed in curly braces";
-        internal const string Description =
-            "Curly braces can be omitted from a one-line block, such as with an \"if\" statement " +
-            "or \"for\" loop, but doing so can be misleading and induce bugs. This rule raises an " +
-            "issue when the indentation of the lines after a one-line block indicates an intent to " +
-            "include those lines in the block, but the omission of curly braces means the lines " +
-            "will be unconditionally executed once.";
         internal const string MessageFormat =
             "This line will not be executed {0}; only the first line of this {2}-line block will be. The rest will execute {1}.";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Critical;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -158,7 +140,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 var lineSpan = context.Node.SyntaxTree.GetText().Lines[nextStatementPosition.Line].Span;
                 var location = Location.Create(context.Node.SyntaxTree, TextSpan.FromBounds(nextStatement.SpanStart, lineSpan.End));
 
-                context.ReportDiagnostic(Diagnostic.Create(Rule, location, executed, execute,
+                context.ReportDiagnostic(Diagnostic.Create(rule, location, executed, execute,
                     nextStatementPosition.Line - statementPosition.Line + 1));
             }
         }

@@ -18,34 +18,19 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
+using System.Collections.Generic;
 using System.Linq;
 using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.Text;
 using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
-using System.Collections.Generic;
-using Microsoft.CodeAnalysis.Text;
 
 namespace SonarAnalyzer.Rules.Common
 {
     public abstract class SingleStatementPerLineBase : SonarDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S122";
-        protected const string Title = "Statements should be on separate lines";
-        protected const string Description =
-            "For better readability, do not put more than one statement on a single line.";
         protected const string MessageFormat = "Reformat the code to have only one statement per line.";
-        protected const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        protected const Severity RuleSeverity = Severity.Minor;
-        protected const bool IsActivatedByDefault = false;
-
-        protected static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
-
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
     }

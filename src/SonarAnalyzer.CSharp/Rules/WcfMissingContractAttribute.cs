@@ -18,46 +18,28 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("2min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.UsabilityAccessibility)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Suspicious)]
+    [Rule(DiagnosticId)]
     public class WcfMissingContractAttribute : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3597";
-        internal const string Title = "\"ServiceContract\" and \"OperationContract\" attributes should be used together";
-        internal const string Description =
-            "The \"ServiceContract\" attribute specifies that a class or interface defines the communication contract of a Windows Communication Foundation " +
-            "(WCF) service. The service operations of this class or interface are defined by \"OperationContract\" attributes added to methods. It doesn't " +
-            "make sense to define a contract without any service operations; thus, in a \"ServiceContract\" class or interface at least one method should be " +
-            "annotated with \"OperationContract\". Similarly, WCF only serves \"OperationContract\" methods that are defined inside \"ServiceContract\" " +
-            "classes or interfaces; thus, this rule also checks that \"ServiceContract\" is added to the containing type of \"OperationContract\" methods.";
         internal const string MessageFormat = "Add the \"{0}\" attribute to {1}.";
         internal const string MessageOperation = "the methods of this {0}";
         internal const string MessageService = " this {0}";
-        internal const string Category = SonarAnalyzer.Common.Category.Design;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {

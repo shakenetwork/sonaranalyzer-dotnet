@@ -22,33 +22,21 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Helpers;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [NoSqaleRemediation]
-    [Rule(DiagnosticId, RuleSeverity, Title, true)]
+    [Rule(DiagnosticId)]
     public class CommentTodo : CommentWordBase
     {
         protected override string Word => "TODO";
 
         internal const string DiagnosticId = "S1135";
-        internal const string Title = "\"TODO\" tags should be handled";
-        internal const string Description =
-            "\"TODO\" tags are commonly used to mark places where some more code is required, but which the developer " +
-            "wants to implement later. Sometimes the developer will not have the time or will simply forget to get back " +
-            "to that tag. This rule is meant to track those tags, and ensure that they do not go unnoticed.";
         internal const string MessageFormat =
             "Complete the task associated to this \"TODO\" comment.";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Info;
 
         internal static readonly DiagnosticDescriptor rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), false /*disabled by default in VS not to overlap functionality with the Task List window*/,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
         protected override DiagnosticDescriptor Rule => rule;
     }

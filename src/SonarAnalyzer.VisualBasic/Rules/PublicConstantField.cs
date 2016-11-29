@@ -22,7 +22,6 @@ using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Rules.Common;
 using System.Collections.Generic;
 using Microsoft.CodeAnalysis.VisualBasic;
@@ -32,12 +31,14 @@ using SonarAnalyzer.Helpers;
 namespace SonarAnalyzer.Rules.VisualBasic
 {
     [DiagnosticAnalyzer(LanguageNames.VisualBasic)]
-    [SqaleConstantRemediation("2min")]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
-    [Tags(Tag.Convention)]
+    [Rule(DiagnosticId)]
     public class PublicConstantField : PublicConstantFieldBase<SyntaxKind, FieldDeclarationSyntax, ModifiedIdentifierSyntax>
     {
+        protected static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
+
+        protected override DiagnosticDescriptor Rule => rule;
+
         public override SyntaxKind FieldDeclarationKind => SyntaxKind.FieldDeclaration;
         public override string MessageArgument => "\"Shared Read-Only\"";
 

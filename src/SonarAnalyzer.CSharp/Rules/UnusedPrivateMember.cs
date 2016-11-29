@@ -18,44 +18,31 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System.Collections.Generic;
-using System.Collections.Immutable;
-using System.Linq;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("5min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [Rule(DiagnosticId, Severity.Major, Title, IsActivatedByDefault)]
-    [Tags(Tag.Unused)]
+    [Rule(DiagnosticId)]
     public class UnusedPrivateMember : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1144";
-        internal const string Title = "Unused private types or members should be removed";
-        internal const string Description =
-            "Private types or members that are never executed or referenced are dead code: unnecessary, inoperative code " +
-            "that should be removed. Cleaning out dead code decreases the size of the maintained codebase, making it easier " +
-            "to understand the program and preventing bugs from being introduced.";
         internal const string MessageFormat = "Remove this unused private member.";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const bool IsActivatedByDefault = true;
+        private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                DiagnosticSeverity.Info, IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description,
-                customTags: IdeVisibility.Hidden.ToCustomTags());
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, ideVisibility, RspecStrings.ResourceManager)
+                                       .WithSeverity(Severity.Info);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         private static readonly Accessibility maxAccessibility = Accessibility.Private;
 
@@ -147,7 +134,7 @@ namespace SonarAnalyzer.Rules.CSharp
                     }
                 }
 
-                context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, location), context.Compilation);
+                context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(rule, location), context.Compilation);
             }
         }
 

@@ -44,7 +44,6 @@ namespace SonarAnalyzer.RuleDescriptorGenerator
                                 }).ToList(),
                         RuleKey = ruleDetail.Key
                     },
-                    SubCharacteristic = ruleDetail.SqaleDescriptor.SubCharacteristic
                 };
         }
 

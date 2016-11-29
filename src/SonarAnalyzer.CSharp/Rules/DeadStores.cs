@@ -25,44 +25,27 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
-using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
-using SonarAnalyzer.Helpers;
-using SonarAnalyzer.Helpers.FlowAnalysis.CSharp;
-using SonarAnalyzer.Helpers.FlowAnalysis.Common;
 using Microsoft.CodeAnalysis.Text;
+using SonarAnalyzer.Common;
+using SonarAnalyzer.Helpers;
+using SonarAnalyzer.Helpers.FlowAnalysis.Common;
+using SonarAnalyzer.Helpers.FlowAnalysis.CSharp;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     using LiveVariableAnalysis = Helpers.FlowAnalysis.CSharp.LiveVariableAnalysis;
 
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("15min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Suspicious, Tag.Cert, Tag.Cwe, Tag.Unused)]
+    [Rule(DiagnosticId)]
     public class DeadStores : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1854";
-        internal const string Title = "Dead stores should be removed";
-        internal const string Description =
-            "A dead store happens when a local variable is assigned a value that is not read by " +
-            "any subsequent instruction. Calculating or retrieving a value only to then overwrite " +
-            "it or throw it away, could indicate a serious error in the code.Even if it's not an " +
-            "error, it is at best a waste of resources. Therefore all calculated values should be " +
-            "used.";
         internal const string MessageFormat = "Remove this useless assignment to local variable \"{0}\".";
-        internal const string Category = SonarAnalyzer.Common.Category.Performance;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -285,7 +268,7 @@ namespace SonarAnalyzer.Rules.CSharp
                     !IsUnusedLocal(symbol))
                 {
                     var location = GetFirstLineLocationFromToken(declarator.Initializer.EqualsToken, declarator.Initializer);
-                    context.ReportDiagnostic(Diagnostic.Create(Rule, location, symbol.Name));
+                    context.ReportDiagnostic(Diagnostic.Create(rule, location, symbol.Name));
                 }
                 liveOut.Remove(symbol);
             }
@@ -315,7 +298,7 @@ namespace SonarAnalyzer.Rules.CSharp
                     if (LiveVariableAnalysis.IsLocalScoped(symbol, declaration) &&
                         !liveOut.Contains(symbol))
                     {
-                        context.ReportDiagnostic(Diagnostic.Create(Rule, prefixExpression.GetLocation(), symbol.Name));
+                        context.ReportDiagnostic(Diagnostic.Create(rule, prefixExpression.GetLocation(), symbol.Name));
                     }
                 }
             }
@@ -335,7 +318,7 @@ namespace SonarAnalyzer.Rules.CSharp
                     if (LiveVariableAnalysis.IsLocalScoped(symbol, declaration) &&
                         !liveOut.Contains(symbol))
                     {
-                        context.ReportDiagnostic(Diagnostic.Create(Rule, postfixExpression.GetLocation(), symbol.Name));
+                        context.ReportDiagnostic(Diagnostic.Create(rule, postfixExpression.GetLocation(), symbol.Name));
                     }
                 }
             }
@@ -347,7 +330,7 @@ namespace SonarAnalyzer.Rules.CSharp
                     !outState.Contains(symbol))
                 {
                     var location = GetFirstLineLocationFromToken(assignment.OperatorToken, assignment.Right);
-                    context.ReportDiagnostic(Diagnostic.Create(Rule, location, symbol.Name));
+                    context.ReportDiagnostic(Diagnostic.Create(rule, location, symbol.Name));
                 }
 
                 assignmentLhs.Add(left);

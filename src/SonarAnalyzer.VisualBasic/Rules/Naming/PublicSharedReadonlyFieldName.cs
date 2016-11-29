@@ -18,37 +18,25 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.VisualBasic;
 using Microsoft.CodeAnalysis.Diagnostics;
+using Microsoft.CodeAnalysis.VisualBasic;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.VisualBasic
 {
     [DiagnosticAnalyzer(LanguageNames.VisualBasic)]
-    [SqaleConstantRemediation("5min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Convention)]
+    [Rule(DiagnosticId)]
     public sealed class PublicSharedReadonlyFieldName : FieldNameChecker
     {
         internal const string DiagnosticId = "S2370";
-        internal const string Title = "Non-private \"Shared ReadOnly\" fields should comply with a naming convention";
-        internal const string Description =
-            "Shared coding conventions allow teams to collaborate efficiently. This rule checks that all " +
-            "\"Public Shared ReadOnly\" field names comply with the provided regular expression.";
         internal const string MessageFormat = "Rename \"{0}\" to match the regular expression: \"{1}\".";
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
+        protected override DiagnosticDescriptor Rule => rule;
 
         [RuleParameter("format", PropertyType.String,
             "Regular expression used to check the non-private \"Shared ReadOnly\" field names against.", PascalCasingPattern)]

@@ -26,42 +26,25 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 using SonarAnalyzer.Helpers.CSharp;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("5min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Clumsy)]
+    [Rule(DiagnosticId)]
     public class CollectionQuerySimplification : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2971";
-        internal const string Title = "\"IEnumerable\" LINQs should be simplified";
-        internal const string Description =
-            "In the interests of readability, code that can be simplified should be simplified. To that end, there are several " +
-            "ways \"IEnumerable LINQ\"s can be simplified. Use \"OfType\" instead of using \"Select\" with \"as\" to type cast " +
-            "elements and then null-checking in a query expression to choose elements based on type. Use \"OfType\" instead of " +
-            "using \"Where\" and the \"is\" operator, followed by a cast in a \"Select\". Use an expression in \"Any\" instead " +
-            "of \"Where(element => [expression]).Any()\". Use \"Count\" instead of \"Count()\" when it's available. Don't call " +
-            "\"ToArray()\" or \"ToList()\" in the middle of a query chain.";
+        internal const string MessageFormat = "{0}";
         internal const string MessageUseInstead = "Use {0} here instead.";
         internal const string MessageDropAndChange = "Drop \"{0}\" and move the condition into the \"{1}\".";
         internal const string MessageDropFromMiddle = "Drop \"{0}\" from the middle of the call chain.";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, "{0}", Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         private static readonly string[] MethodNamesWithPredicate =
         {
@@ -132,7 +115,7 @@ namespace SonarAnalyzer.Rules.CSharp
             var symbol = context.SemanticModel.GetTypeInfo(memberAccess.Expression).Type;
             if (symbol.GetMembers(CountName).OfType<IPropertySymbol>().Any())
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, GetReportLocation(invocation),
+                context.ReportDiagnostic(Diagnostic.Create(rule, GetReportLocation(invocation),
                     string.Format(MessageUseInstead, $"\"{CountName}\" property")));
             }
         }
@@ -157,7 +140,7 @@ namespace SonarAnalyzer.Rules.CSharp
             if (innerMethodSymbol != null &&
                 IsToCollectionCall(innerMethodSymbol))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, GetReportLocation(innerInvocation),
+                context.ReportDiagnostic(Diagnostic.Create(rule, GetReportLocation(innerInvocation),
                     string.Format(MessageDropFromMiddle, innerMethodSymbol.Name)));
             }
         }
@@ -284,7 +267,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 IsFirstExpressionInLambdaIsNullChecking(outerMethodSymbol, outerInvocation) &&
                 TryGetCastInLambda(SyntaxKind.AsExpression, innerMethodSymbol, innerInvocation, out typeNameInInner))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, GetReportLocation(innerInvocation),
+                context.ReportDiagnostic(Diagnostic.Create(rule, GetReportLocation(innerInvocation),
                     string.Format(MessageUseInstead, $"\"OfType<{typeNameInInner}>()\"")));
                 return true;
             }
@@ -296,7 +279,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 TryGetCastInLambda(SyntaxKind.IsExpression, innerMethodSymbol, innerInvocation, out typeNameInInner) &&
                 typeNameInOuter == typeNameInInner)
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, GetReportLocation(innerInvocation),
+                context.ReportDiagnostic(Diagnostic.Create(rule, GetReportLocation(innerInvocation),
                     string.Format(MessageUseInstead, $"\"OfType<{typeNameInInner}>()\"")));
                 return true;
             }
@@ -472,7 +455,7 @@ namespace SonarAnalyzer.Rules.CSharp
                     return namedType.TypeArguments.Count() == 2;
                 }))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, GetReportLocation(innerInvocation),
+                context.ReportDiagnostic(Diagnostic.Create(rule, GetReportLocation(innerInvocation),
                     string.Format(MessageDropAndChange, WhereMethodName, outerMethodSymbol.Name)));
                 return true;
             }

@@ -18,7 +18,6 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 using SonarAnalyzer.Protobuf;
 
@@ -29,11 +28,11 @@ namespace SonarAnalyzer.Rules
         protected const string DiagnosticId = "S9999-cpd";
         protected const string Title = "Copy-paste token calculator";
 
-        protected static readonly DiagnosticDescriptor Rule =
+        private static DiagnosticDescriptor rule =
             new DiagnosticDescriptor(DiagnosticId, Title, string.Empty, string.Empty, DiagnosticSeverity.Warning,
                 true, customTags: WellKnownDiagnosticTags.NotConfigurable);
 
-        public sealed override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         internal const string CopyPasteTokenFileName = "token-cpd.pb";
 

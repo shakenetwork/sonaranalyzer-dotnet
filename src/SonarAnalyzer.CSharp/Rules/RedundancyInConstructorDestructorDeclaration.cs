@@ -18,45 +18,28 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System.Linq;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("2min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, false)]
-    [Tags(Tag.Clumsy, Tag.Finding)]
+    [Rule(DiagnosticId)]
     public class RedundancyInConstructorDestructorDeclaration : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3253";
-        internal const string Title = "Constructor and destructor declarations should not be redundant";
-        internal const string Description =
-            "Since the compiler will automatically invoke the base type's no-argument constructor, there's no need to specify its " +
-            "invocation explicitly. Also, when only a single \"public\" parameterless constructor is defined in a class, then that " +
-            "constructor can be removed because the compiler would generate it automatically. Similarly, empty \"static\" constructors " +
-            "and empty destructors are also wasted keystrokes.";
         internal const string MessageFormat = "Remove this redundant {0}.";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Minor;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(ideVisibility), true,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description,
-                customTags: ideVisibility.ToCustomTags());
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, ideVisibility, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -75,7 +58,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
             if (IsBodyEmpty(destructorDeclaration.Body))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, destructorDeclaration.GetLocation(), "destructor"));
+                context.ReportDiagnostic(Diagnostic.Create(rule, destructorDeclaration.GetLocation(), "destructor"));
             }
         }
 
@@ -85,7 +68,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
             if (IsConstructorRedundant(constructorDeclaration, context.SemanticModel))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, constructorDeclaration.GetLocation(), "constructor"));
+                context.ReportDiagnostic(Diagnostic.Create(rule, constructorDeclaration.GetLocation(), "constructor"));
                 return;
             }
 
@@ -93,7 +76,7 @@ namespace SonarAnalyzer.Rules.CSharp
             if (initializer != null &&
                 IsInitializerRedundant(initializer))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, initializer.GetLocation(), "\"base()\" call"));
+                context.ReportDiagnostic(Diagnostic.Create(rule, initializer.GetLocation(), "\"base()\" call"));
             }
         }
 

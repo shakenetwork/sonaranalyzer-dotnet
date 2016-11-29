@@ -18,49 +18,31 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System.Linq;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("2min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Cert, Tag.Misra, Tag.Pitfall)]
+    [Rule(DiagnosticId)]
     public class MethodOverrideChangedDefaultValue : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1006";
-        internal const string Title = "Method overrides should not change parameter defaults";
-        internal const string Description =
-            "Default arguments are determined by the static type of the object. If a default argument is different for a parameter in " +
-            "an overriding method, the value used in the call will be different when calls are made via the base or derived object, " +
-            "which may be contrary to developer expectations. Default parameter values are useless in explicit interface implementations, " +
-            "because the static type of the object will always be the implemented interface. Thus, specifying the default values is " +
-            "useless and confusing.";
         internal const string MessageFormat = "{0} the default parameter value {1}.";
         internal const string MessageAdd = "defined in the overridden method";
         internal const string MessageRemove = "to match the signature of overridden method";
         internal const string MessageUseSame = "defined in the overridden method";
         internal const string MessageRemoveExplicit = "from this explicit interface implementation";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -99,7 +81,7 @@ namespace SonarAnalyzer.Rules.CSharp
             {
                 if (overridingParameter.HasExplicitDefaultValue)
                 {
-                    context.ReportDiagnostic(Diagnostic.Create(Rule, parameterSyntax.Default.GetLocation(), "Remove", MessageRemoveExplicit));
+                    context.ReportDiagnostic(Diagnostic.Create(rule, parameterSyntax.Default.GetLocation(), "Remove", MessageRemoveExplicit));
                 }
 
                 return;
@@ -108,14 +90,14 @@ namespace SonarAnalyzer.Rules.CSharp
             if (overridingParameter.HasExplicitDefaultValue &&
                 !overriddenParameter.HasExplicitDefaultValue)
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, parameterSyntax.Default.GetLocation(), "Remove", MessageRemove));
+                context.ReportDiagnostic(Diagnostic.Create(rule, parameterSyntax.Default.GetLocation(), "Remove", MessageRemove));
                 return;
             }
 
             if (!overridingParameter.HasExplicitDefaultValue &&
                 overriddenParameter.HasExplicitDefaultValue)
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, parameterSyntax.Identifier.GetLocation(), "Add", MessageAdd));
+                context.ReportDiagnostic(Diagnostic.Create(rule, parameterSyntax.Identifier.GetLocation(), "Add", MessageAdd));
                 return;
             }
 
@@ -123,7 +105,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 overriddenParameter.HasExplicitDefaultValue &&
                 !object.Equals(overridingParameter.ExplicitDefaultValue, overriddenParameter.ExplicitDefaultValue))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, parameterSyntax.Default.Value.GetLocation(), "Use", MessageUseSame));
+                context.ReportDiagnostic(Diagnostic.Create(rule, parameterSyntax.Default.Value.GetLocation(), "Use", MessageUseSame));
                 return;
             }
         }

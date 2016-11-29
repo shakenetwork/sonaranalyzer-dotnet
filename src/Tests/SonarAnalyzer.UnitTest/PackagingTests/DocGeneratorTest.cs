@@ -33,6 +33,7 @@ namespace SonarAnalyzer.UnitTest.PackagingTests
     {
         private const string TestCategoryName = "DocGenerator";
 
+        [Ignore]
         [TestMethod]
         [TestCategory(TestCategoryName)]
         public void CheckNumberOfCrossReferences()

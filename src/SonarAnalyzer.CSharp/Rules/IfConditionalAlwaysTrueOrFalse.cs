@@ -18,49 +18,30 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
-using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
-using SonarAnalyzer.Helpers;
 using Microsoft.CodeAnalysis.Text;
+using SonarAnalyzer.Common;
+using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
-    [SqaleConstantRemediation("2min")]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Bug, Tag.Cwe, Tag.Misra, Tag.Security)]
+    [Rule(DiagnosticId)]
     public class IfConditionalAlwaysTrueOrFalse : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1145";
-        internal const string Title = "Useless \"if(true) {...}\" and \"if(false){...}\" blocks should be removed";
-        internal const string Description =
-            "\"if\" statements with conditions that are always false have the effect of making " +
-            "blocks of code non-functional. This can be useful during debugging, but should not " +
-            "be checked in. \"if\" statements with conditions that are always true are completely " +
-            "redundant, and make the code less readable. In either case, unconditional \"if\" " +
-            "statements should be removed.";
         internal const string MessageFormat = "Remove this useless {0}.";
         private const string ifStatementLiteral = "\"if\" statement";
         private const string elseClauseLiteral = "\"else\" clause";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(ideVisibility), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description,
-                customTags: ideVisibility.ToCustomTags());
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, ideVisibility, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -97,7 +78,7 @@ namespace SonarAnalyzer.Rules.CSharp
                     ifStatement.SyntaxTree,
                     new TextSpan(ifStatement.IfKeyword.SpanStart, ifStatement.Else.ElseKeyword.Span.End - ifStatement.IfKeyword.SpanStart));
 
-            context.ReportDiagnostic(Diagnostic.Create(Rule, location, ifStatementLiteral));
+            context.ReportDiagnostic(Diagnostic.Create(rule, location, ifStatementLiteral));
         }
 
         private static void ReportIfTrue(IfStatementSyntax ifStatement, SyntaxNodeAnalysisContext context)
@@ -106,11 +87,11 @@ namespace SonarAnalyzer.Rules.CSharp
                 ifStatement.SyntaxTree,
                 new TextSpan(ifStatement.IfKeyword.SpanStart, ifStatement.CloseParenToken.Span.End - ifStatement.IfKeyword.SpanStart));
 
-            context.ReportDiagnostic(Diagnostic.Create(Rule, location, ifStatementLiteral));
+            context.ReportDiagnostic(Diagnostic.Create(rule, location, ifStatementLiteral));
 
             if (ifStatement.Else != null)
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, ifStatement.Else.GetLocation(), elseClauseLiteral));
+                context.ReportDiagnostic(Diagnostic.Create(rule, ifStatement.Else.GetLocation(), elseClauseLiteral));
             }
         }
     }

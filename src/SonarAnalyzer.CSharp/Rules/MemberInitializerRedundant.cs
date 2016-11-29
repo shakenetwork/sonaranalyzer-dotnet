@@ -18,20 +18,18 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System;
-using System.Collections.Generic;
-using SonarAnalyzer.Helpers.FlowAnalysis.CSharp;
-using SonarAnalyzer.Helpers.FlowAnalysis.Common;
 using SonarAnalyzer.Helpers.FlowAnalysis;
+using SonarAnalyzer.Helpers.FlowAnalysis.Common;
+using SonarAnalyzer.Helpers.FlowAnalysis.CSharp;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
@@ -39,28 +37,17 @@ namespace SonarAnalyzer.Rules.CSharp
     using CtorDeclarationTuple = SyntaxNodeSymbolSemanticModelTuple<ConstructorDeclarationSyntax, IMethodSymbol>;
 
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("1min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [Rule(DiagnosticId, Severity.Minor, Title, false)]
-    [Tags(Tag.Finding)]
+    [Rule(DiagnosticId)]
     public class MemberInitializerRedundant : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3604";
-        internal const string Title = "Member initializer values should not be redundant";
-        internal const string Description =
-            "Fields, properties and events can be initialized either inline or in the constructor. Initializing them inline and in the constructor at the " +
-            "same time is redundant; the inline initialization will be overridden.";
         internal const string MessageFormat = "Remove the member initializer, all constructors set an initial value for the member.";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
+        private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                DiagnosticSeverity.Info, true,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description,
-                customTags: IdeVisibility.Hidden.ToCustomTags());
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, ideVisibility, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {

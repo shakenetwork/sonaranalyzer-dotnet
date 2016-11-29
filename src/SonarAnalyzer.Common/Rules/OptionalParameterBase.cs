@@ -18,40 +18,18 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
-using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
-using System.Collections.Generic;
 
 namespace SonarAnalyzer.Rules.Common
 {
     public abstract class OptionalParameterBase : SonarDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S2360";
-        protected const string Title = "Optional parameters should not be used";
-        protected const string Description =
-            "The overloading mechanism should be used in place of optional parameters for several reasons. " +
-            "Optional parameter values are baked into the method call site code, thus, if a default " +
-            "value has been changed, all referencing assemblies need to be rebuilt, otherwise the original values will be used. The " +
-            "Common Language Specification (CLS) allows compilers to ignore default parameter values, and thus require the caller to " +
-            "explicitly specify the values. The concept of optional argument exists only in VB.Net and C#. In all other languages " +
-            "like C++ or Java, the overloading mechanism is the only way to get the same behavior. " +
-            "Optional parameters prevent muddying the definition of the function contract. Here is a simple " +
-            "example: if there are two optional parameters, when one is defined, is the second one still optional or mandatory?";
         protected const string MessageFormat = "Use the overloading mechanism instead of the optional parameters.";
-        protected const string Category = SonarAnalyzer.Common.Category.Design;
-        protected const Severity RuleSeverity = Severity.Major;
-        protected const bool IsActivatedByDefault = true;
-
-        protected static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
-
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
     }

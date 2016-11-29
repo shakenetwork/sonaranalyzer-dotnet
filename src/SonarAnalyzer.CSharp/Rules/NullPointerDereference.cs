@@ -20,47 +20,31 @@
 
 using System;
 using System.Collections.Generic;
-using System.Collections.Immutable;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 using SonarAnalyzer.Helpers.FlowAnalysis.Common;
 using SonarAnalyzer.Helpers.FlowAnalysis.CSharp;
-using System.Linq;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     using ExplodedGraph = Helpers.FlowAnalysis.CSharp.ExplodedGraph;
 
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
-    [SqaleConstantRemediation("10min")]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Bug, Tag.Cert, Tag.Cwe, Tag.OwaspA1, Tag.OwaspA2, Tag.OwaspA6, Tag.Security)]
+    [Rule(DiagnosticId)]
     public class NullPointerDereference : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2259";
-        internal const string Title = "Null pointers should not be dereferenced";
-        internal const string Description =
-            "A reference to \"null\" should never be dereferenced/accessed. Doing so will cause a \"NullReferenceException\" to be thrown. " +
-            "At best, such an exception will cause abrupt program termination. At worst, it could expose debugging information that would " +
-            "be useful to an attacker, or it could allow an attacker to bypass security measures.";
         internal const string MessageFormat = "\"{0}\" is null on at least one execution path.";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Blocker;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -90,7 +74,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
             foreach (var nullIdentifier in nullIdentifiers)
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, nullIdentifier.GetLocation(), nullIdentifier.Identifier.ValueText));
+                context.ReportDiagnostic(Diagnostic.Create(rule, nullIdentifier.GetLocation(), nullIdentifier.Identifier.ValueText));
             }
         }
 

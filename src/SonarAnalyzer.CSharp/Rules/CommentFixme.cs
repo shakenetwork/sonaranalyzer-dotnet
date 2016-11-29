@@ -18,38 +18,26 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
-using SonarAnalyzer.Helpers;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
+using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [NoSqaleRemediation]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
+    [Rule(DiagnosticId)]
     public class CommentFixme : CommentWordBase
     {
         protected override string Word => "FIXME";
 
         internal const string DiagnosticId = "S1134";
-        internal const string Title = "\"FIXME\" tags should be handled";
-        internal const string Description =
-            "\"FIXME\" tags are commonly used to mark places where a bug is suspected, but which the developer wants to " +
-            "deal with later. Sometimes the developer will not have the time or will simply forget to get back to that " +
-            "tag. This rule is meant to track those tags, and ensure that they do not go unnoticed.";
         internal const string MessageFormat =
             "Take the required action to fix the issue indicated by this \"FIXME\" comment.";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
         protected override DiagnosticDescriptor Rule => rule;
     }

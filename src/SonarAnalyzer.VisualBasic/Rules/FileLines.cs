@@ -21,18 +21,19 @@
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.VisualBasic
 {
     [DiagnosticAnalyzer(LanguageNames.VisualBasic)]
-    [SqaleConstantRemediation("1h")]
-    [Rule(DiagnosticId, RuleSeverity, Title, true)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
-    [Tags(Tag.BrainOverload)]
+    [Rule(DiagnosticId)]
     public class FileLines : FileLinesBase
     {
+        protected static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
+
+        protected override DiagnosticDescriptor Rule => rule;
+
         protected override GeneratedCodeRecognizer GeneratedCodeRecognizer =>
              Helpers.VisualBasic.GeneratedCodeRecognizer.Instance;
     }

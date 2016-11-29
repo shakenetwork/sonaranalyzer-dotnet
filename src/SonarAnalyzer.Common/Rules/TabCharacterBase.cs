@@ -28,24 +28,6 @@ namespace SonarAnalyzer.Rules
 {
     public abstract class TabCharacterBase : SonarDiagnosticAnalyzer
     {
-        protected const string DiagnosticId = "S105";
-        protected const string Title = "Tabulation characters should not be used";
-        protected const string Description =
-            "Developers should not need to configure the tab width of their text editors in order to be " +
-            "able to read source code. So the use of tabulation character must be banned.";
-        protected const string MessageFormat = "Replace all tab characters in this file by sequences of white-spaces.";
-        protected const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        protected const Severity RuleSeverity = Severity.Minor;
-        protected const bool IsActivatedByDefault = false;
-
-        protected static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
-
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
-
         protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxTreeActionInNonGenerated(

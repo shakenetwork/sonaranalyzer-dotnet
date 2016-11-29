@@ -18,44 +18,28 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("10min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Bug, Tag.Cert, Tag.Misra)]
+    [Rule(DiagnosticId)]
     public class ReturnValueIgnored : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2201";
-        internal const string Title = "Return values should not be ignored when function calls don't have any side effects";
-        internal const string Description =
-            "When the call to a function doesn't have any side effects, what is the point of making the call if the results " +
-            "are ignored? In such case, either the function call is useless and should be dropped or the source code doesn't " +
-            "behave as expected.";
         internal const string MessageFormat = "Use the return value of method \"{0}\", which has no side effect.";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Critical;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -104,7 +88,7 @@ namespace SonarAnalyzer.Rules.CSharp
             if (invokedMethodSymbol.Parameters.All(p => p.RefKind == RefKind.None) &&
                 IsSideEffectFreeOrPure(invokedMethodSymbol))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, expression.GetLocation(), invokedMethodSymbol.Name));
+                context.ReportDiagnostic(Diagnostic.Create(rule, expression.GetLocation(), invokedMethodSymbol.Name));
             }
         }
 

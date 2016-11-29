@@ -18,33 +18,17 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.Text;
 using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
-using Microsoft.CodeAnalysis.Text;
 
 namespace SonarAnalyzer.Rules
 {
     public abstract class FileLinesBase : ParameterLoadingDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S104";
-        internal const string Title = "Files should not have too many lines";
-        internal const string Description =
-            "A source file that grows too much tends to aggregate too many responsibilities and inevitably becomes harder to understand and " +
-            "therefore to maintain. Above a specific threshold, it is strongly advised to refactor it into smaller pieces of code which focus " +
-            "on well defined tasks. Those smaller files will not only be easier to understand but also probably easier to test.";
         internal const string MessageFormat = "This file has {1} lines, which is greater than {0} authorized. Split it into smaller files.";
-        internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Major;
-
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), false,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
-
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         private const int DefaultValueMaximum = 1000;
 

@@ -23,43 +23,24 @@ using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("5min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Design)]
+    [Rule(DiagnosticId)]
     public class InheritedCollidingInterfaceMembers : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3444";
-        internal const string Title = "Interfaces with colliding, inherited members should explicitly redefine interface members";
-        internal const string Description =
-            "When an interface \"IDerived\" inherits from two interfaces \"IBase1\" and \"IBase2\" that both define a member " +
-            "\"SomeProperty\", calling \"IDerived.SomeProperty\" will result in the compiler error \"CS0229 Ambiguity between " +
-            "'IBase1.SomeProperty' and 'IBase2.SomeProperty'\". Every caller will be forced to cast instances of \"IDerived\" " +
-            "to \"IBase1\" or \"IBase2\" to resolve the ambiguity and to be able to access \"SomeProperty\". Instead, it is " +
-            "better to resolve the ambiguity on the definition of \"IDerived\" either by: renaming one of the \"SomeProperty\" " +
-            "in \"IBase1\" or \"IBase2\" to remove the collision or by also defining a new \"SomeProperty\" member on " +
-            "\"IDerived\". Use the latter only if all \"SomeProperty\" are meant to hold the same value.";
         internal const string MessageFormat = "Rename or add member{1} {0} to this interface to resolve ambiguities.";
-        internal const string Category = SonarAnalyzer.Common.Category.Design;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         private const int MaxMemberDisplayCount = 2;
 

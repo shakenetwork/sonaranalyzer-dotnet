@@ -18,50 +18,32 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System;
 using SonarAnalyzer.Helpers.CSharp;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [Obsolete("This rule is superceded by S2259.")]
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
-    [SqaleConstantRemediation("2min")]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Bug)]
+    [Rule(DiagnosticId)]
     public class ShortCircuitNullPointerDereference : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1697";
-        internal const string Title =
-            "Short-circuit logic should be used to prevent null pointer dereferences in conditionals";
-        internal const string Description =
-            "When either the equality operator in a null test or the logical operator that follows it is reversed, " +
-            "the code has the appearance of safely null-testing the object before dereferencing it. Unfortunately " +
-            "the effect is just the opposite - the object is null-tested and then dereferenced only if it is null, " +
-            "leading to a guaranteed null pointer dereference.";
         internal const string MessageFormat =
             "Either reverse the equality operator in the \"{0}\" null test, or reverse the logical operator that follows it.";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Blocker;
-        internal const bool IsActivatedByDefault = false;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -149,7 +131,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
                 if (descendantNodes.Any())
                 {
-                    context.ReportDiagnostic(Diagnostic.Create(Rule, comparisonToNull.GetLocation(),
+                    context.ReportDiagnostic(Diagnostic.Create(rule, comparisonToNull.GetLocation(),
                         expressionComparedToNull.ToString()));
                 }
             }

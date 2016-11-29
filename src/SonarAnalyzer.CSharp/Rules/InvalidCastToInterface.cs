@@ -18,51 +18,34 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System.Linq;
-using System.Collections.Generic;
-using SonarAnalyzer.Helpers.FlowAnalysis.CSharp;
-using System;
 using SonarAnalyzer.Helpers.FlowAnalysis.Common;
+using SonarAnalyzer.Helpers.FlowAnalysis.CSharp;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     using ExplodedGraph = Helpers.FlowAnalysis.CSharp.ExplodedGraph;
 
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("20min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Bug, Tag.Cert, Tag.Cwe, Tag.Misra, Tag.Pitfall)]
+    [Rule(DiagnosticId)]
     public class InvalidCastToInterface : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1944";
-        internal const string Title = "Inappropriate casts should not be made";
-        internal const string Description =
-            "Inappropriate casts are issues that will lead to unexpected behavior or runtime errors, such as " +
-            "\"InvalidCastException\"s. The compiler will catch bad casts from one class to another, but not " +
-            "bad casts to interfaces. Also, nullable values that are known to be empty can't be cast to their " +
-            "underlying value type.";
+        internal const string MessageFormat = "{0}";
         internal const string MessageReviewFormat = "Review this cast; in this project there's no type that {0}.";
         internal const string MessageDefinite = "Nullable is known to be empty, this cast throws an exception.";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Critical;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, "{0}", Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -180,7 +163,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
                 if (!context.Equals(default(SyntaxNodeAnalysisContext)))
                 {
-                    context.ReportDiagnostic(Diagnostic.Create(Rule, castExpression.GetLocation(), MessageDefinite));
+                    context.ReportDiagnostic(Diagnostic.Create(rule, castExpression.GetLocation(), MessageDefinite));
                 }
 
                 return null;
@@ -234,7 +217,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 ? $"implements both \"{expressionTypeName}\" and \"{interfaceTypeName}\""
                 : $"extends \"{expressionTypeName}\" and implements \"{interfaceTypeName}\"";
 
-            context.ReportDiagnostic(Diagnostic.Create(Rule, issueLocation, string.Format(MessageReviewFormat, messageReasoning)));
+            context.ReportDiagnostic(Diagnostic.Create(rule, issueLocation, string.Format(MessageReviewFormat, messageReasoning)));
         }
     }
 }

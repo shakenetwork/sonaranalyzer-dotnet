@@ -24,11 +24,10 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
 using SonarAnalyzer.Common;
-using Microsoft.CodeAnalysis.CodeFixes;
 using SonarAnalyzer.RuleDescriptors;
+using System.Resources;
 
 namespace SonarAnalyzer.Utilities
 {
@@ -43,6 +42,7 @@ namespace SonarAnalyzer.Utilities
         {
             return new RuleFinder().GetAnalyzerTypes(language).Select(t => GetRuleDetail(t, language));
         }
+
         public static IEnumerable<RuleDetail> GetParameterlessRuleDetails(AnalyzerLanguage language)
         {
             return new RuleFinder().GetParameterlessAnalyzerTypes(language).Select(t => GetRuleDetail(t, language));
@@ -52,18 +52,25 @@ namespace SonarAnalyzer.Utilities
         {
             var rule = analyzerType.GetCustomAttributes<RuleAttribute>().Single();
 
+            var resources = new ResourceManager("SonarAnalyzer.RspecStrings", analyzerType.Assembly);
+
             var ruleDetail = new RuleDetail
             {
                 Key = rule.Key,
-                Title = rule.Title,
-                Severity = rule.Severity.ToString(),
-                IsActivatedByDefault = rule.IsActivatedByDefault,
+                Title = resources.GetString($"{rule.Key}_Title"),
+                Severity = resources.GetString($"{rule.Key}_Severity"),
+                IsActivatedByDefault = bool.Parse(resources.GetString($"{rule.Key}_IsActivatedByDefault")),
                 Description = GetResourceHtml(rule, language)
             };
 
+            ruleDetail.Tags.AddRange(resources.GetString($"{rule.Key}_Tags").Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+
+            var remediation = resources.GetString($"{rule.Key}_Remediation");
+            var remediationCost = resources.GetString($"{rule.Key}_RemediationCost");
+
+            ruleDetail.SqaleDescriptor = GetSqaleDescriptor(remediation, remediationCost);
+
             GetParameters(analyzerType, ruleDetail);
-            GetTags(analyzerType, ruleDetail);
-            GetSqale(analyzerType, ruleDetail);
             GetCodeFixNames(analyzerType, ruleDetail);
 
             return ruleDetail;
@@ -75,56 +82,35 @@ namespace SonarAnalyzer.Utilities
             return analyzerType.Assembly.GetType(typeName);
         }
 
-        private static void GetSqale(Type analyzerType, RuleDetail ruleDetail)
+        private static SqaleDescriptor GetSqaleDescriptor(string remediation, string remediationCost)
         {
-            var sqaleRemediation = analyzerType.GetCustomAttributes<SqaleRemediationAttribute>().FirstOrDefault();
-
-            if (sqaleRemediation == null || sqaleRemediation is NoSqaleRemediationAttribute)
+            if (remediation == null)
             {
-                ruleDetail.SqaleDescriptor = null;
-                return;
+                return null;
             }
 
-            var sqaleSubCharacteristic = analyzerType.GetCustomAttributes<SqaleSubCharacteristicAttribute>().First();
-            var sqaleDescriptor = new SqaleDescriptor
-            {
-                SubCharacteristic = sqaleSubCharacteristic.SubCharacteristic.ToSonarQubeString()
-            };
-            var constantRemediation = sqaleRemediation as SqaleConstantRemediationAttribute;
-            if (constantRemediation == null)
-            {
-                ruleDetail.SqaleDescriptor = sqaleDescriptor;
-                return;
-            }
+            var sqaleDescriptor = new SqaleDescriptor();
 
-            sqaleDescriptor.Remediation.Properties.AddRange(new[]
+            if (remediation == "Constant/Issue")
             {
-                new SqaleRemediationProperty
+                sqaleDescriptor.Remediation.Properties.AddRange(new[]
                 {
-                    Key = SqaleRemediationProperty.RemediationFunctionKey,
-                    Text = SqaleRemediationProperty.ConstantRemediationFunctionValue
-                },
-                new SqaleRemediationProperty
-                {
-                    Key = SqaleRemediationProperty.OffsetKey,
-                    Value = constantRemediation.Value,
-                    Text = string.Empty
-                }
-            });
-
-            ruleDetail.SqaleDescriptor = sqaleDescriptor;
-        }
-
-        private static void GetTags(Type analyzerType, RuleDetail ruleDetail)
-        {
-            var tags = analyzerType.GetCustomAttributes<TagsAttribute>().FirstOrDefault();
-            if (tags != null)
-            {
-                ruleDetail.Tags.AddRange(tags.Tags);
+                    new SqaleRemediationProperty
+                    {
+                        Key = SqaleRemediationProperty.RemediationFunctionKey,
+                        Text = SqaleRemediationProperty.ConstantRemediationFunctionValue
+                    },
+                    new SqaleRemediationProperty
+                    {
+                        Key = SqaleRemediationProperty.OffsetKey,
+                        Value = remediationCost,
+                        Text = string.Empty
+                    }
+                });
             }
+
+            return sqaleDescriptor;
         }
-
-
 
         private static void GetCodeFixNames(Type analyzerType, RuleDetail ruleDetail)
         {
@@ -154,7 +140,7 @@ namespace SonarAnalyzer.Utilities
             yield return codeFixProvider;
 
             var baseClass = codeFixProvider.BaseType;
-            while (baseClass!= null && baseClass != typeof(SonarCodeFixProvider))
+            while (baseClass != null && baseClass != typeof(SonarCodeFixProvider))
             {
                 yield return baseClass;
                 baseClass = baseClass.BaseType;

@@ -18,44 +18,28 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System.Collections.Generic;
 using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.Sqale;
 using SonarAnalyzer.Helpers;
-using System.Collections.Generic;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("5min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Bug)]
+    [Rule(DiagnosticId)]
     public class GuardConditionOnEqualsOverride : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3397";
-        internal const string Title = "\"base.Equals\" should not be used to check for reference equality in \"Equals\" if \"base\" is not \"object\"";
-        internal const string Description =
-            "\"object.Equals()\" overrides can be optimized by checking first for reference equality between \"this\" and the " +
-            "parameter. This check can be implemented by calling \"object.ReferenceEquals()\" or \"base.Equals()\", where \"base\" " +
-            "is \"object\". However, using \"base.Equals()\" is a maintenance hazard because while it works if you extend \"Object\" " +
-            "directly, if you introduce a new base class that overrides \"Equals\", it suddenly stops working.";
         internal const string MessageFormat = "Change this guard condition to call \"object.ReferenceEquals\".";
-        internal const string Category = SonarAnalyzer.Common.Category.Reliability;
-        internal const Severity RuleSeverity = Severity.Critical;
-        internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+        private static readonly DiagnosticDescriptor rule =
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+        protected sealed override DiagnosticDescriptor Rule => rule;
 
         private static readonly ISet<string> MethodNames = ImmutableHashSet.Create( GetHashCodeEqualsOverride.EqualsName );
 
@@ -109,7 +93,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 !objectType.Is(KnownType.System_Object) &&
                 GetHashCodeEqualsOverride.IsEqualsCallInGuardCondition(invocation, invokedMethod))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation()));
+                context.ReportDiagnostic(Diagnostic.Create(rule, invocation.GetLocation()));
             }
         }
     }

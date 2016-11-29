@@ -27,8 +27,6 @@ namespace SonarAnalyzer.RuleDescriptors
             Remediation = new SqaleRemediation();
         }
 
-        public string SubCharacteristic { get; set; }
-
         public SqaleRemediation Remediation { get; set; }
     }
 }
