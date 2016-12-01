@@ -5,6 +5,24 @@ namespace Tests.Diagnostics
 {
     public class EmptyNullableValueAccess
     {
+        private IEnumerable<TestClass> numbers = new[]
+        {
+            new TestClass { Number = 42 },
+            new TestClass(),
+            new TestClass { Number = 1 },
+            new TestClass { Number = null }
+        };
+
+        private class TestClass
+        {
+            public int? Number { get; set; }
+        }
+
+        public void SetI0()
+        {
+            i0 = 42;
+        }
+
         public void TestNull()
         {
             int? i1 = null;
@@ -16,6 +34,9 @@ namespace Tests.Diagnostics
             Console.WriteLine(i1.Value); // Noncompliant {{"i1" is null on at least one execution path.}}
 //                            ^^^^^^^^
         }
+
+        public IEnumerable<TestClass> TestEnumerableExpressionWithCompilableCode() => numbers.OrderBy(i => i.Number.HasValue).ThenBy(i => i.Number);
+        public IEnumerable<int> TestEnumerableExpressionWithNonCompilableCode() => numbers.OrderBy(i => i.Number.HasValue).ThenBy(i => i.Number);
 
         public void TestNonNull()
         {

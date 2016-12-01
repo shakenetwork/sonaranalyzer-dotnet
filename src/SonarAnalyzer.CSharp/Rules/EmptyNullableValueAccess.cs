@@ -157,7 +157,7 @@ namespace SonarAnalyzer.Rules.CSharp
             private bool IsHasValueAccess(MemberAccessExpressionSyntax memberAccess)
             {
                 return memberAccess.Name.Identifier.ValueText == HasValueLiteral &&
-                    semanticModel.GetTypeInfo(memberAccess.Expression).Type.OriginalDefinition.Is(KnownType.System_Nullable_T);
+                    (semanticModel.GetTypeInfo(memberAccess.Expression).Type?.OriginalDefinition).Is(KnownType.System_Nullable_T);
             }
 
             internal bool TryProcessInstruction(MemberAccessExpressionSyntax instruction, ProgramState programState, out ProgramState newProgramState)
