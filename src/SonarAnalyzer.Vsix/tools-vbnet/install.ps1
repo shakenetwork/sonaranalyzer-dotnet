@@ -1,8 +1,8 @@
 ﻿param($installPath, $toolsPath, $package, $project)
 
-if ($project.DTE.Version -ne '14.0')
+if ($project.DTE.Version -NotIn '14.0', '15.0')
 {
-    throw 'This package can only be installed on Visual Studio 2015.'
+    throw 'This package can only be installed on Visual Studio 2015  or Visual Studio 2017.'
 }
 
 if ($project.Object.AnalyzerReferences -eq $null)

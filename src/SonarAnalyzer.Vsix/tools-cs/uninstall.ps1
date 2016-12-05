@@ -5,7 +5,7 @@ if($project.Type -ne "C#")
     return
 }
 
-if ($project.DTE.Version -eq '14.0')
+if ($project.DTE.Version -In '14.0', '15.0')
 {
     if ($project.Object.AnalyzerReferences -ne $null)
     {
