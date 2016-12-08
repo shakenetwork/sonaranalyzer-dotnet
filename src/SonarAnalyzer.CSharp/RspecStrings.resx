@@ -196,7 +196,7 @@
     <value>Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.</value>
   </data>
   <data name="S103_IsActivatedByDefault" xml:space="preserve">
-    <value>True</value>
+    <value>False</value>
   </data>
   <data name="S103_Remediation" xml:space="preserve">
     <value>Constant/Issue</value>
@@ -568,7 +568,7 @@
     <value>if statements with conditions that are always false have the effect of making blocks of code non-functional. if statements with conditions that are always true are completely redundant, and make the code less readable.</value>
   </data>
   <data name="S1145_IsActivatedByDefault" xml:space="preserve">
-    <value>False</value>
+    <value>True</value>
   </data>
   <data name="S1145_Remediation" xml:space="preserve">
     <value>Constant/Issue</value>
@@ -1312,7 +1312,7 @@
     <value>There is no good reason to create a new object to not do anything with it. Most of the time, this is due to a missing piece of code and so could lead to an unexpected behavior in production.</value>
   </data>
   <data name="S1848_IsActivatedByDefault" xml:space="preserve">
-    <value>False</value>
+    <value>True</value>
   </data>
   <data name="S1848_Remediation" xml:space="preserve">
     <value>Constant/Issue</value>
@@ -1456,7 +1456,7 @@
     <value>An inheritance list entry is redundant if:</value>
   </data>
   <data name="S1939_IsActivatedByDefault" xml:space="preserve">
-    <value>False</value>
+    <value>True</value>
   </data>
   <data name="S1939_Remediation" xml:space="preserve">
     <value>Constant/Issue</value>
@@ -2440,7 +2440,7 @@
     <value>You cannot assume that any given stream reading call will fill the byte[] passed in to the method with the number of bytes requested. Instead, you must check the value returned by the read method to see how many bytes were read. Fail to do so, and you introduce a bug that is both harmful and difficult to reproduce.</value>
   </data>
   <data name="S2674_IsActivatedByDefault" xml:space="preserve">
-    <value>True</value>
+    <value>False</value>
   </data>
   <data name="S2674_Remediation" xml:space="preserve">
     <value>Constant/Issue</value>
@@ -2608,7 +2608,7 @@
     <value>When the second and third operands of a ternary operator are the same, the operator will always return the same value regardless of the condition. Either the operator itself is pointless, or a mistake was made in coding it. </value>
   </data>
   <data name="S2758_IsActivatedByDefault" xml:space="preserve">
-    <value>False</value>
+    <value>True</value>
   </data>
   <data name="S2758_Remediation" xml:space="preserve">
     <value>Constant/Issue</value>
@@ -3280,7 +3280,7 @@
     <value>In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means </value>
   </data>
   <data name="S3240_IsActivatedByDefault" xml:space="preserve">
-    <value>True</value>
+    <value>False</value>
   </data>
   <data name="S3240_Remediation" xml:space="preserve">
     <value>Constant/Issue</value>

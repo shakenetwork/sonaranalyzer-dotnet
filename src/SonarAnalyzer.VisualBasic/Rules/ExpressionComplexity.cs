@@ -33,11 +33,9 @@ namespace SonarAnalyzer.Rules.VisualBasic
     [Rule(DiagnosticId)]
     public class ExpressionComplexity : ExpressionComplexityBase<ExpressionSyntax>
     {
-        internal const string Description =
-           "Complex boolean expressions are hard to read and so to maintain.";
-
         private static readonly DiagnosticDescriptor rule =
-            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager)
+                                       .DisabledByDefault();
 
         protected sealed override DiagnosticDescriptor Rule => rule;
 

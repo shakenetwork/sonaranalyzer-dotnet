@@ -9,12 +9,14 @@ statements with conditions that are always true are completely redundant, and ma
 <p>In any of these cases, unconditional <code>if</code> statements should be removed.</p>
 <h2>Noncompliant Code Example</h2>
 <pre>
-if (true) {
-  doSomething();
+if (true)
+{
+  DoSomething();
 }
 ...
-if (false) {
-  doSomethingElse();
+if (false)
+{
+  DoSomethingElse();
 }
 
 if (2 &lt; 3 ) { ... }  // Noncompliant; always false
@@ -22,17 +24,17 @@ if (2 &lt; 3 ) { ... }  // Noncompliant; always false
 int i = 0;
 int j = 0;
 // ...
-j = foo();
+j = Foo();
 
 if (j &gt; 0 &amp;&amp; i &gt; 0) { ... }  // Noncompliant; always false - i never set after initialization
 
-boolean b = true;
+bool b = true;
 //...
 if (b || !b) { ... }  // Noncompliant
 </pre>
 <h2>Compliant Solution</h2>
 <pre>
-doSomething();
+DoSomething();
 ...
 </pre>
 <h2>See</h2>

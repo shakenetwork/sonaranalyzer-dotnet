@@ -30,7 +30,8 @@ namespace SonarAnalyzer.Rules.CSharp
     public class FileLines : FileLinesBase
     {
         protected static readonly DiagnosticDescriptor rule =
-            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager)
+                                       .DisabledByDefault();
 
         protected override DiagnosticDescriptor Rule => rule;
 

@@ -12,6 +12,8 @@ public bool CanVote(Person person)
 public bool CanVote(Person person)
 {
   return person.GetAge() &gt; 18 ? true : false;
+  // or even better:
+  // return person.GetAge() &gt; 18;
 }
 </pre>
 <h2>Deprecated</h2>

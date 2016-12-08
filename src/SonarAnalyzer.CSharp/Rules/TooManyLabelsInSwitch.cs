@@ -36,7 +36,8 @@ namespace SonarAnalyzer.Rules.CSharp
         internal const string MessageFormat = "Consider reworking this \"switch\" to reduce the number of \"case\"s from {1} to at most {0}.";
 
         private static readonly DiagnosticDescriptor rule =
-            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager)
+                                       .DisabledByDefault();
 
         protected sealed override DiagnosticDescriptor Rule => rule;
 

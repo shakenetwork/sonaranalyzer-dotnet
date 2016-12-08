@@ -364,7 +364,7 @@
     <value>While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results.</value>
   </data>
   <data name="S1226_IsActivatedByDefault" xml:space="preserve">
-    <value>True</value>
+    <value>False</value>
   </data>
   <data name="S1226_Remediation" xml:space="preserve">
     <value>Constant/Issue</value>
@@ -556,7 +556,7 @@
     <value>Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate.</value>
   </data>
   <data name="S1654_IsActivatedByDefault" xml:space="preserve">
-    <value>False</value>
+    <value>True</value>
   </data>
   <data name="S1654_Remediation" xml:space="preserve">
     <value>Constant/Issue</value>
@@ -796,7 +796,7 @@
     <value>Shared naming conventions allow teams to collaborate efficiently. This rule checks that all Enum names match a provided regular expression.</value>
   </data>
   <data name="S2342_IsActivatedByDefault" xml:space="preserve">
-    <value>False</value>
+    <value>True</value>
   </data>
   <data name="S2342_Remediation" xml:space="preserve">
     <value>Constant/Issue</value>
@@ -916,7 +916,7 @@
     <value>Shared coding conventions allow teams to collaborate efficiently. This rule checks that all even handler names match a provided regular expression.</value>
   </data>
   <data name="S2347_IsActivatedByDefault" xml:space="preserve">
-    <value>False</value>
+    <value>True</value>
   </data>
   <data name="S2347_Remediation" xml:space="preserve">
     <value>Constant/Issue</value>
@@ -1516,7 +1516,7 @@
     <value>The ... = {} syntax is more compact, more readable and less error-prone.</value>
   </data>
   <data name="S2429_IsActivatedByDefault" xml:space="preserve">
-    <value>True</value>
+    <value>False</value>
   </data>
   <data name="S2429_Remediation" xml:space="preserve">
     <value>Constant/Issue</value>
@@ -1531,7 +1531,7 @@
     <value>clumsy</value>
   </data>
   <data name="S2429_Title" xml:space="preserve">
-    <value>VB.Net: Arrays should be initialized using the "... = {}" syntax</value>
+    <value>Arrays should be initialized using the "... = {}" syntax</value>
   </data>
   <data name="S2951_Category" xml:space="preserve">
     <value>Sonar Code Smell</value>

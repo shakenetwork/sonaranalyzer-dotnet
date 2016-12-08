@@ -36,7 +36,8 @@ namespace SonarAnalyzer.Rules.CSharp
         internal const string MessageFormat = "Upper case this literal suffix.";
 
         private static readonly DiagnosticDescriptor rule =
-            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager)
+                                       .DisabledByDefault();
 
         protected sealed override DiagnosticDescriptor Rule => rule;
 

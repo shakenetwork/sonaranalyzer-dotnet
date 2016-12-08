@@ -30,7 +30,8 @@ namespace SonarAnalyzer.Rules.VisualBasic
     public class LineLength : LineLengthBase
     {
         protected static readonly DiagnosticDescriptor rule =
-            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager)
+                                       .DisabledByDefault();
 
         protected override DiagnosticDescriptor Rule => rule;
 
