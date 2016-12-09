@@ -31,7 +31,7 @@ namespace SonarAnalyzer.RuleDocGenerator
 {
     public class RuleImplementationMeta
     {
-        internal const string CrosslinkPattern = "(Rule )(S[0-9]+)";
+        internal const string CrosslinkPattern = "([rR]ule\\W+)?\\{rule:(?:csharpsquid|vbnet):(?<ruleId>S[0-9]+)\\}";
         internal const string HelpLinkPattern = "#version={0}&ruleId={1}";
 
         [JsonProperty("key")]
@@ -69,10 +69,11 @@ namespace SonarAnalyzer.RuleDocGenerator
 
         private static string AddLinksBetweenRulesToDescription(string description, string productVersion)
         {
-            var urlRegexPattern = string.Format(HelpLinkPattern, productVersion, @"$2");
-            var linkPattern = $"<a class=\"rule-link\" href=\"{urlRegexPattern}\">{"$1$2"}</a>";
+            var urlRegexPattern = string.Format(HelpLinkPattern, productVersion, @"${ruleId}");
+            var linkPattern = $"<a class=\"rule-link\" href=\"{urlRegexPattern}\">{"Rule ${ruleId}"}</a>";
             return Regex.Replace(description, CrosslinkPattern, linkPattern);
         }
+
         private static string GetParameterDescription(IList<RuleParameter> parameters)
         {
             if (!parameters.Any())

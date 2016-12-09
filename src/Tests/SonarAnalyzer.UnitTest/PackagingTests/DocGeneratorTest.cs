@@ -25,6 +25,7 @@ using SonarAnalyzer.Utilities;
 using System.Diagnostics;
 using System.Linq;
 using System.Text.RegularExpressions;
+using SonarAnalyzer.RuleDescriptors;
 
 namespace SonarAnalyzer.UnitTest.PackagingTests
 {
@@ -33,13 +34,12 @@ namespace SonarAnalyzer.UnitTest.PackagingTests
     {
         private const string TestCategoryName = "DocGenerator";
 
-        [Ignore]
         [TestMethod]
         [TestCategory(TestCategoryName)]
         public void CheckNumberOfCrossReferences()
         {
             var crossReferenceCount = GetNumberOfCrossReferences(AnalyzerLanguage.CSharp);
-            Assert.AreEqual(4, crossReferenceCount);
+            Assert.AreEqual(5, crossReferenceCount);
             crossReferenceCount = GetNumberOfCrossReferences(AnalyzerLanguage.VisualBasic);
             Assert.AreEqual(1, crossReferenceCount);
         }
@@ -56,6 +56,80 @@ namespace SonarAnalyzer.UnitTest.PackagingTests
             var crossLinkCount = NumberOfOccurrences(json, string.Format(commonSubUrl, productVersion));
 
             Assert.AreEqual(crossReferenceCount, crossLinkCount);
+        }
+
+        [TestMethod]
+        [TestCategory(TestCategoryName)]
+        public void ConvertCsharpLinks()
+        {
+            // Arrange
+            var ruleDetail = new RuleDetail
+            {
+                Description = @"<p>Some description here...</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+if (str == null &amp;&amp; str.length() == 0) {
+  System.out.println(""String is empty"");
+}
+</pre>
+<p>Some text here; use Rule {rule:csharpsquid:S2259} instead.</p>
+<p>Some more text here; use rule {rule:csharpsquid:S2259} instead.</p>
+<p>Other text here; use {rule:csharpsquid:S2259} instead.</p>",
+            };
+
+            // Act
+            var result = RuleImplementationMeta.Convert(ruleDetail, "arbitrary-version", AnalyzerLanguage.CSharp);
+
+            var expected = @"<p>Some description here...</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+if (str == null &amp;&amp; str.length() == 0) {
+  System.out.println(""String is empty"");
+}
+</pre>
+<p>Some text here; use <a class=""rule-link"" href=""#version=arbitrary-version&ruleId=S2259"">Rule S2259</a> instead.</p>
+<p>Some more text here; use <a class=""rule-link"" href=""#version=arbitrary-version&ruleId=S2259"">Rule S2259</a> instead.</p>
+<p>Other text here; use <a class=""rule-link"" href=""#version=arbitrary-version&ruleId=S2259"">Rule S2259</a> instead.</p>";
+
+            // Assert
+            Assert.AreEqual(expected, result.Description);
+        }
+
+        [TestMethod]
+        [TestCategory(TestCategoryName)]
+        public void ConvertVbLinks()
+        {
+            // Arrange
+            var ruleDetail = new RuleDetail
+            {
+                Description = @"<p>Some description here...</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+if (str == null &amp;&amp; str.length() == 0) {
+  System.out.println(""String is empty"");
+}
+</pre>
+<p>Some text here; use Rule {rule:vbnet:S2259} instead.</p>
+<p>Some more text here; use rule {rule:vbnet:S2259} instead.</p>
+<p>Other text here; use {rule:vbnet:S2259} instead.</p>",
+            };
+
+            // Act
+            var result = RuleImplementationMeta.Convert(ruleDetail, "arbitrary-version", AnalyzerLanguage.CSharp);
+
+            var expected = @"<p>Some description here...</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+if (str == null &amp;&amp; str.length() == 0) {
+  System.out.println(""String is empty"");
+}
+</pre>
+<p>Some text here; use <a class=""rule-link"" href=""#version=arbitrary-version&ruleId=S2259"">Rule S2259</a> instead.</p>
+<p>Some more text here; use <a class=""rule-link"" href=""#version=arbitrary-version&ruleId=S2259"">Rule S2259</a> instead.</p>
+<p>Other text here; use <a class=""rule-link"" href=""#version=arbitrary-version&ruleId=S2259"">Rule S2259</a> instead.</p>";
+
+            // Assert
+            Assert.AreEqual(expected, result.Description);
         }
 
         private static int GetNumberOfCrossReferences(AnalyzerLanguage language)
