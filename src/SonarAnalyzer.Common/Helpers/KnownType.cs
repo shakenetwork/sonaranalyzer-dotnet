@@ -170,6 +170,13 @@ namespace SonarAnalyzer.Helpers
 
         public static readonly KnownType System_Diagnostics_CodeAnalysis_SuppressMessageAttribute = new KnownType("System.Diagnostics.CodeAnalysis.SuppressMessageAttribute");
 
+        public static readonly KnownType System_ApplicationException = new KnownType("System.ApplicationException");
+        public static readonly KnownType System_SystemException = new KnownType("System.SystemException");
+        public static readonly KnownType System_ExecutionEngineException = new KnownType("System.ExecutionEngineException");
+        public static readonly KnownType System_IndexOutOfRangeException = new KnownType("System.IndexOutOfRangeException");
+        public static readonly KnownType System_NullReferenceException = new KnownType("System.NullReferenceException");
+        public static readonly KnownType System_OutOfMemoryException = new KnownType("System.OutOfMemoryException");
+
         #endregion
 
         public string TypeName { get; }

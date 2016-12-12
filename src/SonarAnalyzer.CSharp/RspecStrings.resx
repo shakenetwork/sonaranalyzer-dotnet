@@ -453,6 +453,30 @@
   <data name="S1118_Title" xml:space="preserve">
     <value>Utility classes should not have public constructors</value>
   </data>
+  <data name="S112_Category" xml:space="preserve">
+    <value>Sonar Bug</value>
+  </data>
+  <data name="S112_Description" xml:space="preserve">
+    <value>Throwing such general exceptions as Exception, SystemException, ApplicationException, IndexOutOfRangeException, NullReferenceException, OutOfMemoryException and ExecutionEngineException prevents calling methods from handling true, system-generated exceptions differently than application-generated errors. </value>
+  </data>
+  <data name="S112_IsActivatedByDefault" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="S112_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S112_RemediationCost" xml:space="preserve">
+    <value>20min</value>
+  </data>
+  <data name="S112_Severity" xml:space="preserve">
+    <value>Major</value>
+  </data>
+  <data name="S112_Tags" xml:space="preserve">
+    <value>cwe,error-handling,bug,cert</value>
+  </data>
+  <data name="S112_Title" xml:space="preserve">
+    <value>General exceptions should never be thrown</value>
+  </data>
   <data name="S1121_Category" xml:space="preserve">
     <value>Sonar Code Smell</value>
   </data>
