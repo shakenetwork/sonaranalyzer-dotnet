@@ -83,11 +83,9 @@ namespace SonarAnalyzer.Rules.CSharp
             }
         }
 
-        private static readonly Accessibility[] ProblematicConstructorAccessibility =
-        {
+        private static readonly ISet<Accessibility> ProblematicConstructorAccessibility = ImmutableHashSet.Create(
             Accessibility.Public,
-            Accessibility.Internal
-        };
+            Accessibility.Internal);
 
         private static void CheckConstructors(INamedTypeSymbol utilityClass, SymbolAnalysisContext context)
         {

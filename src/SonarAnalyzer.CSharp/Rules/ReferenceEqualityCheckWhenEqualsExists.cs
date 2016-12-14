@@ -43,6 +43,7 @@ namespace SonarAnalyzer.Rules.CSharp
         protected sealed override DiagnosticDescriptor Rule => rule;
 
         private const string EqualsName = "Equals";
+
         private static readonly ISet<KnownType> AllowedTypes = ImmutableHashSet.Create(
             KnownType.System_Type,
             KnownType.System_Reflection_Assembly,
@@ -50,10 +51,8 @@ namespace SonarAnalyzer.Rules.CSharp
             KnownType.System_Reflection_Module,
             KnownType.System_Data_Common_CommandTrees_DbExpression);
 
-        private static readonly ISet<KnownType> AllowedTypesWithAllDerived = ImmutableHashSet.Create(new[]
-        {
-            KnownType.System_Windows_DependencyObject
-        });
+        private static readonly ISet<KnownType> AllowedTypesWithAllDerived = ImmutableHashSet.Create(
+            KnownType.System_Windows_DependencyObject);
 
         protected override void Initialize(SonarAnalysisContext context)
         {

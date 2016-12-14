@@ -44,24 +44,18 @@ namespace SonarAnalyzer.Rules.CSharp
 
         private const string BaseEncryptionAlgorithmCreate = "System.Security.Cryptography.SymmetricAlgorithm.Create";
 
-        private static readonly string[] AlgorithmNames =
-        {
+        private static readonly ISet<string> AlgorithmNames = ImmutableHashSet.Create(
             "DES",
             "3DES",
-            "TripleDES"
-        };
+            "TripleDES");
 
-        private static readonly string[] MethodNamesToReachEncryptionAlgorithm =
-        {
+        private static readonly ISet<string> MethodNamesToReachEncryptionAlgorithm = ImmutableHashSet.Create(
             "System.Security.Cryptography.DES.Create",
-            "System.Security.Cryptography.TripleDES.Create"
-        };
+            "System.Security.Cryptography.TripleDES.Create");
 
-        private static readonly ISet<KnownType> BaseClassNamesForEncryptionAlgorithm = new HashSet<KnownType>(new []
-        {
+        private static readonly ISet<KnownType> BaseClassNamesForEncryptionAlgorithm = ImmutableHashSet.Create(
             KnownType.System_Security_Cryptography_DES,
-            KnownType.System_Security_Cryptography_TripleDES
-        });
+            KnownType.System_Security_Cryptography_TripleDES);
 
         protected override void Initialize(SonarAnalysisContext context)
         {

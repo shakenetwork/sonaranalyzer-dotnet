@@ -27,6 +27,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
 using SonarAnalyzer.Helpers.CSharp;
+using System.Collections.Generic;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
@@ -387,6 +388,8 @@ namespace SonarAnalyzer.Rules.CSharp
                     expressionType.Is(KnownType.System_Nullable_T));
         }
 
-        private static readonly SyntaxKind[] EqualsOrNotEquals = { SyntaxKind.EqualsExpression, SyntaxKind.NotEqualsExpression };
+        private static readonly ISet<SyntaxKind> EqualsOrNotEquals = ImmutableHashSet.Create(
+            SyntaxKind.EqualsExpression,
+            SyntaxKind.NotEqualsExpression);
     }
 }

@@ -42,17 +42,15 @@ namespace SonarAnalyzer.Rules.CSharp
 
         protected sealed override DiagnosticDescriptor Rule => rule;
 
-        private static readonly Dictionary<KnownType, string> InsecureHashAlgorithmTypeNames = new Dictionary<KnownType, string>
+        private static readonly IDictionary<KnownType, string> InsecureHashAlgorithmTypeNames = new Dictionary<KnownType, string>
         {
             { KnownType.System_Security_Cryptography_SHA1, "SHA1"},
             { KnownType.System_Security_Cryptography_MD5, "MD5"}
-        };
+        }.ToImmutableDictionary();
 
-        private static readonly string[] MethodNamesToReachHashAlgorithm =
-        {
+        private static readonly ISet<string> MethodNamesToReachHashAlgorithm = ImmutableHashSet.Create(
             "System.Security.Cryptography.CryptoConfig.CreateFromName",
-            "System.Security.Cryptography.HashAlgorithm.Create"
-        };
+            "System.Security.Cryptography.HashAlgorithm.Create");
 
         protected override void Initialize(SonarAnalysisContext context)
         {

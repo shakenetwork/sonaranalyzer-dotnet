@@ -19,6 +19,8 @@
  */
 
 using Microsoft.CodeAnalysis;
+using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 
 namespace SonarAnalyzer.Helpers
@@ -41,11 +43,9 @@ namespace SonarAnalyzer.Helpers
 
         private const string TestAssemblyNamePattern = "TEST";
 
-        private static readonly string[] TestAssemblyNames =
-        {
+        private static readonly ISet<string> TestAssemblyNames = ImmutableHashSet.Create(
             "MICROSOFT.VISUALSTUDIO.QUALITYTOOLS.UNITTESTFRAMEWORK",
             "XUNIT.CORE",
-            "NUNIT.FRAMEWORK"
-        };
+            "NUNIT.FRAMEWORK");
     }
 }

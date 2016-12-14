@@ -28,6 +28,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using SonarAnalyzer.Helpers;
 using SonarAnalyzer.Helpers.CSharp;
+using System.Collections.Generic;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
@@ -50,18 +51,16 @@ namespace SonarAnalyzer.Rules.CSharp
 
         protected override SyntaxNode GetLeft(BinaryExpressionSyntax binary) => binary.Left;
 
-        protected override bool IsInLoop(SyntaxNode node) => LoopKinds.Any(loopKind => node.IsKind(loopKind));
+        protected override bool IsInLoop(SyntaxNode node) => LoopKinds.Contains(node.Kind());
 
         protected override bool AreEquivalent(SyntaxNode node1, SyntaxNode node2) =>
             EquivalenceChecker.AreEquivalent(node1, node2);
 
-        private static readonly SyntaxKind[] LoopKinds =
-        {
+        private static readonly ISet<SyntaxKind> LoopKinds = ImmutableHashSet.Create(
             SyntaxKind.WhileStatement,
             SyntaxKind.DoStatement,
             SyntaxKind.ForStatement,
-            SyntaxKind.ForEachStatement
-        };
+            SyntaxKind.ForEachStatement);
 
         private static readonly ImmutableArray<SyntaxKind> simpleAssignmentKinds =
             ImmutableArray.Create(SyntaxKind.SimpleAssignmentExpression);

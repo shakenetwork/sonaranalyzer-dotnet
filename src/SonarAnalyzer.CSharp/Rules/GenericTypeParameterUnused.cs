@@ -151,11 +151,9 @@ namespace SonarAnalyzer.Rules.CSharp
                 .ToList();
         }
 
-        private static readonly SyntaxKind[] MethodModifiersToSkip =
-        {
+        private static readonly ISet<SyntaxKind> MethodModifiersToSkip = ImmutableHashSet.Create(
             SyntaxKind.AbstractKeyword,
             SyntaxKind.VirtualKeyword,
-            SyntaxKind.OverrideKeyword
-        };
+            SyntaxKind.OverrideKeyword);
     }
 }

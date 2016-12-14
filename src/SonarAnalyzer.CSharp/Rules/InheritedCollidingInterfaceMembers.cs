@@ -140,12 +140,10 @@ namespace SonarAnalyzer.Rules.CSharp
             return string.Join(", ", names);
         }
 
-        private static readonly IImmutableSet<SymbolDisplayPartKind> PartKindsToStartWith = new []
-            {
-                SymbolDisplayPartKind.MethodName,
-                SymbolDisplayPartKind.PropertyName,
-                SymbolDisplayPartKind.EventName
-            }.ToImmutableHashSet();
+        private static readonly ISet<SymbolDisplayPartKind> PartKindsToStartWith = ImmutableHashSet.Create(
+            SymbolDisplayPartKind.MethodName,
+            SymbolDisplayPartKind.PropertyName,
+            SymbolDisplayPartKind.EventName);
 
         private static string GetMemberDisplayName(IMethodSymbol method, int spanStart, SemanticModel semanticModel)
         {

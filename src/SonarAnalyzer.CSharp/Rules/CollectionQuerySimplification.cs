@@ -46,24 +46,24 @@ namespace SonarAnalyzer.Rules.CSharp
 
         protected sealed override DiagnosticDescriptor Rule => rule;
 
-        private static readonly string[] MethodNamesWithPredicate =
-        {
+        private static readonly ISet<string> MethodNamesWithPredicate = ImmutableHashSet.Create(
             "Any", "LongCount", "Count",
             "First", "FirstOrDefault", "Last", "LastOrDefault",
-            "Single", "SingleOrDefault"
-        };
-        private static readonly string[] MethodNamesForTypeCheckingWithSelect =
-        {
-            "Any", "LongCount", "Count",
-            "First", "FirstOrDefault", "Last", "LastOrDefault",
-            "Single", "SingleOrDefault", "SkipWhile", "TakeWhile"
-        };
-        private static readonly string[] MethodNamesToCollection =
-        {
-            "ToList", "ToArray"
-        };
+            "Single", "SingleOrDefault");
 
-        private static readonly SyntaxKind[] AsIsSyntaxKinds = {SyntaxKind.AsExpression, SyntaxKind.IsExpression};
+        private static readonly ISet<string> MethodNamesForTypeCheckingWithSelect = ImmutableHashSet.Create(
+            "Any", "LongCount", "Count",
+            "First", "FirstOrDefault", "Last", "LastOrDefault",
+            "Single", "SingleOrDefault", "SkipWhile", "TakeWhile");
+
+        private static readonly ISet<string> MethodNamesToCollection = ImmutableHashSet.Create(
+            "ToList",
+            "ToArray");
+
+        private static readonly ISet<SyntaxKind> AsIsSyntaxKinds = ImmutableHashSet.Create(
+            SyntaxKind.AsExpression,
+            SyntaxKind.IsExpression);
+
         private const string WhereMethodName = "Where";
         private const string SelectMethodName = "Select";
 

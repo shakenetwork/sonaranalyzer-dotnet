@@ -43,8 +43,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
         protected sealed override DiagnosticDescriptor Rule => rule;
 
-        private static readonly ISet<KnownType> TrackedTypes = new []
-        {
+        private static readonly ISet<KnownType> TrackedTypes = ImmutableHashSet.Create(
             KnownType.System_IO_FileStream,
             KnownType.System_IO_StreamReader,
             KnownType.System_IO_StreamWriter,
@@ -55,22 +54,17 @@ namespace SonarAnalyzer.Rules.CSharp
             KnownType.System_Net_Sockets_UdpClient,
 
             KnownType.System_Drawing_Image,
-            KnownType.System_Drawing_Bitmap
-        }.ToImmutableHashSet();
+            KnownType.System_Drawing_Bitmap);
 
-        private static readonly ISet<string> DisposeMethods = new []
-        {
+        private static readonly ISet<string> DisposeMethods = ImmutableHashSet.Create(
             "Dispose",
-            "Close"
-        }.ToImmutableHashSet();
+            "Close");
 
-        private static readonly ISet<string> FactoryMethods = new []
-        {
+        private static readonly ISet<string> FactoryMethods = ImmutableHashSet.Create(
             "System.IO.File.Create",
             "System.IO.File.Open",
             "System.Drawing.Image.FromFile",
-            "System.Drawing.Image.FromStream"
-        }.ToImmutableHashSet();
+            "System.Drawing.Image.FromStream");
 
         private class NodeAndSymbol
         {

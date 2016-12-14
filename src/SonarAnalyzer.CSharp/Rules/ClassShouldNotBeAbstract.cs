@@ -129,10 +129,8 @@ namespace SonarAnalyzer.Rules.CSharp
                 .ToList();
         }
 
-        private static readonly MethodKind[] ConstructorKinds =
-        {
+        private static readonly ISet<MethodKind> ConstructorKinds = ImmutableHashSet.Create(
             MethodKind.Constructor,
-            MethodKind.SharedConstructor
-        };
+            MethodKind.SharedConstructor);
     }
 }

@@ -27,6 +27,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
 using SonarAnalyzer.Helpers.CSharp;
+using System.Collections.Immutable;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
@@ -174,19 +175,15 @@ namespace SonarAnalyzer.Rules.CSharp
                 conditionSelector(statement).Contains(originalExpression);
         }
 
-        private static readonly ISet<SyntaxKind> AllowedParentExpressionKinds = new HashSet<SyntaxKind>(new[]
-        {
+        private static readonly ISet<SyntaxKind> AllowedParentExpressionKinds = ImmutableHashSet.Create(
             SyntaxKind.ParenthesizedLambdaExpression,
             SyntaxKind.SimpleLambdaExpression,
             SyntaxKind.AnonymousMethodExpression,
-            SyntaxKind.ObjectInitializerExpression
-        });
+            SyntaxKind.ObjectInitializerExpression);
 
-        private static readonly ISet<SyntaxKind> RelationalExpressionKinds = new HashSet<SyntaxKind>(new[]
-        {
+        private static readonly ISet<SyntaxKind> RelationalExpressionKinds = ImmutableHashSet.Create(
             SyntaxKind.EqualsExpression, SyntaxKind.NotEqualsExpression,
             SyntaxKind.LessThanExpression, SyntaxKind.LessThanOrEqualExpression,
-            SyntaxKind.GreaterThanExpression, SyntaxKind.GreaterThanOrEqualExpression
-        });
+            SyntaxKind.GreaterThanExpression, SyntaxKind.GreaterThanOrEqualExpression);
     }
 }

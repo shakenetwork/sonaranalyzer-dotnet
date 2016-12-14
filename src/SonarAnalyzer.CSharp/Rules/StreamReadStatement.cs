@@ -27,6 +27,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
+using System.Collections.Generic;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
@@ -72,6 +73,6 @@ namespace SonarAnalyzer.Rules.CSharp
                 SyntaxKind.ExpressionStatement);
         }
 
-        private static readonly string[] ReadMethodNames = { "Read", "ReadAsync" };
+        private static readonly ISet<string> ReadMethodNames = ImmutableHashSet.Create("Read", "ReadAsync");
     }
 }

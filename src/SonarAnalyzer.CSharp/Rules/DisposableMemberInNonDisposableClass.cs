@@ -42,7 +42,9 @@ namespace SonarAnalyzer.Rules.CSharp
 
         protected sealed override DiagnosticDescriptor Rule => rule;
 
-        private static readonly Accessibility[] Accessibilities = { Accessibility.Protected, Accessibility.Private };
+        private static readonly ISet<Accessibility> Accessibilities = ImmutableHashSet.Create(
+            Accessibility.Protected,
+            Accessibility.Private);
 
         protected override void Initialize(SonarAnalysisContext context)
         {

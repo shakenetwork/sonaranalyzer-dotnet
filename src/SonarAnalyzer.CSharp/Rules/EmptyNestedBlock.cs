@@ -80,21 +80,13 @@ namespace SonarAnalyzer.Rules.CSharp
             return !AllowedContainerKinds.Contains(node.Parent.Kind());
         }
 
-        private static IEnumerable<SyntaxKind> AllowedContainerKinds
-        {
-            get
-            {
-                return new[]
-                {
-                    SyntaxKind.ConstructorDeclaration,
-                    SyntaxKind.DestructorDeclaration,
-                    SyntaxKind.MethodDeclaration,
-                    SyntaxKind.SimpleLambdaExpression,
-                    SyntaxKind.ParenthesizedLambdaExpression,
-                    SyntaxKind.AnonymousMethodExpression
-                };
-            }
-        }
+        private static readonly ISet<SyntaxKind> AllowedContainerKinds = ImmutableHashSet.Create(
+            SyntaxKind.ConstructorDeclaration,
+            SyntaxKind.DestructorDeclaration,
+            SyntaxKind.MethodDeclaration,
+            SyntaxKind.SimpleLambdaExpression,
+            SyntaxKind.ParenthesizedLambdaExpression,
+            SyntaxKind.AnonymousMethodExpression);
 
         private static bool IsEmpty(BlockSyntax node)
         {

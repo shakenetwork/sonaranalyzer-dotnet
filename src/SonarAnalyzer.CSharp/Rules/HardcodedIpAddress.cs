@@ -28,6 +28,8 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
+using System.Collections.Generic;
+using System.Collections.Immutable;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
@@ -43,8 +45,12 @@ namespace SonarAnalyzer.Rules.CSharp
 
         protected sealed override DiagnosticDescriptor Rule => rule;
 
-        private static readonly string[] SkippedWords = {"VERSION", "ASSEMBLY"};
-        private static readonly Type[] NodeTypesToCheck = {typeof(StatementSyntax), typeof(VariableDeclaratorSyntax), typeof(ParameterSyntax) };
+        private static readonly ISet<string> SkippedWords = ImmutableHashSet.Create("VERSION", "ASSEMBLY");
+
+        private static readonly ISet<Type> NodeTypesToCheck = ImmutableHashSet.Create(
+            typeof(StatementSyntax),
+            typeof(VariableDeclaratorSyntax),
+            typeof(ParameterSyntax));
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -74,7 +80,8 @@ namespace SonarAnalyzer.Rules.CSharp
                     foreach (var type in NodeTypesToCheck)
                     {
                         var ancestorOrSelf = stringLiteral.FirstAncestorOrSelf<SyntaxNode>(type.IsInstanceOfType);
-                        if (ancestorOrSelf != null && SkippedWords.Any(s => ancestorOrSelf.ToString().ToUpperInvariant().Contains(s)))
+                        var ancestorString = ancestorOrSelf?.ToString().ToUpperInvariant();
+                        if (ancestorString != null && SkippedWords.Any(s => ancestorString.Contains(s)))
                         {
                             return;
                         }

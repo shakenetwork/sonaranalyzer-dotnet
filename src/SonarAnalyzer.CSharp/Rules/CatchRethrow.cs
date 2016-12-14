@@ -92,7 +92,7 @@ namespace SonarAnalyzer.Rules.CSharp
         }
 
         private static bool IsMoreSpecificTypeThanANotRedundantCatch(int catchIndex, List<CatchClauseSyntax> catches, List<INamedTypeSymbol> caughtExceptionTypes,
-            HashSet<CatchClauseSyntax> redundantCatches)
+            ISet<CatchClauseSyntax> redundantCatches)
         {
             var currentType = caughtExceptionTypes[catchIndex];
             for (int i = catchIndex + 1; i < caughtExceptionTypes.Count; i++)

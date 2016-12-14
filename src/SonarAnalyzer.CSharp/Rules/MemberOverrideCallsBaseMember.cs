@@ -26,6 +26,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
+using System.Collections.Generic;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
@@ -42,7 +43,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
         protected sealed override DiagnosticDescriptor Rule => rule;
 
-        private static readonly string[] IgnoredMethodNames = { "Equals", "GetHashCode" };
+        private static readonly ISet<string> IgnoredMethodNames = ImmutableHashSet.Create("Equals", "GetHashCode");
 
         protected override void Initialize(SonarAnalysisContext context)
         {

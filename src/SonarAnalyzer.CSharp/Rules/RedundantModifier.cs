@@ -194,15 +194,13 @@ namespace SonarAnalyzer.Rules.CSharp
                 IsUnsafe(((IArrayTypeSymbol)type).ElementType);
         }
 
-        private static readonly ISet<SyntaxKind> UnsafeConstructKinds = new HashSet<SyntaxKind>(new[]
-        {
+        private static readonly ISet<SyntaxKind> UnsafeConstructKinds = ImmutableHashSet.Create(
             SyntaxKind.AddressOfExpression,
             SyntaxKind.PointerIndirectionExpression,
             SyntaxKind.SizeOfExpression,
             SyntaxKind.PointerType,
             SyntaxKind.FixedStatement,
-            SyntaxKind.StackAllocArrayCreationExpression
-        });
+            SyntaxKind.StackAllocArrayCreationExpression);
 
         private static void MarkAllUnsafeBlockInside(SyntaxNode container, SyntaxNodeAnalysisContext context)
         {
