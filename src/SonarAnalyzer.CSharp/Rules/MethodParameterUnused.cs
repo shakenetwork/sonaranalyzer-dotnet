@@ -155,7 +155,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
         private static bool MethodCanBeSafelyChanged(IMethodSymbol methodSymbol)
         {
-            return methodSymbol.DeclaredAccessibility == Accessibility.Private &&
+            return methodSymbol.GetEffectiveAccessibility() == Accessibility.Private &&
                 !methodSymbol.GetAttributes().Any() &&
                 methodSymbol.IsChangeable() &&
                 !methodSymbol.IsProbablyEventHandler();

@@ -232,5 +232,25 @@ namespace SonarAnalyzer.Helpers
 
             return false;
         }
+
+        public static Accessibility GetEffectiveAccessibility(this ISymbol symbol)
+        {
+            var result = symbol.DeclaredAccessibility;
+            var currentSymbol = symbol;
+
+            while (currentSymbol != null)
+            {
+                if (currentSymbol.DeclaredAccessibility == Accessibility.Private)
+                {
+                    return Accessibility.Private;
+                }
+                if (currentSymbol.DeclaredAccessibility == Accessibility.Internal)
+                {
+                    result = currentSymbol.DeclaredAccessibility;
+                }
+                currentSymbol = currentSymbol.ContainingType;
+            }
+            return result;
+        }
     }
 }

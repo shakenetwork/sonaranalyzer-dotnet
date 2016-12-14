@@ -113,7 +113,7 @@ namespace SonarAnalyzer.Helpers
         public static bool IsRemovable(ISymbol symbol, Accessibility maxAccessibility)
         {
             return symbol != null &&
-                EffectiveAccessibility(symbol) <= maxAccessibility &&
+                symbol.GetEffectiveAccessibility() <= maxAccessibility &&
                 !symbol.IsImplicitlyDeclared &&
                 !symbol.IsAbstract &&
                 !symbol.IsVirtual &&
@@ -148,26 +148,6 @@ namespace SonarAnalyzer.Helpers
         private static bool IsMainMethod(IMethodSymbol methodSymbol)
         {
             return methodSymbol.IsStatic && methodSymbol.Name == "Main";
-        }
-
-        private static Accessibility EffectiveAccessibility(ISymbol symbol)
-        {
-            var result = symbol.DeclaredAccessibility;
-            var currentSymbol = symbol;
-
-            while (currentSymbol != null)
-            {
-                if (currentSymbol.DeclaredAccessibility == Accessibility.Private)
-                {
-                    return Accessibility.Private;
-                }
-                if (currentSymbol.DeclaredAccessibility == Accessibility.Internal)
-                {
-                    result = currentSymbol.DeclaredAccessibility;
-                }
-                currentSymbol = currentSymbol.ContainingType;
-            }
-            return result;
         }
     }
 }

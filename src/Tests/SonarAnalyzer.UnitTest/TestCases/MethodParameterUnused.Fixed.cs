@@ -288,4 +288,16 @@ namespace Tests.TestCases
             value = info.GetString("Value");
         }
     }
+
+    public class EffectiveAccessibility
+    {
+        private class Inner
+        {
+            public void Method(int a
+                ) // Fixed
+            {
+                Console.WriteLine(a);
+            }
+        }
+    }
 }
