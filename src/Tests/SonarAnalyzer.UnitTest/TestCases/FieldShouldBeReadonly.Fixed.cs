@@ -143,4 +143,17 @@ namespace Tests.Diagnostics
             }
         }
     }
+
+    class Attributed
+    {
+        [My]
+        private int myField1; // Compliant because of the attribute
+
+        public Attributed()
+        {
+            myField1 = 42;
+        }
+    }
+
+    public class MyAttribute : Attribute { }
 }

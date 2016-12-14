@@ -132,6 +132,11 @@ namespace SonarAnalyzer.Rules.CSharp
                     p.CollectFields();
                     allFields.AddRange(p.AllFields);
                 }
+
+                foreach (var attributedField in allFields.Where(f => f.Symbol.GetAttributes().Any()))
+                {
+                    excludedFields.Add(attributedField.Symbol);
+                }
             }
 
             private class PartialTypeDeclarationProcessor
