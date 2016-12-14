@@ -3465,6 +3465,30 @@
   <data name="S3254_Title" xml:space="preserve">
     <value>Default parameter values should not be passed as arguments</value>
   </data>
+  <data name="S3256_Category" xml:space="preserve">
+    <value>Sonar Code Smell</value>
+  </data>
+  <data name="S3256_Description" xml:space="preserve">
+    <value>Using string.Equals to determine if a string is empty is significantly slower than using string.IsNullOrEmpty() or checking for string.Length == 0. string.IsNullOrEmpty() is both clear and concise, and therefore preferred to laborious, error-prone, manual null- and emptiness-checking.</value>
+  </data>
+  <data name="S3256_IsActivatedByDefault" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="S3256_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S3256_RemediationCost" xml:space="preserve">
+    <value>5min</value>
+  </data>
+  <data name="S3256_Severity" xml:space="preserve">
+    <value>Minor</value>
+  </data>
+  <data name="S3256_Tags" xml:space="preserve">
+    <value>clumsy</value>
+  </data>
+  <data name="S3256_Title" xml:space="preserve">
+    <value>"string.IsNullOrEmpty" should be used</value>
+  </data>
   <data name="S3257_Category" xml:space="preserve">
     <value>Sonar Code Smell</value>
   </data>
