@@ -136,4 +136,11 @@ namespace Tests.Diagnostics
     public class CommentedOutCode2
     {
     }
+
+    // Some C++ reference
+    class X { }
+    // Some c++ reference
+    class Y { }
+    // Somec++ reference
+    class Z { }
 }

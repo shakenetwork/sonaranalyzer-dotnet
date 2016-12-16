@@ -149,8 +149,10 @@ namespace SonarAnalyzer.Rules.CSharp
                     ContainsMultipleLogicalOperators(checkedLine) ||
                     ContainsCodePartsWithRelationalOperator(checkedLine);
 
-            return  isPossiblyCode &&
-                !checkedLine.Contains("License");
+            return isPossiblyCode &&
+                !checkedLine.Contains("License") &&
+                !checkedLine.Contains("c++") &&
+                !checkedLine.Contains("C++");
         }
 
         private static bool ContainsMultipleLogicalOperators(string checkedLine)
