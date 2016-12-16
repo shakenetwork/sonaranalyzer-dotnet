@@ -49,7 +49,7 @@ namespace Tests.Diagnostics
 
         private int MyProperty
         {
-            get; // Non-compliant, but not recognized for the time being.
+            get;
             set;
         }
 
@@ -80,5 +80,27 @@ namespace Tests.Diagnostics
     public class EventHandlerSample
     {
         private void MyOnClick(object sender, EventArgs args) { }
+    }
+
+    public class PropertyAccess
+    {
+        private int OnlyRead { get; }  // Fixed
+        private int OnlySet { get; set; }
+        private int OnlySet2 { set { } } // Fixed
+        private int BothAccessed { get; set; }
+
+        private string OnlyGet { get { return 42; } }
+
+        public void M()
+        {
+            Console.WriteLine(OnlyRead);
+            OnlySet = 42;
+            (this.OnlySet2) = 42;
+
+            BothAccessed++;
+
+            var x = 10;
+            x = this?.OnlyGet;
+        }
     }
 }

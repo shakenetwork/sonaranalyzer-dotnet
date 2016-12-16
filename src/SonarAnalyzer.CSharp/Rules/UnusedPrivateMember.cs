@@ -27,6 +27,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
+using System;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
@@ -76,15 +77,58 @@ namespace SonarAnalyzer.Rules.CSharp
                     var usedSymbols = new HashSet<ISymbol>();
                     var emptyConstructors = new HashSet<ISymbol>();
 
-                    CollectUsedSymbols(declarationCollector, usedSymbols, declaredPrivateSymbols);
+                    var propertyAccessorAccess = new Dictionary<IPropertySymbol, AccessorAccess>();
+
+                    CollectUsedSymbols(declarationCollector, usedSymbols, declaredPrivateSymbols, propertyAccessorAccess);
                     CollectUsedSymbolsFromCtorInitializerAndCollectEmptyCtors(declarationCollector,
                         usedSymbols, emptyConstructors);
 
                     ReportIssues(c, usedSymbols, declaredPrivateSymbols, emptyConstructors, fieldLikeSymbols);
+                    ReportUnusedPropertyAccessors(c, usedSymbols, declaredPrivateSymbols, propertyAccessorAccess);
                 },
                 SymbolKind.NamedType);
         }
 
+        private static void ReportUnusedPropertyAccessors(SymbolAnalysisContext context, HashSet<ISymbol> usedSymbols,
+            HashSet<ISymbol> declaredPrivateSymbols,
+            Dictionary<IPropertySymbol, AccessorAccess> propertyAccessorAccess)
+        {
+            var usedPrivatePropertis = declaredPrivateSymbols.Intersect(usedSymbols).OfType<IPropertySymbol>();
+            var onlyOneAccessorAccessed = usedPrivatePropertis.Where(p => propertyAccessorAccess.ContainsKey(p));
+
+            foreach (var property in onlyOneAccessorAccessed)
+            {
+                var access = propertyAccessorAccess[property];
+                if (access == AccessorAccess.None || access == AccessorAccess.Both)
+                {
+                    continue;
+                }
+
+                if (access == AccessorAccess.Get && property.SetMethod != null)
+                {
+                    var accessorSyntax = GetAccessorSyntax(property.SetMethod);
+                    if (accessorSyntax != null)
+                    {
+                        context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(rule, accessorSyntax.GetLocation()), context.Compilation);
+                    }
+                    continue;
+                }
+
+                if (access == AccessorAccess.Set && property.GetMethod != null)
+                {
+                    var accessorSyntax = GetAccessorSyntax(property.GetMethod);
+                    if (accessorSyntax != null && accessorSyntax.Body != null)
+                    {
+                        context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(rule, accessorSyntax.GetLocation()), context.Compilation);
+                    }
+                }
+            }
+        }
+
+        private static AccessorDeclarationSyntax GetAccessorSyntax(IMethodSymbol methodSymbol)
+        {
+            return methodSymbol?.DeclaringSyntaxReferences.FirstOrDefault()?.GetSyntax() as AccessorDeclarationSyntax;
+        }
 
         private static void ReportIssues(SymbolAnalysisContext context, HashSet<ISymbol> usedSymbols,
             HashSet<ISymbol> declaredPrivateSymbols, HashSet<ISymbol> emptyConstructors,
@@ -239,7 +283,8 @@ namespace SonarAnalyzer.Rules.CSharp
         }
 
         private static void CollectUsedSymbols(RemovableDeclarationCollector declarationCollector,
-            HashSet<ISymbol> usedSymbols, HashSet<ISymbol> declaredPrivateSymbols)
+            HashSet<ISymbol> usedSymbols, HashSet<ISymbol> declaredPrivateSymbols,
+            Dictionary<IPropertySymbol, AccessorAccess> propertyAccessorAccess)
         {
             var symbolNames = declaredPrivateSymbols.Select(s => s.Name).ToImmutableHashSet();
             var anyRemovableIndexers = declaredPrivateSymbols
@@ -251,12 +296,11 @@ namespace SonarAnalyzer.Rules.CSharp
 
             var identifiers = declarationCollector.TypeDeclarations
                 .SelectMany(container => container.SyntaxNode.DescendantNodes()
-                    .Where(node =>
-                        node.IsKind(SyntaxKind.IdentifierName))
+                    .Where(node => node.IsKind(SyntaxKind.IdentifierName))
                     .Cast<IdentifierNameSyntax>()
                     .Where(node => symbolNames.Contains(node.Identifier.ValueText))
                     .Select(node =>
-                        new SyntaxNodeSemanticModelTuple<SyntaxNode>
+                        new SyntaxNodeSemanticModelTuple<ExpressionSyntax>
                         {
                             SyntaxNode = node,
                             SemanticModel = container.SemanticModel
@@ -264,12 +308,11 @@ namespace SonarAnalyzer.Rules.CSharp
 
             var generic = declarationCollector.TypeDeclarations
                 .SelectMany(container => container.SyntaxNode.DescendantNodes()
-                    .Where(node =>
-                        node.IsKind(SyntaxKind.GenericName))
+                    .Where(node => node.IsKind(SyntaxKind.GenericName))
                     .Cast<GenericNameSyntax>()
                     .Where(node => symbolNames.Contains(node.Identifier.ValueText))
                     .Select(node =>
-                        new SyntaxNodeSemanticModelTuple<SyntaxNode>
+                        new SyntaxNodeSemanticModelTuple<ExpressionSyntax>
                         {
                             SyntaxNode = node,
                             SemanticModel = container.SemanticModel
@@ -282,8 +325,9 @@ namespace SonarAnalyzer.Rules.CSharp
                 var nodes = declarationCollector.TypeDeclarations
                     .SelectMany(container => container.SyntaxNode.DescendantNodes()
                         .Where(node => node.IsKind(SyntaxKind.ElementAccessExpression))
+                        .Cast<ElementAccessExpressionSyntax>()
                         .Select(node =>
-                            new SyntaxNodeSemanticModelTuple<SyntaxNode>
+                            new SyntaxNodeSemanticModelTuple<ExpressionSyntax>
                             {
                                 SyntaxNode = node,
                                 SemanticModel = container.SemanticModel
@@ -297,8 +341,9 @@ namespace SonarAnalyzer.Rules.CSharp
                 var nodes = declarationCollector.TypeDeclarations
                     .SelectMany(container => container.SyntaxNode.DescendantNodes()
                         .Where(node => node.IsKind(SyntaxKind.ObjectCreationExpression))
+                        .Cast<ObjectCreationExpressionSyntax>()
                         .Select(node =>
-                            new SyntaxNodeSemanticModelTuple<SyntaxNode>
+                            new SyntaxNodeSemanticModelTuple<ExpressionSyntax>
                             {
                                 SyntaxNode = node,
                                 SemanticModel = container.SemanticModel
@@ -308,12 +353,88 @@ namespace SonarAnalyzer.Rules.CSharp
             }
 
             var candidateSymbols = allNodes
-                .Select(n => n.SemanticModel.GetSymbolInfo(n.SyntaxNode))
-                .SelectMany(s => GetAllCandidateSymbols(s))
-                .Select(s => GetOriginalSymbol(s))
-                .Where(s => s != null);
+                .Select(n => new { Syntax = n.SyntaxNode, SemanticModel = n.SemanticModel, Symbol = n.SemanticModel.GetSymbolInfo(n.SyntaxNode) })
+                .Select(n => new
+                {
+                    Syntax = n.Syntax,
+                    SemanticModel = n.SemanticModel,
+                    Symbols = GetAllCandidateSymbols(n.Symbol)
+                        .Select(s => GetOriginalSymbol(s))
+                        .Where(s => s != null)
+                });
 
-            usedSymbols.UnionWith(candidateSymbols);
+            foreach (var candidateSymbol in candidateSymbols)
+            {
+                usedSymbols.UnionWith(candidateSymbol.Symbols);
+
+                var accessorKind = GetAccessorAccessKind(candidateSymbol.Syntax, candidateSymbol.SemanticModel);
+
+                foreach (var propertySymbol in candidateSymbol.Symbols.OfType<IPropertySymbol>())
+                {
+                    if (propertyAccessorAccess.ContainsKey(propertySymbol))
+                    {
+                        propertyAccessorAccess[propertySymbol] |= accessorKind;
+                    }
+                    else
+                    {
+                        propertyAccessorAccess[propertySymbol] = accessorKind;
+                    }
+                }
+            }
+        }
+
+        private static AccessorAccess GetAccessorAccessKind(ExpressionSyntax expression, SemanticModel semanticModel)
+        {
+            var accessExpression = GetParentMemberAccess(expression).GetSelfOrTopParenthesizedExpression();
+
+            var assignment = accessExpression.Parent as AssignmentExpressionSyntax;
+            if (assignment != null &&
+                assignment.IsKind(SyntaxKind.SimpleAssignmentExpression))
+            {
+                return assignment.Left == accessExpression
+                    ? AccessorAccess.Set
+                    : AccessorAccess.Get;
+            }
+
+            if (assignment != null ||
+                IncrementKinds.Contains(accessExpression.Parent.Kind()) ||
+                accessExpression.IsInNameofCall(semanticModel))
+            {
+                return AccessorAccess.Both;
+            }
+
+            return AccessorAccess.Get;
+        }
+
+        private static ExpressionSyntax GetParentMemberAccess(ExpressionSyntax expression)
+        {
+            var parent = expression.Parent as MemberAccessExpressionSyntax;
+            if (parent == null)
+            {
+                return expression;
+            }
+
+            if (parent.Expression == expression)
+            {
+                return expression;
+            }
+
+            return parent;
+        }
+
+        private static readonly ISet<SyntaxKind> IncrementKinds = ImmutableHashSet.Create(
+            SyntaxKind.PostIncrementExpression,
+            SyntaxKind.PreIncrementExpression,
+            SyntaxKind.PostDecrementExpression,
+            SyntaxKind.PreDecrementExpression);
+
+        [Flags]
+        private enum AccessorAccess
+        {
+            None = 0,
+            Get = 1,
+            Set = 2,
+            Both = Get | Set
         }
 
         private static ISymbol GetOriginalSymbol(ISymbol candidateSymbol)
