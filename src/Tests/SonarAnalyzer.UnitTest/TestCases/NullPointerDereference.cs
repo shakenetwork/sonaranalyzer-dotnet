@@ -274,7 +274,7 @@ namespace Tests.Diagnostics
         public void Assert2(object o1)
         {
             System.Diagnostics.Debug.Assert(o1 == null);
-            o1.ToString(); // Noncompliant
+            o1.ToString(); // Compliant, we don't learn on Assert
         }
     }
 

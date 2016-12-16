@@ -65,36 +65,9 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
                 return HandleStringNullCheckMethod();
             }
 
-            if (IsAssert(methodSymbol))
-            {
-                return HandleAssertMethod();
-            }
-
             return programState
                 .PopValues((invocation.ArgumentList?.Arguments.Count ?? 0) + 1)
                 .PushValue(new SymbolicValue());
-        }
-
-        private ProgramState HandleAssertMethod()
-        {
-            var argumentCount = invocation.ArgumentList?.Arguments.Count ?? 0;
-            if (argumentCount == 0)
-            {
-                return programState.PopValue()
-                    .PushValue(new SymbolicValue());
-            }
-
-            SymbolicValue arg1;
-
-            var newProgramState = programState
-                .PopValues(argumentCount - 1)
-                .PopValue(out arg1)
-                .PopValue()
-                .PushValue(new SymbolicValue());
-
-            AssertedValue = arg1;
-
-            return newProgramState;
         }
 
         private ProgramState HandleStringNullCheckMethod()
@@ -169,27 +142,6 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
         private static readonly ImmutableHashSet<string> IsNullMethodNames = ImmutableHashSet.Create(
             nameof(string.IsNullOrEmpty),
             nameof(string.IsNullOrWhiteSpace));
-
-        private bool IsAssert(IMethodSymbol methodSymbol)
-        {
-            if (methodSymbol != null &&
-                methodSymbol.Name == "Assert" &&
-                methodSymbol.ContainingType.IsAny(AssertContainerTypes))
-            {
-                IsAssertCall = true;
-                return true;
-            }
-
-            return false;
-        }
-
-        public SymbolicValue AssertedValue { get; private set; } = null;
-
-        public bool IsAssertCall { get; private set; } = false;
-
-        private static readonly ImmutableHashSet<KnownType> AssertContainerTypes = ImmutableHashSet.Create(
-            KnownType.System_Diagnostics_Debug,
-            KnownType.System_Diagnostics_Trace);
 
         private static bool IsStringNullCheckMethod(IMethodSymbol methodSymbol)
         {

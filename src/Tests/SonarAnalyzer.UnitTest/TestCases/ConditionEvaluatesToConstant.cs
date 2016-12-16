@@ -759,26 +759,24 @@ namespace Tests.Diagnostics
         {
             Debug.Assert(condition);
 
-            if (condition) // Noncompliant
+            if (condition) // Compliant
             {
             }
 
-            Trace.Assert(condition); // Noncompliant
-//                       ^^^^^^^^^
+            Trace.Assert(condition); // Compliant
 
             if (o1 != null)
             {
-                Debug.Assert(o1 == null, "Some message", "More details", 1, 2, 3); // Noncompliant
-//                           ^^^^^^^^^^
+                Debug.Assert(o1 == null, "Some message", "More details", 1, 2, 3); // Compliant
             }
         }
-        
+
         public void Assert(object o1)
         {
             System.Diagnostics.Debug.Assert(o1 != null);
-            System.Diagnostics.Debug.Assert(o1 == null); // Noncompliant
+            System.Diagnostics.Debug.Assert(o1 == null);
         }
-        
+
         void ComparisonTransitivity(int a, int b, int c)
         {
             if (a == b && b < c)

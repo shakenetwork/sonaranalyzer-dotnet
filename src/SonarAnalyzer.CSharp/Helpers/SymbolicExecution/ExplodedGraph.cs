@@ -399,34 +399,6 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.CSharp
                         var invocation = (InvocationExpressionSyntax)instruction;
                         var invocationVisitor = new InvocationVisitor(invocation, SemanticModel, newProgramState);
                         newProgramState = invocationVisitor.ProcessInvocation();
-
-                        if (invocationVisitor.IsAssertCall)
-                        {
-                            ExpressionSyntax condition = invocation.ArgumentList?.Arguments.FirstOrDefault()?.Expression;
-                            SymbolicValue sv = invocationVisitor.AssertedValue;
-
-                            if (sv == null || condition == null)
-                            {
-                                break;
-                            }
-
-                            OnInstructionProcessed(instruction, node.ProgramPoint, newProgramState);
-
-                            foreach (var trueSuccessorState in sv.TrySetConstraint(BoolConstraint.True, newProgramState))
-                            {
-                                OnConditionEvaluated(condition, evaluationValue: true);
-
-                                var ps = EnsureStackState(parenthesizedExpression, trueSuccessorState);
-                                EnqueueNewNode(newProgramPoint, ps);
-                            }
-
-                            if (sv.TrySetConstraint(BoolConstraint.False, newProgramState).Any())
-                            {
-                                OnConditionEvaluated(condition, evaluationValue: false);
-                            }
-
-                            return;
-                        }
                     }
                     break;
 

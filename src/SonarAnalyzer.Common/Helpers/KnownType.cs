@@ -160,10 +160,7 @@ namespace SonarAnalyzer.Helpers
 
         public static readonly KnownType System_Linq_Enumerable = new KnownType("System.Linq.Enumerable");
         public static readonly KnownType System_Linq_ImmutableArrayExtensions = new KnownType("System.Linq.ImmutableArrayExtensions");
-
-        public static readonly KnownType System_Diagnostics_Debug = new KnownType("System.Diagnostics.Debug");
-        public static readonly KnownType System_Diagnostics_Trace = new KnownType("System.Diagnostics.Trace");
-
+        
         public static readonly KnownType System_Runtime_Serialization_ISerializable = new KnownType("System.Runtime.Serialization.ISerializable");
         public static readonly KnownType System_Runtime_Serialization_SerializationInfo = new KnownType("System.Runtime.Serialization.SerializationInfo");
         public static readonly KnownType System_Runtime_Serialization_StreamingContext = new KnownType("System.Runtime.Serialization.StreamingContext");
