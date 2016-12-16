@@ -76,4 +76,9 @@ namespace Tests.Diagnostics
             M(d);
         }
     }
+
+    public class EventHandlerSample
+    {
+        private void MyOnClick(object sender, EventArgs args) { }
+    }
 }
