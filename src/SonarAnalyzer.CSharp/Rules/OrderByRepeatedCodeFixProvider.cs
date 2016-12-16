@@ -61,7 +61,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
         private static async Task<Document> ChangeToThenByAsync(Document document, SyntaxNode syntaxNode, CancellationToken cancellationToken)
         {
-            var root = await document.GetSyntaxRootAsync(cancellationToken);
+            var root = await document.GetSyntaxRootAsync(cancellationToken).ConfigureAwait(false);
             var newRoot = root.ReplaceNode(syntaxNode,
                 SyntaxFactory.IdentifierName("ThenBy"));
             return document.WithSyntaxRoot(newRoot);

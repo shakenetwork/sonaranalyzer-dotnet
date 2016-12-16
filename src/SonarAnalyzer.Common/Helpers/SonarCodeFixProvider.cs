@@ -48,7 +48,7 @@ namespace SonarAnalyzer.Helpers
                 return;
             }
 
-            await RegisterCodeFixesAsync(syntaxRoot, context);
+            await RegisterCodeFixesAsync(syntaxRoot, context).ConfigureAwait(false);
         }
 
         protected abstract Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context);

@@ -20,7 +20,7 @@
 
 namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
 {
-    public abstract class RelationalSymbolicValue : BinarySymbolicValue
+    public class RelationalSymbolicValue : BinarySymbolicValue
     {
         protected RelationalSymbolicValue(SymbolicValue leftOperand, SymbolicValue rightOperand)
             : base(leftOperand, rightOperand)

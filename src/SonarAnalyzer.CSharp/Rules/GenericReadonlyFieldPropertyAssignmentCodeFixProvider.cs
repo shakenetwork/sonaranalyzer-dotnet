@@ -63,7 +63,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 .Select(reference => reference.GetSyntaxAsync(context.CancellationToken))
                 .ToList();
 
-            await Task.WhenAll(classDeclarationTasks);
+            await Task.WhenAll(classDeclarationTasks).ConfigureAwait(false);
 
             var classDeclarations = classDeclarationTasks
                 .Select(task => task.Result as ClassDeclarationSyntax)

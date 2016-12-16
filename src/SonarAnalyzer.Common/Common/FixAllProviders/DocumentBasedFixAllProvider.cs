@@ -156,7 +156,7 @@ namespace SonarAnalyzer.Common
                 var action = fixes.FirstOrDefault(fix => fix.EquivalenceKey == fixAllContext.CodeActionEquivalenceKey);
                 if (action != null)
                 {
-                    var operations = await action.GetOperationsAsync(fixAllContext.CancellationToken);
+                    var operations = await action.GetOperationsAsync(fixAllContext.CancellationToken).ConfigureAwait(false);
                     var solution = operations.OfType<ApplyChangesOperation>().Single().ChangedSolution;
                     currentDocument = solution.GetDocument(document.Id);
                     root = await currentDocument.GetSyntaxRootAsync(fixAllContext.CancellationToken).ConfigureAwait(false);

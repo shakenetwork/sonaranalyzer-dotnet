@@ -92,25 +92,30 @@ namespace SonarAnalyzer.Common
 
                 foreach (var line in triviaLines)
                 {
-                    if (line.Contains("NOSONAR"))
-                    {
-                        nonBlank.Remove(lineNumber);
-                        noSonar.Add(lineNumber);
-                    }
-                    else
-                    {
-                        if (HasValidCommentContent(line) &&
-                            !noSonar.Contains(lineNumber))
-                        {
-                            nonBlank.Add(lineNumber);
-                        }
-                    }
+                    CategorizeLines(line, lineNumber, noSonar, nonBlank);
 
                     lineNumber++;
                 }
             }
 
             return new FileComments(noSonar.ToImmutableHashSet(), nonBlank.ToImmutableHashSet());
+        }
+
+        private static void CategorizeLines(string line, int lineNumber, ImmutableHashSet<int>.Builder noSonar, ImmutableHashSet<int>.Builder nonBlank)
+        {
+            if (line.Contains("NOSONAR"))
+            {
+                nonBlank.Remove(lineNumber);
+                noSonar.Add(lineNumber);
+            }
+            else
+            {
+                if (HasValidCommentContent(line) &&
+                    !noSonar.Contains(lineNumber))
+                {
+                    nonBlank.Add(lineNumber);
+                }
+            }
         }
 
         private static bool HasValidCommentContent(string content) => content.Any(char.IsLetter) || content.Any(char.IsDigit);

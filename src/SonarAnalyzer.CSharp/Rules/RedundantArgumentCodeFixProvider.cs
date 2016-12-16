@@ -60,7 +60,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 return;
             }
 
-            var semanticModel = await context.Document.GetSemanticModelAsync(context.CancellationToken);
+            var semanticModel = await context.Document.GetSemanticModelAsync(context.CancellationToken).ConfigureAwait(false);
             var methodParameterLookup = new MethodParameterLookup(invocation, semanticModel);
             var argumentMappings = methodParameterLookup.GetAllArgumentParameterMappings()
                 .ToList();
@@ -126,7 +126,7 @@ namespace SonarAnalyzer.Rules.CSharp
             List<MethodParameterLookup.ArgumentParameterMapping> argumentMappings, List<ArgumentSyntax> argumentsToRemove,
             SemanticModel semanticModel, CancellationToken cancellationToken)
         {
-            var root = await document.GetSyntaxRootAsync(cancellationToken);
+            var root = await document.GetSyntaxRootAsync(cancellationToken).ConfigureAwait(false);
             var newArgumentList = SyntaxFactory.ArgumentList();
             var alreadyRemovedOne = false;
 
@@ -208,7 +208,7 @@ namespace SonarAnalyzer.Rules.CSharp
         private static async Task<Document> RemoveArgumentsAsync(Document document, IEnumerable<ArgumentSyntax> arguments,
             CancellationToken cancellationToken)
         {
-            var root = await document.GetSyntaxRootAsync(cancellationToken);
+            var root = await document.GetSyntaxRootAsync(cancellationToken).ConfigureAwait(false);
             var newRoot = root.RemoveNodes(arguments, SyntaxRemoveOptions.KeepNoTrivia | SyntaxRemoveOptions.AddElasticMarker);
             return document.WithSyntaxRoot(newRoot);
         }
