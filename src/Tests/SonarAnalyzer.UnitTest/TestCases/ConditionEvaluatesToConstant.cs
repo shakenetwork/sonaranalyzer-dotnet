@@ -880,5 +880,35 @@ namespace Tests.Diagnostics
             public static bool operator >=(Comp a, Comp b) { return true; }
             public static bool operator <=(Comp a, Comp b) { return true; }
         }
+
+        struct MyStructWithNoOperator
+        {
+            public static void M(MyStructWithNoOperator a)
+            {
+                if (a == null) // Noncompliant, also a compiler error
+                {
+                }
+            }
+        }
+
+        struct MyStructWithOperator
+        {
+            public static bool operator==(MyStructWithOperator? a, MyStructWithOperator? b)
+            {
+                return true;
+            }
+
+            public static bool operator !=(MyStructWithOperator? a, MyStructWithOperator? b)
+            {
+                return true;
+            }
+
+            public static void M(MyStructWithOperator a)
+            {
+                if (a == null) // Compliant
+                {
+                }
+            }
+        }
     }
 }

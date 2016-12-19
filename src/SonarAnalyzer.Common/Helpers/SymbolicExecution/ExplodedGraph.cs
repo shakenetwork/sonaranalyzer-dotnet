@@ -334,19 +334,52 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
                 : programState;
         }
 
-        protected static ProgramState SetNonNullConstraintIfValueType(ISymbol symbol, SymbolicValue symbolicValue, ProgramState programState)
+        protected static ProgramState SetNonNullConstraintIfValueType(ITypeSymbol typeSymbol, SymbolicValue symbolicValue, ProgramState programState)
         {
-            return IsNonNullableValueType(symbol) && !symbolicValue.HasConstraint(ObjectConstraint.NotNull, programState)
+            var isDefinitelyNotNull = !symbolicValue.HasConstraint(ObjectConstraint.NotNull, programState) &&
+                IsNonNullableValueType(typeSymbol) &&
+                !IsValueTypeWithOverloadedNullCompatibleOpEquals(typeSymbol);
+
+            return isDefinitelyNotNull
                 ? symbolicValue.SetConstraint(ObjectConstraint.NotNull, programState)
                 : programState;
         }
 
-        private static bool IsNonNullableValueType(ISymbol symbol)
+        private static bool IsValueTypeWithOverloadedNullCompatibleOpEquals(ITypeSymbol type)
         {
-            return IsNonNullableValueType(symbol.GetSymbolType());
+            if (type == null ||
+                !type.IsValueType)
+            {
+                return false;
+            }
+
+            return type.GetMembers("op_Equality")
+                .OfType<IMethodSymbol>()
+                .Any(m => m.Parameters.Any(p => IsNullCompatibleType(p.Type)));
         }
 
-        protected static bool IsNonNullableValueType(ITypeSymbol type)
+        private static bool IsNullCompatibleType(ITypeSymbol type)
+        {
+            if (type == null)
+            {
+                return false;
+            }
+
+            return !type.IsValueType ||
+                type.OriginalDefinition.Is(KnownType.System_Nullable_T);
+        }
+
+        protected static ProgramState SetNonNullConstraintIfValueType(ISymbol symbol, SymbolicValue symbolicValue, ProgramState programState)
+        {
+            return SetNonNullConstraintIfValueType(symbol.GetSymbolType(), symbolicValue, programState);
+        }
+
+        protected ProgramState SetNonNullConstraintIfValueType(SyntaxNode node, SymbolicValue symbolicValue, ProgramState programState)
+        {
+            return SetNonNullConstraintIfValueType(SemanticModel.GetTypeInfo(node).Type, symbolicValue, programState);
+        }
+
+        private static bool IsNonNullableValueType(ITypeSymbol type)
         {
             return type != null &&
                 type.IsValueType &&

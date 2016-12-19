@@ -328,14 +328,8 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.CSharp
 
                 case SyntaxKind.DefaultExpression:
                     {
-                        var type = SemanticModel.GetTypeInfo(instruction).Type;
                         var sv = new SymbolicValue();
-
-                        if (IsNonNullableValueType(type))
-                        {
-                            newProgramState = sv.SetConstraint(ObjectConstraint.NotNull, newProgramState);
-                        }
-
+                        newProgramState = SetNonNullConstraintIfValueType(instruction, sv, newProgramState);
                         newProgramState = newProgramState.PushValue(sv);
                     }
                     break;
@@ -534,12 +528,7 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.CSharp
             var newProgramState = programState.PopValue(out memberExpression);
             var sv = new MemberAccessSymbolicValue(memberExpression, memberAccess.Name.Identifier.ValueText);
 
-            var type = SemanticModel.GetTypeInfo(memberAccess).Type;
-            if (IsNonNullableValueType(type))
-            {
-                newProgramState = sv.SetConstraint(ObjectConstraint.NotNull, newProgramState);
-            }
-
+            newProgramState = SetNonNullConstraintIfValueType(memberAccess, sv, newProgramState);
             return newProgramState.PushValue(sv);
         }
 
