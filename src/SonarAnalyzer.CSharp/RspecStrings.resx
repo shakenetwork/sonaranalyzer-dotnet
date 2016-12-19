@@ -753,6 +753,30 @@
   <data name="S121_Title" xml:space="preserve">
     <value>Control structures should use curly braces</value>
   </data>
+  <data name="S1210_Category" xml:space="preserve">
+    <value>Sonar Bug</value>
+  </data>
+  <data name="S1210_Description" xml:space="preserve">
+    <value>When you implement IComparable or IComparable&amp;lt;T&amp;gt; on a class, the CLR cannot automatically call your implementation in the comparison operators &amp;lt;, ==, &amp;gt; and !=. Also, you could get weird and unpredictable results if the Equals() method does not follow the same logic as CompareTo().</value>
+  </data>
+  <data name="S1210_IsActivatedByDefault" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="S1210_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S1210_RemediationCost" xml:space="preserve">
+    <value>15min</value>
+  </data>
+  <data name="S1210_Severity" xml:space="preserve">
+    <value>Minor</value>
+  </data>
+  <data name="S1210_Tags" xml:space="preserve">
+    <value>bug</value>
+  </data>
+  <data name="S1210_Title" xml:space="preserve">
+    <value>When implementing "IComparable", "Equals(object o)" and the "&lt;", "&gt;", "==", "!=" operators should be overridden</value>
+  </data>
   <data name="S122_Category" xml:space="preserve">
     <value>Sonar Code Smell</value>
   </data>

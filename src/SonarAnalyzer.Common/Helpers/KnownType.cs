@@ -174,6 +174,9 @@ namespace SonarAnalyzer.Helpers
         public static readonly KnownType System_NullReferenceException = new KnownType("System.NullReferenceException");
         public static readonly KnownType System_OutOfMemoryException = new KnownType("System.OutOfMemoryException");
 
+        public static readonly KnownType System_IComparable = new KnownType("System.IComparable");
+        public static readonly KnownType System_IComparable_T = new KnownType("System.IComparable<T>");
+
         #endregion
 
         public string TypeName { get; }

@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S1210",
+"message":  "When implementing IComparable\u003cT\u003e, you should also override Equals, \u003c, \u003e, ==, !=.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Routing\\Trie\\MatchResult.cs",
+"region":  {
+"startLine":  9,
+"startColumn":  18,
+"endLine":  9,
+"endColumn":  29
+}
+}
+}
+]
+}
