@@ -24,7 +24,6 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
-using Microsoft.CodeAnalysis.Text;
 using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
 
@@ -32,7 +31,7 @@ namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [Rule(DiagnosticId)]
-    public class StaticFieldWrittenFromInstanceMember : SonarDiagnosticAnalyzer
+    public class StaticFieldWrittenFromInstanceMember : StaticFieldWrittenFrom
     {
         internal const string DiagnosticId = "S2696";
         internal const string MessageFormat = "{0}";
@@ -44,120 +43,49 @@ namespace SonarAnalyzer.Rules.CSharp
 
         protected sealed override DiagnosticDescriptor Rule => rule;
 
-        protected override void Initialize(SonarAnalysisContext context)
+        protected override bool IsValidCodeBlockContext(SyntaxNode node, ISymbol owningSymbol)
         {
-            context.RegisterCodeBlockStartActionInNonGenerated<SyntaxKind>(
-                cbc =>
+            if (owningSymbol == null || owningSymbol.IsStatic)
+            {
+                return false;
+            }
+
+            SyntaxNode declaration = node as MethodDeclarationSyntax;
+            if (declaration == null)
+            {
+                declaration = node as AccessorDeclarationSyntax;
+                if (declaration == null)
                 {
-                    SyntaxNode declaration = cbc.CodeBlock as MethodDeclarationSyntax;
-                    var declarationType = "method";
-
-                    if (declaration == null)
-                    {
-                        declaration = cbc.CodeBlock as AccessorDeclarationSyntax;
-                        declarationType = "property";
-                        if (declaration == null)
-                        {
-                            return;
-                        }
-                    }
-
-                    var methodOrPropertySymbol = cbc.OwningSymbol;
-                    if (methodOrPropertySymbol == null ||
-                        methodOrPropertySymbol.IsStatic)
-                    {
-                        return;
-                    }
-
-                    var locationsForFields = new Dictionary<IFieldSymbol, List<Location>>();
-
-                    cbc.RegisterSyntaxNodeAction(
-                        c =>
-                        {
-                            var assignment = (AssignmentExpressionSyntax)c.Node;
-                            var expression = assignment.Left;
-
-                            var fieldSymbol = c.SemanticModel.GetSymbolInfo(expression).Symbol as IFieldSymbol;
-                            if (IsStatic(fieldSymbol))
-                            {
-                                var location = Location.Create(expression.SyntaxTree,
-                                    new TextSpan(expression.SpanStart,
-                                        assignment.OperatorToken.Span.End - expression.SpanStart));
-
-                                AddFieldLocation(fieldSymbol, location, locationsForFields);
-                            }
-                        },
-                        SyntaxKind.SimpleAssignmentExpression,
-                        SyntaxKind.AddAssignmentExpression,
-                        SyntaxKind.SubtractAssignmentExpression,
-                        SyntaxKind.MultiplyAssignmentExpression,
-                        SyntaxKind.DivideAssignmentExpression,
-                        SyntaxKind.ModuloAssignmentExpression,
-                        SyntaxKind.AndAssignmentExpression,
-                        SyntaxKind.ExclusiveOrAssignmentExpression,
-                        SyntaxKind.OrAssignmentExpression,
-                        SyntaxKind.LeftShiftAssignmentExpression,
-                        SyntaxKind.RightShiftAssignmentExpression);
-
-                    cbc.RegisterSyntaxNodeAction(
-                        c =>
-                        {
-                            var unary = (PrefixUnaryExpressionSyntax)c.Node;
-                            CollectLocationOfStaticField(unary.Operand, locationsForFields, c);
-                        },
-                        SyntaxKind.PreDecrementExpression,
-                        SyntaxKind.PreIncrementExpression);
-
-                    cbc.RegisterSyntaxNodeAction(
-                        c =>
-                        {
-                            var unary = (PostfixUnaryExpressionSyntax)c.Node;
-                            CollectLocationOfStaticField(unary.Operand, locationsForFields, c);
-                        },
-                        SyntaxKind.PostDecrementExpression,
-                        SyntaxKind.PostIncrementExpression);
-
-                    cbc.RegisterCodeBlockEndAction(
-                        c =>
-                        {
-                            var messageFormat = methodOrPropertySymbol.IsChangeable()
-                                ? MessageFormatMultipleOptions
-                                : MessageFormatRemoveSet;
-                            var message = string.Format(messageFormat, declarationType);
-
-                            foreach (var locations in locationsForFields.Values)
-                            {
-                                var firstPosition = locations.Select(loc => loc.SourceSpan.Start).Min();
-                                var location = locations.First(loc => loc.SourceSpan.Start == firstPosition);
-                                c.ReportDiagnostic(Diagnostic.Create(Rule, location, message));
-                            }
-                        });
-                });
-        }
-
-        private static void AddFieldLocation(IFieldSymbol fieldSymbol, Location location, Dictionary<IFieldSymbol, List<Location>> locationsForFields)
-        {
-            if (!locationsForFields.ContainsKey(fieldSymbol))
-            {
-                locationsForFields.Add(fieldSymbol, new List<Location>());
+                    return false;
+                }
             }
 
-            locationsForFields[fieldSymbol].Add(location);
+            return true;
         }
 
-        private static void CollectLocationOfStaticField(ExpressionSyntax expression, Dictionary<IFieldSymbol, List<Location>> locationsForFields, SyntaxNodeAnalysisContext context)
+        protected override string GetDiagnosticMessageArgument(SyntaxNode node, ISymbol owningSymbol, IFieldSymbol field)
         {
-            var fieldSymbol = context.SemanticModel.GetSymbolInfo(expression).Symbol as IFieldSymbol;
-            if (IsStatic(fieldSymbol))
+            var messageFormat = owningSymbol.IsChangeable()
+                               ? MessageFormatMultipleOptions
+                               : MessageFormatRemoveSet;
+            var declarationType = GetDeclarationType(node);
+
+            return string.Format(messageFormat, declarationType);
+        }
+
+        private static string GetDeclarationType(SyntaxNode declaration)
+        {
+            if (declaration is MethodDeclarationSyntax)
             {
-                AddFieldLocation(fieldSymbol, expression.GetLocation(), locationsForFields);
+                return "method";
             }
-        }
 
-        private static bool IsStatic(IFieldSymbol fieldSymbol)
-        {
-            return fieldSymbol != null &&
-                fieldSymbol.IsStatic;
+            if (declaration is AccessorDeclarationSyntax)
+            {
+                return "property";
+            }
+
+            return string.Empty;
         }
     }
 }

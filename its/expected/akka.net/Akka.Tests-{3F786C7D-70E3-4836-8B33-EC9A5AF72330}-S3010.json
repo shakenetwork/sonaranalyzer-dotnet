@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S3010",
+"message":  "Remove this assignment of \u0027_state\u0027 or initialize it statically.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Stash\\ActorWithStashSpec.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  13,
+"endLine":  23,
+"endColumn":  21
+}
+}
+}
+]
+}

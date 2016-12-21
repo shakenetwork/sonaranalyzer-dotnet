@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S3010",
+"message":  "Remove this assignment of \u0027rootPathProvider\u0027 or initialize it statically.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Bootstrapper\\FavIconApplicationStartup.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  13,
+"endLine":  25,
+"endColumn":  57
+}
+}
+},
+{
+"id":  "S3010",
+"message":  "Remove this assignment of \u0027rootPathProvider\u0027 or initialize it statically.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\StaticContent.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  13,
+"endLine":  25,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S3010",
+"message":  "Remove this assignment of \u0027conventions\u0027 or initialize it statically.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\StaticContent.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  13,
+"endLine":  26,
+"endColumn":  40
+}
+}
+}
+]
+}

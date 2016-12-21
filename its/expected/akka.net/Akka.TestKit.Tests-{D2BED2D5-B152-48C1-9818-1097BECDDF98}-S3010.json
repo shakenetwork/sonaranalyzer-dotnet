@@ -1,0 +1,17 @@
+{
+"issues":  [
+{
+"id":  "S3010",
+"message":  "Remove this assignment of \u0027OtherThread\u0027 or initialize it statically.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\TestActorRefTests\\TestActorRefSpec.cs",
+"region":  {
+"startLine":  28,
+"startColumn":  13,
+"endLine":  28,
+"endColumn":  26
+}
+}
+}
+]
+}
