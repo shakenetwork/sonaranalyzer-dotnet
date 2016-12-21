@@ -38,7 +38,7 @@ namespace SonarAnalyzer.UnitTest.Helpers
         {
             string testInput = "var a = true; var b = false; b = !b; a = (b);";
             SemanticModel semanticModel;
-            var method = ControlFlowGraphTest.Compile(string.Format(ControlFlowGraphTest.TestInput, testInput), "Bar", out semanticModel);
+            var method = ControlFlowGraphTest.CompileWithMethodBody(string.Format(ControlFlowGraphTest.TestInput, testInput), "Bar", out semanticModel);
             return semanticModel.GetDeclaredSymbol(method);
         }
 

@@ -41,16 +41,18 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
 
             if (boolConstraint == BoolConstraint.True)
             {
-                return LeftOperand.TrySetConstraint(BoolConstraint.True, currentProgramState)
-                    .SelectMany(ps => RightOperand.TrySetConstraint(BoolConstraint.True, ps));
+                return ThrowIfTooMany(
+                    LeftOperand.TrySetConstraint(BoolConstraint.True, currentProgramState)
+                        .SelectMany(ps => RightOperand.TrySetConstraint(BoolConstraint.True, ps)));
             }
 
-            return LeftOperand.TrySetConstraint(BoolConstraint.True, currentProgramState)
+            return ThrowIfTooMany(
+                LeftOperand.TrySetConstraint(BoolConstraint.True, currentProgramState)
                     .SelectMany(ps => RightOperand.TrySetConstraint(BoolConstraint.False, ps))
                 .Union(LeftOperand.TrySetConstraint(BoolConstraint.False, currentProgramState)
                     .SelectMany(ps => RightOperand.TrySetConstraint(BoolConstraint.True, ps)))
                 .Union(LeftOperand.TrySetConstraint(BoolConstraint.False, currentProgramState)
-                    .SelectMany(ps => RightOperand.TrySetConstraint(BoolConstraint.False, ps)));
+                    .SelectMany(ps => RightOperand.TrySetConstraint(BoolConstraint.False, ps))));
         }
 
         public override string ToString()

@@ -56,7 +56,7 @@ namespace NS
 }";
 
             SemanticModel semanticModel;
-            var method = Compile(input, "Bar", out semanticModel);
+            var method = CompileWithMethodBody(input, "Bar", out semanticModel);
             var expression = method.ExpressionBody.Expression;
             var cfg = SonarAnalyzer.Helpers.FlowAnalysis.CSharp.ControlFlowGraph.Create(expression, semanticModel);
             VerifyMinimalCfg(cfg);
@@ -1908,7 +1908,7 @@ namespace NS
   }}
 }}";
 
-        internal static MethodDeclarationSyntax Compile(string input, string methodName, out SemanticModel semanticModel)
+        internal static MethodDeclarationSyntax CompileWithMethodBody(string input, string methodName, out SemanticModel semanticModel)
         {
             using (var workspace = new AdhocWorkspace())
             {
@@ -1927,10 +1927,28 @@ namespace NS
             }
         }
 
+        internal static SyntaxTree Compile(string input, out SemanticModel semanticModel)
+        {
+            using (var workspace = new AdhocWorkspace())
+            {
+                var document = workspace.CurrentSolution.AddProject("foo", "foo.dll", LanguageNames.CSharp)
+                    .AddMetadataReference(MetadataReference.CreateFromFile(typeof(object).Assembly.Location))
+                    .AddMetadataReference(MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location))
+                    .AddMetadataReference(MetadataReference.CreateFromFile(typeof(System.Diagnostics.Debug).Assembly.Location))
+                    .AddDocument("test", input);
+                var compilation = document.Project.GetCompilationAsync().Result;
+                var tree = compilation.SyntaxTrees.First();
+
+                semanticModel = compilation.GetSemanticModel(tree);
+
+                return tree;
+            }
+        }
+
         private static IControlFlowGraph Build(string methodBody)
         {
             SemanticModel semanticModel;
-            var method = Compile(string.Format(TestInput, methodBody), "Bar", out semanticModel);
+            var method = CompileWithMethodBody(string.Format(TestInput, methodBody), "Bar", out semanticModel);
             return ControlFlowGraph.Create(method.Body, semanticModel);
         }
 

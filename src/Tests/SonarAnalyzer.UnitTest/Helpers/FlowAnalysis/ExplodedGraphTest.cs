@@ -55,7 +55,7 @@ namespace NS
         {
             string testInput = "var a = true; var b = false; b = !b; a = (b);";
             SemanticModel semanticModel;
-            var method = ControlFlowGraphTest.Compile(string.Format(TestInput, testInput), "Bar", out semanticModel);
+            var method = ControlFlowGraphTest.CompileWithMethodBody(string.Format(TestInput, testInput), "Bar", out semanticModel);
             var methodSymbol = semanticModel.GetDeclaredSymbol(method);
             var varDeclarators = method.DescendantNodes().OfType<VariableDeclaratorSyntax>();
             var aSymbol = semanticModel.GetDeclaredSymbol(varDeclarators.First(d => d.Identifier.ToString() == "a"));
@@ -110,7 +110,7 @@ namespace NS
         {
             string testInput = "outParameter = true;";
             SemanticModel semanticModel;
-            var method = ControlFlowGraphTest.Compile(string.Format(TestInput, testInput), "Bar", out semanticModel);
+            var method = ControlFlowGraphTest.CompileWithMethodBody(string.Format(TestInput, testInput), "Bar", out semanticModel);
             var methodSymbol = semanticModel.GetDeclaredSymbol(method);
             var parameters = method.DescendantNodes().OfType<ParameterSyntax>();
             var outParameterSymbol = semanticModel.GetDeclaredSymbol(parameters.First(d => d.Identifier.ToString() == "outParameter"));
@@ -154,7 +154,7 @@ namespace NS
             }
             string testInput = inputBuilder.ToString();
             SemanticModel semanticModel;
-            var method = ControlFlowGraphTest.Compile(string.Format(TestInput, testInput), "Bar", out semanticModel);
+            var method = ControlFlowGraphTest.CompileWithMethodBody(string.Format(TestInput, testInput), "Bar", out semanticModel);
             var methodSymbol = semanticModel.GetDeclaredSymbol(method);
 
             var cfg = ControlFlowGraph.Create(method.Body, semanticModel);
@@ -182,7 +182,7 @@ namespace NS
         {
             string testInput = "var a = false; bool b; if (a) { b = true; } else { b = false; } a = b;";
             SemanticModel semanticModel;
-            var method = ControlFlowGraphTest.Compile(string.Format(TestInput, testInput), "Bar", out semanticModel);
+            var method = ControlFlowGraphTest.CompileWithMethodBody(string.Format(TestInput, testInput), "Bar", out semanticModel);
             var methodSymbol = semanticModel.GetDeclaredSymbol(method);
             var varDeclarators = method.DescendantNodes().OfType<VariableDeclaratorSyntax>();
             var aSymbol = semanticModel.GetDeclaredSymbol(varDeclarators.First(d => d.Identifier.ToString() == "a"));
@@ -239,7 +239,7 @@ namespace NS
         {
             string testInput = "var a = false; if (a && !a) { a = true; }";
             SemanticModel semanticModel;
-            var method = ControlFlowGraphTest.Compile(string.Format(TestInput, testInput), "Bar", out semanticModel);
+            var method = ControlFlowGraphTest.CompileWithMethodBody(string.Format(TestInput, testInput), "Bar", out semanticModel);
             var methodSymbol = semanticModel.GetDeclaredSymbol(method);
             var varDeclarators = method.DescendantNodes().OfType<VariableDeclaratorSyntax>();
             var aSymbol = semanticModel.GetDeclaredSymbol(varDeclarators.First(d => d.Identifier.ToString() == "a"));
@@ -282,7 +282,7 @@ namespace NS
         {
             string testInput = "var a = false; bool b; if (inParameter) { b = inParameter; } else { b = !inParameter; } a = b;";
             SemanticModel semanticModel;
-            var method = ControlFlowGraphTest.Compile(string.Format(TestInput, testInput), "Bar", out semanticModel);
+            var method = ControlFlowGraphTest.CompileWithMethodBody(string.Format(TestInput, testInput), "Bar", out semanticModel);
             var methodSymbol = semanticModel.GetDeclaredSymbol(method);
 
             var varDeclarators = method.DescendantNodes().OfType<VariableDeclaratorSyntax>();
@@ -365,7 +365,7 @@ namespace NS
         {
             string testInput = "var a = !true; bool b; if (inParameter) { b = false; } else { b = false; } a = b;";
             SemanticModel semanticModel;
-            var method = ControlFlowGraphTest.Compile(string.Format(TestInput, testInput), "Bar", out semanticModel);
+            var method = ControlFlowGraphTest.CompileWithMethodBody(string.Format(TestInput, testInput), "Bar", out semanticModel);
             var methodSymbol = semanticModel.GetDeclaredSymbol(method);
 
             var varDeclarators = method.DescendantNodes().OfType<VariableDeclaratorSyntax>();
@@ -408,7 +408,7 @@ namespace NS
         {
             string testInput = "var str = this?.ToString();";
             SemanticModel semanticModel;
-            var method = ControlFlowGraphTest.Compile(string.Format(TestInput, testInput), "Bar", out semanticModel);
+            var method = ControlFlowGraphTest.CompileWithMethodBody(string.Format(TestInput, testInput), "Bar", out semanticModel);
             var methodSymbol = semanticModel.GetDeclaredSymbol(method);
 
             var cfg = ControlFlowGraph.Create(method.Body, semanticModel);
@@ -442,7 +442,7 @@ namespace NS
         {
             string testInput = "int i = 1; switch (i) { case 1: default: cw1(); break; case 2: cw2(); break; }";
             SemanticModel semanticModel;
-            var method = ControlFlowGraphTest.Compile(string.Format(TestInput, testInput), "Bar", out semanticModel);
+            var method = ControlFlowGraphTest.CompileWithMethodBody(string.Format(TestInput, testInput), "Bar", out semanticModel);
             var methodSymbol = semanticModel.GetDeclaredSymbol(method);
 
             var cfg = ControlFlowGraph.Create(method.Body, semanticModel);
@@ -487,7 +487,7 @@ namespace NS
         {
             string testInput = "var a = true; a |= false; var b = 42; b++; ++b;";
             SemanticModel semanticModel;
-            var method = ControlFlowGraphTest.Compile(string.Format(TestInput, testInput), "Bar", out semanticModel);
+            var method = ControlFlowGraphTest.CompileWithMethodBody(string.Format(TestInput, testInput), "Bar", out semanticModel);
             var methodSymbol = semanticModel.GetDeclaredSymbol(method);
             var varDeclarators = method.DescendantNodes().OfType<VariableDeclaratorSyntax>();
             var aSymbol = semanticModel.GetDeclaredSymbol(varDeclarators.First(d => d.Identifier.ToString() == "a"));
@@ -552,7 +552,7 @@ namespace NS
         {
             string testInput = "if (field) { cw(); }";
             SemanticModel semanticModel;
-            var method = ControlFlowGraphTest.Compile(string.Format(TestInput, testInput), "Bar", out semanticModel);
+            var method = ControlFlowGraphTest.CompileWithMethodBody(string.Format(TestInput, testInput), "Bar", out semanticModel);
             var methodSymbol = semanticModel.GetDeclaredSymbol(method);
             var fieldSymbol = semanticModel.GetSymbolInfo(
                 method.DescendantNodes().OfType<IdentifierNameSyntax>().First(d => d.Identifier.ToString() == "field")).Symbol;
@@ -593,7 +593,7 @@ namespace NS
         {
             string testInput = "var i = 0; while (i < 1) { i = i + 1; }";
             SemanticModel semanticModel;
-            var method = ControlFlowGraphTest.Compile(string.Format(TestInput, testInput), "Bar", out semanticModel);
+            var method = ControlFlowGraphTest.CompileWithMethodBody(string.Format(TestInput, testInput), "Bar", out semanticModel);
             var methodSymbol = semanticModel.GetDeclaredSymbol(method);
 
             var cfg = ControlFlowGraph.Create(method.Body, semanticModel);
@@ -614,6 +614,71 @@ namespace NS
 
             Assert.IsTrue(explorationEnded);
             Assert.AreEqual(1, exceeded);
+        }
+
+        [TestMethod]
+        [TestCategory("Symbolic execution")]
+        public void ExplodedGraph_InternalStateCount_MaxReached()
+        {
+            var testInput = @"
+using System;
+
+namespace TesteAnalyzer
+{
+    class Program
+    {
+        static bool GetBool() { return bool.Parse(""True""); }
+
+        static void Main(string[] args)
+        {
+            bool corrupted = false;
+            corrupted |= !GetBool();
+            corrupted |= !GetBool();
+            corrupted |= !GetBool();
+            corrupted |= !GetBool();
+            corrupted |= !GetBool();
+            corrupted |= !GetBool();
+            corrupted |= !GetBool();
+            corrupted |= !GetBool();
+            corrupted |= !GetBool();
+            corrupted |= !GetBool();
+            corrupted |= !GetBool();
+            corrupted |= !GetBool();
+            corrupted |= !GetBool();
+            corrupted |= !GetBool();
+            corrupted |= !GetBool();
+            corrupted |= !GetBool();
+            corrupted |= !GetBool();
+
+            if (!corrupted)
+            {
+                Console.Out.WriteLine();
+            }
+        }
+    }
+}
+";
+            SemanticModel semanticModel;
+            var tree = ControlFlowGraphTest.Compile(testInput, out semanticModel);
+            var method = tree.GetRoot().DescendantNodes().OfType<MethodDeclarationSyntax>().First(m => m.Identifier.ValueText == "Main");
+            var methodSymbol = semanticModel.GetDeclaredSymbol(method);
+
+            var cfg = ControlFlowGraph.Create(method.Body, semanticModel);
+            var lva = LiveVariableAnalysis.Analyze(cfg, methodSymbol, semanticModel);
+
+            var explodedGraph = new ExplodedGraph(cfg, methodSymbol, semanticModel, lva);
+            var explorationEnded = false;
+            explodedGraph.ExplorationEnded += (sender, args) => { explorationEnded = true; };
+            var maxStepCountReached = false;
+            explodedGraph.MaxStepCountReached += (sender, args) => { maxStepCountReached = true; };
+            var maxInternalStateCountReached = false;
+            explodedGraph.MaxInternalStateCountReached += (sender, args) => { maxInternalStateCountReached = true; };
+            
+            explodedGraph.Walk();
+
+            Assert.IsFalse(explorationEnded);
+            Assert.IsFalse(maxStepCountReached);
+            Assert.IsTrue(maxInternalStateCountReached);
         }
     }
 }

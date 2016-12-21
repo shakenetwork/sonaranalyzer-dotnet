@@ -29,6 +29,7 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
     internal abstract class ExplodedGraph
     {
         internal const int MaxStepCount = 1000;
+        internal const int MaxInternalStateCount = 10000;
         private const int MaxProgramPointExecutionCount = 2;
 
         private readonly List<ExplodedGraphNode> nodes = new List<ExplodedGraphNode>();
@@ -48,6 +49,7 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
 
         public event EventHandler ExplorationEnded;
         public event EventHandler MaxStepCountReached;
+        public event EventHandler MaxInternalStateCountReached;
         public event EventHandler<InstructionProcessedEventArgs> InstructionProcessed;
         public event EventHandler<VisitCountExceedLimitEventArgs> ProgramPointVisitCountExceedLimit;
         public event EventHandler ExitBlockReached;
@@ -91,38 +93,46 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
                     continue;
                 }
 
-                if (programPoint.Offset < programPoint.Block.Instructions.Count)
+                try
                 {
-                    VisitInstruction(node);
-                    continue;
-                }
+                    if (programPoint.Offset < programPoint.Block.Instructions.Count)
+                    {
+                        VisitInstruction(node);
+                        continue;
+                    }
 
-                var binaryBranchBlock = programPoint.Block as BinaryBranchBlock;
-                if (binaryBranchBlock != null)
-                {
-                    VisitBinaryBranch(binaryBranchBlock, node);
-                    continue;
-                }
+                    var binaryBranchBlock = programPoint.Block as BinaryBranchBlock;
+                    if (binaryBranchBlock != null)
+                    {
+                        VisitBinaryBranch(binaryBranchBlock, node);
+                        continue;
+                    }
 
-                var singleSuccessorBinaryBranchBlock = programPoint.Block as BinaryBranchingSimpleBlock;
-                if (singleSuccessorBinaryBranchBlock != null)
-                {
-                    // Right operand of logical && and ||
-                    VisitSingleSuccessorBinaryBranch(singleSuccessorBinaryBranchBlock, node);
-                    continue;
-                }
+                    var singleSuccessorBinaryBranchBlock = programPoint.Block as BinaryBranchingSimpleBlock;
+                    if (singleSuccessorBinaryBranchBlock != null)
+                    {
+                        // Right operand of logical && and ||
+                        VisitSingleSuccessorBinaryBranch(singleSuccessorBinaryBranchBlock, node);
+                        continue;
+                    }
 
-                var simpleBlock = programPoint.Block as SimpleBlock;
-                if (simpleBlock != null)
-                {
-                    VisitSimpleBlock(simpleBlock, node);
-                    continue;
-                }
+                    var simpleBlock = programPoint.Block as SimpleBlock;
+                    if (simpleBlock != null)
+                    {
+                        VisitSimpleBlock(simpleBlock, node);
+                        continue;
+                    }
 
-                if (programPoint.Block is BranchBlock)
+                    if (programPoint.Block is BranchBlock)
+                    {
+                        // switch:
+                        VisitBranchBlock(node, programPoint);
+                    }
+                }
+                catch (TooManyInternalStatesException)
                 {
-                    // switch:
-                    VisitBranchBlock(node, programPoint);
+                    OnMaxInternalStateCountReached();
+                    return;
                 }
             }
 
@@ -154,6 +164,11 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
         private void OnMaxStepCountReached()
         {
             MaxStepCountReached?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void OnMaxInternalStateCountReached()
+        {
+            MaxInternalStateCountReached?.Invoke(this, EventArgs.Empty);
         }
 
         private void OnExitBlockReached()

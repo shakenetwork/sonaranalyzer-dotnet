@@ -169,6 +169,17 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
             return programState.Constraints.TryGetValue(this, out constraint);
         }
 
+        protected IEnumerable<ProgramState> ThrowIfTooMany(IEnumerable<ProgramState> states)
+        {
+            var stateList = states.ToList();
+            if (stateList.Count >= ExplodedGraph.MaxInternalStateCount)
+            {
+                throw new TooManyInternalStatesException();
+            }
+
+            return stateList;
+        }
+
         public virtual IEnumerable<ProgramState> TrySetConstraint(SymbolicValueConstraint constraint, ProgramState currentProgramState)
         {
             if (constraint == null)
