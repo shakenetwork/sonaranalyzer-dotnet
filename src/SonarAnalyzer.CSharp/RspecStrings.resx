@@ -633,6 +633,30 @@
   <data name="S1155_Title" xml:space="preserve">
     <value>"Any()" should be used to test for emptiness</value>
   </data>
+  <data name="S1163_Category" xml:space="preserve">
+    <value>Sonar Bug</value>
+  </data>
+  <data name="S1163_Description" xml:space="preserve">
+    <value>Throwing an exception from within a finally block will mask any exception which was previously thrown in the try or catch block.</value>
+  </data>
+  <data name="S1163_IsActivatedByDefault" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="S1163_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S1163_RemediationCost" xml:space="preserve">
+    <value>30min</value>
+  </data>
+  <data name="S1163_Severity" xml:space="preserve">
+    <value>Major</value>
+  </data>
+  <data name="S1163_Tags" xml:space="preserve">
+    <value>error-handling,bug,cert,suspicious</value>
+  </data>
+  <data name="S1163_Title" xml:space="preserve">
+    <value>Exceptions should not be thrown in finally blocks</value>
+  </data>
   <data name="S1172_Category" xml:space="preserve">
     <value>Sonar Code Smell</value>
   </data>
