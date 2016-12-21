@@ -2,7 +2,7 @@
 {
     public class C1
     {
-        public virtual void MyNotOverridenMethod() { }
+        public virtual void MyNotOverriddenMethod() { }
     }
     internal class Partial1Part //Fixed
     {
@@ -21,16 +21,16 @@ interface PartialInterface //Fixed
 
     internal partial class Partial2Part
     {
-        public virtual void MyOverridenMethod() { }
+        public virtual void MyOverriddenMethod() { }
         public virtual int Prop { get; set; }
     }
     internal class Override : Partial2Part
     {
-        public override void MyOverridenMethod() { }
+        public override void MyOverriddenMethod() { }
     }
     sealed class SealedClass : Partial2Part
     {
-        public override void MyOverridenMethod() { } //Fixed
+        public override void MyOverriddenMethod() { } //Fixed
         public override int Prop { get; set; } //Fixed
     }
 

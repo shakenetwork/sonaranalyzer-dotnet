@@ -52,7 +52,7 @@ namespace SonarAnalyzer.Helpers
         /// </summary>
         /// <param name="descriptor">DiagnosticDescriptor instance to copy.</param>
         /// <param name="severity">The new value of the Severity property.</param>
-        /// <returns>A new DiagnosticDescriptor instance with overriden value of the Severity property.</returns>
+        /// <returns>A new DiagnosticDescriptor instance with overridden value of the Severity property.</returns>
         public static DiagnosticDescriptor WithSeverity(this DiagnosticDescriptor descriptor, Severity severity)
         {
             return new DiagnosticDescriptor(
@@ -71,7 +71,7 @@ namespace SonarAnalyzer.Helpers
         /// Creates a new DiagnosticDescriptor instance copying all the properties from the original, overriding the IsEnabledByDefault.
         /// </summary>
         /// <param name="descriptor">DiagnosticDescriptor instance to copy.</param>
-        /// <returns>A new DiagnosticDescriptor instance with overriden value of the IsEnabledByDefault property.</returns>
+        /// <returns>A new DiagnosticDescriptor instance with overridden value of the IsEnabledByDefault property.</returns>
         public static DiagnosticDescriptor DisabledByDefault(this DiagnosticDescriptor descriptor)
         {
             return new DiagnosticDescriptor(

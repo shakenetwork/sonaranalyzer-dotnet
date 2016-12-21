@@ -60,7 +60,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 compilationStartContext =>
                 {
                     var allNamedTypeSymbols = compilationStartContext.Compilation.GlobalNamespace.GetAllNamedTypes();
-                    var allInterfacesWithImplementationsOverridenEquals =
+                    var allInterfacesWithImplementationsOverriddenEquals =
                         allNamedTypeSymbols
                             .Where(t => t.AllInterfaces.Any() && HasEqualsOverride(t))
                             .SelectMany(t => t.AllInterfaces)
@@ -85,8 +85,8 @@ namespace SonarAnalyzer.Rules.CSharp
                                 return;
                             }
 
-                            if (MightOverrideEquals(typeLeft, allInterfacesWithImplementationsOverridenEquals) ||
-                                MightOverrideEquals(typeRight, allInterfacesWithImplementationsOverridenEquals))
+                            if (MightOverrideEquals(typeLeft, allInterfacesWithImplementationsOverriddenEquals) ||
+                                MightOverrideEquals(typeRight, allInterfacesWithImplementationsOverriddenEquals))
                             {
                                 c.ReportDiagnostic(Diagnostic.Create(Rule, binary.OperatorToken.GetLocation()));
                             }
@@ -96,14 +96,14 @@ namespace SonarAnalyzer.Rules.CSharp
                 });
         }
 
-        private static bool MightOverrideEquals(ITypeSymbol type, ISet<INamedTypeSymbol> allInterfacesWithImplementationsOverridenEquals)
+        private static bool MightOverrideEquals(ITypeSymbol type, ISet<INamedTypeSymbol> allInterfacesWithImplementationsOverriddenEquals)
         {
             return HasEqualsOverride(type) ||
-                allInterfacesWithImplementationsOverridenEquals.Contains(type) ||
-                HasTypeConstraintsWhichMightOverrideEquals(type, allInterfacesWithImplementationsOverridenEquals);
+                allInterfacesWithImplementationsOverriddenEquals.Contains(type) ||
+                HasTypeConstraintsWhichMightOverrideEquals(type, allInterfacesWithImplementationsOverriddenEquals);
         }
 
-        private static bool HasTypeConstraintsWhichMightOverrideEquals(ITypeSymbol type, ISet<INamedTypeSymbol> allInterfacesWithImplementationsOverridenEquals)
+        private static bool HasTypeConstraintsWhichMightOverrideEquals(ITypeSymbol type, ISet<INamedTypeSymbol> allInterfacesWithImplementationsOverriddenEquals)
         {
             if (type.TypeKind != TypeKind.TypeParameter)
             {
@@ -111,7 +111,7 @@ namespace SonarAnalyzer.Rules.CSharp
             }
 
             var typeParameter = (ITypeParameterSymbol)type;
-            return typeParameter.ConstraintTypes.Any(t => MightOverrideEquals(t, allInterfacesWithImplementationsOverridenEquals));
+            return typeParameter.ConstraintTypes.Any(t => MightOverrideEquals(t, allInterfacesWithImplementationsOverriddenEquals));
         }
 
         private static bool IsAllowedType(ITypeSymbol type)

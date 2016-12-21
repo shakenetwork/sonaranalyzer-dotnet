@@ -103,7 +103,7 @@ namespace SonarAnalyzer.Helpers
                     return (T)((IEventSymbol)symbol).OverriddenEvent;
                 default:
                     throw new ArgumentException(
-                        $"Only methods, properties and events can be overriden. {typeof(T).Name} was provided",
+                        $"Only methods, properties and events can be overridden. {typeof(T).Name} was provided",
                         nameof(symbol));
             }
         }
