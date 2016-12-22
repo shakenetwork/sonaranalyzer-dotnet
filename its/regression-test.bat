@@ -29,9 +29,6 @@ REM Install the imports before targets file
 mkdir "%USERPROFILE%\AppData\Local\Microsoft\MSBuild\14.0\Microsoft.Common.targets\ImportBefore" 2>NUL
 copy SonarAnalyzer.Testing.ImportBefore.targets "%USERPROFILE%\AppData\Local\Microsoft\MSBuild\14.0\Microsoft.Common.targets\ImportBefore"
 
-REM Wait for ssh-agent to close... 
-timeout 3
-
 REM Building projects
 echo Building: Akka.NET
 set PROJECT=akka.net

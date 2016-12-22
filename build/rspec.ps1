@@ -1,53 +1,45 @@
 # Usage:
-# rspec.ps1 -operation update
+# rspec.ps1 cs|vbnet
 #
-# Will download only the updated RSPEC files
+# Will download only the updated RSPEC files for the corresponding language
 #
 # or
-# rspec.ps1 -operation add -language cs|vbnet -rulekey <rule-key>
+# rspec.ps1 cs|vbnet <rule-key>
 #
 # Add will download the specified rule json and html files. If you want to add a 
 # rule to both c# and vb.net execute the operation for each language.
 #
-# NOTE: All operations recreate the projects' resources, do not edit manually.
+# NOTES:
+# - All operations recreate the projects' resources, do not edit manually.
 param (
-    [Parameter(ParameterSetName="update,refresh", Mandatory=$true, HelpMessage="Operation: refresh, update or add")]
-    [Parameter(ParameterSetName="add", Mandatory=$true, HelpMessage="Operation: refresh, update or add")]
-    [ValidateSet("refresh", "update", "add")]
-    [string]
-    $Operation,
-    [Parameter(ParameterSetName="add", Mandatory=$true, HelpMessage="Language: cs or vbnet")]
+    [Parameter(Mandatory=$true, HelpMessage="language: cs or vbnet", Position=0)]
     [ValidateSet("cs", "vbnet")]
     [string]
-    $Language,
-    [Parameter(ParameterSetName="add", Mandatory=$true, HelpMessage="Rule Key, for example S1234")]
+    $language,
+    [Parameter(HelpMessage="The key of the rule to add/update, e.g. S1234. If omitted will update all existing rules.", Position=1)]
     [string]
-    $RuleKey
+    $ruleKey
 )
 
-$env:rule_api_path = "c:\\work\\rule-api-1.16.0.840.jar" # TODO: remove me
-if (-Not (Test-Path $env:rule_api_path))
+if ((-Not $env:rule_api_path) -Or (-Not (Test-Path $env:rule_api_path)))
 {
     throw "Download the latest version of rule-api jar from repox and set the %rule_api_path% environment variable with the full path of the jar."
 }
 
 $resgenPath = "${Env:ProgramFiles(x86)}\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.6.1 Tools\\ResGen.exe"
-    Write-Output $resgenPath
+if (-Not (Test-Path $resgenPath))
+{
+    throw "You need to install the Windows SDK before using this script."
+}
 
-# if (-Not (Test-Path $resgenPath))
-# {
-#     Write-Output $resgenPath
-#     throw "You need to install the Windows SDK before using this script."
-# }
-
-$categories_map = 
+$categoriesMap = 
 @{
     "BUG" = "Sonar Bug";
     "CODE_SMELL" = "Sonar Code Smell";
     "VULNERABILITY" = "Sonar Vulnerability";
 }
 
-$severities_map = 
+$severitiesMap = 
 @{
     "Critical" = "Critical";
     "Major" = "Major";
@@ -56,25 +48,25 @@ $severities_map =
     "Blocker" = "Blocker";
 }
 
-$remediations_map = 
+$remediationsMap = 
 @{
     "" = "";
     "Constant/Issue" = "Constant/Issue";
 }
 
-$projects_map =
+$projectsMap =
 @{
     "cs" = "SonarAnalyzer.CSharp";
     "vbnet" = "SonarAnalyzer.VisualBasic";
 }
 
-$rule_api_languages =
+$ruleapiLanguageMap =
 @{
     "cs" = "c#";
     "vbnet" = "vb.net";
 }
 
-$resource_languages =
+$resourceLanguageMap =
 @{
     "cs" = "cs";
     "vbnet" = "vb";
@@ -83,11 +75,7 @@ $resource_languages =
 # Returns the path to the folder where the RSPEC html and json files for the specified language will be downloaded.
 function GetRspecDownloadPath()
 {
-    param (
-        [Parameter(Mandatory=$true)]
-        [string]
-        $lang
-    )
+    param ($lang)
 
     $rspecFolder = "${PSScriptRoot}\\..\\rspec\\${lang}"
     if (-Not (Test-Path $rspecFolder))
@@ -101,13 +89,9 @@ function GetRspecDownloadPath()
 # Returns a string array with rule keys for the specified language.
 function GetRules()
 {
-    param 
-    (
-        [Parameter(Mandatory=$true)]
-        [string]
-        $lang
-    )
-    $suffix = $rule_api_languages.Get_Item($lang)
+    param ($lang)
+
+    $suffix = $ruleapiLanguageMap.Get_Item($lang)
 
     $htmlFiles = Get-ChildItem "$(GetRspecDownloadPath $lang)\\*" -Include "*.html"
     foreach ($htmlFile in $htmlFiles)
@@ -125,25 +109,28 @@ function GetRules()
 # C# files could have different html resources.  
 function CopyResources()
 {
-    param
-    (
-        [Parameter(Mandatory=$true)]
-        [string]
-        $lang,
-        $rules,
-        $otherLanguageRules
-    )
+    param ($lang, $rules, $otherLanguageRules)
+
+    $descriptionsFolder = "${PSScriptRoot}\\..\\src\\SonarAnalyzer.Utilities\\Rules.Description"
     $rspecFolder = GetRspecDownloadPath $lang
-    $source_suffix = "_" + $rule_api_languages.Get_Item($lang)
+    
+    $source_suffix = "_" + $ruleapiLanguageMap.Get_Item($lang)
+
     foreach ($rule in $rules)
     {
         $suffix = ""
         if ($otherLanguageRules -contains $rule)
         {
-            $suffix = "_$($resource_languages.Get_Item($lang))"
+            $suffix = "_$($resourceLanguageMap.Get_Item($lang))"
+
+            $sharedLanguageDescription = "${descriptionsFolder}\\${rule}.html"
+            if (Test-Path $sharedLanguageDescription)
+            {
+                Remove-Item $sharedLanguageDescription -Force
+            }
         }
 
-        Copy-Item "${rspecFolder}\\${rule}${source_suffix}.html" "${PSScriptRoot}\\..\\src\\SonarAnalyzer.Utilities\\Rules.Description\\${rule}${suffix}.html"
+        Copy-Item "${rspecFolder}\\${rule}${source_suffix}.html" "${descriptionsFolder}\\${rule}${suffix}.html"
     }
 }
 
@@ -152,7 +139,7 @@ function CreateStringResources()
     param ($lang, $rules)
 
     $rspecFolder = GetRspecDownloadPath $lang
-    $suffix = $rule_api_languages.Get_Item($lang)
+    $suffix = $ruleapiLanguageMap.Get_Item($lang)
 
     $sonarWayRules = Get-Content -Raw "${rspecFolder}\\Sonar_way_profile.json" | ConvertFrom-Json
 
@@ -177,14 +164,14 @@ function CreateStringResources()
 
         [void]$resources.Add("${rule}_Description=${description}")
         [void]$resources.Add("${rule}_Title=$(${json}.title)")
-        [void]$resources.Add("${rule}_Category=$($categories_map.Get_Item(${json}.type))")
+        [void]$resources.Add("${rule}_Category=$($categoriesMap.Get_Item(${json}.type))")
         [void]$resources.Add("${rule}_IsActivatedByDefault=$(${sonarWayRules}.ruleKeys -Contains ${rule})")
-        [void]$resources.Add("${rule}_Severity=$($severities_map.Get_Item(${json}.defaultSeverity))") # TODO see how can we implement lowering the severity for certain rules
+        [void]$resources.Add("${rule}_Severity=$($severitiesMap.Get_Item(${json}.defaultSeverity))") # TODO see how can we implement lowering the severity for certain rules
         [void]$resources.Add("${rule}_Tags=" + (${json}.tags -Join ","))
 
         if (${json}.remediation.func)
         {
-            [void]$resources.Add("${rule}_Remediation=$($remediations_map.Get_Item(${json}.remediation.func))")
+            [void]$resources.Add("${rule}_Remediation=$($remediationsMap.Get_Item(${json}.remediation.func))")
             [void]$resources.Add("${rule}_RemediationCost=$(${json}.remediation.constantCost)") # TODO see if we have remediations other than constantConst and fix them
         }
     }
@@ -193,28 +180,21 @@ function CreateStringResources()
     [void]$resources.Sort()
 
     $rawResourcesPath = "${PSScriptRoot}\\${lang}_strings.restext"
-    $resourcesPath = "${PSScriptRoot}\\..\\src\\$($projects_map.Get_Item($lang))\\RspecStrings.resx"
+    $resourcesPath = "${PSScriptRoot}\\..\\src\\$($projectsMap.Get_Item($lang))\\RspecStrings.resx"
 
     Set-Content $rawResourcesPath $resources
 
-    Invoke-Expression "& `"${resgenPath}`" ${rawResourcesPath} ${resourcesPath}" # to compile add this parameter /str:$($resource_languages.Get_Item($lang)),SonarAnalyzer.Rules"
+    # generate resx file
+    Invoke-Expression "& `"${resgenPath}`" ${rawResourcesPath} ${resourcesPath}"
 }
 
-switch ($Operation) 
+if ($ruleKey)
 {
-    "refresh"
-    {
-        # just recreate the resources from the existing files in SCM
-    }
-    "update"
-    {
-        java -jar $env:rule_api_path update -directory $(GetRspecDownloadPath "cs") -language $($rule_api_languages.Get_Item("cs"))
-        java -jar $env:rule_api_path update -directory $(GetRspecDownloadPath "vbnet") -language $($rule_api_languages.Get_Item("vbnet"))
-    }
-    "add"
-    {
-        java -jar $env:rule_api_path generate -directory $(GetRspecDownloadPath $Language) -language $($rule_api_languages.Get_Item($Language)) -rule $RuleKey
-    }
+    java -jar $env:rule_api_path generate -directory $(GetRspecDownloadPath $language) -language $($ruleapiLanguageMap.Get_Item($language)) -rule $ruleKey
+}
+else
+{
+    java -jar $env:rule_api_path update -directory $(GetRspecDownloadPath $language) -language $($ruleapiLanguageMap.Get_Item($language))
 }
 
 $csRules = GetRules "cs"
