@@ -2553,6 +2553,30 @@
   <data name="S2681_Title" xml:space="preserve">
     <value>Multiline blocks should be enclosed in curly braces</value>
   </data>
+  <data name="S2688_Category" xml:space="preserve">
+    <value>Sonar Bug</value>
+  </data>
+  <data name="S2688_Description" xml:space="preserve">
+    <value>NaN is not equal to anything, even itself. Testing for equality or inequality against NaN will yield predictable results, but probably not the ones you want. </value>
+  </data>
+  <data name="S2688_IsActivatedByDefault" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="S2688_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S2688_RemediationCost" xml:space="preserve">
+    <value>5min</value>
+  </data>
+  <data name="S2688_Severity" xml:space="preserve">
+    <value>Major</value>
+  </data>
+  <data name="S2688_Tags" xml:space="preserve">
+    <value>bug,cert</value>
+  </data>
+  <data name="S2688_Title" xml:space="preserve">
+    <value>"NaN" should not be used in comparisons</value>
+  </data>
   <data name="S2692_Category" xml:space="preserve">
     <value>Sonar Bug</value>
   </data>
