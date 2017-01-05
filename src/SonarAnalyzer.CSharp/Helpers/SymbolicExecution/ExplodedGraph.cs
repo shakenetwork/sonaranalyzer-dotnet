@@ -187,16 +187,16 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.CSharp
                     break;
 
                 case SyntaxKind.LessThanExpression:
-                    newProgramState = VisitBinaryOperator(newProgramState, (l, r) => new ComparisonSymbolicValue(ComparisonKind.Less, l, r));
+                    newProgramState = VisitComparisonBinaryOperator(newProgramState, (BinaryExpressionSyntax)instruction, (l, r) => new ComparisonSymbolicValue(ComparisonKind.Less, l, r));
                     break;
                 case SyntaxKind.LessThanOrEqualExpression:
-                    newProgramState = VisitBinaryOperator(newProgramState, (l, r) => new ComparisonSymbolicValue(ComparisonKind.LessOrEqual, l, r));
+                    newProgramState = VisitComparisonBinaryOperator(newProgramState, (BinaryExpressionSyntax)instruction, (l, r) => new ComparisonSymbolicValue(ComparisonKind.LessOrEqual, l, r));
                     break;
                 case SyntaxKind.GreaterThanExpression:
-                    newProgramState = VisitBinaryOperator(newProgramState, (l, r) => new ComparisonSymbolicValue(ComparisonKind.Less, r, l));
+                    newProgramState = VisitComparisonBinaryOperator(newProgramState, (BinaryExpressionSyntax)instruction, (l, r) => new ComparisonSymbolicValue(ComparisonKind.Less, r, l));
                     break;
                 case SyntaxKind.GreaterThanOrEqualExpression:
-                    newProgramState = VisitBinaryOperator(newProgramState, (l, r) => new ComparisonSymbolicValue(ComparisonKind.LessOrEqual, r, l));
+                    newProgramState = VisitComparisonBinaryOperator(newProgramState, (BinaryExpressionSyntax)instruction, (l, r) => new ComparisonSymbolicValue(ComparisonKind.LessOrEqual, r, l));
                     break;
 
                 case SyntaxKind.SubtractExpression:
@@ -580,6 +580,29 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.CSharp
 
             return new InvocationVisitor.ReferenceEqualsConstraintHandler(leftSymbol, rightSymbol,
                 equals.Left, equals.Right, newProgramState, SemanticModel).PushWithConstraint();
+        }
+
+        private ProgramState VisitComparisonBinaryOperator(ProgramState programState, BinaryExpressionSyntax comparison,
+            Func<SymbolicValue, SymbolicValue, SymbolicValue> svFactory)
+        {
+            SymbolicValue leftSymbol;
+            SymbolicValue rightSymbol;
+
+            var newProgramState = programState
+                .PopValue(out rightSymbol)
+                .PopValue(out leftSymbol);
+
+            var op = SemanticModel.GetSymbolInfo(comparison).Symbol as IMethodSymbol;
+
+            var isLiftedOperator = op.ContainingType.IsValueType &&
+                (leftSymbol.HasConstraint(ObjectConstraint.Null, programState) &&
+                    rightSymbol.HasConstraint(ObjectConstraint.NotNull, programState) ||
+                leftSymbol.HasConstraint(ObjectConstraint.NotNull, programState) &&
+                    rightSymbol.HasConstraint(ObjectConstraint.Null, programState));
+
+            var comparisonValue = isLiftedOperator ? SymbolicValue.False : svFactory(leftSymbol, rightSymbol);
+
+            return newProgramState.PushValue(comparisonValue);
         }
 
         private static ProgramState VisitBinaryOperator(ProgramState programState,

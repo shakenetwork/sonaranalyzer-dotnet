@@ -873,6 +873,60 @@ namespace Tests.Diagnostics
             }
         }
 
+        public void LiftedOperator()
+        {
+            int? i = null;
+            int? j = 5;
+
+            if (i < j) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            {
+            }
+
+            if (i <= j) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            {
+            }
+
+            if (i > j) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            {
+            }
+
+            if (i >= j) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            {
+            }
+
+            if (i > 0) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            {
+            }
+
+            if (i >= 0) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            {
+            }
+
+            if (i < 0) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            {
+            }
+
+            if (i <= 0) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            {
+            }
+
+            if (j > null) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            {
+            }
+
+            if (j >= null) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            {
+            }
+
+            if (j < null) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            {
+            }
+
+            if (j <= null) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            {
+            }
+        }
+
         class Comp
         {
             public static bool operator <(Comp a, Comp b) { return true; }
