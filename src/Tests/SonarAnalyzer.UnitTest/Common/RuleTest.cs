@@ -26,7 +26,6 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarAnalyzer.Utilities;
 using SonarAnalyzer.Common;
-using Microsoft.CodeAnalysis.CodeFixes;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.UnitTest.Common

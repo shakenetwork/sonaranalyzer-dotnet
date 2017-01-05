@@ -29,6 +29,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using System.Reflection;
 using System.IO;
 using System.Collections.Concurrent;
+using System.Xml;
 
 namespace SonarAnalyzer.Helpers
 {
@@ -50,7 +51,7 @@ namespace SonarAnalyzer.Helpers
             public List<RuleParameterValue> ParameterValues { get; } = new List<RuleParameterValue>();
         }
 
-        private static ImmutableList<RuleParameterValues> ParseParameters(XContainer xml)
+        private static ImmutableList<RuleParameterValues> ParseParameters(XDocument xml)
         {
             var builder = ImmutableList.CreateBuilder<RuleParameterValues>();
             foreach (var rule in xml.Descendants("Rule").Where(e => e.Elements("Parameters").Any()))
@@ -97,9 +98,13 @@ namespace SonarAnalyzer.Helpers
                 return;
             }
 
-            var filePath = additionalFile.Path;
-            var xml = XDocument.Load(filePath);
-            var parameters = ParseParameters(xml);
+            ImmutableList<RuleParameterValues> parameters;
+            using (XmlTextReader xtr = new XmlTextReader(additionalFile.Path))
+            {
+                xtr.Normalization = false;
+                var xml = XDocument.Load(xtr);
+                parameters = ParseParameters(xml);
+            }
 
             var propertyParameterPairs = parameteredAnalyzer.GetType()
                 .GetProperties()
@@ -135,6 +140,8 @@ namespace SonarAnalyzer.Helpers
                     return parameter;
                 case PropertyType.Integer:
                     return int.Parse(parameter, NumberStyles.None, CultureInfo.InvariantCulture);
+                case PropertyType.Boolean:
+                    return bool.Parse(parameter);
                 default:
                     throw new NotSupportedException();
             }
