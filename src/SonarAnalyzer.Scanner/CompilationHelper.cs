@@ -39,7 +39,7 @@ namespace SonarAnalyzer.Runner
                 var project = workspace.CurrentSolution.AddProject("foo", "foo.dll", lang)
                     .AddMetadataReference(SystemMetadataReference);
 
-                using (var fileStream = File.Open(file.FullName, FileMode.Open))
+                using (var fileStream = File.Open(file.FullName, FileMode.Open, FileAccess.Read))
                 {
                     var document = project.AddDocument(file.Name, SourceText.From(fileStream, encoding));
                     project = document.Project;
