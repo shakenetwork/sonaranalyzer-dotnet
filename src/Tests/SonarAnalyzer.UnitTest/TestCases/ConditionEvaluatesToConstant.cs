@@ -927,6 +927,13 @@ namespace Tests.Diagnostics
             }
         }
 
+        unsafe void Pointers(int* a, int* b)
+        {
+            if (a < b)
+            {
+            }
+        }
+
         class Comp
         {
             public static bool operator <(Comp a, Comp b) { return true; }

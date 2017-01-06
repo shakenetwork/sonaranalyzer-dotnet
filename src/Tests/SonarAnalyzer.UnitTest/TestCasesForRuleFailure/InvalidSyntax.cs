@@ -28,6 +28,10 @@ namespace SonarAnalyzer.UnitTest.TestCasesForRuleFailure
         int i;
         public override int GetHashCode()
         {
+            int? v = null;
+            if (v > missing)
+            { }
+
             return i; // we don't report on this
         }
     }

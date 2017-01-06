@@ -169,6 +169,11 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
             return programState.Constraints.TryGetValue(this, out constraint);
         }
 
+        public bool IsNull(ProgramState programState)
+        {
+            return this.HasConstraint(ObjectConstraint.Null, programState);
+        }
+
         protected IEnumerable<ProgramState> ThrowIfTooMany(IEnumerable<ProgramState> states)
         {
             var stateList = states.ToList();

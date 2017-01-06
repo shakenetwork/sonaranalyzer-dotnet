@@ -331,7 +331,7 @@ namespace SonarAnalyzer.UnitTest
             using (var tokenSource = new CancellationTokenSource())
             {
                 var compilationOptions = compilation.Language == LanguageNames.CSharp
-                    ? (CompilationOptions)new CS.CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary)
+                    ? (CompilationOptions)new CS.CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary, allowUnsafe: true)
                     : new VB.VisualBasicCompilationOptions(OutputKind.DynamicallyLinkedLibrary);
                 var supportedDiagnostics = diagnosticAnalyzers
                         .SelectMany(analyzer => analyzer.SupportedDiagnostics)

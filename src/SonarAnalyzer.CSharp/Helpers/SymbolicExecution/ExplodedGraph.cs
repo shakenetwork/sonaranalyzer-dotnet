@@ -594,11 +594,10 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.CSharp
 
             var op = SemanticModel.GetSymbolInfo(comparison).Symbol as IMethodSymbol;
 
-            var isLiftedOperator = op.ContainingType.IsValueType &&
-                (leftSymbol.HasConstraint(ObjectConstraint.Null, programState) &&
-                    rightSymbol.HasConstraint(ObjectConstraint.NotNull, programState) ||
-                leftSymbol.HasConstraint(ObjectConstraint.NotNull, programState) &&
-                    rightSymbol.HasConstraint(ObjectConstraint.Null, programState));
+            var isValueTypeOperator = op?.ContainingType?.IsValueType ?? false;
+
+            var isLiftedOperator = isValueTypeOperator &&
+                (leftSymbol.IsNull(programState) || rightSymbol.IsNull(programState));
 
             var comparisonValue = isLiftedOperator ? SymbolicValue.False : svFactory(leftSymbol, rightSymbol);
 
