@@ -18,6 +18,18 @@ namespace Tests.Diagnostics
             public int? Number { get; set; }
         }
 
+        void Nameof(object o)
+        {
+            if (o == null)
+            {
+            }
+
+            if (o == nameof(Object))
+            {
+                o.ToString(); // Compliant
+            }
+        }
+
         public void SetI0()
         {
             i0 = 42;

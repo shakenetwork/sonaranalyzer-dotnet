@@ -30,6 +30,7 @@ namespace SonarAnalyzer.Helpers
         public static readonly ExpressionSyntax NullLiteralExpression = SyntaxFactory.LiteralExpression(SyntaxKind.NullLiteralExpression);
         public static readonly ExpressionSyntax FalseLiteralExpression = SyntaxFactory.LiteralExpression(SyntaxKind.FalseLiteralExpression);
         public static readonly ExpressionSyntax TrueLiteralExpression = SyntaxFactory.LiteralExpression(SyntaxKind.TrueLiteralExpression);
+        public static readonly string NameOfKeywordText = SyntaxFacts.GetText(SyntaxKind.NameOfKeyword);
 
         public static bool HasExactlyNArguments(this InvocationExpressionSyntax invocation, int count)
         {
@@ -120,15 +121,21 @@ namespace SonarAnalyzer.Helpers
                 return false;
             }
 
-            var calledSymbol = semanticModel.GetSymbolInfo(nameofCall).Symbol as IMethodSymbol;
+            return nameofCall.IsNameof(semanticModel);
+        }
+
+        public static bool IsNameof(this InvocationExpressionSyntax expression, SemanticModel semanticModel)
+        {
+            var calledSymbol = semanticModel.GetSymbolInfo(expression).Symbol as IMethodSymbol;
             if (calledSymbol != null)
             {
                 return false;
             }
 
-            var nameofIdentifier = (nameofCall?.Expression as IdentifierNameSyntax)?.Identifier;
+            var nameofIdentifier = (expression?.Expression as IdentifierNameSyntax)?.Identifier;
+
             return nameofIdentifier.HasValue &&
-                (nameofIdentifier.Value.ToString() == SyntaxFacts.GetText(SyntaxKind.NameOfKeyword));
+                (nameofIdentifier.Value.ToString() == NameOfKeywordText);
         }
     }
 }

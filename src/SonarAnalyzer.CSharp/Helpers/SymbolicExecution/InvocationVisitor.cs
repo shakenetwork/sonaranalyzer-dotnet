@@ -18,10 +18,10 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Microsoft.CodeAnalysis;
 using System.Collections.Immutable;
-using System;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
 {
@@ -43,7 +43,9 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
 
         internal ProgramState ProcessInvocation()
         {
-            var methodSymbol = semanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
+            var symbol = semanticModel.GetSymbolInfo(invocation).Symbol;
+
+            var methodSymbol = symbol as IMethodSymbol;
 
             if (IsInstanceEqualsCall(methodSymbol))
             {
@@ -65,9 +67,27 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
                 return HandleStringNullCheckMethod();
             }
 
+            if (invocation.IsNameof(semanticModel))
+            {
+                return HandleNameofExpression();
+            }
+
             return programState
                 .PopValues((invocation.ArgumentList?.Arguments.Count ?? 0) + 1)
                 .PushValue(new SymbolicValue());
+        }
+
+        private ProgramState HandleNameofExpression()
+        {
+            SymbolicValue arg1;
+
+            var newProgramState = programState
+                .PopValue(out arg1)
+                .PopValue();
+
+            var nameof = new SymbolicValue();
+            newProgramState = newProgramState.PushValue(nameof);
+            return nameof.SetConstraint(ObjectConstraint.NotNull, newProgramState);
         }
 
         private ProgramState HandleStringNullCheckMethod()

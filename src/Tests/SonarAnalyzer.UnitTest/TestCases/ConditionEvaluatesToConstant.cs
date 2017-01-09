@@ -7,6 +7,14 @@ namespace Tests.Diagnostics
 {
     public class ConditionEvaluatesToConstant
     {
+        void Nameof(string s)
+        {
+            if (null == nameof(Method1)) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+//              ^^^^^^^^^^^^^^^^^^^^^^^
+            {
+            }
+        }
+
         public void Method1()
         {
             var b = true;
