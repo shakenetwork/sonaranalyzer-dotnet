@@ -30,6 +30,7 @@ using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
 using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.Reflection;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
@@ -79,7 +80,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
                     foreach (var type in NodeTypesToCheck)
                     {
-                        var ancestorOrSelf = stringLiteral.FirstAncestorOrSelf<SyntaxNode>(type.IsInstanceOfType);
+                        var ancestorOrSelf = stringLiteral.FirstAncestorOrSelf<SyntaxNode>(x => type.GetTypeInfo().IsInstanceOfType(x));
                         var ancestorString = ancestorOrSelf?.ToString().ToUpperInvariant();
                         if (ancestorString != null && SkippedWords.Any(s => ancestorString.Contains(s)))
                         {

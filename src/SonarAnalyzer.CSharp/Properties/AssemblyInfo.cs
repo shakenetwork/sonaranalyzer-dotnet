@@ -21,9 +21,9 @@
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
-[assembly: AssemblyTitle("SonarAnalyzer C#")]
-[assembly: AssemblyProduct("SonarAnalyzer")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyCopyright("Copyright © 2015-2016 SonarSource SA")]
+[assembly: AssemblyTrademark("SonarLint, SonarQube, SonarSource")]
+[assembly: AssemblyCulture("")]
 
-[assembly: InternalsVisibleTo("SonarAnalyzer.UnitTest" + Signing.InternalsVisibleToPublicKey)]
-[assembly: InternalsVisibleTo("SonarAnalyzer.Scanner" + Signing.InternalsVisibleToPublicKey)]
+[assembly: InternalsVisibleTo("SonarAnalyzer.UnitTest")]
+[assembly: InternalsVisibleTo("SonarAnalyzer.Scanner")]

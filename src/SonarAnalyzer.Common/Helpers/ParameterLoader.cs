@@ -101,7 +101,7 @@ namespace SonarAnalyzer.Helpers
             var xml = XDocument.Load(filePath);
             var parameters = ParseParameters(xml);
 
-            var propertyParameterPairs = parameteredAnalyzer.GetType()
+            var propertyParameterPairs = parameteredAnalyzer.GetType().GetTypeInfo()
                 .GetProperties()
                 .Select(p => new { Property = p, Descriptor = p.GetCustomAttributes<RuleParameterAttribute>().SingleOrDefault() })
                 .Where(p => p.Descriptor != null);

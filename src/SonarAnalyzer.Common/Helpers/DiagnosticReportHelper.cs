@@ -21,6 +21,7 @@
 using System.Diagnostics;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Text;
+using System.Reflection;
 
 namespace SonarAnalyzer.Helpers
 {
@@ -55,7 +56,7 @@ namespace SonarAnalyzer.Helpers
         private const string HelpLinkPattern = "http://vs.sonarlint.org/rules/index.html#version={0}&ruleId={1}";
         public static string GetHelpLink(this string ruleId)
         {
-            var productVersion = FileVersionInfo.GetVersionInfo(typeof(DiagnosticReportHelper).Assembly.Location).FileVersion;
+            var productVersion = typeof(DiagnosticReportHelper).GetTypeInfo().Assembly.GetCustomAttribute<AssemblyFileVersionAttribute>().Version;
             return string.Format(HelpLinkPattern, productVersion, ruleId);
         }
 

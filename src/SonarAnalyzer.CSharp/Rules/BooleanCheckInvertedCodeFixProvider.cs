@@ -28,6 +28,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Formatting;
 using System;
+using System.Reflection;
 using System.Collections.Generic;
 using SonarAnalyzer.Helpers;
 
@@ -69,7 +70,7 @@ namespace SonarAnalyzer.Rules.CSharp
                         var newBinary = ChangeOperator((BinaryExpressionSyntax)expression);
 
                         if (syntaxNode.Parent is ExpressionSyntax &&
-                            !ExpressionTypesWithNoParens.Any(type => type.IsInstanceOfType(syntaxNode.Parent)))
+                            !ExpressionTypesWithNoParens.Any(type => type.GetTypeInfo().IsInstanceOfType(syntaxNode.Parent)))
                         {
                             newBinary = SyntaxFactory.ParenthesizedExpression(newBinary);
                         }

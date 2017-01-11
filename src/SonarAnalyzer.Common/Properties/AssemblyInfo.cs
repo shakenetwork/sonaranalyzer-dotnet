@@ -21,12 +21,21 @@
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
-[assembly: AssemblyTitle("SonarAnalyzer Common")]
-[assembly: AssemblyProduct("SonarAnalyzer")]
-[assembly: AssemblyDescription("")]
+//[assembly: AssemblyTitle("SonarAnalyzer Common")]
+//[assembly: AssemblyProduct("SonarAnalyzer")]
+//[assembly: AssemblyDescription("")]
+//[assembly: AssemblyVersion("1.21.0")]
+//[assembly: AssemblyFileVersion("1.21.0.0")]
+//[assembly: AssemblyInformationalVersion("Version:1.21.0.0 Branch:not-set Sha1:not-set")]
 
-[assembly: InternalsVisibleTo("SonarAnalyzer.CSharp" + Signing.InternalsVisibleToPublicKey)]
-[assembly: InternalsVisibleTo("SonarAnalyzer.VisualBasic" + Signing.InternalsVisibleToPublicKey)]
-[assembly: InternalsVisibleTo("SonarAnalyzer.UnitTest" + Signing.InternalsVisibleToPublicKey)]
-[assembly: InternalsVisibleTo("SonarAnalyzer.Scanner" + Signing.InternalsVisibleToPublicKey)]
-[assembly: InternalsVisibleTo("SonarAnalyzer.Platform.Integration.UnitTest" + Signing.InternalsVisibleToPublicKey)]
+//[assembly: AssemblyConfiguration("")]
+
+//[assembly: AssemblyCompany("SonarSource")]
+[assembly: AssemblyCopyright("Copyright © 2015-2016 SonarSource SA")]
+[assembly: AssemblyTrademark("SonarLint, SonarQube, SonarSource")]
+[assembly: AssemblyCulture("")]
+
+//[assembly: System.Runtime.InteropServices.ComVisible(false)]
+
+
+[assembly: InternalsVisibleTo("SonarAnalyzer.CSharp")]
