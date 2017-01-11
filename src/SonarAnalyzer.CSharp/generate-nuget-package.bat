@@ -1,0 +1,1 @@
+nuget pack SonarAnalyzer.CSharp.nuspec
