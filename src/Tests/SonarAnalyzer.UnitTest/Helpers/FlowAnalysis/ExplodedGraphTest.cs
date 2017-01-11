@@ -41,7 +41,7 @@ namespace NS
 {{
   public class Foo
   {{
-    private bool field = false;
+    private bool Property {{ get; set; }}
     public void Bar(bool inParameter, out bool outParameter)
     {{
       {0}
@@ -548,16 +548,16 @@ namespace NS
 
         [TestMethod]
         [TestCategory("Symbolic execution")]
-        public void ExplodedGraph_NonLocalSymbolBranching()
+        public void ExplodedGraph_NonLocalNorFieldSymbolBranching()
         {
-            string testInput = "if (field) { cw(); }";
+            string testInput = "if (Property) { cw(); }";
             SemanticModel semanticModel;
             var method = ControlFlowGraphTest.CompileWithMethodBody(string.Format(TestInput, testInput), "Bar", out semanticModel);
             var methodSymbol = semanticModel.GetDeclaredSymbol(method);
-            var fieldSymbol = semanticModel.GetSymbolInfo(
-                method.DescendantNodes().OfType<IdentifierNameSyntax>().First(d => d.Identifier.ToString() == "field")).Symbol;
+            var propertySymbol = semanticModel.GetSymbolInfo(
+                method.DescendantNodes().OfType<IdentifierNameSyntax>().First(d => d.Identifier.ToString() == "Property")).Symbol;
 
-            Assert.IsNotNull(fieldSymbol);
+            Assert.IsNotNull(propertySymbol);
 
             var cfg = ControlFlowGraph.Create(method.Body, semanticModel);
             var lva = LiveVariableAnalysis.Analyze(cfg, methodSymbol, semanticModel);
@@ -575,9 +575,9 @@ namespace NS
                 (sender, args) =>
                 {
                     numberOfProcessedInstructions++;
-                    if (args.Instruction.ToString() == "field")
+                    if (args.Instruction.ToString() == "Property")
                     {
-                        Assert.IsNull(args.ProgramState.GetSymbolValue(fieldSymbol));
+                        Assert.IsNull(args.ProgramState.GetSymbolValue(propertySymbol));
                     }
                 };
 
@@ -673,7 +673,7 @@ namespace TesteAnalyzer
             explodedGraph.MaxStepCountReached += (sender, args) => { maxStepCountReached = true; };
             var maxInternalStateCountReached = false;
             explodedGraph.MaxInternalStateCountReached += (sender, args) => { maxInternalStateCountReached = true; };
-            
+
             explodedGraph.Walk();
 
             Assert.IsFalse(explorationEnded);

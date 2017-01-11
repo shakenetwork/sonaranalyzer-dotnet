@@ -296,7 +296,7 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
 
         internal bool HasValue => !ExpressionStack.IsEmpty;
 
-        internal ProgramState SetSymbolicValue(ISymbol symbol, SymbolicValue newSymbolicValue)
+        internal ProgramState StoreSymbolicValue(ISymbol symbol, SymbolicValue newSymbolicValue)
         {
             return new ProgramState(
                 Values.SetItem(symbol, newSymbolicValue),
@@ -340,8 +340,9 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
 
         internal ProgramState Clean(IEnumerable<ISymbol> liveSymbolsToKeep)
         {
+            // TODO: Remove the OR part when SLVS-1136 is fixed
             var cleanedValues = Values
-                .Where(sv => liveSymbolsToKeep.Contains(sv.Key))
+                .Where(sv => liveSymbolsToKeep.Contains(sv.Key) || sv.Key is IFieldSymbol)
                 .ToImmutableDictionary();
 
             // SVs for live symbols

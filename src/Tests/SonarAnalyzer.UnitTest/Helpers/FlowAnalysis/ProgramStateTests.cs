@@ -52,9 +52,9 @@ namespace SonarAnalyzer.UnitTest.Helpers
             var sv = new SymbolicValue();
             var constraint = new FakeConstraint();
             var symbol = GetSymbol();
-            ps1 = ps1.SetSymbolicValue(symbol, sv);
+            ps1 = ps1.StoreSymbolicValue(symbol, sv);
             ps1 = sv.SetConstraint(constraint, ps1);
-            ps2 = ps2.SetSymbolicValue(symbol, sv);
+            ps2 = ps2.StoreSymbolicValue(symbol, sv);
             ps2 = sv.SetConstraint(constraint, ps2);
 
             Assert.AreEqual(ps1, ps2);
@@ -69,8 +69,8 @@ namespace SonarAnalyzer.UnitTest.Helpers
             var ps2 = new ProgramState();
 
             var symbol = GetSymbol();
-            ps1 = ps1.SetSymbolicValue(symbol, new SymbolicValue());
-            ps2 = ps2.SetSymbolicValue(symbol, new SymbolicValue());
+            ps1 = ps1.StoreSymbolicValue(symbol, new SymbolicValue());
+            ps2 = ps2.StoreSymbolicValue(symbol, new SymbolicValue());
 
             Assert.AreNotEqual(ps1, ps2);
             Assert.AreNotEqual(ps1.GetHashCode(), ps2.GetHashCode());
@@ -85,9 +85,9 @@ namespace SonarAnalyzer.UnitTest.Helpers
 
             var symbol = GetSymbol();
             var sv = new SymbolicValue();
-            ps1 = ps1.SetSymbolicValue(symbol, sv);
+            ps1 = ps1.StoreSymbolicValue(symbol, sv);
             ps1 = sv.SetConstraint(new FakeConstraint(), ps1);
-            ps2 = ps2.SetSymbolicValue(symbol, sv);
+            ps2 = ps2.StoreSymbolicValue(symbol, sv);
             ps2 = sv.SetConstraint(new FakeConstraint(), ps2);
 
             Assert.AreNotEqual(ps1, ps2);
@@ -102,8 +102,8 @@ namespace SonarAnalyzer.UnitTest.Helpers
             var ps2 = new ProgramState();
 
             var sv = new SymbolicValue();
-            ps1 = ps1.SetSymbolicValue(GetSymbol(), sv);
-            ps2 = ps2.SetSymbolicValue(GetSymbol(), sv);
+            ps1 = ps1.StoreSymbolicValue(GetSymbol(), sv);
+            ps2 = ps2.StoreSymbolicValue(GetSymbol(), sv);
 
             Assert.AreNotEqual(ps1, ps2);
             Assert.AreNotEqual(ps1.GetHashCode(), ps2.GetHashCode());
@@ -118,7 +118,7 @@ namespace SonarAnalyzer.UnitTest.Helpers
             var symbol = GetSymbol();
             var constraint = new FakeConstraint();
 
-            ps = ps.SetSymbolicValue(symbol, sv);
+            ps = ps.StoreSymbolicValue(symbol, sv);
             ps = sv.SetConstraint(constraint, ps);
             Assert.IsTrue(symbol.HasConstraint(constraint, ps));
             Assert.IsFalse(symbol.HasConstraint(new FakeConstraint(), ps));
@@ -132,17 +132,17 @@ namespace SonarAnalyzer.UnitTest.Helpers
             var sv = new SymbolicValue();
             var symbol = GetSymbol();
 
-            ps = ps.SetSymbolicValue(symbol, sv);
+            ps = ps.StoreSymbolicValue(symbol, sv);
             ps = sv.SetConstraint(BoolConstraint.True, ps);
             Assert.IsTrue(symbol.HasConstraint(BoolConstraint.True, ps));
             Assert.IsTrue(symbol.HasConstraint(ObjectConstraint.NotNull, ps));
 
-            ps = ps.SetSymbolicValue(symbol, sv);
+            ps = ps.StoreSymbolicValue(symbol, sv);
             ps = sv.SetConstraint(BoolConstraint.False, ps);
             Assert.IsTrue(symbol.HasConstraint(BoolConstraint.False, ps));
             Assert.IsTrue(symbol.HasConstraint(ObjectConstraint.NotNull, ps));
 
-            ps = ps.SetSymbolicValue(symbol, sv);
+            ps = ps.StoreSymbolicValue(symbol, sv);
             ps = sv.SetConstraint(ObjectConstraint.NotNull, ps);
             Assert.IsFalse(symbol.HasConstraint(BoolConstraint.False, ps));
             Assert.IsTrue(symbol.HasConstraint(ObjectConstraint.NotNull, ps));

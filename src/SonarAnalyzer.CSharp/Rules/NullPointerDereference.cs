@@ -159,7 +159,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
             private ProgramState ProcessMemberAccess(ProgramState programState, MemberAccessExpressionSyntax memberAccess)
             {
-                var identifier = memberAccess.Expression as IdentifierNameSyntax;
+                var identifier = memberAccess.Expression.RemoveParentheses() as IdentifierNameSyntax;
                 if (identifier == null)
                 {
                     return programState;
@@ -199,7 +199,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
             private ProgramState ProcessIdentifier(ProgramState programState, IdentifierNameSyntax identifier, ISymbol symbol)
             {
-                if (explodedGraph.IsLocalScoped(symbol) &&
+                if (explodedGraph.IsSymbolTracked(symbol) &&
                     symbol.HasConstraint(ObjectConstraint.Null, programState))
                 {
                     OnMemberAccessed(identifier);

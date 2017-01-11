@@ -263,12 +263,19 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
             return programState.Clean(liveVariables);
         }
 
-        internal bool IsLocalScoped(ISymbol symbol)
+        internal bool IsSymbolTracked(ISymbol symbol)
         {
             if (symbol == null ||
                 lva.CapturedVariables.Contains(symbol)) // Captured variables are not locally scoped, they are compiled to class fields
             {
                 return false;
+            }
+
+            var field = symbol as IFieldSymbol;
+            if (field != null)
+            {
+                return declaration.ContainingType.GetSelfAndBaseTypes()
+                                                 .Contains(field.ContainingType);
             }
 
             var local = symbol as ILocalSymbol;
@@ -281,6 +288,7 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
                 }
             }
 
+            // Could be either ILocalSymbol or IParameterSymbol so let's use symbol
             return symbol.ContainingSymbol != null &&
                 symbol.ContainingSymbol.Equals(declaration);
         }
@@ -295,7 +303,7 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
             foreach (var parameter in declarationParameters)
             {
                 var sv = new SymbolicValue();
-                initialProgramState = initialProgramState.SetSymbolicValue(parameter, sv);
+                initialProgramState = initialProgramState.StoreSymbolicValue(parameter, sv);
                 initialProgramState = SetNonNullConstraintIfValueType(parameter, sv, initialProgramState);
             }
 
@@ -342,10 +350,10 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
 
         #endregion
 
-        protected ProgramState SetNewSymbolicValueIfLocal(ISymbol symbol, SymbolicValue symbolicValue, ProgramState programState)
+        protected ProgramState SetNewSymbolicValueIfTracked(ISymbol symbol, SymbolicValue symbolicValue, ProgramState programState)
         {
-            return IsLocalScoped(symbol)
-                ? programState.SetSymbolicValue(symbol, symbolicValue)
+            return IsSymbolTracked(symbol)
+                ? programState.StoreSymbolicValue(symbol, symbolicValue)
                 : programState;
         }
 

@@ -64,7 +64,7 @@ namespace Tests.Diagnostics
         void Test_Struct()
         {
             int? i = null;
-            if(i.HasValue) // Compliant
+            if (i.HasValue) // Compliant
             { }
         }
 
@@ -276,6 +276,231 @@ namespace Tests.Diagnostics
             System.Diagnostics.Debug.Assert(o1 == null);
             o1.ToString(); // Compliant, we don't learn on Assert
         }
+    }
+
+    class A
+    {
+        protected object _bar;
+    }
+
+    class NullPointerDereferenceWithFields : A
+    {
+        private object _foo1;
+        protected object _foo2;
+        internal object _foo3;
+        public object _foo4;
+        protected internal object _foo5;
+        private const object Foo6 = new object();
+        private readonly object _foo7 = new object();
+        private static object _foo8;
+        private const object NullConst = null;
+        private readonly object NullReadOnly = null;
+
+        void DoNotLearnFromReadonly()
+        {
+            NullReadOnly.ToString(); // Compliant. TODO: SLVS-1140
+        }
+
+        void DoLearnFromConstants()
+        {
+            NullConst.ToString(); // Noncompliant
+//          ^^^^^^^^^
+        }
+
+        void DoLearnFromAnyConstant()
+        {
+            var other = new NullPointerDereferenceWithFields();
+            other.NullConst.ToString(); // Compliant // TODO: Should not be compliant SLVS-1139
+        }
+
+        void DumbestTestOnFoo1()
+        {
+            object o = null;
+            _foo1 = o;
+            _foo1.ToString(); // Noncompliant
+//          ^^^^^
+        }
+        void DumbestTestOnFoo2()
+        {
+            object o = null;
+            _foo2 = o;
+            _foo2.ToString(); // Noncompliant
+//          ^^^^^
+        }
+        void DumbestTestOnFoo3()
+        {
+            object o = null;
+            _foo3 = o;
+            _foo3.ToString(); // Noncompliant
+//          ^^^^^
+        }
+        void DumbestTestOnFoo4()
+        {
+            object o = null;
+            _foo4 = o;
+            _foo4.ToString(); // Noncompliant
+//          ^^^^^
+        }
+        void DumbestTestOnFoo5()
+        {
+            object o = null;
+            _foo5 = o;
+            _foo5.ToString(); // Noncompliant
+//          ^^^^^
+        }
+        void DumbestTestOnFoo8()
+        {
+            object o = null;
+            _foo8 = o;
+            _foo8.ToString(); // Noncompliant
+//          ^^^^^
+        }
+        void DumbestTestOnFoo6()
+        {
+            _foo6.ToString(); // compliant
+        }
+        void DumbestTestOnFoo7()
+        {
+            _foo7.ToString(); // compliant
+        }
+
+        void DifferentFieldAccess1()
+        {
+            object o = null;
+            this._foo1 = o;
+            this._foo1.ToString(); // Compliant // TODO: Should not be compliant
+        }
+        void DifferentFieldAccess2()
+        {
+            object o = null;
+            this._foo1 = o;
+            _foo1.ToString(); // Noncompliant
+        }
+        void DifferentFieldAccess3()
+        {
+            object o = null;
+            _foo1 = o;
+            this._foo1.ToString(); // Compliant // TODO: Should not be compliant
+        }
+        void OtherInstanceFieldAccess()
+        {
+            object o = null;
+            var other = new NullPointerDereferenceWithFields();
+            other._foo1 = o;
+            other._foo1.ToString(); // Compliant
+        }
+        void OtherInstanceFieldAccess2()
+        {
+            object o = null;
+            _foo1 = o;
+            (new NullPointerDereferenceWithFields())._foo1.ToString(); // Compliant
+        }
+
+        void ParenthesizedAccess1()
+        {
+            object o = null;
+            _foo1 = o;
+            (_foo1).ToString(); // Noncompliant
+        }
+        void ParenthesizedAccess2()
+        {
+            object o = null;
+            ((this)._foo1) = o;
+            (_foo1).ToString(); // Noncompliant
+        }
+        void ConditionalThisFieldAccess()
+        {
+            object o = null;
+            this._foo1 = o;
+            this?._foo1.ToString(); // Compliant // TODO: Should not be compliant
+        }
+
+        void VariableFromField()
+        {
+            _foo1 = null;
+            var o = _foo1;
+            o.ToString(); // Noncompliant
+//          ^
+        }
+
+        void LearntConstraintsOnField()
+        {
+            if (_foo1 == null)
+            {
+                _foo1.ToString(); // Noncompliant
+//              ^^^^^
+            }
+        }
+
+        void LearntConstraintsOnBaseField()
+        {
+            if (_bar == null)
+            {
+                _bar.ToString(); // Noncompliant
+//              ^^^^
+            }
+        }
+
+        void LearntConstraintsOnFieldAssignedToVar()
+        {
+            if (_foo1 == null)
+            {
+                var o = _foo1;
+                o.ToString(); // Noncompliant
+//              ^
+            }
+        }
+
+        void LambdaConstraint()
+        {
+            _foo1 = null;
+            var a = new Action(() =>
+            {
+                _foo1.ToString(); // Compliant
+            });
+            a();
+        }
+
+        void Assert1()
+        {
+            System.Diagnostics.Debug.Assert(_foo1 != null);
+            _foo1.ToString(); // Compliant
+            System.Diagnostics.Debug.Assert(_foo1 == null);
+            _foo1.ToString(); // Compliant
+        }
+
+        void CallToExtensionMethodsShouldNotRaise()
+        {
+            object o = null;
+            _foo1 = o;
+            _foo1.MyExtension(); // Compliant
+        }
+
+        void CallToMethodsShouldResetFieldConstraints()
+        {
+            object o = null;
+            _foo1 = o;
+            DoSomething();
+            _foo1.ToString(); // Noncompliant // TODO: Should be compliant SLVS-1131
+        }
+
+        void CallToExtensionMethodsShouldResetFieldConstraints()
+        {
+            object o = null;
+            _foo1 = o;
+            _foo1.MyExtension();
+            _foo1.ToString(); // Noncompliant // TODO: Should be compliant SLVS-1131
+        }
+
+        void CallToNameOfShouldNotResetFieldConstraints()
+        {
+            object o = null;
+            _foo1 = o;
+            var name = nameof(DoSomething);
+            _foo1.ToString(); // Noncompliant
+        }
+
+        void DoSomething() { }
     }
 
     static class Extensions

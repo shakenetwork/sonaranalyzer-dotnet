@@ -135,7 +135,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 var type = symbol.GetSymbolType();
                 return type != null &&
                     type.OriginalDefinition.Is(KnownType.System_Nullable_T) &&
-                    explodedGraph.IsLocalScoped(symbol);
+                    explodedGraph.IsSymbolTracked(symbol);
             }
 
             private bool IsHasValueAccess(MemberAccessExpressionSyntax memberAccess)

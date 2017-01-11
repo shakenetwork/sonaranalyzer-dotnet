@@ -102,6 +102,7 @@
     <Compile Include="Helpers\SymbolicExecution\ExplodedGraph.cs" />
     <Compile Include="Helpers\SymbolicExecution\InvocationVisitor.cs" />
     <Compile Include="Helpers\SymbolicExecution\MemberAccessedEventArgs.cs" />
+    <Compile Include="Helpers\SymbolicExecution\SymbolicValueHelper.cs" />
     <Compile Include="Helpers\SyntaxHelper.cs" />
     <Compile Include="Helpers\AttributeSyntaxSymbolMapping.cs" />
     <Compile Include="Helpers\SyntaxNodeSymbolSemanticModelTuple.cs" />
