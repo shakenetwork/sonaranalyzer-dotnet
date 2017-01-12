@@ -28,7 +28,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 
 [assembly: AssemblyCompany("SonarSource")]
-[assembly: AssemblyCopyright("Copyright © 2015-2016 SonarSource SA")]
+[assembly: AssemblyCopyright("Copyright © 2015-2017 SonarSource SA")]
 [assembly: AssemblyTrademark("SonarLint, SonarQube, SonarSource")]
 [assembly: AssemblyCulture("")]
 
