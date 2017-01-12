@@ -484,7 +484,7 @@
     <value>The cyclomatic complexity of a function, procedure or property should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.</value>
   </data>
   <data name="S1541_IsActivatedByDefault" xml:space="preserve">
-    <value>True</value>
+    <value>False</value>
   </data>
   <data name="S1541_Remediation" xml:space="preserve">
     <value>Constant/Issue</value>
@@ -1180,7 +1180,7 @@
     <value>The overloading mechanism should be used in place of optional parameters for several reasons:</value>
   </data>
   <data name="S2360_IsActivatedByDefault" xml:space="preserve">
-    <value>True</value>
+    <value>False</value>
   </data>
   <data name="S2360_Remediation" xml:space="preserve">
     <value>Constant/Issue</value>

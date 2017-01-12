@@ -11,7 +11,7 @@ try
 finally
 {
   /* clean up */
-  throw new RuntimeException();       // Noncompliant; will mask the ArgumentException
+  throw new InvalidOperationException();       // Noncompliant; will mask the ArgumentException
 }
 </pre>
 <h2>Compliant Solution</h2>
