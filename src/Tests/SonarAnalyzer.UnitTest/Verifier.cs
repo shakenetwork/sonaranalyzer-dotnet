@@ -24,8 +24,8 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CodeFixes;
 using Microsoft.CodeAnalysis.Diagnostics;
-using Microsoft.CodeAnalysis.Text;
 using SonarAnalyzer.Helpers;
+using SonarAnalyzer.UnitTest.TestFramework;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
@@ -47,17 +47,9 @@ namespace SonarAnalyzer.UnitTest
         private static readonly MetadataReference systemLinqAssembly = MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location);
         private static readonly MetadataReference systemNetAssembly = MetadataReference.CreateFromFile(typeof(WebClient).Assembly.Location);
 
-        private const string EXPECTED_ISSUE_LOCATION_PATTERN = @"\s*(\^+)\s*";
-        private const string COMMENT_START_CSHARP = @"//";
-        private const string COMMENT_START_VBNET = @"'";
-
-        private const string EXPECTED_ISSUE_LOCATION_PATTERN_CSHARP = @"^" + COMMENT_START_CSHARP + EXPECTED_ISSUE_LOCATION_PATTERN + "$";
-        private const string EXPECTED_ISSUE_LOCATION_PATTERN_VBNET = @"^" + COMMENT_START_VBNET + EXPECTED_ISSUE_LOCATION_PATTERN + "$";
         private const string NONCOMPLIANT_START = "Noncompliant";
         private const string FIXED_MESSAGE = "Fixed";
         private const string NONCOMPLIANT_PATTERN = NONCOMPLIANT_START + @".*";
-        private const string NONCOMPLIANT_LINE_PATTERN = NONCOMPLIANT_START + @"@([\+|-]?)([0-9]+)";
-        private const string NONCOMPLIANT_MESSAGE_PATTERN = NONCOMPLIANT_START + @".*({{.*}}).*";
 
         private const string GeneratedAssemblyName = "foo";
         private const string TestAssemblyName = "fooTest";
@@ -84,6 +76,8 @@ namespace SonarAnalyzer.UnitTest
             var file = new FileInfo(path);
             var parseOptions = GetParseOptionsAlternatives(options, file.Extension);
 
+            var issueLocationCollector = new IssueLocationCollector();
+
             using (var workspace = new AdhocWorkspace())
             {
                 var document = GetDocument(file, GeneratedAssemblyName, workspace, additionalReferences: additionalReferences);
@@ -97,70 +91,72 @@ namespace SonarAnalyzer.UnitTest
                     }
 
                     var compilation = project.GetCompilationAsync().Result;
-                    var diagnostics = GetDiagnostics(compilation, diagnosticAnalyzer);
-                    var expectedIssues = ExpectedIssues(compilation.SyntaxTrees.First());
 
-                    var language = file.Extension == CSharpFileExtension
-                        ? LanguageNames.CSharp
-                        : LanguageNames.VisualBasic;
-                    var expectedLocations = ExpectedIssueLocations(compilation.SyntaxTrees.First(), language);
+                    var diagnostics = GetDiagnostics(compilation, diagnosticAnalyzer);
+
+                    var expectedIssues = issueLocationCollector
+                        .GetExpectedIssueLocations(compilation.SyntaxTrees.First().GetText().Lines)
+                        .ToList();
 
                     foreach (var diagnostic in diagnostics)
                     {
-                        var line = diagnostic.GetLineNumberToReport();
-                        if (!expectedIssues.ContainsKey(line))
+                        var location = diagnostic.Location;
+                        var message = diagnostic.GetMessage();
+
+                        string issueId;
+                        VerifyIssue(expectedIssues, issue => issue.IsPrimary, location, message, out issueId);
+
+                        for (int i = 0; i < diagnostic.AdditionalLocations.Count; i++)
                         {
-                            Execute.Assertion.FailWith($"Issue not expected on line {line}");
+                            location = diagnostic.AdditionalLocations[i];
+                            message = diagnostic.Properties[i.ToString()];
+
+                            VerifyIssue(expectedIssues, issue => issue.IssueId == issueId && !issue.IsPrimary, location, message, out issueId);
                         }
-
-                        var expectedMessage = expectedIssues[line];
-                        if (expectedMessage != null)
-                        {
-                            var message = diagnostic.GetMessage();
-
-                            if (message != expectedMessage)
-                            {
-                                Execute.Assertion.FailWith($"Message does not match expected on line {line}");
-                            }
-                        }
-
-                        if (expectedLocations.ContainsKey(line))
-                        {
-                            var expectedLocation = expectedLocations[line];
-
-                            var diagnosticStart = diagnostic.Location.GetLineSpan().StartLinePosition.Character;
-
-                            if (expectedLocation.StartPosition != diagnosticStart)
-                            {
-                                Execute.Assertion.FailWith(
-                                    $"The start position of the diagnostic ({diagnosticStart}) doesn't match " +
-                                    $"the expected value ({expectedLocation.StartPosition}) in line {line}.");
-                            }
-
-                            if (expectedLocation.Length != diagnostic.Location.SourceSpan.Length)
-                            {
-                                Execute.Assertion.FailWith(
-                                    $"The length of the diagnostic ({diagnostic.Location.SourceSpan.Length}) doesn't match " +
-                                    $"the expected value ({expectedLocation.Length}) in line {line}.");
-                            }
-
-                            expectedLocations.Remove(line);
-                        }
-
-                        expectedIssues.Remove(line);
                     }
 
-                    if (expectedLocations.Count > 0)
-                    {
-                        Execute.Assertion.FailWith($"Issue expected but not found on line(s) {string.Join(",", expectedLocations.Keys)}");
-                    }
-
-                    if (expectedIssues.Count > 0)
-                    {
-                        Execute.Assertion.FailWith($"Issue expected but not found on line(s) {string.Join(",", expectedIssues.Keys)}");
-                    }
+                    expectedIssues.Should().BeEmpty($"Issue not expected but found on line(s) {string.Join(",", expectedIssues.Select(i => i.LineNumber))}.");
                 }
             }
+        }
+
+        private static void VerifyIssue(IList<IIssueLocation> expectedIssues, Func<IIssueLocation, bool> issueFilter, Location location, string message, out string issueId)
+        {
+            var lineNumber = location.GetLineNumberToReport();
+
+            var expectedIssue = expectedIssues
+                .Where(issueFilter)
+                .FirstOrDefault(issue => issue.LineNumber == lineNumber);
+
+            if (expectedIssue == null)
+            {
+                Execute.Assertion.FailWith($"Issue not expected on line {lineNumber}");
+            }
+
+            if (expectedIssue.Message != null && expectedIssue.Message != message)
+            {
+                Execute.Assertion.FailWith($"Message does not match expected on line {lineNumber}");
+            }
+
+            var diagnosticStart = location.GetLineSpan().StartLinePosition.Character;
+
+            if (expectedIssue.Start.HasValue && expectedIssue.Start != diagnosticStart)
+            {
+                Execute.Assertion.FailWith(
+                    $"The start position of the diagnostic ({diagnosticStart}) doesn't match " +
+                    $"the expected value ({expectedIssue.Start}) in line {lineNumber}.");
+            }
+
+            if (expectedIssue.Length.HasValue && expectedIssue.Length != location.SourceSpan.Length)
+            {
+                Execute.Assertion.FailWith(
+                    $"The length of the diagnostic ({location.SourceSpan.Length}) doesn't match " +
+                    $"the expected value ({expectedIssue.Length}) in line {lineNumber}.");
+            }
+
+            expectedIssues.Remove(expectedIssue);
+
+            issueId = expectedIssue.IssueId;
         }
 
         public static void VerifyNoIssueReportedInTest(string path, SonarDiagnosticAnalyzer diagnosticAnalyzer)
@@ -262,22 +258,17 @@ namespace SonarAnalyzer.UnitTest
                 ? LanguageNames.CSharp
                 : LanguageNames.VisualBasic;
 
-            var locationPattern = file.Extension == CSharpFileExtension
-                ? EXPECTED_ISSUE_LOCATION_PATTERN_CSHARP
-                : EXPECTED_ISSUE_LOCATION_PATTERN_VBNET;
-
             var lines = File.ReadAllText(file.FullName, Encoding.UTF8)
                 .Split(new[] { Environment.NewLine }, StringSplitOptions.None);
 
             if (removeAnalysisComments)
             {
-                lines = lines.Where(l => !Regex.IsMatch(l, locationPattern)).ToArray();
+                lines = lines.Where(IssueLocationCollector.IsNotIssueLocationLine).ToArray();
                 lines = lines.Select(l =>
                 {
                     var match = Regex.Match(l, NONCOMPLIANT_PATTERN);
                     return match.Success ? l.Replace(match.Groups[0].Value, FIXED_MESSAGE) : l;
                 }).ToArray();
-
             }
 
             var text = string.Join(Environment.NewLine, lines);
@@ -370,94 +361,6 @@ namespace SonarAnalyzer.UnitTest
 
                 return compilationWithAnalyzer.GetAllDiagnosticsAsync().Result;
             }
-        }
-
-        private static Dictionary<int, ExactIssueLocation> ExpectedIssueLocations(SyntaxTree syntaxTree, string language)
-        {
-            var exactLocations = new Dictionary<int, ExactIssueLocation>();
-
-            var locationPattern = language == LanguageNames.CSharp
-                ? EXPECTED_ISSUE_LOCATION_PATTERN_CSHARP
-                : EXPECTED_ISSUE_LOCATION_PATTERN_VBNET;
-
-            foreach (var line in syntaxTree.GetText().Lines)
-            {
-                var lineText = line.ToString();
-                var match = Regex.Match(lineText, locationPattern);
-                if (!match.Success)
-                {
-                    var commentStart = language == LanguageNames.CSharp ? COMMENT_START_CSHARP : COMMENT_START_VBNET;
-                    if (Regex.IsMatch(lineText, commentStart + EXPECTED_ISSUE_LOCATION_PATTERN + "$"))
-                    {
-                        Execute.Assertion.FailWith("Line matches expected location pattern, but doesn't start at the beginning of the line.");
-                    }
-
-                    continue;
-                }
-
-                var position = match.Groups[1];
-                exactLocations.Add(line.LineNumber, new ExactIssueLocation
-                {
-                    Line = line.LineNumber,
-                    StartPosition = position.Index,
-                    Length = position.Length,
-                });
-            }
-
-            return exactLocations;
-        }
-
-        private static Dictionary<int, string> ExpectedIssues(SyntaxTree syntaxTree)
-        {
-            var expectedIssueMessage = new Dictionary<int, string>();
-
-            foreach (var line in syntaxTree.GetText().Lines)
-            {
-                var lineText = line.ToString();
-                if (!lineText.Contains(NONCOMPLIANT_START))
-                {
-                    continue;
-                }
-
-                var lineNumber = GetNonCompliantLineNumber(line);
-
-                expectedIssueMessage.Add(lineNumber, null);
-
-                var match = Regex.Match(lineText, NONCOMPLIANT_MESSAGE_PATTERN);
-                if (!match.Success)
-                {
-                    continue;
-                }
-
-                var message = match.Groups[1].ToString();
-                expectedIssueMessage[lineNumber] = message.Substring(2, message.Length - 4);
-            }
-
-            return expectedIssueMessage;
-        }
-
-        private static int GetNonCompliantLineNumber(TextLine line)
-        {
-            var text = line.ToString();
-            var match = Regex.Match(text, NONCOMPLIANT_LINE_PATTERN);
-            if (!match.Success)
-            {
-                return line.LineNumber + 1;
-            }
-
-            var sign = match.Groups[1];
-            var lineValue = int.Parse(match.Groups[2].Value);
-            if (sign.Value == "+")
-            {
-                return line.LineNumber + 1 + lineValue;
-            }
-
-            if (sign.Value == "-")
-            {
-                return line.LineNumber + 1 - lineValue;
-            }
-
-            return lineValue;
         }
 
         #endregion
@@ -574,12 +477,5 @@ namespace SonarAnalyzer.UnitTest
         }
 
         #endregion
-
-        private class ExactIssueLocation
-        {
-            public int Line { get; set; }
-            public int StartPosition { get; set; }
-            public int Length { get; set; }
-        }
     }
 }

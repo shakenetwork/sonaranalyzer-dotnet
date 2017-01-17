@@ -38,7 +38,7 @@ namespace SonarAnalyzer.Helpers
             return self.Location.GetLineNumberToReport();
         }
 
-        private static int GetLineNumberToReport(this Location self)
+        public static int GetLineNumberToReport(this Location self)
         {
             return self.GetLineSpan().StartLinePosition.GetLineNumberToReport();
         }
