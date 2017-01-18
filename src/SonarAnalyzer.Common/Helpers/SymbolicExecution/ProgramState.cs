@@ -338,11 +338,10 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
             return value;
         }
 
-        internal ProgramState Clean(IEnumerable<ISymbol> liveSymbolsToKeep)
+        internal ProgramState RemoveSymbols(Func<ISymbol, bool> predicate)
         {
-            // TODO: Remove the OR part when SLVS-1136 is fixed
             var cleanedValues = Values
-                .Where(sv => liveSymbolsToKeep.Contains(sv.Key) || sv.Key is IFieldSymbol)
+                .Where(kv => !predicate(kv.Key))
                 .ToImmutableDictionary();
 
             // SVs for live symbols

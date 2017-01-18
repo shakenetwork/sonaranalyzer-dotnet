@@ -96,14 +96,14 @@ namespace SonarAnalyzer.Helpers
 
             var memberAccess = expression as MemberAccessExpressionSyntax;
             if (memberAccess != null &&
-                memberAccess.Expression.IsKind(SyntaxKind.ThisExpression))
+                memberAccess.Expression.RemoveParentheses().IsKind(SyntaxKind.ThisExpression))
             {
                 return true;
             }
 
             var conditionalAccess = expression as ConditionalAccessExpressionSyntax;
             if (conditionalAccess != null &&
-                conditionalAccess.Expression.IsKind(SyntaxKind.ThisExpression))
+                conditionalAccess.Expression.RemoveParentheses().IsKind(SyntaxKind.ThisExpression))
             {
                 return true;
             }

@@ -260,7 +260,10 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
         {
             var liveVariables = lva.GetLiveOut(block)
                 .Union(nonInDeclarationParameters); // LVA excludes out and ref parameters
-            return programState.Clean(liveVariables);
+
+            // TODO: Remove the IFieldSymbol check when SLVS-1136 is fixed
+            return programState.RemoveSymbols(
+                symbol => !(symbol is IFieldSymbol) && !liveVariables.Contains(symbol));
         }
 
         internal bool IsSymbolTracked(ISymbol symbol)
@@ -271,11 +274,9 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
                 return false;
             }
 
-            var field = symbol as IFieldSymbol;
-            if (field != null)
+            if (IsFieldSymbol(symbol))
             {
-                return declaration.ContainingType.GetSelfAndBaseTypes()
-                                                 .Contains(field.ContainingType);
+                return true;
             }
 
             var local = symbol as ILocalSymbol;
@@ -291,6 +292,16 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
             // Could be either ILocalSymbol or IParameterSymbol so let's use symbol
             return symbol.ContainingSymbol != null &&
                 symbol.ContainingSymbol.Equals(declaration);
+        }
+
+        protected bool IsFieldSymbol(ISymbol symbol)
+        {
+            var field = symbol as IFieldSymbol;
+
+            return field != null &&
+                declaration.ContainingType
+                    .GetSelfAndBaseTypes()
+                    .Contains(field.ContainingType);
         }
 
         #endregion

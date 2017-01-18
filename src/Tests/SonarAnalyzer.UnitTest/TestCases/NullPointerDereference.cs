@@ -482,16 +482,16 @@ namespace Tests.Diagnostics
         {
             object o = null;
             _foo1 = o;
-            DoSomething();
-            _foo1.ToString(); // Noncompliant // TODO: Should be compliant SLVS-1131
+            (((this))).DoSomething();
+            _foo1.ToString(); // Compliant
         }
 
         void CallToExtensionMethodsShouldResetFieldConstraints()
         {
             object o = null;
             _foo1 = o;
-            _foo1.MyExtension();
-            _foo1.ToString(); // Noncompliant // TODO: Should be compliant SLVS-1131
+            this.MyExtension();
+            _foo1.ToString(); // Compliant
         }
 
         void CallToNameOfShouldNotResetFieldConstraints()
@@ -499,7 +499,7 @@ namespace Tests.Diagnostics
             object o = null;
             _foo1 = o;
             var name = nameof(DoSomething);
-            _foo1.ToString(); // Noncompliant
+            _foo1.ToString(); // Compliant // TODO not-compliant after 1132
         }
 
         void DoSomething() { }

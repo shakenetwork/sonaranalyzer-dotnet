@@ -394,6 +394,11 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.CSharp
                         var invocation = (InvocationExpressionSyntax)instruction;
                         var invocationVisitor = new InvocationVisitor(invocation, SemanticModel, newProgramState);
                         newProgramState = invocationVisitor.ProcessInvocation();
+
+                        if (invocation.Expression.IsOnThis())
+                        {
+                            newProgramState = newProgramState.RemoveSymbols(IsFieldSymbol);
+                        }
                     }
                     break;
 
