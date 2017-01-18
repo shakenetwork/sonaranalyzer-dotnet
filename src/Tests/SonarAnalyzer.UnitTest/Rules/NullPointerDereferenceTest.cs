@@ -18,6 +18,8 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarAnalyzer.Rules.CSharp;
 
@@ -31,6 +33,14 @@ namespace SonarAnalyzer.UnitTest.Rules
         public void NullPointerDereference()
         {
             Verifier.VerifyAnalyzer(@"TestCases\NullPointerDereference.cs", new NullPointerDereference());
+        }
+
+        [TestMethod]
+        [TestCategory("Rule")]
+        public void NullPointerDereferenceCSharp6()
+        {
+            Verifier.VerifyAnalyzer(@"TestCases\NullPointerDereferenceCSharp6.cs", new NullPointerDereference(),
+                new CSharpParseOptions(LanguageVersion.CSharp6));
         }
     }
 }

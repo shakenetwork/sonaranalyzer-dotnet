@@ -368,19 +368,27 @@ namespace Tests.Diagnostics
         {
             object o = null;
             this._foo1 = o;
-            this._foo1.ToString(); // Compliant // TODO: Should not be compliant
+            this._foo1.ToString(); // Noncompliant
         }
         void DifferentFieldAccess2()
         {
-            object o = null;
-            this._foo1 = o;
+            this._foo1 = null;
             _foo1.ToString(); // Noncompliant
         }
         void DifferentFieldAccess3()
         {
-            object o = null;
-            _foo1 = o;
-            this._foo1.ToString(); // Compliant // TODO: Should not be compliant
+            _foo1 = null;
+            this._foo1.ToString(); // Noncompliant
+        }
+        void DifferentFieldAccess4()
+        {
+            _foo1 = null;
+            (((this)))._foo1.ToString(); // Noncompliant
+        }
+        void DifferentFieldAccess5()
+        {
+            _foo1 = null;
+            (((this._foo1))).ToString(); // Noncompliant
         }
         void OtherInstanceFieldAccess()
         {
@@ -405,14 +413,8 @@ namespace Tests.Diagnostics
         void ParenthesizedAccess2()
         {
             object o = null;
-            ((this)._foo1) = o;
-            (_foo1).ToString(); // Noncompliant
-        }
-        void ConditionalThisFieldAccess()
-        {
-            object o = null;
-            this._foo1 = o;
-            this?._foo1.ToString(); // Compliant // TODO: Should not be compliant
+            ((((((this)))._foo1))) = o;
+            (((_foo1))).ToString(); // Noncompliant
         }
 
         void VariableFromField()

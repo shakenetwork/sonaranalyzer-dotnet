@@ -157,9 +157,36 @@ namespace SonarAnalyzer.Rules.CSharp
                 return ProcessIdentifier(programState, identifier, symbol);
             }
 
+            private IdentifierNameSyntax GetIdentifierFromMemberAccess(MemberAccessExpressionSyntax memberAccess)
+            {
+                var expressionWithoutParentheses = memberAccess.Expression.RemoveParentheses();
+
+                var identifier = expressionWithoutParentheses as IdentifierNameSyntax;
+                if (identifier != null)
+                {
+                    return identifier;
+                }
+
+                var subMemberBinding = expressionWithoutParentheses as MemberBindingExpressionSyntax;
+                if (subMemberBinding != null)
+                {
+                    return subMemberBinding.Name as IdentifierNameSyntax;
+                }
+
+                var subMemberAccess = expressionWithoutParentheses as MemberAccessExpressionSyntax;
+                if (subMemberAccess != null &&
+                    subMemberAccess.IsKind(SyntaxKind.SimpleMemberAccessExpression) &&
+                    subMemberAccess.Expression.RemoveParentheses() is ThisExpressionSyntax)
+                {
+                    return subMemberAccess.Name as IdentifierNameSyntax;
+                }
+
+                return null;
+            }
+
             private ProgramState ProcessMemberAccess(ProgramState programState, MemberAccessExpressionSyntax memberAccess)
             {
-                var identifier = memberAccess.Expression.RemoveParentheses() as IdentifierNameSyntax;
+                var identifier = GetIdentifierFromMemberAccess(memberAccess);
                 if (identifier == null)
                 {
                     return programState;
