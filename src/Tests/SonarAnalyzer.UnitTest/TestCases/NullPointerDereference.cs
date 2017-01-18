@@ -499,7 +499,7 @@ namespace Tests.Diagnostics
             object o = null;
             _foo1 = o;
             var name = nameof(DoSomething);
-            _foo1.ToString(); // Compliant // TODO not-compliant after 1132
+            _foo1.ToString(); // Noncompliant
         }
 
         void DoSomething() { }
