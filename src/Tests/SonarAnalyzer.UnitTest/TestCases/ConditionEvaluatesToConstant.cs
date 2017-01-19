@@ -7,6 +7,13 @@ namespace Tests.Diagnostics
 {
     public class ConditionEvaluatesToConstant
     {
+        void Pointer(int* a)
+        {
+            if (a != null) // Compliant
+            {
+            }
+        }
+
         void Nameof(string s)
         {
             if (null == nameof(Method1)) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}

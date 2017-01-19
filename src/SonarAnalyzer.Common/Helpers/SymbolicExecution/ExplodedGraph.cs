@@ -372,11 +372,17 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
         {
             var isDefinitelyNotNull = !symbolicValue.HasConstraint(ObjectConstraint.NotNull, programState) &&
                 IsNonNullableValueType(typeSymbol) &&
-                !IsValueTypeWithOverloadedNullCompatibleOpEquals(typeSymbol);
+                !IsValueTypeWithOverloadedNullCompatibleOpEquals(typeSymbol) &&
+                !IsPointer(typeSymbol);
 
             return isDefinitelyNotNull
                 ? symbolicValue.SetConstraint(ObjectConstraint.NotNull, programState)
                 : programState;
+        }
+
+        private static bool IsPointer(ITypeSymbol typeSymbol)
+        {
+            return typeSymbol?.TypeKind == TypeKind.Pointer;
         }
 
         private static bool IsValueTypeWithOverloadedNullCompatibleOpEquals(ITypeSymbol type)
