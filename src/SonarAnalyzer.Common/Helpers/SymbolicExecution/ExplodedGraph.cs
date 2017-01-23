@@ -299,9 +299,10 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.Common
             var field = symbol as IFieldSymbol;
 
             return field != null &&
+                (field.IsConst ||
                 declaration.ContainingType
                     .GetSelfAndBaseTypes()
-                    .Contains(field.ContainingType);
+                    .Contains(field.ContainingType));
         }
 
         #endregion

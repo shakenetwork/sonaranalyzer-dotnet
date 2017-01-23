@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+using X = global::Tests.Diagnostics.NullPointerDereferenceWithFields;
+
 namespace Tests.Diagnostics
 {
     class NullPointerDereference
@@ -283,6 +285,11 @@ namespace Tests.Diagnostics
         protected object _bar;
     }
 
+    class B
+    {
+        public const string Whatever = null;
+    }
+
     class NullPointerDereferenceWithFields : A
     {
         private object _foo1;
@@ -290,7 +297,6 @@ namespace Tests.Diagnostics
         internal object _foo3;
         public object _foo4;
         protected internal object _foo5;
-        private const object Foo6 = new object();
         private readonly object _foo7 = new object();
         private static object _foo8;
         private const object NullConst = null;
@@ -307,10 +313,25 @@ namespace Tests.Diagnostics
 //          ^^^^^^^^^
         }
 
-        void DoLearnFromAnyConstant()
+        void DoLearnFromAnyConstant1()
         {
-            var other = new NullPointerDereferenceWithFields();
-            other.NullConst.ToString(); // Compliant // TODO: Should not be compliant SLVS-1139
+            NullConst.ToString(); // Noncompliant
+        }
+        void DoLearnFromAnyConstant2()
+        {
+            NullPointerDereferenceWithFields.NullConst.ToString(); // Noncompliant
+        }
+        void DoLearnFromAnyConstant3()
+        {
+            Tests.Diagnostics.NullPointerDereferenceWithFields.NullConst.ToString(); // Noncompliant
+        }
+        void DoLearnFromAnyConstant4()
+        {
+            X.NullConst.ToString(); // Noncompliant
+        }
+        void DoLearnFromAnyConstant5()
+        {
+            B.Whatever.ToString(); // Noncompliant
         }
 
         void DumbestTestOnFoo1()
@@ -390,6 +411,7 @@ namespace Tests.Diagnostics
             _foo1 = null;
             (((this._foo1))).ToString(); // Noncompliant
         }
+
         void OtherInstanceFieldAccess()
         {
             object o = null;

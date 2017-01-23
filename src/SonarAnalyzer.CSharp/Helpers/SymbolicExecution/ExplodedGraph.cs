@@ -526,13 +526,32 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.CSharp
 
         #endregion
 
-        #region VisitExpression*
+        #region VisitExpression
 
         private ProgramState VisitMemberAccess(MemberAccessExpressionSyntax memberAccess, ProgramState programState)
         {
             SymbolicValue memberExpression;
             var newProgramState = programState.PopValue(out memberExpression);
-            var sv = new MemberAccessSymbolicValue(memberExpression, memberAccess.Name.Identifier.ValueText);
+            SymbolicValue sv = null;
+            var identifier = memberAccess.Name as IdentifierNameSyntax;
+            if (identifier != null)
+            {
+                var symbol = SemanticModel.GetSymbolInfo(identifier).Symbol;
+                var fieldSymbol = symbol as IFieldSymbol;
+                if (fieldSymbol != null && fieldSymbol.IsConst)
+                {
+                    sv = newProgramState.GetSymbolValue(symbol);
+                    if (sv == null)
+                    {
+                        sv = fieldSymbol.CreateFieldSymbolicValue();
+                        newProgramState = newProgramState.StoreSymbolicValue(symbol, sv);
+                    }
+                }
+            }
+            if (sv == null)
+            {
+                sv = new MemberAccessSymbolicValue(memberExpression, memberAccess.Name.Identifier.ValueText);
+            }
 
             newProgramState = SetNonNullConstraintIfValueType(memberAccess, sv, newProgramState);
             return newProgramState.PushValue(sv);
@@ -688,7 +707,7 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.CSharp
                 var fieldSymbol = symbol as IFieldSymbol;
                 if (fieldSymbol != null) // TODO: Fix me when implementing SLVS-1130
                 {
-                    sv = SymbolicValueHelper.CreateFieldSymbolicValue(fieldSymbol);
+                    sv = fieldSymbol.CreateFieldSymbolicValue();
                     newProgramState = newProgramState.StoreSymbolicValue(symbol, sv);
                 }
                 else

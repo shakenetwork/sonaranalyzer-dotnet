@@ -25,7 +25,7 @@ namespace SonarAnalyzer.Helpers.SymbolicExecution
 {
     public static class SymbolicValueHelper
     {
-        public static SymbolicValue CreateFieldSymbolicValue(IFieldSymbol fieldSymbol)
+        public static SymbolicValue CreateFieldSymbolicValue(this IFieldSymbol fieldSymbol)
         {
             if (!fieldSymbol.IsConst || !fieldSymbol.HasConstantValue)
             {

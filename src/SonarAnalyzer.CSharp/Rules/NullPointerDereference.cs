@@ -157,53 +157,60 @@ namespace SonarAnalyzer.Rules.CSharp
                 return ProcessIdentifier(programState, identifier, symbol);
             }
 
-            private IdentifierNameSyntax GetIdentifierFromMemberAccess(MemberAccessExpressionSyntax memberAccess)
+            private static MemberAccessIdentifierScope GetIdentifierFromMemberAccess(MemberAccessExpressionSyntax memberAccess)
             {
                 var expressionWithoutParentheses = memberAccess.Expression.RemoveParentheses();
 
                 var identifier = expressionWithoutParentheses as IdentifierNameSyntax;
                 if (identifier != null)
                 {
-                    return identifier;
+                    return new MemberAccessIdentifierScope(identifier, true);
                 }
 
                 var subMemberBinding = expressionWithoutParentheses as MemberBindingExpressionSyntax;
                 if (subMemberBinding != null)
                 {
-                    return subMemberBinding.Name as IdentifierNameSyntax;
+                    return new MemberAccessIdentifierScope(subMemberBinding.Name as IdentifierNameSyntax, true);
                 }
 
                 var subMemberAccess = expressionWithoutParentheses as MemberAccessExpressionSyntax;
                 if (subMemberAccess != null &&
-                    subMemberAccess.IsKind(SyntaxKind.SimpleMemberAccessExpression) &&
-                    subMemberAccess.Expression.RemoveParentheses() is ThisExpressionSyntax)
+                    subMemberAccess.IsKind(SyntaxKind.SimpleMemberAccessExpression))
                 {
-                    return subMemberAccess.Name as IdentifierNameSyntax;
+                    var isThisAccess = subMemberAccess.Expression.RemoveParentheses() is ThisExpressionSyntax;
+                    return new MemberAccessIdentifierScope(subMemberAccess.Name as IdentifierNameSyntax, isThisAccess);
                 }
 
-                return null;
+                return new MemberAccessIdentifierScope(null, false);
             }
 
             private ProgramState ProcessMemberAccess(ProgramState programState, MemberAccessExpressionSyntax memberAccess)
             {
-                var identifier = GetIdentifierFromMemberAccess(memberAccess);
-                if (identifier == null)
+                var memberAccessIdentifierScope = GetIdentifierFromMemberAccess(memberAccess);
+                if (memberAccessIdentifierScope.Identifier == null)
                 {
                     return programState;
                 }
 
-                var symbol = semanticModel.GetSymbolInfo(identifier).Symbol;
+                var symbol = semanticModel.GetSymbolInfo(memberAccessIdentifierScope.Identifier).Symbol;
                 if (symbol == null)
                 {
                     return programState;
                 }
+
+                var fieldSymbol = symbol as IFieldSymbol;
+                if (fieldSymbol != null && !fieldSymbol.IsConst && !memberAccessIdentifierScope.IsOnCurrentInstance)
+                {
+                    return programState;
+                }
+
                 if ((IsNullableValueType(symbol) && !IsGetTypeCall(memberAccess)) ||
                     IsExtensionMethod(memberAccess, semanticModel))
                 {
                     return programState;
                 }
 
-                return ProcessIdentifier(programState, identifier, symbol);
+                return ProcessIdentifier(programState, memberAccessIdentifierScope.Identifier, symbol);
             }
 
             private static bool IsGetTypeCall(MemberAccessExpressionSyntax memberAccess)
@@ -279,6 +286,18 @@ namespace SonarAnalyzer.Rules.CSharp
             {
                 var memberSymbol = semanticModel.GetSymbolInfo(expression).Symbol as IMethodSymbol;
                 return memberSymbol != null && memberSymbol.IsExtensionMethod;
+            }
+
+            private class MemberAccessIdentifierScope
+            {
+                public MemberAccessIdentifierScope(IdentifierNameSyntax identifier, bool isOnCurrentInstance)
+                {
+                    Identifier = identifier;
+                    IsOnCurrentInstance = isOnCurrentInstance;
+                }
+
+                public IdentifierNameSyntax Identifier { get; }
+                public bool IsOnCurrentInstance { get; }
             }
         }
     }
