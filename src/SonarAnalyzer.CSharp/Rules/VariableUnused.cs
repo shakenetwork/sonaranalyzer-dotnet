@@ -45,12 +45,13 @@ namespace SonarAnalyzer.Rules.CSharp
         {
             context.RegisterCodeBlockStartActionInNonGenerated<SyntaxKind>(cbc =>
             {
-                var unusedLocals = new List<ISymbol>();
+                var declaredLocals = new List<ISymbol>();
+                var usedLocals = new List<ISymbol>();
 
                 cbc.RegisterSyntaxNodeAction(c =>
                 {
-                    unusedLocals.AddRange(
-                        ((LocalDeclarationStatementSyntax) c.Node).Declaration.Variables
+                    declaredLocals.AddRange(
+                        ((LocalDeclarationStatementSyntax)c.Node).Declaration.Variables
                             .Select(variable => c.SemanticModel.GetDeclaredSymbol(variable))
                             .Where(symbol => symbol != null));
                 },
@@ -58,16 +59,13 @@ namespace SonarAnalyzer.Rules.CSharp
 
                 cbc.RegisterSyntaxNodeAction(c =>
                 {
-                    var symbolsToNotReportOn = GetUsedSymbols(c.Node, c.SemanticModel);
-                    foreach (var symbol in symbolsToNotReportOn)
-                    {
-                        unusedLocals.Remove(symbol);
-                    }
+                    usedLocals.AddRange(GetUsedSymbols(c.Node, c.SemanticModel));
                 },
                 SyntaxKind.IdentifierName);
 
                 cbc.RegisterCodeBlockEndAction(c =>
                 {
+                    var unusedLocals = declaredLocals.Except(usedLocals);
                     foreach (var unused in unusedLocals)
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, unused.Locations.First(), unused.Name));
