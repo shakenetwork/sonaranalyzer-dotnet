@@ -576,7 +576,12 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.CSharp
                     }
                     else
                     {
-                        var caseLabel = (CaseSwitchLabelSyntax)label;
+                        var caseLabel = label as CaseSwitchLabelSyntax;
+                        if (caseLabel == null)
+                        {
+                            throw new NotSupportedException("C# 7 features are not supported yet.");
+                        }
+
                         var indexer = GetCaseIndexer(caseLabel.Value);
                         caseBlocksByValue[indexer] = fallThroughBlock;
                     }
