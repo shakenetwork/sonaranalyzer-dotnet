@@ -111,6 +111,7 @@ namespace Tests.Diagnostics
         }
         public void Switch()
         {
+            const int c = 5; // Compliant
             var b = 5;
             switch (b)
             {
@@ -119,6 +120,8 @@ namespace Tests.Diagnostics
                     break;
                 case 7:
                     b = 56; // Noncompliant
+                    break;
+                case c:
                     break;
             }
 

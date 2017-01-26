@@ -257,13 +257,14 @@ namespace SonarAnalyzer.Rules.CSharp
             private void ProcessVariableDeclarator(SyntaxNode instruction, HashSet<ISymbol> liveOut)
             {
                 var declarator = (VariableDeclaratorSyntax)instruction;
-                var symbol = context.SemanticModel.GetDeclaredSymbol(declarator);
+                var symbol = context.SemanticModel.GetDeclaredSymbol(declarator) as ILocalSymbol;
                 if (!IsSymbolRelevant(symbol))
                 {
                     return;
                 }
 
                 if (declarator.Initializer != null &&
+                    !symbol.IsConst &&
                     !liveOut.Contains(symbol) &&
                     !IsUnusedLocal(symbol))
                 {
