@@ -48,16 +48,14 @@ if ($env:IS_PULLREQUEST -eq "true") {
         testExitCode
         
         #generate build version from the build number
-        $unpaddedBuildversion="$env:BUILD_NUMBER"
         $buildversion="$env:BUILD_NUMBER"
-        for($i=1; $i -le 5-$env:BUILD_NUMBER.length; $i++){$buildversion = "0"+$buildversion}
-
+        
         $branchName = "$env:GITHUB_BRANCH"
         $sha1 = "$env:GIT_SHA1"
 
         #Append build number to the versions
-        (Get-Content .\build\Version.props) -replace '<NugetVersion>\$\(MainVersion\)</NugetVersion>', "<NugetVersion>`$(MainVersion)-build$buildversion</NugetVersion>" | Set-Content .\build\Version.props
-        (Get-Content .\build\Version.props) -replace '<AssemblyFileVersion>\$\(MainVersion\)\.0</AssemblyFileVersion>', "<AssemblyFileVersion>`$(MainVersion).$unpaddedBuildversion</AssemblyFileVersion>" | Set-Content .\build\Version.props
+        (Get-Content .\build\Version.props) -replace '<NugetVersion>\$\(MainVersion\)</NugetVersion>', "<NugetVersion>`$(MainVersion).$buildversion</NugetVersion>" | Set-Content .\build\Version.props
+        (Get-Content .\build\Version.props) -replace '<AssemblyFileVersion>\$\(MainVersion\)\.0</AssemblyFileVersion>', "<AssemblyFileVersion>`$(MainVersion).$buildversion</AssemblyFileVersion>" | Set-Content .\build\Version.props
         (Get-Content .\build\Version.props) -replace '<AssemblyInformationalVersion>Version:\$\(AssemblyFileVersion\) Branch:not-set Sha1:not-set</AssemblyInformationalVersion>', "<AssemblyInformationalVersion>Version:`$(AssemblyFileVersion) Branch:$branchName Sha1:$sha1</AssemblyInformationalVersion>" | Set-Content .\build\Version.props
         & $env:MSBUILD_PATH  .\build\ChangeVersion.proj
         testExitCode
@@ -84,7 +82,7 @@ if ($env:IS_PULLREQUEST -eq "true") {
 
         #get version number
         [xml]$versionProps = Get-Content .\build\Version.props
-        $version = $versionProps.Project.PropertyGroup.MainVersion+"-build$buildversion"
+        $version = $versionProps.Project.PropertyGroup.MainVersion+".$buildversion"
 
         #write version to property file
         $s="VERSION=$version"
