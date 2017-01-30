@@ -18,6 +18,7 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarAnalyzer.Helpers;
 using SonarAnalyzer.Rules.CSharp;
@@ -70,7 +71,7 @@ namespace SonarAnalyzer.UnitTest.Helpers
         [TestMethod]
         public void SonarAnalysis_SpecificIssueTurnedOff()
         {
-            Assert.IsTrue(TestCases.Count > 2);
+            TestCases.Count.Should().BeGreaterThan(2);
 
             SonarAnalysisContext.ShouldAnalysisBeDisabled = tree =>
                 tree.FilePath.EndsWith(new FileInfo(TestCases[0].Path).Name, System.StringComparison.OrdinalIgnoreCase);

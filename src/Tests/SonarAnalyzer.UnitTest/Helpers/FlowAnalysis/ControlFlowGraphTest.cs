@@ -18,14 +18,14 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+using FluentAssertions;
 using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Linq;
-using FluentAssertions;
-using Microsoft.CodeAnalysis.CSharp;
 using SonarAnalyzer.Helpers.FlowAnalysis.Common;
 using SonarAnalyzer.Helpers.FlowAnalysis.CSharp;
+using System.Linq;
 
 namespace SonarAnalyzer.UnitTest.Helpers
 {
@@ -189,9 +189,11 @@ namespace NS
             var cfg = Build("if (true) { if (false) { var x = 10; } else { var y = 10; } }");
             VerifyCfg(cfg, 5);
             var firstCondition = cfg.EntryBlock as BinaryBranchBlock;
-            firstCondition.Instructions.FirstOrDefault(n => n.IsKind(SyntaxKind.TrueLiteralExpression)).Should().NotBeNull();
+            firstCondition.Instructions.Should().Contain(n => n.IsKind(SyntaxKind.TrueLiteralExpression));
+
             var secondCondition = cfg.Blocks.ToList()[1] as BinaryBranchBlock;
-            secondCondition.Instructions.FirstOrDefault(n => n.IsKind(SyntaxKind.FalseLiteralExpression)).Should().NotBeNull();
+            secondCondition.Instructions.Should().Contain(n => n.IsKind(SyntaxKind.FalseLiteralExpression));
+
             var trueBlockX = cfg.Blocks.ToList()[2];
             var falseBlockY = cfg.Blocks.ToList()[3];
             var exitBlock = cfg.ExitBlock;
@@ -241,12 +243,12 @@ namespace NS
             var cfg = Build("while (true) while(false) { var x = 10; }");
             VerifyCfg(cfg, 4);
             var firstBranchBlock = cfg.EntryBlock as BinaryBranchBlock;
-            firstBranchBlock.Instructions.FirstOrDefault(n => n.IsKind(SyntaxKind.TrueLiteralExpression)).Should().NotBeNull();
+            firstBranchBlock.Instructions.Should().Contain(n => n.IsKind(SyntaxKind.TrueLiteralExpression));
             var blocks = cfg.Blocks.ToList();
             var loopBodyBlock = blocks
                 .First(b => b.Instructions.Any(n => n.ToString() == "x = 10"));
             var secondBranchBlock = blocks[1] as BinaryBranchBlock;
-            secondBranchBlock.Instructions.FirstOrDefault(n => n.IsKind(SyntaxKind.FalseLiteralExpression)).Should().NotBeNull();
+            secondBranchBlock.Instructions.Should().Contain(n => n.IsKind(SyntaxKind.FalseLiteralExpression));
             var exitBlock = cfg.ExitBlock;
 
             firstBranchBlock.SuccessorBlocks.Should().OnlyContainInOrder(secondBranchBlock, exitBlock);
@@ -296,9 +298,9 @@ namespace NS
             var blocks = cfg.Blocks.ToList();
             var loopBodyBlock = cfg.EntryBlock;
             var falseBranchBlock = blocks[1] as BinaryBranchBlock;
-            falseBranchBlock.Instructions.FirstOrDefault(n => n.IsKind(SyntaxKind.FalseLiteralExpression)).Should().NotBeNull();
+            falseBranchBlock.Instructions.Should().Contain(n => n.IsKind(SyntaxKind.FalseLiteralExpression));
             var trueBranchBlock = blocks[2] as BinaryBranchBlock;
-            trueBranchBlock.Instructions.FirstOrDefault(n => n.IsKind(SyntaxKind.TrueLiteralExpression)).Should().NotBeNull();
+            trueBranchBlock.Instructions.Should().Contain(n => n.IsKind(SyntaxKind.TrueLiteralExpression));
             var exitBlock = cfg.ExitBlock;
 
             loopBodyBlock.SuccessorBlocks.Should().OnlyContain(falseBranchBlock);
@@ -364,8 +366,8 @@ namespace NS
 
             var exitBlock = cfg.ExitBlock;
 
-            collection1Block.Instructions.FirstOrDefault(n => n.ToString() == "collection1").Should().NotBeNull();
-            collection2Block.Instructions.FirstOrDefault(n => n.ToString() == "collection2").Should().NotBeNull();
+            collection1Block.Instructions.Should().Contain(n => n.ToString() == "collection1");
+            collection2Block.Instructions.Should().Contain(n => n.ToString() == "collection2");
 
             collection1Block.SuccessorBlocks.Should().Contain(foreach1Block);
 
@@ -406,7 +408,7 @@ namespace NS
 
             cfg = Build("for (i = 0, j = 11; ; i++) { var x = 10; }");
             VerifyForStatement(cfg);
-            Assert.IsTrue(cfg.EntryBlock is ForInitializerBlock);
+            cfg.EntryBlock.Should().BeAssignableTo<ForInitializerBlock>();
         }
 
         private static void VerifyForStatement(IControlFlowGraph cfg)
@@ -657,7 +659,7 @@ namespace NS
             trueBlock.SuccessorBlocks.Should().OnlyContain(exitBlock);
             trueBlock.JumpNode.Kind().Should().Be(kind);
 
-            trueBlock.Instructions.FirstOrDefault(n => n.IsKind(SyntaxKind.IdentifierName) && n.ToString() == "ii").Should().NotBeNull();
+            trueBlock.Instructions.Should().Contain(n => n.IsKind(SyntaxKind.IdentifierName) && n.ToString() == "ii");
 
             exitBlock.PredecessorBlocks.Should().OnlyContain(trueBlock, falseBlock);
         }
@@ -693,10 +695,10 @@ namespace NS
             bodyBlock.SuccessorBlocks.Should().OnlyContain(exitBlock);
 
             jumpBlock.JumpNode.Kind().Should().Be(SyntaxKind.LockStatement);
-            jumpBlock.Instructions.FirstOrDefault(n => n.IsKind(SyntaxKind.ThisExpression)).Should().NotBeNull();
+            jumpBlock.Instructions.Should().Contain(n => n.IsKind(SyntaxKind.ThisExpression));
 
             innerJumpBlock.JumpNode.Kind().Should().Be(SyntaxKind.LockStatement);
-            innerJumpBlock.Instructions.FirstOrDefault(n => n.IsKind(SyntaxKind.IdentifierName) && n.ToString() == "that").Should().NotBeNull();
+            innerJumpBlock.Instructions.Should().Contain(n => n.IsKind(SyntaxKind.IdentifierName) && n.ToString() == "that");
         }
 
         #endregion
@@ -962,7 +964,7 @@ namespace NS
             bcdBlock.SuccessorBlocks.Should().OnlyContain(exitBlock);
 
             bcdBlock.Instructions.Should().HaveCount(1);
-            bcdBlock.Instructions.Where(i => i.ToString() == "a = b ?? c ?? d").Should().NotBeEmpty();
+            bcdBlock.Instructions.Should().Contain(i => i.ToString() == "a = b ?? c ?? d");
         }
 
         #endregion
@@ -1021,7 +1023,7 @@ namespace NS
 
             var assignmentBlock = cfg.ExitBlock.PredecessorBlocks.First();
             assignmentBlock.Instructions.Should().HaveCount(1);
-            assignmentBlock.Instructions.Where(i => i.ToString() == "a = cond1 ? (cond2?x:y) : (cond3?p:q)").Should().NotBeEmpty();
+            assignmentBlock.Instructions.Should().Contain(i => i.ToString() == "a = cond1 ? (cond2?x:y) : (cond3?p:q)");
         }
 
         #endregion
@@ -1048,7 +1050,7 @@ namespace NS
             branchBlock.BranchingNode.Kind().Should().Be(SyntaxKind.ConditionalAccessExpression);
 
             branchBlock.Instructions.Should().HaveCount(1);
-            branchBlock.Instructions.Where(i => i.ToString() == "o").Should().NotBeEmpty();
+            branchBlock.Instructions.Should().Contain(i => i.ToString() == "o");
 
             VerifyAllInstructions(branchBlock, "o");
             VerifyAllInstructions(oNotNull, "method", ".method" /* This is equivalent to o.method */, "1", ".method(1)");
@@ -1557,7 +1559,7 @@ namespace NS
             case3.SuccessorBlocks.Should().OnlyContain(defaultCase);
             defaultCase.SuccessorBlocks.Should().OnlyContain(cw2);
 
-            cw1.SuccessorBlocks.Should().OnlyContain(case3 );
+            cw1.SuccessorBlocks.Should().OnlyContain(case3);
             cw2.SuccessorBlocks.Should().OnlyContain(cw3);
             cw3.SuccessorBlocks.Should().OnlyContain(exitBlock);
         }
@@ -1854,7 +1856,7 @@ b = x | 2;  b = x & 2;   b = x ^ 2;  c = ""c"" + 'c';  c = a - b;   c = a * b;  
 
             cfg = Build("var x = await this.Method(__arglist(10,11));");
             VerifyMinimalCfg(cfg);
-            VerifyInstructions(cfg.EntryBlock, 2, "__arglist", "10", "11", "__arglist(10,11)" ,
+            VerifyInstructions(cfg.EntryBlock, 2, "__arglist", "10", "11", "__arglist(10,11)",
                 "this.Method(__arglist(10,11))", "await this.Method(__arglist(10,11))");
 
             cfg = Build("var x = 1; var y = __refvalue(__makeref(x), int); var t = __reftype(__makeref(x));");
@@ -1966,7 +1968,7 @@ namespace NS
         }
         private void VerifyAllInstructions(Block block, params string[] instructions)
         {
-            block.Instructions.Count.ShouldBeEquivalentTo(instructions.Count());
+            block.Instructions.Should().HaveSameCount(instructions);
             VerifyInstructions(block, 0, instructions);
         }
 

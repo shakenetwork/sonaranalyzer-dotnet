@@ -18,6 +18,7 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+using FluentAssertions;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -82,28 +83,36 @@ namespace NS
         [TestMethod]
         public void Symbol_IsExtensionOnIEnumerable()
         {
-            Assert.IsTrue(GetMethodSymbolForIndex(3).IsExtensionOn(KnownType.System_Collections_IEnumerable));
+            GetMethodSymbolForIndex(3).IsExtensionOn(KnownType.System_Collections_IEnumerable)
+                .Should().BeTrue();
 
-            Assert.IsFalse(GetMethodSymbolForIndex(2).IsExtensionOn(KnownType.System_Collections_IEnumerable));
-            Assert.IsFalse(GetMethodSymbolForIndex(1).IsExtensionOn(KnownType.System_Collections_IEnumerable));
+            GetMethodSymbolForIndex(2).IsExtensionOn(KnownType.System_Collections_IEnumerable)
+                .Should().BeFalse();
+            GetMethodSymbolForIndex(1).IsExtensionOn(KnownType.System_Collections_IEnumerable)
+                .Should().BeFalse();
         }
 
         [TestMethod]
         public void Symbol_IsExtensionOnGenericIEnumerable()
         {
-            Assert.IsTrue(GetMethodSymbolForIndex(0).IsExtensionOn(KnownType.System_Collections_Generic_IEnumerable_T));
-            Assert.IsTrue(GetMethodSymbolForIndex(1).IsExtensionOn(KnownType.System_Collections_Generic_IEnumerable_T));
+            GetMethodSymbolForIndex(0).IsExtensionOn(KnownType.System_Collections_Generic_IEnumerable_T)
+                .Should().BeTrue();
+            GetMethodSymbolForIndex(1).IsExtensionOn(KnownType.System_Collections_Generic_IEnumerable_T)
+                .Should().BeTrue();
 
-            Assert.IsFalse(GetMethodSymbolForIndex(2).IsExtensionOn(KnownType.System_Collections_Generic_IEnumerable_T));
-            Assert.IsFalse(GetMethodSymbolForIndex(3).IsExtensionOn(KnownType.System_Collections_Generic_IEnumerable_T));
+            GetMethodSymbolForIndex(2).IsExtensionOn(KnownType.System_Collections_Generic_IEnumerable_T)
+                .Should().BeFalse();
+            GetMethodSymbolForIndex(3).IsExtensionOn(KnownType.System_Collections_Generic_IEnumerable_T)
+                .Should().BeFalse();
         }
 
         [TestMethod]
         public void Symbol_IsExtensionOnInt()
         {
-            Assert.IsTrue(GetMethodSymbolForIndex(4).IsExtensionOn(KnownType.System_Int32));
-
-            Assert.IsFalse(GetMethodSymbolForIndex(2).IsExtensionOn(KnownType.System_Int32));
+            GetMethodSymbolForIndex(4).IsExtensionOn(KnownType.System_Int32)
+                .Should().BeTrue();
+            GetMethodSymbolForIndex(2).IsExtensionOn(KnownType.System_Int32)
+                .Should().BeFalse();
         }
 
         private IMethodSymbol GetMethodSymbolForIndex(int index)

@@ -18,16 +18,15 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-using System.Linq;
 using FluentAssertions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.CodeAnalysis;
-using VB = SonarAnalyzer.Rules.VisualBasic;
-using CS = SonarAnalyzer.Rules.CSharp;
-using CACS = Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.Diagnostics;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarAnalyzer.Helpers;
+using System.Linq;
 using System.Threading.Tasks;
+using CS = SonarAnalyzer.Rules.CSharp;
+using VB = SonarAnalyzer.Rules.VisualBasic;
 
 namespace SonarAnalyzer.UnitTest.Helpers
 {
@@ -219,7 +218,8 @@ End Module";
     }
 }";
 
-            Assert.IsTrue(await IsGeneratedAsync(source, SonarAnalyzer.Helpers.CSharp.GeneratedCodeRecognizer.Instance));
+            var result = await IsGeneratedAsync(source, SonarAnalyzer.Helpers.CSharp.GeneratedCodeRecognizer.Instance);
+            result.Should().BeTrue();
         }
 
         [TestMethod]
@@ -233,7 +233,8 @@ End Module";
     }
 }";
 
-            Assert.IsFalse(await IsGeneratedAsync(source, SonarAnalyzer.Helpers.CSharp.GeneratedCodeRecognizer.Instance));
+            var result = await IsGeneratedAsync(source, SonarAnalyzer.Helpers.CSharp.GeneratedCodeRecognizer.Instance);
+            result.Should().BeFalse();
         }
     }
 }

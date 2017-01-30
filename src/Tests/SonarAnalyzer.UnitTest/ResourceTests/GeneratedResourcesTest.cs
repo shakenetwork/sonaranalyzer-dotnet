@@ -27,6 +27,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
 using SonarAnalyzer.Rules;
+using FluentAssertions;
 
 namespace SonarAnalyzer.UnitTest.ResourceTests
 {
@@ -40,7 +41,7 @@ namespace SonarAnalyzer.UnitTest.ResourceTests
 
             var rulesFromClasses = GetRulesFromClasses(typeof(SyntaxHelper).Assembly);
 
-            CollectionAssert.AreEqual(rulesFromClasses, rulesFromResources);
+            rulesFromResources.Should().Equal(rulesFromClasses);
         }
 
         [TestMethod]
@@ -50,7 +51,7 @@ namespace SonarAnalyzer.UnitTest.ResourceTests
 
             var rulesFromClasses = GetRulesFromClasses(typeof(SonarAnalyzer.Helpers.VisualBasic.SyntaxHelper).Assembly);
 
-            CollectionAssert.AreEqual(rulesFromClasses, rulesFromResources);
+            rulesFromResources.Should().Equal(rulesFromClasses);
         }
 
         private static string[] GetRulesFromClasses(Assembly assembly)

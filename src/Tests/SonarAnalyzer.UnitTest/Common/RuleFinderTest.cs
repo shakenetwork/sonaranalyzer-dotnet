@@ -18,12 +18,12 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-using System.Linq;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarAnalyzer.Utilities;
 using SonarAnalyzer.Common;
 using SonarAnalyzer.Rules.CSharp;
+using SonarAnalyzer.Utilities;
+using System.Linq;
 
 namespace SonarAnalyzer.UnitTest.Common
 {
@@ -33,14 +33,17 @@ namespace SonarAnalyzer.UnitTest.Common
         [TestMethod]
         public void GetPackagedRuleAssembly()
         {
-            Assert.AreEqual(3, RuleFinder.PackagedRuleAssemblies.Count());
+            RuleFinder.PackagedRuleAssemblies
+                .Should().HaveCount(3);
         }
 
         [TestMethod]
         public void GetParameterlessAnalyzerTypes()
         {
-            new RuleFinder().GetParameterlessAnalyzerTypes(AnalyzerLanguage.CSharp).Count().Should().BeGreaterThan(0);
-            new RuleFinder().GetParameterlessAnalyzerTypes(AnalyzerLanguage.VisualBasic).Count().Should().BeGreaterThan(0);
+            new RuleFinder().GetParameterlessAnalyzerTypes(AnalyzerLanguage.CSharp)
+                .Should().NotBeEmpty();
+            new RuleFinder().GetParameterlessAnalyzerTypes(AnalyzerLanguage.VisualBasic)
+                .Should().NotBeEmpty();
         }
 
         [TestMethod]
@@ -54,14 +57,14 @@ namespace SonarAnalyzer.UnitTest.Common
         public void GetAllAnalyzerTypes()
         {
             var finder = new RuleFinder();
-            {
-                var countParameterless = finder.GetParameterlessAnalyzerTypes(AnalyzerLanguage.CSharp).Count();
-                finder.GetAllAnalyzerTypes().Count().Should().BeGreaterThan(countParameterless);
-            }
-            {
-                var countParameterless = finder.GetParameterlessAnalyzerTypes(AnalyzerLanguage.VisualBasic).Count();
-                finder.GetAllAnalyzerTypes().Count().Should().BeGreaterThan(countParameterless);
-            }
+
+            var countParameterless = finder.GetParameterlessAnalyzerTypes(AnalyzerLanguage.CSharp).Count();
+            finder.GetAllAnalyzerTypes().Count()
+                .Should().BeGreaterThan(countParameterless);
+
+            countParameterless = finder.GetParameterlessAnalyzerTypes(AnalyzerLanguage.VisualBasic).Count();
+            finder.GetAllAnalyzerTypes().Count()
+                .Should().BeGreaterThan(countParameterless);
         }
     }
 }

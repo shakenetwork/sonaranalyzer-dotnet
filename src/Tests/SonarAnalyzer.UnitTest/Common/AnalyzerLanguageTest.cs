@@ -21,6 +21,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarAnalyzer.Common;
 using System;
+using FluentAssertions;
 
 namespace SonarAnalyzer.UnitTest.Common
 {
@@ -31,7 +32,7 @@ namespace SonarAnalyzer.UnitTest.Common
         public void AnalyzerLanguage_Parse()
         {
             var parsed = AnalyzerLanguage.Parse("cs");
-            Assert.AreEqual(AnalyzerLanguage.CSharp, parsed);
+            parsed.Should().Be(AnalyzerLanguage.CSharp);
         }
 
         [TestMethod]
@@ -39,33 +40,43 @@ namespace SonarAnalyzer.UnitTest.Common
         public void AnalyzerLanguage_Parse_Fail()
         {
             var parsed = AnalyzerLanguage.Parse("csharp");
-            Assert.AreEqual(AnalyzerLanguage.CSharp, parsed);
+            parsed.Should().Be(AnalyzerLanguage.CSharp);
         }
 
         [TestMethod]
         public void AnalyzerLanguage_GetDirectory()
         {
-            Assert.AreEqual("CSharp", AnalyzerLanguage.CSharp.GetDirectoryName());
-            Assert.AreEqual("VisualBasic", AnalyzerLanguage.VisualBasic.GetDirectoryName());
+            AnalyzerLanguage.CSharp.GetDirectoryName()
+                .Should().Be("CSharp");
+            AnalyzerLanguage.VisualBasic.GetDirectoryName()
+                .Should().Be("VisualBasic");
         }
 
         [TestMethod]
         public void AnalyzerLanguage_GetQualityProfileRepositoryKey()
         {
-            Assert.AreEqual("csharpsquid", AnalyzerLanguage.CSharp.GetQualityProfileRepositoryKey());
-            Assert.AreEqual("vbnet", AnalyzerLanguage.VisualBasic.GetQualityProfileRepositoryKey());
+            AnalyzerLanguage.CSharp.GetQualityProfileRepositoryKey()
+                .Should().Be("csharpsquid");
+            AnalyzerLanguage.VisualBasic.GetQualityProfileRepositoryKey()
+                .Should().Be("vbnet");
         }
 
         [TestMethod]
         public void AnalyzerLanguage_Operations()
         {
-            Assert.AreEqual(AnalyzerLanguage.Both, AnalyzerLanguage.CSharp.AddLanguage(AnalyzerLanguage.VisualBasic));
-            Assert.AreEqual(AnalyzerLanguage.CSharp, AnalyzerLanguage.CSharp.AddLanguage(AnalyzerLanguage.CSharp));
-            Assert.AreEqual(AnalyzerLanguage.Both, AnalyzerLanguage.CSharp.AddLanguage(AnalyzerLanguage.Both));
+            AnalyzerLanguage.CSharp.AddLanguage(AnalyzerLanguage.VisualBasic)
+                .Should().Be(AnalyzerLanguage.Both);
+            AnalyzerLanguage.CSharp.AddLanguage(AnalyzerLanguage.CSharp)
+                .Should().Be(AnalyzerLanguage.CSharp);
+            AnalyzerLanguage.CSharp.AddLanguage(AnalyzerLanguage.Both)
+                .Should().Be(AnalyzerLanguage.Both);
 
-            Assert.AreEqual(true, AnalyzerLanguage.CSharp.IsAlso(AnalyzerLanguage.CSharp));
-            Assert.AreEqual(false, AnalyzerLanguage.CSharp.IsAlso(AnalyzerLanguage.VisualBasic));
-            Assert.AreEqual(true, AnalyzerLanguage.Both.IsAlso(AnalyzerLanguage.VisualBasic));
+            AnalyzerLanguage.CSharp.IsAlso(AnalyzerLanguage.CSharp)
+                .Should().BeTrue();
+            AnalyzerLanguage.CSharp.IsAlso(AnalyzerLanguage.VisualBasic)
+                .Should().BeFalse();
+            AnalyzerLanguage.Both.IsAlso(AnalyzerLanguage.VisualBasic)
+                .Should().BeTrue();
         }
     }
 }

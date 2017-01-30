@@ -18,13 +18,12 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-using System.Linq;
 using FluentAssertions;
-using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarAnalyzer.Helpers;
+using System.Linq;
 
 namespace SonarAnalyzer.UnitTest.Helpers
 {
@@ -82,7 +81,8 @@ namespace Test
         public void GetPrecedingIfsInConditionChain()
         {
             var ifStatement1 = ifMethod.DescendantNodes().OfType<IfStatementSyntax>().First();
-            ifStatement1.GetPrecedingIfsInConditionChain().Should().HaveCount(0);
+            ifStatement1.GetPrecedingIfsInConditionChain()
+                .Should().BeEmpty();
 
             var ifStatement2 = ifMethod.DescendantNodes().OfType<IfStatementSyntax>().Last();
             var preceding = ifStatement2.GetPrecedingIfsInConditionChain();
@@ -95,7 +95,8 @@ namespace Test
         public void GetPrecedingStatementsInConditionChain()
         {
             var ifStatement1 = ifMethod.DescendantNodes().OfType<IfStatementSyntax>().First();
-            ifStatement1.GetPrecedingStatementsInConditionChain().Should().HaveCount(0);
+            ifStatement1.GetPrecedingStatementsInConditionChain()
+                .Should().BeEmpty();
 
             var ifStatement2 = ifMethod.DescendantNodes().OfType<IfStatementSyntax>().Last();
             var preceding = ifStatement2.GetPrecedingStatementsInConditionChain().ToList();
@@ -108,7 +109,8 @@ namespace Test
         public void GetPrecedingConditionsInConditionChain()
         {
             var ifStatement1 = ifMethod.DescendantNodes().OfType<IfStatementSyntax>().First();
-            ifStatement1.GetPrecedingConditionsInConditionChain().Should().HaveCount(0);
+            ifStatement1.GetPrecedingConditionsInConditionChain()
+                .Should().BeEmpty();
 
             var ifStatement2 = ifMethod.DescendantNodes().OfType<IfStatementSyntax>().Last();
             var preceding = ifStatement2.GetPrecedingConditionsInConditionChain().ToList();
@@ -123,7 +125,7 @@ namespace Test
             var sections = switchMethod.DescendantNodes().OfType<SwitchSectionSyntax>().ToList();
 
             sections.Last().GetPrecedingSections().Should().HaveCount(2);
-            sections.First().GetPrecedingSections().Should().HaveCount(0);
+            sections.First().GetPrecedingSections().Should().BeEmpty();
             sections.Last().GetPrecedingSections().First().ShouldBeEquivalentTo(sections.First());
         }
 
@@ -132,7 +134,7 @@ namespace Test
         {
             var sections = ifMethod.DescendantNodes().OfType<SwitchSectionSyntax>().ToList();
 
-            sections.FirstOrDefault().GetPrecedingSections().Should().HaveCount(0);
+            sections.FirstOrDefault().GetPrecedingSections().Should().BeEmpty();
         }
 
         [TestMethod]

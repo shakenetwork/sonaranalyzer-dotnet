@@ -18,15 +18,16 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+using FluentAssertions;
+using Microsoft.CodeAnalysis.Diagnostics;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SonarAnalyzer.Common;
+using SonarAnalyzer.Helpers;
+using SonarAnalyzer.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Microsoft.CodeAnalysis.Diagnostics;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarAnalyzer.Utilities;
-using SonarAnalyzer.Common;
-using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.UnitTest.Common
 {
@@ -48,10 +49,8 @@ namespace SonarAnalyzer.UnitTest.Common
             foreach (var analyzer in analyzers)
             {
                 var ruleDescriptor = analyzer.GetCustomAttributes<RuleAttribute>().SingleOrDefault();
-                if (ruleDescriptor == null)
-                {
-                    Assert.Fail("RuleAttribute is missing from DiagnosticAnalyzer '{0}'", analyzer.Name);
-                }
+
+                ruleDescriptor.Should().NotBeNull("RuleAttribute is missing from DiagnosticAnalyzer '{0}'", analyzer.Name);
             }
         }
 
@@ -67,11 +66,8 @@ namespace SonarAnalyzer.UnitTest.Common
 
             foreach (var analyzer in analyzers)
             {
-                var ruleDescriptor = analyzer.GetCustomAttributes<RuleAttribute>().SingleOrDefault();
-                if (ruleDescriptor != null)
-                {
-                    Assert.Fail("RuleAttribute is added to abstract DiagnosticAnalyzer '{0}'", analyzer.Name);
-                }
+                var attribute = analyzer.GetCustomAttributes<RuleAttribute>().SingleOrDefault();
+                attribute.Should().BeNull("RuleAttribute is added to abstract DiagnosticAnalyzer '{0}'", analyzer.Name);
             }
         }
 
@@ -83,12 +79,9 @@ namespace SonarAnalyzer.UnitTest.Common
             foreach (var codeFixProvider in codeFixProviders)
             {
                 var analyzerName = codeFixProvider.FullName.Replace(RuleDetailBuilder.CodeFixProviderSuffix, "");
-                if (codeFixProvider.Assembly.GetType(analyzerName) == null)
-                {
-                    Assert.Fail(
-                        "CodeFixProvider '{0}' has no matching DiagnosticAnalyzer.",
-                        codeFixProvider.Name);
-                }
+
+                codeFixProvider.Assembly.GetType(analyzerName)
+                    .Should().NotBeNull("CodeFixProvider '{0}' has no matching DiagnosticAnalyzer.", codeFixProvider.Name);
             }
         }
 
@@ -100,12 +93,8 @@ namespace SonarAnalyzer.UnitTest.Common
             foreach (var codeFixProvider in codeFixProviders)
             {
                 var titles = RuleDetailBuilder.GetCodeFixTitles(codeFixProvider);
-                if (!titles.Any())
-                {
-                    Assert.Fail(
-                        "CodeFixProvider '{0}' has no title field.",
-                        codeFixProvider.Name);
-                }
+
+                titles.Should().NotBeEmpty("CodeFixProvider '{0}' has no title field.", codeFixProvider.Name);
             }
         }
 
@@ -130,8 +119,7 @@ namespace SonarAnalyzer.UnitTest.Common
 
             foreach (var analyzer in analyzers)
             {
-                Assert.IsTrue(
-                    analyzer.IsSubclassOf(typeof(SonarDiagnosticAnalyzer)),
+                analyzer.Should().BeAssignableTo<SonarDiagnosticAnalyzer>(
                     $"{analyzer.Name} is not a subclass of SonarDiagnosticAnalyzer");
             }
         }

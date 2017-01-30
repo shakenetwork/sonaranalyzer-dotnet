@@ -18,10 +18,11 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-using System.Linq;
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarAnalyzer.Utilities;
 using SonarAnalyzer.Common;
+using SonarAnalyzer.Utilities;
+using System.Linq;
 
 namespace SonarAnalyzer.UnitTest.Common
 {
@@ -37,9 +38,8 @@ namespace SonarAnalyzer.UnitTest.Common
 
         private static void CheckRuleDescriptorsCount(AnalyzerLanguage language)
         {
-            Assert.AreEqual(
-                RuleDetailBuilder.GetAllRuleDetails(language).Count(),
-                new RuleFinder().GetAnalyzerTypes(language).Count());
+            RuleDetailBuilder.GetAllRuleDetails(language)
+                .Should().HaveSameCount(new RuleFinder().GetAnalyzerTypes(language));
         }
 
         [TestMethod]
@@ -51,9 +51,8 @@ namespace SonarAnalyzer.UnitTest.Common
 
         private static void ParameterlessRuleDescriptorsCount(AnalyzerLanguage language)
         {
-            Assert.AreEqual(
-                RuleDetailBuilder.GetParameterlessRuleDetails(language).Count(),
-                new RuleFinder().GetParameterlessAnalyzerTypes(language).Count());
+            RuleDetailBuilder.GetParameterlessRuleDetails(language)
+                .Should().HaveSameCount(new RuleFinder().GetParameterlessAnalyzerTypes(language));
         }
 
         [TestMethod]
@@ -68,14 +67,14 @@ namespace SonarAnalyzer.UnitTest.Common
             var ruleDetails = RuleDetailBuilder.GetAllRuleDetails(language).ToList();
             foreach (var ruleDetail in ruleDetails)
             {
-                Assert.IsNotNull(ruleDetail);
-                Assert.IsNotNull(ruleDetail.Description);
-                Assert.IsNotNull(ruleDetail.Key);
-                Assert.IsNotNull(ruleDetail.Title);
+                ruleDetail.Should().NotBeNull();
+                ruleDetail.Description.Should().NotBeNull();
+                ruleDetail.Key.Should().NotBeNull();
+                ruleDetail.Title.Should().NotBeNull();
             }
 
-            Assert.AreEqual(ruleDetails.Count,
-                ruleDetails.Select(descriptor => descriptor.Key).Distinct().Count());
+            ruleDetails.Should().HaveSameCount(
+                ruleDetails.Select(descriptor => descriptor.Key).Distinct());
         }
     }
 }

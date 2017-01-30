@@ -150,7 +150,7 @@ namespace SonarAnalyzer.UnitTest.Rules
             {
                 // Putting the expected issue within the file make the file being no longer empty so we need to catch the expected issue
                 // from here.
-                if (ex.Message != "Assert.Fail failed. Issue not expected on line 1")
+                if (ex.Message != "Issue not expected on line 1")
                 {
                     throw;
                 }

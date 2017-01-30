@@ -20,6 +20,7 @@
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarAnalyzer.Common;
+using FluentAssertions;
 
 namespace SonarAnalyzer.UnitTest.Common
 {
@@ -31,7 +32,7 @@ namespace SonarAnalyzer.UnitTest.Common
         {
             var additionalFile = new AnalyzerAdditionalFile(@"Common\Resources\input.txt");
             var content = additionalFile.GetText();
-            Assert.AreEqual("some sample content", content.ToString());
+            content.ToString().Should().Be("some sample content");
         }
     }
 }

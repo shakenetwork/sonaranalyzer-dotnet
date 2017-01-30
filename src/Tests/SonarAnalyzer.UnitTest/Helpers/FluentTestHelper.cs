@@ -20,15 +20,7 @@
 
 using FluentAssertions;
 using FluentAssertions.Collections;
-using FluentAssertions.Primitives;
-using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarAnalyzer.Helpers;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace SonarAnalyzer.UnitTest.Helpers
 {
@@ -42,8 +34,9 @@ namespace SonarAnalyzer.UnitTest.Helpers
                 throw new ArgumentNullException(nameof(expected));
             }
 
-            self.Subject.Should().HaveCount(expected.Length);
-            self.Subject.Should().Contain(expected);
+            self.Subject
+                .Should().HaveSameCount(expected)
+                .And.Contain(expected);
         }
 
         public static void OnlyContainInOrder<T, TAssertions>(this SelfReferencingCollectionAssertions<T, TAssertions> self, params T[] expected)
@@ -54,8 +47,9 @@ namespace SonarAnalyzer.UnitTest.Helpers
                 throw new ArgumentNullException(nameof(expected));
             }
 
-            self.Subject.Should().HaveCount(expected.Length);
-            self.Subject.Should().ContainInOrder(expected);
+            self.Subject
+                .Should().HaveSameCount(expected)
+                .And.ContainInOrder(expected);
         }
     }
 }

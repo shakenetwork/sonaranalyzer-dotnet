@@ -19,13 +19,14 @@
  */
 
 using FluentAssertions;
+using FluentAssertions.Execution;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CodeFixes;
 using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.CodeAnalysis.Text;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarAnalyzer.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.IO;
@@ -37,7 +38,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using CS = Microsoft.CodeAnalysis.CSharp;
 using VB = Microsoft.CodeAnalysis.VisualBasic;
-using System;
 
 namespace SonarAnalyzer.UnitTest
 {
@@ -110,7 +110,7 @@ namespace SonarAnalyzer.UnitTest
                         var line = diagnostic.GetLineNumberToReport();
                         if (!expectedIssues.ContainsKey(line))
                         {
-                            Assert.Fail($"Issue not expected on line {line}");
+                            Execute.Assertion.FailWith($"Issue not expected on line {line}");
                         }
 
                         var expectedMessage = expectedIssues[line];
@@ -118,9 +118,10 @@ namespace SonarAnalyzer.UnitTest
                         {
                             var message = diagnostic.GetMessage();
 
-                            Assert.AreEqual(expectedMessage,
-                                message,
-                                $"Message does not match expected on line {line}");
+                            if (message != expectedMessage)
+                            {
+                                Execute.Assertion.FailWith($"Message does not match expected on line {line}");
+                            }
                         }
 
                         if (expectedLocations.ContainsKey(line))
@@ -128,13 +129,20 @@ namespace SonarAnalyzer.UnitTest
                             var expectedLocation = expectedLocations[line];
 
                             var diagnosticStart = diagnostic.Location.GetLineSpan().StartLinePosition.Character;
-                            Assert.AreEqual(expectedLocation.StartPosition, diagnosticStart,
-                                $"The start position of the diagnostic ({diagnosticStart}) doesn't match " +
-                                $"the expected value ({expectedLocation.StartPosition}) in line {line}.");
 
-                            Assert.AreEqual(expectedLocation.Length, diagnostic.Location.SourceSpan.Length,
-                                $"The length of the diagnostic ({diagnostic.Location.SourceSpan.Length}) doesn't match " +
-                                $"the expected value ({expectedLocation.Length}) in line {line}.");
+                            if (expectedLocation.StartPosition != diagnosticStart)
+                            {
+                                Execute.Assertion.FailWith(
+                                    $"The start position of the diagnostic ({diagnosticStart}) doesn't match " +
+                                    $"the expected value ({expectedLocation.StartPosition}) in line {line}.");
+                            }
+
+                            if (expectedLocation.Length != diagnostic.Location.SourceSpan.Length)
+                            {
+                                Execute.Assertion.FailWith(
+                                    $"The length of the diagnostic ({diagnostic.Location.SourceSpan.Length}) doesn't match " +
+                                    $"the expected value ({expectedLocation.Length}) in line {line}.");
+                            }
 
                             expectedLocations.Remove(line);
                         }
@@ -142,8 +150,15 @@ namespace SonarAnalyzer.UnitTest
                         expectedIssues.Remove(line);
                     }
 
-                    expectedLocations.Should().BeEmpty($"Issue expected but not found on line(s) {string.Join(",", expectedLocations.Keys)}");
-                    Assert.AreEqual(0, expectedIssues.Count, $"Issue not expected but found on line(s) {string.Join(",", expectedIssues.Keys)}.");
+                    if (expectedLocations.Count > 0)
+                    {
+                        Execute.Assertion.FailWith($"Issue expected but not found on line(s) {string.Join(",", expectedLocations.Keys)}");
+                    }
+
+                    if (expectedIssues.Count > 0)
+                    {
+                        Execute.Assertion.FailWith($"Issue expected but not found on line(s) {string.Join(",", expectedIssues.Keys)}");
+                    }
                 }
             }
         }
@@ -207,7 +222,7 @@ namespace SonarAnalyzer.UnitTest
                 var compilation = document.Project.GetCompilationAsync().Result;
                 var diagnostics = GetDiagnostics(compilation, diagnosticAnalyzer);
 
-                diagnostics.Should().HaveCount(0);
+                diagnostics.Should().BeEmpty();
             }
         }
 
@@ -252,12 +267,13 @@ namespace SonarAnalyzer.UnitTest
                 : EXPECTED_ISSUE_LOCATION_PATTERN_VBNET;
 
             var lines = File.ReadAllText(file.FullName, Encoding.UTF8)
-                .Split(new[] { Environment.NewLine}, StringSplitOptions.None);
+                .Split(new[] { Environment.NewLine }, StringSplitOptions.None);
 
             if (removeAnalysisComments)
             {
                 lines = lines.Where(l => !Regex.IsMatch(l, locationPattern)).ToArray();
-                lines = lines.Select(l => {
+                lines = lines.Select(l =>
+                {
                     var match = Regex.Match(l, NONCOMPLIANT_PATTERN);
                     return match.Success ? l.Replace(match.Groups[0].Value, FIXED_MESSAGE) : l;
                 }).ToArray();
@@ -373,7 +389,7 @@ namespace SonarAnalyzer.UnitTest
                     var commentStart = language == LanguageNames.CSharp ? COMMENT_START_CSHARP : COMMENT_START_VBNET;
                     if (Regex.IsMatch(lineText, commentStart + EXPECTED_ISSUE_LOCATION_PATTERN + "$"))
                     {
-                        Assert.Fail("Line matches expected location pattern, but doesn't start at the beginning of the line.");
+                        Execute.Assertion.FailWith("Line matches expected location pattern, but doesn't start at the beginning of the line.");
                     }
 
                     continue;
@@ -456,7 +472,7 @@ namespace SonarAnalyzer.UnitTest
             string actualCode;
             CalculateDiagnosticsAndCode(diagnosticAnalyzer, currentDocument, parseOption, out diagnostics, out actualCode);
 
-            Assert.AreNotEqual(0, diagnostics.Count);
+            diagnostics.Should().NotBeEmpty();
 
             string codeBeforeFix;
             var codeFixExecutedAtLeastOnce = false;
@@ -482,8 +498,8 @@ namespace SonarAnalyzer.UnitTest
                 }
             } while (codeBeforeFix != actualCode);
 
-            Assert.IsTrue(codeFixExecutedAtLeastOnce);
-            Assert.AreEqual(File.ReadAllText(pathToExpected), actualCode);
+            codeFixExecutedAtLeastOnce.Should().BeTrue();
+            actualCode.Should().Be(File.ReadAllText(pathToExpected));
         }
 
         private static void RunFixAllProvider(DiagnosticAnalyzer diagnosticAnalyzer, CodeFixProvider codeFixProvider,
@@ -494,7 +510,7 @@ namespace SonarAnalyzer.UnitTest
             string actualCode;
             CalculateDiagnosticsAndCode(diagnosticAnalyzer, currentDocument, parseOption, out diagnostics, out actualCode);
 
-            Assert.AreNotEqual(0, diagnostics.Count);
+            diagnostics.Should().NotBeEmpty();
 
             var fixAllDiagnosticProvider = new FixAllDiagnosticProvider(
                 codeFixProvider.FixableDiagnosticIds.ToImmutableHashSet(),
@@ -508,12 +524,12 @@ namespace SonarAnalyzer.UnitTest
                 CancellationToken.None);
             var codeActionToExecute = fixAllProvider.GetFixAsync(fixAllContext).Result;
 
-            Assert.IsNotNull(codeActionToExecute);
+            codeActionToExecute.Should().NotBeNull();
 
             currentDocument = ApplyCodeFix(currentDocument, codeActionToExecute);
 
             CalculateDiagnosticsAndCode(diagnosticAnalyzer, currentDocument, parseOption, out diagnostics, out actualCode);
-            Assert.AreEqual(File.ReadAllText(pathToExpected), actualCode);
+            actualCode.Should().Be(File.ReadAllText(pathToExpected));
         }
 
         private static void CalculateDiagnosticsAndCode(DiagnosticAnalyzer diagnosticAnalyzer, Document document, ParseOptions parseOption,

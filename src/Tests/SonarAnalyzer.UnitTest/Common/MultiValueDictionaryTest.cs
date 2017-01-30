@@ -18,6 +18,7 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarAnalyzer.Common;
 using System.Collections.Generic;
@@ -35,8 +36,8 @@ namespace SonarAnalyzer.UnitTest.Common
             mvd.Add(5, 42);
             mvd.Add(42, 42);
 
-            Assert.AreEqual(2, mvd.Keys.Count);
-            Assert.AreEqual(2, mvd[5].Count);
+            mvd.Keys.Should().HaveCount(2);
+            mvd[5].Should().HaveCount(2);
         }
 
         [TestMethod]
@@ -47,8 +48,8 @@ namespace SonarAnalyzer.UnitTest.Common
             mvd.Add(5, 42);
             mvd.Add(42, 42);
 
-            Assert.AreEqual(2, mvd.Keys.Count);
-            Assert.AreEqual(1, mvd[5].Count);
+            mvd.Keys.Should().HaveCount(2);
+            mvd[5].Should().HaveCount(1);
         }
 
         [TestMethod]
@@ -57,7 +58,7 @@ namespace SonarAnalyzer.UnitTest.Common
             var mvd = new MultiValueDictionary<int, int>();
             mvd.AddRangeWithKey(5, new [] { 42, 42 });
 
-            Assert.AreEqual(2, mvd[5].Count);
+            mvd[5].Should().HaveCount(2);
         }
     }
 }

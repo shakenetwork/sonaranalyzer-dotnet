@@ -114,9 +114,9 @@ namespace SonarAnalyzer.Integration.UnitTest
         {
             var cpdInfos = GetDeserializedData<CopyPasteTokenInfo>(Path.Combine(OutputFolderName, Rules.CopyPasteTokenAnalyzerBase.CopyPasteTokenFileName));
 
-            Assert.AreEqual(1, cpdInfos.Count);
+            cpdInfos.Should().HaveCount(1);
             var actual = string.Join(" ", cpdInfos[0].TokenInfo.Select(ti => ti.TokenValue));
-            Assert.AreEqual(tokenCpdExpected, actual);
+            actual.Should().Be(tokenCpdExpected);
         }
 
         internal static void CheckTokenReferenceFile(string[] testFileContent, string extension,
@@ -124,29 +124,29 @@ namespace SonarAnalyzer.Integration.UnitTest
         {
             var refInfos = GetDeserializedData<SymbolReferenceInfo>(Path.Combine(OutputFolderName, Rules.SymbolReferenceAnalyzerBase.SymbolReferenceFileName));
 
-            Assert.AreEqual(1, refInfos.Count);
+            refInfos.Should().HaveCount(1);
             var refInfo = refInfos.First();
-            Assert.AreEqual(TestInputPath + extension, refInfo.FilePath);
-            Assert.AreEqual(totalReferenceCount, refInfo.Reference.Count);
+            refInfo.FilePath.Should().Be(TestInputPath + extension);
+            refInfo.Reference.Should().HaveCount(totalReferenceCount);
 
             foreach (var expectedReference in expectedReferences)
             {
                 var declarationPosition = refInfo.Reference[expectedReference.Index].Declaration;
-                Assert.AreEqual(declarationPosition.StartLine, declarationPosition.EndLine);
+                declarationPosition.EndLine.Should().Be(declarationPosition.StartLine);
                 var tokenText = testFileContent[declarationPosition.StartLine - 1].Substring(
                     declarationPosition.StartOffset,
                     declarationPosition.EndOffset - declarationPosition.StartOffset);
 
-                Assert.AreEqual(expectedReference.DeclarationText, tokenText);
+                tokenText.Should().Be(expectedReference.DeclarationText);
 
-                Assert.AreEqual(expectedReference.NumberOfReferences, refInfo.Reference[expectedReference.Index].Reference.Count);
+                refInfo.Reference[expectedReference.Index].Reference.Should().HaveCount(expectedReference.NumberOfReferences);
                 foreach (var reference in refInfo.Reference[expectedReference.Index].Reference)
                 {
-                    Assert.AreEqual(reference.StartLine, reference.EndLine);
+                    reference.EndLine.Should().Be(reference.StartLine);
                     var refText = testFileContent[reference.StartLine - 1].Substring(
                         reference.StartOffset,
                         reference.EndOffset - reference.StartOffset);
-                    Assert.AreEqual(expectedReference.ReferenceText, refText);
+                    refText.Should().Be(expectedReference.ReferenceText);
                 }
             }
         }
@@ -155,21 +155,21 @@ namespace SonarAnalyzer.Integration.UnitTest
         {
             var tokenInfos = GetDeserializedData<TokenTypeInfo>(Path.Combine(OutputFolderName, Rules.TokenTypeAnalyzerBase.TokenTypeFileName));
 
-            Assert.AreEqual(1, tokenInfos.Count);
+            tokenInfos.Should().HaveCount(1);
             var token = tokenInfos.First();
-            Assert.AreEqual(TestInputPath + extension, token.FilePath);
-            Assert.AreEqual(totalTokenCount, token.TokenInfo.Count);
+            token.FilePath.Should().Be(TestInputPath + extension);
+            token.TokenInfo.Should().HaveCount(totalTokenCount);
 
             foreach (var expectedToken in expectedTokens)
             {
-                Assert.AreEqual(expectedToken.Kind, token.TokenInfo[expectedToken.Index].TokenType);
+                token.TokenInfo[expectedToken.Index].TokenType.Should().Be(expectedToken.Kind);
 
                 var tokenPosition = token.TokenInfo[expectedToken.Index].TextRange;
-                Assert.AreEqual(tokenPosition.StartLine, tokenPosition.EndLine);
+                tokenPosition.EndLine.Should().Be(tokenPosition.StartLine);
                 var tokenText = testInputFileLines[tokenPosition.StartLine - 1].Substring(
                     tokenPosition.StartOffset,
                     tokenPosition.EndOffset - tokenPosition.StartOffset);
-                Assert.AreEqual(expectedToken.Text, tokenText);
+                tokenText.Should().Be(expectedToken.Text);
             }
         }
 
@@ -178,18 +178,18 @@ namespace SonarAnalyzer.Integration.UnitTest
         {
             var metrics = GetDeserializedData<MetricsInfo>(Path.Combine(OutputFolderName, Rules.MetricsAnalyzerBase.MetricsFileName));
 
-            Assert.AreEqual(1, metrics.Count);
+            metrics.Should().HaveCount(1);
             var m = metrics.First();
-            Assert.AreEqual($"{TestInputPath}{extension}", m.FilePath);
+            m.FilePath.Should().Be($"{TestInputPath}{extension}");
 
-            Assert.AreEqual(1, m.ClassCount);
+            m.ClassCount.Should().Be(1);
         }
 
         [TestMethod]
         public void Issues_Are_Present()
         {
             var fileIssues = GetDeserializedData<FileIssues>(Path.Combine(OutputFolderName, Program.IssuesFileName));
-            Assert.AreEqual(1, fileIssues.Count);
+            fileIssues.Should().HaveCount(1);
             var issues = fileIssues.First().Issue;
 
             issues.Should().Contain(new FileIssues.Types.Issue
@@ -218,18 +218,18 @@ namespace SonarAnalyzer.Integration.UnitTest
         public void No_UnExpected_Issues()
         {
             var fileIssues = GetDeserializedData<FileIssues>(Path.Combine(OutputFolderName, Program.IssuesFileName));
-            Assert.IsFalse(fileIssues.First().Issue.Any(i => i.Id == "S1116"));
+            fileIssues.First().Issue.Any(i => i.Id == "S1116").Should().BeFalse();
         }
 
         [TestMethod]
         public void Encoding_Reported()
         {
             var encodingInfos = GetDeserializedData<EncodingInfo>(Path.Combine(OutputFolderName, Rules.FileEncodingAnalyzerBase.EncodingFileName));
-            Assert.AreEqual(1, encodingInfos.Count);
+            encodingInfos.Should().HaveCount(1);
             var encodingInfo = encodingInfos.First();
 
-            Assert.AreEqual($"{TestInputPath}{extension}", encodingInfo.FilePath);
-            Assert.AreEqual("utf-8", encodingInfo.Encoding);
+            encodingInfo.FilePath.Should().Be($"{TestInputPath}{extension}");
+            encodingInfo.Encoding.Should().Be("utf-8");
         }
 
         internal static List<TMessage> GetDeserializedData<TMessage>(string filePath)

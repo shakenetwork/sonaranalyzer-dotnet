@@ -24,6 +24,7 @@ using SonarAnalyzer.Helpers;
 using SonarAnalyzer.Runner;
 using System.IO;
 using SonarAnalyzer.Protobuf;
+using FluentAssertions;
 
 namespace SonarAnalyzer.Integration.UnitTest
 {
@@ -51,7 +52,7 @@ namespace SonarAnalyzer.Integration.UnitTest
             });
 
             var fileIssues = EndToEnd_CSharp.GetDeserializedData<FileIssues>(Path.Combine(OutputFolderName, Program.IssuesFileName));
-            Assert.AreEqual(0, fileIssues.Count);
+            fileIssues.Should().BeEmpty();
         }
     }
 }

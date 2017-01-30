@@ -67,7 +67,7 @@ namespace SonarAnalyzer.Integration.UnitTest
             conf.AnalyzerIds.Should().BeEquivalentTo(expectedAnalyzerIds);
 
             var analyzers = conf.GetAnalyzers();
-            Assert.AreEqual(expectedAnalyzerIds.Length, analyzers.Count());
+            analyzers.Should().HaveSameCount(expectedAnalyzerIds);
         }
     }
 }

@@ -42,8 +42,10 @@ namespace SonarAnalyzer.UnitTest.Helpers
         {
             var syntaxTree = CSharpSyntaxTree.ParseText(Source);
             var method = syntaxTree.GetRoot().DescendantNodes().OfType<ClassDeclarationSyntax>().First();
-            method.GetLineNumberToReport().ShouldBeEquivalentTo(3);
-            method.GetLocation().GetLineSpan().StartLinePosition.GetLineNumberToReport().ShouldBeEquivalentTo(3);
+            method.GetLineNumberToReport()
+                .Should().Be(3);
+            method.GetLocation().GetLineSpan().StartLinePosition.GetLineNumberToReport()
+                .Should().Be(3);
         }
     }
 }

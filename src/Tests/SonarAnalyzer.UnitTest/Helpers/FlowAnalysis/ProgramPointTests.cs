@@ -18,6 +18,7 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarAnalyzer.Helpers.FlowAnalysis.Common;
 
@@ -36,8 +37,8 @@ namespace SonarAnalyzer.UnitTest.Helpers
             var pp1 = new ProgramPoint(block, 1);
             var pp2 = new ProgramPoint(block, 1);
 
-            Assert.AreEqual(pp1, pp2);
-            Assert.AreEqual(pp1.GetHashCode(), pp2.GetHashCode());
+            pp2.Should().Be(pp1);
+            pp2.GetHashCode().Should().Be(pp1.GetHashCode());
         }
 
         [TestMethod]
@@ -48,8 +49,8 @@ namespace SonarAnalyzer.UnitTest.Helpers
             var pp1 = new ProgramPoint(block, 1);
             var pp2 = new ProgramPoint(block, 2);
 
-            Assert.AreNotEqual(pp1, pp2);
-            Assert.AreNotEqual(pp1.GetHashCode(), pp2.GetHashCode());
+            pp2.Should().NotBe(pp1);
+            pp2.GetHashCode().Should().NotBe(pp1.GetHashCode());
         }
 
         [TestMethod]
@@ -59,8 +60,8 @@ namespace SonarAnalyzer.UnitTest.Helpers
             var pp1 = new ProgramPoint(new TestBlock(), 1);
             var pp2 = new ProgramPoint(new TestBlock(), 1);
 
-            Assert.AreNotEqual(pp1, pp2);
-            Assert.AreNotEqual(pp1.GetHashCode(), pp2.GetHashCode());
+            pp2.Should().NotBe(pp1);
+            pp2.GetHashCode().Should().NotBe(pp1.GetHashCode());
         }
     }
 }

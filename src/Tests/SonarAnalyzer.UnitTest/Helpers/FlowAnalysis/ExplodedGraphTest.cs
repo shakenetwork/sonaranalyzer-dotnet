@@ -18,18 +18,21 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Linq;
-using Microsoft.CodeAnalysis.CSharp;
-using SonarAnalyzer.Helpers.FlowAnalysis.CSharp;
-using System.Text;
-using SonarAnalyzer.Helpers.FlowAnalysis.Common;
-using System.Collections.Generic;
 using FluentAssertions;
-using LiveVariableAnalysis = SonarAnalyzer.Helpers.FlowAnalysis.CSharp.LiveVariableAnalysis;
+using FluentAssertions.Execution;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using SonarAnalyzer.Helpers.FlowAnalysis.Common;
+using SonarAnalyzer.Helpers.FlowAnalysis.CSharp;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using ExplodedGraph = SonarAnalyzer.Helpers.FlowAnalysis.CSharp.ExplodedGraph;
+using LiveVariableAnalysis = SonarAnalyzer.Helpers.FlowAnalysis.CSharp.LiveVariableAnalysis;
+using TestCategory = Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute;
+using TestClass = Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute;
+using TestMethod = Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute;
 
 namespace SonarAnalyzer.UnitTest.Helpers
 {
@@ -78,30 +81,29 @@ namespace NS
                     numberOfProcessedInstructions++;
                     if (args.Instruction.ToString() == "a = true")
                     {
-                        Assert.IsTrue(args.ProgramState.GetSymbolValue(aSymbol) == SymbolicValue.True);
+                        args.ProgramState.GetSymbolValue(aSymbol).Should().Be(SymbolicValue.True);
                     }
                     if (args.Instruction.ToString() == "b = false")
                     {
-                        Assert.IsTrue(args.ProgramState.GetSymbolValue(bSymbol) == SymbolicValue.False);
+                        args.ProgramState.GetSymbolValue(bSymbol).Should().Be(SymbolicValue.False);
                     }
                     if (args.Instruction.ToString() == "b = !b")
                     {
-                        Assert.IsFalse(args.ProgramState.GetSymbolValue(bSymbol) == SymbolicValue.False);
-                        Assert.IsFalse(args.ProgramState.GetSymbolValue(bSymbol) == SymbolicValue.True);
+                        args.ProgramState.GetSymbolValue(bSymbol).Should().NotBe(SymbolicValue.False);
+                        args.ProgramState.GetSymbolValue(bSymbol).Should().NotBe(SymbolicValue.True);
                     }
                     if (args.Instruction.ToString() == "a = (b)")
                     {
-                        Assert.AreEqual(
-                            args.ProgramState.GetSymbolValue(bSymbol),
-                            args.ProgramState.GetSymbolValue(aSymbol));
+                        args.ProgramState.GetSymbolValue(bSymbol)
+                            .Should().Be(args.ProgramState.GetSymbolValue(aSymbol));
                     }
                 };
 
             explodedGraph.Walk();
 
-            Assert.IsTrue(explorationEnded);
-            Assert.AreEqual(9, numberOfProcessedInstructions);
-            Assert.AreEqual(1, numberOfExitBlockReached);
+            explorationEnded.Should().BeTrue();
+            numberOfProcessedInstructions.Should().Be(9);
+            numberOfExitBlockReached.Should().Be(1);
         }
 
         [TestMethod]
@@ -132,15 +134,16 @@ namespace NS
                     numberOfProcessedInstructions++;
                     if (args.Instruction.ToString() == "outParameter = true")
                     {
-                        Assert.IsTrue(args.ProgramState.GetSymbolValue(outParameterSymbol) == SymbolicValue.True);
+                        args.ProgramState.GetSymbolValue(outParameterSymbol)
+                            .Should().Be(SymbolicValue.True);
                     }
                 };
 
             explodedGraph.Walk();
 
-            Assert.IsTrue(explorationEnded);
-            Assert.AreEqual(2, numberOfProcessedInstructions);
-            Assert.AreEqual(1, numberOfExitBlockReached);
+            explorationEnded.Should().BeTrue();
+            numberOfProcessedInstructions.Should().Be(2);
+            numberOfExitBlockReached.Should().Be(1);
         }
 
         [TestMethod]
@@ -171,9 +174,9 @@ namespace NS
 
             explodedGraph.Walk();
 
-            Assert.IsFalse(explorationEnded);
-            Assert.IsTrue(maxStepCountReached);
-            Assert.AreEqual(0, numberOfExitBlockReached);
+            explorationEnded.Should().BeFalse();
+            maxStepCountReached.Should().BeTrue();
+            numberOfExitBlockReached.Should().Be(0);
         }
 
         [TestMethod]
@@ -207,17 +210,17 @@ namespace NS
                     numberOfProcessedInstructions++;
                     if (args.Instruction.ToString() == "a = false")
                     {
-                        Assert.IsTrue(args.ProgramState.GetSymbolValue(aSymbol) == SymbolicValue.False);
+                        args.ProgramState.GetSymbolValue(aSymbol).Should().Be(SymbolicValue.False);
                     }
                     if (args.Instruction.ToString() == "b = true")
                     {
-                        Assert.Fail("We should never get into this branch");
+                        Execute.Assertion.FailWith("We should never get into this branch");
                     }
                     if (args.Instruction.ToString() == "b = false")
                     {
-                        Assert.IsTrue(args.ProgramState.GetSymbolValue(bSymbol) == SymbolicValue.False);
-                        Assert.IsNull(args.ProgramState.GetSymbolValue(aSymbol),
-                            "a is dead, so there should be no associated value to it.");
+                        args.ProgramState.GetSymbolValue(bSymbol).Should().Be(SymbolicValue.False);
+                        args.ProgramState.GetSymbolValue(aSymbol)
+                            .Should().BeNull("a is dead, so there should be no associated value to it.");
                     }
                     if (args.Instruction.ToString() == "a = b")
                     {
@@ -227,10 +230,10 @@ namespace NS
 
             explodedGraph.Walk();
 
-            Assert.IsTrue(explorationEnded);
-            Assert.AreEqual(8, numberOfProcessedInstructions);
-            Assert.AreEqual(1, numberOfExitBlockReached);
-            Assert.AreEqual(1, numberOfLastInstructionVisits);
+            explorationEnded.Should().BeTrue();
+            numberOfProcessedInstructions.Should().Be(8);
+            numberOfExitBlockReached.Should().Be(1);
+            numberOfLastInstructionVisits.Should().Be(1);
         }
 
         [TestMethod]
@@ -262,18 +265,18 @@ namespace NS
                     numberOfProcessedInstructions++;
                     if (args.Instruction.ToString() == "a = !true")
                     {
-                        Assert.IsTrue(args.ProgramState.GetSymbolValue(aSymbol) == SymbolicValue.False); // Roslyn is clever !true has const value.
+                        args.ProgramState.GetSymbolValue(aSymbol).Should().Be(SymbolicValue.False); // Roslyn is clever !true has const value.
                     }
                     if (args.Instruction.ToString() == "!a")
                     {
-                        Assert.Fail("We should never get into this branch");
+                        Execute.Assertion.FailWith("We should never get into this branch");
                     }
                 };
 
             explodedGraph.Walk();
 
-            Assert.IsTrue(explorationEnded);
-            Assert.AreEqual(1, numberOfExitBlockReached);
+            explorationEnded.Should().BeTrue();
+            numberOfExitBlockReached.Should().Be(1);
         }
 
         [TestMethod]
@@ -318,45 +321,45 @@ namespace NS
                     {
                         branchesVisited++;
 
-                        Assert.IsTrue(args.ProgramState.GetSymbolValue(aSymbol) == SymbolicValue.False); // Roslyn is clever !true has const value.
+                        args.ProgramState.GetSymbolValue(aSymbol).Should().Be(SymbolicValue.False); // Roslyn is clever !true has const value.
                     }
                     if (args.Instruction.ToString() == "b = inParameter")
                     {
                         branchesVisited++;
 
-                        Assert.IsTrue(bSymbol.HasConstraint(BoolConstraint.True, args.ProgramState));
-                        Assert.IsTrue(inParameterSymbol.HasConstraint(BoolConstraint.True, args.ProgramState));
+                        bSymbol.HasConstraint(BoolConstraint.True, args.ProgramState).Should().BeTrue();
+                        inParameterSymbol.HasConstraint(BoolConstraint.True, args.ProgramState).Should().BeTrue();
                     }
                     if (args.Instruction.ToString() == "b = !inParameter")
                     {
                         branchesVisited++;
 
                         // b has value, but not true or false
-                        Assert.IsNotNull(args.ProgramState.GetSymbolValue(bSymbol));
-                        Assert.IsFalse(bSymbol.HasConstraint(BoolConstraint.False, args.ProgramState));
-                        Assert.IsFalse(bSymbol.HasConstraint(BoolConstraint.True, args.ProgramState));
+                        args.ProgramState.GetSymbolValue(bSymbol).Should().NotBeNull();
+                        bSymbol.HasConstraint(BoolConstraint.False, args.ProgramState).Should().BeFalse();
+                        bSymbol.HasConstraint(BoolConstraint.True, args.ProgramState).Should().BeFalse();
 
-                        Assert.IsTrue(inParameterSymbol.HasConstraint(BoolConstraint.False, args.ProgramState));
+                        inParameterSymbol.HasConstraint(BoolConstraint.False, args.ProgramState).Should().BeTrue();
                     }
                     if (args.Instruction.ToString() == "a = b")
                     {
                         branchesVisited++;
 
-                        Assert.IsNull(args.ProgramState.GetSymbolValue(inParameterSymbol)); // not out/ref parameter and LVA says dead
+                        args.ProgramState.GetSymbolValue(inParameterSymbol).Should().BeNull(); // not out/ref parameter and LVA says dead
                         numberOfLastInstructionVisits++;
                     }
                 };
 
             explodedGraph.Walk();
 
-            Assert.IsTrue(explorationEnded);
-            Assert.AreEqual(4 + 1, branchesVisited);
-            Assert.AreEqual(1, numberOfExitBlockReached,
+            explorationEnded.Should().BeTrue();
+            branchesVisited.Should().Be(4 + 1);
+            numberOfExitBlockReached.Should().Be(1,
                 "All variables are dead at the ExitBlock, so whenever we get there, the ExplodedGraph nodes should be the same, " +
                 "and thus should be processed only once.");
-            Assert.AreEqual(2, numberOfLastInstructionVisits);
+            numberOfLastInstructionVisits.Should().Be(2);
 
-            Assert.AreEqual(cfg.Blocks.Count() - 1 /* Exit block */, visitedBlocks.Count);
+            visitedBlocks.Count.Should().Be(cfg.Blocks.Count() - 1 /* Exit block*/);
         }
 
         [TestMethod]
@@ -390,16 +393,16 @@ namespace NS
                     numberOfProcessedInstructions++;
                     if (args.Instruction.ToString() == "a = b")
                     {
-                        Assert.IsTrue(args.ProgramState.GetSymbolValue(aSymbol) == SymbolicValue.False);
+                        args.ProgramState.GetSymbolValue(aSymbol).Should().Be(SymbolicValue.False);
                         numberOfLastInstructionVisits++;
                     }
                 };
 
             explodedGraph.Walk();
 
-            Assert.IsTrue(explorationEnded);
-            Assert.AreEqual(1, numberOfExitBlockReached);
-            Assert.AreEqual(1, numberOfLastInstructionVisits);
+            explorationEnded.Should().BeTrue();
+            numberOfExitBlockReached.Should().Be(1);
+            numberOfLastInstructionVisits.Should().Be(1);
         }
 
         [TestMethod]
@@ -431,9 +434,9 @@ namespace NS
 
             explodedGraph.Walk();
 
-            Assert.IsTrue(explorationEnded);
-            Assert.AreEqual(cfg.Blocks.Count() - 1 /* Exit block */, visitedBlocks.Count);
-            Assert.AreEqual(0, countConditionEvaluated);
+            explorationEnded.Should().BeTrue();
+            visitedBlocks.Count.Should().Be(cfg.Blocks.Count() - 1 /* Exit block */);
+            countConditionEvaluated.Should().Be(0);
         }
 
         [TestMethod]
@@ -475,10 +478,10 @@ namespace NS
 
             explodedGraph.Walk();
 
-            Assert.IsTrue(explorationEnded);
-            Assert.AreEqual(1, numberOfExitBlockReached);
-            Assert.AreEqual(1, numberOfCw1InstructionVisits);
-            Assert.AreEqual(1, numberOfCw2InstructionVisits);
+            explorationEnded.Should().BeTrue();
+            numberOfExitBlockReached.Should().Be(1);
+            numberOfCw1InstructionVisits.Should().Be(1);
+            numberOfCw2InstructionVisits.Should().Be(1);
         }
 
         [TestMethod]
@@ -509,41 +512,41 @@ namespace NS
                     if (args.Instruction.ToString() == "a = true")
                     {
                         branchesVisited++;
-                        Assert.IsTrue(args.ProgramState.GetSymbolValue(aSymbol) == SymbolicValue.True);
+                        args.ProgramState.GetSymbolValue(aSymbol).Should().Be(SymbolicValue.True);
                     }
                     if (args.Instruction.ToString() == "a |= false")
                     {
                         branchesVisited++;
-                        Assert.IsNotNull(args.ProgramState.GetSymbolValue(aSymbol));
-                        Assert.IsFalse(args.ProgramState.GetSymbolValue(aSymbol) == SymbolicValue.False);
-                        Assert.IsFalse(args.ProgramState.GetSymbolValue(aSymbol) == SymbolicValue.True);
+                        args.ProgramState.GetSymbolValue(aSymbol).Should().NotBeNull();
+                        args.ProgramState.GetSymbolValue(aSymbol).Should().NotBe(SymbolicValue.False);
+                        args.ProgramState.GetSymbolValue(aSymbol).Should().NotBe(SymbolicValue.True);
                     }
                     if (args.Instruction.ToString() == "b = 42")
                     {
                         branchesVisited++;
                         sv = args.ProgramState.GetSymbolValue(bSymbol);
-                        Assert.IsNotNull(sv);
+                        sv.Should().NotBeNull();
                     }
                     if (args.Instruction.ToString() == "b++")
                     {
                         branchesVisited++;
                         var svNew = args.ProgramState.GetSymbolValue(bSymbol);
-                        Assert.IsNotNull(svNew);
-                        Assert.AreNotEqual(sv, svNew);
+                        svNew.Should().NotBeNull();
+                        svNew.Should().NotBe(sv);
                     }
                     if (args.Instruction.ToString() == "++b")
                     {
                         branchesVisited++;
                         var svNew = args.ProgramState.GetSymbolValue(bSymbol);
-                        Assert.IsNotNull(svNew);
-                        Assert.AreNotEqual(sv, svNew);
+                        svNew.Should().NotBeNull();
+                        svNew.Should().NotBe(sv);
                     }
                 };
 
             explodedGraph.Walk();
 
-            Assert.AreEqual(11, numberOfProcessedInstructions);
-            Assert.AreEqual(5, branchesVisited);
+            numberOfProcessedInstructions.Should().Be(11);
+            branchesVisited.Should().Be(5);
         }
 
         [TestMethod]
@@ -557,7 +560,7 @@ namespace NS
             var propertySymbol = semanticModel.GetSymbolInfo(
                 method.DescendantNodes().OfType<IdentifierNameSyntax>().First(d => d.Identifier.ToString() == "Property")).Symbol;
 
-            Assert.IsNotNull(propertySymbol);
+            propertySymbol.Should().NotBeNull();
 
             var cfg = ControlFlowGraph.Create(method.Body, semanticModel);
             var lva = LiveVariableAnalysis.Analyze(cfg, methodSymbol, semanticModel);
@@ -577,14 +580,14 @@ namespace NS
                     numberOfProcessedInstructions++;
                     if (args.Instruction.ToString() == "Property")
                     {
-                        Assert.IsNull(args.ProgramState.GetSymbolValue(propertySymbol));
+                        args.ProgramState.GetSymbolValue(propertySymbol).Should().BeNull();
                     }
                 };
 
             explodedGraph.Walk();
 
-            Assert.IsTrue(explorationEnded);
-            Assert.AreEqual(1, numberOfExitBlockReached);
+            explorationEnded.Should().BeTrue();
+            numberOfExitBlockReached.Should().Be(1);
         }
 
         [TestMethod]
@@ -607,13 +610,13 @@ namespace NS
             explodedGraph.ProgramPointVisitCountExceedLimit += (sender, args) =>
             {
                 exceeded++;
-                args.ProgramPoint.Block.Instructions.Where(i => i.ToString() == "i < 1").Should().NotBeEmpty();
+                args.ProgramPoint.Block.Instructions.Should().Contain(i => i.ToString() == "i < 1");
             };
 
             explodedGraph.Walk();
 
-            Assert.IsTrue(explorationEnded);
-            Assert.AreEqual(1, exceeded);
+            explorationEnded.Should().BeTrue();
+            exceeded.Should().Be(1);
         }
 
         [TestMethod]
@@ -676,9 +679,9 @@ namespace TesteAnalyzer
 
             explodedGraph.Walk();
 
-            Assert.IsFalse(explorationEnded);
-            Assert.IsFalse(maxStepCountReached);
-            Assert.IsTrue(maxInternalStateCountReached);
+            explorationEnded.Should().BeFalse();
+            maxStepCountReached.Should().BeFalse();
+            maxInternalStateCountReached.Should().BeTrue();
         }
     }
 }

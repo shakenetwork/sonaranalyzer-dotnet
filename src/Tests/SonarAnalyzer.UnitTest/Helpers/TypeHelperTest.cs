@@ -18,6 +18,7 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+using FluentAssertions;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -69,11 +70,11 @@ namespace SonarAnalyzer.UnitTest.Helpers
             var derived1Type = semanticModel.GetDeclaredSymbol(derivedClassDeclaration1) as INamedTypeSymbol;
             var derived2Type = semanticModel.GetDeclaredSymbol(derivedClassDeclaration2) as INamedTypeSymbol;
 
-            Assert.IsTrue(derived2Type.DerivesOrImplements(interfaceType));
-            Assert.IsFalse(derived1Type.DerivesOrImplements(interfaceType));
+            derived2Type.DerivesOrImplements(interfaceType).Should().BeTrue();
+            derived1Type.DerivesOrImplements(interfaceType).Should().BeFalse();
 
             var baseTypes = new HashSet<KnownType>(new[] { interfaceType, baseType });
-            Assert.IsTrue(derived1Type.DerivesOrImplementsAny(baseTypes));
+            derived1Type.DerivesOrImplementsAny(baseTypes).Should().BeTrue();
         }
 
         [TestMethod]
@@ -87,8 +88,8 @@ namespace SonarAnalyzer.UnitTest.Helpers
 
             var baseType = semanticModel.GetDeclaredSymbol(baseClassDeclaration) as INamedTypeSymbol;
 
-            Assert.IsTrue(baseType.Is(baseKnownType));
-            Assert.IsTrue(baseType.IsAny(baseKnownTypes));
+            baseType.Is(baseKnownType).Should().BeTrue();
+            baseType.IsAny(baseKnownTypes).Should().BeTrue();
         }
     }
 }

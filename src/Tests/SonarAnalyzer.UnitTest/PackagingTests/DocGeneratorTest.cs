@@ -26,6 +26,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text.RegularExpressions;
 using SonarAnalyzer.RuleDescriptors;
+using FluentAssertions;
 
 namespace SonarAnalyzer.UnitTest.PackagingTests
 {
@@ -39,9 +40,9 @@ namespace SonarAnalyzer.UnitTest.PackagingTests
         public void CheckNumberOfCrossReferences()
         {
             var crossReferenceCount = GetNumberOfCrossReferences(AnalyzerLanguage.CSharp);
-            Assert.AreEqual(5, crossReferenceCount);
+            crossReferenceCount.Should().Be(5);
             crossReferenceCount = GetNumberOfCrossReferences(AnalyzerLanguage.VisualBasic);
-            Assert.AreEqual(1, crossReferenceCount);
+            crossReferenceCount.Should().Be(1);
         }
 
         [TestMethod]
@@ -55,7 +56,7 @@ namespace SonarAnalyzer.UnitTest.PackagingTests
             var commonSubUrl = RuleImplementationMeta.HelpLinkPattern.Replace("{1}", string.Empty);
             var crossLinkCount = NumberOfOccurrences(json, string.Format(commonSubUrl, productVersion));
 
-            Assert.AreEqual(crossReferenceCount, crossLinkCount);
+            crossLinkCount.Should().Be(crossReferenceCount);
         }
 
         [TestMethod]
@@ -92,7 +93,7 @@ if (str == null &amp;&amp; str.length() == 0) {
 <p>Other text here; use <a class=""rule-link"" href=""#version=arbitrary-version&ruleId=S2259"">Rule S2259</a> instead.</p>";
 
             // Assert
-            Assert.AreEqual(expected, result.Description);
+            result.Description.Should().Be(expected);
         }
 
         [TestMethod]
@@ -129,7 +130,7 @@ if (str == null &amp;&amp; str.length() == 0) {
 <p>Other text here; use <a class=""rule-link"" href=""#version=arbitrary-version&ruleId=S2259"">Rule S2259</a> instead.</p>";
 
             // Assert
-            Assert.AreEqual(expected, result.Description);
+            result.Description.Should().Be(expected);
         }
 
         private static int GetNumberOfCrossReferences(AnalyzerLanguage language)

@@ -18,6 +18,7 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 
@@ -43,22 +44,15 @@ namespace SonarAnalyzer.UnitTest.PackagingTests
             var vsixDirectoryPath = Path.GetFullPath(Path.Combine(currentDirectory, @"..\..\..\..\SonarAnalyzer.Vsix\", pathEnding));
             var vsixFile = new FileInfo(Path.Combine(vsixDirectoryPath, vsixFileName));
 
-            if (!vsixFile.Exists)
-            {
-                Assert.Fail("VSIX file doesn't exist");
-            }
+            vsixFile.Exists.Should().BeTrue("VSIX file doesn't exist");
 
             const double upperBound = approxFileSize * 1.1;
-            if (vsixFile.Length > upperBound)
-            {
-                Assert.Fail("VSIX file is larger than {0}B, it is {1}B", upperBound, vsixFile.Length);
-            }
+            vsixFile.Length
+                .Should().BeLessThan((long)upperBound, "VSIX file is larger than {0}B, it is {1}B", upperBound, vsixFile.Length);
 
             const double lowerBound = approxFileSize * 0.9;
-            if (vsixFile.Length < lowerBound)
-            {
-                Assert.Fail("VSIX file is smaller than {0}B, it is {1}B", lowerBound, vsixFile.Length);
-            }
+            vsixFile.Length
+                .Should().BeGreaterThan((long)lowerBound, "VSIX file is smaller than {0}B, it is {1}B", lowerBound, vsixFile.Length);
         }
     }
 }

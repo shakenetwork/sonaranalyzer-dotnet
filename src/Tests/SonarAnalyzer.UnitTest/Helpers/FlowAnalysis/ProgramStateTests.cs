@@ -18,7 +18,7 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-using System;
+using FluentAssertions;
 using Microsoft.CodeAnalysis;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarAnalyzer.Helpers.FlowAnalysis.Common;
@@ -57,8 +57,8 @@ namespace SonarAnalyzer.UnitTest.Helpers
             ps2 = ps2.StoreSymbolicValue(symbol, sv);
             ps2 = sv.SetConstraint(constraint, ps2);
 
-            Assert.AreEqual(ps1, ps2);
-            Assert.AreEqual(ps1.GetHashCode(), ps2.GetHashCode());
+            ps2.Should().Be(ps1);
+            ps2.GetHashCode().Should().Be(ps1.GetHashCode());
         }
 
         [TestMethod]
@@ -72,8 +72,8 @@ namespace SonarAnalyzer.UnitTest.Helpers
             ps1 = ps1.StoreSymbolicValue(symbol, new SymbolicValue());
             ps2 = ps2.StoreSymbolicValue(symbol, new SymbolicValue());
 
-            Assert.AreNotEqual(ps1, ps2);
-            Assert.AreNotEqual(ps1.GetHashCode(), ps2.GetHashCode());
+            ps2.Should().NotBe(ps1);
+            ps2.GetHashCode().Should().NotBe(ps1.GetHashCode());
         }
 
         [TestMethod]
@@ -90,8 +90,8 @@ namespace SonarAnalyzer.UnitTest.Helpers
             ps2 = ps2.StoreSymbolicValue(symbol, sv);
             ps2 = sv.SetConstraint(new FakeConstraint(), ps2);
 
-            Assert.AreNotEqual(ps1, ps2);
-            Assert.AreNotEqual(ps1.GetHashCode(), ps2.GetHashCode());
+            ps2.Should().NotBe(ps1);
+            ps2.GetHashCode().Should().NotBe(ps1.GetHashCode());
         }
 
         [TestMethod]
@@ -105,8 +105,8 @@ namespace SonarAnalyzer.UnitTest.Helpers
             ps1 = ps1.StoreSymbolicValue(GetSymbol(), sv);
             ps2 = ps2.StoreSymbolicValue(GetSymbol(), sv);
 
-            Assert.AreNotEqual(ps1, ps2);
-            Assert.AreNotEqual(ps1.GetHashCode(), ps2.GetHashCode());
+            ps2.Should().NotBe(ps1);
+            ps2.GetHashCode().Should().NotBe(ps1.GetHashCode());
         }
 
         [TestMethod]
@@ -120,8 +120,8 @@ namespace SonarAnalyzer.UnitTest.Helpers
 
             ps = ps.StoreSymbolicValue(symbol, sv);
             ps = sv.SetConstraint(constraint, ps);
-            Assert.IsTrue(symbol.HasConstraint(constraint, ps));
-            Assert.IsFalse(symbol.HasConstraint(new FakeConstraint(), ps));
+            symbol.HasConstraint(constraint, ps).Should().BeTrue();
+            symbol.HasConstraint(new FakeConstraint(), ps).Should().BeFalse();
         }
 
         [TestMethod]
@@ -134,18 +134,18 @@ namespace SonarAnalyzer.UnitTest.Helpers
 
             ps = ps.StoreSymbolicValue(symbol, sv);
             ps = sv.SetConstraint(BoolConstraint.True, ps);
-            Assert.IsTrue(symbol.HasConstraint(BoolConstraint.True, ps));
-            Assert.IsTrue(symbol.HasConstraint(ObjectConstraint.NotNull, ps));
+            symbol.HasConstraint(BoolConstraint.True, ps).Should().BeTrue();
+            symbol.HasConstraint(ObjectConstraint.NotNull, ps).Should().BeTrue();
 
             ps = ps.StoreSymbolicValue(symbol, sv);
             ps = sv.SetConstraint(BoolConstraint.False, ps);
-            Assert.IsTrue(symbol.HasConstraint(BoolConstraint.False, ps));
-            Assert.IsTrue(symbol.HasConstraint(ObjectConstraint.NotNull, ps));
+            symbol.HasConstraint(BoolConstraint.False, ps).Should().BeTrue();
+            symbol.HasConstraint(ObjectConstraint.NotNull, ps).Should().BeTrue();
 
             ps = ps.StoreSymbolicValue(symbol, sv);
             ps = sv.SetConstraint(ObjectConstraint.NotNull, ps);
-            Assert.IsFalse(symbol.HasConstraint(BoolConstraint.False, ps));
-            Assert.IsTrue(symbol.HasConstraint(ObjectConstraint.NotNull, ps));
+            symbol.HasConstraint(BoolConstraint.False, ps).Should().BeFalse();
+            symbol.HasConstraint(ObjectConstraint.NotNull, ps).Should().BeTrue();
         }
     }
 }
