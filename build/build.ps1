@@ -60,8 +60,13 @@ if ($env:IS_PULLREQUEST -eq "true") {
         & $env:MSBUILD_PATH  .\build\ChangeVersion.proj
         testExitCode
 
+        #get version number
+        [xml]$versionProps = Get-Content .\build\Version.props
+        $version = $versionProps.Project.PropertyGroup.MainVersion+".$buildversion"
+
+
         #start analysis
-        .\MSBuild.SonarQube.Runner begin /k:sonaranalyzer-csharp-vbnet /n:"SonarAnalyzer for C#" /v:$buildversion `
+        .\MSBuild.SonarQube.Runner begin /k:sonaranalyzer-csharp-vbnet /n:"SonarAnalyzer for C#" /v:$version `
             /d:sonar.host.url=$env:SONAR_HOST_URL `
             /d:sonar.login=$env:SONAR_TOKEN 
         testExitCode
@@ -90,11 +95,7 @@ if ($env:IS_PULLREQUEST -eq "true") {
             & $env:NUGET_PATH pack $file.fullname -NoPackageAnalysis -OutputDirectory $output
             testExitCode
         }
-
-        #get version number
-        [xml]$versionProps = Get-Content .\build\Version.props
-        $version = $versionProps.Project.PropertyGroup.MainVersion+".$buildversion"
-
+        
         #write version to property file
         $s="VERSION=$version"
         Write-Host "$s"
