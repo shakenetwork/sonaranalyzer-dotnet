@@ -66,7 +66,7 @@ if ($env:IS_PULLREQUEST -eq "true") {
 
 
         #start analysis
-        .\MSBuild.SonarQube.Runner begin /k:sonaranalyzer-csharp-vbnet /n:"SonarAnalyzer for C#" /v:$version `
+        .\MSBuild.SonarQube.Runner begin /k:sonaranalyzer-csharp-vbnet /n:"SonarAnalyzer for C#" /v:master `
             /d:sonar.host.url=$env:SONAR_HOST_URL `
             /d:sonar.login=$env:SONAR_TOKEN 
         testExitCode
