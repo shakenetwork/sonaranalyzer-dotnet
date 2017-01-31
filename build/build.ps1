@@ -60,11 +60,22 @@ if ($env:IS_PULLREQUEST -eq "true") {
         & $env:MSBUILD_PATH  .\build\ChangeVersion.proj
         testExitCode
 
+        #start analysis
+        .\MSBuild.SonarQube.Runner begin /k:sonaranalyzer-csharp-vbnet /n:"SonarAnalyzer for C#" /v:$buildversion `
+            /d:sonar.host.url=$env:SONAR_HOST_URL `
+            /d:sonar.login=$env:SONAR_TOKEN 
+        testExitCode
+
         #build
         & $env:NUGET_PATH restore .\SonarAnalyzer.sln
         testExitCode
         & $env:MSBUILD_PATH .\SonarAnalyzer.sln /p:configuration=Release /p:DeployExtension=false /p:ZipPackageCompressionLevel=normal /v:m /p:defineConstants=SignAssembly /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=$env:CERT_PATH
         testExitCode
+
+        #end analysis
+        .\MSBuild.SonarQube.Runner end /d:sonar.login=$env:SONAR_TOKEN
+        testExitCode
+
 
         #Generate the XML descriptor files for the C# plugin
         pushd .\src\SonarAnalyzer.RuleDescriptorGenerator\bin\Release
