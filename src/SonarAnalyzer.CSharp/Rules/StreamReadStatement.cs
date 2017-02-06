@@ -65,7 +65,8 @@ namespace SonarAnalyzer.Rules.CSharp
                         return;
                     }
 
-                    if (method.ContainingType.DerivesOrImplements(KnownType.System_IO_Stream))
+                    if (method.ContainingType.Is(KnownType.System_IO_Stream) ||
+                        method.IsOverride && method.ContainingType.DerivesOrImplements(KnownType.System_IO_Stream))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, expression.GetLocation(), method.Name));
                     }
