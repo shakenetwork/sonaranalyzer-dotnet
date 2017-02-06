@@ -18,7 +18,10 @@ param (
     $language,
     [Parameter(HelpMessage="The key of the rule to add/update, e.g. S1234. If omitted will update all existing rules.", Position=1)]
     [string]
-    $ruleKey
+    $ruleKey,
+    [Parameter(HelpMessage="The name of the rule class.", Position=2)]
+    [string]
+    $className
 )
 
 if ((-Not $env:rule_api_path) -Or (-Not (Test-Path $env:rule_api_path)))
@@ -188,6 +191,23 @@ function CreateStringResources()
     Invoke-Expression "& `"${resgenPath}`" ${rawResourcesPath} ${resourcesPath}"
 }
 
+function GenerateRuleClasses()
+{
+    $ruleTemplateFolder = "${PSScriptRoot}\\rspec-templates"
+    $csharpRulesFolder = "${PSScriptRoot}\\..\\src\\SonarAnalyzer.CSharp\\Rules"
+    $csharpRuleTestsFolder = "${PSScriptRoot}\\..\\src\\Tests\\SonarAnalyzer.UnitTest\\Rules"
+    $csharpRuleTestCasesFolder = "${PSScriptRoot}\\..\\src\\Tests\\SonarAnalyzer.UnitTest\\TestCases"
+
+    (Get-Content "${ruleTemplateFolder}\\CSharpRuleTemplate.cs") -replace '\$DiagnosticClassName\$', $className -replace '\$DiagnosticId\$', $ruleKey | 
+        Set-Content "${csharpRulesFolder}\\${className}.cs"
+
+    (Get-Content "${ruleTemplateFolder}\\CSharpTestTemplate.cs") -replace '\$DiagnosticClassName\$', $className | 
+        Set-Content "${csharpRuleTestsFolder}\\${className}Test.cs"
+
+    (Get-Content "${ruleTemplateFolder}\\CSharpTestCaseTemplate.cs") -replace '\$DiagnosticClassName\$', $className | 
+        Set-Content "${csharpRuleTestCasesFolder}\\${className}.cs"
+}
+
 if ($ruleKey)
 {
     java -jar $env:rule_api_path generate -directory $(GetRspecDownloadPath $language) -language $($ruleapiLanguageMap.Get_Item($language)) -rule $ruleKey
@@ -204,3 +224,8 @@ CopyResources "cs" $csRules $vbRules
 CopyResources "vbnet" $vbRules $csRules
 CreateStringResources "cs" $csRules
 CreateStringResources "vbnet" $vbRules
+
+if ($className -And $ruleKey)
+{
+    GenerateRuleClasses
+}
