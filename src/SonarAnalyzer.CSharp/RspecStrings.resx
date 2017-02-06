@@ -3897,6 +3897,30 @@
   <data name="S3441_Title" xml:space="preserve">
     <value>Redundant property names should be omitted in anonymous classes</value>
   </data>
+  <data name="S3442_Category" xml:space="preserve">
+    <value>Sonar Code Smell</value>
+  </data>
+  <data name="S3442_Description" xml:space="preserve">
+    <value>Since abstract classes can't be instantiated, there's no point in their having public or internal constructors. If there is basic initialization logic that should run when an extending class instance is created, you can by all means put it in a constructor, but make that constructor private or protected.</value>
+  </data>
+  <data name="S3442_IsActivatedByDefault" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="S3442_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S3442_RemediationCost" xml:space="preserve">
+    <value>2min</value>
+  </data>
+  <data name="S3442_Severity" xml:space="preserve">
+    <value>Major</value>
+  </data>
+  <data name="S3442_Tags" xml:space="preserve">
+    <value>confusing</value>
+  </data>
+  <data name="S3442_Title" xml:space="preserve">
+    <value>"abstract" classes should not have "public" constructors</value>
+  </data>
   <data name="S3443_Category" xml:space="preserve">
     <value>Sonar Bug</value>
   </data>
