@@ -18,17 +18,20 @@ namespace Tests.TestCases
                 }
             }
 
-            if (cond1)
+            if (cond1) 
+//          ^^ Secondary [0]
             {
-                if (cond2 || cond3) // Noncompliant
-//              ^^
+                if (cond2 || cond3)
+//              ^^ Noncompliant [0]
                 {
                 }
             }
-            if (cond1)
-                if (cond2 || cond3) // Noncompliant {{Merge this if statement with the enclosing one.}}
+
+            if (cond1) // Secondary [1]
+                if (cond2 || cond3) // Noncompliant [1] {{Merge this if statement with the enclosing one.}}
                 {
                 }
+
             if (cond1)
             {
                 if (cond2 || cond3)
@@ -36,9 +39,9 @@ namespace Tests.TestCases
                 }
                 else
                 {
-
                 }
             }
+
             if (cond1)
             {
                 var x = 5;
