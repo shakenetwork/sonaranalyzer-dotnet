@@ -1,0 +1,43 @@
+{
+"issues":  [
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorDslSpec.cs",
+"region":  {
+"startLine":  29,
+"startColumn":  21,
+"endLine":  29,
+"endColumn":  70
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this constructor to reduce its Cognitive Complexity from 16 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTimingSpec.cs",
+"region":  {
+"startLine":  275,
+"startColumn":  20,
+"endLine":  275,
+"endColumn":  32
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\SupervisorHierarchySpec.cs",
+"region":  {
+"startLine":  241,
+"startColumn":  21,
+"endLine":  241,
+"endColumn":  128
+}
+}
+}
+]
+}

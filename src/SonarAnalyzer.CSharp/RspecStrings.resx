@@ -4449,6 +4449,30 @@
   <data name="S3655_Title" xml:space="preserve">
     <value>Empty nullable value should not be accessed</value>
   </data>
+  <data name="S3776_Category" xml:space="preserve">
+    <value>Sonar Code Smell</value>
+  </data>
+  <data name="S3776_Description" xml:space="preserve">
+    <value>Cognitive Complexity is a measure of how hard the control flow of a method is to understand. Methods with high Cognitive Complexity will be difficult to maintain.</value>
+  </data>
+  <data name="S3776_IsActivatedByDefault" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="S3776_Remediation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="S3776_RemediationCost" xml:space="preserve">
+    <value />
+  </data>
+  <data name="S3776_Severity" xml:space="preserve">
+    <value>Critical</value>
+  </data>
+  <data name="S3776_Tags" xml:space="preserve">
+    <value>brain-overload</value>
+  </data>
+  <data name="S3776_Title" xml:space="preserve">
+    <value>Cognitive Complexity of methods should not be too high</value>
+  </data>
   <data name="S818_Category" xml:space="preserve">
     <value>Sonar Code Smell</value>
   </data>

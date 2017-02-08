@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterReceptionist.cs",
+"region":  {
+"startLine":  146,
+"startColumn":  33,
+"endLine":  146,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this constructor to reduce its Cognitive Complexity from 83 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedPubSubMediator.cs",
+"region":  {
+"startLine":  130,
+"startColumn":  16,
+"endLine":  130,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Internal\\Topics.cs",
+"region":  {
+"startLine":  104,
+"startColumn":  33,
+"endLine":  104,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 176 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManager.cs",
+"region":  {
+"startLine":  378,
+"startColumn":  22,
+"endLine":  378,
+"endColumn":  35
+}
+}
+}
+]
+}

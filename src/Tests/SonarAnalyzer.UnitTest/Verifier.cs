@@ -106,9 +106,13 @@ namespace SonarAnalyzer.UnitTest
                         string issueId;
                         VerifyIssue(expectedIssues, issue => issue.IsPrimary, location, message, out issueId);
 
-                        for (int i = 0; i < diagnostic.AdditionalLocations.Count; i++)
+                        var sortedAdditionalLocations = diagnostic.AdditionalLocations
+                                                                  .OrderBy(x => x.GetLineNumberToReport())
+                                                                  .ThenBy(x => x.GetLineSpan().StartLinePosition.Character)
+                                                                  .ToList();
+                        for (int i = 0; i < sortedAdditionalLocations.Count; i++)
                         {
-                            location = diagnostic.AdditionalLocations[i];
+                            location = sortedAdditionalLocations[i];
                             diagnostic.Properties.TryGetValue(i.ToString(), out message);
 
                             VerifyIssue(expectedIssues, issue => issue.IssueId == issueId && !issue.IsPrimary, location, message, out issueId);
@@ -135,7 +139,7 @@ namespace SonarAnalyzer.UnitTest
 
             if (expectedIssue.Message != null && expectedIssue.Message != message)
             {
-                Execute.Assertion.FailWith($"Message does not match expected on line {lineNumber}");
+                Execute.Assertion.FailWith($"Expected message on line {lineNumber} to be \"{expectedIssue.Message}\", but got \"{message}\".");
             }
 
             var diagnosticStart = location.GetLineSpan().StartLinePosition.Character;
@@ -143,15 +147,13 @@ namespace SonarAnalyzer.UnitTest
             if (expectedIssue.Start.HasValue && expectedIssue.Start != diagnosticStart)
             {
                 Execute.Assertion.FailWith(
-                    $"The start position of the diagnostic ({diagnosticStart}) doesn't match " +
-                    $"the expected value ({expectedIssue.Start}) in line {lineNumber}.");
+                    $"Expected issue on line {lineNumber} to start on column {expectedIssue.Start} but got column {diagnosticStart}.");
             }
 
             if (expectedIssue.Length.HasValue && expectedIssue.Length != location.SourceSpan.Length)
             {
                 Execute.Assertion.FailWith(
-                    $"The length of the diagnostic ({location.SourceSpan.Length}) doesn't match " +
-                    $"the expected value ({expectedIssue.Length}) in line {lineNumber}.");
+                    $"Expected issue on line {lineNumber} to have a length of {expectedIssue.Length} but got a length of {location.SourceSpan.Length}).");
             }
 
             expectedIssues.Remove(expectedIssue);

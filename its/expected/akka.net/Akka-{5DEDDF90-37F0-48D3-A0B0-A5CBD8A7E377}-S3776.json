@@ -1,0 +1,290 @@
+{
+"issues":  [
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorRefProvider.cs",
+"region":  {
+"startLine":  351,
+"startColumn":  34,
+"endLine":  351,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 52 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorSelection.cs",
+"region":  {
+"startLine":  129,
+"startColumn":  30,
+"endLine":  129,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\EmptyLocalActorRef.cs",
+"region":  {
+"startLine":  70,
+"startColumn":  32,
+"endLine":  70,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\Futures.cs",
+"region":  {
+"startLine":  386,
+"startColumn":  30,
+"endLine":  386,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\Inbox.Actor.cs",
+"region":  {
+"startLine":  84,
+"startColumn":  33,
+"endLine":  84,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this constructor to reduce its Cognitive Complexity from 26 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\Scheduler\\DedicatedThreadScheduler.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  16,
+"endLine":  25,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Dispatch\\CachingConfig.cs",
+"region":  {
+"startLine":  98,
+"startColumn":  28,
+"endLine":  98,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 30 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Dispatch\\ConcurrentQueueMailbox.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  22,
+"endLine":  33,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 30 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Dispatch\\GenericMailbox.cs",
+"region":  {
+"startLine":  54,
+"startColumn":  22,
+"endLine":  54,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\IO\\TcpConnection.cs",
+"region":  {
+"startLine":  70,
+"startColumn":  25,
+"endLine":  70,
+"endColumn":  47
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\IO\\TcpConnection.cs",
+"region":  {
+"startLine":  173,
+"startColumn":  25,
+"endLine":  173,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 49 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\IO\\TcpConnection.cs",
+"region":  {
+"startLine":  255,
+"startColumn":  25,
+"endLine":  255,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 46 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\IO\\TcpConnection.cs",
+"region":  {
+"startLine":  371,
+"startColumn":  22,
+"endLine":  371,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\IO\\TcpConnection.cs",
+"region":  {
+"startLine":  454,
+"startColumn":  22,
+"endLine":  454,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\IO\\TcpOutgoingConnection.cs",
+"region":  {
+"startLine":  117,
+"startColumn":  25,
+"endLine":  117,
+"endColumn":  35
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\IO\\UdpConnection.cs",
+"region":  {
+"startLine":  107,
+"startColumn":  25,
+"endLine":  107,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 30 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\IO\\WithUdpSend.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  24,
+"endLine":  32,
+"endColumn":  36
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Pattern\\BackoffSupervisor.cs",
+"region":  {
+"startLine":  92,
+"startColumn":  33,
+"endLine":  92,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Routing\\ConsistentHashRouter.cs",
+"region":  {
+"startLine":  163,
+"startColumn":  32,
+"endLine":  163,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Routing\\Resizer.cs",
+"region":  {
+"startLine":  230,
+"startColumn":  20,
+"endLine":  230,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 40 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\Collections\\ImmutableAvlTreeBase.cs",
+"region":  {
+"startLine":  103,
+"startColumn":  25,
+"endLine":  103,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 33 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\Collections\\ImmutableAvlTreeBase.cs",
+"region":  {
+"startLine":  370,
+"startColumn":  16,
+"endLine":  370,
+"endColumn":  25
+}
+}
+}
+]
+}

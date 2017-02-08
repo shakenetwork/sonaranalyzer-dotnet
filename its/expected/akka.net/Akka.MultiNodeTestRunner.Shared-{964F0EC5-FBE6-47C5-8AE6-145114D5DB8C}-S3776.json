@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\ConsoleMessageSinkActor.cs",
+"region":  {
+"startLine":  39,
+"startColumn":  22,
+"endLine":  39,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\MessageSink.cs",
+"region":  {
+"startLine":  279,
+"startColumn":  21,
+"endLine":  279,
+"endColumn":  26
+}
+}
+}
+]
+}

@@ -39,9 +39,9 @@ namespace SonarAnalyzer.UnitTest.TestFramework
         private const string NO_PRECISE_LOCATION_PATTERN = @"\s*(?<!\^+\s{1})";
         private const string COMMENT_PATTERN = @"(?<comment>\/\/|\')";
 
-        private const string ISSUE_LOCATION_PATTERN = 
+        private const string ISSUE_LOCATION_PATTERN =
             COMMENT_PATTERN + "*" + NO_PRECISE_LOCATION_PATTERN + TYPE_PATTERN + OFFSET_PATTERN + ISSUE_IDS_PATTERN + MESSAGE_PATTERN;
-        private const string PRECISE_ISSUE_LOCATION_PATTERN = 
+        private const string PRECISE_ISSUE_LOCATION_PATTERN =
             @"^" + COMMENT_PATTERN + PRECISE_LOCATION_PATTERN + TYPE_PATTERN + "*" + OFFSET_PATTERN + ISSUE_IDS_PATTERN + MESSAGE_PATTERN + "$";
 
         public IList<IIssueLocation> GetExpectedIssueLocations(IEnumerable<TextLine> lines)
@@ -200,9 +200,10 @@ namespace SonarAnalyzer.UnitTest.TestFramework
         {
             if (preciseLocationsOnSameLine.Skip(1).Any())
             {
-                var message = @"If you want to specify more than one precise location per line you need to omit the Noncompliant comment:
+                var message = @"Expecting only one precise location per line, found "+ preciseLocationsOnSameLine.Count() +
+@" on line " + preciseLocationsOnSameLine.First().LineNumber + @". If you want to specify more than one precise location per line you need to omit the Noncompliant comment:
 internal class MyClass : IInterface1 // there should be no Noncompliant comment
-^^^^^^^ {{Do not create internal classes.}} 
+^^^^^^^ {{Do not create internal classes.}}
                          ^^^^^^^^^^^ @-1 {{IInterface1 IInterface1 is bad for your health.}}";
                 throw new InvalidOperationException(message);
             }

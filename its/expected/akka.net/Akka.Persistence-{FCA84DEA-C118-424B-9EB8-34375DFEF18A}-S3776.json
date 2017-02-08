@@ -1,0 +1,30 @@
+{
+"issues":  [
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSM.cs",
+"region":  {
+"startLine":  38,
+"startColumn":  33,
+"endLine":  38,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3776",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot\\SnapshotStore.cs",
+"region":  {
+"startLine":  30,
+"startColumn":  33,
+"endLine":  30,
+"endColumn":  40
+}
+}
+}
+]
+}
