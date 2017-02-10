@@ -8,6 +8,7 @@ namespace Tests.Diagnostics
     public class Params
     {
         public void method(int i, int k = 5, params int[] rest)
+//                  ^^^^^^ Secondary [0] 
         {
         }
 
@@ -20,14 +21,26 @@ namespace Tests.Diagnostics
         {
             int i = 0, j = 5, rest = 6, l = 7;
             var k = new[] { i, l };
-            method(i, k : rest, rest : k); //Noncompliant
+            method(i, k : rest, rest : k); //Noncompliant [0]
 //          ^^^^^^
+        }
+    }
+
+    public static class Other
+    {
+        public static void call()
+        {
+            var a = "1";
+            var b = "2";
+
+            Comparer.Default.Compare(b, a); // Noncompliant
         }
     }
 
     public static class Extensions
     {
-        public static void Ex(this string self, string v1, string v2)
+        public static void Ex(this string self, string v1, string v2) 
+//                         ^^ Secondary [6]
         {
         }
         public static void Ex(this string self, string v1, string v2, int x)
@@ -41,7 +54,8 @@ namespace Tests.Diagnostics
 
     public partial class ParametersCorrectOrder
     {
-        partial void divide(int divisor, int someOther, int dividend, int p = 10, int some = 5, int other2 = 7);
+        partial void divide(int divisor, int someOther, int dividend, int p = 10, int some = 5, int other2 = 7); 
+//                   ^^^^^^ Secondary [1,2,3,4]
     }
 
     public partial class ParametersCorrectOrder
@@ -51,7 +65,7 @@ namespace Tests.Diagnostics
             var x = a / b;
         }
 
-        public void m(int a, int b)
+        public void m(int a, int b) // Secondary [5]
         {
         }
 
@@ -64,14 +78,14 @@ namespace Tests.Diagnostics
             var other2 = 6;
             var some = 6;
 
-            divide(dividend, 1 + 1, divisor, other2: 6);  // Noncompliant; operation succeeds, but result is unexpected
+            divide(dividend, 1 + 1, divisor, other2: 6);  // Noncompliant [1] operation succeeds, but result is unexpected
 
             divide(divisor, other2, dividend);
-            divide(divisor, other2, dividend, other2: someOther); // Noncompliant {{Parameters to "divide" have the same names but not the same order as the method arguments.}}
+            divide(divisor, other2, dividend, other2: someOther); // Noncompliant [2] {{Parameters to "divide" have the same names but not the same order as the method arguments.}}
 
-            divide(divisor, someOther, dividend, other2: some, some: other2); // Noncompliant;
+            divide(divisor, someOther, dividend, other2: some, some: other2); // Noncompliant [3]
 
-            divide(1, 1, 1, other2: some, some: other2); // Noncompliant;
+            divide(1, 1, 1, other2: some, some: other2); // Noncompliant [4]
             divide(1, 1, 1, other2: 1, some: other2);
 
             int a=5, b=6;
@@ -83,13 +97,13 @@ namespace Tests.Diagnostics
 
             m(a, b);
             m(b, b); // Compliant
-            m(b, a); // Noncompliant
+            m(b, a); // Noncompliant [5]
 
             var v1 = "";
             var v2 = "";
 
             "aaaaa".Ex(v1, v2);
-            "aaaaa".Ex(v2, v1); // Noncompliant
+            "aaaaa".Ex(v2, v1); // Noncompliant [6]
         }
     }
 }

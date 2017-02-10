@@ -18,14 +18,14 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
@@ -113,8 +113,15 @@ namespace SonarAnalyzer.Rules.CSharp
                             ? methodCall.Expression.GetLocation()
                             : memberAccess.Name.GetLocation();
 
+                        var secondaryLocations = methodSymbol.DeclaringSyntaxReferences
+                            .Select(s => s.GetSyntax())
+                            .OfType<MethodDeclarationSyntax>()
+                            .Select(s => s.Identifier.GetLocation())
+                            .ToList();
+
                         c.ReportDiagnostic(Diagnostic.Create(Rule, reportLocation,
-                            methodSymbol.Name));
+                            additionalLocations: secondaryLocations,
+                            messageArgs: methodSymbol.Name));
                     }
                 },
                 SyntaxKind.InvocationExpression);

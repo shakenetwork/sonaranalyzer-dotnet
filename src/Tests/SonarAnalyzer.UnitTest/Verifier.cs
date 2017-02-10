@@ -109,7 +109,7 @@ namespace SonarAnalyzer.UnitTest
                         for (int i = 0; i < diagnostic.AdditionalLocations.Count; i++)
                         {
                             location = diagnostic.AdditionalLocations[i];
-                            message = diagnostic.Properties[i.ToString()];
+                            diagnostic.Properties.TryGetValue(i.ToString(), out message);
 
                             VerifyIssue(expectedIssues, issue => issue.IssueId == issueId && !issue.IsPrimary, location, message, out issueId);
                         }
