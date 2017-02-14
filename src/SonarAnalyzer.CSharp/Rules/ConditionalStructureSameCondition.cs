@@ -18,6 +18,7 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
@@ -34,6 +35,8 @@ namespace SonarAnalyzer.Rules.CSharp
     [Rule(DiagnosticId)]
     public class ConditionalStructureSameCondition : ConditionalStructureSameConditionBase
     {
+        internal const string SecondaryLocationMessageFormat = "This condition is duplicated by the one on line {0}.";
+
         internal static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
@@ -54,10 +57,18 @@ namespace SonarAnalyzer.Rules.CSharp
 
                     if (precedingCondition != null)
                     {
+                        var secondaryLocations = new[] { precedingCondition.GetLocation() };
+                        var properties = new Dictionary<string, string>()
+                        {
+                            { "0", string.Format(SecondaryLocationMessageFormat, currentCondition.GetLineNumberToReport()) }
+                        }.ToImmutableDictionary();
+
                         c.ReportDiagnostic(Diagnostic.Create(
                             Rule,
                             currentCondition.GetLocation(),
-                            precedingCondition.GetLineNumberToReport()));
+                            additionalLocations: secondaryLocations,
+                            properties: properties,
+                            messageArgs: precedingCondition.GetLineNumberToReport()));
                     }
                 },
                 SyntaxKind.IfStatement);
