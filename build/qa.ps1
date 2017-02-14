@@ -73,6 +73,7 @@ Get-ChildItem .\sha1.properties | ForEach-Object {
 
 #checkout commit
 git pull origin $GITHUB_BRANCH
+git fetch --tags --progress git@github.com:$env:GITHUB_REPOSITORY_OWNER_NAME/$env:CI_BUILD_NAME.git +refs/heads/*:refs/remotes/origin/*
 testExitCode
 git checkout -f $sha1
 testExitCode
