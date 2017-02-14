@@ -14,6 +14,21 @@ function testExitCode(){
     unzip -o .\MSBuild.SonarQube.Runner.zip
     testExitCode
 
+function triggerQA(
+    [string] $version)
+{
+    #write version to property file
+    $s="VERSION=$version"
+    Write-Host "$s"
+    $s | out-file -encoding utf8 -append ".\version.properties"
+    #convert sha1 property file to unix for jenkins compatiblity
+    Get-ChildItem .\version.properties | ForEach-Object {
+        $contents = [IO.File]::ReadAllText($_) -replace "`r`n?", "`n"
+        $utf8 = New-Object System.Text.UTF8Encoding $false
+        [IO.File]::WriteAllText($_, $contents, $utf8)
+    }
+}    
+
 if ($env:IS_PULLREQUEST -eq "true") { 
     write-host -f green "in a pull request"
 
@@ -34,6 +49,14 @@ if ($env:IS_PULLREQUEST -eq "true") {
 
     .\MSBuild.SonarQube.Runner end /d:sonar.login=$env:SONAR_TOKEN
     testExitCode
+
+    #generate build version from the build number
+    $buildversion="$env:BUILD_NUMBER"
+    #get version number
+    [xml]$versionProps = Get-Content .\build\Version.props
+    $version = $versionProps.Project.PropertyGroup.MainVersion+".$buildversion"
+        
+    triggerQA -version $version
 
 } else {
     if (($env:GITHUB_BRANCH -eq "master") -or ($env:GITHUB_BRANCH -eq "refs/heads/master")) {
@@ -96,16 +119,7 @@ if ($env:IS_PULLREQUEST -eq "true") {
             testExitCode
         }
         
-        #write version to property file
-        $s="VERSION=$version"
-        Write-Host "$s"
-        $s | out-file -encoding utf8 -append ".\version.properties"
-        #convert sha1 property file to unix for jenkins compatiblity
-        Get-ChildItem .\version.properties | ForEach-Object {
-        $contents = [IO.File]::ReadAllText($_) -replace "`r`n?", "`n"
-        $utf8 = New-Object System.Text.UTF8Encoding $false
-        [IO.File]::WriteAllText($_, $contents, $utf8)
-        }
+        triggerQA -version $version
 
         #upload packages
         $files = Get-ChildItem src -recurse *.nupkg
