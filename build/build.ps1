@@ -58,9 +58,20 @@ function generatePackages()
     }
 }
 
-function uploadToRepox(
+function uploadPackages(
     [string] $version)
 {
+    $files = Get-ChildItem src -recurse *.nupkg
+    foreach ($file in $files) {    
+        #upload to nuget repo 
+        & $env:NUGET_PATH push $file.fullname -Source repox
+        testExitCode
+        #compute artifact name from filename
+        $artifact=$file.name.replace($file.extension,"").replace(".$version","")
+        $filePath=$file.fullname
+        (Get-Content .\build\poms\$artifact\pom.xml) -replace "file-$artifact", "$filePath" | Set-Content .\build\poms\$artifact\pom.xml          
+    }
+
     cd build\poms
     write-host -f green  "set version $version in pom.xml"
     $command = "mvn versions:set -DgenerateBackupPoms=false -DnewVersion='$version'"
@@ -78,6 +89,7 @@ if ($env:IS_PULLREQUEST -eq "true") {
     write-host -f green "in a pull request"
 
     #get version number
+    $buildversion="$env:BUILD_NUMBER"
     [xml]$versionProps = Get-Content .\build\Version.props
     $version = $versionProps.Project.PropertyGroup.MainVersion+".$buildversion"
     
@@ -106,17 +118,8 @@ if ($env:IS_PULLREQUEST -eq "true") {
     #generate packages
     generatePackages
 
-    #upload packages
-    $files = Get-ChildItem src -recurse *.nupkg
-    foreach ($file in $files) {    
-        #compute artifact name from filename
-        $artifact=$file.name.replace($file.extension,"").replace(".$version","")
-        $filePath=$file.fullname
-        write-host -f green "XXX DEBUG: $artifact"
-        (Get-Content .\build\poms\$artifact\pom.xml) -replace "file-$artifact", "$filePath" | Set-Content .\build\poms\$artifact\pom.xml          
-    }
-    #upload to maven repo  
-    uploadToRepox -version $version
+    #upload packages    
+    uploadPackages -version $version
 
 } else {
     if (($env:GITHUB_BRANCH -eq "master") -or ($env:GITHUB_BRANCH -eq "refs/heads/master")) {
@@ -131,6 +134,7 @@ if ($env:IS_PULLREQUEST -eq "true") {
         testExitCode
 
         #get version number
+        $buildversion="$env:BUILD_NUMBER"
         [xml]$versionProps = Get-Content .\build\Version.props
         $version = $versionProps.Project.PropertyGroup.MainVersion+".$buildversion"
 
@@ -155,19 +159,8 @@ if ($env:IS_PULLREQUEST -eq "true") {
         #generate packages
         generatePackages
         
-        #upload packages
-        $files = Get-ChildItem src -recurse *.nupkg
-        foreach ($file in $files) {    
-            #upload to nuget repo 
-            & $env:NUGET_PATH push $file.fullname -Source repox
-            testExitCode
-            #compute artifact name from filename
-            $artifact=$file.name.replace($file.extension,"").replace(".$version","")
-            $filePath=$file.fullname
-            (Get-Content .\build\poms\$artifact\pom.xml) -replace "file-$artifact", "$filePath" | Set-Content .\build\poms\$artifact\pom.xml          
-        }
-        #upload to maven repo  
-        uploadToRepox -version $version      
+        #upload packages        
+        uploadPackages -version $version      
         
     } else {
         write-host -f green "not on master"
