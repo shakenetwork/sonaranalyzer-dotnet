@@ -107,8 +107,8 @@ namespace SonarAnalyzer.Rules.CSharp
             context.ReportDiagnostic(Diagnostic.Create(
                 rule,
                 node.GetLocation(),
-                precedingNode.GetLineNumberToReport(),
-                errorMessageDiscriminator));
+                additionalLocations: new[] { precedingNode.GetLocation() },
+                messageArgs: new object[] { precedingNode.GetLineNumberToReport(), errorMessageDiscriminator }));
         }
     }
 }

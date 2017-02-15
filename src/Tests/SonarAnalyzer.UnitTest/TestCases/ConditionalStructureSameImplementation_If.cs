@@ -18,7 +18,7 @@ namespace Tests.TestCases
         public void Test()
         {
             if (someCondition1)
-            {
+            { // Secondary
                 DoSomething1();
             }
             else
@@ -27,7 +27,8 @@ namespace Tests.TestCases
             }
 
             if (someCondition1)
-            {
+            { // Secondary
+                // Secondary@-1
                 DoSomething1();
             }
             else if (someCondition2)
@@ -44,7 +45,8 @@ namespace Tests.TestCases
             }
 
             if (someCondition1)
-            {
+            { // Secondary
+                // Secondary@-1
                 DoSomething1();
             }
             else if (someCondition2)

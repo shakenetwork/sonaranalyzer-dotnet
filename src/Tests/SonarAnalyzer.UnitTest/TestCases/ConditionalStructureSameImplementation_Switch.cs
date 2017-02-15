@@ -19,7 +19,8 @@ namespace Tests.TestCases
             var i = 5;
             switch (i)
             {
-                case 1:
+                case 1: // Secondary
+                    // Secondary@-1
                     doSomething(prop);
                     break;
                 case 2:
@@ -28,7 +29,7 @@ namespace Tests.TestCases
                 case 3:  // Noncompliant;
                     doSomething(prop);
                     break;
-                case 4:
+                case 4: // Secondary
                     {
                         doSomething2();
 
