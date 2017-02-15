@@ -71,8 +71,12 @@ namespace SonarAnalyzer.Rules.CSharp
                         var membersText = GetIssueMessageText(collidingMembers, c.SemanticModel, interfaceDeclaration.SpanStart);
                         var pluralize = collidingMembers.Count > 1 ? "s" : string.Empty;
 
+                        var secondaryLocations = collidingMembers.SelectMany(x => x.Locations)
+                                                                 .Where(x => x.IsInSource);
+
                         c.ReportDiagnostic(Diagnostic.Create(Rule, interfaceDeclaration.Identifier.GetLocation(),
-                            membersText, pluralize));
+                            additionalLocations: secondaryLocations,
+                            messageArgs: new object[] { membersText, pluralize }));
                     }
                 },
                 SyntaxKind.InterfaceDeclaration);

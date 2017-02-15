@@ -11,6 +11,7 @@ namespace Tests.Diagnostics
     public interface IMyInterface2
     {
         unsafe int Method(int[,] parameter, int* pointer);
+//                 ^^^^^^ Secondary
     }
     public interface IMyInterfaceCommon1 : IMyInterface1, IMyInterface2 // Noncompliant {{Rename or add member "Method(int[*,*], int*)" to this interface to resolve ambiguities.}}
 //                   ^^^^^^^^^^^^^^^^^^^
@@ -37,6 +38,8 @@ namespace Tests.Diagnostics
     public interface IMyInterfaceGeneric3<T>
     {
         unsafe int Method(T[,] parameter, int* pointer);
+//                 ^^^^^^ Secondary
+//                 ^^^^^^ Secondary@-1
     }
 
     public interface IMyInterfaceGeneric4<T>
@@ -64,6 +67,7 @@ namespace Tests.Diagnostics
     public interface IMyInterfaceEvent2
     {
         event EventHandler X;
+//                         ^ Secondary
     }
     public interface IMyInterfaceCommonEvent : IMyInterfaceEvent1, IMyInterfaceEvent2 // Noncompliant
     {
