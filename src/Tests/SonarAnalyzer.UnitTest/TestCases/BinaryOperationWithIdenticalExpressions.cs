@@ -12,24 +12,30 @@ namespace Tests.TestCases
         public void doW() { throw new Exception();}
         public void Test(bool a, bool b)
         {
-            if (a == a) //Noncompliant {{Identical sub-expressions on both sides of operator "==".}}
-//              ^^^^^^
+            if (a == a)
+//                   ^ {{Identical sub-expressions on both sides of operator "==".}}
+//              ^ Secondary@-1
             {
                 doZ();
             }
 
-            if (a == b || (a == /*comment*/ b)) //Noncompliant {{Identical sub-expressions on both sides of operator "||".}}
-//              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            if (a == b || (a == /*comment*/ b))
+//                        ^^^^^^^^^^^^^^^^^^^^ {{Identical sub-expressions on both sides of operator "||".}}
+//              ^^^^^^ Secondary@-1
             {
                 doW();
             }
 
             int j = 5 / 5; //Noncompliant
+            // Secondary@-1
             int k = 5 - 5; //Noncompliant
+            // Secondary@-1
             int l = 5 * 5;
 
             l = 5 | 5; // Noncompliant
+            // Secondary@-1
             l |= (l); // Noncompliant
+            // Secondary@-1
 
             int i = 1 << 1;
             i = 1 << 0x1;

@@ -79,7 +79,9 @@ namespace SonarAnalyzer.Rules.CSharp
         {
             if (EquivalenceChecker.AreEquivalent(left.RemoveParentheses(), right.RemoveParentheses()))
             {
-                context.ReportDiagnostic(Diagnostic.Create(rule, context.Node.GetLocation(), operatorToken));
+                context.ReportDiagnostic(Diagnostic.Create(rule, right.GetLocation(),
+                    additionalLocations: new[] { left.GetLocation() },
+                    messageArgs: operatorToken));
             }
         }
     }
