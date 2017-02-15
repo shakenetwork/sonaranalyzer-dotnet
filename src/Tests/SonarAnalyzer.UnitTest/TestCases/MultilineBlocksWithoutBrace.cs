@@ -13,6 +13,7 @@ namespace Tests.TestCases
         {
             if (a == 1)
                 a++;
+//              ^^^^ Secondary
                 return a; // Noncompliant
 //              ^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -23,13 +24,13 @@ namespace Tests.TestCases
 
             }
             else if (a == 1)
-                a *= 3;
+                a *= 3; // Secondary
 
                 return a; // Noncompliant {{This line will not be executed conditionally; only the first line of this 3-line block will be. The rest will execute unconditionally.}}
 
             while (true)
                 while (true)
-                    a++; /*comment */
+                    a++; /*comment */ // Secondary
     /**/            return a; // Noncompliant
 
 
@@ -40,11 +41,11 @@ namespace Tests.TestCases
         public void Test()
         {
             while (true)
-                Tests();
+                Tests(); // Secondary
                 Tests(); // Noncompliant {{This line will not be executed in a loop; only the first line of this 2-line block will be. The rest will execute only once.}}
 
             while (true)
-Tests();
+Tests(); // Secondary
 Tests(); // Noncompliant
 
             if (true)
@@ -58,22 +59,22 @@ Tests(); // Noncompliant
             Tests();
 
             if (true)
-                Tests();
+                Tests(); // Secondary
 
                 Tests(); // Noncompliant
 
             if (true)
                 Tests();
             else
-                Tests();
+                Tests(); // Secondary
                 Tests(); // Noncompliant
 
             while (true)
-                Tests();
+                Tests(); // Secondary
    /*comment*/  Tests(); // Noncompliant
 
             while (true)
-                Tests();
+                Tests(); // Secondary
             /*comment*/
                 Tests(); // Noncompliant
         }
@@ -124,7 +125,7 @@ Tests(); // Noncompliant
             }
             else
             foreach(var j in new[] { 1 })
-            ;
+            ; // Secondary
 
             if (x)  // Noncompliant, but should report only once
             {

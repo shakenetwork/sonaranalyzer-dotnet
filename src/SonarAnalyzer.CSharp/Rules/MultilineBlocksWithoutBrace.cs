@@ -45,19 +45,19 @@ namespace SonarAnalyzer.Rules.CSharp
         protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c => CheckLoop(c, ((WhileStatementSyntax) c.Node).Statement),
+                c => CheckLoop(c, ((WhileStatementSyntax)c.Node).Statement),
                 SyntaxKind.WhileStatement);
 
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c => CheckLoop(c, ((ForStatementSyntax) c.Node).Statement),
+                c => CheckLoop(c, ((ForStatementSyntax)c.Node).Statement),
                 SyntaxKind.ForStatement);
 
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c => CheckLoop(c, ((ForEachStatementSyntax) c.Node).Statement),
+                c => CheckLoop(c, ((ForEachStatementSyntax)c.Node).Statement),
                 SyntaxKind.ForEachStatement);
 
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c => CheckIf(c, (IfStatementSyntax) c.Node),
+                c => CheckIf(c, (IfStatementSyntax)c.Node),
                 SyntaxKind.IfStatement);
         }
 
@@ -140,8 +140,9 @@ namespace SonarAnalyzer.Rules.CSharp
                 var lineSpan = context.Node.SyntaxTree.GetText().Lines[nextStatementPosition.Line].Span;
                 var location = Location.Create(context.Node.SyntaxTree, TextSpan.FromBounds(nextStatement.SpanStart, lineSpan.End));
 
-                context.ReportDiagnostic(Diagnostic.Create(rule, location, executed, execute,
-                    nextStatementPosition.Line - statementPosition.Line + 1));
+                context.ReportDiagnostic(Diagnostic.Create(rule, location,
+                    additionalLocations: new [] { statement.GetLocation() },
+                    messageArgs: new object[] { executed, execute, nextStatementPosition.Line - statementPosition.Line + 1 }));
             }
         }
 
