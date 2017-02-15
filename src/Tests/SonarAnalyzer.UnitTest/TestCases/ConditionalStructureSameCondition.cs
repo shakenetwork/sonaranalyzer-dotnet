@@ -16,7 +16,7 @@ namespace Tests.TestCases
         {
             var b = true;
             if (b && condition)
-//              ^^^^^^^^^^^^^^ Secondary {{This condition is duplicated by the one on line 23.}}
+//              ^^^^^^^^^^^^^^ Secondary
             {
 
             }
@@ -31,9 +31,9 @@ namespace Tests.TestCases
         {
             var b = true;
             if (b && condition)
-//              ^^^^^^^^^^^^^^ Secondary {{This condition is duplicated by the one on line 40.}}
-//              ^^^^^^^^^^^^^^ Secondary@-1 {{This condition is duplicated by the one on line 45.}}
-//              ^^^^^^^^^^^^^^ Secondary@-2 {{This condition is duplicated by the one on line 54.}}
+//              ^^^^^^^^^^^^^^ Secondary
+//              ^^^^^^^^^^^^^^ Secondary@-1
+//              ^^^^^^^^^^^^^^ Secondary@-2
             {
 
             }
@@ -47,7 +47,7 @@ namespace Tests.TestCases
 
             }
             else if (!b && condition)
-//                   ^^^^^^^^^^^^^^^ Secondary {{This condition is duplicated by the one on line 58.}}
+//                   ^^^^^^^^^^^^^^^ Secondary
             {
 
             }
@@ -61,7 +61,7 @@ namespace Tests.TestCases
             }
 
             if (condition1)
-//              ^^^^^^^^^^ Secondary {{This condition is duplicated by the one on line 67.}}
+//              ^^^^^^^^^^ Secondary
             {
             }
             else if (condition1) // Noncompliant
@@ -72,7 +72,7 @@ namespace Tests.TestCases
             {
             }
             else if (condition1)
-//                   ^^^^^^^^^^ Secondary {{This condition is duplicated by the one on line 78.}}
+//                   ^^^^^^^^^^ Secondary
             {
             }
             else if (condition1) // Noncompliant
@@ -80,7 +80,7 @@ namespace Tests.TestCases
             }
 
             if (condition1)
-//              ^^^^^^^^^^ Secondary {{This condition is duplicated by the one on line 89.}}
+//              ^^^^^^^^^^ Secondary
             {
             }
             else if (condition2)
