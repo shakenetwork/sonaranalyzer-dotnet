@@ -5,13 +5,14 @@ namespace SonarAnalyzer.UnitTest.TestCases
     public class Person
     {
         private static DateTime dateOfBirth;
-        private static int expectedFingers;
+//                              ^^^^^^^^^^^ Secondary [0]
+        private static int expectedFingers; // Secondary [1]
 
         public Person(DateTime birthday)
         {
-            dateOfBirth = birthday;  // Noncompliant {{Remove this assignment of 'dateOfBirth' or initialize it statically.}}
+            dateOfBirth = birthday;  // Noncompliant [0] {{Remove this assignment of 'dateOfBirth' or initialize it statically.}}
 //          ^^^^^^^^^^^^^
-            expectedFingers = 10;  // Noncompliant {{Remove this assignment of 'expectedFingers' or initialize it statically.}}
+            expectedFingers = 10;  // Noncompliant [1] {{Remove this assignment of 'expectedFingers' or initialize it statically.}}
 //          ^^^^^^^^^^^^^^^^^
         }
 

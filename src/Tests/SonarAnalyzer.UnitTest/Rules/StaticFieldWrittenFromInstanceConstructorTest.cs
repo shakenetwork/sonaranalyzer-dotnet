@@ -28,7 +28,7 @@ namespace SonarAnalyzer.UnitTest.Rules
     {
         [TestMethod]
         [TestCategory("Rule")]
-        public void StaticFieldWrittenFromInstanceMember()
+        public void StaticFieldWrittenFromInstanceConstructor()
         {
             Verifier.VerifyAnalyzer(@"TestCases\StaticFieldWrittenFromInstanceConstructor.cs", new StaticFieldWrittenFromInstanceConstructor());
         }

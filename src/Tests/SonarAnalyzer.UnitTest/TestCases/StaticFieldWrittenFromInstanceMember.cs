@@ -7,11 +7,13 @@ namespace Tests.Diagnostics
     class StaticFieldWrittenFromInstanceMember
     {
         private static int count = 0;
+//                         ^^^^^^^^^ Secondary [0]
+//                         ^^^^^^^^^ Secondary@-1 [1]
         private int countInstance = 0;
 
         public void DoSomething()
         {
-            count++;  // Noncompliant {{Make the enclosing instance method "static" or remove this set on the "static" field.}}
+            count++;  // Noncompliant [0] {{Make the enclosing instance method "static" or remove this set on the "static" field.}}
 //          ^^^^^
             var action = new Action(() =>
             {
@@ -31,7 +33,7 @@ namespace Tests.Diagnostics
             get { return myVar; }
             set
             {
-                count++; // Noncompliant
+                count++; // Noncompliant [1]
                 this.count += 42; // Compliant, already reported on this symbol
                 myVar = value;
             }
