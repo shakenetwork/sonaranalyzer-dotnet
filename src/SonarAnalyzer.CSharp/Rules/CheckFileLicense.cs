@@ -37,16 +37,40 @@ namespace SonarAnalyzer.Rules.CSharp
     {
         internal const string DiagnosticId = "S1451";
         internal const string MessageFormat = "Add or update the header of this file.";
+
         internal const string HeaderFormatRuleParameterKey = "headerFormat";
-        internal const string IsRegularExpressionRuleParameterKey = "isRegularExpression";
         internal const string HeaderFormatPropertyKey = nameof(HeaderFormat);
+        internal const string HeaderFormatDefaultValue = @"/*
+ * SonarQube, open source software quality management tool.
+ * Copyright (C) 2008-2013 SonarSource
+ * mailto:contact AT sonarsource DOT com
+ *
+ * SonarQube is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 3 of the License, or (at your option) any later version.
+ *
+ * SonarQube is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */";
+
+        internal const string IsRegularExpressionRuleParameterKey = "isRegularExpression";
         internal const string IsRegularExpressionPropertyKey = nameof(IsRegularExpression);
+        internal const string IsRegularExpressionDefaultValue = "false";
 
-        [RuleParameter(HeaderFormatRuleParameterKey, PropertyType.String, "Expected copyright and license header.")]
-        public string HeaderFormat { get; set; }
+        [RuleParameter(HeaderFormatRuleParameterKey, PropertyType.String, "Expected copyright and license header.",
+            HeaderFormatDefaultValue)]
+        public string HeaderFormat { get; set; } = HeaderFormatDefaultValue;
 
-        [RuleParameter(IsRegularExpressionRuleParameterKey, PropertyType.Boolean, "Whether the headerFormat is a regular expression.", "false")]
-        public bool IsRegularExpression { get; set; } = false;
+        [RuleParameter(IsRegularExpressionRuleParameterKey, PropertyType.Boolean,
+            "Whether the headerFormat is a regular expression.", IsRegularExpressionDefaultValue)]
+        public bool IsRegularExpression { get; set; } = bool.Parse(IsRegularExpressionDefaultValue);
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
@@ -60,11 +84,6 @@ namespace SonarAnalyzer.Rules.CSharp
                 if (HeaderFormat == null)
                 {
                     return;
-                }
-
-                if (string.IsNullOrWhiteSpace(HeaderFormat))
-                {
-                    throw new ArgumentException("Expects a non-empty license header", HeaderFormatRuleParameterKey);
                 }
 
                 if (IsRegularExpression && !IsRegexPatternValid(HeaderFormat))

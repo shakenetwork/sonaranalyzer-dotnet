@@ -24,22 +24,6 @@ if ( a == b || a == b ) // if the first one is true, the second one is too
 int j = 5 / 5; / /always 1
 int k = 5 - 5; // always 0
 </pre>
-<h2>Compliant Solution</h2>
-<pre>
-doZ();
-
-if ( a == b )
-{
-  doX();
-}
-if ( a == b )
-{
-  doW();
-}
-
-int j = 1;
-int k = 0;
-</pre>
 <h2>See</h2>
 <ul>
   <li> <a href="https://www.securecoding.cert.org/confluence/x/NYA5">CERT, MSC12-C.</a> - Detect and remove code that has no effect or is never

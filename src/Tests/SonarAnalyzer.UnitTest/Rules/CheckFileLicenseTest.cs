@@ -201,6 +201,17 @@ namespace SonarAnalyzer.UnitTest.Rules
         }
 
         [TestMethod]
+        [TestCategory("Rule")]
+        public void CheckUnlicensedFileDefaultValues_CodeFix()
+        {
+            Verifier.VerifyCodeFix(
+            @"TestCases\CheckFileLicense_DefaultValues.cs",
+            @"TestCases\CheckFileLicense_DefaultValues.Fixed.cs",
+            new CheckFileLicense(),
+            new CheckFileLicenseCodeFixProvider());
+        }
+
+        [TestMethod]
         [TestCategory("CodeFix")]
         public void CheckUnlicensedFileStartWithUsing_CodeFix()
         {
