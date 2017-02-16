@@ -3,7 +3,8 @@
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"path1\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorPathSpec.cs",
 "region":  {
 "startLine":  173,
@@ -11,12 +12,15 @@
 "endLine":  173,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"path2\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorPathSpec.cs",
 "region":  {
 "startLine":  174,
@@ -24,12 +28,15 @@
 "endLine":  174,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"path1\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorPathSpec.cs",
 "region":  {
 "startLine":  184,
@@ -37,12 +44,15 @@
 "endLine":  184,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"path2\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorPathSpec.cs",
 "region":  {
 "startLine":  185,
@@ -50,12 +60,15 @@
 "endLine":  185,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"actor\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\PropsSpec.cs",
 "region":  {
 "startLine":  104,
@@ -63,7 +76,9 @@
 "endLine":  104,
 "endColumn":  29
 }
-}
+},
+null
+]
 }
 ]
 }

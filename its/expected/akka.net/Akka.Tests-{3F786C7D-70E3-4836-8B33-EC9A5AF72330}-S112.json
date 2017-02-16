@@ -3,7 +3,8 @@
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorDslSpec.cs",
 "region":  {
 "startLine":  131,
@@ -11,12 +12,15 @@
 "endLine":  131,
 "endColumn":  66
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorLifeCycleSpec.cs",
 "region":  {
 "startLine":  197,
@@ -24,12 +28,15 @@
 "endLine":  197,
 "endColumn":  36
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorLifeCycleSpec.cs",
 "region":  {
 "startLine":  248,
@@ -37,12 +44,15 @@
 "endLine":  248,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Cancellation\\CancelableTests.cs",
 "region":  {
 "startLine":  54,
@@ -50,12 +60,15 @@
 "endLine":  54,
 "endColumn":  57
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Cancellation\\CancelableTests.cs",
 "region":  {
 "startLine":  56,
@@ -63,12 +76,15 @@
 "endLine":  56,
 "endColumn":  57
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Cancellation\\CancelableTests.cs",
 "region":  {
 "startLine":  65,
@@ -76,12 +92,15 @@
 "endLine":  65,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Cancellation\\CancelableTests.cs",
 "region":  {
 "startLine":  78,
@@ -89,12 +108,15 @@
 "endLine":  78,
 "endColumn":  57
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Cancellation\\CancelableTests.cs",
 "region":  {
 "startLine":  80,
@@ -102,12 +124,15 @@
 "endLine":  80,
 "endColumn":  57
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Cancellation\\CancelableTests.cs",
 "region":  {
 "startLine":  92,
@@ -115,12 +140,15 @@
 "endLine":  92,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\PipeToSupportSpec.cs",
 "region":  {
 "startLine":  41,
@@ -128,12 +156,15 @@
 "endLine":  41,
 "endColumn":  61
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\PipeToSupportSpec.cs",
 "region":  {
 "startLine":  57,
@@ -141,12 +172,15 @@
 "endLine":  57,
 "endColumn":  61
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ReceiveActorTests_LifeCycle.cs",
 "region":  {
 "startLine":  68,
@@ -154,12 +188,15 @@
 "endLine":  68,
 "endColumn":  78
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ReceiveActorTests_LifeCycle.cs",
 "region":  {
 "startLine":  76,
@@ -167,12 +204,15 @@
 "endLine":  76,
 "endColumn":  78
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Scheduler\\TaskBasedScheduler_ActionScheduler_Schedule_Tests.cs",
 "region":  {
 "startLine":  203,
@@ -180,12 +220,15 @@
 "endLine":  203,
 "endColumn":  120
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Stash\\ActorWithStashSpec.cs",
 "region":  {
 "startLine":  249,
@@ -193,12 +236,15 @@
 "endLine":  249,
 "endColumn":  60
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Stash\\ActorWithStashSpec.cs",
 "region":  {
 "startLine":  274,
@@ -206,12 +252,15 @@
 "endLine":  274,
 "endColumn":  60
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\SupervisorHierarchySpec.cs",
 "region":  {
 "startLine":  58,
@@ -219,12 +268,15 @@
 "endLine":  58,
 "endColumn":  59
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Dispatch\\AsyncAwaitSpec.cs",
 "region":  {
 "startLine":  203,
@@ -232,12 +284,15 @@
 "endLine":  203,
 "endColumn":  32
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Dispatch\\AsyncAwaitSpec.cs",
 "region":  {
 "startLine":  235,
@@ -245,12 +300,15 @@
 "endLine":  235,
 "endColumn":  60
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Dispatch\\AsyncAwaitSpec.cs",
 "region":  {
 "startLine":  381,
@@ -258,12 +316,15 @@
 "endLine":  381,
 "endColumn":  48
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Dispatch\\AsyncAwaitSpec.cs",
 "region":  {
 "startLine":  424,
@@ -271,12 +332,15 @@
 "endLine":  424,
 "endColumn":  36
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\UdpConnectedIntegrationSpec.cs",
 "region":  {
 "startLine":  70,
@@ -284,12 +348,15 @@
 "endLine":  70,
 "endColumn":  36
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\UdpConnectedIntegrationSpec.cs",
 "region":  {
 "startLine":  97,
@@ -297,7 +364,9 @@
 "endLine":  97,
 "endColumn":  36
 }
-}
+},
+null
+]
 }
 ]
 }

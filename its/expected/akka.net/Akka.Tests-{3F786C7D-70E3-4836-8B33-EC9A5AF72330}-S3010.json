@@ -3,7 +3,8 @@
 {
 "id":  "S3010",
 "message":  "Remove this assignment of \u0027_state\u0027 or initialize it statically.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Stash\\ActorWithStashSpec.cs",
 "region":  {
 "startLine":  23,
@@ -11,7 +12,17 @@
 "endLine":  23,
 "endColumn":  21
 }
+},
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Stash\\ActorWithStashSpec.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  33,
+"endLine":  20,
+"endColumn":  39
 }
+}
+]
 }
 ]
 }

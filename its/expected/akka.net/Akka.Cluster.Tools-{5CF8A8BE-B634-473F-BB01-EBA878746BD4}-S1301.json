@@ -3,7 +3,8 @@
 {
 "id":  "S1301",
 "message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterClient.cs",
 "region":  {
 "startLine":  204,
@@ -11,12 +12,15 @@
 "endLine":  204,
 "endColumn":  27
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1301",
 "message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterClient.cs",
 "region":  {
 "startLine":  232,
@@ -24,7 +28,9 @@
 "endLine":  232,
 "endColumn":  27
 }
-}
+},
+null
+]
 }
 ]
 }

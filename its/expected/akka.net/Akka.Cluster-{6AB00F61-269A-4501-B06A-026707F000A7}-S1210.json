@@ -3,7 +3,8 @@
 {
 "id":  "S1210",
 "message":  "When implementing IComparable\u003cT\u003e, you should also override \u003c, \u003e, ==, !=.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Member.cs",
 "region":  {
 "startLine":  25,
@@ -11,12 +12,15 @@
 "endLine":  25,
 "endColumn":  24
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1210",
 "message":  "When implementing IComparable\u003cT\u003e, you should also override \u003c, \u003e.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Member.cs",
 "region":  {
 "startLine":  245,
@@ -24,12 +28,15 @@
 "endLine":  245,
 "endColumn":  31
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1210",
 "message":  "When implementing IComparable\u003cT\u003e, you should also override \u003c, \u003e, ==, !=.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\VectorClock.cs",
 "region":  {
 "startLine":  36,
@@ -37,7 +44,9 @@
 "endLine":  36,
 "endColumn":  26
 }
-}
+},
+null
+]
 }
 ]
 }

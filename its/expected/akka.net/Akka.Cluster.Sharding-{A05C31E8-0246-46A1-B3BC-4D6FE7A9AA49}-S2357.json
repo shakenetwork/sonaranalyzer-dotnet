@@ -3,7 +3,8 @@
 {
 "id":  "S2357",
 "message":  "Make \"MaxNumberOfShards\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterSharding.cs",
 "region":  {
 "startLine":  43,
@@ -11,12 +12,15 @@
 "endLine":  43,
 "endColumn":  46
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Shard\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterSharding.cs",
 "region":  {
 "startLine":  518,
@@ -24,12 +28,15 @@
 "endLine":  518,
 "endColumn":  38
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Ok\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterSharding.cs",
 "region":  {
 "startLine":  519,
@@ -37,12 +44,15 @@
 "endLine":  519,
 "endColumn":  32
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Shard\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterSharding.cs",
 "region":  {
 "startLine":  600,
@@ -50,12 +60,15 @@
 "endLine":  600,
 "endColumn":  38
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Region\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterSharding.cs",
 "region":  {
 "startLine":  601,
@@ -63,12 +76,15 @@
 "endLine":  601,
 "endColumn":  41
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Region\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterSharding.cs",
 "region":  {
 "startLine":  613,
@@ -76,12 +92,15 @@
 "endLine":  613,
 "endColumn":  41
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"ShardRegion\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingGuardian.cs",
 "region":  {
 "startLine":  25,
@@ -89,12 +108,15 @@
 "endLine":  25,
 "endColumn":  50
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"TypeName\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingGuardian.cs",
 "region":  {
 "startLine":  36,
@@ -102,12 +124,15 @@
 "endLine":  36,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"EntityProps\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingGuardian.cs",
 "region":  {
 "startLine":  37,
@@ -115,12 +140,15 @@
 "endLine":  37,
 "endColumn":  46
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Settings\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingGuardian.cs",
 "region":  {
 "startLine":  38,
@@ -128,12 +156,15 @@
 "endLine":  38,
 "endColumn":  61
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"IdExtractor\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingGuardian.cs",
 "region":  {
 "startLine":  39,
@@ -141,12 +172,15 @@
 "endLine":  39,
 "endColumn":  52
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"ShardResolver\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingGuardian.cs",
 "region":  {
 "startLine":  40,
@@ -154,12 +188,15 @@
 "endLine":  40,
 "endColumn":  56
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"AllocationStrategy\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingGuardian.cs",
 "region":  {
 "startLine":  41,
@@ -167,12 +204,15 @@
 "endLine":  41,
 "endColumn":  72
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"HandOffStopMessage\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingGuardian.cs",
 "region":  {
 "startLine":  42,
@@ -180,12 +220,15 @@
 "endLine":  42,
 "endColumn":  54
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"TypeName\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingGuardian.cs",
 "region":  {
 "startLine":  63,
@@ -193,12 +236,15 @@
 "endLine":  63,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Settings\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingGuardian.cs",
 "region":  {
 "startLine":  64,
@@ -206,12 +252,15 @@
 "endLine":  64,
 "endColumn":  61
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"ExtractEntityId\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingGuardian.cs",
 "region":  {
 "startLine":  65,
@@ -219,12 +268,15 @@
 "endLine":  65,
 "endColumn":  56
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"ExtractShardId\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingGuardian.cs",
 "region":  {
 "startLine":  66,
@@ -232,12 +284,15 @@
 "endLine":  66,
 "endColumn":  57
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"CoordinatorFailureBackoff\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingSettings.cs",
 "region":  {
 "startLine":  18,
@@ -245,12 +300,15 @@
 "endLine":  18,
 "endColumn":  59
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"RetryInterval\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingSettings.cs",
 "region":  {
 "startLine":  19,
@@ -258,12 +316,15 @@
 "endLine":  19,
 "endColumn":  47
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"BufferSize\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingSettings.cs",
 "region":  {
 "startLine":  20,
@@ -271,12 +332,15 @@
 "endLine":  20,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"HandOffTimeout\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingSettings.cs",
 "region":  {
 "startLine":  21,
@@ -284,12 +348,15 @@
 "endLine":  21,
 "endColumn":  48
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"ShardStartTimeout\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingSettings.cs",
 "region":  {
 "startLine":  22,
@@ -297,12 +364,15 @@
 "endLine":  22,
 "endColumn":  51
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"ShardFailureBackoff\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingSettings.cs",
 "region":  {
 "startLine":  23,
@@ -310,12 +380,15 @@
 "endLine":  23,
 "endColumn":  53
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"EntityRestartBackoff\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingSettings.cs",
 "region":  {
 "startLine":  24,
@@ -323,12 +396,15 @@
 "endLine":  24,
 "endColumn":  54
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"RebalanceInterval\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingSettings.cs",
 "region":  {
 "startLine":  25,
@@ -336,12 +412,15 @@
 "endLine":  25,
 "endColumn":  51
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"SnapshotAfter\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingSettings.cs",
 "region":  {
 "startLine":  26,
@@ -349,12 +428,15 @@
 "endLine":  26,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"LeastShardAllocationRebalanceThreshold\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingSettings.cs",
 "region":  {
 "startLine":  27,
@@ -362,12 +444,15 @@
 "endLine":  27,
 "endColumn":  67
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"LeastShardAllocationMaxSimultaneousRebalance\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingSettings.cs",
 "region":  {
 "startLine":  28,
@@ -375,12 +460,15 @@
 "endLine":  28,
 "endColumn":  73
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Role\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingSettings.cs",
 "region":  {
 "startLine":  64,
@@ -388,12 +476,15 @@
 "endLine":  64,
 "endColumn":  36
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"RememberEntities\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingSettings.cs",
 "region":  {
 "startLine":  70,
@@ -401,12 +492,15 @@
 "endLine":  70,
 "endColumn":  46
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"JournalPluginId\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingSettings.cs",
 "region":  {
 "startLine":  77,
@@ -414,12 +508,15 @@
 "endLine":  77,
 "endColumn":  47
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"SnapshotPluginId\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingSettings.cs",
 "region":  {
 "startLine":  84,
@@ -427,12 +524,15 @@
 "endLine":  84,
 "endColumn":  48
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"TunningParameters\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingSettings.cs",
 "region":  {
 "startLine":  86,
@@ -440,12 +540,15 @@
 "endLine":  86,
 "endColumn":  60
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"CoordinatorSingletonSettings\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingSettings.cs",
 "region":  {
 "startLine":  88,
@@ -453,12 +556,15 @@
 "endLine":  88,
 "endColumn":  85
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Shards\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
 "region":  {
 "startLine":  39,
@@ -466,12 +572,15 @@
 "endLine":  39,
 "endColumn":  76
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Regions\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
 "region":  {
 "startLine":  44,
@@ -479,12 +588,15 @@
 "endLine":  44,
 "endColumn":  93
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"RegionProxies\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
 "region":  {
 "startLine":  45,
@@ -492,12 +604,15 @@
 "endLine":  45,
 "endColumn":  67
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"UnallocatedShards\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
 "region":  {
 "startLine":  46,
@@ -505,12 +620,15 @@
 "endLine":  46,
 "endColumn":  69
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Cluster\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
 "region":  {
 "startLine":  150,
@@ -518,12 +636,15 @@
 "endLine":  150,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"DownRemovalMargin\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
 "region":  {
 "startLine":  151,
@@ -531,12 +652,15 @@
 "endLine":  151,
 "endColumn":  51
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"TypeName\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
 "region":  {
 "startLine":  152,
@@ -544,12 +668,15 @@
 "endLine":  152,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Settings\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
 "region":  {
 "startLine":  153,
@@ -557,12 +684,15 @@
 "endLine":  153,
 "endColumn":  57
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"AllocationStrategy\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
 "region":  {
 "startLine":  154,
@@ -570,12 +700,15 @@
 "endLine":  154,
 "endColumn":  68
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"ShardRegion\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.Messages.cs",
 "region":  {
 "startLine":  36,
@@ -583,12 +716,15 @@
 "endLine":  36,
 "endColumn":  50
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"ShardRegionProxy\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.Messages.cs",
 "region":  {
 "startLine":  50,
@@ -596,12 +732,15 @@
 "endLine":  50,
 "endColumn":  55
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Coordinator\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.Messages.cs",
 "region":  {
 "startLine":  63,
@@ -609,12 +748,15 @@
 "endLine":  63,
 "endColumn":  50
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Shard\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.Messages.cs",
 "region":  {
 "startLine":  78,
@@ -622,12 +764,15 @@
 "endLine":  78,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Shard\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.Messages.cs",
 "region":  {
 "startLine":  92,
@@ -635,12 +780,15 @@
 "endLine":  92,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Ref\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.Messages.cs",
 "region":  {
 "startLine":  93,
@@ -648,12 +796,15 @@
 "endLine":  93,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Shard\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.Messages.cs",
 "region":  {
 "startLine":  108,
@@ -661,12 +812,15 @@
 "endLine":  108,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Shard\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.Messages.cs",
 "region":  {
 "startLine":  122,
@@ -674,12 +828,15 @@
 "endLine":  122,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Shard\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.Messages.cs",
 "region":  {
 "startLine":  141,
@@ -687,12 +844,15 @@
 "endLine":  141,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Shard\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.Messages.cs",
 "region":  {
 "startLine":  155,
@@ -700,12 +860,15 @@
 "endLine":  155,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Shard\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.Messages.cs",
 "region":  {
 "startLine":  172,
@@ -713,12 +876,15 @@
 "endLine":  172,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Shard\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.Messages.cs",
 "region":  {
 "startLine":  186,
@@ -726,12 +892,15 @@
 "endLine":  186,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Shard\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.Messages.cs",
 "region":  {
 "startLine":  200,
@@ -739,12 +908,15 @@
 "endLine":  200,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"ShardRegion\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.Messages.cs",
 "region":  {
 "startLine":  201,
@@ -752,12 +924,15 @@
 "endLine":  201,
 "endColumn":  50
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"GetShardHomeSender\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.Messages.cs",
 "region":  {
 "startLine":  202,
@@ -765,12 +940,15 @@
 "endLine":  202,
 "endColumn":  57
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Shards\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.Messages.cs",
 "region":  {
 "startLine":  218,
@@ -778,12 +956,15 @@
 "endLine":  218,
 "endColumn":  56
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"ShardRegion\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.Messages.cs",
 "region":  {
 "startLine":  232,
@@ -791,12 +972,15 @@
 "endLine":  232,
 "endColumn":  50
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Region\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.Messages.cs",
 "region":  {
 "startLine":  247,
@@ -804,12 +988,15 @@
 "endLine":  247,
 "endColumn":  45
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"RegionProxy\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.Messages.cs",
 "region":  {
 "startLine":  258,
@@ -817,12 +1004,15 @@
 "endLine":  258,
 "endColumn":  50
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Region\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.Messages.cs",
 "region":  {
 "startLine":  268,
@@ -830,12 +1020,15 @@
 "endLine":  268,
 "endColumn":  45
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"RegionProxy\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.Messages.cs",
 "region":  {
 "startLine":  278,
@@ -843,12 +1036,15 @@
 "endLine":  278,
 "endColumn":  50
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Shard\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.Messages.cs",
 "region":  {
 "startLine":  288,
@@ -856,12 +1052,15 @@
 "endLine":  288,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Region\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.Messages.cs",
 "region":  {
 "startLine":  289,
@@ -869,12 +1068,15 @@
 "endLine":  289,
 "endColumn":  45
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Shard\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.Messages.cs",
 "region":  {
 "startLine":  301,
@@ -882,12 +1084,15 @@
 "endLine":  301,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Payload\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\Shard.cs",
 "region":  {
 "startLine":  35,
@@ -895,12 +1100,15 @@
 "endLine":  35,
 "endColumn":  48
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"EntityId\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\Shard.cs",
 "region":  {
 "startLine":  63,
@@ -908,12 +1116,15 @@
 "endLine":  63,
 "endColumn":  46
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"EntityId\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\Shard.cs",
 "region":  {
 "startLine":  73,
@@ -921,12 +1132,15 @@
 "endLine":  73,
 "endColumn":  46
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"ShardId\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\Shard.cs",
 "region":  {
 "startLine":  116,
@@ -934,12 +1148,15 @@
 "endLine":  116,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"EntityIds\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\Shard.cs",
 "region":  {
 "startLine":  117,
@@ -947,12 +1164,15 @@
 "endLine":  117,
 "endColumn":  47
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"ShardId\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\Shard.cs",
 "region":  {
 "startLine":  139,
@@ -960,12 +1180,15 @@
 "endLine":  139,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"EntityCount\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\Shard.cs",
 "region":  {
 "startLine":  140,
@@ -973,12 +1196,15 @@
 "endLine":  140,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Entries\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\Shard.cs",
 "region":  {
 "startLine":  158,
@@ -986,12 +1212,15 @@
 "endLine":  158,
 "endColumn":  60
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"TypeName\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\Shard.cs",
 "region":  {
 "startLine":  166,
@@ -999,12 +1228,15 @@
 "endLine":  166,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"ShardId\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\Shard.cs",
 "region":  {
 "startLine":  167,
@@ -1012,12 +1244,15 @@
 "endLine":  167,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"EntityProps\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\Shard.cs",
 "region":  {
 "startLine":  168,
@@ -1025,12 +1260,15 @@
 "endLine":  168,
 "endColumn":  48
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Settings\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\Shard.cs",
 "region":  {
 "startLine":  169,
@@ -1038,12 +1276,15 @@
 "endLine":  169,
 "endColumn":  57
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"ExtractEntityId\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\Shard.cs",
 "region":  {
 "startLine":  170,
@@ -1051,12 +1292,15 @@
 "endLine":  170,
 "endColumn":  52
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"ExtractShardId\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\Shard.cs",
 "region":  {
 "startLine":  171,
@@ -1064,12 +1308,15 @@
 "endLine":  171,
 "endColumn":  53
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"HandOffStopMessage\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\Shard.cs",
 "region":  {
 "startLine":  172,
@@ -1077,12 +1324,15 @@
 "endLine":  172,
 "endColumn":  50
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"ShardId\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  90,
@@ -1090,12 +1340,15 @@
 "endLine":  90,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Regions\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  119,
@@ -1103,12 +1356,15 @@
 "endLine":  119,
 "endColumn":  46
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Timeout\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  138,
@@ -1116,12 +1372,15 @@
 "endLine":  138,
 "endColumn":  45
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Regions\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  152,
@@ -1129,12 +1388,15 @@
 "endLine":  152,
 "endColumn":  75
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Stats\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  182,
@@ -1142,12 +1404,15 @@
 "endLine":  182,
 "endColumn":  60
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Shards\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  212,
@@ -1155,12 +1420,15 @@
 "endLine":  212,
 "endColumn":  52
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"ShardId\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  223,
@@ -1168,12 +1436,15 @@
 "endLine":  223,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"EntityIds\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  224,
@@ -1181,12 +1452,15 @@
 "endLine":  224,
 "endColumn":  47
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"ShardId\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  240,
@@ -1194,12 +1468,15 @@
 "endLine":  240,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"TypeName\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  310,
@@ -1207,12 +1484,15 @@
 "endLine":  310,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"EntityProps\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  311,
@@ -1220,12 +1500,15 @@
 "endLine":  311,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Settings\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  312,
@@ -1233,12 +1516,15 @@
 "endLine":  312,
 "endColumn":  57
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"CoordinatorPath\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  313,
@@ -1246,12 +1532,15 @@
 "endLine":  313,
 "endColumn":  47
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"IdExtractor\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  314,
@@ -1259,12 +1548,15 @@
 "endLine":  314,
 "endColumn":  48
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"ShardResolver\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  315,
@@ -1272,12 +1564,15 @@
 "endLine":  315,
 "endColumn":  52
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"HandOffStopMessage\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  316,
@@ -1285,12 +1580,15 @@
 "endLine":  316,
 "endColumn":  50
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Cluster\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  318,
@@ -1298,7 +1596,9 @@
 "endLine":  318,
 "endColumn":  40
 }
-}
+},
+null
+]
 }
 ]
 }

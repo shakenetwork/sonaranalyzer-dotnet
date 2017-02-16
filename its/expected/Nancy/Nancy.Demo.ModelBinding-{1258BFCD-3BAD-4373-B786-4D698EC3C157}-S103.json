@@ -3,7 +3,8 @@
 {
 "id":  "S103",
 "message":  "Split this 227 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Demo.ModelBinding\\MainModule.cs",
 "region":  {
 "startLine":  9,
@@ -11,7 +12,9 @@
 "endLine":  9,
 "endColumn":  228
 }
-}
+},
+null
+]
 }
 ]
 }

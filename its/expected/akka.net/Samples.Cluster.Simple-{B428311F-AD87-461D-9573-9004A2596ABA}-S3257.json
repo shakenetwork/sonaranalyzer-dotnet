@@ -3,7 +3,8 @@
 {
 "id":  "S3257",
 "message":  "Remove the array type; it is redundant.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\Cluster\\Samples.Cluster.Simple\\Program.cs",
 "region":  {
 "startLine":  20,
@@ -11,7 +12,9 @@
 "endLine":  20,
 "endColumn":  50
 }
-}
+},
+null
+]
 }
 ]
 }

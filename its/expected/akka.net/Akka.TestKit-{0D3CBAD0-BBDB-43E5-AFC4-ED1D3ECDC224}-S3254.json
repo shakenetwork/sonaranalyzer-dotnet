@@ -3,7 +3,8 @@
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"timeout\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\EventFilter\\Internal\\EventFilterApplier.cs",
 "region":  {
 "startLine":  44,
@@ -11,12 +12,15 @@
 "endLine":  44,
 "endColumn":  55
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"name\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_ActorOf.cs",
 "region":  {
 "startLine":  25,
@@ -24,12 +28,15 @@
 "endLine":  25,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"name\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_ActorOf.cs",
 "region":  {
 "startLine":  44,
@@ -37,12 +44,15 @@
 "endLine":  44,
 "endColumn":  60
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"name\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_ActorOf.cs",
 "region":  {
 "startLine":  68,
@@ -50,7 +60,9 @@
 "endLine":  68,
 "endColumn":  59
 }
-}
+},
+null
+]
 }
 ]
 }

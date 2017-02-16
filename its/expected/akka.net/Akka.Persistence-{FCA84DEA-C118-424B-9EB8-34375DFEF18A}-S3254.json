@@ -3,7 +3,8 @@
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"message\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Eventsourced.Recovery.cs",
 "region":  {
 "startLine":  147,
@@ -11,12 +12,15 @@
 "endLine":  147,
 "endColumn":  65
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"stopReason\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
 "startLine":  740,
@@ -24,12 +28,15 @@
 "endLine":  740,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"replies\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
 "startLine":  740,
@@ -37,12 +44,15 @@
 "endLine":  740,
 "endColumn":  49
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"stopReason\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
 "startLine":  742,
@@ -50,12 +60,15 @@
 "endLine":  742,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"replies\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
 "startLine":  742,
@@ -63,12 +76,15 @@
 "endLine":  742,
 "endColumn":  45
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"stopReason\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
 "startLine":  755,
@@ -76,12 +92,15 @@
 "endLine":  755,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"replies\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
 "startLine":  755,
@@ -89,12 +108,15 @@
 "endLine":  755,
 "endColumn":  49
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"stopReason\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
 "startLine":  760,
@@ -102,12 +124,15 @@
 "endLine":  760,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"replies\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
 "startLine":  760,
@@ -115,12 +140,15 @@
 "endLine":  760,
 "endColumn":  45
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"stopReason\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
 "startLine":  771,
@@ -128,12 +156,15 @@
 "endLine":  771,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"replies\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
 "startLine":  771,
@@ -141,12 +172,15 @@
 "endLine":  771,
 "endColumn":  45
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"domainEvents\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
 "startLine":  771,
@@ -154,12 +188,15 @@
 "endLine":  771,
 "endColumn":  51
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"redeliverInterval\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistence.cs",
 "region":  {
 "startLine":  289,
@@ -167,12 +204,15 @@
 "endLine":  289,
 "endColumn":  33
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"redeliveryBurstLimit\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistence.cs",
 "region":  {
 "startLine":  289,
@@ -180,12 +220,15 @@
 "endLine":  289,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"unconfirmedAttemptsToWarn\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistence.cs",
 "region":  {
 "startLine":  289,
@@ -193,12 +236,15 @@
 "endLine":  289,
 "endColumn":  45
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"redeliverInterval\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistence.cs",
 "region":  {
 "startLine":  294,
@@ -206,12 +252,15 @@
 "endLine":  294,
 "endColumn":  33
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"redeliverInterval\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistence.cs",
 "region":  {
 "startLine":  299,
@@ -219,12 +268,15 @@
 "endLine":  299,
 "endColumn":  33
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"redeliveryBurstLimit\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistence.cs",
 "region":  {
 "startLine":  299,
@@ -232,7 +284,9 @@
 "endLine":  299,
 "endColumn":  39
 }
-}
+},
+null
+]
 }
 ]
 }

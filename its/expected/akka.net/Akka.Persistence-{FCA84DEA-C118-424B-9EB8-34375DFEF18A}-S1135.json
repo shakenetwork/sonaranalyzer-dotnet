@@ -3,7 +3,8 @@
 {
 "id":  "S1135",
 "message":  "Complete the task associated to this \"TODO\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\PersistentView.Recovery.cs",
 "region":  {
 "startLine":  14,
@@ -11,7 +12,9 @@
 "endLine":  14,
 "endColumn":  11
 }
-}
+},
+null
+]
 }
 ]
 }

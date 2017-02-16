@@ -3,7 +3,8 @@
 {
 "id":  "S2369",
 "message":  "Rename \"IMDBURL\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMDB.vb",
 "region":  {
 "startLine":  77,
@@ -11,12 +12,15 @@
 "endLine":  77,
 "endColumn":  23
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"UseOFDBGenre\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMDB.vb",
 "region":  {
 "startLine":  78,
@@ -24,12 +28,15 @@
 "endLine":  78,
 "endColumn":  28
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"UseOFDBOutline\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMDB.vb",
 "region":  {
 "startLine":  79,
@@ -37,12 +44,15 @@
 "endLine":  79,
 "endColumn":  30
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"UseOFDBPlot\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMDB.vb",
 "region":  {
 "startLine":  80,
@@ -50,12 +60,15 @@
 "endLine":  80,
 "endColumn":  27
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"UseOFDBTitle\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMDB.vb",
 "region":  {
 "startLine":  81,
@@ -63,12 +76,15 @@
 "endLine":  81,
 "endColumn":  28
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"IMDBMovie\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMDB.vb",
 "region":  {
 "startLine":  1007,
@@ -76,12 +92,15 @@
 "endLine":  1007,
 "endColumn":  26
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"IMDBURL\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMPA.vb",
 "region":  {
 "startLine":  33,
@@ -89,12 +108,15 @@
 "endLine":  33,
 "endColumn":  23
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"sType\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMPA.vb",
 "region":  {
 "startLine":  157,
@@ -102,12 +124,15 @@
 "endLine":  157,
 "endColumn":  22
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"IMDBURL\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeMPDB.vb",
 "region":  {
 "startLine":  33,
@@ -115,12 +140,15 @@
 "endLine":  33,
 "endColumn":  23
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"IMDBURL\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeTMDB.vb",
 "region":  {
 "startLine":  29,
@@ -128,12 +156,15 @@
 "endLine":  29,
 "endColumn":  23
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"sType\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeTMDB.vb",
 "region":  {
 "startLine":  233,
@@ -141,12 +172,15 @@
 "endLine":  233,
 "endColumn":  22
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"IMDBURL\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeTrailers.vb",
 "region":  {
 "startLine":  33,
@@ -154,12 +188,15 @@
 "endLine":  33,
 "endColumn":  19
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"IMDBURL\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\dlgIMDBSearchResults.vb",
 "region":  {
 "startLine":  28,
@@ -167,12 +204,15 @@
 "endLine":  28,
 "endColumn":  19
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"pURL\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\dlgIMDBSearchResults.vb",
 "region":  {
 "startLine":  490,
@@ -180,12 +220,15 @@
 "endLine":  490,
 "endColumn":  17
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"IMDBId\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\dlgIMDBSearchResults.vb",
 "region":  {
 "startLine":  491,
@@ -193,12 +236,15 @@
 "endLine":  491,
 "endColumn":  19
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"IMDBId\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\dlgIMDBSearchResults.vb",
 "region":  {
 "startLine":  502,
@@ -206,12 +252,15 @@
 "endLine":  502,
 "endColumn":  19
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"IMDBURL\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\dlgImgSelect.vb",
 "region":  {
 "startLine":  31,
@@ -219,12 +268,15 @@
 "endLine":  31,
 "endColumn":  19
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"IMDBURL\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\dlgTrailer.vb",
 "region":  {
 "startLine":  29,
@@ -232,12 +284,15 @@
 "endLine":  29,
 "endColumn":  19
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"bType\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\dlgTrailer.vb",
 "region":  {
 "startLine":  422,
@@ -245,12 +300,15 @@
 "endLine":  422,
 "endColumn":  18
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"_AssemblyName\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\scraperMovieNativeModule.vb",
 "region":  {
 "startLine":  37,
@@ -258,12 +316,15 @@
 "endLine":  37,
 "endColumn":  32
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"IMDBURL\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\scraperMovieNativeModule.vb",
 "region":  {
 "startLine":  673,
@@ -271,12 +332,15 @@
 "endLine":  673,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"UseOFDBGenre\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\scraperMovieNativeModule.vb",
 "region":  {
 "startLine":  674,
@@ -284,12 +348,15 @@
 "endLine":  674,
 "endColumn":  25
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"UseOFDBOutline\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\scraperMovieNativeModule.vb",
 "region":  {
 "startLine":  675,
@@ -297,12 +364,15 @@
 "endLine":  675,
 "endColumn":  27
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"UseOFDBPlot\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\scraperMovieNativeModule.vb",
 "region":  {
 "startLine":  676,
@@ -310,12 +380,15 @@
 "endLine":  676,
 "endColumn":  24
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"UseOFDBTitle\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\scraperMovieNativeModule.vb",
 "region":  {
 "startLine":  677,
@@ -323,12 +396,15 @@
 "endLine":  677,
 "endColumn":  25
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"UseTMDB\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\scraperMovieNativeModule.vb",
 "region":  {
 "startLine":  679,
@@ -336,12 +412,15 @@
 "endLine":  679,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"UseIMPA\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\scraperMovieNativeModule.vb",
 "region":  {
 "startLine":  680,
@@ -349,12 +428,15 @@
 "endLine":  680,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"UseMPDB\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\scraperMovieNativeModule.vb",
 "region":  {
 "startLine":  681,
@@ -362,12 +444,15 @@
 "endLine":  681,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"UseTMDBTrailer\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\scraperMovieNativeModule.vb",
 "region":  {
 "startLine":  682,
@@ -375,12 +460,15 @@
 "endLine":  682,
 "endColumn":  27
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"UseIMDBTrailer\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\scraperMovieNativeModule.vb",
 "region":  {
 "startLine":  683,
@@ -388,12 +476,15 @@
 "endLine":  683,
 "endColumn":  27
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"UseTMDBTrailerXBMC\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\scraperMovieNativeModule.vb",
 "region":  {
 "startLine":  684,
@@ -401,12 +492,15 @@
 "endLine":  684,
 "endColumn":  31
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"UseTMDBTrailerPref\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\scraperMovieNativeModule.vb",
 "region":  {
 "startLine":  686,
@@ -414,12 +508,15 @@
 "endLine":  686,
 "endColumn":  31
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"tEpisodes\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\TVScraper\\clsScrapeTVDB.vb",
 "region":  {
 "startLine":  35,
@@ -427,12 +524,15 @@
 "endLine":  35,
 "endColumn":  28
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"tmpTVDBShow\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\TVScraper\\clsScrapeTVDB.vb",
 "region":  {
 "startLine":  36,
@@ -440,12 +540,15 @@
 "endLine":  36,
 "endColumn":  30
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"TVDBImages\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\TVScraper\\clsScrapeTVDB.vb",
 "region":  {
 "startLine":  37,
@@ -453,12 +556,15 @@
 "endLine":  37,
 "endColumn":  29
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"pURL\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\TVScraper\\dlgTVDBSearchResults.vb",
 "region":  {
 "startLine":  419,
@@ -466,12 +572,15 @@
 "endLine":  419,
 "endColumn":  17
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"isFanart\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\TVScraper\\dlgTVImageSelect.vb",
 "region":  {
 "startLine":  1200,
@@ -479,12 +588,15 @@
 "endLine":  1200,
 "endColumn":  21
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2369",
 "message":  "Rename \"URL\" to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\TVScraper\\dlgTVImageSelect.vb",
 "region":  {
 "startLine":  1202,
@@ -492,7 +604,9 @@
 "endLine":  1202,
 "endColumn":  16
 }
-}
+},
+null
+]
 }
 ]
 }

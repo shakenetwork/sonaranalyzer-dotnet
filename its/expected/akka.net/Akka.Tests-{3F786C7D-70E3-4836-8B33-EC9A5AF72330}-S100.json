@@ -3,7 +3,8 @@
 {
 "id":  "S100",
 "message":  "Rename property \"fsm\" to match camel case naming rules, consider using \"Fsm\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTimingSpec.cs",
 "region":  {
 "startLine":  24,
@@ -11,12 +12,15 @@
 "endLine":  24,
 "endColumn":  29
 }
-}
+},
+null
+]
 },
 {
 "id":  "S100",
 "message":  "Rename method \"verifyLevel\" to match camel case naming rules, consider using \"VerifyLevel\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Event\\EventStreamSpec.cs",
 "region":  {
 "startLine":  309,
@@ -24,12 +28,15 @@
 "endLine":  309,
 "endColumn":  33
 }
-}
+},
+null
+]
 },
 {
 "id":  "S100",
 "message":  "Rename method \"LLCase\" to match camel case naming rules, consider using \"LlCase\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Util\\Internal\\Collections\\ImmutableAvlTreeTests.cs",
 "region":  {
 "startLine":  32,
@@ -37,12 +44,15 @@
 "endLine":  32,
 "endColumn":  27
 }
-}
+},
+null
+]
 },
 {
 "id":  "S100",
 "message":  "Rename method \"LRCase\" to match camel case naming rules, consider using \"LrCase\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Util\\Internal\\Collections\\ImmutableAvlTreeTests.cs",
 "region":  {
 "startLine":  62,
@@ -50,12 +60,15 @@
 "endLine":  62,
 "endColumn":  27
 }
-}
+},
+null
+]
 },
 {
 "id":  "S100",
 "message":  "Rename method \"RRCase\" to match camel case naming rules, consider using \"RrCase\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Util\\Internal\\Collections\\ImmutableAvlTreeTests.cs",
 "region":  {
 "startLine":  75,
@@ -63,12 +76,15 @@
 "endLine":  75,
 "endColumn":  27
 }
-}
+},
+null
+]
 },
 {
 "id":  "S100",
 "message":  "Rename method \"RLCase\" to match camel case naming rules, consider using \"RlCase\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Util\\Internal\\Collections\\ImmutableAvlTreeTests.cs",
 "region":  {
 "startLine":  88,
@@ -76,7 +92,9 @@
 "endLine":  88,
 "endColumn":  27
 }
-}
+},
+null
+]
 }
 ]
 }

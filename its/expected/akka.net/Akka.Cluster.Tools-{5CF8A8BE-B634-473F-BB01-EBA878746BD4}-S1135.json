@@ -3,7 +3,8 @@
 {
 "id":  "S1135",
 "message":  "Complete the task associated to this \"TODO\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterReceptionist.cs",
 "region":  {
 "startLine":  178,
@@ -11,12 +12,15 @@
 "endLine":  178,
 "endColumn":  27
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1135",
 "message":  "Complete the task associated to this \"TODO\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedPubSubMediator.cs",
 "region":  {
 "startLine":  471,
@@ -24,12 +28,15 @@
 "endLine":  471,
 "endColumn":  23
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1135",
 "message":  "Complete the task associated to this \"TODO\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonProxy.cs",
 "region":  {
 "startLine":  175,
@@ -37,12 +44,15 @@
 "endLine":  175,
 "endColumn":  67
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1135",
 "message":  "Complete the task associated to this \"TODO\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\OldestChangedBuffer.cs",
 "region":  {
 "startLine":  78,
@@ -50,7 +60,9 @@
 "endLine":  78,
 "endColumn":  20
 }
-}
+},
+null
+]
 }
 ]
 }

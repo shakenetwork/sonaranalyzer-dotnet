@@ -3,7 +3,8 @@
 {
 "id":  "S1135",
 "message":  "Complete the task associated to this \"TODO\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteDeploymentDeathWatchSpec.cs",
 "region":  {
 "startLine":  71,
@@ -11,7 +12,9 @@
 "endLine":  71,
 "endColumn":  27
 }
-}
+},
+null
+]
 }
 ]
 }

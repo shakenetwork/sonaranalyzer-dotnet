@@ -3,7 +3,8 @@
 {
 "id":  "S3459",
 "message":  "Remove unassigned field \"_fileIoDispatcher\", or set its value.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
 "region":  {
 "startLine":  690,
@@ -11,7 +12,9 @@
 "endLine":  690,
 "endColumn":  61
 }
-}
+},
+null
+]
 }
 ]
 }

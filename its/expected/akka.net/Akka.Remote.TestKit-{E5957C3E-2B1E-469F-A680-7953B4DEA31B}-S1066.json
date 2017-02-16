@@ -3,7 +3,8 @@
 {
 "id":  "S1066",
 "message":  "Merge this if statement with the enclosing one.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
 "region":  {
 "startLine":  94,
@@ -11,7 +12,17 @@
 "endLine":  94,
 "endColumn":  23
 }
+},
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
+"region":  {
+"startLine":  92,
+"startColumn":  17,
+"endLine":  92,
+"endColumn":  19
 }
+}
+]
 }
 ]
 }

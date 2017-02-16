@@ -3,7 +3,8 @@
 {
 "id":  "S103",
 "message":  "Split this 204 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\ClusterDomainEventPublisherSpec.cs",
 "region":  {
 "startLine":  45,
@@ -11,12 +12,15 @@
 "endLine":  45,
 "endColumn":  205
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 213 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\ClusterDomainEventPublisherSpec.cs",
 "region":  {
 "startLine":  48,
@@ -24,12 +28,15 @@
 "endLine":  48,
 "endColumn":  214
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 212 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\ClusterDomainEventPublisherSpec.cs",
 "region":  {
 "startLine":  124,
@@ -37,12 +44,15 @@
 "endLine":  124,
 "endColumn":  213
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 214 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\ClusterDomainEventPublisherSpec.cs",
 "region":  {
 "startLine":  134,
@@ -50,12 +60,15 @@
 "endLine":  134,
 "endColumn":  215
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 245 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\ClusterDomainEventPublisherSpec.cs",
 "region":  {
 "startLine":  145,
@@ -63,12 +76,15 @@
 "endLine":  145,
 "endColumn":  246
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 207 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\ClusterDomainEventPublisherSpec.cs",
 "region":  {
 "startLine":  161,
@@ -76,12 +92,15 @@
 "endLine":  161,
 "endColumn":  208
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 206 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\ClusterDomainEventPublisherSpec.cs",
 "region":  {
 "startLine":  174,
@@ -89,12 +108,15 @@
 "endLine":  174,
 "endColumn":  207
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 201 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\ClusterDomainEventSpec.cs",
 "region":  {
 "startLine":  135,
@@ -102,7 +124,9 @@
 "endLine":  135,
 "endColumn":  202
 }
-}
+},
+null
+]
 }
 ]
 }

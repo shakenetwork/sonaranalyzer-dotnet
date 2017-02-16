@@ -3,7 +3,8 @@
 {
 "id":  "S1939",
 "message":  "\"IDateTimeOffsetNowTimeProvider\" implements \"ITimeProvider\" so \"ITimeProvider\" can be removed from the inheritance list.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Scheduler\\DateTimeNowTimeProvider.cs",
 "region":  {
 "startLine":  12,
@@ -11,12 +12,15 @@
 "endLine":  12,
 "endColumn":  64
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1939",
 "message":  "\"ICollection\u003cT\u003e\" implements \"IEnumerable\u003cT\u003e\" so \"IEnumerable\u003cT\u003e\" can be removed from the inheritance list.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Util\\ConcurrentSet.cs",
 "region":  {
 "startLine":  15,
@@ -24,12 +28,15 @@
 "endLine":  15,
 "endColumn":  67
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1939",
 "message":  "\"ICollection\u003cT\u003e\" implements \"IEnumerable\" so \"IEnumerable\" can be removed from the inheritance list.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Util\\ConcurrentSet.cs",
 "region":  {
 "startLine":  15,
@@ -37,12 +44,15 @@
 "endLine":  15,
 "endColumn":  80
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1939",
 "message":  "\"IProducerConsumerCollection\u003cT\u003e\" implements \"IEnumerable\u003cT\u003e\" so \"IEnumerable\u003cT\u003e\" can be removed from the inheritance list.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Util\\MonoConcurrentQueue.cs",
 "region":  {
 "startLine":  41,
@@ -50,12 +60,15 @@
 "endLine":  41,
 "endColumn":  89
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1939",
 "message":  "\"IProducerConsumerCollection\u003cT\u003e\" implements \"ICollection\" so \"ICollection\" can be removed from the inheritance list.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Util\\MonoConcurrentQueue.cs",
 "region":  {
 "startLine":  41,
@@ -63,12 +76,15 @@
 "endLine":  41,
 "endColumn":  102
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1939",
 "message":  "\"IProducerConsumerCollection\u003cT\u003e\" implements \"IEnumerable\" so \"IEnumerable\" can be removed from the inheritance list.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Util\\MonoConcurrentQueue.cs",
 "region":  {
 "startLine":  41,
@@ -76,7 +92,9 @@
 "endLine":  42,
 "endColumn":  20
 }
-}
+},
+null
+]
 }
 ]
 }

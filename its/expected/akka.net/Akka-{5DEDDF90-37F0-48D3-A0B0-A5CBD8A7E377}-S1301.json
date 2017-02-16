@@ -3,7 +3,8 @@
 {
 "id":  "S1301",
 "message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Dispatch\\ActorTaskScheduler.cs",
 "region":  {
 "startLine":  120,
@@ -11,12 +12,15 @@
 "endLine":  120,
 "endColumn":  19
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1301",
 "message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\Collections\\ImmutableAvlTreeBase.cs",
 "region":  {
 "startLine":  115,
@@ -24,7 +28,9 @@
 "endLine":  115,
 "endColumn":  11
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S3376",
 "message":  "Make this class name end with \"Exception\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManager.cs",
 "region":  {
 "startLine":  169,
@@ -11,7 +12,9 @@
 "endLine":  169,
 "endColumn":  55
 }
-}
+},
+null
+]
 }
 ]
 }

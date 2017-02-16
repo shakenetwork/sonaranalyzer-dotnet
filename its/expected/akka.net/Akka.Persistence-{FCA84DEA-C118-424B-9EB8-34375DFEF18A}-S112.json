@@ -3,7 +3,8 @@
 {
 "id":  "S112",
 "message":  "\"System.NullReferenceException\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistence.cs",
 "region":  {
 "startLine":  54,
@@ -11,12 +12,15 @@
 "endLine":  54,
 "endColumn":  87
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.NullReferenceException\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistence.cs",
 "region":  {
 "startLine":  61,
@@ -24,7 +28,9 @@
 "endLine":  61,
 "endColumn":  87
 }
-}
+},
+null
+]
 }
 ]
 }

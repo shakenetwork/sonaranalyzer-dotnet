@@ -3,7 +3,8 @@
 {
 "id":  "S1481",
 "message":  "Remove this unused \"b\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorDslSpec.cs",
 "region":  {
 "startLine":  99,
@@ -11,12 +12,15 @@
 "endLine":  99,
 "endColumn":  22
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"bref\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorRefSpec.cs",
 "region":  {
 "startLine":  105,
@@ -24,12 +28,15 @@
 "endLine":  105,
 "endColumn":  25
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"asyncShutdownTask\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorSystemSpec.cs",
 "region":  {
 "startLine":  59,
@@ -37,12 +44,15 @@
 "endLine":  59,
 "endColumn":  34
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"monitor\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\DeathWatchSpec.cs",
 "region":  {
 "startLine":  135,
@@ -50,12 +60,15 @@
 "endLine":  135,
 "endColumn":  28
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"numberOfMessages\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTimingSpec.cs",
 "region":  {
 "startLine":  366,
@@ -63,12 +76,15 @@
 "endLine":  366,
 "endColumn":  49
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"a\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\LocalActorRefProviderSpec.cs",
 "region":  {
 "startLine":  101,
@@ -76,12 +92,15 @@
 "endLine":  101,
 "endColumn":  26
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"b\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\LocalActorRefProviderSpec.cs",
 "region":  {
 "startLine":  102,
@@ -89,12 +108,15 @@
 "endLine":  102,
 "endColumn":  26
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"result\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\PatternSpec.cs",
 "region":  {
 "startLine":  63,
@@ -102,12 +124,15 @@
 "endLine":  63,
 "endColumn":  27
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"actor\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\PropsSpec.cs",
 "region":  {
 "startLine":  40,
@@ -115,12 +140,15 @@
 "endLine":  40,
 "endColumn":  28
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"worker2\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\SupervisorHierarchySpec.cs",
 "region":  {
 "startLine":  111,
@@ -128,12 +156,15 @@
 "endLine":  111,
 "endColumn":  24
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"worker3\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\SupervisorHierarchySpec.cs",
 "region":  {
 "startLine":  112,
@@ -141,12 +172,15 @@
 "endLine":  112,
 "endColumn":  24
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"server\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\UdpIntegrationSpec.cs",
 "region":  {
 "startLine":  56,
@@ -154,12 +188,15 @@
 "endLine":  56,
 "endColumn":  23
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"x\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchHandlerBuilderTests.cs",
 "region":  {
 "startLine":  105,
@@ -167,12 +204,15 @@
 "endLine":  105,
 "endColumn":  50
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"x\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchHandlerBuilderTests.cs",
 "region":  {
 "startLine":  126,
@@ -180,7 +220,9 @@
 "endLine":  126,
 "endColumn":  50
 }
-}
+},
+null
+]
 }
 ]
 }

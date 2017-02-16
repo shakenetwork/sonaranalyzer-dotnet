@@ -3,7 +3,8 @@
 {
 "id":  "S3257",
 "message":  "Remove the array type; it is redundant.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
 "startLine":  128,
@@ -11,12 +12,15 @@
 "endLine":  128,
 "endColumn":  55
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3257",
 "message":  "Remove the array type; it is redundant.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
 "region":  {
 "startLine":  552,
@@ -24,12 +28,15 @@
 "endLine":  552,
 "endColumn":  46
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3257",
 "message":  "Remove the array type; it is redundant.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Response.cs",
 "region":  {
 "startLine":  171,
@@ -37,12 +44,15 @@
 "endLine":  171,
 "endColumn":  53
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3257",
 "message":  "Remove the array type; it is redundant.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  3508,
@@ -50,12 +60,15 @@
 "endLine":  3508,
 "endColumn":  98
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3257",
 "message":  "Remove the array type; it is redundant.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  3512,
@@ -63,12 +76,15 @@
 "endLine":  3512,
 "endColumn":  82
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3257",
 "message":  "Remove the array type; it is redundant.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  3535,
@@ -76,7 +92,9 @@
 "endLine":  3535,
 "endColumn":  98
 }
-}
+},
+null
+]
 }
 ]
 }

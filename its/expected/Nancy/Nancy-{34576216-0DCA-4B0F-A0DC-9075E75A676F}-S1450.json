@@ -3,7 +3,8 @@
 {
 "id":  "S1450",
 "message":  "Remove the \"rootPathProvider\" field and declare it as a local variable in the relevant methods.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\DefaultStaticContentProvider.cs",
 "region":  {
 "startLine":  11,
@@ -11,12 +12,15 @@
 "endLine":  11,
 "endColumn":  60
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"boundaryAsBytes\" field and declare it as a local variable in the relevant methods.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\HttpMultipart.cs",
 "region":  {
 "startLine":  14,
@@ -24,12 +28,15 @@
 "endLine":  14,
 "endColumn":  48
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"closingBoundaryAsBytes\" field and declare it as a local variable in the relevant methods.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\HttpMultipart.cs",
 "region":  {
 "startLine":  17,
@@ -37,12 +44,15 @@
 "endLine":  17,
 "endColumn":  55
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"serializer\" field and declare it as a local variable in the relevant methods.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
 "region":  {
 "startLine":  293,
@@ -50,12 +60,15 @@
 "endLine":  293,
 "endColumn":  34
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"typeResolver\" field and declare it as a local variable in the relevant methods.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
 "region":  {
 "startLine":  294,
@@ -63,12 +76,15 @@
 "endLine":  294,
 "endColumn":  38
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"resourceAssemblyProvider\" field and declare it as a local variable in the relevant methods.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Localization\\ResourceBasedTextResource.cs",
 "region":  {
 "startLine":  14,
@@ -76,12 +92,15 @@
 "endLine":  14,
 "endColumn":  76
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"disableCaches\" field and declare it as a local variable in the relevant methods.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\StaticConfiguration.cs",
 "region":  {
 "startLine":  13,
@@ -89,12 +108,15 @@
 "endLine":  13,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"rootPathProvider\" field and declare it as a local variable in the relevant methods.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\ViewNotFoundException.cs",
 "region":  {
 "startLine":  10,
@@ -102,7 +124,9 @@
 "endLine":  10,
 "endColumn":  60
 }
-}
+},
+null
+]
 }
 ]
 }

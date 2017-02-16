@@ -3,7 +3,8 @@
 {
 "id":  "S1450",
 "message":  "Remove the \"_mediator\" field and declare it as a local variable in the relevant methods.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\PublishSubscribe\\DistributedPubSubMediatorSpec.cs",
 "region":  {
 "startLine":  170,
@@ -11,7 +12,9 @@
 "endLine":  170,
 "endColumn":  49
 }
-}
+},
+null
+]
 }
 ]
 }

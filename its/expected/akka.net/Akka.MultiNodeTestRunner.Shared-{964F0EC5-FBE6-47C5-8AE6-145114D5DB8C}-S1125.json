@@ -3,7 +3,8 @@
 {
 "id":  "S1125",
 "message":  "Remove the unnecessary Boolean literal(s).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\ConsoleMessageSinkActor.cs",
 "region":  {
 "startLine":  54,
@@ -11,12 +12,15 @@
 "endLine":  54,
 "endColumn":  62
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1125",
 "message":  "Remove the unnecessary Boolean literal(s).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\ConsoleMessageSinkActor.cs",
 "region":  {
 "startLine":  59,
@@ -24,7 +28,9 @@
 "endLine":  59,
 "endColumn":  76
 }
-}
+},
+null
+]
 }
 ]
 }

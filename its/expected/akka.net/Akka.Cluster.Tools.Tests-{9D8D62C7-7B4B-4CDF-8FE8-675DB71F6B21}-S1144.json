@@ -3,7 +3,8 @@
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\ClusterClient\\ClusterClientSpec.cs",
 "region":  {
 "startLine":  138,
@@ -11,7 +12,9 @@
 "endLine":  141,
 "endColumn":  10
 }
-}
+},
+null
+]
 }
 ]
 }

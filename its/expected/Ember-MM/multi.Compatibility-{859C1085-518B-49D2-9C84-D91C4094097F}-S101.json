@@ -3,7 +3,8 @@
 {
 "id":  "S101",
 "message":  "Rename this class to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\multi.Compatibility\\frmBoxee.vb",
 "region":  {
 "startLine":  3,
@@ -11,12 +12,15 @@
 "endLine":  3,
 "endColumn":  22
 }
-}
+},
+null
+]
 },
 {
 "id":  "S101",
 "message":  "Rename this class to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\multi.Compatibility\\frmMediaBrowser.vb",
 "region":  {
 "startLine":  23,
@@ -24,12 +28,15 @@
 "endLine":  23,
 "endColumn":  29
 }
-}
+},
+null
+]
 },
 {
 "id":  "S101",
 "message":  "Rename this class to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\multi.Compatibility\\frmYAMJ.vb",
 "region":  {
 "startLine":  23,
@@ -37,12 +44,15 @@
 "endLine":  23,
 "endColumn":  21
 }
-}
+},
+null
+]
 },
 {
 "id":  "S101",
 "message":  "Rename this class to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\multi.Compatibility\\genericBoxee.vb",
 "region":  {
 "startLine":  4,
@@ -50,12 +60,15 @@
 "endLine":  4,
 "endColumn":  26
 }
-}
+},
+null
+]
 },
 {
 "id":  "S101",
 "message":  "Rename this class to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\multi.Compatibility\\genericMediaBrowser.vb",
 "region":  {
 "startLine":  6,
@@ -63,12 +76,15 @@
 "endLine":  6,
 "endColumn":  33
 }
-}
+},
+null
+]
 },
 {
 "id":  "S101",
 "message":  "Rename this class to match the regular expression: \"^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\multi.Compatibility\\genericYAMJ.vb",
 "region":  {
 "startLine":  4,
@@ -76,7 +92,9 @@
 "endLine":  4,
 "endColumn":  25
 }
-}
+},
+null
+]
 }
 ]
 }

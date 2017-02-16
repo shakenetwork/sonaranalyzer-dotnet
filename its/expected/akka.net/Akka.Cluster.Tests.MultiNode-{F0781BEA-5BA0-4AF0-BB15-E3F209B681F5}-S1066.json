@@ -3,7 +3,8 @@
 {
 "id":  "S1066",
 "message":  "Merge this if statement with the enclosing one.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\LeaderLeavingSpec.cs",
 "region":  {
 "startLine":  149,
@@ -11,7 +12,17 @@
 "endLine":  149,
 "endColumn":  23
 }
+},
+{
+"uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\LeaderLeavingSpec.cs",
+"region":  {
+"startLine":  147,
+"startColumn":  17,
+"endLine":  147,
+"endColumn":  19
 }
+}
+]
 }
 ]
 }

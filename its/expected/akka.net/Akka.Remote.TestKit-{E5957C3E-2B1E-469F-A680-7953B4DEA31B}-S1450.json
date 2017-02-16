@@ -3,7 +3,8 @@
 {
 "id":  "S1450",
 "message":  "Remove the \"_log\" field and declare it as a local variable in the relevant methods.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\MultiNodeSpec.cs",
 "region":  {
 "startLine":  380,
@@ -11,12 +12,15 @@
 "endLine":  380,
 "endColumn":  38
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"_handler\" field and declare it as a local variable in the relevant methods.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
 "region":  {
 "startLine":  291,
@@ -24,7 +28,9 @@
 "endLine":  291,
 "endColumn":  40
 }
-}
+},
+null
+]
 }
 ]
 }

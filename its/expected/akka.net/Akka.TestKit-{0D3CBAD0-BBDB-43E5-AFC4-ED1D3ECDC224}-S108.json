@@ -3,7 +3,8 @@
 {
 "id":  "S108",
 "message":  "Either remove or fill this block of code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\EventFilter\\TestEventListener.cs",
 "region":  {
 "startLine":  129,
@@ -11,7 +12,9 @@
 "endLine":  130,
 "endColumn":  18
 }
-}
+},
+null
+]
 }
 ]
 }

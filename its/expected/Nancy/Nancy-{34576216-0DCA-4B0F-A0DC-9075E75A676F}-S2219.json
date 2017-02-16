@@ -3,7 +3,8 @@
 {
 "id":  "S2219",
 "message":  "Use the \"is\" operator instead.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Diagnostics\\Modules\\InfoModule.cs",
 "region":  {
 "startLine":  43,
@@ -11,12 +12,15 @@
 "endLine":  43,
 "endColumn":  116
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2219",
 "message":  "Use the \"IsInstanceOfType()\" method instead.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\DynamicDictionaryValue.cs",
 "region":  {
 "startLine":  297,
@@ -24,12 +28,15 @@
 "endLine":  297,
 "endColumn":  69
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2219",
 "message":  "Use the \"is\" operator instead.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Security\\CsrfToken.cs",
 "region":  {
 "startLine":  53,
@@ -37,7 +44,9 @@
 "endLine":  53,
 "endColumn":  51
 }
-}
+},
+null
+]
 }
 ]
 }

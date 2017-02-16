@@ -3,7 +3,8 @@
 {
 "id":  "S2357",
 "message":  "Make \"ShardId\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\Cluster\\ClusterSharding\\ClusterSharding.Node\\Printer.cs",
 "region":  {
 "startLine":  38,
@@ -11,12 +12,15 @@
 "endLine":  38,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"EntityId\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\Cluster\\ClusterSharding\\ClusterSharding.Node\\Printer.cs",
 "region":  {
 "startLine":  39,
@@ -24,12 +28,15 @@
 "endLine":  39,
 "endColumn":  41
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Message\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\Cluster\\ClusterSharding\\ClusterSharding.Node\\Printer.cs",
 "region":  {
 "startLine":  40,
@@ -37,7 +44,9 @@
 "endLine":  40,
 "endColumn":  43
 }
-}
+},
+null
+]
 }
 ]
 }

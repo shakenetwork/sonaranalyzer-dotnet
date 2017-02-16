@@ -3,7 +3,8 @@
 {
 "id":  "S3240",
 "message":  "Use the \"?:\" operator here.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
 "startLine":  681,
@@ -11,7 +12,9 @@
 "endLine":  681,
 "endColumn":  19
 }
-}
+},
+null
+]
 }
 ]
 }

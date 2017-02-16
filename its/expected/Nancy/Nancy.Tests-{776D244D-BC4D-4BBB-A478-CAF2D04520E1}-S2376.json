@@ -3,7 +3,8 @@
 {
 "id":  "S2376",
 "message":  "Provide a getter for \"UnbindableWriteOnlyProperty\" or replace the property with a \"SetUnbindableWriteOnlyProperty\" method.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
 "region":  {
 "startLine":  236,
@@ -11,7 +12,9 @@
 "endLine":  236,
 "endColumn":  54
 }
-}
+},
+null
+]
 }
 ]
 }

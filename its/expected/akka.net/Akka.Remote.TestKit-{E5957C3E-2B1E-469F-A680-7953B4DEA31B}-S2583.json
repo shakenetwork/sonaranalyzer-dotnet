@@ -3,7 +3,8 @@
 {
 "id":  "S2583",
 "message":  "Change this condition so that it does not always evaluate to \"true\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\DataTypes.cs",
 "region":  {
 "startLine":  437,
@@ -11,12 +12,15 @@
 "endLine":  437,
 "endColumn":  66
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2583",
 "message":  "Change this condition so that it does not always evaluate to \"true\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\DataTypes.cs",
 "region":  {
 "startLine":  499,
@@ -24,7 +28,9 @@
 "endLine":  499,
 "endColumn":  66
 }
-}
+},
+null
+]
 }
 ]
 }

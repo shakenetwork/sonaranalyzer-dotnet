@@ -3,7 +3,8 @@
 {
 "id":  "S108",
 "message":  "Either remove or fill this block of code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
 "region":  {
 "startLine":  1810,
@@ -11,7 +12,9 @@
 "endLine":  1810,
 "endColumn":  72
 }
-}
+},
+null
+]
 }
 ]
 }

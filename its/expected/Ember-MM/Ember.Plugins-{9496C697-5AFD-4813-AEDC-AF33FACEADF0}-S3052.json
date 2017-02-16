@@ -3,7 +3,8 @@
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"disposed\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\PluginManager.cs",
 "region":  {
 "startLine":  149,
@@ -11,12 +12,15 @@
 "endLine":  149,
 "endColumn":  38
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"disposed\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\Scraper\\MovieScraperManager.cs",
 "region":  {
 "startLine":  144,
@@ -24,7 +28,9 @@
 "endLine":  144,
 "endColumn":  38
 }
-}
+},
+null
+]
 }
 ]
 }

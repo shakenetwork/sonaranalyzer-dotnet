@@ -3,7 +3,8 @@
 {
 "id":  "S100",
 "message":  "Rename method \"DI\" to match camel case naming rules, consider using \"Di\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.Core\\Extensions.cs",
 "region":  {
 "startLine":  32,
@@ -11,12 +12,15 @@
 "endLine":  32,
 "endColumn":  46
 }
-}
+},
+null
+]
 },
 {
 "id":  "S100",
 "message":  "Rename method \"DI\" to match camel case naming rules, consider using \"Di\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.Core\\Extensions.cs",
 "region":  {
 "startLine":  37,
@@ -24,7 +28,9 @@
 "endLine":  37,
 "endColumn":  47
 }
-}
+},
+null
+]
 }
 ]
 }

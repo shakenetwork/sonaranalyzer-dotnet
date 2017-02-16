@@ -3,7 +3,8 @@
 {
 "id":  "S2971",
 "message":  "Use \"Count\" property here instead.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\RoutingSpec.cs",
 "region":  {
 "startLine":  126,
@@ -11,7 +12,9 @@
 "endLine":  126,
 "endColumn":  26
 }
-}
+},
+null
+]
 }
 ]
 }

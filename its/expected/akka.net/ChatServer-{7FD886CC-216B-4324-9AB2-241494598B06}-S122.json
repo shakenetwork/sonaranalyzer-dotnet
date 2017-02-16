@@ -3,7 +3,8 @@
 {
 "id":  "S122",
 "message":  "Reformat the code to have only one statement per line.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\Chat\\ChatServer\\Program.cs",
 "region":  {
 "startLine":  65,
@@ -11,12 +12,15 @@
 "endLine":  65,
 "endColumn":  74
 }
-}
+},
+null
+]
 },
 {
 "id":  "S122",
 "message":  "Reformat the code to have only one statement per line.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\Chat\\ChatServer\\Program.cs",
 "region":  {
 "startLine":  86,
@@ -24,7 +28,9 @@
 "endLine":  86,
 "endColumn":  74
 }
-}
+},
+null
+]
 }
 ]
 }

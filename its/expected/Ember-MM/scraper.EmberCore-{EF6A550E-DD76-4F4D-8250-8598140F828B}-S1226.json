@@ -3,7 +3,8 @@
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"tmpname\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMDB.vb",
 "region":  {
 "startLine":  712,
@@ -11,12 +12,15 @@
 "endLine":  712,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"tmpname\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMDB.vb",
 "region":  {
 "startLine":  713,
@@ -24,12 +28,15 @@
 "endLine":  713,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"sURL\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\dlgImgSelect.vb",
 "region":  {
 "startLine":  611,
@@ -37,12 +44,15 @@
 "endLine":  611,
 "endColumn":  17
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"sURL\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\dlgImgSelect.vb",
 "region":  {
 "startLine":  613,
@@ -50,12 +60,15 @@
 "endLine":  613,
 "endColumn":  17
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"sInfo\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\TVScraper\\clsScrapeTVDB.vb",
 "region":  {
 "startLine":  434,
@@ -63,12 +76,15 @@
 "endLine":  434,
 "endColumn":  30
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"sInfo\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\TVScraper\\clsScrapeTVDB.vb",
 "region":  {
 "startLine":  507,
@@ -76,7 +92,9 @@
 "endLine":  507,
 "endColumn":  30
 }
-}
+},
+null
+]
 }
 ]
 }

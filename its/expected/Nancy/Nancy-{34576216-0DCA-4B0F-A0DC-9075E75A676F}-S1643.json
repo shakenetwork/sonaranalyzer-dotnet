@@ -3,7 +3,8 @@
 {
 "id":  "S1643",
 "message":  "Use a StringBuilder instead.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\RequestHeaders.cs",
 "region":  {
 "startLine":  322,
@@ -11,12 +12,15 @@
 "endLine":  322,
 "endColumn":  61
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1643",
 "message":  "Use a StringBuilder instead.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Routing\\DefaultRouteSegmentExtractor.cs",
 "region":  {
 "startLine":  37,
@@ -24,7 +28,9 @@
 "endLine":  37,
 "endColumn":  44
 }
-}
+},
+null
+]
 }
 ]
 }

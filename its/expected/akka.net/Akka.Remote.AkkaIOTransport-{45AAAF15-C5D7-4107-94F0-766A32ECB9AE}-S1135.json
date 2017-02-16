@@ -3,7 +3,8 @@
 {
 "id":  "S1135",
 "message":  "Complete the task associated to this \"TODO\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\transports\\Akka.Remote.AkkaIOTransport\\ConnectionAssociation.cs",
 "region":  {
 "startLine":  37,
@@ -11,12 +12,15 @@
 "endLine":  37,
 "endColumn":  19
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1135",
 "message":  "Complete the task associated to this \"TODO\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\transports\\Akka.Remote.AkkaIOTransport\\TransportManager.cs",
 "region":  {
 "startLine":  39,
@@ -24,12 +28,15 @@
 "endLine":  39,
 "endColumn":  11
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1135",
 "message":  "Complete the task associated to this \"TODO\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\transports\\Akka.Remote.AkkaIOTransport\\TransportManager.cs",
 "region":  {
 "startLine":  97,
@@ -37,7 +44,9 @@
 "endLine":  97,
 "endColumn":  27
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S2360",
 "message":  "Use the overloading mechanism instead of the optional parameters.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.Performance\\Transports\\AssociationStressSpecBase.cs",
 "region":  {
 "startLine":  38,
@@ -11,7 +12,9 @@
 "endLine":  38,
 "endColumn":  38
 }
-}
+},
+null
+]
 }
 ]
 }

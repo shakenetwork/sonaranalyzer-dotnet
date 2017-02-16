@@ -3,7 +3,8 @@
 {
 "id":  "S1135",
 "message":  "Complete the task associated to this \"TODO\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Authentication.Forms\\FormsAuthentication.cs",
 "region":  {
 "startLine":  18,
@@ -11,7 +12,9 @@
 "endLine":  18,
 "endColumn":  16
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S1451",
 "message":  "Add or update the header of this file.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests.Models\\Hobby.cs",
 "region":  {
 "startLine":  1,
@@ -11,12 +12,15 @@
 "endLine":  1,
 "endColumn":  1
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1451",
 "message":  "Add or update the header of this file.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests.Models\\Person.cs",
 "region":  {
 "startLine":  1,
@@ -24,12 +28,15 @@
 "endLine":  1,
 "endColumn":  1
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1451",
 "message":  "Add or update the header of this file.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\SharedAssemblyInfo.cs",
 "region":  {
 "startLine":  1,
@@ -37,7 +44,9 @@
 "endLine":  1,
 "endColumn":  1
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S3261",
 "message":  "Remove this empty namespace.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\TestEventListenerTests\\ExceptionEventFilterTests.cs",
 "region":  {
 "startLine":  14,
@@ -11,7 +12,9 @@
 "endLine":  129,
 "endColumn":  2
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S122",
 "message":  "Reformat the code to have only one statement per line.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.ViewEngines.DotLiquid\\LiquidNancyFileSystem.cs",
 "region":  {
 "startLine":  63,
@@ -11,7 +12,9 @@
 "endLine":  63,
 "endColumn":  57
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S2376",
 "message":  "Provide a getter for \"CommonConfig\" or replace the property with a \"SetCommonConfig\" method.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\MultiNodeSpec.cs",
 "region":  {
 "startLine":  41,
@@ -11,12 +12,15 @@
 "endLine":  41,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2376",
 "message":  "Provide a getter for \"TestTransport\" or replace the property with a \"SetTestTransport\" method.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\MultiNodeSpec.cs",
 "region":  {
 "startLine":  104,
@@ -24,7 +28,9 @@
 "endLine":  104,
 "endColumn":  34
 }
-}
+},
+null
+]
 }
 ]
 }

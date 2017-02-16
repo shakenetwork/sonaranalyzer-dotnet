@@ -3,7 +3,8 @@
 {
 "id":  "S2360",
 "message":  "Use the overloading mechanism instead of the optional parameters.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
 "region":  {
 "startLine":  268,
@@ -11,12 +12,15 @@
 "endLine":  268,
 "endColumn":  71
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2360",
 "message":  "Use the overloading mechanism instead of the optional parameters.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
 "region":  {
 "startLine":  268,
@@ -24,12 +28,15 @@
 "endLine":  268,
 "endColumn":  98
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2360",
 "message":  "Use the overloading mechanism instead of the optional parameters.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
 "region":  {
 "startLine":  347,
@@ -37,12 +44,15 @@
 "endLine":  347,
 "endColumn":  70
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2360",
 "message":  "Use the overloading mechanism instead of the optional parameters.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
 "region":  {
 "startLine":  348,
@@ -50,7 +60,9 @@
 "endLine":  348,
 "endColumn":  37
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_leader\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\AutoDown.cs",
 "region":  {
 "startLine":  91,
@@ -11,12 +12,15 @@
 "endLine":  91,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_seedNodeProcessCounter\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
 "region":  {
 "startLine":  654,
@@ -24,12 +28,15 @@
 "endLine":  654,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_leaderActionCounter\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
 "region":  {
 "startLine":  658,
@@ -37,12 +44,15 @@
 "endLine":  658,
 "endColumn":  45
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_protocolCache\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Proto\\ClusterMessageSerializer.cs",
 "region":  {
 "startLine":  137,
@@ -50,12 +60,15 @@
 "endLine":  137,
 "endColumn":  54
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_systemCache\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Proto\\ClusterMessageSerializer.cs",
 "region":  {
 "startLine":  138,
@@ -63,12 +76,15 @@
 "endLine":  138,
 "endColumn":  52
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_memberStatusFromProtoCache\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Proto\\ClusterMessageSerializer.cs",
 "region":  {
 "startLine":  228,
@@ -76,12 +92,15 @@
 "endLine":  228,
 "endColumn":  94
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_reachabilityStatusFromProtoCache\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Proto\\ClusterMessageSerializer.cs",
 "region":  {
 "startLine":  249,
@@ -89,12 +108,15 @@
 "endLine":  249,
 "endColumn":  125
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"Zero\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\VectorClock.cs",
 "region":  {
 "startLine":  102,
@@ -102,7 +124,9 @@
 "endLine":  102,
 "endColumn":  50
 }
-}
+},
+null
+]
 }
 ]
 }

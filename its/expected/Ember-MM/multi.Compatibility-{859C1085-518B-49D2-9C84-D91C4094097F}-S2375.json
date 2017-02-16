@@ -3,7 +3,8 @@
 {
 "id":  "S2375",
 "message":  "Wrap this and the following 11 statements that use \"Master.eLang\" in a \"With\" statement.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\multi.Compatibility\\frmYAMJ.vb",
 "region":  {
 "startLine":  41,
@@ -11,12 +12,15 @@
 "endLine":  41,
 "endColumn":  68
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2375",
 "message":  "Wrap this and the following 8 statements that use \"movie.Movie\" in a \"With\" statement.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\multi.Compatibility\\genericMediaBrowser.vb",
 "region":  {
 "startLine":  612,
@@ -24,12 +28,15 @@
 "endLine":  612,
 "endColumn":  41
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2375",
 "message":  "Wrap this and the following 10 statements that use \"Me.fYAMJ\" in a \"With\" statement.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\multi.Compatibility\\genericYAMJ.vb",
 "region":  {
 "startLine":  70,
@@ -37,12 +44,15 @@
 "endLine":  70,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2375",
 "message":  "Wrap this and the following 9 statements that use \"Me.fYAMJ\" in a \"With\" statement.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\multi.Compatibility\\genericYAMJ.vb",
 "region":  {
 "startLine":  105,
@@ -50,7 +60,9 @@
 "endLine":  105,
 "endColumn":  43
 }
-}
+},
+null
+]
 }
 ]
 }

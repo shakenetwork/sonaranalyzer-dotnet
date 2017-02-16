@@ -3,7 +3,8 @@
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"count\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\DeathWatchSpec.cs",
 "region":  {
 "startLine":  208,
@@ -11,12 +12,15 @@
 "endLine":  208,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"count\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\DeathWatchSpec.cs",
 "region":  {
 "startLine":  209,
@@ -24,12 +28,15 @@
 "endLine":  209,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"repeat\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTimingSpec.cs",
 "region":  {
 "startLine":  288,
@@ -37,12 +44,15 @@
 "endLine":  288,
 "endColumn":  101
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"shouldHandle\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ReceiveActorTests.cs",
 "region":  {
 "startLine":  200,
@@ -50,12 +60,15 @@
 "endLine":  200,
 "endColumn":  70
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"shouldHandle\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ReceiveActorTests.cs",
 "region":  {
 "startLine":  221,
@@ -63,12 +76,15 @@
 "endLine":  221,
 "endColumn":  78
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"duration\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\ResizerSpec.cs",
 "region":  {
 "startLine":  230,
@@ -76,7 +92,9 @@
 "endLine":  230,
 "endColumn":  24
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S1118",
 "message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\FaultTolerance\\Program.cs",
 "region":  {
 "startLine":  17,
@@ -11,12 +12,15 @@
 "endLine":  17,
 "endColumn":  18
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1118",
 "message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\FaultTolerance\\Program.cs",
 "region":  {
 "startLine":  486,
@@ -24,7 +28,9 @@
 "endLine":  486,
 "endColumn":  25
 }
-}
+},
+null
+]
 }
 ]
 }

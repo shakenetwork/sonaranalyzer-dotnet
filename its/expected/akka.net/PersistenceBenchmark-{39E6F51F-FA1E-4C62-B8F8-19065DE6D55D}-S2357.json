@@ -3,7 +3,8 @@
 {
 "id":  "S2357",
 "message":  "Make \"SequenceNr\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\benchmark\\PersistenceBenchmark\\Messages.cs",
 "region":  {
 "startLine":  26,
@@ -11,12 +12,15 @@
 "endLine":  26,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"MessagesCount\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\benchmark\\PersistenceBenchmark\\Messages.cs",
 "region":  {
 "startLine":  37,
@@ -24,7 +28,9 @@
 "endLine":  37,
 "endColumn":  42
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S103",
 "message":  "Split this 217 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests.Performance\\Actor\\AddressSpec.cs",
 "region":  {
 "startLine":  22,
@@ -11,12 +12,15 @@
 "endLine":  22,
 "endColumn":  218
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 218 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests.Performance\\Actor\\AddressSpec.cs",
 "region":  {
 "startLine":  31,
@@ -24,12 +28,15 @@
 "endLine":  31,
 "endColumn":  219
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 202 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests.Performance\\Dispatch\\MailboxMemoryFootprintSpec.cs",
 "region":  {
 "startLine":  35,
@@ -37,7 +44,9 @@
 "endLine":  35,
 "endColumn":  203
 }
-}
+},
+null
+]
 }
 ]
 }

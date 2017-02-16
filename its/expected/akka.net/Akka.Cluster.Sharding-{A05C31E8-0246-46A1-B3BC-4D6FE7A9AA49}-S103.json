@@ -3,7 +3,8 @@
 {
 "id":  "S103",
 "message":  "Split this 206 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShard.cs",
 "region":  {
 "startLine":  135,
@@ -11,12 +12,15 @@
 "endLine":  135,
 "endColumn":  207
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 215 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
 "region":  {
 "startLine":  178,
@@ -24,12 +28,15 @@
 "endLine":  178,
 "endColumn":  216
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 213 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  297,
@@ -37,12 +44,15 @@
 "endLine":  297,
 "endColumn":  214
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 206 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  337,
@@ -50,7 +60,9 @@
 "endLine":  337,
 "endColumn":  207
 }
-}
+},
+null
+]
 }
 ]
 }

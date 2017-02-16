@@ -3,7 +3,8 @@
 {
 "id":  "S2070",
 "message":  "Use a stronger encryption algorithm than SHA1.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Responses\\EmbeddedFileResponse.cs",
 "region":  {
 "startLine":  66,
@@ -11,7 +12,9 @@
 "endLine":  66,
 "endColumn":  60
 }
-}
+},
+null
+]
 }
 ]
 }

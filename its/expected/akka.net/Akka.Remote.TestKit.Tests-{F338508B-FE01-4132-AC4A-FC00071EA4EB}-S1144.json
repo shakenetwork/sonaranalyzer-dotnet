@@ -3,7 +3,8 @@
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit.Tests\\BarrierSpec.cs",
 "region":  {
 "startLine":  29,
@@ -11,12 +12,15 @@
 "endLine":  32,
 "endColumn":  14
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit.Tests\\BarrierSpec.cs",
 "region":  {
 "startLine":  353,
@@ -24,7 +28,9 @@
 "endLine":  357,
 "endColumn":  14
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"limit\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AckedDeliverySpec.cs",
 "region":  {
 "startLine":  376,
@@ -11,7 +12,9 @@
 "endLine":  376,
 "endColumn":  43
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S122",
 "message":  "Reformat the code to have only one statement per line.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests.Performance\\Actor\\ActorMemoryFootprintSpec.cs",
 "region":  {
 "startLine":  16,
@@ -11,12 +12,15 @@
 "endLine":  16,
 "endColumn":  47
 }
-}
+},
+null
+]
 },
 {
 "id":  "S122",
 "message":  "Reformat the code to have only one statement per line.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests.Performance\\Actor\\ActorMemoryFootprintSpec.cs",
 "region":  {
 "startLine":  17,
@@ -24,12 +28,15 @@
 "endLine":  17,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S122",
 "message":  "Reformat the code to have only one statement per line.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests.Performance\\Actor\\ActorMemoryFootprintSpec.cs",
 "region":  {
 "startLine":  18,
@@ -37,7 +44,9 @@
 "endLine":  18,
 "endColumn":  45
 }
-}
+},
+null
+]
 }
 ]
 }

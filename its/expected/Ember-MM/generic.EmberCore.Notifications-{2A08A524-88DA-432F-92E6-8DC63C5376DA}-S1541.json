@@ -3,7 +3,8 @@
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this function is 14 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.Notifications\\Module.Notifications.vb",
 "region":  {
 "startLine":  106,
@@ -11,7 +12,9 @@
 "endLine":  106,
 "endColumn":  210
 }
-}
+},
+null
+]
 }
 ]
 }

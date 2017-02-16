@@ -3,7 +3,8 @@
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Conventions\\StaticContentConventionBuilder.cs",
 "region":  {
 "startLine":  246,
@@ -11,12 +12,15 @@
 "endLine":  249,
 "endColumn":  14
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\DynamicDictionary.cs",
 "region":  {
 "startLine":  351,
@@ -24,12 +28,15 @@
 "endLine":  376,
 "endColumn":  10
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
 "region":  {
 "startLine":  408,
@@ -37,12 +44,15 @@
 "endLine":  422,
 "endColumn":  4
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Request.cs",
 "region":  {
 "startLine":  323,
@@ -50,12 +60,15 @@
 "endLine":  326,
 "endColumn":  10
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Response.cs",
 "region":  {
 "startLine":  169,
@@ -63,12 +76,15 @@
 "endLine":  172,
 "endColumn":  10
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Routing\\DefaultRouteCacheProvider.cs",
 "region":  {
 "startLine":  73,
@@ -76,12 +92,15 @@
 "endLine":  88,
 "endColumn":  14
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Routing\\RouteDescription.cs",
 "region":  {
 "startLine":  81,
@@ -89,12 +108,15 @@
 "endLine":  96,
 "endColumn":  10
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  3230,
@@ -102,12 +124,15 @@
 "endLine":  3233,
 "endColumn":  10
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  3620,
@@ -115,7 +140,9 @@
 "endLine":  3623,
 "endColumn":  10
 }
-}
+},
+null
+]
 }
 ]
 }

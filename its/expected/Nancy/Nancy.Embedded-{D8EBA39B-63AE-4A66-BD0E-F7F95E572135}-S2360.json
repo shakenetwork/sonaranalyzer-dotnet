@@ -3,7 +3,8 @@
 {
 "id":  "S2360",
 "message":  "Use the overloading mechanism instead of the optional parameters.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Embedded\\Conventions\\EmbeddedStaticContentConventionBuilder.cs",
 "region":  {
 "startLine":  30,
@@ -11,7 +12,9 @@
 "endLine":  30,
 "endColumn":  139
 }
-}
+},
+null
+]
 }
 ]
 }

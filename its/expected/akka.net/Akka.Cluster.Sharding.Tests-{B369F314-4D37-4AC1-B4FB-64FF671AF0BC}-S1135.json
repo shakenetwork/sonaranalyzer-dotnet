@@ -3,7 +3,8 @@
 {
 "id":  "S1135",
 "message":  "Complete the task associated to this \"TODO\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding.Tests\\ClusterShardingFailureSpec.cs",
 "region":  {
 "startLine":  199,
@@ -11,12 +12,15 @@
 "endLine":  199,
 "endColumn":  23
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1135",
 "message":  "Complete the task associated to this \"TODO\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding.Tests\\ClusterShardingGracefulShutdownSpec.cs",
 "region":  {
 "startLine":  180,
@@ -24,12 +28,15 @@
 "endLine":  180,
 "endColumn":  23
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1135",
 "message":  "Complete the task associated to this \"TODO\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding.Tests\\ClusterShardingSpec.cs",
 "region":  {
 "startLine":  466,
@@ -37,7 +44,9 @@
 "endLine":  466,
 "endColumn":  37
 }
-}
+},
+null
+]
 }
 ]
 }

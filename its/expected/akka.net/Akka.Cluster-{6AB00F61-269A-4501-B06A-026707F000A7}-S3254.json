@@ -3,7 +3,8 @@
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"decayFactor\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
 "region":  {
 "startLine":  787,
@@ -11,7 +12,9 @@
 "endLine":  787,
 "endColumn":  94
 }
-}
+},
+null
+]
 }
 ]
 }

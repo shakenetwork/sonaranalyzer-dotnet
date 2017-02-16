@@ -3,7 +3,8 @@
 {
 "id":  "S1481",
 "message":  "Remove this unused \"child\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\RemoteDaemonSpec.cs",
 "region":  {
 "startLine":  33,
@@ -11,12 +12,15 @@
 "endLine":  33,
 "endColumn":  26
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"fd\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\RemoteWatcherSpec.cs",
 "region":  {
 "startLine":  211,
@@ -24,12 +28,15 @@
 "endLine":  211,
 "endColumn":  19
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"fd\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\RemoteWatcherSpec.cs",
 "region":  {
 "startLine":  321,
@@ -37,12 +44,15 @@
 "endLine":  321,
 "endColumn":  19
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"monitorB\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\RemoteWatcherSpec.cs",
 "region":  {
 "startLine":  324,
@@ -50,12 +60,15 @@
 "endLine":  324,
 "endColumn":  25
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"fireException\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\TestTransportSpec.cs",
 "region":  {
 "startLine":  104,
@@ -63,7 +76,9 @@
 "endLine":  104,
 "endColumn":  34
 }
-}
+},
+null
+]
 }
 ]
 }

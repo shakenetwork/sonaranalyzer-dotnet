@@ -3,7 +3,8 @@
 {
 "id":  "S2372",
 "message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
 "startLine":  103,
@@ -11,7 +12,9 @@
 "endLine":  103,
 "endColumn":  112
 }
-}
+},
+null
+]
 }
 ]
 }

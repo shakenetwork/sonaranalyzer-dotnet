@@ -3,7 +3,8 @@
 {
 "id":  "S1309",
 "message":  "Do not suppress issues.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Pattern\\CircuitBreakerSpec.cs",
 "region":  {
 "startLine":  268,
@@ -11,7 +12,9 @@
 "endLine":  268,
 "endColumn":  25
 }
-}
+},
+null
+]
 }
 ]
 }

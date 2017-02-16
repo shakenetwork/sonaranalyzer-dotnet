@@ -3,7 +3,8 @@
 {
 "id":  "S122",
 "message":  "Reformat the code to have only one statement per line.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.Ninject\\NinjectDependencyResolver.cs",
 "region":  {
 "startLine":  40,
@@ -11,12 +12,15 @@
 "endLine":  40,
 "endColumn":  75
 }
-}
+},
+null
+]
 },
 {
 "id":  "S122",
 "message":  "Reformat the code to have only one statement per line.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.Ninject\\NinjectDependencyResolver.cs",
 "region":  {
 "startLine":  41,
@@ -24,7 +28,9 @@
 "endLine":  41,
 "endColumn":  81
 }
-}
+},
+null
+]
 }
 ]
 }

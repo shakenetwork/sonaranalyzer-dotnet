@@ -3,7 +3,8 @@
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 20 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterReceptionist.cs",
 "region":  {
 "startLine":  146,
@@ -11,12 +12,15 @@
 "endLine":  146,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this constructor is 33 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedPubSubMediator.cs",
 "region":  {
 "startLine":  130,
@@ -24,12 +28,15 @@
 "endLine":  130,
 "endColumn":  41
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Internal\\Topics.cs",
 "region":  {
 "startLine":  104,
@@ -37,12 +44,15 @@
 "endLine":  104,
 "endColumn":  41
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Serialization\\DistributedPubSubMessageSerializer.cs",
 "region":  {
 "startLine":  57,
@@ -50,12 +60,15 @@
 "endLine":  57,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Serialization\\DistributedPubSubMessageSerializer.cs",
 "region":  {
 "startLine":  78,
@@ -63,12 +76,15 @@
 "endLine":  78,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 146 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManager.cs",
 "region":  {
 "startLine":  378,
@@ -76,12 +92,15 @@
 "endLine":  378,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\Serialization\\ClusterSingletonMessageSerializer.cs",
 "region":  {
 "startLine":  66,
@@ -89,7 +108,9 @@
 "endLine":  66,
 "endColumn":  40
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S103",
 "message":  "Split this 253 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Eventsourced.Lifecycle.cs",
 "region":  {
 "startLine":  76,
@@ -11,12 +12,15 @@
 "endLine":  76,
 "endColumn":  254
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 295 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Eventsourced.Lifecycle.cs",
 "region":  {
 "startLine":  84,
@@ -24,12 +28,15 @@
 "endLine":  84,
 "endColumn":  296
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 244 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistent.cs",
 "region":  {
 "startLine":  184,
@@ -37,12 +44,15 @@
 "endLine":  184,
 "endColumn":  245
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 297 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\PersistentView.Lifecycle.cs",
 "region":  {
 "startLine":  61,
@@ -50,7 +60,9 @@
 "endLine":  61,
 "endColumn":  298
 }
-}
+},
+null
+]
 }
 ]
 }

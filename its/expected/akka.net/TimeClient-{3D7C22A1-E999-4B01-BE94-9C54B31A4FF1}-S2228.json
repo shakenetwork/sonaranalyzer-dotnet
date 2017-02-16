@@ -3,7 +3,8 @@
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\TimeServer\\TimeClient\\Program.cs",
 "region":  {
 "startLine":  40,
@@ -11,12 +12,15 @@
 "endLine":  40,
 "endColumn":  34
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\TimeServer\\TimeClient\\Program.cs",
 "region":  {
 "startLine":  45,
@@ -24,12 +28,15 @@
 "endLine":  45,
 "endColumn":  34
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\TimeServer\\TimeClient\\Program.cs",
 "region":  {
 "startLine":  46,
@@ -37,12 +44,15 @@
 "endLine":  46,
 "endColumn":  34
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\TimeServer\\TimeClient\\Program.cs",
 "region":  {
 "startLine":  64,
@@ -50,7 +60,9 @@
 "endLine":  64,
 "endColumn":  34
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S1186",
 "message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\Chat\\ChatServer\\Program.cs",
 "region":  {
 "startLine":  89,
@@ -11,12 +12,15 @@
 "endLine":  89,
 "endColumn":  27
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1186",
 "message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\Chat\\ChatServer\\Program.cs",
 "region":  {
 "startLine":  94,
@@ -24,7 +28,9 @@
 "endLine":  94,
 "endColumn":  27
 }
-}
+},
+null
+]
 }
 ]
 }

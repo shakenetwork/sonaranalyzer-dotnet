@@ -3,7 +3,8 @@
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\ClusterHeartBeatSenderStateSpec.cs",
 "region":  {
 "startLine":  213,
@@ -11,12 +12,15 @@
 "endLine":  213,
 "endColumn":  31
 }
-}
+},
+null
+]
 },
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\ClusterHeartBeatSenderStateSpec.cs",
 "region":  {
 "startLine":  224,
@@ -24,12 +28,15 @@
 "endLine":  224,
 "endColumn":  31
 }
-}
+},
+null
+]
 },
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\ClusterHeartBeatSenderStateSpec.cs",
 "region":  {
 "startLine":  240,
@@ -37,12 +44,15 @@
 "endLine":  240,
 "endColumn":  31
 }
-}
+},
+null
+]
 },
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\ClusterHeartBeatSenderStateSpec.cs",
 "region":  {
 "startLine":  249,
@@ -50,7 +60,9 @@
 "endLine":  249,
 "endColumn":  31
 }
-}
+},
+null
+]
 }
 ]
 }

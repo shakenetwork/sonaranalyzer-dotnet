@@ -3,7 +3,8 @@
 {
 "id":  "S2971",
 "message":  "Drop \"ToArray\" from the middle of the call chain.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
 "startLine":  795,
@@ -11,7 +12,9 @@
 "endLine":  795,
 "endColumn":  49
 }
-}
+},
+null
+]
 }
 ]
 }

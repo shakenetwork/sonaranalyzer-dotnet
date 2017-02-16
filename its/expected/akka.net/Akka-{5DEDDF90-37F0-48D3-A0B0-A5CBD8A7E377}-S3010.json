@@ -3,7 +3,8 @@
 {
 "id":  "S3010",
 "message":  "Remove this assignment of \u0027CurrentWorker\u0027 or initialize it statically.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Helios.Concurrency.DedicatedThreadPool.cs",
 "region":  {
 "startLine":  415,
@@ -11,7 +12,17 @@
 "endLine":  415,
 "endColumn":  36
 }
+},
+{
+"uri":  "akka.net\\src\\core\\Akka\\Helios.Concurrency.DedicatedThreadPool.cs",
+"region":  {
+"startLine":  292,
+"startColumn":  36,
+"endLine":  292,
+"endColumn":  49
 }
+}
+]
 }
 ]
 }

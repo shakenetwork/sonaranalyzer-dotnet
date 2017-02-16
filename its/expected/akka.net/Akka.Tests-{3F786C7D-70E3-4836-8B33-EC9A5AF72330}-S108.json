@@ -3,7 +3,8 @@
 {
 "id":  "S108",
 "message":  "Either remove or fill this block of code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Dispatch\\AsyncAwaitSpec.cs",
 "region":  {
 "startLine":  385,
@@ -11,7 +12,9 @@
 "endLine":  386,
 "endColumn":  22
 }
-}
+},
+null
+]
 }
 ]
 }

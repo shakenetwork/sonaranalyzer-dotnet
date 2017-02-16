@@ -3,7 +3,8 @@
 {
 "id":  "S131",
 "message":  "Add a \"default\" clause to this \"switch\" statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\ConsoleMessageSinkActor.cs",
 "region":  {
 "startLine":  190,
@@ -11,7 +12,9 @@
 "endLine":  190,
 "endColumn":  19
 }
-}
+},
+null
+]
 }
 ]
 }

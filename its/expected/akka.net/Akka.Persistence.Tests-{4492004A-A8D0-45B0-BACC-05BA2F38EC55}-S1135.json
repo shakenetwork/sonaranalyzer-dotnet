@@ -3,7 +3,8 @@
 {
 "id":  "S1135",
 "message":  "Complete the task associated to this \"TODO\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorFailureSpec.cs",
 "region":  {
 "startLine":  90,
@@ -11,12 +12,15 @@
 "endLine":  90,
 "endColumn":  19
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1135",
 "message":  "Complete the task associated to this \"TODO\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentViewSpec.cs",
 "region":  {
 "startLine":  135,
@@ -24,7 +28,9 @@
 "endLine":  135,
 "endColumn":  19
 }
-}
+},
+null
+]
 }
 ]
 }

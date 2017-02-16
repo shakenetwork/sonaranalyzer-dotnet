@@ -3,7 +3,8 @@
 {
 "id":  "S101",
 "message":  "Rename class \"FSMSpecHelpers\" to match camel case naming rules, consider using \"FsmSpecHelpers\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\FSMSpecHelpers.cs",
 "region":  {
 "startLine":  14,
@@ -11,12 +12,15 @@
 "endLine":  14,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S101",
 "message":  "Rename class \"TestFSMRef\" to match camel case naming rules, consider using \"TestFsmRef\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestFSMRef.cs",
 "region":  {
 "startLine":  21,
@@ -24,7 +28,9 @@
 "endLine":  21,
 "endColumn":  28
 }
-}
+},
+null
+]
 }
 ]
 }

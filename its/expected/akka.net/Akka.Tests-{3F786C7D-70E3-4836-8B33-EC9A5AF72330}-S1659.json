@@ -3,7 +3,8 @@
 {
 "id":  "S1659",
 "message":  "Declare \"b\" in a separate statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\ConsistentHashingRouterSpec.cs",
 "region":  {
 "startLine":  79,
@@ -11,12 +12,15 @@
 "endLine":  79,
 "endColumn":  31
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1659",
 "message":  "Declare \"c\" in a separate statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\ConsistentHashingRouterSpec.cs",
 "region":  {
 "startLine":  79,
@@ -24,12 +28,15 @@
 "endLine":  79,
 "endColumn":  34
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1659",
 "message":  "Declare \"receivedLatch\" in a separate statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\SmallestMailboxSpec.cs",
 "region":  {
 "startLine":  33,
@@ -37,7 +44,9 @@
 "endLine":  33,
 "endColumn":  64
 }
-}
+},
+null
+]
 }
 ]
 }

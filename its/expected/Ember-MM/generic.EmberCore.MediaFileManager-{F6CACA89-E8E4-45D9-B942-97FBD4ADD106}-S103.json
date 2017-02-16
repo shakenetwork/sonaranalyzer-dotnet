@@ -3,7 +3,8 @@
 {
 "id":  "S103",
 "message":  "Split this 209 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.MediaFileManager\\Module.MediaFileManagerModule.vb",
 "region":  {
 "startLine":  128,
@@ -11,12 +12,15 @@
 "endLine":  128,
 "endColumn":  210
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 261 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.MediaFileManager\\Module.MediaFileManagerModule.vb",
 "region":  {
 "startLine":  230,
@@ -24,12 +28,15 @@
 "endLine":  230,
 "endColumn":  262
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 261 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.MediaFileManager\\Module.MediaFileManagerModule.vb",
 "region":  {
 "startLine":  238,
@@ -37,7 +44,9 @@
 "endLine":  238,
 "endColumn":  262
 }
-}
+},
+null
+]
 }
 ]
 }

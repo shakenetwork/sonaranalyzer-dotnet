@@ -3,7 +3,8 @@
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding.Tests\\ClusterShardingSpec.cs",
 "region":  {
 "startLine":  290,
@@ -11,7 +12,9 @@
 "endLine":  314,
 "endColumn":  10
 }
-}
+},
+null
+]
 }
 ]
 }

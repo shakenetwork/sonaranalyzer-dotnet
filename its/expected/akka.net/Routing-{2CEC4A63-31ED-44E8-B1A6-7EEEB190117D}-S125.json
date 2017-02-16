@@ -3,7 +3,8 @@
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\Routing\\Program.cs",
 "region":  {
 "startLine":  52,
@@ -11,12 +12,15 @@
 "endLine":  52,
 "endColumn":  159
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\Routing\\Program.cs",
 "region":  {
 "startLine":  84,
@@ -24,7 +28,9 @@
 "endLine":  84,
 "endColumn":  159
 }
-}
+},
+null
+]
 }
 ]
 }

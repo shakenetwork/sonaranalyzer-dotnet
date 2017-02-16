@@ -3,7 +3,8 @@
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\ContentNegotiationFixture.cs",
 "region":  {
 "startLine":  837,
@@ -11,12 +12,15 @@
 "endLine":  850,
 "endColumn":  14
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\ContentNegotiationFixture.cs",
 "region":  {
 "startLine":  866,
@@ -24,7 +28,9 @@
 "endLine":  869,
 "endColumn":  14
 }
-}
+},
+null
+]
 }
 ]
 }

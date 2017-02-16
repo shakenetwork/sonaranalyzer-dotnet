@@ -3,7 +3,8 @@
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\Cluster\\ClusterTools\\ClusterToolsExample.Seed\\Program.cs",
 "region":  {
 "startLine":  29,
@@ -11,12 +12,15 @@
 "endLine":  36,
 "endColumn":  10
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\Cluster\\ClusterTools\\ClusterToolsExample.Seed\\Program.cs",
 "region":  {
 "startLine":  53,
@@ -24,7 +28,9 @@
 "endLine":  57,
 "endColumn":  10
 }
-}
+},
+null
+]
 }
 ]
 }

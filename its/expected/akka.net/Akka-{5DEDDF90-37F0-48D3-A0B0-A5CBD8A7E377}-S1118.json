@@ -3,7 +3,8 @@
 {
 "id":  "S1118",
 "message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Configuration\\ConfigurationFactory.cs",
 "region":  {
 "startLine":  23,
@@ -11,12 +12,15 @@
 "endLine":  23,
 "endColumn":  38
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1118",
 "message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
 "region":  {
 "startLine":  765,
@@ -24,12 +28,15 @@
 "endLine":  765,
 "endColumn":  28
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1118",
 "message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\Collections\\EmptyReadOnlyCollections.cs",
 "region":  {
 "startLine":  13,
@@ -37,7 +44,9 @@
 "endLine":  13,
 "endColumn":  42
 }
-}
+},
+null
+]
 }
 ]
 }

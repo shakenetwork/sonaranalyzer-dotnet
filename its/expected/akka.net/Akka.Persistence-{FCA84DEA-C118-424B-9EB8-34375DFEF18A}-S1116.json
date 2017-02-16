@@ -3,7 +3,8 @@
 {
 "id":  "S1116",
 "message":  "Remove this empty statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\AtLeastOnceDeliveryReceiveActor.cs",
 "region":  {
 "startLine":  45,
@@ -11,7 +12,9 @@
 "endLine":  45,
 "endColumn":  75
 }
-}
+},
+null
+]
 }
 ]
 }

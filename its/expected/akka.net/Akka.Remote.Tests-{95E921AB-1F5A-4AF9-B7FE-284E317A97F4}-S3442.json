@@ -3,7 +3,8 @@
 {
 "id":  "S3442",
 "message":  "Change the visibility of this constructor to \"protected\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\GenericTransportSpec.cs",
 "region":  {
 "startLine":  29,
@@ -11,7 +12,9 @@
 "endLine":  29,
 "endColumn":  15
 }
-}
+},
+null
+]
 }
 ]
 }

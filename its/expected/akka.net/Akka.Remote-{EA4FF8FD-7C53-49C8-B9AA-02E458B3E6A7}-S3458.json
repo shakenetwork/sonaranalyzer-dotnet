@@ -3,7 +3,8 @@
 {
 "id":  "S3458",
 "message":  "Remove this empty \"case\" clause.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  1706,
@@ -11,7 +12,9 @@
 "endLine":  1706,
 "endColumn":  47
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S1944",
 "message":  "Review this cast; in this project there\u0027s no type that extends \"ActorBase\" and implements \"IDisposable\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorCell.cs",
 "region":  {
 "startLine":  303,
@@ -11,7 +12,9 @@
 "endLine":  303,
 "endColumn":  54
 }
-}
+},
+null
+]
 }
 ]
 }

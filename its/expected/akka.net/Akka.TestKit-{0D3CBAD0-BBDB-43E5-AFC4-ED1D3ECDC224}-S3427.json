@@ -3,7 +3,8 @@
 {
 "id":  "S3427",
 "message":  "This method signature overlaps the one defined on line 213, the default parameter value can\u0027t be used.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\EventFilter\\EventFilterFactory.cs",
 "region":  {
 "startLine":  223,
@@ -11,7 +12,9 @@
 "endLine":  223,
 "endColumn":  77
 }
-}
+},
+null
+]
 }
 ]
 }

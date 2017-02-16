@@ -3,7 +3,8 @@
 {
 "id":  "S2933",
 "message":  "Make \"container\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.Ninject\\NinjectDependencyResolver.cs",
 "region":  {
 "startLine":  24,
@@ -11,12 +12,15 @@
 "endLine":  24,
 "endColumn":  26
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"typeCache\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.Ninject\\NinjectDependencyResolver.cs",
 "region":  {
 "startLine":  26,
@@ -24,12 +28,15 @@
 "endLine":  26,
 "endColumn":  61
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"system\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.Ninject\\NinjectDependencyResolver.cs",
 "region":  {
 "startLine":  27,
@@ -37,12 +44,15 @@
 "endLine":  27,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"references\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.Ninject\\NinjectDependencyResolver.cs",
 "region":  {
 "startLine":  28,
@@ -50,7 +60,9 @@
 "endLine":  28,
 "endColumn":  77
 }
-}
+},
+null
+]
 }
 ]
 }

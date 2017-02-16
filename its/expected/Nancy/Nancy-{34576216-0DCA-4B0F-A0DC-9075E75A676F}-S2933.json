@@ -3,7 +3,8 @@
 {
 "id":  "S2933",
 "message":  "Make \"rootPath\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\DefaultStaticContentProvider.cs",
 "region":  {
 "startLine":  13,
@@ -11,12 +12,15 @@
 "endLine":  13,
 "endColumn":  32
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_typeResolver\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
 "startLine":  52,
@@ -24,12 +28,15 @@
 "endLine":  52,
 "endColumn":  45
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"serializer\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
 "region":  {
 "startLine":  293,
@@ -37,12 +44,15 @@
 "endLine":  293,
 "endColumn":  34
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"typeResolver\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
 "region":  {
 "startLine":  294,
@@ -50,12 +60,15 @@
 "endLine":  294,
 "endColumn":  38
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"retainCasing\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
 "region":  {
 "startLine":  295,
@@ -63,12 +76,15 @@
 "endLine":  295,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"maxJsonLength\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
 "region":  {
 "startLine":  296,
@@ -76,12 +92,15 @@
 "endLine":  296,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"recursionLimit\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
 "region":  {
 "startLine":  298,
@@ -89,12 +108,15 @@
 "endLine":  298,
 "endColumn":  21
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"modes\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
 "region":  {
 "startLine":  301,
@@ -102,12 +124,15 @@
 "endLine":  301,
 "endColumn":  25
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"returnValue\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
 "region":  {
 "startLine":  302,
@@ -115,12 +140,15 @@
 "endLine":  302,
 "endColumn":  29
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"currentKey\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
 "region":  {
 "startLine":  307,
@@ -128,12 +156,15 @@
 "endLine":  307,
 "endColumn":  28
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"serializer\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
 "region":  {
 "startLine":  49,
@@ -141,12 +172,15 @@
 "endLine":  49,
 "endColumn":  34
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"typeResolver\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
 "region":  {
 "startLine":  50,
@@ -154,12 +188,15 @@
 "endLine":  50,
 "endColumn":  38
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"recursionLimit\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
 "region":  {
 "startLine":  51,
@@ -167,12 +204,15 @@
 "endLine":  51,
 "endColumn":  21
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"maxJsonLength\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
 "region":  {
 "startLine":  52,
@@ -180,12 +220,15 @@
 "endLine":  52,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"retainCasing\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
 "region":  {
 "startLine":  54,
@@ -193,12 +236,15 @@
 "endLine":  54,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"iso8601DateFormat\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
 "region":  {
 "startLine":  55,
@@ -206,12 +252,15 @@
 "endLine":  55,
 "endColumn":  25
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"propertyInfo\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\ModelBinding\\BindingMemberInfo.cs",
 "region":  {
 "startLine":  13,
@@ -219,12 +268,15 @@
 "endLine":  13,
 "endColumn":  34
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"fieldInfo\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\ModelBinding\\BindingMemberInfo.cs",
 "region":  {
 "startLine":  14,
@@ -232,12 +284,15 @@
 "endLine":  14,
 "endColumn":  28
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"routeSegmentConstraints\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Routing\\Trie\\Nodes\\CaptureNodeWithMultipleParameters.cs",
 "region":  {
 "startLine":  21,
@@ -245,12 +300,15 @@
 "endLine":  21,
 "endColumn":  77
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"segmentMatch\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Routing\\Trie\\Nodes\\RootNode.cs",
 "region":  {
 "startLine":  10,
@@ -258,12 +316,15 @@
 "endLine":  10,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_Container\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  840,
@@ -271,12 +332,15 @@
 "endLine":  840,
 "endColumn":  48
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_Registration\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  841,
@@ -284,12 +348,15 @@
 "endLine":  841,
 "endColumn":  51
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_factory\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  2559,
@@ -297,12 +364,15 @@
 "endLine":  2559,
 "endColumn":  85
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_factory\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  2617,
@@ -310,12 +380,15 @@
 "endLine":  2617,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_instance\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  2684,
@@ -323,12 +396,15 @@
 "endLine":  2684,
 "endColumn":  37
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_hashCode\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  3021,
@@ -336,12 +412,15 @@
 "endLine":  3021,
 "endColumn":  34
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_Parent\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  3075,
@@ -349,12 +428,15 @@
 "endLine":  3075,
 "endColumn":  33
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"textResourceFinder\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\DefaultRenderContext.cs",
 "region":  {
 "startLine":  23,
@@ -362,12 +444,15 @@
 "endLine":  23,
 "endColumn":  54
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"renderContext\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\NancyViewEngineHost.cs",
 "region":  {
 "startLine":  7,
@@ -375,12 +460,15 @@
 "endLine":  7,
 "endColumn":  45
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"message\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\ViewNotFoundException.cs",
 "region":  {
 "startLine":  16,
@@ -388,7 +476,9 @@
 "endLine":  16,
 "endColumn":  31
 }
-}
+},
+null
+]
 }
 ]
 }

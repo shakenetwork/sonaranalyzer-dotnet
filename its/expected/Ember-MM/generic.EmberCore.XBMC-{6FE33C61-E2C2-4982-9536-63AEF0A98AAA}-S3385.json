@@ -3,7 +3,8 @@
 {
 "id":  "S3385",
 "message":  "Remove this \"Exit\" statement.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.XBMC\\dlgXBMCHost.vb",
 "region":  {
 "startLine":  40,
@@ -11,7 +12,9 @@
 "endLine":  40,
 "endColumn":  33
 }
-}
+},
+null
+]
 }
 ]
 }

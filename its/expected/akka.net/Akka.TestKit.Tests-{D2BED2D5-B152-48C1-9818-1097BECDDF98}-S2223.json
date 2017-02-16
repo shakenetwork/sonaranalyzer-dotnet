@@ -3,7 +3,8 @@
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"Counter\" or make it \"const\" or \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\TestActorRefTests\\TestActorRefSpec.cs",
 "region":  {
 "startLine":  20,
@@ -11,12 +12,15 @@
 "endLine":  20,
 "endColumn":  34
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"OtherThread\" or make it \"const\" or \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\TestActorRefTests\\TestActorRefSpec.cs",
 "region":  {
 "startLine":  22,
@@ -24,7 +28,9 @@
 "endLine":  22,
 "endColumn":  41
 }
-}
+},
+null
+]
 }
 ]
 }

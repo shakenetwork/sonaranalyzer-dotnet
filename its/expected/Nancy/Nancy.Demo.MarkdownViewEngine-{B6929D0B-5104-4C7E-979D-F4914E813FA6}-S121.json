@@ -3,7 +3,8 @@
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Demo.MarkdownViewEngine\\Model\\BlogModel.cs",
 "region":  {
 "startLine":  50,
@@ -11,12 +12,15 @@
 "endLine":  50,
 "endColumn":  19
 }
-}
+},
+null
+]
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Demo.MarkdownViewEngine\\Model\\BlogModel.cs",
 "region":  {
 "startLine":  64,
@@ -24,12 +28,15 @@
 "endLine":  64,
 "endColumn":  15
 }
-}
+},
+null
+]
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Demo.MarkdownViewEngine\\Model\\BlogModel.cs",
 "region":  {
 "startLine":  74,
@@ -37,12 +44,15 @@
 "endLine":  74,
 "endColumn":  15
 }
-}
+},
+null
+]
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Demo.MarkdownViewEngine\\Model\\BlogModel.cs",
 "region":  {
 "startLine":  86,
@@ -50,12 +60,15 @@
 "endLine":  86,
 "endColumn":  15
 }
-}
+},
+null
+]
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Demo.MarkdownViewEngine\\Model\\BlogModel.cs",
 "region":  {
 "startLine":  94,
@@ -63,7 +76,9 @@
 "endLine":  94,
 "endColumn":  15
 }
-}
+},
+null
+]
 }
 ]
 }

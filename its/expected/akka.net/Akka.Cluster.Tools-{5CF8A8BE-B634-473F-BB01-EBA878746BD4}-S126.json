@@ -3,7 +3,8 @@
 {
 "id":  "S126",
 "message":  "Add the missing \"else\" clause.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterReceptionist.cs",
 "region":  {
 "startLine":  219,
@@ -11,12 +12,15 @@
 "endLine":  219,
 "endColumn":  24
 }
-}
+},
+null
+]
 },
 {
 "id":  "S126",
 "message":  "Add the missing \"else\" clause.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedPubSubMediator.cs",
 "region":  {
 "startLine":  321,
@@ -24,12 +28,15 @@
 "endLine":  321,
 "endColumn":  24
 }
-}
+},
+null
+]
 },
 {
 "id":  "S126",
 "message":  "Add the missing \"else\" clause.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManager.cs",
 "region":  {
 "startLine":  358,
@@ -37,12 +44,15 @@
 "endLine":  358,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S126",
 "message":  "Add the missing \"else\" clause.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManager.cs",
 "region":  {
 "startLine":  638,
@@ -50,12 +60,15 @@
 "endLine":  638,
 "endColumn":  24
 }
-}
+},
+null
+]
 },
 {
 "id":  "S126",
 "message":  "Add the missing \"else\" clause.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\OldestChangedBuffer.cs",
 "region":  {
 "startLine":  139,
@@ -63,12 +76,15 @@
 "endLine":  139,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S126",
 "message":  "Add the missing \"else\" clause.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\OldestChangedBuffer.cs",
 "region":  {
 "startLine":  160,
@@ -76,7 +92,9 @@
 "endLine":  160,
 "endColumn":  20
 }
-}
+},
+null
+]
 }
 ]
 }

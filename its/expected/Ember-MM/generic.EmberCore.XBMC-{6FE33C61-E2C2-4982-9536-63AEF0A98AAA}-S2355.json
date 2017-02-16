@@ -3,7 +3,8 @@
 {
 "id":  "S2355",
 "message":  "Use an array literal here instead.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.XBMC\\dlgXBMCHost.vb",
 "region":  {
 "startLine":  232,
@@ -11,12 +12,15 @@
 "endLine":  232,
 "endColumn":  87
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2355",
 "message":  "Use an array literal here instead.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.XBMC\\Module.XBMCxCom.vb",
 "region":  {
 "startLine":  80,
@@ -24,12 +28,15 @@
 "endLine":  80,
 "endColumn":  222
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2355",
 "message":  "Use an array literal here instead.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.XBMC\\Module.XBMCxCom.vb",
 "region":  {
 "startLine":  414,
@@ -37,12 +44,15 @@
 "endLine":  414,
 "endColumn":  51
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2355",
 "message":  "Use an array literal here instead.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.XBMC\\Module.XBMCxCom.vb",
 "region":  {
 "startLine":  416,
@@ -50,7 +60,9 @@
 "endLine":  416,
 "endColumn":  90
 }
-}
+},
+null
+]
 }
 ]
 }

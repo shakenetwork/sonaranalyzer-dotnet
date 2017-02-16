@@ -3,7 +3,8 @@
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\PersistenceExample\\Program.cs",
 "region":  {
 "startLine":  23,
@@ -11,12 +12,15 @@
 "endLine":  23,
 "endColumn":  53
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\PersistenceExample\\Program.cs",
 "region":  {
 "startLine":  26,
@@ -24,7 +28,9 @@
 "endLine":  26,
 "endColumn":  47
 }
-}
+},
+null
+]
 }
 ]
 }

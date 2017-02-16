@@ -3,7 +3,8 @@
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"requestedPath\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Conventions\\StaticContentConventionBuilder.cs",
 "region":  {
 "startLine":  38,
@@ -11,12 +12,15 @@
 "endLine":  38,
 "endColumn":  30
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"contentPath\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Conventions\\StaticContentConventionBuilder.cs",
 "region":  {
 "startLine":  62,
@@ -24,12 +28,15 @@
 "endLine":  62,
 "endColumn":  28
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"contentPath\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Conventions\\StaticContentConventionBuilder.cs",
 "region":  {
 "startLine":  118,
@@ -37,12 +44,15 @@
 "endLine":  118,
 "endColumn":  24
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"contentPath\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Conventions\\StaticContentConventionBuilder.cs",
 "region":  {
 "startLine":  123,
@@ -50,12 +60,15 @@
 "endLine":  123,
 "endColumn":  28
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"name\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\DynamicDictionary.cs",
 "region":  {
 "startLine":  111,
@@ -63,12 +76,15 @@
 "endLine":  111,
 "endColumn":  21
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"name\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\DynamicDictionary.cs",
 "region":  {
 "startLine":  123,
@@ -76,12 +92,15 @@
 "endLine":  123,
 "endColumn":  21
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"key\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\DynamicDictionary.cs",
 "region":  {
 "startLine":  209,
@@ -89,12 +108,15 @@
 "endLine":  209,
 "endColumn":  16
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"key\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\DynamicDictionary.cs",
 "region":  {
 "startLine":  230,
@@ -102,12 +124,15 @@
 "endLine":  230,
 "endColumn":  16
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"key\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\DynamicDictionary.cs",
 "region":  {
 "startLine":  291,
@@ -115,12 +140,15 @@
 "endLine":  291,
 "endColumn":  16
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"e\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
 "startLine":  144,
@@ -128,12 +156,15 @@
 "endLine":  144,
 "endColumn":  18
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"query\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
 "startLine":  712,
@@ -141,12 +172,15 @@
 "endLine":  712,
 "endColumn":  22
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"count\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\HttpMultipartSubStream.cs",
 "region":  {
 "startLine":  125,
@@ -154,12 +188,15 @@
 "endLine":  125,
 "endColumn":  22
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"obj\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
 "startLine":  149,
@@ -167,12 +204,15 @@
 "endLine":  149,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"obj\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
 "startLine":  157,
@@ -180,12 +220,15 @@
 "endLine":  157,
 "endColumn":  24
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"value\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
 "startLine":  235,
@@ -193,12 +236,15 @@
 "endLine":  235,
 "endColumn":  22
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"value\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
 "startLine":  237,
@@ -206,12 +252,15 @@
 "endLine":  237,
 "endColumn":  22
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"type\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
 "startLine":  324,
@@ -219,12 +268,15 @@
 "endLine":  324,
 "endColumn":  25
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"type\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
 "startLine":  341,
@@ -232,12 +284,15 @@
 "endLine":  341,
 "endColumn":  29
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"type\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
 "startLine":  356,
@@ -245,12 +300,15 @@
 "endLine":  356,
 "endColumn":  21
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"obj\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
 "region":  {
 "startLine":  117,
@@ -258,12 +316,15 @@
 "endLine":  117,
 "endColumn":  8
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"obj\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
 "region":  {
 "startLine":  148,
@@ -271,12 +332,15 @@
 "endLine":  148,
 "endColumn":  8
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"key\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
 "region":  {
 "startLine":  432,
@@ -284,12 +348,15 @@
 "endLine":  432,
 "endColumn":  7
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"value\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
 "region":  {
 "startLine":  507,
@@ -297,12 +364,15 @@
 "endLine":  507,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"options\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Owin\\NancyMiddleware.cs",
 "region":  {
 "startLine":  53,
@@ -310,12 +380,15 @@
 "endLine":  53,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"owinRequestHost\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Owin\\NancyMiddleware.cs",
 "region":  {
 "startLine":  227,
@@ -323,12 +396,15 @@
 "endLine":  227,
 "endColumn":  32
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"contentType\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Responses\\Negotiation\\MediaRange.cs",
 "region":  {
 "startLine":  24,
@@ -336,12 +412,15 @@
 "endLine":  24,
 "endColumn":  28
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"encoding\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Responses\\TextResponse.cs",
 "region":  {
 "startLine":  25,
@@ -349,12 +428,15 @@
 "endLine":  25,
 "endColumn":  25
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"contentType\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Responses\\TextResponse.cs",
 "region":  {
 "startLine":  30,
@@ -362,12 +444,15 @@
 "endLine":  30,
 "endColumn":  28
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"encoding\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Responses\\TextResponse.cs",
 "region":  {
 "startLine":  58,
@@ -375,12 +460,15 @@
 "endLine":  58,
 "endColumn":  25
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"requestedPath\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Routing\\DefaultRoutePatternMatcher.cs",
 "region":  {
 "startLine":  33,
@@ -388,12 +476,15 @@
 "endLine":  33,
 "endColumn":  26
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"requestedPath\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Routing\\DefaultRoutePatternMatcher.cs",
 "region":  {
 "startLine":  53,
@@ -401,12 +492,15 @@
 "endLine":  53,
 "endColumn":  30
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"segment\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Routing\\DefaultRoutePatternMatcher.cs",
 "region":  {
 "startLine":  131,
@@ -414,12 +508,15 @@
 "endLine":  131,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"segment\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Routing\\DefaultRoutePatternMatcher.cs",
 "region":  {
 "startLine":  149,
@@ -427,12 +524,15 @@
 "endLine":  149,
 "endColumn":  24
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"segment\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Routing\\DefaultRoutePatternMatcher.cs",
 "region":  {
 "startLine":  154,
@@ -440,12 +540,15 @@
 "endLine":  154,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"segment\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Routing\\DefaultRoutePatternMatcher.cs",
 "region":  {
 "startLine":  158,
@@ -453,12 +556,15 @@
 "endLine":  158,
 "endColumn":  24
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"cryptographyConfiguration\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Security\\Csrf.cs",
 "region":  {
 "startLine":  25,
@@ -466,12 +572,15 @@
 "endLine":  25,
 "endColumn":  38
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"cryptographyConfiguration\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Security\\Csrf.cs",
 "region":  {
 "startLine":  93,
@@ -479,12 +588,15 @@
 "endLine":  93,
 "endColumn":  38
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"constructor\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  3654,
@@ -492,12 +604,15 @@
 "endLine":  3654,
 "endColumn":  28
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"substitutionObject\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
 "region":  {
 "startLine":  338,
@@ -505,12 +620,15 @@
 "endLine":  338,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"model\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
 "region":  {
 "startLine":  482,
@@ -518,12 +636,15 @@
 "endLine":  482,
 "endColumn":  30
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"model\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
 "region":  {
 "startLine":  574,
@@ -531,7 +652,9 @@
 "endLine":  574,
 "endColumn":  30
 }
-}
+},
+null
+]
 }
 ]
 }

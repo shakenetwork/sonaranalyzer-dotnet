@@ -3,7 +3,8 @@
 {
 "id":  "S2486",
 "message":  "Handle the exception or explain in a comment why it can be ignored.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Bootstrapper\\AppDomainAssemblyTypeScanner.cs",
 "region":  {
 "startLine":  255,
@@ -11,12 +12,15 @@
 "endLine":  257,
 "endColumn":  26
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2486",
 "message":  "Handle the exception or explain in a comment why it can be ignored.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Bootstrapper\\FavIconApplicationStartup.cs",
 "region":  {
 "startLine":  109,
@@ -24,12 +28,15 @@
 "endLine":  111,
 "endColumn":  14
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2486",
 "message":  "Handle the exception or explain in a comment why it can be ignored.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Conventions\\StaticContentConventionBuilder.cs",
 "region":  {
 "startLine":  109,
@@ -37,12 +44,15 @@
 "endLine":  111,
 "endColumn":  14
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2486",
 "message":  "Handle the exception or explain in a comment why it can be ignored.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\IO\\RequestStream.cs",
 "region":  {
 "startLine":  389,
@@ -50,12 +60,15 @@
 "endLine":  391,
 "endColumn":  14
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2486",
 "message":  "Handle the exception or explain in a comment why it can be ignored.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\DefaultViewFactory.cs",
 "region":  {
 "startLine":  116,
@@ -63,7 +76,9 @@
 "endLine":  118,
 "endColumn":  18
 }
-}
+},
+null
+]
 }
 ]
 }

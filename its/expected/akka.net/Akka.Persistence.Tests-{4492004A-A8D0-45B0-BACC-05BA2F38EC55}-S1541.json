@@ -3,7 +3,8 @@
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this constructor is 28 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\Fsm\\PersistentFSMSpec.cs",
 "region":  {
 "startLine":  329,
@@ -11,7 +12,9 @@
 "endLine":  329,
 "endColumn":  39
 }
-}
+},
+null
+]
 }
 ]
 }

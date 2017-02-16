@@ -3,7 +3,8 @@
 {
 "id":  "S2355",
 "message":  "Use an array literal here instead.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\multi.EmberExtras\\frmMediaSourcesEditor.vb",
 "region":  {
 "startLine":  30,
@@ -11,12 +12,15 @@
 "endLine":  30,
 "endColumn":  109
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2355",
 "message":  "Use an array literal here instead.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\multi.EmberExtras\\genericGenresEditor.vb",
 "region":  {
 "startLine":  41,
@@ -24,12 +28,15 @@
 "endLine":  41,
 "endColumn":  105
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2355",
 "message":  "Use an array literal here instead.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\multi.EmberExtras\\genericMediaSources.vb",
 "region":  {
 "startLine":  41,
@@ -37,12 +44,15 @@
 "endLine":  41,
 "endColumn":  105
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2355",
 "message":  "Use an array literal here instead.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\multi.EmberExtras\\genericMetadataEditor.vb",
 "region":  {
 "startLine":  41,
@@ -50,7 +60,9 @@
 "endLine":  41,
 "endColumn":  105
 }
-}
+},
+null
+]
 }
 ]
 }

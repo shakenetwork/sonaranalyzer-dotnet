@@ -3,7 +3,8 @@
 {
 "id":  "S2375",
 "message":  "Wrap this and the following 18 statements that use \"Master.eLang\" in a \"With\" statement.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.NMT\\dlgNMTMovies.vb",
 "region":  {
 "startLine":  1318,
@@ -11,12 +12,15 @@
 "endLine":  1318,
 "endColumn":  63
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2375",
 "message":  "Wrap this and the following 7 statements that use \"Master.eLang\" in a \"With\" statement.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.NMT\\frmSettingsHolder.vb",
 "region":  {
 "startLine":  199,
@@ -24,7 +28,9 @@
 "endLine":  199,
 "endColumn":  67
 }
-}
+},
+null
+]
 }
 ]
 }

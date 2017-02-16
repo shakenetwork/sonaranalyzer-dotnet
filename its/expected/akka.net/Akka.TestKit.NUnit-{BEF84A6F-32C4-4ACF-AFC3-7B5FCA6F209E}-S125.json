@@ -3,7 +3,8 @@
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\testkits\\Akka.TestKit.NUnit\\TestKit.cs",
 "region":  {
 "startLine":  24,
@@ -11,7 +12,9 @@
 "endLine":  24,
 "endColumn":  72
 }
-}
+},
+null
+]
 }
 ]
 }

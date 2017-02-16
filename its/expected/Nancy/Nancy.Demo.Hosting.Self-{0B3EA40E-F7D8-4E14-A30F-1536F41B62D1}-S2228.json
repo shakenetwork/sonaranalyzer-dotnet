@@ -3,7 +3,8 @@
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Demo.Hosting.Self\\Program.cs",
 "region":  {
 "startLine":  16,
@@ -11,12 +12,15 @@
 "endLine":  16,
 "endColumn":  34
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Demo.Hosting.Self\\Program.cs",
 "region":  {
 "startLine":  27,
@@ -24,7 +28,9 @@
 "endLine":  27,
 "endColumn":  30
 }
-}
+},
+null
+]
 }
 ]
 }

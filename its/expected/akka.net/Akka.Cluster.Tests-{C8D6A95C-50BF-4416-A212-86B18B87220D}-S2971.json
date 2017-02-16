@@ -3,7 +3,8 @@
 {
 "id":  "S2971",
 "message":  "Use \"Count\" property here instead.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\GossipSpec.cs",
 "region":  {
 "startLine":  116,
@@ -11,7 +12,9 @@
 "endLine":  116,
 "endColumn":  43
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S1939",
 "message":  "\"INancyBootstrapper\" implements \"IDisposable\" so \"IDisposable\" can be removed from the inheritance list.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Bootstrapper\\NancyBootstrapperBase.cs",
 "region":  {
 "startLine":  21,
@@ -11,7 +12,9 @@
 "endLine":  21,
 "endColumn":  115
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S1067",
 "message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Reporting\\TestRunTree.cs",
 "region":  {
 "startLine":  247,
@@ -11,12 +12,15 @@
 "endLine":  252,
 "endColumn":  47
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1067",
 "message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Reporting\\TestRunTree.cs",
 "region":  {
 "startLine":  383,
@@ -24,7 +28,9 @@
 "endLine":  387,
 "endColumn":  47
 }
-}
+},
+null
+]
 }
 ]
 }

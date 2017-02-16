@@ -3,7 +3,8 @@
 {
 "id":  "S108",
 "message":  "Either remove or fill this block of code.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Bootstrapper\\AppDomainAssemblyTypeScanner.cs",
 "region":  {
 "startLine":  256,
@@ -11,12 +12,15 @@
 "endLine":  257,
 "endColumn":  26
 }
-}
+},
+null
+]
 },
 {
 "id":  "S108",
 "message":  "Either remove or fill this block of code.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Bootstrapper\\FavIconApplicationStartup.cs",
 "region":  {
 "startLine":  110,
@@ -24,12 +28,15 @@
 "endLine":  111,
 "endColumn":  14
 }
-}
+},
+null
+]
 },
 {
 "id":  "S108",
 "message":  "Either remove or fill this block of code.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Bootstrapper\\NancyBootstrapperBase.cs",
 "region":  {
 "startLine":  423,
@@ -37,12 +44,15 @@
 "endLine":  424,
 "endColumn":  18
 }
-}
+},
+null
+]
 },
 {
 "id":  "S108",
 "message":  "Either remove or fill this block of code.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Conventions\\StaticContentConventionBuilder.cs",
 "region":  {
 "startLine":  110,
@@ -50,12 +60,15 @@
 "endLine":  111,
 "endColumn":  14
 }
-}
+},
+null
+]
 },
 {
 "id":  "S108",
 "message":  "Either remove or fill this block of code.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\IO\\RequestStream.cs",
 "region":  {
 "startLine":  390,
@@ -63,12 +76,15 @@
 "endLine":  391,
 "endColumn":  14
 }
-}
+},
+null
+]
 },
 {
 "id":  "S108",
 "message":  "Either remove or fill this block of code.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\IO\\RequestStream.cs",
 "region":  {
 "startLine":  409,
@@ -76,12 +92,15 @@
 "endLine":  410,
 "endColumn":  14
 }
-}
+},
+null
+]
 },
 {
 "id":  "S108",
 "message":  "Either remove or fill this block of code.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\DefaultViewFactory.cs",
 "region":  {
 "startLine":  117,
@@ -89,7 +108,9 @@
 "endLine":  118,
 "endColumn":  18
 }
-}
+},
+null
+]
 }
 ]
 }

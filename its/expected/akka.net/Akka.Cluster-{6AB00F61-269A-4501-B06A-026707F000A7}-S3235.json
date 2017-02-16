@@ -3,7 +3,8 @@
 {
 "id":  "S3235",
 "message":  "Remove these redundant parentheses.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Proto\\ClusterMessageSerializer.cs",
 "region":  {
 "startLine":  218,
@@ -11,12 +12,15 @@
 "endLine":  218,
 "endColumn":  63
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3235",
 "message":  "Remove these redundant parentheses.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Proto\\ClusterMessageSerializer.cs",
 "region":  {
 "startLine":  242,
@@ -24,7 +28,9 @@
 "endLine":  242,
 "endColumn":  88
 }
-}
+},
+null
+]
 }
 ]
 }

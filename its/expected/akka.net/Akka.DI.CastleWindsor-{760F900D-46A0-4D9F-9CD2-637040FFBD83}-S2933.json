@@ -3,7 +3,8 @@
 {
 "id":  "S2933",
 "message":  "Make \"container\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.CastleWindsor\\WindsorDependencyResolver.cs",
 "region":  {
 "startLine":  23,
@@ -11,12 +12,15 @@
 "endLine":  23,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"typeCache\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.CastleWindsor\\WindsorDependencyResolver.cs",
 "region":  {
 "startLine":  24,
@@ -24,12 +28,15 @@
 "endLine":  24,
 "endColumn":  61
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"system\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.CastleWindsor\\WindsorDependencyResolver.cs",
 "region":  {
 "startLine":  25,
@@ -37,7 +44,9 @@
 "endLine":  25,
 "endColumn":  35
 }
-}
+},
+null
+]
 }
 ]
 }

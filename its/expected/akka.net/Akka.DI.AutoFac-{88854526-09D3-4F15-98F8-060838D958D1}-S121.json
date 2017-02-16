@@ -3,7 +3,8 @@
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.AutoFac\\AutoFacDependencyResolver.cs",
 "region":  {
 "startLine":  39,
@@ -11,12 +12,15 @@
 "endLine":  39,
 "endColumn":  15
 }
-}
+},
+null
+]
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.AutoFac\\AutoFacDependencyResolver.cs",
 "region":  {
 "startLine":  40,
@@ -24,7 +28,9 @@
 "endLine":  40,
 "endColumn":  15
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S907",
 "message":  "Remove this use of \"goto\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
 "region":  {
 "startLine":  185,
@@ -11,7 +12,9 @@
 "endLine":  185,
 "endColumn":  10
 }
-}
+},
+null
+]
 }
 ]
 }

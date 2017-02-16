@@ -3,7 +3,8 @@
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_heartbeatTimestamp\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\DeadlineFailureDetector.cs",
 "region":  {
 "startLine":  53,
@@ -11,12 +12,15 @@
 "endLine":  53,
 "endColumn":  46
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_active\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\DeadlineFailureDetector.cs",
 "region":  {
 "startLine":  55,
@@ -24,12 +28,15 @@
 "endLine":  55,
 "endColumn":  46
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_lastAck\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  830,
@@ -37,12 +44,15 @@
 "endLine":  830,
 "endColumn":  36
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_writeCount\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  1123,
@@ -50,12 +60,15 @@
 "endLine":  1123,
 "endColumn":  36
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_fullBackoff\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  1126,
@@ -63,12 +76,15 @@
 "endLine":  1126,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_smallBackoffCount\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  1130,
@@ -76,12 +92,15 @@
 "endLine":  1130,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_noBackoffCount\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  1131,
@@ -89,12 +108,15 @@
 "endLine":  1131,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_normalShutdown\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  289,
@@ -102,12 +124,15 @@
 "endLine":  289,
 "endColumn":  45
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_upstreamListener\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
 "region":  {
 "startLine":  137,
@@ -115,12 +140,15 @@
 "endLine":  137,
 "endColumn":  76
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"MaximumOverhead\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
 "region":  {
 "startLine":  141,
@@ -128,12 +156,15 @@
 "endLine":  141,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_upstreamListener\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
 "region":  {
 "startLine":  300,
@@ -141,12 +172,15 @@
 "endLine":  300,
 "endColumn":  71
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"UniqueId\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TransportAdapters.cs",
 "region":  {
 "startLine":  350,
@@ -154,7 +188,9 @@
 "endLine":  350,
 "endColumn":  37
 }
-}
+},
+null
+]
 }
 ]
 }

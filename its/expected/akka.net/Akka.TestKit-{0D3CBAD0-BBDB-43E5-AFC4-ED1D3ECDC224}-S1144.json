@@ -3,7 +3,8 @@
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\Internal\\BlockingQueue.cs",
 "region":  {
 "startLine":  95,
@@ -11,7 +12,9 @@
 "endLine":  196,
 "endColumn":  10
 }
-}
+},
+null
+]
 }
 ]
 }

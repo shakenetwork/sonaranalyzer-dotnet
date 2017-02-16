@@ -3,7 +3,8 @@
 {
 "id":  "S103",
 "message":  "Split this 288 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\CodeParserHelper.cs",
 "region":  {
 "startLine":  19,
@@ -11,12 +12,15 @@
 "endLine":  19,
 "endColumn":  289
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 213 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\NancyRazorViewBase.cs",
 "region":  {
 "startLine":  421,
@@ -24,12 +28,15 @@
 "endLine":  421,
 "endColumn":  214
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 216 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\RazorViewEngine.cs",
 "region":  {
 "startLine":  209,
@@ -37,12 +44,15 @@
 "endLine":  209,
 "endColumn":  217
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 201 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\RazorViewEngine.cs",
 "region":  {
 "startLine":  276,
@@ -50,7 +60,9 @@
 "endLine":  276,
 "endColumn":  202
 }
-}
+},
+null
+]
 }
 ]
 }

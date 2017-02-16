@@ -3,7 +3,8 @@
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRoundRobinSpec.cs",
 "region":  {
 "startLine":  125,
@@ -11,7 +12,9 @@
 "endLine":  125,
 "endColumn":  112
 }
-}
+},
+null
+]
 }
 ]
 }

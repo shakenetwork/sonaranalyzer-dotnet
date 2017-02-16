@@ -3,7 +3,8 @@
 {
 "id":  "S2933",
 "message":  "Make \"generationProvider\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorLifeCycleSpec.cs",
 "region":  {
 "startLine":  25,
@@ -11,12 +12,15 @@
 "endLine":  25,
 "endColumn":  53
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"id\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorLifeCycleSpec.cs",
 "region":  {
 "startLine":  26,
@@ -24,12 +28,15 @@
 "endLine":  26,
 "endColumn":  30
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"testActor\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorLifeCycleSpec.cs",
 "region":  {
 "startLine":  27,
@@ -37,12 +44,15 @@
 "endLine":  27,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"CurrentGeneration\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorLifeCycleSpec.cs",
 "region":  {
 "startLine":  28,
@@ -50,12 +60,15 @@
 "endLine":  28,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"generationProvider\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorLifeCycleSpec.cs",
 "region":  {
 "startLine":  73,
@@ -63,12 +76,15 @@
 "endLine":  73,
 "endColumn":  53
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"id\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorLifeCycleSpec.cs",
 "region":  {
 "startLine":  74,
@@ -76,12 +92,15 @@
 "endLine":  74,
 "endColumn":  30
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"testActor\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorLifeCycleSpec.cs",
 "region":  {
 "startLine":  75,
@@ -89,12 +108,15 @@
 "endLine":  75,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"CurrentGeneration\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorLifeCycleSpec.cs",
 "region":  {
 "startLine":  76,
@@ -102,12 +124,15 @@
 "endLine":  76,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"testActor\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorLifeCycleSpec.cs",
 "region":  {
 "startLine":  216,
@@ -115,12 +140,15 @@
 "endLine":  216,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"testActor\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorLifeCycleSpec.cs",
 "region":  {
 "startLine":  276,
@@ -128,12 +156,15 @@
 "endLine":  276,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"testActor\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorLifeCycleSpec.cs",
 "region":  {
 "startLine":  324,
@@ -141,12 +172,15 @@
 "endLine":  324,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_resolver\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorProducerPipelineTests.cs",
 "region":  {
 "startLine":  120,
@@ -154,12 +188,15 @@
 "endLine":  120,
 "endColumn":  56
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_replyTo\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorRefSpec.cs",
 "region":  {
 "startLine":  402,
@@ -167,12 +204,15 @@
 "endLine":  402,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_latch\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorRefSpec.cs",
 "region":  {
 "startLine":  403,
@@ -180,12 +220,15 @@
 "endLine":  403,
 "endColumn":  37
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_path\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorRefSpec.cs",
 "region":  {
 "startLine":  574,
@@ -193,12 +236,15 @@
 "endLine":  574,
 "endColumn":  36
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_echoActor\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorSelectionSpec.cs",
 "region":  {
 "startLine":  21,
@@ -206,12 +252,15 @@
 "endLine":  21,
 "endColumn":  37
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_selectionTestActor\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorSelectionSpec.cs",
 "region":  {
 "startLine":  22,
@@ -219,12 +268,15 @@
 "endLine":  22,
 "endColumn":  46
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_replyActor\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\AskSpec.cs",
 "region":  {
 "startLine":  42,
@@ -232,12 +284,15 @@
 "endLine":  42,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_testActor\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\AskSpec.cs",
 "region":  {
 "startLine":  44,
@@ -245,12 +300,15 @@
 "endLine":  44,
 "endColumn":  41
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_terminal\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\DeathWatchSpec.cs",
 "region":  {
 "startLine":  25,
@@ -258,12 +316,15 @@
 "endLine":  25,
 "endColumn":  36
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_testActor\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\DeathWatchSpec.cs",
 "region":  {
 "startLine":  459,
@@ -271,12 +332,15 @@
 "endLine":  459,
 "endColumn":  41
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_taskCompletionSource\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\PipeToSupportSpec.cs",
 "region":  {
 "startLine":  19,
@@ -284,12 +348,15 @@
 "endLine":  19,
 "endColumn":  67
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_task\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\PipeToSupportSpec.cs",
 "region":  {
 "startLine":  20,
@@ -297,12 +364,15 @@
 "endLine":  20,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"latchActor\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\PropsSpec.cs",
 "region":  {
 "startLine":  81,
@@ -310,12 +380,15 @@
 "endLine":  81,
 "endColumn":  33
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_timeoutLatch\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ReceiveTimeoutSpec.cs",
 "region":  {
 "startLine":  23,
@@ -323,12 +396,15 @@
 "endLine":  23,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_timeoutLatch\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ReceiveTimeoutSpec.cs",
 "region":  {
 "startLine":  52,
@@ -336,12 +412,15 @@
 "endLine":  52,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_deadLetters\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\RootGuardianActorRef_Tests.cs",
 "region":  {
 "startLine":  22,
@@ -349,12 +428,15 @@
 "endLine":  22,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_emptyExtraNames\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\RootGuardianActorRef_Tests.cs",
 "region":  {
 "startLine":  23,
@@ -362,12 +444,15 @@
 "endLine":  23,
 "endColumn":  71
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_dispatcher\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\RootGuardianActorRef_Tests.cs",
 "region":  {
 "startLine":  24,
@@ -375,12 +460,15 @@
 "endLine":  24,
 "endColumn":  38
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_registerCallReceiver\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\TcpListenerSpec.cs",
 "region":  {
 "startLine":  182,
@@ -388,12 +476,15 @@
 "endLine":  182,
 "endColumn":  52
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_interestCallReceiver\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\TcpListenerSpec.cs",
 "region":  {
 "startLine":  183,
@@ -401,12 +492,15 @@
 "endLine":  183,
 "endColumn":  52
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_counter\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\BroadcastSpec.cs",
 "region":  {
 "startLine":  30,
@@ -414,12 +508,15 @@
 "endLine":  30,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_latch\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\BroadcastSpec.cs",
 "region":  {
 "startLine":  31,
@@ -427,12 +524,15 @@
 "endLine":  31,
 "endColumn":  37
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"a\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\ConsistentHashingRouterSpec.cs",
 "region":  {
 "startLine":  79,
@@ -440,12 +540,15 @@
 "endLine":  79,
 "endColumn":  28
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"b\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\ConsistentHashingRouterSpec.cs",
 "region":  {
 "startLine":  79,
@@ -453,12 +556,15 @@
 "endLine":  79,
 "endColumn":  31
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"c\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\ConsistentHashingRouterSpec.cs",
 "region":  {
 "startLine":  79,
@@ -466,12 +572,15 @@
 "endLine":  79,
 "endColumn":  34
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_fooLatch\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\ListenerSpec.cs",
 "region":  {
 "startLine":  80,
@@ -479,12 +588,15 @@
 "endLine":  80,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_barLatch\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\ListenerSpec.cs",
 "region":  {
 "startLine":  81,
@@ -492,12 +604,15 @@
 "endLine":  81,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_barCount\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\ListenerSpec.cs",
 "region":  {
 "startLine":  82,
@@ -505,12 +620,15 @@
 "endLine":  82,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_testLatch\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\RandomSpec.cs",
 "region":  {
 "startLine":  20,
@@ -518,12 +636,15 @@
 "endLine":  20,
 "endColumn":  41
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_testLatch\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\RoundRobinSpec.cs",
 "region":  {
 "startLine":  20,
@@ -531,12 +652,15 @@
 "endLine":  20,
 "endColumn":  41
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_counter\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\ScatterGatherFirstCompletedSpec.cs",
 "region":  {
 "startLine":  30,
@@ -544,12 +668,15 @@
 "endLine":  30,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_latch\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\ScatterGatherFirstCompletedSpec.cs",
 "region":  {
 "startLine":  31,
@@ -557,12 +684,15 @@
 "endLine":  31,
 "endColumn":  37
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_id\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\ScatterGatherFirstCompletedSpec.cs",
 "region":  {
 "startLine":  98,
@@ -570,12 +700,15 @@
 "endLine":  98,
 "endColumn":  28
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"usedActors\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\SmallestMailboxSpec.cs",
 "region":  {
 "startLine":  21,
@@ -583,7 +716,9 @@
 "endLine":  21,
 "endColumn":  65
 }
-}
+},
+null
+]
 }
 ]
 }

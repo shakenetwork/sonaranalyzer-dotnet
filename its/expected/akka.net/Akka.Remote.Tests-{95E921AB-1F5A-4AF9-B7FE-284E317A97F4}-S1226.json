@@ -3,7 +3,8 @@
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"acc\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AckedDeliverySpec.cs",
 "region":  {
 "startLine":  308,
@@ -11,7 +12,9 @@
 "endLine":  308,
 "endColumn":  20
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S2328",
 "message":  "Remove this use of \"inputType\" from the \"GetHashCode\" declaration, or make it \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Props.cs",
 "region":  {
 "startLine":  118,
@@ -11,7 +12,9 @@
 "endLine":  118,
 "endColumn":  55
 }
-}
+},
+null
+]
 }
 ]
 }

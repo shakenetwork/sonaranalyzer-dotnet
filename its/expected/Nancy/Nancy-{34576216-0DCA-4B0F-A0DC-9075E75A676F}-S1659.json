@@ -3,7 +3,8 @@
 {
 "id":  "S1659",
 "message":  "Declare \"next_state\" in a separate statement.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
 "region":  {
 "startLine":  579,
@@ -11,7 +12,9 @@
 "endLine":  579,
 "endColumn":  30
 }
-}
+},
+null
+]
 }
 ]
 }

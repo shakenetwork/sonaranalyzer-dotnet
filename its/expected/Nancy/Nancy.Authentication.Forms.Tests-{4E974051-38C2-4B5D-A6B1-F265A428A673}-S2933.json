@@ -3,7 +3,8 @@
 {
 "id":  "S2933",
 "message":  "Make \"config\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationConfigurationFixture.cs",
 "region":  {
 "startLine":  11,
@@ -11,12 +12,15 @@
 "endLine":  11,
 "endColumn":  56
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"config\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
 "region":  {
 "startLine":  17,
@@ -24,12 +28,15 @@
 "endLine":  17,
 "endColumn":  56
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"secureConfig\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
 "region":  {
 "startLine":  18,
@@ -37,12 +44,15 @@
 "endLine":  18,
 "endColumn":  62
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"domainPathConfig\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
 "region":  {
 "startLine":  19,
@@ -50,12 +60,15 @@
 "endLine":  19,
 "endColumn":  66
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"context\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
 "region":  {
 "startLine":  20,
@@ -63,12 +76,15 @@
 "endLine":  20,
 "endColumn":  37
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"userGuid\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
 "region":  {
 "startLine":  21,
@@ -76,12 +92,15 @@
 "endLine":  21,
 "endColumn":  30
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"validCookieValue\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
 "region":  {
 "startLine":  23,
@@ -89,12 +108,15 @@
 "endLine":  23,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"cookieWithNoHmac\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
 "region":  {
 "startLine":  26,
@@ -102,12 +124,15 @@
 "endLine":  26,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"cookieWithEmptyHmac\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
 "region":  {
 "startLine":  29,
@@ -115,12 +140,15 @@
 "endLine":  29,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"cookieWithInvalidHmac\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
 "region":  {
 "startLine":  32,
@@ -128,12 +156,15 @@
 "endLine":  32,
 "endColumn":  45
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"cookieWithBrokenEncryptedData\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
 "region":  {
 "startLine":  35,
@@ -141,12 +172,15 @@
 "endLine":  35,
 "endColumn":  53
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"cryptographyConfiguration\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
 "region":  {
 "startLine":  38,
@@ -154,12 +188,15 @@
 "endLine":  38,
 "endColumn":  68
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"domain\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
 "region":  {
 "startLine":  40,
@@ -167,12 +204,15 @@
 "endLine":  40,
 "endColumn":  30
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"path\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
 "region":  {
 "startLine":  42,
@@ -180,12 +220,15 @@
 "endLine":  42,
 "endColumn":  28
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"configuration\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Tests\\Fakes\\FakeDefaultNancyBootstrapper.cs",
 "region":  {
 "startLine":  16,
@@ -193,12 +236,15 @@
 "endLine":  16,
 "endColumn":  57
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_Modules\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Tests\\Fakes\\FakeModuleCatalog.cs",
 "region":  {
 "startLine":  9,
@@ -206,7 +252,9 @@
 "endLine":  9,
 "endColumn":  56
 }
-}
+},
+null
+]
 }
 ]
 }

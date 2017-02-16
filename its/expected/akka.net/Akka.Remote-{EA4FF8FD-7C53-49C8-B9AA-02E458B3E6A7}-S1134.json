@@ -3,7 +3,8 @@
 {
 "id":  "S1134",
 "message":  "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  1128,
@@ -11,12 +12,15 @@
 "endLine":  1128,
 "endColumn":  17
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1134",
 "message":  "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  1348,
@@ -24,7 +28,9 @@
 "endLine":  1348,
 "endColumn":  25
 }
-}
+},
+null
+]
 }
 ]
 }

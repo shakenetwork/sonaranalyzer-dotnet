@@ -3,7 +3,8 @@
 {
 "id":  "S2933",
 "message":  "Make \"form\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\Events\\ShowFormOnUIThread.cs",
 "region":  {
 "startLine":  23,
@@ -11,12 +12,15 @@
 "endLine":  23,
 "endColumn":  26
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"asDialog\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\Events\\ShowFormOnUIThread.cs",
 "region":  {
 "startLine":  24,
@@ -24,12 +28,15 @@
 "endLine":  24,
 "endColumn":  30
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"cancelled\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\PluginActionResult.cs",
 "region":  {
 "startLine":  13,
@@ -37,12 +44,15 @@
 "endLine":  13,
 "endColumn":  31
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"breakChain\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\PluginActionResult.cs",
 "region":  {
 "startLine":  14,
@@ -50,12 +60,15 @@
 "endLine":  14,
 "endColumn":  32
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"result\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\PluginActionResult.cs",
 "region":  {
 "startLine":  15,
@@ -63,12 +76,15 @@
 "endLine":  15,
 "endColumn":  30
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"error\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\PluginActionResult.cs",
 "region":  {
 "startLine":  16,
@@ -76,12 +92,15 @@
 "endLine":  16,
 "endColumn":  32
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"plugins\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\PluginManager.cs",
 "region":  {
 "startLine":  30,
@@ -89,12 +108,15 @@
 "endLine":  30,
 "endColumn":  56
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"movieScraper\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\PluginManager.cs",
 "region":  {
 "startLine":  31,
@@ -102,12 +124,15 @@
 "endLine":  31,
 "endColumn":  57
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"plugin\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\PluginManager.cs",
 "region":  {
 "startLine":  237,
@@ -115,12 +140,15 @@
 "endLine":  237,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"imageScrapeType\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\Scraper\\ImageScrapeActionContext.cs",
 "region":  {
 "startLine":  30,
@@ -128,12 +156,15 @@
 "endLine":  30,
 "endColumn":  48
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"dbMovie\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\Scraper\\IMovieImageScraper.cs",
 "region":  {
 "startLine":  29,
@@ -141,12 +172,15 @@
 "endLine":  29,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"dbMovie\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\Scraper\\IMovieInfoScraper.cs",
 "region":  {
 "startLine":  30,
@@ -154,12 +188,15 @@
 "endLine":  30,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"options\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\Scraper\\IMovieInfoScraper.cs",
 "region":  {
 "startLine":  31,
@@ -167,12 +204,15 @@
 "endLine":  31,
 "endColumn":  49
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"manager\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\Scraper\\MovieScraperManager.cs",
 "region":  {
 "startLine":  45,
@@ -180,12 +220,15 @@
 "endLine":  45,
 "endColumn":  38
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"scrapeType\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\Scraper\\ScraperActionContext.cs",
 "region":  {
 "startLine":  30,
@@ -193,12 +236,15 @@
 "endLine":  30,
 "endColumn":  38
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"askIfMultipleResults\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\Scraper\\ScraperActionContext.cs",
 "region":  {
 "startLine":  31,
@@ -206,7 +252,9 @@
 "endLine":  31,
 "endColumn":  42
 }
-}
+},
+null
+]
 }
 ]
 }

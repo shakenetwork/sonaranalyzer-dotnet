@@ -3,7 +3,8 @@
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\ClusterClient\\ClusterClientSpec.cs",
 "region":  {
 "startLine":  59,
@@ -11,12 +12,15 @@
 "endLine":  59,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\PublishSubscribe\\DistributedPubSubMediatorSpec.cs",
 "region":  {
 "startLine":  49,
@@ -24,12 +28,15 @@
 "endLine":  49,
 "endColumn":  56
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\Singleton\\ClusterSingletonManagerChaosSpec.cs",
 "region":  {
 "startLine":  77,
@@ -37,12 +44,15 @@
 "endLine":  77,
 "endColumn":  59
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\Singleton\\ClusterSingletonManagerLeaveSpec.cs",
 "region":  {
 "startLine":  46,
@@ -50,12 +60,15 @@
 "endLine":  46,
 "endColumn":  59
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\Singleton\\ClusterSingletonManagerSpec.cs",
 "region":  {
 "startLine":  284,
@@ -63,12 +76,15 @@
 "endLine":  284,
 "endColumn":  54
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\Singleton\\ClusterSingletonManagerStartupSpec.cs",
 "region":  {
 "startLine":  41,
@@ -76,7 +92,9 @@
 "endLine":  41,
 "endColumn":  61
 }
-}
+},
+null
+]
 }
 ]
 }

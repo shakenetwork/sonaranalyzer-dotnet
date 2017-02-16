@@ -3,7 +3,8 @@
 {
 "id":  "S1172",
 "message":  "Remove this unused method parameter \"args\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\Cluster\\ClusterTools\\ClusterToolsExample.Node\\Program.cs",
 "region":  {
 "startLine":  11,
@@ -11,7 +12,9 @@
 "endLine":  11,
 "endColumn":  39
 }
-}
+},
+null
+]
 }
 ]
 }

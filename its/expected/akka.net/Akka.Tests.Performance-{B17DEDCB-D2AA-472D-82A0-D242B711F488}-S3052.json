@@ -3,7 +3,8 @@
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_currentMessages\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests.Performance\\Actor\\MinimalActorRefThroughputSpec.cs",
 "region":  {
 "startLine":  16,
@@ -11,12 +12,15 @@
 "endLine":  16,
 "endColumn":  46
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_currentMessages\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests.Performance\\Actor\\ReceiveActorThroughputSpec.cs",
 "region":  {
 "startLine":  13,
@@ -24,12 +28,15 @@
 "endLine":  13,
 "endColumn":  46
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_currentMessages\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests.Performance\\Actor\\UntypedActorThroughputSpec.cs",
 "region":  {
 "startLine":  13,
@@ -37,7 +44,9 @@
 "endLine":  13,
 "endColumn":  46
 }
-}
+},
+null
+]
 }
 ]
 }

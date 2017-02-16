@@ -3,7 +3,8 @@
 {
 "id":  "S1125",
 "message":  "Remove the unnecessary Boolean literal(s).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
 "region":  {
 "startLine":  466,
@@ -11,12 +12,15 @@
 "endLine":  466,
 "endColumn":  118
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1125",
 "message":  "Remove the unnecessary Boolean literal(s).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
 "region":  {
 "startLine":  471,
@@ -24,7 +28,9 @@
 "endLine":  471,
 "endColumn":  117
 }
-}
+},
+null
+]
 }
 ]
 }

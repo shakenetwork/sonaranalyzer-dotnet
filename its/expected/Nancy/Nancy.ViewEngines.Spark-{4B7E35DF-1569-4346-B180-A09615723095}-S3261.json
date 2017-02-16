@@ -3,7 +3,8 @@
 {
 "id":  "S3261",
 "message":  "Remove this empty namespace.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Spark\\Descriptors\\DescriptorFilterExtensions.cs",
 "region":  {
 "startLine":  1,
@@ -11,7 +12,9 @@
 "endLine":  30,
 "endColumn":  2
 }
-}
+},
+null
+]
 }
 ]
 }

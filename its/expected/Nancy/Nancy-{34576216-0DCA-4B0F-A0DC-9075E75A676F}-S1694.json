@@ -3,7 +3,8 @@
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Bootstrapper\\ContainerRegistration.cs",
 "region":  {
 "startLine":  11,
@@ -11,12 +12,15 @@
 "endLine":  11,
 "endColumn":  48
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Bootstrapper\\Registrations.cs",
 "region":  {
 "startLine":  10,
@@ -24,12 +28,15 @@
 "endLine":  10,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Diagnostics\\DiagnosticModule.cs",
 "region":  {
 "startLine":  3,
@@ -37,12 +44,15 @@
 "endLine":  3,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to an interface.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptPrimitiveConverter.cs",
 "region":  {
 "startLine":  6,
@@ -50,12 +60,15 @@
 "endLine":  6,
 "endColumn":  55
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\NamedPipelineBase.cs",
 "region":  {
 "startLine":  7,
@@ -63,12 +76,15 @@
 "endLine":  7,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\NancyModule.cs",
 "region":  {
 "startLine":  19,
@@ -76,7 +92,9 @@
 "endLine":  19,
 "endColumn":  38
 }
-}
+},
+null
+]
 }
 ]
 }

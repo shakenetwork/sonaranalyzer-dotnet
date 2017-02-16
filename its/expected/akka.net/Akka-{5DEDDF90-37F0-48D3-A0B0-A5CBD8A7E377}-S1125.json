@@ -3,7 +3,8 @@
 {
 "id":  "S1125",
 "message":  "Remove the unnecessary Boolean literal(s).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Pattern\\CircuitBreakerState.cs",
 "region":  {
 "startLine":  152,
@@ -11,7 +12,9 @@
 "endLine":  152,
 "endColumn":  134
 }
-}
+},
+null
+]
 }
 ]
 }

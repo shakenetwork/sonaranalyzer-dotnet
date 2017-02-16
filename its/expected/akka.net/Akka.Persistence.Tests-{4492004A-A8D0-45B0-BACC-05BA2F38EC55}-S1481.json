@@ -3,7 +3,8 @@
 {
 "id":  "S1481",
 "message":  "Remove this unused \"chaos2\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\AtLeastOnceDeliveryFailureSpec.cs",
 "region":  {
 "startLine":  337,
@@ -11,7 +12,9 @@
 "endLine":  337,
 "endColumn":  23
 }
-}
+},
+null
+]
 }
 ]
 }

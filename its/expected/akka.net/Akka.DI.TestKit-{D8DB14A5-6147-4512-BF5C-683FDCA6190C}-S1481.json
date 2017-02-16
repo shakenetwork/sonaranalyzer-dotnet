@@ -3,7 +3,8 @@
 {
 "id":  "S1481",
 "message":  "Remove this unused \"resolver\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.TestKit\\DiResolverSpec.cs",
 "region":  {
 "startLine":  205,
@@ -11,7 +12,9 @@
 "endLine":  205,
 "endColumn":  25
 }
-}
+},
+null
+]
 }
 ]
 }

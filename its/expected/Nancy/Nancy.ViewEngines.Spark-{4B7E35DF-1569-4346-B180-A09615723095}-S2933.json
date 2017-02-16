@@ -3,7 +3,8 @@
 {
 "id":  "S2933",
 "message":  "Make \"currentlyLocatedViews\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Spark\\NancyViewFolder.cs",
 "region":  {
 "startLine":  22,
@@ -11,12 +12,15 @@
 "endLine":  22,
 "endColumn":  63
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"padlock\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Spark\\NancyViewFolder.cs",
 "region":  {
 "startLine":  24,
@@ -24,7 +28,9 @@
 "endLine":  24,
 "endColumn":  45
 }
-}
+},
+null
+]
 }
 ]
 }

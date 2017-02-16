@@ -3,7 +3,8 @@
 {
 "id":  "S2357",
 "message":  "Make \"CapturedRequest\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Testing.Tests\\BrowserDefaultsFixture.cs",
 "region":  {
 "startLine":  172,
@@ -11,7 +12,9 @@
 "endLine":  172,
 "endColumn":  43
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S101",
 "message":  "Rename class \"INancyEnvironmentExtensionsFixture\" to match camel case naming rules, consider using \"NancyEnvironmentExtensionsFixture\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Configuration\\INancyEnvironmentExtensionsFixture.cs",
 "region":  {
 "startLine":  7,
@@ -11,12 +12,15 @@
 "endLine":  7,
 "endColumn":  52
 }
-}
+},
+null
+]
 },
 {
 "id":  "S101",
 "message":  "Rename class \"SSLProxyFixture\" to match camel case naming rules, consider using \"SslProxyFixture\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Security\\SSLProxyFixture.cs",
 "region":  {
 "startLine":  12,
@@ -24,7 +28,9 @@
 "endLine":  12,
 "endColumn":  33
 }
-}
+},
+null
+]
 }
 ]
 }

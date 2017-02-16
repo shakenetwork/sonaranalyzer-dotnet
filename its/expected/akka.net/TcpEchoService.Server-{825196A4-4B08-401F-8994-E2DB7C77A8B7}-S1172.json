@@ -3,7 +3,8 @@
 {
 "id":  "S1172",
 "message":  "Remove this unused method parameter \"args\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\TcpEchoService.Server\\Program.cs",
 "region":  {
 "startLine":  16,
@@ -11,7 +12,9 @@
 "endLine":  16,
 "endColumn":  39
 }
-}
+},
+null
+]
 }
 ]
 }

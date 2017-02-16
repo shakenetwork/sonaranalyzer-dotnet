@@ -3,7 +3,8 @@
 {
 "id":  "S2933",
 "message":  "Make \"_acceptableHeartbeatPause\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\DeadlineFailureDetector.cs",
 "region":  {
 "startLine":  21,
@@ -11,12 +12,15 @@
 "endLine":  21,
 "endColumn":  51
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_clock\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\DeadlineFailureDetector.cs",
 "region":  {
 "startLine":  22,
@@ -24,12 +28,15 @@
 "endLine":  22,
 "endColumn":  29
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"system\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  41,
@@ -37,12 +44,15 @@
 "endLine":  41,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"provider\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  42,
@@ -50,12 +60,15 @@
 "endLine":  42,
 "endColumn":  48
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"log\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  43,
@@ -63,12 +76,15 @@
 "endLine":  43,
 "endColumn":  36
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"remoteDaemon\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  44,
@@ -76,12 +92,15 @@
 "endLine":  44,
 "endColumn":  47
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"settings\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  45,
@@ -89,12 +108,15 @@
 "endLine":  45,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"handleOrActive\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  276,
@@ -102,12 +124,15 @@
 "endLine":  276,
 "endColumn":  50
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"codec\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  282,
@@ -115,12 +140,15 @@
 "endLine":  282,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_endpoints\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  285,
@@ -128,12 +156,15 @@
 "endLine":  285,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_handleOrActive\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  817,
@@ -141,12 +172,15 @@
 "endLine":  817,
 "endColumn":  51
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"endpointId\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  282,
@@ -154,12 +188,15 @@
 "endLine":  282,
 "endColumn":  45
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"log\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  283,
@@ -167,12 +204,15 @@
 "endLine":  283,
 "endColumn":  36
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"eventPublisher\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  284,
@@ -180,12 +220,15 @@
 "endLine":  284,
 "endColumn":  46
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_receiveBuffers\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  297,
@@ -193,12 +236,15 @@
 "endLine":  297,
 "endColumn":  72
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"pendingReadHandoffs\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  331,
@@ -206,12 +252,15 @@
 "endLine":  331,
 "endColumn":  78
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"stashedInbound\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  332,
@@ -219,12 +268,15 @@
 "endLine":  332,
 "endColumn":  79
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_threshold\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\PhiAccrualFailureDetector.cs",
 "region":  {
 "startLine":  37,
@@ -232,12 +284,15 @@
 "endLine":  37,
 "endColumn":  34
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_maxSampleSize\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\PhiAccrualFailureDetector.cs",
 "region":  {
 "startLine":  38,
@@ -245,12 +300,15 @@
 "endLine":  38,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_minStdDeviation\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\PhiAccrualFailureDetector.cs",
 "region":  {
 "startLine":  39,
@@ -258,12 +316,15 @@
 "endLine":  39,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_acceptableHeartbeatPause\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\PhiAccrualFailureDetector.cs",
 "region":  {
 "startLine":  40,
@@ -271,12 +332,15 @@
 "endLine":  40,
 "endColumn":  51
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_firstHeartbeatEstimate\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\PhiAccrualFailureDetector.cs",
 "region":  {
 "startLine":  41,
@@ -284,12 +348,15 @@
 "endLine":  41,
 "endColumn":  49
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_clock\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\PhiAccrualFailureDetector.cs",
 "region":  {
 "startLine":  42,
@@ -297,12 +364,15 @@
 "endLine":  42,
 "endColumn":  29
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_maxSampleSize\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\PhiAccrualFailureDetector.cs",
 "region":  {
 "startLine":  244,
@@ -310,12 +380,15 @@
 "endLine":  244,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_intervals\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\PhiAccrualFailureDetector.cs",
 "region":  {
 "startLine":  245,
@@ -323,12 +396,15 @@
 "endLine":  245,
 "endColumn":  38
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_intervalSum\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\PhiAccrualFailureDetector.cs",
 "region":  {
 "startLine":  246,
@@ -336,12 +412,15 @@
 "endLine":  246,
 "endColumn":  34
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_squaredIntervalSum\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\PhiAccrualFailureDetector.cs",
 "region":  {
 "startLine":  247,
@@ -349,12 +428,15 @@
 "endLine":  247,
 "endColumn":  41
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_transportSupervisor\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Remoting.cs",
 "region":  {
 "startLine":  109,
@@ -362,12 +444,15 @@
 "endLine":  109,
 "endColumn":  47
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_eventPublisher\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Remoting.cs",
 "region":  {
 "startLine":  110,
@@ -375,12 +460,15 @@
 "endLine":  110,
 "endColumn":  47
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_wrappedTransport\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
 "startLine":  144,
@@ -388,12 +476,15 @@
 "endLine":  144,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_settings\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
 "startLine":  146,
@@ -401,12 +492,15 @@
 "endLine":  146,
 "endColumn":  47
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_initialData\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
 "startLine":  466,
@@ -414,12 +508,15 @@
 "endLine":  466,
 "endColumn":  54
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_localHandshakeInfo\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
 "startLine":  467,
@@ -427,12 +524,15 @@
 "endLine":  467,
 "endColumn":  50
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_refuseUid\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
 "startLine":  468,
@@ -440,12 +540,15 @@
 "endLine":  468,
 "endColumn":  32
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_settings\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
 "startLine":  469,
@@ -453,12 +556,15 @@
 "endLine":  469,
 "endColumn":  47
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_localAddress\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
 "startLine":  470,
@@ -466,12 +572,15 @@
 "endLine":  470,
 "endColumn":  38
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_codec\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
 "startLine":  471,
@@ -479,12 +588,15 @@
 "endLine":  471,
 "endColumn":  36
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_failureDetector\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
 "startLine":  472,
@@ -492,12 +604,15 @@
 "endLine":  472,
 "endColumn":  49
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_log\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
 "region":  {
 "startLine":  130,
@@ -505,12 +620,15 @@
 "endLine":  130,
 "endColumn":  37
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_shouldDebugLog\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
 "region":  {
 "startLine":  136,
@@ -518,12 +636,15 @@
 "endLine":  136,
 "endColumn":  37
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_associationListenerTask\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Helios\\HeliosTcpTransport.cs",
 "region":  {
 "startLine":  131,
@@ -531,12 +652,15 @@
 "endLine":  131,
 "endColumn":  73
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_channel\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Helios\\HeliosTcpTransport.cs",
 "region":  {
 "startLine":  198,
@@ -544,12 +668,15 @@
 "endLine":  198,
 "endColumn":  37
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_transport\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Helios\\HeliosTcpTransport.cs",
 "region":  {
 "startLine":  199,
@@ -557,12 +684,15 @@
 "endLine":  199,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_throttlingModes\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
 "region":  {
 "startLine":  215,
@@ -570,12 +700,15 @@
 "endLine":  215,
 "endColumn":  110
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"_handleTable\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
 "region":  {
 "startLine":  218,
@@ -583,7 +716,9 @@
 "endLine":  218,
 "endColumn":  67
 }
-}
+},
+null
+]
 }
 ]
 }

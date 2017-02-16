@@ -3,7 +3,8 @@
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"role\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterReceptionistSettings.cs",
 "region":  {
 "startLine":  66,
@@ -11,12 +12,15 @@
 "endLine":  66,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"repeat\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManager.cs",
 "region":  {
 "startLine":  537,
@@ -24,7 +28,9 @@
 "endLine":  537,
 "endColumn":  144
 }
-}
+},
+null
+]
 }
 ]
 }

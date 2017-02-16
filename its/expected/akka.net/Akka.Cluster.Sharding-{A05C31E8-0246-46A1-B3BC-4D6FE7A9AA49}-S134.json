@@ -3,7 +3,8 @@
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
 "region":  {
 "startLine":  422,
@@ -11,12 +12,15 @@
 "endLine":  422,
 "endColumn":  27
 }
-}
+},
+null
+]
 },
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  464,
@@ -24,12 +28,15 @@
 "endLine":  464,
 "endColumn":  27
 }
-}
+},
+null
+]
 },
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  481,
@@ -37,12 +44,15 @@
 "endLine":  481,
 "endColumn":  27
 }
-}
+},
+null
+]
 },
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  511,
@@ -50,7 +60,9 @@
 "endLine":  511,
 "endColumn":  27
 }
-}
+},
+null
+]
 }
 ]
 }

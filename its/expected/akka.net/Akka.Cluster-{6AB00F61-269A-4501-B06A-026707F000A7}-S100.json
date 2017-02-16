@@ -3,7 +3,8 @@
 {
 "id":  "S100",
 "message":  "Rename method \"CreateEWMA\" to match camel case naming rules, consider using \"CreateEwma\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
 "region":  {
 "startLine":  490,
@@ -11,7 +12,9 @@
 "endLine":  490,
 "endColumn":  38
 }
-}
+},
+null
+]
 }
 ]
 }

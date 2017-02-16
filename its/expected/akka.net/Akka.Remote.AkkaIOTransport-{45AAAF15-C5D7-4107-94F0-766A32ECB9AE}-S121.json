@@ -3,7 +3,8 @@
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\transports\\Akka.Remote.AkkaIOTransport\\AddressConverters.cs",
 "region":  {
 "startLine":  20,
@@ -11,12 +12,15 @@
 "endLine":  20,
 "endColumn":  15
 }
-}
+},
+null
+]
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\transports\\Akka.Remote.AkkaIOTransport\\AddressConverters.cs",
 "region":  {
 "startLine":  23,
@@ -24,12 +28,15 @@
 "endLine":  23,
 "endColumn":  15
 }
-}
+},
+null
+]
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\transports\\Akka.Remote.AkkaIOTransport\\AddressConverters.cs",
 "region":  {
 "startLine":  30,
@@ -37,12 +44,15 @@
 "endLine":  30,
 "endColumn":  15
 }
-}
+},
+null
+]
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"else\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\transports\\Akka.Remote.AkkaIOTransport\\ConnectionAssociation.cs",
 "region":  {
 "startLine":  80,
@@ -50,12 +60,15 @@
 "endLine":  80,
 "endColumn":  21
 }
-}
+},
+null
+]
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"else\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\transports\\Akka.Remote.AkkaIOTransport\\ConnectionAssociation.cs",
 "region":  {
 "startLine":  99,
@@ -63,12 +76,15 @@
 "endLine":  99,
 "endColumn":  21
 }
-}
+},
+null
+]
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"else\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\transports\\Akka.Remote.AkkaIOTransport\\ConnectionAssociation.cs",
 "region":  {
 "startLine":  114,
@@ -76,7 +92,9 @@
 "endLine":  114,
 "endColumn":  17
 }
-}
+},
+null
+]
 }
 ]
 }

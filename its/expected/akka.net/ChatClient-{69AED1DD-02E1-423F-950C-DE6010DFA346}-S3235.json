@@ -3,7 +3,8 @@
 {
 "id":  "S3235",
 "message":  "Remove these redundant parentheses.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\Chat\\ChatClient\\Program.cs",
 "region":  {
 "startLine":  41,
@@ -11,12 +12,15 @@
 "endLine":  41,
 "endColumn":  53
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3235",
 "message":  "Remove these redundant parentheses.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\Chat\\ChatClient\\Program.cs",
 "region":  {
 "startLine":  65,
@@ -24,7 +28,9 @@
 "endLine":  65,
 "endColumn":  57
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S1481",
 "message":  "Remove this unused \"result\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\TextResourceFinderFixture.cs",
 "region":  {
 "startLine":  47,
@@ -11,12 +12,15 @@
 "endLine":  47,
 "endColumn":  23
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"result\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\TextResourceFinderFixture.cs",
 "region":  {
 "startLine":  58,
@@ -24,12 +28,15 @@
 "endLine":  58,
 "endColumn":  23
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"result\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\TextResourceFinderFixture.cs",
 "region":  {
 "startLine":  69,
@@ -37,7 +44,9 @@
 "endLine":  69,
 "endColumn":  23
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S105",
 "message":  "Replace all tab characters in this file by sequences of white-spaces.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\DefaultRazorConfiguration.cs",
 "region":  {
 "startLine":  10,
@@ -11,12 +12,15 @@
 "endLine":  10,
 "endColumn":  1
 }
-}
+},
+null
+]
 },
 {
 "id":  "S105",
 "message":  "Replace all tab characters in this file by sequences of white-spaces.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\NancyRazorViewBase.cs",
 "region":  {
 "startLine":  73,
@@ -24,12 +28,15 @@
 "endLine":  73,
 "endColumn":  13
 }
-}
+},
+null
+]
 },
 {
 "id":  "S105",
 "message":  "Replace all tab characters in this file by sequences of white-spaces.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\RazorConfigurationSection.cs",
 "region":  {
 "startLine":  9,
@@ -37,7 +44,9 @@
 "endLine":  9,
 "endColumn":  1
 }
-}
+},
+null
+]
 }
 ]
 }

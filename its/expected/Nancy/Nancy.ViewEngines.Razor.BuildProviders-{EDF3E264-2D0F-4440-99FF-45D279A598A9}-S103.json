@@ -3,7 +3,8 @@
 {
 "id":  "S103",
 "message":  "Split this 241 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.BuildProviders\\NancyCSharpRazorBuildProvider.cs",
 "region":  {
 "startLine":  32,
@@ -11,12 +12,15 @@
 "endLine":  32,
 "endColumn":  242
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 241 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.BuildProviders\\NancyVisualBasicRazorBuildProvider.cs",
 "region":  {
 "startLine":  32,
@@ -24,7 +28,9 @@
 "endLine":  32,
 "endColumn":  242
 }
-}
+},
+null
+]
 }
 ]
 }

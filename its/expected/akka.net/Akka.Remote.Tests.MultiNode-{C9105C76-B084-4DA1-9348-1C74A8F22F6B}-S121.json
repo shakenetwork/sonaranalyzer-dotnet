@@ -3,7 +3,8 @@
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\NewRemoteActorSpec.cs",
 "region":  {
 "startLine":  25,
@@ -11,12 +12,15 @@
 "endLine":  25,
 "endColumn":  19
 }
-}
+},
+null
+]
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\NewRemoteActorSpec.cs",
 "region":  {
 "startLine":  42,
@@ -24,12 +28,15 @@
 "endLine":  42,
 "endColumn":  19
 }
-}
+},
+null
+]
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\PiercingShouldKeepQuarantineSpec.cs",
 "region":  {
 "startLine":  69,
@@ -37,12 +44,15 @@
 "endLine":  69,
 "endColumn":  19
 }
-}
+},
+null
+]
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"for\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRandomSpec.cs",
 "region":  {
 "startLine":  117,
@@ -50,12 +60,15 @@
 "endLine":  117,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"for\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRandomSpec.cs",
 "region":  {
 "startLine":  118,
@@ -63,12 +76,15 @@
 "endLine":  118,
 "endColumn":  24
 }
-}
+},
+null
+]
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRandomSpec.cs",
 "region":  {
 "startLine":  123,
@@ -76,12 +92,15 @@
 "endLine":  123,
 "endColumn":  23
 }
-}
+},
+null
+]
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"for\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRoundRobinSpec.cs",
 "region":  {
 "startLine":  147,
@@ -89,12 +108,15 @@
 "endLine":  147,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"for\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRoundRobinSpec.cs",
 "region":  {
 "startLine":  148,
@@ -102,12 +124,15 @@
 "endLine":  148,
 "endColumn":  24
 }
-}
+},
+null
+]
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRoundRobinSpec.cs",
 "region":  {
 "startLine":  153,
@@ -115,12 +140,15 @@
 "endLine":  153,
 "endColumn":  23
 }
-}
+},
+null
+]
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"for\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRoundRobinSpec.cs",
 "region":  {
 "startLine":  254,
@@ -128,12 +156,15 @@
 "endLine":  254,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"for\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRoundRobinSpec.cs",
 "region":  {
 "startLine":  255,
@@ -141,12 +172,15 @@
 "endLine":  255,
 "endColumn":  24
 }
-}
+},
+null
+]
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRoundRobinSpec.cs",
 "region":  {
 "startLine":  260,
@@ -154,7 +188,9 @@
 "endLine":  260,
 "endColumn":  23
 }
-}
+},
+null
+]
 }
 ]
 }

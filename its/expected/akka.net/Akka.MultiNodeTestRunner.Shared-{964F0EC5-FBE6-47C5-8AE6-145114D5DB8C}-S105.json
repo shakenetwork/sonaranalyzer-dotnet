@@ -3,7 +3,8 @@
 {
 "id":  "S105",
 "message":  "Replace all tab characters in this file by sequences of white-spaces.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Persistence\\TimelineItem.cs",
 "region":  {
 "startLine":  1,
@@ -11,12 +12,15 @@
 "endLine":  1,
 "endColumn":  75
 }
-}
+},
+null
+]
 },
 {
 "id":  "S105",
 "message":  "Replace all tab characters in this file by sequences of white-spaces.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Persistence\\TimelineItemFactory.cs",
 "region":  {
 "startLine":  1,
@@ -24,12 +28,15 @@
 "endLine":  1,
 "endColumn":  75
 }
-}
+},
+null
+]
 },
 {
 "id":  "S105",
 "message":  "Replace all tab characters in this file by sequences of white-spaces.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Persistence\\VisualizerRuntimeTemplate.Tree.cs",
 "region":  {
 "startLine":  1,
@@ -37,7 +44,9 @@
 "endLine":  1,
 "endColumn":  75
 }
-}
+},
+null
+]
 }
 ]
 }

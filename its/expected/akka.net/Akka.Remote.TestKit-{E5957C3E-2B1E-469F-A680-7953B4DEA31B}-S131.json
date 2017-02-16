@@ -3,7 +3,8 @@
 {
 "id":  "S131",
 "message":  "Add a \"default\" clause to this \"switch\" statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\MsgDecoder.cs",
 "region":  {
 "startLine":  50,
@@ -11,12 +12,15 @@
 "endLine":  50,
 "endColumn":  27
 }
-}
+},
+null
+]
 },
 {
 "id":  "S131",
 "message":  "Add a \"default\" clause to this \"switch\" statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\MsgDecoder.cs",
 "region":  {
 "startLine":  62,
@@ -24,7 +28,9 @@
 "endLine":  62,
 "endColumn":  27
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -1,5 +1,22 @@
 ﻿$ErrorActionPreference = "Stop"
 
+function FixUriDeclaration
+{
+	param ($files)
+	
+	$files |
+      Foreach-Object {
+        If ($_.uri) {
+		  # Remove the URI prefix
+          $_.uri = $_.uri.replace('file:///', '') 
+		  # Remove the common absolute path prefix
+		  $_.uri = ([System.IO.FileInfo]$_.uri).FullName
+          $_.uri = $_.uri.replace($pathPrefix, '')
+          $_.uri = $_.uri.replace('/', '\')
+        }
+      }
+}
+
 function GetIssue
 {
   param ($entry)
@@ -25,7 +42,8 @@ function GetIssueV3
   $issue = New-Object –Type System.Object
   $issue | Add-Member –Type NoteProperty –Name id –Value $entry.ruleId
   $issue | Add-Member –Type NoteProperty –Name message –Value $entry.message
-  $issue | Add-Member –Type NoteProperty –Name location –Value $entry.locations.resultFile
+  $combined = @($entry.locations.resultFile) + $entry.relatedLocations.physicalLocation
+  $issue | Add-Member –Type NoteProperty –Name location –Value $combined
 
   $issue
   return
@@ -70,61 +88,22 @@ function CreateIssueReports
         }
       }
 
-    # Remove the common absolute path prefix
-    $allIssues.locations.analysisTarget |
-      Foreach-Object {
-        If ($_.uri) {
-          $_.uri = ([System.IO.FileInfo]$_.uri).FullName
-          $_.uri = $_.uri.replace($pathPrefix, '')
-          $_.uri = $_.uri.replace('/', '\')
-        }
-      }
+    FixUriDeclaration($allIssues.locations.analysisTarget)
     
     $allIssues = $allIssues | %{ GetIssue($_) }
   }
   ElseIf ($json.runLogs) {
     $allIssues = $json.runLogs | %{$_.results}
 
-    # Remove the URI prefix
-    $allIssues.locations.analysisTarget |
-      Foreach-Object {
-        If ($_.uri) {
-          $_.uri = $_.uri.replace('file:///', '')
-        }
-      }
-
-    # Remove the common absolute path prefix
-    $allIssues.locations.analysisTarget |
-      Foreach-Object {
-        If ($_.uri) {
-          $_.uri = ([System.IO.FileInfo]$_.uri).FullName
-          $_.uri = $_.uri.replace($pathPrefix, '')
-          $_.uri = $_.uri.replace('/', '\')
-        }
-      }
+    FixUriDeclaration($allIssues.locations.analysisTarget)
     
     $allIssues = $allIssues | %{ GetIssue($_) }
   }
   ElseIf ($json.runs) {
     $allIssues = $json.runs | %{$_.results}
 
-    # Remove the URI prefix
-    $allIssues.locations.resultFile |
-      Foreach-Object {
-        If ($_.uri) {
-          $_.uri = $_.uri.replace('file:///', '')
-        }
-      }
-
-    # Remove the common absolute path prefix
-    $allIssues.locations.resultFile |
-      Foreach-Object {
-        If ($_.uri) {
-          $_.uri = ([System.IO.FileInfo]$_.uri).FullName
-          $_.uri = $_.uri.replace($pathPrefix, '')
-          $_.uri = $_.uri.replace('/', '\')
-        }
-      }
+    FixUriDeclaration($allIssues.locations.resultFile)
+	FixUriDeclaration($allIssues.relatedLocations.physicalLocation)
     
     $allIssues = $allIssues | %{ GetIssueV3($_) }
   }

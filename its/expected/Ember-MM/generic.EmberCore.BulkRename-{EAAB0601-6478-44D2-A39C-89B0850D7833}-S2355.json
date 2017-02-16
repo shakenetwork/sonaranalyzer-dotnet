@@ -3,7 +3,8 @@
 {
 "id":  "S2355",
 "message":  "Use an array literal here instead.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.BulkRename\\Module.BulkRenamer.vb",
 "region":  {
 "startLine":  55,
@@ -11,7 +12,9 @@
 "endLine":  55,
 "endColumn":  204
 }
-}
+},
+null
+]
 }
 ]
 }

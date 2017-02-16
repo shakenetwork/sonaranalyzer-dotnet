@@ -3,7 +3,8 @@
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  1597,
@@ -11,12 +12,15 @@
 "endLine":  1597,
 "endColumn":  27
 }
-}
+},
+null
+]
 },
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  645,
@@ -24,12 +28,15 @@
 "endLine":  645,
 "endColumn":  27
 }
-}
+},
+null
+]
 },
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  713,
@@ -37,12 +44,15 @@
 "endLine":  713,
 "endColumn":  31
 }
-}
+},
+null
+]
 },
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  716,
@@ -50,12 +60,15 @@
 "endLine":  716,
 "endColumn":  31
 }
-}
+},
+null
+]
 },
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  720,
@@ -63,12 +76,15 @@
 "endLine":  720,
 "endColumn":  31
 }
-}
+},
+null
+]
 },
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteSystemDaemon.cs",
 "region":  {
 "startLine":  158,
@@ -76,12 +92,15 @@
 "endLine":  158,
 "endColumn":  31
 }
-}
+},
+null
+]
 },
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteSystemDaemon.cs",
 "region":  {
 "startLine":  188,
@@ -89,7 +108,9 @@
 "endLine":  188,
 "endColumn":  31
 }
-}
+},
+null
+]
 }
 ]
 }

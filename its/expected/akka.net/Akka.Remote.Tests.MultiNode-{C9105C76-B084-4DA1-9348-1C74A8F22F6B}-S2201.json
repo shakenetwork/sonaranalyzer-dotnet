@@ -3,7 +3,8 @@
 {
 "id":  "S2201",
 "message":  "Use the return value of method \"Contains\", which has no side effect.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRoundRobinSpec.cs",
 "region":  {
 "startLine":  225,
@@ -11,7 +12,9 @@
 "endLine":  225,
 "endColumn":  88
 }
-}
+},
+null
+]
 }
 ]
 }

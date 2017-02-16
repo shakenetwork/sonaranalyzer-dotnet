@@ -3,7 +3,8 @@
 {
 "id":  "S1172",
 "message":  "Remove this unused method parameter \"isDisposing\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.TestKit\\DiResolverSpec.cs",
 "region":  {
 "startLine":  150,
@@ -11,7 +12,9 @@
 "endLine":  150,
 "endColumn":  50
 }
-}
+},
+null
+]
 }
 ]
 }

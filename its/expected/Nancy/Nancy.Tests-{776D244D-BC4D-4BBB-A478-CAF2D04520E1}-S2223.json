@@ -3,7 +3,8 @@
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"Empty\" or make it \"const\" or \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Tests\\Fakes\\FakeRouteCache.cs",
 "region":  {
 "startLine":  11,
@@ -11,12 +12,15 @@
 "endLine":  11,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"testFileInput\" or make it \"const\" or \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Tests\\Resources\\Views\\SuperSimpleViewEngineSampleContent.cs",
 "region":  {
 "startLine":  5,
@@ -24,12 +28,15 @@
 "endLine":  5,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"ExpectedOutput\" or make it \"const\" or \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Tests\\Resources\\Views\\SuperSimpleViewEngineSampleContent.cs",
 "region":  {
 "startLine":  46,
@@ -37,12 +44,15 @@
 "endLine":  46,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"UnbindableStaticField\" or make it \"const\" or \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
 "region":  {
 "startLine":  246,
@@ -50,7 +60,9 @@
 "endLine":  246,
 "endColumn":  52
 }
-}
+},
+null
+]
 }
 ]
 }

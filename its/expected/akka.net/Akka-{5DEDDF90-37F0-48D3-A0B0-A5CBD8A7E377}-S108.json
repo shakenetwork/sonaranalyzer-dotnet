@@ -3,7 +3,8 @@
 {
 "id":  "S108",
 "message":  "Either remove or fill this block of code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Futures.cs",
 "region":  {
 "startLine":  383,
@@ -11,12 +12,15 @@
 "endLine":  383,
 "endColumn":  21
 }
-}
+},
+null
+]
 },
 {
 "id":  "S108",
 "message":  "Either remove or fill this block of code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Scheduler\\DedicatedThreadScheduler.cs",
 "region":  {
 "startLine":  117,
@@ -24,12 +28,15 @@
 "endLine":  117,
 "endColumn":  55
 }
-}
+},
+null
+]
 },
 {
 "id":  "S108",
 "message":  "Either remove or fill this block of code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Scheduler\\DedicatedThreadScheduler.cs",
 "region":  {
 "startLine":  144,
@@ -37,12 +44,15 @@
 "endLine":  144,
 "endColumn":  55
 }
-}
+},
+null
+]
 },
 {
 "id":  "S108",
 "message":  "Either remove or fill this block of code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\IO\\SelectionHandler.cs",
 "region":  {
 "startLine":  181,
@@ -50,12 +60,15 @@
 "endLine":  181,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S108",
 "message":  "Either remove or fill this block of code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\IO\\SelectionHandler.cs",
 "region":  {
 "startLine":  363,
@@ -63,7 +76,9 @@
 "endLine":  363,
 "endColumn":  39
 }
-}
+},
+null
+]
 }
 ]
 }

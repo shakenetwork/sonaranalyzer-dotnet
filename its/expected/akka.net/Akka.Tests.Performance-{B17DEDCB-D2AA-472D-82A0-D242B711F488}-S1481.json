@@ -3,7 +3,8 @@
 {
 "id":  "S1481",
 "message":  "Remove this unused \"newPath\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests.Performance\\Actor\\ActorPathSpec.cs",
 "region":  {
 "startLine":  106,
@@ -11,12 +12,15 @@
 "endLine":  106,
 "endColumn":  24
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"newPath\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests.Performance\\Actor\\ActorPathSpec.cs",
 "region":  {
 "startLine":  120,
@@ -24,7 +28,9 @@
 "endLine":  120,
 "endColumn":  24
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S2357",
 "message":  "Make \"PersistenceId\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Journal\\JournalDbEngine.cs",
 "region":  {
 "startLine":  27,
@@ -11,12 +12,15 @@
 "endLine":  27,
 "endColumn":  45
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"SequenceNr\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Journal\\JournalDbEngine.cs",
 "region":  {
 "startLine":  28,
@@ -24,12 +28,15 @@
 "endLine":  28,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"IsDeleted\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Journal\\JournalDbEngine.cs",
 "region":  {
 "startLine":  29,
@@ -37,12 +44,15 @@
 "endLine":  29,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Manifest\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Journal\\JournalDbEngine.cs",
 "region":  {
 "startLine":  30,
@@ -50,12 +60,15 @@
 "endLine":  30,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Timestamp\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Journal\\JournalDbEngine.cs",
 "region":  {
 "startLine":  31,
@@ -63,12 +76,15 @@
 "endLine":  31,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Payload\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Journal\\JournalDbEngine.cs",
 "region":  {
 "startLine":  32,
@@ -76,12 +92,15 @@
 "endLine":  32,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Settings\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Journal\\JournalDbEngine.cs",
 "region":  {
 "startLine":  53,
@@ -89,12 +108,15 @@
 "endLine":  53,
 "endColumn":  49
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Manifest\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Queries\\Hints.cs",
 "region":  {
 "startLine":  66,
@@ -102,12 +124,15 @@
 "endLine":  66,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"PersistenceIds\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Queries\\Hints.cs",
 "region":  {
 "startLine":  101,
@@ -115,12 +140,15 @@
 "endLine":  101,
 "endColumn":  52
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"From\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Queries\\Hints.cs",
 "region":  {
 "startLine":  140,
@@ -128,12 +156,15 @@
 "endLine":  140,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"To\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Queries\\Hints.cs",
 "region":  {
 "startLine":  141,
@@ -141,12 +172,15 @@
 "endLine":  141,
 "endColumn":  37
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"QueryId\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Queries\\Query.cs",
 "region":  {
 "startLine":  29,
@@ -154,12 +188,15 @@
 "endLine":  29,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Hints\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Queries\\Query.cs",
 "region":  {
 "startLine":  30,
@@ -167,12 +204,15 @@
 "endLine":  30,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"QueryId\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Queries\\Query.cs",
 "region":  {
 "startLine":  77,
@@ -180,12 +220,15 @@
 "endLine":  77,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Message\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Queries\\Query.cs",
 "region":  {
 "startLine":  78,
@@ -193,12 +236,15 @@
 "endLine":  78,
 "endColumn":  58
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"QueryId\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Queries\\Query.cs",
 "region":  {
 "startLine":  119,
@@ -206,12 +252,15 @@
 "endLine":  119,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"QueryId\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Queries\\Query.cs",
 "region":  {
 "startLine":  158,
@@ -219,12 +268,15 @@
 "endLine":  158,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Reason\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Queries\\Query.cs",
 "region":  {
 "startLine":  159,
@@ -232,12 +284,15 @@
 "endLine":  159,
 "endColumn":  41
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"PersistenceId\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Snapshot\\QueryBuilder.cs",
 "region":  {
 "startLine":  22,
@@ -245,12 +300,15 @@
 "endLine":  22,
 "endColumn":  45
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"SequenceNr\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Snapshot\\QueryBuilder.cs",
 "region":  {
 "startLine":  27,
@@ -258,12 +316,15 @@
 "endLine":  27,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Timestamp\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Snapshot\\QueryBuilder.cs",
 "region":  {
 "startLine":  32,
@@ -271,12 +332,15 @@
 "endLine":  32,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"SnapshotType\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Snapshot\\QueryBuilder.cs",
 "region":  {
 "startLine":  37,
@@ -284,12 +348,15 @@
 "endLine":  37,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"Snapshot\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Snapshot\\QueryBuilder.cs",
 "region":  {
 "startLine":  42,
@@ -297,7 +364,9 @@
 "endLine":  42,
 "endColumn":  40
 }
-}
+},
+null
+]
 }
 ]
 }

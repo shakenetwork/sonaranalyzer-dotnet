@@ -3,7 +3,8 @@
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorCell.DefaultMessages.cs",
 "region":  {
 "startLine":  168,
@@ -11,12 +12,15 @@
 "endLine":  168,
 "endColumn":  33
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 19 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorPath.cs",
 "region":  {
 "startLine":  118,
@@ -24,12 +28,15 @@
 "endLine":  118,
 "endColumn":  37
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 18 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorRefProvider.cs",
 "region":  {
 "startLine":  351,
@@ -37,12 +44,15 @@
 "endLine":  351,
 "endColumn":  41
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorSelection.cs",
 "region":  {
 "startLine":  129,
@@ -50,12 +60,15 @@
 "endLine":  129,
 "endColumn":  46
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Deploy.cs",
 "region":  {
 "startLine":  115,
@@ -63,12 +76,15 @@
 "endLine":  115,
 "endColumn":  27
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\EmptyLocalActorRef.cs",
 "region":  {
 "startLine":  70,
@@ -76,12 +92,15 @@
 "endLine":  70,
 "endColumn":  45
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Futures.cs",
 "region":  {
 "startLine":  290,
@@ -89,12 +108,15 @@
 "endLine":  290,
 "endColumn":  34
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Inbox.Actor.cs",
 "region":  {
 "startLine":  84,
@@ -102,12 +124,15 @@
 "endLine":  84,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\RepointableActorRef.cs",
 "region":  {
 "startLine":  180,
@@ -115,12 +140,15 @@
 "endLine":  180,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Configuration\\Hocon\\HoconParser.cs",
 "region":  {
 "startLine":  60,
@@ -128,12 +156,15 @@
 "endLine":  60,
 "endColumn":  33
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Configuration\\Hocon\\HoconParser.cs",
 "region":  {
 "startLine":  141,
@@ -141,12 +172,15 @@
 "endLine":  141,
 "endColumn":  31
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 21 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Configuration\\Hocon\\HoconTokenizer.cs",
 "region":  {
 "startLine":  208,
@@ -154,12 +188,15 @@
 "endLine":  208,
 "endColumn":  30
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 20 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Configuration\\Hocon\\HoconTokenizer.cs",
 "region":  {
 "startLine":  544,
@@ -167,12 +204,15 @@
 "endLine":  544,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Configuration\\Hocon\\HoconTokenizer.cs",
 "region":  {
 "startLine":  588,
@@ -180,12 +220,15 @@
 "endLine":  588,
 "endColumn":  31
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Configuration\\Hocon\\HoconTokenizer.cs",
 "region":  {
 "startLine":  755,
@@ -193,12 +236,15 @@
 "endLine":  755,
 "endColumn":  30
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Configuration\\Hocon\\HoconValue.cs",
 "region":  {
 "startLine":  356,
@@ -206,12 +252,15 @@
 "endLine":  356,
 "endColumn":  36
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 20 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Dispatch\\ConcurrentQueueMailbox.cs",
 "region":  {
 "startLine":  33,
@@ -219,12 +268,15 @@
 "endLine":  33,
 "endColumn":  25
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 20 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Dispatch\\GenericMailbox.cs",
 "region":  {
 "startLine":  54,
@@ -232,12 +284,15 @@
 "endLine":  54,
 "endColumn":  25
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Event\\Logging.cs",
 "region":  {
 "startLine":  65,
@@ -245,12 +300,15 @@
 "endLine":  65,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Event\\Logging.cs",
 "region":  {
 "startLine":  144,
@@ -258,12 +316,15 @@
 "endLine":  144,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\IO\\TcpConnection.cs",
 "region":  {
 "startLine":  70,
@@ -271,12 +332,15 @@
 "endLine":  70,
 "endColumn":  47
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\IO\\TcpConnection.cs",
 "region":  {
 "startLine":  125,
@@ -284,12 +348,15 @@
 "endLine":  125,
 "endColumn":  34
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 18 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\IO\\TcpConnection.cs",
 "region":  {
 "startLine":  173,
@@ -297,12 +364,15 @@
 "endLine":  173,
 "endColumn":  48
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 22 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\IO\\TcpConnection.cs",
 "region":  {
 "startLine":  255,
@@ -310,12 +380,15 @@
 "endLine":  255,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 19 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\IO\\TcpConnection.cs",
 "region":  {
 "startLine":  371,
@@ -323,12 +396,15 @@
 "endLine":  371,
 "endColumn":  28
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\IO\\TcpConnection.cs",
 "region":  {
 "startLine":  454,
@@ -336,12 +412,15 @@
 "endLine":  454,
 "endColumn":  33
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\IO\\TcpConnection.cs",
 "region":  {
 "startLine":  571,
@@ -349,12 +428,15 @@
 "endLine":  571,
 "endColumn":  48
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\IO\\TcpConnection.cs",
 "region":  {
 "startLine":  647,
@@ -362,12 +444,15 @@
 "endLine":  647,
 "endColumn":  49
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\IO\\TcpListener.cs",
 "region":  {
 "startLine":  102,
@@ -375,12 +460,15 @@
 "endLine":  102,
 "endColumn":  30
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 22 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\IO\\UdpConnection.cs",
 "region":  {
 "startLine":  107,
@@ -388,12 +476,15 @@
 "endLine":  107,
 "endColumn":  34
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\IO\\WithUdpSend.cs",
 "region":  {
 "startLine":  32,
@@ -401,12 +492,15 @@
 "endLine":  32,
 "endColumn":  36
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Pattern\\BackoffSupervisor.cs",
 "region":  {
 "startLine":  92,
@@ -414,12 +508,15 @@
 "endLine":  92,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 29 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Routing\\ConsistentHash.cs",
 "region":  {
 "startLine":  235,
@@ -427,12 +524,15 @@
 "endLine":  235,
 "endColumn":  47
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 23 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Routing\\ConsistentHashRouter.cs",
 "region":  {
 "startLine":  163,
@@ -440,12 +540,15 @@
 "endLine":  163,
 "endColumn":  38
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Routing\\Resizer.cs",
 "region":  {
 "startLine":  57,
@@ -453,12 +556,15 @@
 "endLine":  57,
 "endColumn":  27
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Routing\\Resizer.cs",
 "region":  {
 "startLine":  230,
@@ -466,12 +572,15 @@
 "endLine":  230,
 "endColumn":  28
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Routing\\RouterConfig.cs",
 "region":  {
 "startLine":  634,
@@ -479,12 +588,15 @@
 "endLine":  634,
 "endColumn":  51
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Serialization\\Serialization.cs",
 "region":  {
 "startLine":  138,
@@ -492,12 +604,15 @@
 "endLine":  138,
 "endColumn":  49
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Util\\ByteString.cs",
 "region":  {
 "startLine":  198,
@@ -505,12 +620,15 @@
 "endLine":  198,
 "endColumn":  46
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Util\\ByteString.cs",
 "region":  {
 "startLine":  281,
@@ -518,12 +636,15 @@
 "endLine":  281,
 "endColumn":  37
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 24 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\Collections\\ImmutableAvlTreeBase.cs",
 "region":  {
 "startLine":  103,
@@ -531,12 +652,15 @@
 "endLine":  103,
 "endColumn":  31
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\Collections\\ImmutableAvlTreeBase.cs",
 "region":  {
 "startLine":  370,
@@ -544,12 +668,15 @@
 "endLine":  370,
 "endColumn":  25
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Util\\MatchHandler\\MatchBuilderSignature.cs",
 "region":  {
 "startLine":  46,
@@ -557,7 +684,9 @@
 "endLine":  46,
 "endColumn":  32
 }
-}
+},
+null
+]
 }
 ]
 }

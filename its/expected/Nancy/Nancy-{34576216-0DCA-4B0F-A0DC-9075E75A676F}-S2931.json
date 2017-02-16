@@ -3,7 +3,8 @@
 {
 "id":  "S2931",
 "message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"provider\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Cryptography\\PassphraseKeyGenerator.cs",
 "region":  {
 "startLine":  12,
@@ -11,12 +12,15 @@
 "endLine":  12,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2931",
 "message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"provider\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Cryptography\\RandomKeyGenerator.cs",
 "region":  {
 "startLine":  8,
@@ -24,12 +28,15 @@
 "endLine":  8,
 "endColumn":  36
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2931",
 "message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"padlock\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\DefaultViewLocator.cs",
 "region":  {
 "startLine":  12,
@@ -37,7 +44,9 @@
 "endLine":  12,
 "endColumn":  36
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S1172",
 "message":  "Remove this unused method parameter \"args\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\Cluster\\Routing\\Samples.Cluster.ConsistentHashRouting\\Program.cs",
 "region":  {
 "startLine":  24,
@@ -11,7 +12,9 @@
 "endLine":  24,
 "endColumn":  39
 }
-}
+},
+null
+]
 }
 ]
 }

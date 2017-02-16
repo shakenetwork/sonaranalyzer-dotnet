@@ -3,7 +3,8 @@
 {
 "id":  "S2360",
 "message":  "Use the overloading mechanism instead of the optional parameters.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\TcpConnectionSpec.cs",
 "region":  {
 "startLine":  1020,
@@ -11,12 +12,15 @@
 "endLine":  1020,
 "endColumn":  86
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2360",
 "message":  "Use the overloading mechanism instead of the optional parameters.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\TcpConnectionSpec.cs",
 "region":  {
 "startLine":  1020,
@@ -24,12 +28,15 @@
 "endLine":  1020,
 "endColumn":  104
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2360",
 "message":  "Use the overloading mechanism instead of the optional parameters.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\TcpConnectionSpec.cs",
 "region":  {
 "startLine":  1031,
@@ -37,12 +44,15 @@
 "endLine":  1031,
 "endColumn":  124
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2360",
 "message":  "Use the overloading mechanism instead of the optional parameters.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\TcpConnectionSpec.cs",
 "region":  {
 "startLine":  1031,
@@ -50,12 +60,15 @@
 "endLine":  1031,
 "endColumn":  142
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2360",
 "message":  "Use the overloading mechanism instead of the optional parameters.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\ScatterGatherFirstCompletedSpec.cs",
 "region":  {
 "startLine":  88,
@@ -63,7 +76,9 @@
 "endLine":  88,
 "endColumn":  39
 }
-}
+},
+null
+]
 }
 ]
 }

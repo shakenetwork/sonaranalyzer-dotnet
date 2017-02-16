@@ -3,7 +3,8 @@
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"tickItems\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestScheduler.cs",
 "region":  {
 "startLine":  70,
@@ -11,7 +12,9 @@
 "endLine":  70,
 "endColumn":  50
 }
-}
+},
+null
+]
 }
 ]
 }

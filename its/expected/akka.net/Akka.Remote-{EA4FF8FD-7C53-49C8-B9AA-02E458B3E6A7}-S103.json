@@ -3,7 +3,8 @@
 {
 "id":  "S103",
 "message":  "Split this 213 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  387,
@@ -11,12 +12,15 @@
 "endLine":  387,
 "endColumn":  214
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 201 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  1702,
@@ -24,12 +28,15 @@
 "endLine":  1702,
 "endColumn":  202
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 208 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  195,
@@ -37,12 +44,15 @@
 "endLine":  195,
 "endColumn":  209
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 207 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  345,
@@ -50,12 +60,15 @@
 "endLine":  345,
 "endColumn":  208
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 213 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  717,
@@ -63,12 +76,15 @@
 "endLine":  717,
 "endColumn":  214
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 216 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\PhiAccrualFailureDetector.cs",
 "region":  {
 "startLine":  294,
@@ -76,12 +92,15 @@
 "endLine":  294,
 "endColumn":  217
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 268 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteWatcher.cs",
 "region":  {
 "startLine":  277,
@@ -89,12 +108,15 @@
 "endLine":  277,
 "endColumn":  269
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 201 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteWatcher.cs",
 "region":  {
 "startLine":  280,
@@ -102,12 +124,15 @@
 "endLine":  280,
 "endColumn":  202
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 231 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
 "startLine":  490,
@@ -115,12 +140,15 @@
 "endLine":  490,
 "endColumn":  232
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 208 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
 "startLine":  496,
@@ -128,12 +156,15 @@
 "endLine":  496,
 "endColumn":  209
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 215 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TestTransport.cs",
 "region":  {
 "startLine":  69,
@@ -141,12 +172,15 @@
 "endLine":  69,
 "endColumn":  216
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 224 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TransportAdapters.cs",
 "region":  {
 "startLine":  201,
@@ -154,7 +188,9 @@
 "endLine":  201,
 "endColumn":  225
 }
-}
+},
+null
+]
 }
 ]
 }

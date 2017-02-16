@@ -3,7 +3,8 @@
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\ClusterConfigSpec.cs",
 "region":  {
 "startLine":  47,
@@ -11,12 +12,15 @@
 "endLine":  47,
 "endColumn":  85
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\ClusterConfigSpec.cs",
 "region":  {
 "startLine":  56,
@@ -24,7 +28,9 @@
 "endLine":  56,
 "endColumn":  103
 }
-}
+},
+null
+]
 }
 ]
 }

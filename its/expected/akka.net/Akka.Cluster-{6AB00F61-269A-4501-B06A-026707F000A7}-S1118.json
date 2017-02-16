@@ -3,7 +3,8 @@
 {
 "id":  "S1118",
 "message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
 "region":  {
 "startLine":  504,
@@ -11,12 +12,15 @@
 "endLine":  504,
 "endColumn":  49
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1118",
 "message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\VectorClock.cs",
 "region":  {
 "startLine":  100,
@@ -24,7 +28,9 @@
 "endLine":  100,
 "endColumn":  31
 }
-}
+},
+null
+]
 }
 ]
 }

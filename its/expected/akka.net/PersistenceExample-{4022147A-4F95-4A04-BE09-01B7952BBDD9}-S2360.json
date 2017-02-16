@@ -3,7 +3,8 @@
 {
 "id":  "S2360",
 "message":  "Use the overloading mechanism instead of the optional parameters.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\PersistenceExample\\ExamplePersistentActor.cs",
 "region":  {
 "startLine":  47,
@@ -11,7 +12,9 @@
 "endLine":  47,
 "endColumn":  55
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S3220",
 "message":  "Review this call, which partially matches an overload without \"params\". The partial match is \"RoundRobinGroup.RoundRobinGroup(Config config)\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\serializers\\Akka.Serialization.TestKit\\AkkaSerializationSpec.cs",
 "region":  {
 "startLine":  183,
@@ -11,12 +12,15 @@
 "endLine":  183,
 "endColumn":  53
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3220",
 "message":  "Review this call, which partially matches an overload without \"params\". The partial match is \"RandomGroup.RandomGroup(Config config)\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\serializers\\Akka.Serialization.TestKit\\AkkaSerializationSpec.cs",
 "region":  {
 "startLine":  204,
@@ -24,7 +28,9 @@
 "endLine":  204,
 "endColumn":  49
 }
-}
+},
+null
+]
 }
 ]
 }

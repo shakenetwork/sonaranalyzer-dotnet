@@ -3,7 +3,8 @@
 {
 "id":  "S1210",
 "message":  "When implementing IComparable\u003cT\u003e, you should also override Equals, \u003c, \u003e, ==, !=.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Testing.Tests\\AssertEqualityComparerFixture.cs",
 "region":  {
 "startLine":  159,
@@ -11,12 +12,15 @@
 "endLine":  159,
 "endColumn":  45
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1210",
 "message":  "When implementing IComparable, you should also override Equals, \u003c, \u003e, ==, !=.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Testing.Tests\\AssertEqualityComparerFixture.cs",
 "region":  {
 "startLine":  182,
@@ -24,7 +28,9 @@
 "endLine":  182,
 "endColumn":  38
 }
-}
+},
+null
+]
 }
 ]
 }

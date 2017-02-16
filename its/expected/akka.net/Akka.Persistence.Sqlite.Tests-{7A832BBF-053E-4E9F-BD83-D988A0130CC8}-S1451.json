@@ -3,7 +3,8 @@
 {
 "id":  "S1451",
 "message":  "Add or update the header of this file.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sqlite.Tests\\Properties\\AssemblyInfo.cs",
 "region":  {
 "startLine":  1,
@@ -11,12 +12,15 @@
 "endLine":  1,
 "endColumn":  1
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1451",
 "message":  "Add or update the header of this file.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sqlite.Tests\\SqliteJournalQuerySpec.cs",
 "region":  {
 "startLine":  1,
@@ -24,12 +28,15 @@
 "endLine":  1,
 "endColumn":  1
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1451",
 "message":  "Add or update the header of this file.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sqlite.Tests\\SqliteJournalSpec.cs",
 "region":  {
 "startLine":  1,
@@ -37,12 +44,15 @@
 "endLine":  1,
 "endColumn":  1
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1451",
 "message":  "Add or update the header of this file.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sqlite.Tests\\SqliteSnapshotStoreSpec.cs",
 "region":  {
 "startLine":  1,
@@ -50,7 +60,9 @@
 "endLine":  1,
 "endColumn":  1
 }
-}
+},
+null
+]
 }
 ]
 }

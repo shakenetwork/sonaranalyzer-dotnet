@@ -3,7 +3,8 @@
 {
 "id":  "S3215",
 "message":  "Remove this cast and edit the interface to add the missing functionality.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Testing\\Browser.cs",
 "region":  {
 "startLine":  221,
@@ -11,7 +12,9 @@
 "endLine":  221,
 "endColumn":  99
 }
-}
+},
+null
+]
 }
 ]
 }

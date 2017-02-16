@@ -3,7 +3,8 @@
 {
 "id":  "S2933",
 "message":  "Make \"dependencyResolver\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.Core\\DIActorProducer.cs",
 "region":  {
 "startLine":  18,
@@ -11,12 +12,15 @@
 "endLine":  18,
 "endColumn":  55
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"actorType\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.Core\\DIActorProducer.cs",
 "region":  {
 "startLine":  19,
@@ -24,7 +28,9 @@
 "endLine":  19,
 "endColumn":  31
 }
-}
+},
+null
+]
 }
 ]
 }

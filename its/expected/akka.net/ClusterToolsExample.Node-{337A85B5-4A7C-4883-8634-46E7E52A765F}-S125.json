@@ -3,7 +3,8 @@
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\Cluster\\ClusterTools\\ClusterToolsExample.Node\\Program.cs",
 "region":  {
 "startLine":  16,
@@ -11,12 +12,15 @@
 "endLine":  16,
 "endColumn":  53
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\Cluster\\ClusterTools\\ClusterToolsExample.Node\\Program.cs",
 "region":  {
 "startLine":  18,
@@ -24,7 +28,9 @@
 "endLine":  18,
 "endColumn":  44
 }
-}
+},
+null
+]
 }
 ]
 }

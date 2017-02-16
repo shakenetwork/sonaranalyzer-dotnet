@@ -3,7 +3,8 @@
 {
 "id":  "S1006",
 "message":  "Add the default parameter value defined in the overridden method.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_ActorOf.cs",
 "region":  {
 "startLine":  33,
@@ -11,7 +12,9 @@
 "endLine":  33,
 "endColumn":  58
 }
-}
+},
+null
+]
 }
 ]
 }

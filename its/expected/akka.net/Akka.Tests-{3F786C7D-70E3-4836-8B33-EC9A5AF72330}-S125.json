@@ -3,7 +3,8 @@
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorPathSpec.cs",
 "region":  {
 "startLine":  159,
@@ -11,12 +12,15 @@
 "endLine":  159,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorSelectionSpec.cs",
 "region":  {
 "startLine":  99,
@@ -24,12 +28,15 @@
 "endLine":  99,
 "endColumn":  66
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\DeathWatchSpec.cs",
 "region":  {
 "startLine":  43,
@@ -37,12 +44,15 @@
 "endLine":  43,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Configuration\\HoconTests.cs",
 "region":  {
 "startLine":  317,
@@ -50,12 +60,15 @@
 "endLine":  317,
 "endColumn":  41
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\TcpConnectionSpec.cs",
 "region":  {
 "startLine":  170,
@@ -63,12 +76,15 @@
 "endLine":  170,
 "endColumn":  107
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\TcpConnectionSpec.cs",
 "region":  {
 "startLine":  199,
@@ -76,12 +92,15 @@
 "endLine":  199,
 "endColumn":  50
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\TcpConnectionSpec.cs",
 "region":  {
 "startLine":  233,
@@ -89,12 +108,15 @@
 "endLine":  233,
 "endColumn":  56
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\TcpConnectionSpec.cs",
 "region":  {
 "startLine":  297,
@@ -102,12 +124,15 @@
 "endLine":  297,
 "endColumn":  48
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\TcpConnectionSpec.cs",
 "region":  {
 "startLine":  729,
@@ -115,12 +140,15 @@
 "endLine":  729,
 "endColumn":  118
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\TcpConnectionSpec.cs",
 "region":  {
 "startLine":  925,
@@ -128,12 +156,15 @@
 "endLine":  925,
 "endColumn":  111
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\RoutingSpec.cs",
 "region":  {
 "startLine":  162,
@@ -141,12 +172,15 @@
 "endLine":  162,
 "endColumn":  111
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\RoutingSpec.cs",
 "region":  {
 "startLine":  203,
@@ -154,12 +188,15 @@
 "endLine":  203,
 "endColumn":  63
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\RoutingSpec.cs",
 "region":  {
 "startLine":  223,
@@ -167,12 +204,15 @@
 "endLine":  223,
 "endColumn":  62
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Serialization\\SerializationSpec.cs",
 "region":  {
 "startLine":  396,
@@ -180,7 +220,9 @@
 "endLine":  396,
 "endColumn":  57
 }
-}
+},
+null
+]
 }
 ]
 }

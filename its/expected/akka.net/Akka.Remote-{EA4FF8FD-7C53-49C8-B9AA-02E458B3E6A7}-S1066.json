@@ -3,7 +3,8 @@
 {
 "id":  "S1066",
 "message":  "Merge this if statement with the enclosing one.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  1196,
@@ -11,12 +12,23 @@
 "endLine":  1196,
 "endColumn":  19
 }
+},
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
+"region":  {
+"startLine":  1194,
+"startColumn":  13,
+"endLine":  1194,
+"endColumn":  15
 }
+}
+]
 },
 {
 "id":  "S1066",
 "message":  "Merge this if statement with the enclosing one.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteSystemDaemon.cs",
 "region":  {
 "startLine":  312,
@@ -24,12 +36,23 @@
 "endLine":  312,
 "endColumn":  23
 }
+},
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteSystemDaemon.cs",
+"region":  {
+"startLine":  310,
+"startColumn":  17,
+"endLine":  310,
+"endColumn":  19
 }
+}
+]
 },
 {
 "id":  "S1066",
 "message":  "Merge this if statement with the enclosing one.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteWatcher.cs",
 "region":  {
 "startLine":  527,
@@ -37,12 +60,23 @@
 "endLine":  527,
 "endColumn":  23
 }
+},
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteWatcher.cs",
+"region":  {
+"startLine":  525,
+"startColumn":  17,
+"endLine":  525,
+"endColumn":  19
 }
+}
+]
 },
 {
 "id":  "S1066",
 "message":  "Merge this if statement with the enclosing one.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
 "region":  {
 "startLine":  366,
@@ -50,12 +84,23 @@
 "endLine":  366,
 "endColumn":  19
 }
+},
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
+"region":  {
+"startLine":  364,
+"startColumn":  13,
+"endLine":  364,
+"endColumn":  15
 }
+}
+]
 },
 {
 "id":  "S1066",
 "message":  "Merge this if statement with the enclosing one.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
 "region":  {
 "startLine":  379,
@@ -63,7 +108,17 @@
 "endLine":  379,
 "endColumn":  19
 }
+},
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
+"region":  {
+"startLine":  377,
+"startColumn":  13,
+"endLine":  377,
+"endColumn":  15
 }
+}
+]
 }
 ]
 }

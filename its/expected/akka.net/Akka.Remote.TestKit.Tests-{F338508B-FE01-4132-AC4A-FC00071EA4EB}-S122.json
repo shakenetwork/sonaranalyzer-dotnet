@@ -3,7 +3,8 @@
 {
 "id":  "S122",
 "message":  "Reformat the code to have only one statement per line.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit.Tests\\BarrierSpec.cs",
 "region":  {
 "startLine":  46,
@@ -11,12 +12,15 @@
 "endLine":  46,
 "endColumn":  62
 }
-}
+},
+null
+]
 },
 {
 "id":  "S122",
 "message":  "Reformat the code to have only one statement per line.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit.Tests\\BarrierSpec.cs",
 "region":  {
 "startLine":  47,
@@ -24,12 +28,15 @@
 "endLine":  47,
 "endColumn":  61
 }
-}
+},
+null
+]
 },
 {
 "id":  "S122",
 "message":  "Reformat the code to have only one statement per line.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit.Tests\\BarrierSpec.cs",
 "region":  {
 "startLine":  377,
@@ -37,7 +44,9 @@
 "endLine":  377,
 "endColumn":  75
 }
-}
+},
+null
+]
 }
 ]
 }

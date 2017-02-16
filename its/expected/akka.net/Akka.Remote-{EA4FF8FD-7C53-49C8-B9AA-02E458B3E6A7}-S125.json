@@ -3,7 +3,8 @@
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteDeployer.cs",
 "region":  {
 "startLine":  64,
@@ -11,12 +12,15 @@
 "endLine":  64,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteSystemDaemon.cs",
 "region":  {
 "startLine":  170,
@@ -24,12 +28,15 @@
 "endLine":  170,
 "endColumn":  45
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteSystemDaemon.cs",
 "region":  {
 "startLine":  215,
@@ -37,12 +44,15 @@
 "endLine":  215,
 "endColumn":  80
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteSystemDaemon.cs",
 "region":  {
 "startLine":  243,
@@ -50,12 +60,15 @@
 "endLine":  243,
 "endColumn":  80
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Remoting.cs",
 "region":  {
 "startLine":  157,
@@ -63,12 +76,15 @@
 "endLine":  157,
 "endColumn":  98
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Serialization\\ProtobufSerializer.cs",
 "region":  {
 "startLine":  54,
@@ -76,12 +92,15 @@
 "endLine":  54,
 "endColumn":  16
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Serialization\\ProtobufSerializer.cs",
 "region":  {
 "startLine":  71,
@@ -89,12 +108,15 @@
 "endLine":  71,
 "endColumn":  16
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Helios\\HeliosTcpTransport.cs",
 "region":  {
 "startLine":  81,
@@ -102,12 +124,15 @@
 "endLine":  81,
 "endColumn":  33
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
 "region":  {
 "startLine":  417,
@@ -115,7 +140,9 @@
 "endLine":  417,
 "endColumn":  80
 }
-}
+},
+null
+]
 }
 ]
 }

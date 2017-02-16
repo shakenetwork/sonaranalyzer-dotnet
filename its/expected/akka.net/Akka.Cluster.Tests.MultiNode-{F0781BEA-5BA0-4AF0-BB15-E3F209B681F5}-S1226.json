@@ -3,7 +3,8 @@
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"sys\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
 "region":  {
 "startLine":  171,
@@ -11,12 +12,15 @@
 "endLine":  171,
 "endColumn":  33
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"max\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
 "region":  {
 "startLine":  270,
@@ -24,12 +28,15 @@
 "endLine":  270,
 "endColumn":  33
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"interval\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
 "region":  {
 "startLine":  271,
@@ -37,12 +44,15 @@
 "endLine":  271,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"canNotBePartOfMemberRing\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
 "region":  {
 "startLine":  351,
@@ -50,12 +60,15 @@
 "endLine":  351,
 "endColumn":  41
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"timeout\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
 "region":  {
 "startLine":  352,
@@ -63,12 +76,15 @@
 "endLine":  352,
 "endColumn":  41
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"nodesInCluster\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
 "region":  {
 "startLine":  390,
@@ -76,7 +92,9 @@
 "endLine":  390,
 "endColumn":  55
 }
-}
+},
+null
+]
 }
 ]
 }

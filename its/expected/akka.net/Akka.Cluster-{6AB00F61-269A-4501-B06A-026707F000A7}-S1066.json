@@ -3,7 +3,8 @@
 {
 "id":  "S1066",
 "message":  "Merge this if statement with the enclosing one.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Reachability.cs",
 "region":  {
 "startLine":  249,
@@ -11,12 +12,23 @@
 "endLine":  249,
 "endColumn":  23
 }
+},
+{
+"uri":  "akka.net\\src\\core\\Akka.Cluster\\Reachability.cs",
+"region":  {
+"startLine":  247,
+"startColumn":  17,
+"endLine":  247,
+"endColumn":  19
 }
+}
+]
 },
 {
 "id":  "S1066",
 "message":  "Merge this if statement with the enclosing one.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Reachability.cs",
 "region":  {
 "startLine":  255,
@@ -24,7 +36,17 @@
 "endLine":  255,
 "endColumn":  23
 }
+},
+{
+"uri":  "akka.net\\src\\core\\Akka.Cluster\\Reachability.cs",
+"region":  {
+"startLine":  253,
+"startColumn":  17,
+"endLine":  253,
+"endColumn":  19
 }
+}
+]
 }
 ]
 }

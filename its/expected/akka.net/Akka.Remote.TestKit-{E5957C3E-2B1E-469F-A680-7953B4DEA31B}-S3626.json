@@ -3,7 +3,8 @@
 {
 "id":  "S3626",
 "message":  "Remove this redundant jump.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Controller.cs",
 "region":  {
 "startLine":  381,
@@ -11,12 +12,15 @@
 "endLine":  381,
 "endColumn":  24
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3626",
 "message":  "Remove this redundant jump.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
 "region":  {
 "startLine":  98,
@@ -24,7 +28,9 @@
 "endLine":  98,
 "endColumn":  32
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S2357",
 "message":  "Make \"ActionWasInvoked\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Tests\\Fakes\\FakeRoute.cs",
 "region":  {
 "startLine":  13,
@@ -11,12 +12,15 @@
 "endLine":  13,
 "endColumn":  37
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2357",
 "message":  "Make \"ParametersUsedToInvokeAction\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Tests\\Fakes\\FakeRoute.cs",
 "region":  {
 "startLine":  14,
@@ -24,7 +28,9 @@
 "endLine":  14,
 "endColumn":  62
 }
-}
+},
+null
+]
 }
 ]
 }

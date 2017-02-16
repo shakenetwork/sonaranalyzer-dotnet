@@ -3,7 +3,8 @@
 {
 "id":  "S1313",
 "message":  "Make this IP \"127.0.0.1\" address configurable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.Performance\\Transports\\AssociationStressSpecBase.cs",
 "region":  {
 "startLine":  70,
@@ -11,12 +12,15 @@
 "endLine":  70,
 "endColumn":  100
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1313",
 "message":  "Make this IP \"127.0.0.1\" address configurable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.Performance\\Transports\\AssociationStressSpecBase.cs",
 "region":  {
 "startLine":  73,
@@ -24,12 +28,15 @@
 "endLine":  73,
 "endColumn":  100
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1313",
 "message":  "Make this IP \"127.0.0.1\" address configurable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.Performance\\Transports\\RemoteMessagingThroughputSpecBase.cs",
 "region":  {
 "startLine":  74,
@@ -37,12 +44,15 @@
 "endLine":  74,
 "endColumn":  164
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1313",
 "message":  "Make this IP \"127.0.0.1\" address configurable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.Performance\\Transports\\RemoteMessagingThroughputSpecBase.cs",
 "region":  {
 "startLine":  77,
@@ -50,7 +60,9 @@
 "endLine":  77,
 "endColumn":  164
 }
-}
+},
+null
+]
 }
 ]
 }

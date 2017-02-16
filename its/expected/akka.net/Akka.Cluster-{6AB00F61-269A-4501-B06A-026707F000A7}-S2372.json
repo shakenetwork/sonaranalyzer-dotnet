@@ -3,7 +3,8 @@
 {
 "id":  "S2372",
 "message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Gossip.cs",
 "region":  {
 "startLine":  292,
@@ -11,7 +12,9 @@
 "endLine":  292,
 "endColumn":  89
 }
-}
+},
+null
+]
 }
 ]
 }

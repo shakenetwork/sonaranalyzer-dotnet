@@ -3,7 +3,8 @@
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\ConsoleMessageSinkActor.cs",
 "region":  {
 "startLine":  150,
@@ -11,12 +12,15 @@
 "endLine":  150,
 "endColumn":  30
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\ConsoleMessageSinkActor.cs",
 "region":  {
 "startLine":  157,
@@ -24,12 +28,15 @@
 "endLine":  157,
 "endColumn":  30
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\ConsoleMessageSinkActor.cs",
 "region":  {
 "startLine":  164,
@@ -37,12 +44,15 @@
 "endLine":  164,
 "endColumn":  30
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\ConsoleMessageSinkActor.cs",
 "region":  {
 "startLine":  171,
@@ -50,12 +60,15 @@
 "endLine":  171,
 "endColumn":  30
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\ConsoleMessageSinkActor.cs",
 "region":  {
 "startLine":  178,
@@ -63,12 +76,15 @@
 "endLine":  178,
 "endColumn":  30
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\ConsoleMessageSinkActor.cs",
 "region":  {
 "startLine":  184,
@@ -76,12 +92,15 @@
 "endLine":  184,
 "endColumn":  30
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\ConsoleMessageSinkActor.cs",
 "region":  {
 "startLine":  225,
@@ -89,12 +108,15 @@
 "endLine":  225,
 "endColumn":  30
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\FileSystemMessageSinkActor.cs",
 "region":  {
 "startLine":  63,
@@ -102,7 +124,9 @@
 "endLine":  63,
 "endColumn":  30
 }
-}
+},
+null
+]
 }
 ]
 }

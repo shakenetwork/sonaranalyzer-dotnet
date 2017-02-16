@@ -3,7 +3,8 @@
 {
 "id":  "S131",
 "message":  "Add a \"default\" clause to this \"switch\" statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
 "region":  {
 "startLine":  1323,
@@ -11,7 +12,9 @@
 "endLine":  1323,
 "endColumn":  23
 }
-}
+},
+null
+]
 }
 ]
 }

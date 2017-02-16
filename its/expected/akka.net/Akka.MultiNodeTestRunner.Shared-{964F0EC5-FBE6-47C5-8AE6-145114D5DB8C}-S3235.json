@@ -3,7 +3,8 @@
 {
 "id":  "S3235",
 "message":  "Remove these redundant parentheses.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Persistence\\JsonPersistentTestRunStore.cs",
 "region":  {
 "startLine":  53,
@@ -11,7 +12,9 @@
 "endLine":  53,
 "endColumn":  58
 }
-}
+},
+null
+]
 }
 ]
 }

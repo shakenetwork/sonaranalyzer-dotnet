@@ -3,7 +3,8 @@
 {
 "id":  "S3249",
 "message":  "Remove this \"base\" call to \"object.GetHashCode\", which is directly based on the object reference.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Stash\\ActorWithStashSpec.cs",
 "region":  {
 "startLine":  353,
@@ -11,7 +12,9 @@
 "endLine":  353,
 "endColumn":  42
 }
-}
+},
+null
+]
 }
 ]
 }

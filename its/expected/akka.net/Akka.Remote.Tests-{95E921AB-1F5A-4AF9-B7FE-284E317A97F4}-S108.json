@@ -3,7 +3,8 @@
 {
 "id":  "S108",
 "message":  "Either remove or fill this block of code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Serialization\\DaemonMsgCreateSerializerSpec.cs",
 "region":  {
 "startLine":  103,
@@ -11,7 +12,9 @@
 "endLine":  104,
 "endColumn":  18
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S1147",
 "message":  "Remove this call to \"End\" or ensure it is really required.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember%20Media%20Manager\\ApplicationEvents.vb",
 "region":  {
 "startLine":  47,
@@ -11,7 +12,9 @@
 "endLine":  47,
 "endColumn":  20
 }
-}
+},
+null
+]
 }
 ]
 }

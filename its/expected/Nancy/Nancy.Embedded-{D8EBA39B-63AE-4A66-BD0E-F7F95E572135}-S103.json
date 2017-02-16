@@ -3,7 +3,8 @@
 {
 "id":  "S103",
 "message":  "Split this 225 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Embedded\\Conventions\\EmbeddedStaticContentConventionBuilder.cs",
 "region":  {
 "startLine":  27,
@@ -11,12 +12,15 @@
 "endLine":  27,
 "endColumn":  226
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 220 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Embedded\\Conventions\\EmbeddedStaticContentConventionBuilder.cs",
 "region":  {
 "startLine":  55,
@@ -24,12 +28,15 @@
 "endLine":  55,
 "endColumn":  221
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 278 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Embedded\\Conventions\\EmbeddedStaticContentConventionBuilder.cs",
 "region":  {
 "startLine":  79,
@@ -37,12 +44,15 @@
 "endLine":  79,
 "endColumn":  279
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 233 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Embedded\\Conventions\\EmbeddedStaticContentConventionBuilder.cs",
 "region":  {
 "startLine":  98,
@@ -50,12 +60,15 @@
 "endLine":  98,
 "endColumn":  234
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 231 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Embedded\\Conventions\\EmbeddedStaticContentConventionBuilder.cs",
 "region":  {
 "startLine":  110,
@@ -63,7 +76,9 @@
 "endLine":  110,
 "endColumn":  232
 }
-}
+},
+null
+]
 }
 ]
 }

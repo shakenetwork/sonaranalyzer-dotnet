@@ -3,7 +3,8 @@
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\PersistenceExample\\AtLeastOnceDeliveryExampleActor.cs",
 "region":  {
 "startLine":  133,
@@ -11,12 +12,15 @@
 "endLine":  133,
 "endColumn":  36
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\PersistenceExample\\ExamplePersistentFailingActor.cs",
 "region":  {
 "startLine":  38,
@@ -24,7 +28,9 @@
 "endLine":  38,
 "endColumn":  36
 }
-}
+},
+null
+]
 }
 ]
 }

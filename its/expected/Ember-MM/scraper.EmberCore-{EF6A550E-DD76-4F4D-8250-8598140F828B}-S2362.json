@@ -3,7 +3,8 @@
 {
 "id":  "S2362",
 "message":  "Rename \"LINK_PATTERN\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMDB.vb",
 "region":  {
 "startLine":  85,
@@ -11,12 +12,15 @@
 "endLine":  85,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2362",
 "message":  "Rename \"ACTORTABLE_PATTERN\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMDB.vb",
 "region":  {
 "startLine":  87,
@@ -24,12 +28,15 @@
 "endLine":  87,
 "endColumn":  41
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2362",
 "message":  "Rename \"HREF_PATTERN\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMDB.vb",
 "region":  {
 "startLine":  88,
@@ -37,12 +44,15 @@
 "endLine":  88,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2362",
 "message":  "Rename \"HREF_PATTERN_2\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMDB.vb",
 "region":  {
 "startLine":  89,
@@ -50,12 +60,15 @@
 "endLine":  89,
 "endColumn":  37
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2362",
 "message":  "Rename \"HREF_PATTERN_3\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMDB.vb",
 "region":  {
 "startLine":  90,
@@ -63,12 +76,15 @@
 "endLine":  90,
 "endColumn":  37
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2362",
 "message":  "Rename \"HREF_PATTERN_4\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMDB.vb",
 "region":  {
 "startLine":  91,
@@ -76,12 +92,15 @@
 "endLine":  91,
 "endColumn":  37
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2362",
 "message":  "Rename \"IMDB_ID_REGEX\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMDB.vb",
 "region":  {
 "startLine":  92,
@@ -89,12 +108,15 @@
 "endLine":  92,
 "endColumn":  36
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2362",
 "message":  "Rename \"IMG_PATTERN\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMDB.vb",
 "region":  {
 "startLine":  93,
@@ -102,12 +124,15 @@
 "endLine":  93,
 "endColumn":  34
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2362",
 "message":  "Rename \"MOVIE_TITLE_PATTERN\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMDB.vb",
 "region":  {
 "startLine":  94,
@@ -115,12 +140,15 @@
 "endLine":  94,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2362",
 "message":  "Rename \"TABLE_PATTERN\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMDB.vb",
 "region":  {
 "startLine":  95,
@@ -128,12 +156,15 @@
 "endLine":  95,
 "endColumn":  36
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2362",
 "message":  "Rename \"TD_PATTERN_1\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMDB.vb",
 "region":  {
 "startLine":  96,
@@ -141,12 +172,15 @@
 "endLine":  96,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2362",
 "message":  "Rename \"TD_PATTERN_2\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMDB.vb",
 "region":  {
 "startLine":  97,
@@ -154,12 +188,15 @@
 "endLine":  97,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2362",
 "message":  "Rename \"TD_PATTERN_3\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMDB.vb",
 "region":  {
 "startLine":  98,
@@ -167,12 +204,15 @@
 "endLine":  98,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2362",
 "message":  "Rename \"TD_PATTERN_4\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMDB.vb",
 "region":  {
 "startLine":  99,
@@ -180,12 +220,15 @@
 "endLine":  99,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2362",
 "message":  "Rename \"TITLE_PATTERN\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMDB.vb",
 "region":  {
 "startLine":  100,
@@ -193,12 +236,15 @@
 "endLine":  100,
 "endColumn":  36
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2362",
 "message":  "Rename \"TR_PATTERN\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeIMDB.vb",
 "region":  {
 "startLine":  101,
@@ -206,12 +252,15 @@
 "endLine":  101,
 "endColumn":  33
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2362",
 "message":  "Rename \"APIKey\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore\\Scraper\\clsScrapeTMDB.vb",
 "region":  {
 "startLine":  33,
@@ -219,7 +268,9 @@
 "endLine":  33,
 "endColumn":  29
 }
-}
+},
+null
+]
 }
 ]
 }

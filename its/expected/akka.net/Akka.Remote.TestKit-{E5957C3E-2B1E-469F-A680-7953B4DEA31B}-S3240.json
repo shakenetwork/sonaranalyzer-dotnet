@@ -3,7 +3,8 @@
 {
 "id":  "S3240",
 "message":  "Use the \"?:\" operator here.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\BarrierCoordinator.cs",
 "region":  {
 "startLine":  496,
@@ -11,7 +12,9 @@
 "endLine":  496,
 "endColumn":  27
 }
-}
+},
+null
+]
 }
 ]
 }

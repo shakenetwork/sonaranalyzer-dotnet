@@ -3,7 +3,8 @@
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_numReplicated\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\PersistenceExample\\ExampleView.cs",
 "region":  {
 "startLine":  15,
@@ -11,7 +12,9 @@
 "endLine":  15,
 "endColumn":  39
 }
-}
+},
+null
+]
 }
 ]
 }

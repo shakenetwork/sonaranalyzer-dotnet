@@ -3,7 +3,8 @@
 {
 "id":  "S1135",
 "message":  "Complete the task associated to this \"TODO\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\serializers\\Akka.Serialization.TestKit\\AkkaSerializationSpec.cs",
 "region":  {
 "startLine":  395,
@@ -11,7 +12,9 @@
 "endLine":  395,
 "endColumn":  15
 }
-}
+},
+null
+]
 }
 ]
 }

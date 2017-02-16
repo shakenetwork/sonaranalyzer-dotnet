@@ -3,7 +3,8 @@
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 25 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\testkits\\Akka.TestKit.Xunit2\\Internals\\AkkaAssertEqualityComparer.cs",
 "region":  {
 "startLine":  44,
@@ -11,7 +12,9 @@
 "endLine":  44,
 "endColumn":  27
 }
-}
+},
+null
+]
 }
 ]
 }

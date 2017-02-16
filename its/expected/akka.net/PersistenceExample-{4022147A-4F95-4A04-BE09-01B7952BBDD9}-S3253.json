@@ -3,7 +3,8 @@
 {
 "id":  "S3253",
 "message":  "Remove this redundant constructor.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\PersistenceExample\\ViewExampleActor.cs",
 "region":  {
 "startLine":  17,
@@ -11,7 +12,9 @@
 "endLine":  19,
 "endColumn":  10
 }
-}
+},
+null
+]
 }
 ]
 }

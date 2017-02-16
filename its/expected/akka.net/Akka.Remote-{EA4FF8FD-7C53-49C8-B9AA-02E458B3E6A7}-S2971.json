@@ -3,7 +3,8 @@
 {
 "id":  "S2971",
 "message":  "Drop \"ToArray\" from the middle of the call chain.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\AckedDelivery.cs",
 "region":  {
 "startLine":  325,
@@ -11,12 +12,15 @@
 "endLine":  325,
 "endColumn":  106
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2971",
 "message":  "Drop \"ToArray\" from the middle of the call chain.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\AckedDelivery.cs",
 "region":  {
 "startLine":  325,
@@ -24,12 +28,15 @@
 "endLine":  325,
 "endColumn":  158
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2971",
 "message":  "Use \"Count\" property here instead.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteWatcher.cs",
 "region":  {
 "startLine":  334,
@@ -37,7 +44,9 @@
 "endLine":  334,
 "endColumn":  78
 }
-}
+},
+null
+]
 }
 ]
 }

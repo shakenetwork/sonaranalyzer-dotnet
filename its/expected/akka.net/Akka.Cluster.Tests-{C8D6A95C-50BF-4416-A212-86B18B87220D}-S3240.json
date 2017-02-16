@@ -3,7 +3,8 @@
 {
 "id":  "S3240",
 "message":  "Use the \"?:\" operator here.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\ClusterHeartBeatSenderStateSpec.cs",
 "region":  {
 "startLine":  229,
@@ -11,7 +12,9 @@
 "endLine":  229,
 "endColumn":  35
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Controller.cs",
 "region":  {
 "startLine":  282,
@@ -11,12 +12,15 @@
 "endLine":  282,
 "endColumn":  32
 }
-}
+},
+null
+]
 },
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Controller.cs",
 "region":  {
 "startLine":  294,
@@ -24,12 +28,15 @@
 "endLine":  294,
 "endColumn":  32
 }
-}
+},
+null
+]
 },
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Controller.cs",
 "region":  {
 "startLine":  299,
@@ -37,12 +44,15 @@
 "endLine":  299,
 "endColumn":  32
 }
-}
+},
+null
+]
 },
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
 "region":  {
 "startLine":  403,
@@ -50,7 +60,9 @@
 "endLine":  403,
 "endColumn":  31
 }
-}
+},
+null
+]
 }
 ]
 }

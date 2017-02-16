@@ -3,7 +3,8 @@
 {
 "id":  "S126",
 "message":  "Add the missing \"else\" clause.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\AtLeastOnceDeliveryFailureSpec.cs",
 "region":  {
 "startLine":  219,
@@ -11,12 +12,15 @@
 "endLine":  219,
 "endColumn":  24
 }
-}
+},
+null
+]
 },
 {
 "id":  "S126",
 "message":  "Add the missing \"else\" clause.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
 "region":  {
 "startLine":  446,
@@ -24,7 +28,9 @@
 "endLine":  446,
 "endColumn":  32
 }
-}
+},
+null
+]
 }
 ]
 }

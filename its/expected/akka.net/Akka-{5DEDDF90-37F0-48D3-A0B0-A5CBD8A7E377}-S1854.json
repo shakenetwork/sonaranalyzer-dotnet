@@ -3,7 +3,8 @@
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"actor\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Props.cs",
 "region":  {
 "startLine":  556,
@@ -11,12 +12,15 @@
 "endLine":  556,
 "endColumn":  29
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"actor\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Props.cs",
 "region":  {
 "startLine":  584,
@@ -24,12 +28,15 @@
 "endLine":  584,
 "endColumn":  29
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"actor\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Props.cs",
 "region":  {
 "startLine":  610,
@@ -37,12 +44,15 @@
 "endLine":  610,
 "endColumn":  29
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"oldNext\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Util\\MonoConcurrentQueue.cs",
 "region":  {
 "startLine":  148,
@@ -50,12 +60,15 @@
 "endLine":  148,
 "endColumn":  32
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"actor\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Util\\Resolver.cs",
 "region":  {
 "startLine":  32,
@@ -63,7 +76,9 @@
 "endLine":  32,
 "endColumn":  25
 }
-}
+},
+null
+]
 }
 ]
 }

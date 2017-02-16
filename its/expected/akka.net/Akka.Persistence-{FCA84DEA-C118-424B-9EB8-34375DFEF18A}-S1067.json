@@ -3,7 +3,8 @@
 {
 "id":  "S1067",
 "message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  596,
@@ -11,12 +12,15 @@
 "endLine":  601,
 "endColumn":  65
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1067",
 "message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistent.cs",
 "region":  {
 "startLine":  169,
@@ -24,12 +28,15 @@
 "endLine":  174,
 "endColumn":  53
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1067",
 "message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistent.cs",
 "region":  {
 "startLine":  184,
@@ -37,7 +44,9 @@
 "endLine":  184,
 "endColumn":  244
 }
-}
+},
+null
+]
 }
 ]
 }

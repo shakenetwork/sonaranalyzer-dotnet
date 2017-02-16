@@ -3,7 +3,8 @@
 {
 "id":  "S2931",
 "message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_readView\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Cluster.cs",
 "region":  {
 "startLine":  38,
@@ -11,7 +12,9 @@
 "endLine":  38,
 "endColumn":  25
 }
-}
+},
+null
+]
 }
 ]
 }

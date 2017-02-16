@@ -3,7 +3,8 @@
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\benchmark\\PingPong\\ClientActorBase.cs",
 "region":  {
 "startLine":  41,
@@ -11,7 +12,9 @@
 "endLine":  41,
 "endColumn":  71
 }
-}
+},
+null
+]
 }
 ]
 }

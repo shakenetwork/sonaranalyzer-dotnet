@@ -3,7 +3,8 @@
 {
 "id":  "S2360",
 "message":  "Use the overloading mechanism instead of the optional parameters.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.BulkRename\\clsAPIRenamer.vb",
 "region":  {
 "startLine":  398,
@@ -11,12 +12,15 @@
 "endLine":  398,
 "endColumn":  33
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2360",
 "message":  "Use the overloading mechanism instead of the optional parameters.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.BulkRename\\clsAPIRenamer.vb",
 "region":  {
 "startLine":  579,
@@ -24,7 +28,9 @@
 "endLine":  579,
 "endColumn":  98
 }
-}
+},
+null
+]
 }
 ]
 }

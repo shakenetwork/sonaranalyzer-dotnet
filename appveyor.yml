@@ -1,7 +1,7 @@
 version: 1.0.{build}
 os: Visual Studio 2015
 
-install: 
+install:
   - git submodule update --init --recursive --depth 1
 
 before_build:
@@ -24,4 +24,4 @@ notifications:
     secure: RW8+2GpOWo3PcoM3ehoI+mbfUr7h508RtTDyszpR6/E=
   on_build_success: false
   on_build_failure: true
-  on_build_status_changed: false  
+  on_build_status_changed: false

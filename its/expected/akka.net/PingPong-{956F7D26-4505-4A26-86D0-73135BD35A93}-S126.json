@@ -3,7 +3,8 @@
 {
 "id":  "S126",
 "message":  "Add the missing \"else\" clause.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\benchmark\\PingPong\\ClientActorBase.cs",
 "region":  {
 "startLine":  39,
@@ -11,12 +12,15 @@
 "endLine":  39,
 "endColumn":  24
 }
-}
+},
+null
+]
 },
 {
 "id":  "S126",
 "message":  "Add the missing \"else\" clause.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\benchmark\\PingPong\\ClientAsyncActor.cs",
 "region":  {
 "startLine":  30,
@@ -24,12 +28,15 @@
 "endLine":  30,
 "endColumn":  24
 }
-}
+},
+null
+]
 },
 {
 "id":  "S126",
 "message":  "Add the missing \"else\" clause.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\benchmark\\PingPong\\ClientReceiveActor.cs",
 "region":  {
 "startLine":  28,
@@ -37,12 +44,15 @@
 "endLine":  28,
 "endColumn":  24
 }
-}
+},
+null
+]
 },
 {
 "id":  "S126",
 "message":  "Add the missing \"else\" clause.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\benchmark\\PingPong\\Program.cs",
 "region":  {
 "startLine":  247,
@@ -50,7 +60,9 @@
 "endLine":  247,
 "endColumn":  24
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\AutoPilots.cs",
 "region":  {
 "startLine":  57,
@@ -11,12 +12,15 @@
 "endLine":  57,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\AutoPilots.cs",
 "region":  {
 "startLine":  72,
@@ -24,12 +28,15 @@
 "endLine":  72,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"Id\" or make it \"const\" or \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\CallingThreadDispatcher.cs",
 "region":  {
 "startLine":  28,
@@ -37,12 +44,15 @@
 "endLine":  28,
 "endColumn":  32
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\NullMessageEnvelope.cs",
 "region":  {
 "startLine":  14,
@@ -50,7 +60,9 @@
 "endLine":  14,
 "endColumn":  51
 }
-}
+},
+null
+]
 }
 ]
 }

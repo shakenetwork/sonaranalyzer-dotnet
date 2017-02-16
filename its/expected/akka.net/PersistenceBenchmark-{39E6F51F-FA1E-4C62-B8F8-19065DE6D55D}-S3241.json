@@ -3,7 +3,8 @@
 {
 "id":  "S3241",
 "message":  "Change return type to \"void\"; not a single caller uses the returned value.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\benchmark\\PersistenceBenchmark\\PerformanceActors.cs",
 "region":  {
 "startLine":  115,
@@ -11,7 +12,9 @@
 "endLine":  115,
 "endColumn":  23
 }
-}
+},
+null
+]
 }
 ]
 }

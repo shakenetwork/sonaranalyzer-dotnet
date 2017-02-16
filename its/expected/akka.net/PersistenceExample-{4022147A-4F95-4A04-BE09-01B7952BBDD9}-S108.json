@@ -3,7 +3,8 @@
 {
 "id":  "S108",
 "message":  "Either remove or fill this block of code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\PersistenceExample\\SnapshotedExampleActor.cs",
 "region":  {
 "startLine":  44,
@@ -11,7 +12,9 @@
 "endLine":  44,
 "endColumn":  91
 }
-}
+},
+null
+]
 }
 ]
 }

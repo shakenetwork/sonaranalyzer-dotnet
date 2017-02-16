@@ -3,7 +3,8 @@
 {
 "id":  "S2330",
 "message":  "Refactor the code to not rely on potentially unsafe array conversions.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Helpers\\ReflectionUtils.cs",
 "region":  {
 "startLine":  285,
@@ -11,12 +12,15 @@
 "endLine":  285,
 "endColumn":  63
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2330",
 "message":  "Refactor the code to not rely on potentially unsafe array conversions.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Helpers\\ReflectionUtils.cs",
 "region":  {
 "startLine":  288,
@@ -24,7 +28,9 @@
 "endLine":  288,
 "endColumn":  54
 }
-}
+},
+null
+]
 }
 ]
 }

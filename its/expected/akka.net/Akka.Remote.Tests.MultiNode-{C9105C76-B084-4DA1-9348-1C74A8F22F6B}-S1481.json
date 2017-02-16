@@ -3,7 +3,8 @@
 {
 "id":  "S1481",
 "message":  "Remove this unused \"foo\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\NewRemoteActorSpec.cs",
 "region":  {
 "startLine":  114,
@@ -11,12 +12,15 @@
 "endLine":  114,
 "endColumn":  24
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"foo\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\NewRemoteActorSpec.cs",
 "region":  {
 "startLine":  131,
@@ -24,12 +28,15 @@
 "endLine":  131,
 "endColumn":  24
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"foo\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\NewRemoteActorSpec.cs",
 "region":  {
 "startLine":  150,
@@ -37,7 +44,9 @@
 "endLine":  150,
 "endColumn":  28
 }
-}
+},
+null
+]
 }
 ]
 }

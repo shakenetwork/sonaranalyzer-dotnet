@@ -3,7 +3,8 @@
 {
 "id":  "S1134",
 "message":  "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\AtLeastOnceDeliveryReceiveActorSpec.cs",
 "region":  {
 "startLine":  33,
@@ -11,12 +12,15 @@
 "endLine":  33,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1134",
 "message":  "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\AtLeastOnceDeliveryReceiveActorSpec.cs",
 "region":  {
 "startLine":  473,
@@ -24,12 +28,15 @@
 "endLine":  473,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1134",
 "message":  "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\AtLeastOnceDeliverySpec.cs",
 "region":  {
 "startLine":  210,
@@ -37,12 +44,15 @@
 "endLine":  210,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1134",
 "message":  "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\AtLeastOnceDeliverySpec.cs",
 "region":  {
 "startLine":  407,
@@ -50,12 +60,15 @@
 "endLine":  407,
 "endColumn":  20
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1134",
 "message":  "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
 "region":  {
 "startLine":  691,
@@ -63,7 +76,9 @@
 "endLine":  691,
 "endColumn":  28
 }
-}
+},
+null
+]
 }
 ]
 }

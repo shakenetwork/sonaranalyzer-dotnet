@@ -3,7 +3,8 @@
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"sep\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.XBMC\\dlgXBMCHost.vb",
 "region":  {
 "startLine":  308,
@@ -11,12 +12,15 @@
 "endLine":  308,
 "endColumn":  46
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"mypath\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.XBMC\\dlgXBMCHost.vb",
 "region":  {
 "startLine":  309,
@@ -24,12 +28,15 @@
 "endLine":  309,
 "endColumn":  47
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"mypath\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.XBMC\\dlgXBMCHost.vb",
 "region":  {
 "startLine":  310,
@@ -37,12 +44,15 @@
 "endLine":  310,
 "endColumn":  70
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"sr\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.XBMC\\Module.XBMCxCom.vb",
 "region":  {
 "startLine":  413,
@@ -50,12 +60,15 @@
 "endLine":  413,
 "endColumn":  11
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"input\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.XBMC\\Module.XBMCxCom.vb",
 "region":  {
 "startLine":  431,
@@ -63,7 +76,9 @@
 "endLine":  431,
 "endColumn":  14
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S2933",
 "message":  "Make \"bootstrapper\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\SerializerTests.cs",
 "region":  {
 "startLine":  12,
@@ -11,12 +12,15 @@
 "endLine":  12,
 "endColumn":  54
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2933",
 "message":  "Make \"browser\" \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\SerializerTests.cs",
 "region":  {
 "startLine":  13,
@@ -24,7 +28,9 @@
 "endLine":  13,
 "endColumn":  32
 }
-}
+},
+null
+]
 }
 ]
 }

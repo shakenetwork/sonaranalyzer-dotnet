@@ -3,7 +3,8 @@
 {
 "id":  "S2355",
 "message":  "Use an array literal here instead.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.WebServer\\Module.WebServer.vb",
 "region":  {
 "startLine":  77,
@@ -11,7 +12,9 @@
 "endLine":  77,
 "endColumn":  114
 }
-}
+},
+null
+]
 }
 ]
 }

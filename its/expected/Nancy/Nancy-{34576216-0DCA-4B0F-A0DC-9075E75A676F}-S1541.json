@@ -3,7 +3,8 @@
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Bootstrapper\\AppDomainAssemblyTypeScanner.cs",
 "region":  {
 "startLine":  284,
@@ -11,12 +12,15 @@
 "endLine":  284,
 "endColumn":  48
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Bootstrapper\\NancyBootstrapperBase.cs",
 "region":  {
 "startLine":  223,
@@ -24,12 +28,15 @@
 "endLine":  223,
 "endColumn":  31
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 29 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Conventions\\DefaultViewLocationConventions.cs",
 "region":  {
 "startLine":  39,
@@ -37,12 +44,15 @@
 "endLine":  39,
 "endColumn":  61
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Diagnostics\\DiagnosticsHook.cs",
 "region":  {
 "startLine":  37,
@@ -50,12 +60,15 @@
 "endLine":  37,
 "endColumn":  34
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Diagnostics\\DiagnosticsHook.cs",
 "region":  {
 "startLine":  210,
@@ -63,12 +76,15 @@
 "endLine":  210,
 "endColumn":  53
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this constructor is 14 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Diagnostics\\Modules\\InteractiveModule.cs",
 "region":  {
 "startLine":  14,
@@ -76,12 +92,15 @@
 "endLine":  14,
 "endColumn":  33
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\DynamicDictionaryValue.cs",
 "region":  {
 "startLine":  76,
@@ -89,12 +108,15 @@
 "endLine":  76,
 "endColumn":  26
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 28 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\DynamicDictionaryValue.cs",
 "region":  {
 "startLine":  229,
@@ -102,12 +124,15 @@
 "endLine":  229,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\ErrorHandling\\DefaultStatusCodeHandler.cs",
 "region":  {
 "startLine":  62,
@@ -115,12 +140,15 @@
 "endLine":  62,
 "endColumn":  27
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 21 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Extensions\\TypeExtensions.cs",
 "region":  {
 "startLine":  87,
@@ -128,12 +156,15 @@
 "endLine":  87,
 "endColumn":  37
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Helpers\\CacheHelpers.cs",
 "region":  {
 "startLine":  19,
@@ -141,12 +172,15 @@
 "endLine":  19,
 "endColumn":  45
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 23 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
 "region":  {
 "startLine":  256,
@@ -154,12 +188,15 @@
 "endLine":  256,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
 "region":  {
 "startLine":  332,
@@ -167,12 +204,15 @@
 "endLine":  332,
 "endColumn":  51
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 31 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
 "region":  {
 "startLine":  389,
@@ -180,12 +220,15 @@
 "endLine":  389,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
 "region":  {
 "startLine":  575,
@@ -193,12 +236,15 @@
 "endLine":  575,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
 "startLine":  135,
@@ -206,12 +252,15 @@
 "endLine":  135,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 22 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
 "startLine":  249,
@@ -219,12 +268,15 @@
 "endLine":  249,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
 "startLine":  346,
@@ -232,12 +284,15 @@
 "endLine":  346,
 "endColumn":  46
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
 "startLine":  389,
@@ -245,12 +300,15 @@
 "endLine":  389,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Helpers\\ReflectionUtils.cs",
 "region":  {
 "startLine":  71,
@@ -258,12 +316,15 @@
 "endLine":  71,
 "endColumn":  38
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 32 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
 "startLine":  144,
@@ -271,12 +332,15 @@
 "endLine":  144,
 "endColumn":  38
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
 "startLine":  275,
@@ -284,12 +348,15 @@
 "endLine":  275,
 "endColumn":  29
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 26 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
 "startLine":  317,
@@ -297,12 +364,15 @@
 "endLine":  317,
 "endColumn":  31
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
 "startLine":  423,
@@ -310,12 +380,15 @@
 "endLine":  423,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 25 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
 "region":  {
 "startLine":  484,
@@ -323,12 +396,15 @@
 "endLine":  484,
 "endColumn":  19
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 73 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
 "region":  {
 "startLine":  577,
@@ -336,12 +412,15 @@
 "endLine":  577,
 "endColumn":  24
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 61 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
 "region":  {
 "startLine":  104,
@@ -349,12 +428,15 @@
 "endLine":  104,
 "endColumn":  26
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
 "region":  {
 "startLine":  284,
@@ -362,12 +444,15 @@
 "endLine":  284,
 "endColumn":  26
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 18 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
 "region":  {
 "startLine":  439,
@@ -375,12 +460,15 @@
 "endLine":  439,
 "endColumn":  22
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
 "region":  {
 "startLine":  565,
@@ -388,12 +476,15 @@
 "endLine":  565,
 "endColumn":  18
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 23 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\ModelBinding\\DefaultBinder.cs",
 "region":  {
 "startLine":  68,
@@ -401,12 +492,15 @@
 "endLine":  68,
 "endColumn":  27
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\ModelBinding\\DefaultBinder.cs",
 "region":  {
 "startLine":  239,
@@ -414,12 +508,15 @@
 "endLine":  239,
 "endColumn":  61
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\ModelBinding\\DefaultBinder.cs",
 "region":  {
 "startLine":  417,
@@ -427,12 +524,15 @@
 "endLine":  417,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\ModelBinding\\ExpressionExtensions.cs",
 "region":  {
 "startLine":  16,
@@ -440,12 +540,15 @@
 "endLine":  16,
 "endColumn":  53
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this constructor is 11 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Request.cs",
 "region":  {
 "startLine":  48,
@@ -453,12 +556,15 @@
 "endLine":  48,
 "endColumn":  23
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Routing\\Constraints\\LengthRouteSegmentConstraint.cs",
 "region":  {
 "startLine":  13,
@@ -466,12 +572,15 @@
 "endLine":  13,
 "endColumn":  41
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Routing\\Trie\\MatchResult.cs",
 "region":  {
 "startLine":  59,
@@ -479,12 +588,15 @@
 "endLine":  59,
 "endColumn":  29
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Routing\\Trie\\TrieNodeFactory.cs",
 "region":  {
 "startLine":  27,
@@ -492,12 +604,15 @@
 "endLine":  27,
 "endColumn":  50
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Security\\Csrf.cs",
 "region":  {
 "startLine":  23,
@@ -505,12 +620,15 @@
 "endLine":  23,
 "endColumn":  34
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Security\\DefaultCsrfTokenValidator.cs",
 "region":  {
 "startLine":  32,
@@ -518,12 +636,15 @@
 "endLine":  32,
 "endColumn":  50
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this accessor is 11 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Session\\CookieBasedSessionsConfiguration.cs",
 "region":  {
 "startLine":  58,
@@ -531,12 +652,15 @@
 "endLine":  58,
 "endColumn":  16
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  450,
@@ -544,12 +668,15 @@
 "endLine":  450,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  3085,
@@ -557,12 +684,15 @@
 "endLine":  3085,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 32 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  3247,
@@ -570,12 +700,15 @@
 "endLine":  3247,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  3317,
@@ -583,12 +716,15 @@
 "endLine":  3317,
 "endColumn":  51
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 24 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  3361,
@@ -596,12 +732,15 @@
 "endLine":  3361,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  3469,
@@ -609,12 +748,15 @@
 "endLine":  3469,
 "endColumn":  54
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  3560,
@@ -622,12 +764,15 @@
 "endLine":  3560,
 "endColumn":  34
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  3635,
@@ -635,12 +780,15 @@
 "endLine":  3635,
 "endColumn":  37
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\DefaultViewLocator.cs",
 "region":  {
 "startLine":  41,
@@ -648,12 +796,15 @@
 "endLine":  41,
 "endColumn":  45
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
 "region":  {
 "startLine":  165,
@@ -661,12 +812,15 @@
 "endLine":  165,
 "endColumn":  60
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
 "region":  {
 "startLine":  470,
@@ -674,7 +828,9 @@
 "endLine":  470,
 "endColumn":  48
 }
-}
+},
+null
+]
 }
 ]
 }

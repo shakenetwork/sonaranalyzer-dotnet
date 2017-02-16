@@ -3,7 +3,8 @@
 {
 "id":  "S2339",
 "message":  "Change this constant to a \"static\" read-only property.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\RazorConfigurationSection.cs",
 "region":  {
 "startLine":  54,
@@ -11,12 +12,15 @@
 "endLine":  54,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2339",
 "message":  "Change this constant to a \"static\" read-only property.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\RazorConfigurationSection.cs",
 "region":  {
 "startLine":  73,
@@ -24,12 +28,15 @@
 "endLine":  73,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2339",
 "message":  "Change this constant to a \"static\" read-only property.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\RazorConfigurationSection.cs",
 "region":  {
 "startLine":  91,
@@ -37,12 +44,15 @@
 "endLine":  91,
 "endColumn":  41
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2339",
 "message":  "Change this constant to a \"static\" read-only property.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\RazorConfigurationSection.cs",
 "region":  {
 "startLine":  128,
@@ -50,7 +60,9 @@
 "endLine":  128,
 "endColumn":  40
 }
-}
+},
+null
+]
 }
 ]
 }

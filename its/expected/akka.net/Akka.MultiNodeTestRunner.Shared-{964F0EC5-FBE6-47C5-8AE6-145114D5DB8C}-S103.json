@@ -3,7 +3,8 @@
 {
 "id":  "S103",
 "message":  "Split this 341 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\MessageSink.cs",
 "region":  {
 "startLine":  105,
@@ -11,12 +12,15 @@
 "endLine":  105,
 "endColumn":  342
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 307 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\MessageSink.cs",
 "region":  {
 "startLine":  108,
@@ -24,7 +28,9 @@
 "endLine":  108,
 "endColumn":  308
 }
-}
+},
+null
+]
 }
 ]
 }

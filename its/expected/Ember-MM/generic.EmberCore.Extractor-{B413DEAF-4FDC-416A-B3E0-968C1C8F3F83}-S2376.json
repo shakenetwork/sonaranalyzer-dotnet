@@ -3,7 +3,8 @@
 {
 "id":  "S2376",
 "message":  "Provide a getter for \"isEdit\" or replace the property with a \"SetisEdit\" method.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.Extractor\\clsExtractor.vb",
 "region":  {
 "startLine":  67,
@@ -11,12 +12,15 @@
 "endLine":  67,
 "endColumn":  41
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2376",
 "message":  "Provide a getter for \"Movie\" or replace the property with a \"SetMovie\" method.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.Extractor\\clsExtractor.vb",
 "region":  {
 "startLine":  73,
@@ -24,12 +28,15 @@
 "endLine":  73,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2376",
 "message":  "Provide a getter for \"ThumbCount\" or replace the property with a \"SetThumbCount\" method.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.Extractor\\clsExtractor.vb",
 "region":  {
 "startLine":  85,
@@ -37,7 +44,9 @@
 "endLine":  85,
 "endColumn":  45
 }
-}
+},
+null
+]
 }
 ]
 }

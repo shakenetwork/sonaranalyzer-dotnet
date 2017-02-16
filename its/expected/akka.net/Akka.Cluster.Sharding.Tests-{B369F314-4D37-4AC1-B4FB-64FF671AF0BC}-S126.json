@@ -3,7 +3,8 @@
 {
 "id":  "S126",
 "message":  "Add the missing \"else\" clause.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding.Tests\\ClusterShardingGracefulShutdownSpec.cs",
 "region":  {
 "startLine":  89,
@@ -11,7 +12,9 @@
 "endLine":  89,
 "endColumn":  24
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\AtLeastOnceDeliveryReceiveActorSpec.cs",
 "region":  {
 "startLine":  190,
@@ -11,12 +12,15 @@
 "endLine":  190,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\AtLeastOnceDeliverySpec.cs",
 "region":  {
 "startLine":  90,
@@ -24,12 +28,15 @@
 "endLine":  90,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\ReceivePersistentActorTests_LifeCycle.cs",
 "region":  {
 "startLine":  73,
@@ -37,12 +44,15 @@
 "endLine":  73,
 "endColumn":  78
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\ReceivePersistentActorTests_LifeCycle.cs",
 "region":  {
 "startLine":  81,
@@ -50,7 +60,9 @@
 "endLine":  81,
 "endColumn":  78
 }
-}
+},
+null
+]
 }
 ]
 }

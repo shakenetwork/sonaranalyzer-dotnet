@@ -3,7 +3,8 @@
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"DefaultAssembliesToScan\" or make it \"const\" or \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Bootstrapper\\AppDomainAssemblyTypeScanner.cs",
 "region":  {
 "startLine":  47,
@@ -11,12 +12,15 @@
 "endLine":  47,
 "endColumn":  69
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"DefaultAutoRegisterIgnoredAssemblies\" or make it \"const\" or \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\DefaultNancyBootstrapper.cs",
 "region":  {
 "startLine":  21,
@@ -24,12 +28,15 @@
 "endLine":  21,
 "endColumn":  93
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"DEFAULT_SWITCHOVER_THRESHOLD\" or make it \"const\" or \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\IO\\RequestStream.cs",
 "region":  {
 "startLine":  14,
@@ -37,12 +44,15 @@
 "endLine":  14,
 "endColumn":  56
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"NoBody\" or make it \"const\" or \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Response.cs",
 "region":  {
 "startLine":  23,
@@ -50,12 +60,15 @@
 "endLine":  23,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"BufferSize\" or make it \"const\" or \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Responses\\GenericFileResponse.cs",
 "region":  {
 "startLine":  26,
@@ -63,12 +76,15 @@
 "endLine":  26,
 "endColumn":  37
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"None\" or make it \"const\" or \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Responses\\Negotiation\\ProcessorMatch.cs",
 "region":  {
 "startLine":  11,
@@ -76,7 +92,9 @@
 "endLine":  11,
 "endColumn":  42
 }
-}
+},
+null
+]
 }
 ]
 }

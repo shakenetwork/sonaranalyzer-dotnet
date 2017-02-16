@@ -3,7 +3,8 @@
 {
 "id":  "S1481",
 "message":  "Remove this unused \"messages\" local variable.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared.Tests\\NodeMessageHelpers.cs",
 "region":  {
 "startLine":  128,
@@ -11,7 +12,9 @@
 "endLine":  128,
 "endColumn":  25
 }
-}
+},
+null
+]
 }
 ]
 }

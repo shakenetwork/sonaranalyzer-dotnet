@@ -3,7 +3,8 @@
 {
 "id":  "S1313",
 "message":  "Make this IP \"127.0.0.1\" address configurable.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Testing.Tests\\BrowserFixture.cs",
 "region":  {
 "startLine":  58,
@@ -11,12 +12,15 @@
 "endLine":  58,
 "endColumn":  55
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1313",
 "message":  "Make this IP \"127.0.0.1\" address configurable.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Testing.Tests\\BrowserFixture.cs",
 "region":  {
 "startLine":  75,
@@ -24,12 +28,15 @@
 "endLine":  75,
 "endColumn":  55
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1313",
 "message":  "Make this IP \"::1\" address configurable.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Testing.Tests\\BrowserFixture.cs",
 "region":  {
 "startLine":  93,
@@ -37,12 +44,15 @@
 "endLine":  93,
 "endColumn":  49
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1313",
 "message":  "Make this IP \"84.12.65.72\" address configurable.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Testing.Tests\\BrowserFixture.cs",
 "region":  {
 "startLine":  111,
@@ -50,7 +60,9 @@
 "endLine":  111,
 "endColumn":  57
 }
-}
+},
+null
+]
 }
 ]
 }

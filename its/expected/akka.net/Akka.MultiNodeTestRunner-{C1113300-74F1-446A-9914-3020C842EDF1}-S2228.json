@@ -3,7 +3,8 @@
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner\\Program.cs",
 "region":  {
 "startLine":  150,
@@ -11,7 +12,9 @@
 "endLine":  150,
 "endColumn":  30
 }
-}
+},
+null
+]
 }
 ]
 }

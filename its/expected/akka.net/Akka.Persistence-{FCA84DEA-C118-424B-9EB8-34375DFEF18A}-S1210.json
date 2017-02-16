@@ -3,7 +3,8 @@
 {
 "id":  "S1210",
 "message":  "When implementing IComparable\u003cT\u003e, you should also override \u003c, \u003e, ==, !=.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  775,
@@ -11,7 +12,9 @@
 "endLine":  775,
 "endColumn":  53
 }
-}
+},
+null
+]
 }
 ]
 }

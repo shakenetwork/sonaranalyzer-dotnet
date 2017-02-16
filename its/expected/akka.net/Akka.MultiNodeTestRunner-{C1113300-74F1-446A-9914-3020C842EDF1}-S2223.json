@@ -3,7 +3,8 @@
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"TestRunSystem\" or make it \"const\" or \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner\\Program.cs",
 "region":  {
 "startLine":  29,
@@ -11,12 +12,15 @@
 "endLine":  29,
 "endColumn":  51
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"SinkCoordinator\" or make it \"const\" or \"readonly\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner\\Program.cs",
 "region":  {
 "startLine":  31,
@@ -24,7 +28,9 @@
 "endLine":  31,
 "endColumn":  51
 }
-}
+},
+null
+]
 }
 ]
 }

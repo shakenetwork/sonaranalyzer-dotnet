@@ -3,7 +3,8 @@
 {
 "id":  "S1121",
 "message":  "Extract the assignment of \"disableCaches\" from this expression.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\StaticConfiguration.cs",
 "region":  {
 "startLine":  19,
@@ -11,7 +12,9 @@
 "endLine":  19,
 "endColumn":  51
 }
-}
+},
+null
+]
 }
 ]
 }

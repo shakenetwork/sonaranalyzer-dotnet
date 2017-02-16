@@ -3,7 +3,8 @@
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\EventFilter\\Internal\\EventFilterApplier.cs",
 "region":  {
 "startLine":  200,
@@ -11,12 +12,15 @@
 "endLine":  200,
 "endColumn":  76
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\EventFilter\\Internal\\EventFilterApplier.cs",
 "region":  {
 "startLine":  204,
@@ -24,12 +28,15 @@
 "endLine":  204,
 "endColumn":  16
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\EventFilter\\Internal\\EventFilterApplier.cs",
 "region":  {
 "startLine":  245,
@@ -37,12 +44,15 @@
 "endLine":  245,
 "endColumn":  48
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\EventFilter\\Internal\\EventFilterBase.cs",
 "region":  {
 "startLine":  72,
@@ -50,12 +60,15 @@
 "endLine":  72,
 "endColumn":  34
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\Internal\\InternalTestActorRef.cs",
 "region":  {
 "startLine":  37,
@@ -63,12 +76,15 @@
 "endLine":  37,
 "endColumn":  62
 }
-}
+},
+null
+]
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\Internal\\InternalTestActorRef.cs",
 "region":  {
 "startLine":  172,
@@ -76,7 +92,9 @@
 "endLine":  172,
 "endColumn":  122
 }
-}
+},
+null
+]
 }
 ]
 }

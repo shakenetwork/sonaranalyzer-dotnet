@@ -3,7 +3,8 @@
 {
 "id":  "S100",
 "message":  "Rename method \"intercept\" to match camel case naming rules, consider using \"Intercept\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests.Shared.Internals\\AkkaSpec.cs",
 "region":  {
 "startLine":  134,
@@ -11,12 +12,15 @@
 "endLine":  134,
 "endColumn":  33
 }
-}
+},
+null
+]
 },
 {
 "id":  "S100",
 "message":  "Rename method \"expectMsgPF\" to match camel case naming rules, consider using \"ExpectMsgPF\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests.Shared.Internals\\AkkaSpec.cs",
 "region":  {
 "startLine":  140,
@@ -24,12 +28,15 @@
 "endLine":  140,
 "endColumn":  32
 }
-}
+},
+null
+]
 },
 {
 "id":  "S100",
 "message":  "Rename method \"expectMsgPF\" to match camel case naming rules, consider using \"ExpectMsgPF\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Tests.Shared.Internals\\AkkaSpec.cs",
 "region":  {
 "startLine":  146,
@@ -37,7 +44,9 @@
 "endLine":  146,
 "endColumn":  32
 }
-}
+},
+null
+]
 }
 ]
 }

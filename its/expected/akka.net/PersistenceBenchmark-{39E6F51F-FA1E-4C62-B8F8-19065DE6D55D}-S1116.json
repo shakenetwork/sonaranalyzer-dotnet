@@ -3,7 +3,8 @@
 {
 "id":  "S1116",
 "message":  "Remove this empty statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\benchmark\\PersistenceBenchmark\\PerformanceActors.cs",
 "region":  {
 "startLine":  29,
@@ -11,12 +12,15 @@
 "endLine":  29,
 "endColumn":  46
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1116",
 "message":  "Remove this empty statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\benchmark\\PersistenceBenchmark\\PerformanceActors.cs",
 "region":  {
 "startLine":  56,
@@ -24,12 +28,15 @@
 "endLine":  56,
 "endColumn":  54
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1116",
 "message":  "Remove this empty statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\benchmark\\PersistenceBenchmark\\PerformanceActors.cs",
 "region":  {
 "startLine":  76,
@@ -37,12 +44,15 @@
 "endLine":  76,
 "endColumn":  54
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1116",
 "message":  "Remove this empty statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\benchmark\\PersistenceBenchmark\\PerformanceActors.cs",
 "region":  {
 "startLine":  93,
@@ -50,7 +60,9 @@
 "endLine":  93,
 "endColumn":  46
 }
-}
+},
+null
+]
 }
 ]
 }

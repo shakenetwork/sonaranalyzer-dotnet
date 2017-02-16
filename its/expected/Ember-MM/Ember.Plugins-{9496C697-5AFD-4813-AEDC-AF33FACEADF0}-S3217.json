@@ -3,7 +3,8 @@
 {
 "id":  "S3217",
 "message":  "Either change the type of \"plugin\" to \"IPlugin\" or iterate on a generic collection of type \"IMovieInfoScraper\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\Scraper\\MovieScraperManager.cs",
 "region":  {
 "startLine":  79,
@@ -11,12 +12,15 @@
 "endLine":  79,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3217",
 "message":  "Either change the type of \"plugin\" to \"IPlugin\" or iterate on a generic collection of type \"IMovieImageScraper\".",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\Scraper\\MovieScraperManager.cs",
 "region":  {
 "startLine":  119,
@@ -24,7 +28,9 @@
 "endLine":  119,
 "endColumn":  40
 }
-}
+},
+null
+]
 }
 ]
 }

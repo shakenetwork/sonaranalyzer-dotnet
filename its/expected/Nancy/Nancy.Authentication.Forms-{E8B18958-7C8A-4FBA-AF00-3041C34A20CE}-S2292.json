@@ -3,7 +3,8 @@
 {
 "id":  "S2292",
 "message":  "Make this an auto-implemented property and remove its backing field.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Authentication.Forms\\FormsAuthentication.cs",
 "region":  {
 "startLine":  24,
@@ -11,7 +12,9 @@
 "endLine":  24,
 "endColumn":  59
 }
-}
+},
+null
+]
 }
 ]
 }

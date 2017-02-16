@@ -3,7 +3,8 @@
 {
 "id":  "S1186",
 "message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorCell.Children.cs",
 "region":  {
 "startLine":  99,
@@ -11,12 +12,15 @@
 "endLine":  99,
 "endColumn":  38
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1186",
 "message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Event\\DeadLetterListener.cs",
 "region":  {
 "startLine":  22,
@@ -24,12 +28,15 @@
 "endLine":  22,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1186",
 "message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Util\\ByteIterator.cs",
 "region":  {
 "startLine":  534,
@@ -37,7 +44,9 @@
 "endLine":  534,
 "endColumn":  32
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S2357",
 "message":  "Make \"Serializer\" private.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\Proto\\ClusterMessageSerializerSpec.cs",
 "region":  {
 "startLine":  26,
@@ -11,7 +12,9 @@
 "endLine":  26,
 "endColumn":  37
 }
-}
+},
+null
+]
 }
 ]
 }

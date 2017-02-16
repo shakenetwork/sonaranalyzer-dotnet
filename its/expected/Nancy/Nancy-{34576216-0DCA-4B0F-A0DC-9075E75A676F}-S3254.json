@@ -3,7 +3,8 @@
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"httpsPort\".",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Security\\ModuleSecurity.cs",
 "region":  {
 "startLine":  62,
@@ -11,7 +12,9 @@
 "endLine":  62,
 "endColumn":  92
 }
-}
+},
+null
+]
 }
 ]
 }

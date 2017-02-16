@@ -3,7 +3,8 @@
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  285,
@@ -11,12 +12,15 @@
 "endLine":  285,
 "endColumn":  70
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  1390,
@@ -24,12 +28,15 @@
 "endLine":  1390,
 "endColumn":  62
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  1513,
@@ -37,12 +44,15 @@
 "endLine":  1513,
 "endColumn":  64
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Serialization\\MessageContainerSerializer.cs",
 "region":  {
 "startLine":  62,
@@ -50,12 +60,15 @@
 "endLine":  67,
 "endColumn":  10
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
 "region":  {
 "startLine":  50,
@@ -63,7 +76,9 @@
 "endLine":  53,
 "endColumn":  10
 }
-}
+},
+null
+]
 }
 ]
 }

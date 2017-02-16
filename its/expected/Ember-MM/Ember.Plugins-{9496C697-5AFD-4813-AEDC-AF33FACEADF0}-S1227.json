@@ -3,7 +3,8 @@
 {
 "id":  "S1227",
 "message":  "Refactor the code in order to remove this break statement.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\Scraper\\MovieScraperManager.cs",
 "region":  {
 "startLine":  85,
@@ -11,12 +12,15 @@
 "endLine":  85,
 "endColumn":  64
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1227",
 "message":  "Refactor the code in order to remove this break statement.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\Scraper\\MovieScraperManager.cs",
 "region":  {
 "startLine":  125,
@@ -24,7 +28,9 @@
 "endLine":  125,
 "endColumn":  64
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S126",
 "message":  "Add the missing \"else\" clause.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolStressTest.cs",
 "region":  {
 "startLine":  98,
@@ -11,7 +12,9 @@
 "endLine":  98,
 "endColumn":  24
 }
-}
+},
+null
+]
 }
 ]
 }

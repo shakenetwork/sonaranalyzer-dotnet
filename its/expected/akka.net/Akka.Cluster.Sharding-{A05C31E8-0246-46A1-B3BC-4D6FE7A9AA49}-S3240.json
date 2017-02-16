@@ -3,7 +3,8 @@
 {
 "id":  "S3240",
 "message":  "Use the \"?:\" operator here.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
 "region":  {
 "startLine":  618,
@@ -11,12 +12,15 @@
 "endLine":  618,
 "endColumn":  23
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3240",
 "message":  "Use the \"?:\" operator here.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  551,
@@ -24,12 +28,15 @@
 "endLine":  551,
 "endColumn":  23
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3240",
 "message":  "Use the \"?:\" operator here.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  696,
@@ -37,7 +44,9 @@
 "endLine":  696,
 "endColumn":  23
 }
-}
+},
+null
+]
 }
 ]
 }

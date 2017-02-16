@@ -3,7 +3,8 @@
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding.Tests\\ClusterShardingGracefulShutdownSpec.cs",
 "region":  {
 "startLine":  91,
@@ -11,7 +12,9 @@
 "endLine":  91,
 "endColumn":  89
 }
-}
+},
+null
+]
 }
 ]
 }

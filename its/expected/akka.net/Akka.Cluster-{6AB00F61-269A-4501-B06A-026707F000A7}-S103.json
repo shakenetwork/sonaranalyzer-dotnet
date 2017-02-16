@@ -3,7 +3,8 @@
 {
 "id":  "S103",
 "message":  "Split this 213 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
 "region":  {
 "startLine":  969,
@@ -11,12 +12,15 @@
 "endLine":  969,
 "endColumn":  214
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 220 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Proto\\ClusterMessageSerializer.cs",
 "region":  {
 "startLine":  386,
@@ -24,12 +28,15 @@
 "endLine":  386,
 "endColumn":  221
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 246 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Routing\\ClusterRoutingConfig.cs",
 "region":  {
 "startLine":  45,
@@ -37,12 +44,15 @@
 "endLine":  45,
 "endColumn":  247
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 226 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Routing\\ClusterRoutingConfig.cs",
 "region":  {
 "startLine":  70,
@@ -50,7 +60,9 @@
 "endLine":  70,
 "endColumn":  227
 }
-}
+},
+null
+]
 }
 ]
 }

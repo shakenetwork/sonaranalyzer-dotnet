@@ -3,7 +3,8 @@
 {
 "id":  "S131",
 "message":  "Add a \"Case Else\" clause to this \"Select\" statement.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.Extractor\\Module.Extractor.vb",
 "region":  {
 "startLine":  114,
@@ -11,7 +12,9 @@
 "endLine":  114,
 "endColumn":  15
 }
-}
+},
+null
+]
 }
 ]
 }

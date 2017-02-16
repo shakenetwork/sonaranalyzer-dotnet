@@ -3,7 +3,8 @@
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"newHistory\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\PhiAccrualFailureDetector.cs",
 "region":  {
 "startLine":  147,
@@ -11,12 +12,15 @@
 "endLine":  147,
 "endColumn":  47
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"disassociateNotification\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
 "startLine":  796,
@@ -24,7 +28,9 @@
 "endLine":  796,
 "endColumn":  66
 }
-}
+},
+null
+]
 }
 ]
 }

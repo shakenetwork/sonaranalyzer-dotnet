@@ -3,7 +3,8 @@
 {
 "id":  "S101",
 "message":  "Rename class \"DIActorContextAdapter\" to match camel case naming rules, consider using \"DiActorContextAdapter\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.Core\\DIActorContextAdapter.cs",
 "region":  {
 "startLine":  13,
@@ -11,12 +12,15 @@
 "endLine":  13,
 "endColumn":  39
 }
-}
+},
+null
+]
 },
 {
 "id":  "S101",
 "message":  "Rename class \"DIActorProducer\" to match camel case naming rules, consider using \"DiActorProducer\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.Core\\DIActorProducer.cs",
 "region":  {
 "startLine":  16,
@@ -24,12 +28,15 @@
 "endLine":  16,
 "endColumn":  33
 }
-}
+},
+null
+]
 },
 {
 "id":  "S101",
 "message":  "Rename class \"DIActorSystemAdapter\" to match camel case naming rules, consider using \"DiActorSystemAdapter\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.Core\\DIActorSystemAdapter.cs",
 "region":  {
 "startLine":  13,
@@ -37,12 +44,15 @@
 "endLine":  13,
 "endColumn":  38
 }
-}
+},
+null
+]
 },
 {
 "id":  "S101",
 "message":  "Rename class \"DIExt\" to match camel case naming rules, consider using \"DiExt\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.Core\\DIExt.cs",
 "region":  {
 "startLine":  16,
@@ -50,12 +60,15 @@
 "endLine":  16,
 "endColumn":  23
 }
-}
+},
+null
+]
 },
 {
 "id":  "S101",
 "message":  "Rename class \"DIExtension\" to match camel case naming rules, consider using \"DiExtension\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.Core\\DIExtension.cs",
 "region":  {
 "startLine":  15,
@@ -63,7 +76,9 @@
 "endLine":  15,
 "endColumn":  29
 }
-}
+},
+null
+]
 }
 ]
 }

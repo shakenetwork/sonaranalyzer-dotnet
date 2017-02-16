@@ -3,7 +3,8 @@
 {
 "id":  "S1940",
 "message":  "Use the opposite operator (\"!=\") instead.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\IO\\RequestStream.cs",
 "region":  {
 "startLine":  149,
@@ -11,12 +12,15 @@
 "endLine":  149,
 "endColumn":  72
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1940",
 "message":  "Use the opposite operator (\"!=\") instead.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\RequestHeaders.cs",
 "region":  {
 "startLine":  395,
@@ -24,7 +28,9 @@
 "endLine":  395,
 "endColumn":  42
 }
-}
+},
+null
+]
 }
 ]
 }

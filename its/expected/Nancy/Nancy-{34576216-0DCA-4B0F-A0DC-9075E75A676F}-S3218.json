@@ -3,7 +3,8 @@
 {
 "id":  "S3218",
 "message":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  2830,
@@ -11,7 +12,9 @@
 "endLine":  2830,
 "endColumn":  36
 }
-}
+},
+null
+]
 }
 ]
 }

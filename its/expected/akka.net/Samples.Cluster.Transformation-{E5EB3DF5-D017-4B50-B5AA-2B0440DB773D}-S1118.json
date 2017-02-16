@@ -3,7 +3,8 @@
 {
 "id":  "S1118",
 "message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\Cluster\\Roles\\Samples.Cluster.Transformation\\Program.cs",
 "region":  {
 "startLine":  17,
@@ -11,7 +12,9 @@
 "endLine":  17,
 "endColumn":  18
 }
-}
+},
+null
+]
 }
 ]
 }

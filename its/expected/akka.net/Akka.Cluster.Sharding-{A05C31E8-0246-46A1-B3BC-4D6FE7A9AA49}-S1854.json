@@ -3,7 +3,8 @@
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"region\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  777,
@@ -11,7 +12,9 @@
 "endLine":  777,
 "endColumn":  36
 }
-}
+},
+null
+]
 }
 ]
 }

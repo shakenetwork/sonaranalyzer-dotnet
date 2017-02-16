@@ -3,7 +3,8 @@
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"timeout\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorCell.FaultHandling.cs",
 "region":  {
 "startLine":  153,
@@ -11,12 +12,15 @@
 "endLine":  153,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"timeout\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorCell.FaultHandling.cs",
 "region":  {
 "startLine":  186,
@@ -24,12 +28,15 @@
 "endLine":  186,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"allowInfinite\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Settings.cs",
 "region":  {
 "startLine":  71,
@@ -37,12 +44,15 @@
 "endLine":  71,
 "endColumn":  90
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"default\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Routing\\ConsistentHashRouter.cs",
 "region":  {
 "startLine":  350,
@@ -50,12 +60,15 @@
 "endLine":  350,
 "endColumn":  73
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"default\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Routing\\ConsistentHashRouter.cs",
 "region":  {
 "startLine":  512,
@@ -63,7 +76,9 @@
 "endLine":  512,
 "endColumn":  73
 }
-}
+},
+null
+]
 }
 ]
 }

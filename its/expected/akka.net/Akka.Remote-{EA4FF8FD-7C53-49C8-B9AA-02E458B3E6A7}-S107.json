@@ -3,7 +3,8 @@
 {
 "id":  "S107",
 "message":  "Constructor has 8 parameters, which is greater than the 7 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  287,
@@ -11,12 +12,15 @@
 "endLine":  295,
 "endColumn":  100
 }
-}
+},
+null
+]
 },
 {
 "id":  "S107",
 "message":  "Method has 9 parameters, which is greater than the 7 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  574,
@@ -24,12 +28,15 @@
 "endLine":  583,
 "endColumn":  31
 }
-}
+},
+null
+]
 },
 {
 "id":  "S107",
 "message":  "Constructor has 9 parameters, which is greater than the 7 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  782,
@@ -37,12 +44,15 @@
 "endLine":  791,
 "endColumn":  57
 }
-}
+},
+null
+]
 },
 {
 "id":  "S107",
 "message":  "Method has 9 parameters, which is greater than the 7 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  1395,
@@ -50,12 +60,15 @@
 "endLine":  1397,
 "endColumn":  165
 }
-}
+},
+null
+]
 },
 {
 "id":  "S107",
 "message":  "Constructor has 10 parameters, which is greater than the 7 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  1524,
@@ -63,12 +76,15 @@
 "endLine":  1534,
 "endColumn":  57
 }
-}
+},
+null
+]
 },
 {
 "id":  "S107",
 "message":  "Method has 10 parameters, which is greater than the 7 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  1739,
@@ -76,12 +92,15 @@
 "endLine":  1749,
 "endColumn":  57
 }
-}
+},
+null
+]
 },
 {
 "id":  "S107",
 "message":  "Method has 8 parameters, which is greater than the 7 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteActorRefProvider.cs",
 "region":  {
 "startLine":  270,
@@ -89,12 +108,15 @@
 "endLine":  271,
 "endColumn":  94
 }
-}
+},
+null
+]
 },
 {
 "id":  "S107",
 "message":  "Constructor has 8 parameters, which is greater than the 7 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
 "startLine":  477,
@@ -102,12 +124,15 @@
 "endLine":  479,
 "endColumn":  119
 }
-}
+},
+null
+]
 },
 {
 "id":  "S107",
 "message":  "Method has 8 parameters, which is greater than the 7 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
 "startLine":  1003,
@@ -115,7 +140,9 @@
 "endLine":  1005,
 "endColumn":  140
 }
-}
+},
+null
+]
 }
 ]
 }

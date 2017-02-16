@@ -3,7 +3,8 @@
 {
 "id":  "S1134",
 "message":  "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Eventsourced.Recovery.cs",
 "region":  {
 "startLine":  148,
@@ -11,12 +12,15 @@
 "endLine":  148,
 "endColumn":  29
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1134",
 "message":  "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\PersistentView.Recovery.cs",
 "region":  {
 "startLine":  137,
@@ -24,7 +28,9 @@
 "endLine":  137,
 "endColumn":  29
 }
-}
+},
+null
+]
 }
 ]
 }

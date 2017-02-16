@@ -3,7 +3,8 @@
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_refreshContactsCancelable\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterClient.cs",
 "region":  {
 "startLine":  129,
@@ -11,12 +12,15 @@
 "endLine":  129,
 "endColumn":  62
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_version\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedPubSubMediator.cs",
 "region":  {
 "startLine":  536,
@@ -24,12 +28,15 @@
 "endLine":  536,
 "endColumn":  35
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"PruneDeadline\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Internal\\Topics.cs",
 "region":  {
 "startLine":  24,
@@ -37,12 +44,15 @@
 "endLine":  24,
 "endColumn":  48
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_identityCounter\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonProxy.cs",
 "region":  {
 "startLine":  72,
@@ -50,12 +60,15 @@
 "endLine":  72,
 "endColumn":  41
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_singleton\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonProxy.cs",
 "region":  {
 "startLine":  74,
@@ -63,12 +76,15 @@
 "endLine":  74,
 "endColumn":  44
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_identityTimer\", the compiler will do that for you.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonProxy.cs",
 "region":  {
 "startLine":  75,
@@ -76,7 +92,9 @@
 "endLine":  75,
 "endColumn":  50
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S1135",
 "message":  "Complete the task associated to this \"TODO\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.Performance\\Transports\\HeliosRemoteMessagingThroughputSpec.cs",
 "region":  {
 "startLine":  3,
@@ -11,7 +12,9 @@
 "endLine":  3,
 "endColumn":  12
 }
-}
+},
+null
+]
 }
 ]
 }

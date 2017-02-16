@@ -3,7 +3,8 @@
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Eventsourced.Recovery.cs",
 "region":  {
 "startLine":  65,
@@ -11,12 +12,15 @@
 "endLine":  65,
 "endColumn":  50
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Eventsourced.Recovery.cs",
 "region":  {
 "startLine":  259,
@@ -24,12 +28,15 @@
 "endLine":  259,
 "endColumn":  51
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot\\SnapshotStore.cs",
 "region":  {
 "startLine":  30,
@@ -37,7 +44,9 @@
 "endLine":  30,
 "endColumn":  40
 }
-}
+},
+null
+]
 }
 ]
 }

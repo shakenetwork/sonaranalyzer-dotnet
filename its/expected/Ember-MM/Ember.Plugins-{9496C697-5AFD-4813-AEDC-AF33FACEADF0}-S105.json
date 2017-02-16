@@ -3,7 +3,8 @@
 {
 "id":  "S105",
 "message":  "Replace all tab characters in this file by sequences of white-spaces.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\PluginManager.cs",
 "region":  {
 "startLine":  160,
@@ -11,12 +12,15 @@
 "endLine":  160,
 "endColumn":  13
 }
-}
+},
+null
+]
 },
 {
 "id":  "S105",
 "message":  "Replace all tab characters in this file by sequences of white-spaces.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\Scraper\\MovieScraperManager.cs",
 "region":  {
 "startLine":  155,
@@ -24,12 +28,15 @@
 "endLine":  155,
 "endColumn":  13
 }
-}
+},
+null
+]
 },
 {
 "id":  "S105",
 "message":  "Replace all tab characters in this file by sequences of white-spaces.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Ember.Plugins\\Scraper\\ScraperActionContext.cs",
 "region":  {
 "startLine":  53,
@@ -37,7 +44,9 @@
 "endLine":  53,
 "endColumn":  13
 }
-}
+},
+null
+]
 }
 ]
 }

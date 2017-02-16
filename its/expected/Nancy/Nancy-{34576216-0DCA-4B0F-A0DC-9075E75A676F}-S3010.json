@@ -3,7 +3,8 @@
 {
 "id":  "S3010",
 "message":  "Remove this assignment of \u0027rootPathProvider\u0027 or initialize it statically.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Bootstrapper\\FavIconApplicationStartup.cs",
 "region":  {
 "startLine":  25,
@@ -11,12 +12,23 @@
 "endLine":  25,
 "endColumn":  57
 }
+},
+{
+"uri":  "Nancy\\src\\Nancy\\Bootstrapper\\FavIconApplicationStartup.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  42,
+"endLine":  15,
+"endColumn":  58
 }
+}
+]
 },
 {
 "id":  "S3010",
 "message":  "Remove this assignment of \u0027rootPathProvider\u0027 or initialize it statically.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\StaticContent.cs",
 "region":  {
 "startLine":  25,
@@ -24,12 +36,23 @@
 "endLine":  25,
 "endColumn":  45
 }
+},
+{
+"uri":  "Nancy\\src\\Nancy\\StaticContent.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  42,
+"endLine":  14,
+"endColumn":  58
 }
+}
+]
 },
 {
 "id":  "S3010",
 "message":  "Remove this assignment of \u0027conventions\u0027 or initialize it statically.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\StaticContent.cs",
 "region":  {
 "startLine":  26,
@@ -37,7 +60,17 @@
 "endLine":  26,
 "endColumn":  40
 }
+},
+{
+"uri":  "Nancy\\src\\Nancy\\StaticContent.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  50,
+"endLine":  15,
+"endColumn":  61
 }
+}
+]
 }
 ]
 }

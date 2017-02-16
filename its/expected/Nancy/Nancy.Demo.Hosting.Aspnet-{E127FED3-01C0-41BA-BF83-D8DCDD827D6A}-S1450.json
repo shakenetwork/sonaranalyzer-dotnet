@@ -3,7 +3,8 @@
 {
 "id":  "S1450",
 "message":  "Remove the \"oldResponseOutput\" field and declare it as a local variable in the relevant methods.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Demo.Hosting.Aspnet\\HereBeAResponseYouScurvyDog.cs",
 "region":  {
 "startLine":  11,
@@ -11,12 +12,15 @@
 "endLine":  11,
 "endColumn":  50
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"sentenceCaseSubstitutions\" field and declare it as a local variable in the relevant methods.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.Demo.Hosting.Aspnet\\Piratizer4000.cs",
 "region":  {
 "startLine":  19,
@@ -24,7 +28,9 @@
 "endLine":  19,
 "endColumn":  85
 }
-}
+},
+null
+]
 }
 ]
 }

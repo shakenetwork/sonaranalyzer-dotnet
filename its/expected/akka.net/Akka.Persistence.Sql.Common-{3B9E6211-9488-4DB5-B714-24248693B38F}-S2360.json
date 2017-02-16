@@ -3,7 +3,8 @@
 {
 "id":  "S2360",
 "message":  "Use the overloading mechanism instead of the optional parameters.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Journal\\QueryMapper.cs",
 "region":  {
 "startLine":  23,
@@ -11,7 +12,9 @@
 "endLine":  23,
 "endColumn":  83
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\Cluster\\Roles\\Samples.Cluster.Transformation\\Program.cs",
 "region":  {
 "startLine":  30,
@@ -11,12 +12,15 @@
 "endLine":  30,
 "endColumn":  30
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\examples\\Cluster\\Roles\\Samples.Cluster.Transformation\\Program.cs",
 "region":  {
 "startLine":  63,
@@ -24,7 +28,9 @@
 "endLine":  63,
 "endColumn":  47
 }
-}
+},
+null
+]
 }
 ]
 }

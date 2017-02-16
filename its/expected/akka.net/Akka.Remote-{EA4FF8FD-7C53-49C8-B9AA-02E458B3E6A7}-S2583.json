@@ -3,7 +3,8 @@
 {
 "id":  "S2583",
 "message":  "Change this condition so that it does not always evaluate to \"true\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteSystemDaemon.cs",
 "region":  {
 "startLine":  304,
@@ -11,12 +12,15 @@
 "endLine":  304,
 "endColumn":  43
 }
-}
+},
+null
+]
 },
 {
 "id":  "S2583",
 "message":  "Change this condition so that it does not always evaluate to \"true\".",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteSystemDaemon.cs",
 "region":  {
 "startLine":  321,
@@ -24,7 +28,9 @@
 "endLine":  321,
 "endColumn":  43
 }
-}
+},
+null
+]
 }
 ]
 }

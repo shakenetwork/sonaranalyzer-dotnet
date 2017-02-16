@@ -3,7 +3,8 @@
 {
 "id":  "S1871",
 "message":  "Either merge this case with the identical one on line 642 or change one of the implementations.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
 "region":  {
 "startLine":  647,
@@ -11,7 +12,17 @@
 "endLine":  650,
 "endColumn":  12
 }
+},
+{
+"uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
+"region":  {
+"startLine":  642,
+"startColumn":  5,
+"endLine":  645,
+"endColumn":  12
 }
+}
+]
 }
 ]
 }

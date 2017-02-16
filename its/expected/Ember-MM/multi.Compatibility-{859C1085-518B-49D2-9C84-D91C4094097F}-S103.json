@@ -3,7 +3,8 @@
 {
 "id":  "S103",
 "message":  "Split this 260 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\multi.Compatibility\\genericBoxee.vb",
 "region":  {
 "startLine":  96,
@@ -11,12 +12,15 @@
 "endLine":  96,
 "endColumn":  261
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 260 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\multi.Compatibility\\genericMediaBrowser.vb",
 "region":  {
 "startLine":  107,
@@ -24,12 +28,15 @@
 "endLine":  107,
 "endColumn":  261
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 260 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\multi.Compatibility\\genericYAMJ.vb",
 "region":  {
 "startLine":  118,
@@ -37,12 +44,15 @@
 "endLine":  118,
 "endColumn":  261
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 226 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\multi.Compatibility\\genericYAMJ.vb",
 "region":  {
 "startLine":  164,
@@ -50,12 +60,15 @@
 "endLine":  164,
 "endColumn":  227
 }
-}
+},
+null
+]
 },
 {
 "id":  "S103",
 "message":  "Split this 226 characters long line (which is greater than 200 authorized).",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\multi.Compatibility\\genericYAMJ.vb",
 "region":  {
 "startLine":  175,
@@ -63,7 +76,9 @@
 "endLine":  175,
 "endColumn":  227
 }
-}
+},
+null
+]
 }
 ]
 }

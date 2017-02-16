@@ -3,7 +3,8 @@
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
 "region":  {
 "startLine":  32,
@@ -11,12 +12,15 @@
 "endLine":  32,
 "endColumn":  54
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterEvent.cs",
 "region":  {
 "startLine":  173,
@@ -24,12 +28,15 @@
 "endLine":  173,
 "endColumn":  49
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterEvent.cs",
 "region":  {
 "startLine":  374,
@@ -37,12 +44,15 @@
 "endLine":  374,
 "endColumn":  48
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
 "region":  {
 "startLine":  504,
@@ -50,12 +60,15 @@
 "endLine":  504,
 "endColumn":  49
 }
-}
+},
+null
+]
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Routing\\ClusterRoutingConfig.cs",
 "region":  {
 "startLine":  77,
@@ -63,7 +76,9 @@
 "endLine":  77,
 "endColumn":  52
 }
-}
+},
+null
+]
 }
 ]
 }

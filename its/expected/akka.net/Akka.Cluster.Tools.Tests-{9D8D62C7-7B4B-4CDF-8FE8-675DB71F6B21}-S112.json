@@ -3,7 +3,8 @@
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\ClusterClient\\ClusterClientSpec.cs",
 "region":  {
 "startLine":  261,
@@ -11,12 +12,15 @@
 "endLine":  261,
 "endColumn":  74
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\ClusterClient\\ClusterClientSpec.cs",
 "region":  {
 "startLine":  281,
@@ -24,12 +28,15 @@
 "endLine":  281,
 "endColumn":  45
 }
-}
+},
+null
+]
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\ClusterClient\\ClusterClientSpec.cs",
 "region":  {
 "startLine":  302,
@@ -37,7 +44,9 @@
 "endLine":  302,
 "endColumn":  74
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S3249",
 "message":  "Remove this \"base\" call to \"object.Equals\", which is directly based on the object reference.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Bootstrapper\\NancyBootstrapperBase.cs",
 "region":  {
 "startLine":  438,
@@ -11,12 +12,15 @@
 "endLine":  438,
 "endColumn":  36
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3249",
 "message":  "Remove this \"base\" call to \"object.GetHashCode\", which is directly based on the object reference.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy\\Bootstrapper\\NancyBootstrapperBase.cs",
 "region":  {
 "startLine":  447,
@@ -24,7 +28,9 @@
 "endLine":  447,
 "endColumn":  38
 }
-}
+},
+null
+]
 }
 ]
 }

@@ -3,7 +3,8 @@
 {
 "id":  "S1135",
 "message":  "Complete the task associated to this \"TODO\" comment.",
-"location":  {
+"location":  [
+{
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Markdown\\MarkdownViewengineRender.cs",
 "region":  {
 "startLine":  54,
@@ -11,7 +12,9 @@
 "endLine":  54,
 "endColumn":  19
 }
-}
+},
+null
+]
 }
 ]
 }

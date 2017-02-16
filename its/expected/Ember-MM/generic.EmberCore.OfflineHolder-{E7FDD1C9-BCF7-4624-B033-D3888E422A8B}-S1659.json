@@ -3,7 +3,8 @@
 {
 "id":  "S1659",
 "message":  "Declare \"h\" in a separate statement.",
-"location":  {
+"location":  [
+{
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.OfflineHolder\\dlgOfflineHolder.vb",
 "region":  {
 "startLine":  412,
@@ -11,7 +12,9 @@
 "endLine":  412,
 "endColumn":  17
 }
-}
+},
+null
+]
 }
 ]
 }

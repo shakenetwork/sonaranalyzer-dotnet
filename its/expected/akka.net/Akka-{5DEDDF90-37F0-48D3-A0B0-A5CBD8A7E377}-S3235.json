@@ -3,7 +3,8 @@
 {
 "id":  "S3235",
 "message":  "Remove these redundant parentheses.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorBase.cs",
 "region":  {
 "startLine":  63,
@@ -11,12 +12,15 @@
 "endLine":  63,
 "endColumn":  16
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3235",
 "message":  "Remove these redundant parentheses.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorRefProvider.cs",
 "region":  {
 "startLine":  405,
@@ -24,12 +28,15 @@
 "endLine":  405,
 "endColumn":  51
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3235",
 "message":  "Remove these redundant parentheses.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Address.cs",
 "region":  {
 "startLine":  195,
@@ -37,12 +44,15 @@
 "endLine":  195,
 "endColumn":  42
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3235",
 "message":  "Remove these redundant parentheses.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Props.cs",
 "region":  {
 "startLine":  51,
@@ -50,12 +60,15 @@
 "endLine":  51,
 "endColumn":  40
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3235",
 "message":  "Remove these redundant parentheses.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Stash\\Internal\\AbstractStash.cs",
 "region":  {
 "startLine":  74,
@@ -63,12 +76,15 @@
 "endLine":  74,
 "endColumn":  49
 }
-}
+},
+null
+]
 },
 {
 "id":  "S3235",
 "message":  "Remove these redundant parentheses.",
-"location":  {
+"location":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Serialization\\Serialization.cs",
 "region":  {
 "startLine":  29,
@@ -76,7 +92,9 @@
 "endLine":  29,
 "endColumn":  61
 }
-}
+},
+null
+]
 }
 ]
 }
