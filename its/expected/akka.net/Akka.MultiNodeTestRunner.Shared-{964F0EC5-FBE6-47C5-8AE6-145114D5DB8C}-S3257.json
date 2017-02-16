@@ -3,8 +3,7 @@
 {
 "id":  "S3257",
 "message":  "Remove the initializer; it is redundant.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Persistence\\JsonPersistentTestRunStore.cs",
 "region":  {
 "startLine":  54,
@@ -12,9 +11,7 @@
 "endLine":  58,
 "endColumn":  14
 }
-},
-null
-]
+}
 }
 ]
 }

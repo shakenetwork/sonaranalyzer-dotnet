@@ -3,8 +3,7 @@
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"called\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolSpec.cs",
 "region":  {
 "startLine":  92,
@@ -12,15 +11,12 @@
 "endLine":  92,
 "endColumn":  50
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"NextSeq\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolStressTest.cs",
 "region":  {
 "startLine":  70,
@@ -28,15 +24,12 @@ null
 "endLine":  70,
 "endColumn":  36
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"Losses\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolStressTest.cs",
 "region":  {
 "startLine":  72,
@@ -44,15 +37,12 @@ null
 "endLine":  72,
 "endColumn":  35
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_received\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\ThrottlerTransportAdapterSpec.cs",
 "region":  {
 "startLine":  56,
@@ -60,15 +50,12 @@ null
 "endLine":  56,
 "endColumn":  38
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_startTime\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\ThrottlerTransportAdapterSpec.cs",
 "region":  {
 "startLine":  58,
@@ -76,9 +63,7 @@ null
 "endLine":  58,
 "endColumn":  41
 }
-},
-null
-]
+}
 }
 ]
 }

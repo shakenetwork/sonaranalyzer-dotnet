@@ -3,8 +3,7 @@
 {
 "id":  "S100",
 "message":  "Rename property \"DBMovie\" to match camel case naming rules, consider using \"DbMovie\".",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\Ember.Plugins\\Scraper\\IMovieImageScraper.cs",
 "region":  {
 "startLine":  39,
@@ -12,15 +11,12 @@
 "endLine":  39,
 "endColumn":  42
 }
-},
-null
-]
+}
 },
 {
 "id":  "S100",
 "message":  "Rename property \"DBMovie\" to match camel case naming rules, consider using \"DbMovie\".",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\Ember.Plugins\\Scraper\\IMovieInfoScraper.cs",
 "region":  {
 "startLine":  41,
@@ -28,15 +24,12 @@ null
 "endLine":  41,
 "endColumn":  42
 }
-},
-null
-]
+}
 },
 {
 "id":  "S100",
 "message":  "Rename method \"SanitiseIMDbId\" to match camel case naming rules, consider using \"SanitiseImDbId\".",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\Ember.Plugins\\Utility.cs",
 "region":  {
 "startLine":  34,
@@ -44,9 +37,7 @@ null
 "endLine":  34,
 "endColumn":  44
 }
-},
-null
-]
+}
 }
 ]
 }

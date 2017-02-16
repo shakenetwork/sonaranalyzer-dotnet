@@ -3,8 +3,7 @@
 {
 "id":  "S131",
 "message":  "Add a \"default\" clause to this \"switch\" statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaPduCodec.cs",
 "region":  {
 "startLine":  277,
@@ -12,9 +11,7 @@
 "endLine":  277,
 "endColumn":  19
 }
-},
-null
-]
+}
 }
 ]
 }

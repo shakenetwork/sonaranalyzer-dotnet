@@ -3,8 +3,7 @@
 {
 "id":  "S2357",
 "message":  "Make \"ActorSystem\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\MainForm.cs",
 "region":  {
 "startLine":  24,
@@ -12,15 +11,12 @@
 "endLine":  24,
 "endColumn":  39
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"StockActor\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\MainForm.cs",
 "region":  {
 "startLine":  25,
@@ -28,9 +24,7 @@ null
 "endLine":  25,
 "endColumn":  36
 }
-},
-null
-]
+}
 }
 ]
 }

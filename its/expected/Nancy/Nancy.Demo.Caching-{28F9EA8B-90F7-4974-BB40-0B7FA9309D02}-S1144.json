@@ -3,8 +3,7 @@
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Demo.Caching\\CachingBootstrapper.cs",
 "region":  {
 "startLine":  12,
@@ -12,9 +11,7 @@
 "endLine":  12,
 "endColumn":  46
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Futures.cs",
 "region":  {
 "startLine":  373,
@@ -12,15 +11,12 @@
 "endLine":  373,
 "endColumn":  42
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Futures.cs",
 "region":  {
 "startLine":  381,
@@ -28,15 +24,12 @@ null
 "endLine":  381,
 "endColumn":  39
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Dispatch\\Mailbox.cs",
 "region":  {
 "startLine":  28,
@@ -44,15 +37,12 @@ null
 "endLine":  28,
 "endColumn":  28
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Event\\StandardOutLogger.cs",
 "region":  {
 "startLine":  66,
@@ -60,15 +50,12 @@ null
 "endLine":  66,
 "endColumn":  34
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\StandardOutWriter.cs",
 "region":  {
 "startLine":  29,
@@ -76,15 +63,12 @@ null
 "endLine":  29,
 "endColumn":  47
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\StandardOutWriter.cs",
 "region":  {
 "startLine":  42,
@@ -92,9 +76,7 @@ null
 "endLine":  42,
 "endColumn":  51
 }
-},
-null
-]
+}
 }
 ]
 }

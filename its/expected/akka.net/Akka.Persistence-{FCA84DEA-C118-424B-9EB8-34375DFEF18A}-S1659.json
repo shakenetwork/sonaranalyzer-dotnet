@@ -3,8 +3,7 @@
 {
 "id":  "S1659",
 "message":  "Declare \"ticks\" in a separate statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot\\LocalSnapshotStore.cs",
 "region":  {
 "startLine":  204,
@@ -12,9 +11,7 @@
 "endLine":  204,
 "endColumn":  39
 }
-},
-null
-]
+}
 }
 ]
 }

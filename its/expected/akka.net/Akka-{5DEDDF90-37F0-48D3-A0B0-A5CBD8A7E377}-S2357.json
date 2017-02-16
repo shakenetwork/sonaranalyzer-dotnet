@@ -3,8 +3,7 @@
 {
 "id":  "S2357",
 "message":  "Make \"Status\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorBase.cs",
 "region":  {
 "startLine":  25,
@@ -12,15 +11,12 @@
 "endLine":  25,
 "endColumn":  42
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Cause\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorBase.cs",
 "region":  {
 "startLine":  39,
@@ -28,15 +24,12 @@ null
 "endLine":  39,
 "endColumn":  44
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Result\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Futures.cs",
 "region":  {
 "startLine":  106,
@@ -44,15 +37,12 @@ null
 "endLine":  106,
 "endColumn":  60
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Workers\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Helios.Concurrency.DedicatedThreadPool.cs",
 "region":  {
 "startLine":  289,
@@ -60,15 +50,12 @@ null
 "endLine":  289,
 "endColumn":  46
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Ref\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Pattern\\BackoffSupervisor.cs",
 "region":  {
 "startLine":  36,
@@ -76,15 +63,12 @@ null
 "endLine":  36,
 "endColumn":  42
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Current\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Pattern\\BackoffSupervisor.cs",
 "region":  {
 "startLine":  54,
@@ -92,15 +76,12 @@ null
 "endLine":  54,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Next\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\MonoConcurrentQueue.cs",
 "region":  {
 "startLine":  259,
@@ -108,15 +89,12 @@ null
 "endLine":  259,
 "endColumn":  29
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Value\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\MonoConcurrentQueue.cs",
 "region":  {
 "startLine":  260,
@@ -124,9 +102,7 @@ null
 "endLine":  260,
 "endColumn":  27
 }
-},
-null
-]
+}
 }
 ]
 }

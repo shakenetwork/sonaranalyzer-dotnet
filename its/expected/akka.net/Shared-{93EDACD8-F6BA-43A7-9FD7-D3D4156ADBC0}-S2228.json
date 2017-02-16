@@ -3,8 +3,7 @@
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\RemoteDeploy\\Shared\\SomeActor.cs",
 "region":  {
 "startLine":  17,
@@ -12,15 +11,12 @@
 "endLine":  17,
 "endColumn":  30
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\RemoteDeploy\\Shared\\SomeActor.cs",
 "region":  {
 "startLine":  24,
@@ -28,15 +24,12 @@ null
 "endLine":  24,
 "endColumn":  30
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\RemoteDeploy\\Shared\\SomeActor.cs",
 "region":  {
 "startLine":  28,
@@ -44,9 +37,7 @@ null
 "endLine":  28,
 "endColumn":  34
 }
-},
-null
-]
+}
 }
 ]
 }

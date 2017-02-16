@@ -3,8 +3,7 @@
 {
 "id":  "S2372",
 "message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  714,
@@ -12,15 +11,12 @@
 "endLine":  714,
 "endColumn":  170
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2372",
 "message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  717,
@@ -28,15 +24,12 @@ null
 "endLine":  717,
 "endColumn":  214
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2372",
 "message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  721,
@@ -44,9 +37,7 @@ null
 "endLine":  723,
 "endColumn":  192
 }
-},
-null
-]
+}
 }
 ]
 }

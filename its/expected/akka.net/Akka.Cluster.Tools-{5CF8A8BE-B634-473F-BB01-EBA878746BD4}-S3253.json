@@ -3,8 +3,7 @@
 {
 "id":  "S3253",
 "message":  "Remove this redundant constructor.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManager.cs",
 "region":  {
 "startLine":  135,
@@ -12,9 +11,7 @@
 "endLine":  137,
 "endColumn":  10
 }
-},
-null
-]
+}
 }
 ]
 }

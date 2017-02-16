@@ -3,8 +3,7 @@
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"ValidSymbols\" or make it \"const\" or \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorPath.cs",
 "region":  {
 "startLine":  102,
@@ -12,15 +11,12 @@
 "endLine":  102,
 "endColumn":  44
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorRef.cs",
 "region":  {
 "startLine":  341,
@@ -28,15 +24,12 @@ null
 "endLine":  341,
 "endColumn":  38
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"DefaultDecider\" or make it \"const\" or \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\SupervisorStrategy.cs",
 "region":  {
 "startLine":  82,
@@ -44,15 +37,12 @@ null
 "endLine":  82,
 "endColumn":  46
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"CurrentWorker\" or make it \"const\" or \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Helios.Concurrency.DedicatedThreadPool.cs",
 "region":  {
 "startLine":  292,
@@ -60,15 +50,12 @@ null
 "endLine":  292,
 "endColumn":  49
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
 "region":  {
 "startLine":  439,
@@ -76,15 +63,12 @@ null
 "endLine":  439,
 "endColumn":  50
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
 "region":  {
 "startLine":  452,
@@ -92,15 +76,12 @@ null
 "endLine":  452,
 "endColumn":  49
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
 "region":  {
 "startLine":  538,
@@ -108,15 +89,12 @@ null
 "endLine":  538,
 "endColumn":  50
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
 "region":  {
 "startLine":  562,
@@ -124,15 +102,12 @@ null
 "endLine":  562,
 "endColumn":  43
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
 "region":  {
 "startLine":  614,
@@ -140,15 +115,12 @@ null
 "endLine":  614,
 "endColumn":  43
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
 "region":  {
 "startLine":  632,
@@ -156,15 +128,12 @@ null
 "endLine":  632,
 "endColumn":  51
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
 "region":  {
 "startLine":  649,
@@ -172,15 +141,12 @@ null
 "endLine":  649,
 "endColumn":  46
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\TcpConnection.cs",
 "region":  {
 "startLine":  787,
@@ -188,9 +154,7 @@ null
 "endLine":  787,
 "endColumn":  48
 }
-},
-null
-]
+}
 }
 ]
 }

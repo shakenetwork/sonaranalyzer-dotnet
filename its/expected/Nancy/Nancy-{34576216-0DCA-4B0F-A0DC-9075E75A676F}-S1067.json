@@ -3,8 +3,7 @@
 {
 "id":  "S1067",
 "message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
 "region":  {
 "startLine":  268,
@@ -12,15 +11,12 @@
 "endLine":  268,
 "endColumn":  76
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1067",
 "message":  "Reduce the number of conditional operators (7) used in the expression (maximum allowed 3).",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
 "region":  {
 "startLine":  568,
@@ -28,15 +24,12 @@ null
 "endLine":  572,
 "endColumn":  2
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1067",
 "message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
 "region":  {
 "startLine":  608,
@@ -44,15 +37,12 @@ null
 "endLine":  611,
 "endColumn":  26
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1067",
 "message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
 "startLine":  402,
@@ -60,15 +50,12 @@ null
 "endLine":  402,
 "endColumn":  91
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1067",
 "message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
 "startLine":  335,
@@ -76,15 +63,12 @@ null
 "endLine":  335,
 "endColumn":  169
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1067",
 "message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Responses\\DefaultJsonSerializer.cs",
 "region":  {
 "startLine":  127,
@@ -92,15 +76,12 @@ null
 "endLine":  131,
 "endColumn":  83
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1067",
 "message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  3091,
@@ -108,15 +89,12 @@ null
 "endLine":  3093,
 "endColumn":  48
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1067",
 "message":  "Reduce the number of conditional operators (6) used in the expression (maximum allowed 3).",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\Extensions.cs",
 "region":  {
 "startLine":  29,
@@ -124,9 +102,7 @@ null
 "endLine":  33,
 "endColumn":  91
 }
-},
-null
-]
+}
 }
 ]
 }

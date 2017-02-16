@@ -3,8 +3,7 @@
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Fakes\\FakeRoute.cs",
 "region":  {
 "startLine":  11,
@@ -12,9 +11,7 @@
 "endLine":  11,
 "endColumn":  115
 }
-},
-null
-]
+}
 }
 ]
 }

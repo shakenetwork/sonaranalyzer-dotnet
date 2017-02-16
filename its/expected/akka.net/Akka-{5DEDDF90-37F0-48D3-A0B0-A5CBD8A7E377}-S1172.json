@@ -3,8 +3,7 @@
 {
 "id":  "S1172",
 "message":  "Remove this parameter \"other\", whose value is ignored in the method.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Props.cs",
 "region":  {
 "startLine":  76,
@@ -12,15 +11,12 @@
 "endLine":  76,
 "endColumn":  59
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1172",
 "message":  "Remove this unused method parameter \"address\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\UdpConnection.cs",
 "region":  {
 "startLine":  77,
@@ -28,15 +24,12 @@ null
 "endLine":  77,
 "endColumn":  48
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1172",
 "message":  "Remove this unused method parameter \"capturedArguments\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\MatchHandler\\CachedMatchCompiler.cs",
 "region":  {
 "startLine":  47,
@@ -44,9 +37,7 @@ null
 "endLine":  47,
 "endColumn":  122
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S1450",
 "message":  "Remove the \"hostBrowser\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Testing\\BrowserResponse.cs",
 "region":  {
 "startLine":  12,
@@ -12,9 +11,7 @@
 "endLine":  12,
 "endColumn":  45
 }
-},
-null
-]
+}
 }
 ]
 }

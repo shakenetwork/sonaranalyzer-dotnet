@@ -3,8 +3,7 @@
 {
 "id":  "S2357",
 "message":  "Make \"ReceivedGossipCount\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
 "region":  {
 "startLine":  1924,
@@ -12,15 +11,12 @@
 "endLine":  1924,
 "endColumn":  49
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"MergeCount\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
 "region":  {
 "startLine":  1925,
@@ -28,15 +24,12 @@ null
 "endLine":  1925,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"SameCount\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
 "region":  {
 "startLine":  1926,
@@ -44,15 +37,12 @@ null
 "endLine":  1926,
 "endColumn":  39
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"NewerCount\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
 "region":  {
 "startLine":  1927,
@@ -60,15 +50,12 @@ null
 "endLine":  1927,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"OlderCount\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
 "region":  {
 "startLine":  1928,
@@ -76,15 +63,12 @@ null
 "endLine":  1928,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"ActiveReceivers\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterHeartbeat.cs",
 "region":  {
 "startLine":  273,
@@ -92,15 +76,12 @@ null
 "endLine":  273,
 "endColumn":  72
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"MyReceivers\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterHeartbeat.cs",
 "region":  {
 "startLine":  373,
@@ -108,9 +89,7 @@ null
 "endLine":  373,
 "endColumn":  74
 }
-},
-null
-]
+}
 }
 ]
 }

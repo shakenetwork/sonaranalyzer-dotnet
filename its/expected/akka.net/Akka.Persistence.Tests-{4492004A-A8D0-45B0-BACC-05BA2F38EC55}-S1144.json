@@ -3,8 +3,7 @@
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\Fsm\\PersistentFSMSpec.cs",
 "region":  {
 "startLine":  19,
@@ -12,15 +11,12 @@
 "endLine":  19,
 "endColumn":  56
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorFailureSpec.cs",
 "region":  {
 "startLine":  20,
@@ -28,15 +24,12 @@ null
 "endLine":  20,
 "endColumn":  70
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
 "region":  {
 "startLine":  630,
@@ -44,9 +37,7 @@ null
 "endLine":  630,
 "endColumn":  38
 }
-},
-null
-]
+}
 }
 ]
 }

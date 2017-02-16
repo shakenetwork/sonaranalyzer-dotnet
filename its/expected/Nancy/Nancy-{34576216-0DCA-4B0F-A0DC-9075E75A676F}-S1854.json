@@ -3,8 +3,7 @@
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"cookieCulture\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Conventions\\BuiltInCultureConventions.cs",
 "region":  {
 "startLine":  120,
@@ -12,15 +11,12 @@
 "endLine":  120,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"uri\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Extensions\\RequestExtensions.cs",
 "region":  {
 "startLine":  35,
@@ -28,15 +24,12 @@ null
 "endLine":  35,
 "endColumn":  27
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"bytes\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
 "startLine":  187,
@@ -44,15 +37,12 @@ null
 "endLine":  187,
 "endColumn":  25
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"acc\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
 "startLine":  318,
@@ -60,15 +50,12 @@ null
 "endLine":  318,
 "endColumn":  23
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"js\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Json\\Json.cs",
 "region":  {
 "startLine":  48,
@@ -76,15 +63,12 @@ null
 "endLine":  48,
 "endColumn":  22
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"js\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Json\\Json.cs",
 "region":  {
 "startLine":  60,
@@ -92,15 +76,12 @@ null
 "endLine":  60,
 "endColumn":  22
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"current\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  3209,
@@ -108,9 +89,7 @@ null
 "endLine":  3209,
 "endColumn":  45
 }
-},
-null
-]
+}
 }
 ]
 }

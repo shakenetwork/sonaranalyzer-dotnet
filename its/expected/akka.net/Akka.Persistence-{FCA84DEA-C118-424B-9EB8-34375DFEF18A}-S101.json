@@ -3,8 +3,7 @@
 {
 "id":  "S101",
 "message":  "Rename class \"PersistentFSM\" to match camel case naming rules, consider using \"PersistentFsm\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSM.cs",
 "region":  {
 "startLine":  18,
@@ -12,15 +11,12 @@
 "endLine":  18,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S101",
 "message":  "Rename class \"PersistentFSMBase\" to match camel case naming rules, consider using \"PersistentFsmBase\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
 "startLine":  22,
@@ -28,9 +24,7 @@ null
 "endLine":  22,
 "endColumn":  44
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S1643",
 "message":  "Use a StringBuilder instead.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\ClrTypeResolver.cs",
 "region":  {
 "startLine":  167,
@@ -12,15 +11,12 @@
 "endLine":  167,
 "endColumn":  33
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1643",
 "message":  "Use a StringBuilder instead.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\ClrTypeResolver.cs",
 "region":  {
 "startLine":  171,
@@ -28,15 +24,12 @@ null
 "endLine":  171,
 "endColumn":  64
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1643",
 "message":  "Use a StringBuilder instead.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\ClrTypeResolver.cs",
 "region":  {
 "startLine":  174,
@@ -44,9 +37,7 @@ null
 "endLine":  174,
 "endColumn":  33
 }
-},
-null
-]
+}
 }
 ]
 }

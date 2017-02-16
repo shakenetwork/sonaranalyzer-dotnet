@@ -3,8 +3,7 @@
 {
 "id":  "S101",
 "message":  "Rename class \"HttpQSCollection\" to match camel case naming rules, consider using \"HttpQsCollection\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
 "startLine":  43,
@@ -12,15 +11,12 @@
 "endLine":  43,
 "endColumn":  38
 }
-},
-null
-]
+}
 },
 {
 "id":  "S101",
 "message":  "Rename class \"SSLProxy\" to match camel case naming rules, consider using \"SslProxy\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Security\\SSLProxy.cs",
 "region":  {
 "startLine":  11,
@@ -28,9 +24,7 @@ null
 "endLine":  11,
 "endColumn":  33
 }
-},
-null
-]
+}
 }
 ]
 }

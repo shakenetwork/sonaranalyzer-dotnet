@@ -3,8 +3,7 @@
 {
 "id":  "S2219",
 "message":  "Use the \"is\" operator instead.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\MatchHandler\\MatchBuilderSignature.cs",
 "region":  {
 "startLine":  74,
@@ -12,9 +11,7 @@
 "endLine":  74,
 "endColumn":  79
 }
-},
-null
-]
+}
 }
 ]
 }

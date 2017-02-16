@@ -3,8 +3,7 @@
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Spark\\Descriptors\\DescriptorFilterExtensions.cs",
 "region":  {
 "startLine":  4,
@@ -12,9 +11,7 @@
 "endLine":  4,
 "endColumn":  8
 }
-},
-null
-]
+}
 }
 ]
 }

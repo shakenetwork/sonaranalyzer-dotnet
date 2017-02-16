@@ -3,8 +3,7 @@
 {
 "id":  "S2357",
 "message":  "Make \"Uid\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\AddressUidExtension.cs",
 "region":  {
 "startLine":  41,
@@ -12,15 +11,12 @@
 "endLine":  41,
 "endColumn":  32
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"IsTombstone\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  34,
@@ -28,15 +24,12 @@ null
 "endLine":  34,
 "endColumn":  45
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"LogLevel\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemotingLifecycleEvent.cs",
 "region":  {
 "startLine":  208,
@@ -44,15 +37,12 @@ null
 "endLine":  208,
 "endColumn":  42
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"HandshakeInfo\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
 "startLine":  280,
@@ -60,15 +50,12 @@ null
 "endLine":  280,
 "endColumn":  52
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"StateActor\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
 "startLine":  282,
@@ -76,15 +63,12 @@ null
 "endLine":  282,
 "endColumn":  45
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Codec\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
 "startLine":  284,
@@ -92,15 +76,12 @@ null
 "endLine":  284,
 "endColumn":  43
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"ExtendedActorSystem\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
 "region":  {
 "startLine":  121,
@@ -108,15 +89,12 @@ null
 "endLine":  121,
 "endColumn":  64
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"AssociateBehavior\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TestTransport.cs",
 "region":  {
 "startLine":  31,
@@ -124,15 +102,12 @@ null
 "endLine":  31,
 "endColumn":  95
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"DisassociateBehavior\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TestTransport.cs",
 "region":  {
 "startLine":  32,
@@ -140,15 +115,12 @@ null
 "endLine":  32,
 "endColumn":  99
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"ListenBehavior\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TestTransport.cs",
 "region":  {
 "startLine":  38,
@@ -156,15 +128,12 @@ null
 "endLine":  38,
 "endColumn":  27
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"LocalAddress\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TestTransport.cs",
 "region":  {
 "startLine":  40,
@@ -172,15 +141,12 @@ null
 "endLine":  40,
 "endColumn":  45
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"ShutdownBehavior\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TestTransport.cs",
 "region":  {
 "startLine":  41,
@@ -188,15 +154,12 @@ null
 "endLine":  41,
 "endColumn":  78
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"WriteBehavior\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TestTransport.cs",
 "region":  {
 "startLine":  42,
@@ -204,15 +167,12 @@ null
 "endLine":  42,
 "endColumn":  111
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Inbound\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TestTransport.cs",
 "region":  {
 "startLine":  608,
@@ -220,15 +180,12 @@ null
 "endLine":  608,
 "endColumn":  37
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Actor\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Transport.cs",
 "region":  {
 "startLine":  168,
@@ -236,15 +193,12 @@ null
 "endLine":  168,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"AddedSchemeIdentifier\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TransportAdapters.cs",
 "region":  {
 "startLine":  101,
@@ -252,9 +206,7 @@ null
 "endLine":  101,
 "endColumn":  53
 }
-},
-null
-]
+}
 }
 ]
 }

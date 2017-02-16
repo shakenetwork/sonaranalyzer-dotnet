@@ -3,8 +3,7 @@
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Spark\\Descriptors\\BuildDescriptorParams.cs",
 "region":  {
 "startLine":  73,
@@ -12,15 +11,12 @@
 "endLine":  73,
 "endColumn":  36
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Spark\\Descriptors\\DefaultDescriptorBuilder.cs",
 "region":  {
 "startLine":  52,
@@ -28,9 +24,7 @@ null
 "endLine":  52,
 "endColumn":  59
 }
-},
-null
-]
+}
 }
 ]
 }

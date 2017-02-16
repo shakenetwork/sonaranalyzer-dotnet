@@ -3,8 +3,7 @@
 {
 "id":  "S1309",
 "message":  "Do not suppress issues.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\RepointableActorRef.cs",
 "region":  {
 "startLine":  53,
@@ -12,15 +11,12 @@
 "endLine":  53,
 "endColumn":  24
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1309",
 "message":  "Do not suppress issues.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\RepointableActorRef.cs",
 "region":  {
 "startLine":  61,
@@ -28,9 +24,7 @@ null
 "endLine":  61,
 "endColumn":  24
 }
-},
-null
-]
+}
 }
 ]
 }

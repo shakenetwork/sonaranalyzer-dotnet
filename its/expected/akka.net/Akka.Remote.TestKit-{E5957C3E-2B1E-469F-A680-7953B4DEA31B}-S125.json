@@ -3,8 +3,7 @@
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Conductor.cs",
 "region":  {
 "startLine":  133,
@@ -12,15 +11,12 @@
 "endLine":  133,
 "endColumn":  109
 }
-},
-null
-]
+}
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
 "region":  {
 "startLine":  474,
@@ -28,9 +24,7 @@ null
 "endLine":  474,
 "endColumn":  86
 }
-},
-null
-]
+}
 }
 ]
 }

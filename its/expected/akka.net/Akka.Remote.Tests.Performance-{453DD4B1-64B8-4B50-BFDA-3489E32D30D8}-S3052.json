@@ -3,8 +3,7 @@
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_currentMessages\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.Performance\\Transports\\RemoteMessagingThroughputSpecBase.cs",
 "region":  {
 "startLine":  41,
@@ -12,9 +11,7 @@
 "endLine":  41,
 "endColumn":  46
 }
-},
-null
-]
+}
 }
 ]
 }

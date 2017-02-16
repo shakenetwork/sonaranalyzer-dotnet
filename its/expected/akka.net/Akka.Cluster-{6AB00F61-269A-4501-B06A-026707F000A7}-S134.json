@@ -3,8 +3,7 @@
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
 "region":  {
 "startLine":  1414,
@@ -12,15 +11,12 @@
 "endLine":  1414,
 "endColumn":  27
 }
-},
-null
-]
+}
 },
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
 "region":  {
 "startLine":  1649,
@@ -28,15 +24,12 @@ null
 "endLine":  1649,
 "endColumn":  27
 }
-},
-null
-]
+}
 },
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
 "region":  {
 "startLine":  1653,
@@ -44,15 +37,12 @@ null
 "endLine":  1653,
 "endColumn":  27
 }
-},
-null
-]
+}
 },
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
 "region":  {
 "startLine":  1657,
@@ -60,15 +50,12 @@ null
 "endLine":  1657,
 "endColumn":  27
 }
-},
-null
-]
+}
 },
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Reachability.cs",
 "region":  {
 "startLine":  250,
@@ -76,15 +63,12 @@ null
 "endLine":  250,
 "endColumn":  32
 }
-},
-null
-]
+}
 },
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Reachability.cs",
 "region":  {
 "startLine":  256,
@@ -92,9 +76,7 @@ null
 "endLine":  256,
 "endColumn":  32
 }
-},
-null
-]
+}
 }
 ]
 }

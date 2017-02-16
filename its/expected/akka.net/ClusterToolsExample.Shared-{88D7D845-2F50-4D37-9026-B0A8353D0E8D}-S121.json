@@ -3,8 +3,7 @@
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"for\" block.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\Cluster\\ClusterTools\\ClusterToolsExample.Shared\\WorkerManager.cs",
 "region":  {
 "startLine":  21,
@@ -12,15 +11,12 @@
 "endLine":  21,
 "endColumn":  20
 }
-},
-null
-]
+}
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\Cluster\\ClusterTools\\ClusterToolsExample.Shared\\WorkLoadCounter.cs",
 "region":  {
 "startLine":  17,
@@ -28,15 +24,12 @@ null
 "endLine":  17,
 "endColumn":  19
 }
-},
-null
-]
+}
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"else\" block.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\Cluster\\ClusterTools\\ClusterToolsExample.Shared\\WorkLoadCounter.cs",
 "region":  {
 "startLine":  19,
@@ -44,9 +37,7 @@ null
 "endLine":  19,
 "endColumn":  21
 }
-},
-null
-]
+}
 }
 ]
 }

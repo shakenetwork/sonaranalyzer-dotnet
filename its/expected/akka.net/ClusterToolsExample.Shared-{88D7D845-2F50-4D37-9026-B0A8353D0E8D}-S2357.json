@@ -3,8 +3,7 @@
 {
 "id":  "S2357",
 "message":  "Make \"Message\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\Cluster\\ClusterTools\\ClusterToolsExample.Shared\\Echo.cs",
 "region":  {
 "startLine":  10,
@@ -12,15 +11,12 @@
 "endLine":  10,
 "endColumn":  39
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Cluster\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\Cluster\\ClusterTools\\ClusterToolsExample.Shared\\Echo.cs",
 "region":  {
 "startLine":  22,
@@ -28,15 +24,12 @@ null
 "endLine":  22,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Mediator\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\Cluster\\ClusterTools\\ClusterToolsExample.Shared\\Echo.cs",
 "region":  {
 "startLine":  23,
@@ -44,15 +37,12 @@ null
 "endLine":  23,
 "endColumn":  43
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Size\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\Cluster\\ClusterTools\\ClusterToolsExample.Shared\\Messages.cs",
 "region":  {
 "startLine":  10,
@@ -60,15 +50,12 @@ null
 "endLine":  10,
 "endColumn":  33
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Id\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\Cluster\\ClusterTools\\ClusterToolsExample.Shared\\Messages.cs",
 "region":  {
 "startLine":  21,
@@ -76,15 +63,12 @@ null
 "endLine":  21,
 "endColumn":  31
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Id\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\Cluster\\ClusterTools\\ClusterToolsExample.Shared\\Messages.cs",
 "region":  {
 "startLine":  32,
@@ -92,15 +76,12 @@ null
 "endLine":  32,
 "endColumn":  31
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Counts\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\Cluster\\ClusterTools\\ClusterToolsExample.Shared\\Messages.cs",
 "region":  {
 "startLine":  53,
@@ -108,9 +89,7 @@ null
 "endLine":  53,
 "endColumn":  59
 }
-},
-null
-]
+}
 }
 ]
 }

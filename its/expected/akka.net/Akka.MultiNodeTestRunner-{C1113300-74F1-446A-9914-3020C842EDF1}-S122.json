@@ -3,8 +3,7 @@
 {
 "id":  "S122",
 "message":  "Reformat the code to have only one statement per line.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner\\Program.cs",
 "region":  {
 "startLine":  114,
@@ -12,15 +11,12 @@
 "endLine":  114,
 "endColumn":  121
 }
-},
-null
-]
+}
 },
 {
 "id":  "S122",
 "message":  "Reformat the code to have only one statement per line.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\CommandLine.cs",
 "region":  {
 "startLine":  34,
@@ -28,9 +24,7 @@ null
 "endLine":  34,
 "endColumn":  53
 }
-},
-null
-]
+}
 }
 ]
 }

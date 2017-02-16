@@ -3,8 +3,7 @@
 {
 "id":  "S3253",
 "message":  "Remove this redundant \"base()\" call.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\AtLeastOnceDeliveryReceiveActor.cs",
 "region":  {
 "startLine":  26,
@@ -12,15 +11,12 @@
 "endLine":  26,
 "endColumn":  21
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3253",
 "message":  "Remove this redundant \"base()\" call.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\AtLeastOnceDeliveryReceiveActor.cs",
 "region":  {
 "startLine":  33,
@@ -28,9 +24,7 @@ null
 "endLine":  33,
 "endColumn":  21
 }
-},
-null
-]
+}
 }
 ]
 }

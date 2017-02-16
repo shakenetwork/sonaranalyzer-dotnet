@@ -3,8 +3,7 @@
 {
 "id":  "S1939",
 "message":  "\"IInternalActorRef\" implements \"ICanTell\" so \"ICanTell\" can be removed from the inheritance list.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestActorRefBase.cs",
 "region":  {
 "startLine":  22,
@@ -12,15 +11,12 @@
 "endLine":  22,
 "endColumn":  63
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1939",
 "message":  "\"IInternalActorRef\" implements \"IEquatable\u003cIActorRef\u003e\" so \"IEquatable\u003cIActorRef\u003e\" can be removed from the inheritance list.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestActorRefBase.cs",
 "region":  {
 "startLine":  22,
@@ -28,9 +24,7 @@ null
 "endLine":  22,
 "endColumn":  85
 }
-},
-null
-]
+}
 }
 ]
 }

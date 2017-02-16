@@ -3,8 +3,7 @@
 {
 "id":  "S2346",
 "message":  "Rename \"NotSuspended\" to \"None\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Dispatch\\Mailbox.cs",
 "region":  {
 "startLine":  187,
@@ -12,9 +11,7 @@
 "endLine":  187,
 "endColumn":  25
 }
-},
-null
-]
+}
 }
 ]
 }

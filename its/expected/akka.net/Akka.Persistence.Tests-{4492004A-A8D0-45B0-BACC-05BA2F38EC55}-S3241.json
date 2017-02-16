@@ -3,8 +3,7 @@
 {
 "id":  "S3241",
 "message":  "Change return type to \"void\"; not a single caller uses the returned value.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\EndToEndEventAdapterSpec.cs",
 "region":  {
 "startLine":  310,
@@ -12,9 +11,7 @@
 "endLine":  310,
 "endColumn":  18
 }
-},
-null
-]
+}
 }
 ]
 }

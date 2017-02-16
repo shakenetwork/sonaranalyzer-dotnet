@@ -3,8 +3,7 @@
 {
 "id":  "S1172",
 "message":  "Remove this unused method parameter \"assert\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\CachedMatchCompilerTests.cs",
 "region":  {
 "startLine":  114,
@@ -12,9 +11,7 @@
 "endLine":  114,
 "endColumn":  113
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.TestKit\\PluginSpec.cs",
 "region":  {
 "startLine":  54,
@@ -12,9 +11,7 @@
 "endLine":  54,
 "endColumn":  49
 }
-},
-null
-]
+}
 }
 ]
 }

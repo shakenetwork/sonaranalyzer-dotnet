@@ -3,8 +3,7 @@
 {
 "id":  "S122",
 "message":  "Reformat the code to have only one statement per line.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\TestActorRefTests\\TestActorRefSpec.cs",
 "region":  {
 "startLine":  133,
@@ -12,9 +11,7 @@
 "endLine":  133,
 "endColumn":  70
 }
-},
-null
-]
+}
 }
 ]
 }

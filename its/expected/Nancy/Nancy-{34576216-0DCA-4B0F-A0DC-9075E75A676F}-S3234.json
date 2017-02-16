@@ -3,8 +3,7 @@
 {
 "id":  "S3234",
 "message":  "Remove this useless call to \"GC.SuppressFinalize\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  3842,
@@ -12,9 +11,7 @@
 "endLine":  3842,
 "endColumn":  42
 }
-},
-null
-]
+}
 }
 ]
 }

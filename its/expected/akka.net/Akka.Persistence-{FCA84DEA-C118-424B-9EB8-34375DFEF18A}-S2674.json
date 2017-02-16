@@ -3,8 +3,7 @@
 {
 "id":  "S2674",
 "message":  "Check the return value of the \"Read\" call to see how many bytes were read.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot\\LocalSnapshotStore.cs",
 "region":  {
 "startLine":  151,
@@ -12,9 +11,7 @@
 "endLine":  151,
 "endColumn":  50
 }
-},
-null
-]
+}
 }
 ]
 }

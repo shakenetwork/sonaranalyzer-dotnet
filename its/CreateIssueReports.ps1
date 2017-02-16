@@ -42,8 +42,11 @@ function GetIssueV3
   $issue = New-Object –Type System.Object
   $issue | Add-Member –Type NoteProperty –Name id –Value $entry.ruleId
   $issue | Add-Member –Type NoteProperty –Name message –Value $entry.message
-  $combined = @($entry.locations.resultFile) + $entry.relatedLocations.physicalLocation
-  $issue | Add-Member –Type NoteProperty –Name location –Value $combined
+  If ($entry.relatedLocations.physicalLocation) {
+	$issue | Add-Member –Type NoteProperty –Name location –Value (@($entry.locations.resultFile) + $entry.relatedLocations.physicalLocation)
+  } Else {
+    $issue | Add-Member –Type NoteProperty –Name location –Value $entry.locations.resultFile
+  }
 
   $issue
   return

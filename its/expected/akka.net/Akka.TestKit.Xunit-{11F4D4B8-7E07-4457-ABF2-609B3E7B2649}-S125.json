@@ -3,8 +3,7 @@
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\testkits\\Akka.TestKit.Xunit\\TestKit.cs",
 "region":  {
 "startLine":  20,
@@ -12,15 +11,12 @@
 "endLine":  20,
 "endColumn":  72
 }
-},
-null
-]
+}
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\testkits\\Akka.TestKit.Xunit\\TestKit.cs",
 "region":  {
 "startLine":  80,
@@ -28,15 +24,12 @@ null
 "endLine":  80,
 "endColumn":  12
 }
-},
-null
-]
+}
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\testkits\\Akka.TestKit.Xunit\\TestKit.cs",
 "region":  {
 "startLine":  120,
@@ -44,9 +37,7 @@ null
 "endLine":  120,
 "endColumn":  44
 }
-},
-null
-]
+}
 }
 ]
 }

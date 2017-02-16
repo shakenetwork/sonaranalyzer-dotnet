@@ -3,8 +3,7 @@
 {
 "id":  "S3443",
 "message":  "Pass an argument that is not a \"System.Type\" or consider using \"IsAssignableFrom\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\EventFilter\\EventFilterFactory.cs",
 "region":  {
 "startLine":  244,
@@ -12,15 +11,12 @@
 "endLine":  244,
 "endColumn":  95
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3443",
 "message":  "Pass an argument that is not a \"System.Type\" or consider using \"IsAssignableFrom\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\EventFilter\\EventFilterFactory.cs",
 "region":  {
 "startLine":  253,
@@ -28,9 +24,7 @@ null
 "endLine":  253,
 "endColumn":  95
 }
-},
-null
-]
+}
 }
 ]
 }

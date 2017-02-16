@@ -3,8 +3,7 @@
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\ConsoleMessageSinkActor.cs",
 "region":  {
 "startLine":  62,
@@ -12,15 +11,12 @@
 "endLine":  62,
 "endColumn":  32
 }
-},
-null
-]
+}
 },
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\ConsoleMessageSinkActor.cs",
 "region":  {
 "startLine":  66,
@@ -28,9 +24,7 @@ null
 "endLine":  66,
 "endColumn":  27
 }
-},
-null
-]
+}
 }
 ]
 }

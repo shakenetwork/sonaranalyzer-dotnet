@@ -3,8 +3,7 @@
 {
 "id":  "S2328",
 "message":  "Remove this use of \"Data\" from the \"GetHashCode\" declaration, or make it \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Json\\TestConverterType.cs",
 "region":  {
 "startLine":  24,
@@ -12,15 +11,12 @@
 "endLine":  24,
 "endColumn":  20
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2328",
 "message":  "Remove this use of \"ConverterData\" from the \"GetHashCode\" declaration, or make it \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Json\\TestData.cs",
 "region":  {
 "startLine":  33,
@@ -28,15 +24,12 @@ null
 "endLine":  33,
 "endColumn":  24
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2328",
 "message":  "Remove this use of \"PrimitiveConverterData\" from the \"GetHashCode\" declaration, or make it \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Json\\TestData.cs",
 "region":  {
 "startLine":  33,
@@ -44,15 +37,12 @@ null
 "endLine":  33,
 "endColumn":  63
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2328",
 "message":  "Remove this use of \"Data\" from the \"GetHashCode\" declaration, or make it \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Json\\TestPrimitiveConverterType.cs",
 "region":  {
 "startLine":  24,
@@ -60,9 +50,7 @@ null
 "endLine":  24,
 "endColumn":  20
 }
-},
-null
-]
+}
 }
 ]
 }

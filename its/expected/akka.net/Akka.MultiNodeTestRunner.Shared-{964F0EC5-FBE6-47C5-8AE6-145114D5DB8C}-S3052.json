@@ -3,8 +3,7 @@
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"ExitCode\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\ExitCodeContainer.cs",
 "region":  {
 "startLine":  19,
@@ -12,15 +11,12 @@
 "endLine":  19,
 "endColumn":  39
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"TotalReceiveClosedConfirmations\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\SinkCoordinator.cs",
 "region":  {
 "startLine":  85,
@@ -28,15 +24,12 @@ null
 "endLine":  85,
 "endColumn":  58
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"ReceivedSinkCloseConfirmations\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\SinkCoordinator.cs",
 "region":  {
 "startLine":  86,
@@ -44,9 +37,7 @@ null
 "endLine":  86,
 "endColumn":  57
 }
-},
-null
-]
+}
 }
 ]
 }

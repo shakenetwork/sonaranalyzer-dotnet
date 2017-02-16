@@ -3,8 +3,7 @@
 {
 "id":  "S2339",
 "message":  "Change this constant to a \"static\" read-only property.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
 "region":  {
 "startLine":  583,
@@ -12,9 +11,7 @@
 "endLine":  583,
 "endColumn":  35
 }
-},
-null
-]
+}
 }
 ]
 }

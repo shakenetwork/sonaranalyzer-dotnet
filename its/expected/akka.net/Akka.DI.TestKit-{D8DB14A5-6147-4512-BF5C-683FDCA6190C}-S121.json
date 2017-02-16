@@ -3,8 +3,7 @@
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.TestKit\\DiResolverSpec.cs",
 "region":  {
 "startLine":  395,
@@ -12,9 +11,7 @@
 "endLine":  395,
 "endColumn":  15
 }
-},
-null
-]
+}
 }
 ]
 }

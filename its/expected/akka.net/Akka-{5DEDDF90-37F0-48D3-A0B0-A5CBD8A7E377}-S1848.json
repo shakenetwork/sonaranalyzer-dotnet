@@ -3,8 +3,7 @@
 {
 "id":  "S1848",
 "message":  "Either remove this useless object instantiation of class \"PoolWorker\" or use it.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Helios.Concurrency.DedicatedThreadPool.cs",
 "region":  {
 "startLine":  280,
@@ -12,9 +11,7 @@
 "endLine":  280,
 "endColumn":  59
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S105",
 "message":  "Replace all tab characters in this file by sequences of white-spaces.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\loggers\\Akka.Logger.Serilog\\Event\\Serilog\\SerilogLogMessageFormatter.cs",
 "region":  {
 "startLine":  13,
@@ -12,9 +11,7 @@
 "endLine":  13,
 "endColumn":  1
 }
-},
-null
-]
+}
 }
 ]
 }

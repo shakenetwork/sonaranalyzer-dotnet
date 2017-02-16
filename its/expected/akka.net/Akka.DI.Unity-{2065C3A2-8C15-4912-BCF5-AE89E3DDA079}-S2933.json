@@ -3,8 +3,7 @@
 {
 "id":  "S2933",
 "message":  "Make \"container\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.Unity\\UnityDependencyResolver.cs",
 "region":  {
 "startLine":  23,
@@ -12,15 +11,12 @@
 "endLine":  23,
 "endColumn":  42
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"typeCache\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.Unity\\UnityDependencyResolver.cs",
 "region":  {
 "startLine":  24,
@@ -28,15 +24,12 @@ null
 "endLine":  24,
 "endColumn":  61
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"system\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.Unity\\UnityDependencyResolver.cs",
 "region":  {
 "startLine":  25,
@@ -44,15 +37,12 @@ null
 "endLine":  25,
 "endColumn":  35
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"references\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.Unity\\UnityDependencyResolver.cs",
 "region":  {
 "startLine":  26,
@@ -60,9 +50,7 @@ null
 "endLine":  26,
 "endColumn":  76
 }
-},
-null
-]
+}
 }
 ]
 }

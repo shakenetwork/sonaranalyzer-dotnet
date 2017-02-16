@@ -3,8 +3,7 @@
 {
 "id":  "S3241",
 "message":  "Change return type to \"void\"; not a single caller uses the returned value.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\Singleton\\ClusterSingletonManagerChaosSpec.cs",
 "region":  {
 "startLine":  185,
@@ -12,15 +11,12 @@
 "endLine":  185,
 "endColumn":  26
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3241",
 "message":  "Change return type to \"void\"; not a single caller uses the returned value.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\Singleton\\ClusterSingletonManagerLeaveSpec.cs",
 "region":  {
 "startLine":  105,
@@ -28,15 +24,12 @@ null
 "endLine":  105,
 "endColumn":  26
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3241",
 "message":  "Change return type to \"void\"; not a single caller uses the returned value.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\Singleton\\ClusterSingletonManagerStartupSpec.cs",
 "region":  {
 "startLine":  101,
@@ -44,9 +37,7 @@ null
 "endLine":  101,
 "endColumn":  26
 }
-},
-null
-]
+}
 }
 ]
 }

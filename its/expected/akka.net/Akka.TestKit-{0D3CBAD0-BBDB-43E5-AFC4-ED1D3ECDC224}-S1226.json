@@ -3,8 +3,7 @@
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"matchedEventHandler\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\EventFilter\\Internal\\EventFilterApplier.cs",
 "region":  {
 "startLine":  108,
@@ -12,15 +11,12 @@
 "endLine":  108,
 "endColumn":  32
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"sender\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\Internal\\InternalTestActorRef.cs",
 "region":  {
 "startLine":  74,
@@ -28,15 +24,12 @@ null
 "endLine":  74,
 "endColumn":  19
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"name\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\Internal\\InternalTestActorRef.cs",
 "region":  {
 "startLine":  132,
@@ -44,15 +37,12 @@ null
 "endLine":  132,
 "endColumn":  21
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"supervisor\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\Internal\\InternalTestActorRef.cs",
 "region":  {
 "startLine":  137,
@@ -60,15 +50,12 @@ null
 "endLine":  137,
 "endColumn":  27
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"props\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\Internal\\InternalTestActorRef.cs",
 "region":  {
 "startLine":  143,
@@ -76,15 +63,12 @@ null
 "endLine":  143,
 "endColumn":  22
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"system\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase.cs",
 "region":  {
 "startLine":  102,
@@ -92,15 +76,12 @@ null
 "endLine":  102,
 "endColumn":  23
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"testActorName\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase.cs",
 "region":  {
 "startLine":  120,
@@ -108,15 +89,12 @@ null
 "endLine":  120,
 "endColumn":  30
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"system\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase.cs",
 "region":  {
 "startLine":  343,
@@ -124,15 +102,12 @@ null
 "endLine":  343,
 "endColumn":  39
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"msgAssert\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_Expect.cs",
 "region":  {
 "startLine":  172,
@@ -140,15 +115,12 @@ null
 "endLine":  172,
 "endColumn":  22
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"senderAssert\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_Expect.cs",
 "region":  {
 "startLine":  173,
@@ -156,15 +128,12 @@ null
 "endLine":  173,
 "endColumn":  25
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"areEqual\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_Expect.cs",
 "region":  {
 "startLine":  328,
@@ -172,15 +141,12 @@ null
 "endLine":  328,
 "endColumn":  21
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"max\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_Within.cs",
 "region":  {
 "startLine":  65,
@@ -188,15 +154,12 @@ null
 "endLine":  65,
 "endColumn":  16
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"timeout\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestLatch.cs",
 "region":  {
 "startLine":  141,
@@ -204,9 +167,7 @@ null
 "endLine":  141,
 "endColumn":  24
 }
-},
-null
-]
+}
 }
 ]
 }

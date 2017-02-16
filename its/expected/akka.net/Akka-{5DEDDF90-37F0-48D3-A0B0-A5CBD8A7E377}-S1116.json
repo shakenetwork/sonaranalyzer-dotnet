@@ -3,8 +3,7 @@
 {
 "id":  "S1116",
 "message":  "Remove this empty statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\Collections\\ImmutableAvlTreeBase.cs",
 "region":  {
 "startLine":  256,
@@ -12,15 +11,12 @@
 "endLine":  256,
 "endColumn":  110
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1116",
 "message":  "Remove this empty statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\Collections\\ImmutableAvlTreeBase.cs",
 "region":  {
 "startLine":  259,
@@ -28,9 +24,7 @@ null
 "endLine":  259,
 "endColumn":  104
 }
-},
-null
-]
+}
 }
 ]
 }

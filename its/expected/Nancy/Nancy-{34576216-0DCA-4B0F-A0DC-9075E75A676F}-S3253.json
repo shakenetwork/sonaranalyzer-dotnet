@@ -3,8 +3,7 @@
 {
 "id":  "S3253",
 "message":  "Remove this redundant constructor.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
 "region":  {
 "startLine":  114,
@@ -12,15 +11,12 @@
 "endLine":  116,
 "endColumn":  10
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3253",
 "message":  "Remove this redundant constructor.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
 "startLine":  74,
@@ -28,15 +24,12 @@ null
 "endLine":  76,
 "endColumn":  10
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3253",
 "message":  "Remove this redundant constructor.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
 "startLine":  3002,
@@ -44,9 +37,7 @@ null
 "endLine":  3004,
 "endColumn":  10
 }
-},
-null
-]
+}
 }
 ]
 }

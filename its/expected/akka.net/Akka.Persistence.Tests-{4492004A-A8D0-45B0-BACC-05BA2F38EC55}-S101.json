@@ -3,8 +3,7 @@
 {
 "id":  "S101",
 "message":  "Rename class \"PersistentFSMSpec\" to match camel case naming rules, consider using \"PersistentFsmSpec\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\Fsm\\PersistentFSMSpec.cs",
 "region":  {
 "startLine":  17,
@@ -12,15 +11,12 @@
 "endLine":  17,
 "endColumn":  35
 }
-},
-null
-]
+}
 },
 {
 "id":  "S101",
 "message":  "Rename class \"WebStoreCustomerFSM\" to match camel case naming rules, consider using \"WebStoreCustomerFsm\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\Fsm\\PersistentFSMSpec.cs",
 "region":  {
 "startLine":  324,
@@ -28,15 +24,12 @@ null
 "endLine":  324,
 "endColumn":  43
 }
-},
-null
-]
+}
 },
 {
 "id":  "S101",
 "message":  "Rename class \"SimpleTransitionFSM\" to match camel case naming rules, consider using \"SimpleTransitionFsm\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\Fsm\\PersistentFSMSpec.cs",
 "region":  {
 "startLine":  457,
@@ -44,15 +37,12 @@ null
 "endLine":  457,
 "endColumn":  39
 }
-},
-null
-]
+}
 },
 {
 "id":  "S101",
 "message":  "Rename class \"DeferringMixedCallsPPADDPADPersistActor\" to match camel case naming rules, consider using \"DeferringMixedCallsPpaddpadPersistActor\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
 "region":  {
 "startLine":  811,
@@ -60,9 +50,7 @@ null
 "endLine":  811,
 "endColumn":  63
 }
-},
-null
-]
+}
 }
 ]
 }

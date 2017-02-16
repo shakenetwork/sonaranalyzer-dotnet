@@ -3,8 +3,7 @@
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\MultiNodeSpec.cs",
 "region":  {
 "startLine":  562,
@@ -12,15 +11,12 @@
 "endLine":  562,
 "endColumn":  36
 }
-},
-null
-]
+}
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
 "region":  {
 "startLine":  88,
@@ -28,15 +24,12 @@ null
 "endLine":  88,
 "endColumn":  48
 }
-},
-null
-]
+}
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
 "region":  {
 "startLine":  407,
@@ -44,15 +37,12 @@ null
 "endLine":  407,
 "endColumn":  54
 }
-},
-null
-]
+}
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
 "region":  {
 "startLine":  414,
@@ -60,15 +50,12 @@ null
 "endLine":  414,
 "endColumn":  54
 }
-},
-null
-]
+}
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
 "region":  {
 "startLine":  493,
@@ -76,9 +63,7 @@ null
 "endLine":  493,
 "endColumn":  76
 }
-},
-null
-]
+}
 }
 ]
 }

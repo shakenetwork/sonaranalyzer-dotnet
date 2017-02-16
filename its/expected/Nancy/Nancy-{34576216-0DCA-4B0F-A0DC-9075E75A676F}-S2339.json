@@ -3,8 +3,7 @@
 {
 "id":  "S2339",
 "message":  "Change this constant to a \"static\" read-only property.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\NancyEngine.cs",
 "region":  {
 "startLine":  23,
@@ -12,15 +11,12 @@
 "endLine":  23,
 "endColumn":  38
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2339",
 "message":  "Change this constant to a \"static\" read-only property.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\NancyEngine.cs",
 "region":  {
 "startLine":  24,
@@ -28,15 +24,12 @@ null
 "endLine":  24,
 "endColumn":  44
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2339",
 "message":  "Change this constant to a \"static\" read-only property.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Owin\\NancyMiddleware.cs",
 "region":  {
 "startLine":  32,
@@ -44,15 +37,12 @@ null
 "endLine":  32,
 "endColumn":  50
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2339",
 "message":  "Change this constant to a \"static\" read-only property.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Security\\CsrfToken.cs",
 "region":  {
 "startLine":  15,
@@ -60,9 +50,7 @@ null
 "endLine":  15,
 "endColumn":  45
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"ExecutedByMultiNodeRunner\" or make it \"const\" or \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\MultiNodeFact.cs",
 "region":  {
 "startLine":  15,
@@ -12,9 +11,7 @@
 "endLine":  15,
 "endColumn":  59
 }
-},
-null
-]
+}
 }
 ]
 }

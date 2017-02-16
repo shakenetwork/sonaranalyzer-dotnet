@@ -3,8 +3,7 @@
 {
 "id":  "S1481",
 "message":  "Remove this unused \"x\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\ClusterClient\\ClusterClientSpec.cs",
 "region":  {
 "startLine":  126,
@@ -12,15 +11,12 @@
 "endLine":  126,
 "endColumn":  18
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"m\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\PublishSubscribe\\DistributedPubSubMediatorSpec.cs",
 "region":  {
 "startLine":  239,
@@ -28,15 +24,12 @@ null
 "endLine":  239,
 "endColumn":  18
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"newOldestNode\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\Singleton\\ClusterSingletonManagerSpec.cs",
 "region":  {
 "startLine":  550,
@@ -44,15 +37,12 @@ null
 "endLine":  550,
 "endColumn":  34
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"first\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\Singleton\\ClusterSingletonManagerStartupSpec.cs",
 "region":  {
 "startLine":  23,
@@ -60,15 +50,12 @@ null
 "endLine":  23,
 "endColumn":  22
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"second\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\Singleton\\ClusterSingletonManagerStartupSpec.cs",
 "region":  {
 "startLine":  24,
@@ -76,15 +63,12 @@ null
 "endLine":  24,
 "endColumn":  23
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"third\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\Singleton\\ClusterSingletonManagerStartupSpec.cs",
 "region":  {
 "startLine":  25,
@@ -92,9 +76,7 @@ null
 "endLine":  25,
 "endColumn":  22
 }
-},
-null
-]
+}
 }
 ]
 }

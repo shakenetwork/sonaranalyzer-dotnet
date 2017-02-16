@@ -3,8 +3,7 @@
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"requestedPath\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Embedded\\Conventions\\EmbeddedStaticContentConventionBuilder.cs",
 "region":  {
 "startLine":  34,
@@ -12,15 +11,12 @@
 "endLine":  34,
 "endColumn":  30
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"contentPath\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Embedded\\Conventions\\EmbeddedStaticContentConventionBuilder.cs",
 "region":  {
 "startLine":  59,
@@ -28,15 +24,12 @@ null
 "endLine":  59,
 "endColumn":  28
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"contentPath\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Embedded\\Conventions\\EmbeddedStaticContentConventionBuilder.cs",
 "region":  {
 "startLine":  142,
@@ -44,15 +37,12 @@ null
 "endLine":  142,
 "endColumn":  24
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"contentPath\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Embedded\\Conventions\\EmbeddedStaticContentConventionBuilder.cs",
 "region":  {
 "startLine":  147,
@@ -60,9 +50,7 @@ null
 "endLine":  147,
 "endColumn":  28
 }
-},
-null
-]
+}
 }
 ]
 }

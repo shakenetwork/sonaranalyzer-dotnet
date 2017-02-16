@@ -3,8 +3,7 @@
 {
 "id":  "S101",
 "message":  "Rename class \"DB\" to match camel case naming rules, consider using \"Db\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Demo.ModelBinding\\Database\\DB.cs",
 "region":  {
 "startLine":  7,
@@ -12,9 +11,7 @@
 "endLine":  7,
 "endColumn":  27
 }
-},
-null
-]
+}
 }
 ]
 }

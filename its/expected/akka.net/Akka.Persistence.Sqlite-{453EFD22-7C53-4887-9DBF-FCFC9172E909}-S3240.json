@@ -3,8 +3,7 @@
 {
 "id":  "S3240",
 "message":  "Use the \"?:\" operator here.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sqlite\\Journal\\SqliteQueryBuilder.cs",
 "region":  {
 "startLine":  107,
@@ -12,9 +11,7 @@
 "endLine":  107,
 "endColumn":  19
 }
-},
-null
-]
+}
 }
 ]
 }

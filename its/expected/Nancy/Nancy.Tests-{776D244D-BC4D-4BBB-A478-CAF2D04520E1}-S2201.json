@@ -3,8 +3,7 @@
 {
 "id":  "S2201",
 "message":  "Use the return value of method \"ToList\", which has no side effect.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\ResourceViewLocationProviderFixture.cs",
 "region":  {
 "startLine":  191,
@@ -12,15 +11,12 @@
 "endLine":  191,
 "endColumn":  67
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2201",
 "message":  "Use the return value of method \"ToList\", which has no side effect.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\ResourceViewLocationProviderFixture.cs",
 "region":  {
 "startLine":  213,
@@ -28,9 +24,7 @@ null
 "endLine":  213,
 "endColumn":  67
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"node\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Journal\\MemoryJournal.cs",
 "region":  {
 "startLine":  127,
@@ -12,15 +11,12 @@
 "endLine":  127,
 "endColumn":  21
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"node\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Journal\\MemoryJournal.cs",
 "region":  {
 "startLine":  138,
@@ -28,15 +24,12 @@ null
 "endLine":  138,
 "endColumn":  25
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"node\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Journal\\MemoryJournal.cs",
 "region":  {
 "startLine":  142,
@@ -44,15 +37,12 @@ null
 "endLine":  142,
 "endColumn":  26
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"representation\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Journal\\WriteJournal.cs",
 "region":  {
 "startLine":  61,
@@ -60,9 +50,7 @@ null
 "endLine":  61,
 "endColumn":  27
 }
-},
-null
-]
+}
 }
 ]
 }

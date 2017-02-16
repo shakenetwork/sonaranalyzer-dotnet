@@ -3,8 +3,7 @@
 {
 "id":  "S1481",
 "message":  "Remove this unused \"culture\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Culture\\BuiltInCultureConventionFixture.cs",
 "region":  {
 "startLine":  99,
@@ -12,15 +11,12 @@
 "endLine":  99,
 "endColumn":  24
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"value\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Diagnostics\\DefaultRequestTraceFactoryFixture.cs",
 "region":  {
 "startLine":  67,
@@ -28,15 +24,12 @@ null
 "endLine":  67,
 "endColumn":  30
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"value\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Diagnostics\\DefaultRequestTraceFactoryFixture.cs",
 "region":  {
 "startLine":  86,
@@ -44,15 +37,12 @@ null
 "endLine":  86,
 "endColumn":  30
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"e\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\DynamicDictionaryValueFixture.cs",
 "region":  {
 "startLine":  1061,
@@ -60,15 +50,12 @@ null
 "endLine":  1061,
 "endColumn":  28
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"request\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\IO\\RequestStreamFixture.cs",
 "region":  {
 "startLine":  284,
@@ -76,15 +63,12 @@ null
 "endLine":  284,
 "endColumn":  24
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"result\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Localization\\ResourceBasedTextResourceFixture.cs",
 "region":  {
 "startLine":  62,
@@ -92,15 +76,12 @@ null
 "endLine":  62,
 "endColumn":  27
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"dataThatDoesntResetStreamPosition\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\XmlBodyDeserializerfixture.cs",
 "region":  {
 "startLine":  92,
@@ -108,15 +89,12 @@ null
 "endLine":  92,
 "endColumn":  50
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"result\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DynamicModelBinderAdapterFixture.cs",
 "region":  {
 "startLine":  56,
@@ -124,15 +102,12 @@ null
 "endLine":  56,
 "endColumn":  25
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"result\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DynamicModelBinderAdapterFixture.cs",
 "region":  {
 "startLine":  77,
@@ -140,15 +115,12 @@ null
 "endLine":  77,
 "endColumn":  25
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"result\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DynamicModelBinderAdapterFixture.cs",
 "region":  {
 "startLine":  96,
@@ -156,15 +128,12 @@ null
 "endLine":  96,
 "endColumn":  23
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"result\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DynamicModelBinderAdapterFixture.cs",
 "region":  {
 "startLine":  152,
@@ -172,15 +141,12 @@ null
 "endLine":  152,
 "endColumn":  25
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"result\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DynamicModelBinderAdapterFixture.cs",
 "region":  {
 "startLine":  173,
@@ -188,15 +154,12 @@ null
 "endLine":  173,
 "endColumn":  25
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"result\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DynamicModelBinderAdapterFixture.cs",
 "region":  {
 "startLine":  195,
@@ -204,15 +167,12 @@ null
 "endLine":  195,
 "endColumn":  25
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"result\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DynamicModelBinderAdapterFixture.cs",
 "region":  {
 "startLine":  219,
@@ -220,15 +180,12 @@ null
 "endLine":  219,
 "endColumn":  25
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"result\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DynamicModelBinderAdapterFixture.cs",
 "region":  {
 "startLine":  242,
@@ -236,15 +193,12 @@ null
 "endLine":  242,
 "endColumn":  25
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"request\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\RequestFixture.cs",
 "region":  {
 "startLine":  673,
@@ -252,15 +206,12 @@ null
 "endLine":  673,
 "endColumn":  24
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"request\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\RequestFixture.cs",
 "region":  {
 "startLine":  696,
@@ -268,15 +219,12 @@ null
 "endLine":  696,
 "endColumn":  24
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"result\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ResponseExtensionsFixture.cs",
 "region":  {
 "startLine":  166,
@@ -284,15 +232,12 @@ null
 "endLine":  166,
 "endColumn":  23
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"result\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ResponseExtensionsFixture.cs",
 "region":  {
 "startLine":  176,
@@ -300,15 +245,12 @@ null
 "endLine":  176,
 "endColumn":  23
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"result\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRouteInvokerFixture.cs",
 "region":  {
 "startLine":  85,
@@ -316,15 +258,12 @@ null
 "endLine":  85,
 "endColumn":  23
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"result\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRouteInvokerFixture.cs",
 "region":  {
 "startLine":  104,
@@ -332,15 +271,12 @@ null
 "endLine":  104,
 "endColumn":  23
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"result\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRouteInvokerFixture.cs",
 "region":  {
 "startLine":  123,
@@ -348,15 +284,12 @@ null
 "endLine":  123,
 "endColumn":  23
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"cache\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\RouteCacheFixture.cs",
 "region":  {
 "startLine":  145,
@@ -364,15 +297,12 @@ null
 "endLine":  145,
 "endColumn":  22
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"cache\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\RouteCacheFixture.cs",
 "region":  {
 "startLine":  175,
@@ -380,9 +310,7 @@ null
 "endLine":  175,
 "endColumn":  22
 }
-},
-null
-]
+}
 }
 ]
 }

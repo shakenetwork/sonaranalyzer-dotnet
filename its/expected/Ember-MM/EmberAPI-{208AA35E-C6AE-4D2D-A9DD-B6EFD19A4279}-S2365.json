@@ -3,8 +3,7 @@
 {
 "id":  "S2365",
 "message":  "Refactor \"GetIFOAudio\" into a method, properties should not be based on arrays.",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\EmberAPI\\clsAPIDVD.vb",
 "region":  {
 "startLine":  62,
@@ -12,15 +11,12 @@
 "endLine":  62,
 "endColumn":  41
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2365",
 "message":  "Refactor \"GetIFOVideo\" into a method, properties should not be based on arrays.",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\EmberAPI\\clsAPIDVD.vb",
 "region":  {
 "startLine":  110,
@@ -28,9 +24,7 @@ null
 "endLine":  110,
 "endColumn":  41
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S1481",
 "message":  "Remove this unused \"server\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\TimeServer\\TimeServer\\Program.cs",
 "region":  {
 "startLine":  21,
@@ -12,9 +11,7 @@
 "endLine":  21,
 "endColumn":  27
 }
-},
-null
-]
+}
 }
 ]
 }

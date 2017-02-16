@@ -3,8 +3,7 @@
 {
 "id":  "S3261",
 "message":  "Remove this empty namespace.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\AssociationEvent.cs",
 "region":  {
 "startLine":  10,
@@ -12,9 +11,7 @@
 "endLine":  13,
 "endColumn":  2
 }
-},
-null
-]
+}
 }
 ]
 }

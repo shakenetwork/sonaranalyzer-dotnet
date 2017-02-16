@@ -3,8 +3,7 @@
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"handleOption\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  533,
@@ -12,15 +11,12 @@
 "endLine":  533,
 "endColumn":  47
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"refuseUid\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  770,
@@ -28,15 +24,12 @@ null
 "endLine":  770,
 "endColumn":  101
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"reliableDeliverySupervisor\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  841,
@@ -44,15 +37,12 @@ null
 "endLine":  841,
 "endColumn":  61
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"repeat\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
 "startLine":  548,
@@ -60,15 +50,12 @@ null
 "endLine":  548,
 "endColumn":  85
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"repeat\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
 "region":  {
 "startLine":  1040,
@@ -76,9 +63,7 @@ null
 "endLine":  1040,
 "endColumn":  78
 }
-},
-null
-]
+}
 }
 ]
 }

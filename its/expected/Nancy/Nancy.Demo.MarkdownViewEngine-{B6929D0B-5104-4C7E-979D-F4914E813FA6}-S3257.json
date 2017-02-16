@@ -3,8 +3,7 @@
 {
 "id":  "S3257",
 "message":  "Remove the array type; it is redundant.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Demo.MarkdownViewEngine\\Model\\BlogModel.cs",
 "region":  {
 "startLine":  45,
@@ -12,15 +11,12 @@
 "endLine":  45,
 "endColumn":  58
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3257",
 "message":  "Remove the array type; it is redundant.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Demo.MarkdownViewEngine\\Model\\BlogModel.cs",
 "region":  {
 "startLine":  49,
@@ -28,15 +24,12 @@ null
 "endLine":  49,
 "endColumn":  53
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3257",
 "message":  "Remove the array type; it is redundant.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Demo.MarkdownViewEngine\\Model\\BlogModel.cs",
 "region":  {
 "startLine":  69,
@@ -44,9 +37,7 @@ null
 "endLine":  69,
 "endColumn":  38
 }
-},
-null
-]
+}
 }
 ]
 }

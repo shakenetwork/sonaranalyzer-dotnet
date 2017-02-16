@@ -3,8 +3,7 @@
 {
 "id":  "S2365",
 "message":  "Refactor \"Buffers\" into a method, properties should not be based on arrays.",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\Addons\\scraper.EmberCore.XML\\XMLScraper\\ScraperXML\\ScraperParser.vb",
 "region":  {
 "startLine":  72,
@@ -12,9 +11,7 @@
 "endLine":  72,
 "endColumn":  36
 }
-},
-null
-]
+}
 }
 ]
 }

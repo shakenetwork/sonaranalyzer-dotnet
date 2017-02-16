@@ -3,8 +3,7 @@
 {
 "id":  "S3257",
 "message":  "Remove the array type; it is redundant.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\AbsoluteUrlTests.cs",
 "region":  {
 "startLine":  18,
@@ -12,15 +11,12 @@
 "endLine":  18,
 "endColumn":  68
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3257",
 "message":  "Remove the array type; it is redundant.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\JsonpTests.cs",
 "region":  {
 "startLine":  22,
@@ -28,15 +24,12 @@ null
 "endLine":  22,
 "endColumn":  59
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3257",
 "message":  "Remove the array type; it is redundant.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\RouteConstraintTests.cs",
 "region":  {
 "startLine":  24,
@@ -44,15 +37,12 @@ null
 "endLine":  24,
 "endColumn":  51
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3257",
 "message":  "Remove the array type; it is redundant.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\SerializerTests.cs",
 "region":  {
 "startLine":  18,
@@ -60,15 +50,12 @@ null
 "endLine":  18,
 "endColumn":  64
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3257",
 "message":  "Remove the array type; it is redundant.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\SerializeTests.cs",
 "region":  {
 "startLine":  20,
@@ -76,15 +63,12 @@ null
 "endLine":  20,
 "endColumn":  68
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3257",
 "message":  "Remove the array type; it is redundant.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\TracingSmokeTests.cs",
 "region":  {
 "startLine":  20,
@@ -92,9 +76,7 @@ null
 "endLine":  20,
 "endColumn":  68
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S2360",
 "message":  "Use the overloading mechanism instead of the optional parameters.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Conductor.cs",
 "region":  {
 "startLine":  208,
@@ -12,15 +11,12 @@
 "endLine":  208,
 "endColumn":  69
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2360",
 "message":  "Use the overloading mechanism instead of the optional parameters.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\MultiNodeSpec.cs",
 "region":  {
 "startLine":  532,
@@ -28,9 +24,7 @@ null
 "endLine":  532,
 "endColumn":  62
 }
-},
-null
-]
+}
 }
 ]
 }

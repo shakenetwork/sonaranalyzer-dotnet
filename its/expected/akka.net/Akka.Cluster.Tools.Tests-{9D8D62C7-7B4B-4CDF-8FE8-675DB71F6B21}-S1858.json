@@ -3,8 +3,7 @@
 {
 "id":  "S1858",
 "message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\ClusterClient\\ClusterClientSpec.cs",
 "region":  {
 "startLine":  70,
@@ -12,9 +11,7 @@
 "endLine":  70,
 "endColumn":  47
 }
-},
-null
-]
+}
 }
 ]
 }

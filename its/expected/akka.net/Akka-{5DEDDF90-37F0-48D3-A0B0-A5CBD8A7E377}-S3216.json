@@ -3,8 +3,7 @@
 {
 "id":  "S3216",
 "message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorSelection.cs",
 "region":  {
 "startLine":  112,
@@ -12,15 +11,12 @@
 "endLine":  112,
 "endColumn":  90
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3216",
 "message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Pattern\\CircuitBreaker.cs",
 "region":  {
 "startLine":  133,
@@ -28,15 +24,12 @@ null
 "endLine":  133,
 "endColumn":  56
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3216",
 "message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Pattern\\CircuitBreaker.cs",
 "region":  {
 "startLine":  143,
@@ -44,15 +37,12 @@ null
 "endLine":  143,
 "endColumn":  46
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3216",
 "message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Pattern\\CircuitBreakerState.cs",
 "region":  {
 "startLine":  104,
@@ -60,15 +50,12 @@ null
 "endLine":  104,
 "endColumn":  45
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3216",
 "message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Pattern\\CircuitBreakerState.cs",
 "region":  {
 "startLine":  119,
@@ -76,15 +63,12 @@ null
 "endLine":  119,
 "endColumn":  38
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3216",
 "message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Pattern\\CircuitBreakerState.cs",
 "region":  {
 "startLine":  177,
@@ -92,15 +76,12 @@ null
 "endLine":  177,
 "endColumn":  45
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3216",
 "message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Pattern\\CircuitBreakerState.cs",
 "region":  {
 "startLine":  187,
@@ -108,15 +89,12 @@ null
 "endLine":  187,
 "endColumn":  38
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3216",
 "message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Routing\\TailChoppingRoutingLogic.cs",
 "region":  {
 "startLine":  123,
@@ -124,15 +102,12 @@ null
 "endLine":  123,
 "endColumn":  115
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3216",
 "message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\AtomicState.cs",
 "region":  {
 "startLine":  53,
@@ -140,15 +115,12 @@ null
 "endLine":  64,
 "endColumn":  18
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3216",
 "message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\AtomicState.cs",
 "region":  {
 "startLine":  86,
@@ -156,15 +128,12 @@ null
 "endLine":  86,
 "endColumn":  38
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3216",
 "message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\AtomicState.cs",
 "region":  {
 "startLine":  125,
@@ -172,9 +141,7 @@ null
 "endLine":  125,
 "endColumn":  29
 }
-},
-null
-]
+}
 }
 ]
 }

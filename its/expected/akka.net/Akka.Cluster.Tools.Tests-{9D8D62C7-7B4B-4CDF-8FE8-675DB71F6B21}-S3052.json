@@ -3,8 +3,7 @@
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"current\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\Singleton\\ClusterSingletonManagerSpec.cs",
 "region":  {
 "startLine":  259,
@@ -12,15 +11,12 @@
 "endLine":  259,
 "endColumn":  32
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_msg\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\Singleton\\ClusterSingletonManagerSpec.cs",
 "region":  {
 "startLine":  290,
@@ -28,9 +24,7 @@ null
 "endLine":  290,
 "endColumn":  29
 }
-},
-null
-]
+}
 }
 ]
 }

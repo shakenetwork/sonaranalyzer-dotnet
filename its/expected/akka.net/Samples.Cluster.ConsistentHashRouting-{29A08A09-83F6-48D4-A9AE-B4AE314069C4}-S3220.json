@@ -3,8 +3,7 @@
 {
 "id":  "S3220",
 "message":  "Review this call, which partially matches an overload without \"params\". The partial match is \"ConsistentHashingGroup.ConsistentHashingGroup(Config config)\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\Cluster\\Routing\\Samples.Cluster.ConsistentHashRouting\\Program.cs",
 "region":  {
 "startLine":  60,
@@ -12,9 +11,7 @@
 "endLine":  60,
 "endColumn":  110
 }
-},
-null
-]
+}
 }
 ]
 }

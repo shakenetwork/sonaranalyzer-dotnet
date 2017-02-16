@@ -3,8 +3,7 @@
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\PersistenceExample\\Program.cs",
 "region":  {
 "startLine":  66,
@@ -12,15 +11,12 @@
 "endLine":  74,
 "endColumn":  10
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\PersistenceExample\\Program.cs",
 "region":  {
 "startLine":  76,
@@ -28,15 +24,12 @@ null
 "endLine":  110,
 "endColumn":  10
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\PersistenceExample\\Program.cs",
 "region":  {
 "startLine":  112,
@@ -44,9 +37,7 @@ null
 "endLine":  132,
 "endColumn":  10
 }
-},
-null
-]
+}
 }
 ]
 }

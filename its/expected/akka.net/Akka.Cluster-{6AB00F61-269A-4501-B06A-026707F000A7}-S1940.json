@@ -3,8 +3,7 @@
 {
 "id":  "S1940",
 "message":  "Use the opposite operator (\"\u003c=\") instead.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
 "region":  {
 "startLine":  645,
@@ -12,15 +11,12 @@
 "endLine":  645,
 "endColumn":  33
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1940",
 "message":  "Use the opposite operator (\"\u003c=\") instead.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
 "region":  {
 "startLine":  646,
@@ -28,9 +24,7 @@ null
 "endLine":  646,
 "endColumn":  53
 }
-},
-null
-]
+}
 }
 ]
 }

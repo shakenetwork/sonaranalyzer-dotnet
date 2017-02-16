@@ -3,8 +3,7 @@
 {
 "id":  "S1134",
 "message":  "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
 "region":  {
 "startLine":  579,
@@ -12,9 +11,7 @@
 "endLine":  579,
 "endColumn":  24
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S101",
 "message":  "Rename class \"RARP\" to match camel case naming rules, consider using \"Rarp\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Remoting.cs",
 "region":  {
 "startLine":  43,
@@ -12,9 +11,7 @@
 "endLine":  43,
 "endColumn":  31
 }
-},
-null
-]
+}
 }
 ]
 }

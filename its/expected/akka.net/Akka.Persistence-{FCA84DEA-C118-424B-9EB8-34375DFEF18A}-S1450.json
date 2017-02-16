@@ -3,8 +3,7 @@
 {
 "id":  "S1450",
 "message":  "Remove the \"_extension\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Journal\\AsyncWriteJournal.cs",
 "region":  {
 "startLine":  20,
@@ -12,15 +11,12 @@
 "endLine":  20,
 "endColumn":  57
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"_log\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Journal\\EventAdapters.cs",
 "region":  {
 "startLine":  138,
@@ -28,15 +24,12 @@ null
 "endLine":  138,
 "endColumn":  46
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"_extension\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Journal\\SyncWriteJournal.cs",
 "region":  {
 "startLine":  17,
@@ -44,15 +37,12 @@ null
 "endLine":  17,
 "endColumn":  57
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"_persistence\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Journal\\WriteJournal.cs",
 "region":  {
 "startLine":  16,
@@ -60,15 +50,12 @@ null
 "endLine":  16,
 "endColumn":  59
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"_extension\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot\\SnapshotStore.cs",
 "region":  {
 "startLine":  16,
@@ -76,9 +63,7 @@ null
 "endLine":  16,
 "endColumn":  57
 }
-},
-null
-]
+}
 }
 ]
 }

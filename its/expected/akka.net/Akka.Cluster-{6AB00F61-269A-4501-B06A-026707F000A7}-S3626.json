@@ -3,8 +3,7 @@
 {
 "id":  "S3626",
 "message":  "Remove this redundant jump.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\AutoDown.cs",
 "region":  {
 "startLine":  161,
@@ -12,9 +11,7 @@
 "endLine":  161,
 "endColumn":  24
 }
-},
-null
-]
+}
 }
 ]
 }

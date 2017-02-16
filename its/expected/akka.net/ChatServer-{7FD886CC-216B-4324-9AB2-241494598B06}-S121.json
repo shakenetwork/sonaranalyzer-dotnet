@@ -3,8 +3,7 @@
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"foreach\" block.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\Chat\\ChatServer\\Program.cs",
 "region":  {
 "startLine":  65,
@@ -12,15 +11,12 @@
 "endLine":  65,
 "endColumn":  20
 }
-},
-null
-]
+}
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"foreach\" block.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\Chat\\ChatServer\\Program.cs",
 "region":  {
 "startLine":  86,
@@ -28,9 +24,7 @@ null
 "endLine":  86,
 "endColumn":  20
 }
-},
-null
-]
+}
 }
 ]
 }

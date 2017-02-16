@@ -3,8 +3,7 @@
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"PersistCount\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShard.cs",
 "region":  {
 "startLine":  18,
@@ -12,15 +11,12 @@
 "endLine":  18,
 "endColumn":  39
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_persistCount\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
 "region":  {
 "startLine":  165,
@@ -28,15 +24,12 @@ null
 "endLine":  165,
 "endColumn":  38
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"HandOffStopper\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\Shard.cs",
 "region":  {
 "startLine":  181,
@@ -44,15 +37,12 @@ null
 "endLine":  181,
 "endColumn":  50
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_coordinator\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  332,
@@ -60,15 +50,12 @@ null
 "endLine":  332,
 "endColumn":  46
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_retryCount\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  333,
@@ -76,15 +63,12 @@ null
 "endLine":  333,
 "endColumn":  36
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_loggedFullBufferWarning\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  334,
@@ -92,9 +76,7 @@ null
 "endLine":  334,
 "endColumn":  54
 }
-},
-null
-]
+}
 }
 ]
 }

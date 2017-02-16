@@ -3,8 +3,7 @@
 {
 "id":  "S2357",
 "message":  "Make \"JournalSettings\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sqlite\\Extension.cs",
 "region":  {
 "startLine":  63,
@@ -12,15 +11,12 @@
 "endLine":  63,
 "endColumn":  62
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"SnapshotSettings\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sqlite\\Extension.cs",
 "region":  {
 "startLine":  68,
@@ -28,15 +24,12 @@ null
 "endLine":  68,
 "endColumn":  64
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Extension\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sqlite\\Journal\\SqliteJournal.cs",
 "region":  {
 "startLine":  43,
@@ -44,9 +37,7 @@ null
 "endLine":  43,
 "endColumn":  52
 }
-},
-null
-]
+}
 }
 ]
 }

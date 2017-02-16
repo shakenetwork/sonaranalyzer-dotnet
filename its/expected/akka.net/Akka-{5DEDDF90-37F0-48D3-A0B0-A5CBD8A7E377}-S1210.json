@@ -3,8 +3,7 @@
 {
 "id":  "S1210",
 "message":  "When implementing IComparable\u003cT\u003e, you should also override \u003c, \u003e.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorPath.cs",
 "region":  {
 "startLine":  31,
@@ -12,9 +11,7 @@
 "endLine":  31,
 "endColumn":  36
 }
-},
-null
-]
+}
 }
 ]
 }

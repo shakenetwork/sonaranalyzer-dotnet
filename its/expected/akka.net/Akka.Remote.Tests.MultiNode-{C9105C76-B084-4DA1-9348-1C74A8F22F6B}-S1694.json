@@ -3,8 +3,7 @@
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\PiercingShouldKeepQuarantineSpec.cs",
 "region":  {
 "startLine":  47,
@@ -12,15 +11,12 @@
 "endLine":  47,
 "endColumn":  59
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteDeploymentDeathWatchSpec.cs",
 "region":  {
 "startLine":  19,
@@ -28,15 +24,12 @@ null
 "endLine":  19,
 "endColumn":  57
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRandomSpec.cs",
 "region":  {
 "startLine":  65,
@@ -44,15 +37,12 @@ null
 "endLine":  65,
 "endColumn":  43
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRoundRobinSpec.cs",
 "region":  {
 "startLine":  75,
@@ -60,9 +50,7 @@ null
 "endLine":  75,
 "endColumn":  47
 }
-},
-null
-]
+}
 }
 ]
 }

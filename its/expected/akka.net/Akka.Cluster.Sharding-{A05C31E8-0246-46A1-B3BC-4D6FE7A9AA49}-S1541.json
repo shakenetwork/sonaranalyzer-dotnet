@@ -3,8 +3,7 @@
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 21 which is greater than 10 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
 "region":  {
 "startLine":  67,
@@ -12,15 +11,12 @@
 "endLine":  67,
 "endColumn":  33
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
 "region":  {
 "startLine":  202,
@@ -28,15 +24,12 @@ null
 "endLine":  202,
 "endColumn":  30
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 18 which is greater than 10 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
 "region":  {
 "startLine":  581,
@@ -44,15 +37,12 @@ null
 "endLine":  581,
 "endColumn":  47
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  413,
@@ -60,15 +50,12 @@ null
 "endLine":  413,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  446,
@@ -76,15 +63,12 @@ null
 "endLine":  446,
 "endColumn":  36
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
 "startLine":  634,
@@ -92,9 +76,7 @@ null
 "endLine":  634,
 "endColumn":  46
 }
-},
-null
-]
+}
 }
 ]
 }

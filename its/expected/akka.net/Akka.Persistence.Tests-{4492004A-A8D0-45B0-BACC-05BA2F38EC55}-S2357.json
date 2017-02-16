@@ -3,8 +3,7 @@
 {
 "id":  "S2357",
 "message":  "Make \"Payload\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\EndToEndEventAdapterSpec.cs",
 "region":  {
 "startLine":  94,
@@ -12,15 +11,12 @@
 "endLine":  94,
 "endColumn":  43
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Tags\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\MemoryEventAdapterSpec.cs",
 "region":  {
 "startLine":  80,
@@ -28,15 +24,12 @@ null
 "endLine":  80,
 "endColumn":  46
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Value\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\MemoryEventAdapterSpec.cs",
 "region":  {
 "startLine":  81,
@@ -44,15 +37,12 @@ null
 "endLine":  81,
 "endColumn":  38
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"CountryCode\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\MemoryEventAdapterSpec.cs",
 "region":  {
 "startLine":  103,
@@ -60,15 +50,12 @@ null
 "endLine":  103,
 "endColumn":  47
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Age\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\MemoryEventAdapterSpec.cs",
 "region":  {
 "startLine":  104,
@@ -76,15 +63,12 @@ null
 "endLine":  104,
 "endColumn":  36
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Adult\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\MemoryEventAdapterSpec.cs",
 "region":  {
 "startLine":  125,
@@ -92,15 +76,12 @@ null
 "endLine":  125,
 "endColumn":  47
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Minor\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\MemoryEventAdapterSpec.cs",
 "region":  {
 "startLine":  126,
@@ -108,15 +89,12 @@ null
 "endLine":  126,
 "endColumn":  47
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Log\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\MemoryEventAdapterSpec.cs",
 "region":  {
 "startLine":  158,
@@ -124,15 +102,12 @@ null
 "endLine":  158,
 "endColumn":  48
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"State\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\MemoryEventAdapterSpec.cs",
 "region":  {
 "startLine":  184,
@@ -140,15 +115,12 @@ null
 "endLine":  184,
 "endColumn":  53
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"State\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\ReceivePersistentActorTests.cs",
 "region":  {
 "startLine":  157,
@@ -156,9 +128,7 @@ null
 "endLine":  157,
 "endColumn":  53
 }
-},
-null
-]
+}
 }
 ]
 }

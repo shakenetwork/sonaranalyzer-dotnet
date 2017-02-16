@@ -3,8 +3,7 @@
 {
 "id":  "S1309",
 "message":  "Do not suppress issues.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterHeartbeat.cs",
 "region":  {
 "startLine":  190,
@@ -12,15 +11,12 @@
 "endLine":  190,
 "endColumn":  24
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1309",
 "message":  "Do not suppress issues.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterHeartbeat.cs",
 "region":  {
 "startLine":  217,
@@ -28,9 +24,7 @@ null
 "endLine":  217,
 "endColumn":  24
 }
-},
-null
-]
+}
 }
 ]
 }

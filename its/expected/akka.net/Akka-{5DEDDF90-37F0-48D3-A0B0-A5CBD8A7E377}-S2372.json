@@ -3,8 +3,7 @@
 {
 "id":  "S2372",
 "message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorBase.cs",
 "region":  {
 "startLine":  146,
@@ -12,15 +11,12 @@
 "endLine":  147,
 "endColumn":  136
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2372",
 "message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorCell.DeathWatch.cs",
 "region":  {
 "startLine":  303,
@@ -28,15 +24,12 @@ null
 "endLine":  303,
 "endColumn":  92
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2372",
 "message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorRef.cs",
 "region":  {
 "startLine":  78,
@@ -44,15 +37,12 @@ null
 "endLine":  78,
 "endColumn":  55
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2372",
 "message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorRef.cs",
 "region":  {
 "startLine":  350,
@@ -60,15 +50,12 @@ null
 "endLine":  350,
 "endColumn":  78
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2372",
 "message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\FSM.cs",
 "region":  {
 "startLine":  630,
@@ -76,15 +63,12 @@ null
 "endLine":  630,
 "endColumn":  131
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2372",
 "message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\RepointableActorRef.cs",
 "region":  {
 "startLine":  170,
@@ -92,15 +76,12 @@ null
 "endLine":  170,
 "endColumn":  92
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2372",
 "message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Event\\StandardOutLogger.cs",
 "region":  {
 "startLine":  37,
@@ -108,15 +89,12 @@ null
 "endLine":  37,
 "endColumn":  89
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2372",
 "message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\Dns.cs",
 "region":  {
 "startLine":  75,
@@ -124,15 +102,12 @@ null
 "endLine":  75,
 "endColumn":  76
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2372",
 "message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\TcpConnection.cs",
 "region":  {
 "startLine":  794,
@@ -140,15 +115,12 @@ null
 "endLine":  794,
 "endColumn":  69
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2372",
 "message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Routing\\RouterConfig.cs",
 "region":  {
 "startLine":  152,
@@ -156,15 +128,12 @@ null
 "endLine":  152,
 "endColumn":  77
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2372",
 "message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Routing\\RouterPoolActor.cs",
 "region":  {
 "startLine":  33,
@@ -172,15 +141,12 @@ null
 "endLine":  34,
 "endColumn":  89
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2372",
 "message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Serialization\\JavaSerializer.cs",
 "region":  {
 "startLine":  40,
@@ -188,9 +154,7 @@ null
 "endLine":  40,
 "endColumn":  53
 }
-},
-null
-]
+}
 }
 ]
 }

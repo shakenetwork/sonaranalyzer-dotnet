@@ -3,8 +3,7 @@
 {
 "id":  "S1227",
 "message":  "Refactor the code in order to remove this break statement.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.DotLiquid\\LiquidNancyFileSystem.cs",
 "region":  {
 "startLine":  63,
@@ -12,9 +11,7 @@
 "endLine":  63,
 "endColumn":  57
 }
-},
-null
-]
+}
 }
 ]
 }

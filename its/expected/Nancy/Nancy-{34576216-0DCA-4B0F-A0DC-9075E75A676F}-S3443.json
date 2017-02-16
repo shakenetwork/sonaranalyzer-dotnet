@@ -3,8 +3,7 @@
 {
 "id":  "S3443",
 "message":  "Remove this use of \"GetType\" on a \"System.Type\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
 "startLine":  300,
@@ -12,9 +11,7 @@
 "endLine":  300,
 "endColumn":  129
 }
-},
-null
-]
+}
 }
 ]
 }

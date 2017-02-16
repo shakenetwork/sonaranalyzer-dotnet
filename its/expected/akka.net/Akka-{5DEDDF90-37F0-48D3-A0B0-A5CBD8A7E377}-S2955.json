@@ -3,8 +3,7 @@
 {
 "id":  "S2955",
 "message":  "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can\u0027t be a value type.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\AtomicReference.cs",
 "region":  {
 "startLine":  66,
@@ -12,15 +11,12 @@
 "endLine":  66,
 "endColumn":  30
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2955",
 "message":  "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can\u0027t be a value type.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\AtomicReference.cs",
 "region":  {
 "startLine":  68,
@@ -28,15 +24,12 @@ null
 "endLine":  68,
 "endColumn":  37
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2955",
 "message":  "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can\u0027t be a value type.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\StringBuilderExtensions.cs",
 "region":  {
 "startLine":  38,
@@ -44,15 +37,12 @@ null
 "endLine":  38,
 "endColumn":  36
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2955",
 "message":  "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can\u0027t be a value type.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\StringBuilderExtensions.cs",
 "region":  {
 "startLine":  49,
@@ -60,9 +50,7 @@ null
 "endLine":  49,
 "endColumn":  51
 }
-},
-null
-]
+}
 }
 ]
 }

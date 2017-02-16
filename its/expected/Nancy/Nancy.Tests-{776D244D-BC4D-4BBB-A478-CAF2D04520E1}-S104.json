@@ -3,8 +3,7 @@
 {
 "id":  "S104",
 "message":  "This file has 1166 lines, which is greater than 1000 authorized. Split it into smaller files.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\DynamicDictionaryFixture.cs",
 "region":  {
 "startLine":  1,
@@ -12,15 +11,12 @@
 "endLine":  1,
 "endColumn":  1
 }
-},
-null
-]
+}
 },
 {
 "id":  "S104",
 "message":  "This file has 1659 lines, which is greater than 1000 authorized. Split it into smaller files.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\DynamicDictionaryValueFixture.cs",
 "region":  {
 "startLine":  1,
@@ -28,15 +24,12 @@ null
 "endLine":  1,
 "endColumn":  1
 }
-},
-null
-]
+}
 },
 {
 "id":  "S104",
 "message":  "This file has 1680 lines, which is greater than 1000 authorized. Split it into smaller files.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
 "region":  {
 "startLine":  1,
@@ -44,15 +37,12 @@ null
 "endLine":  1,
 "endColumn":  1
 }
-},
-null
-]
+}
 },
 {
 "id":  "S104",
 "message":  "This file has 2083 lines, which is greater than 1000 authorized. Split it into smaller files.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\RequestHeadersFixture.cs",
 "region":  {
 "startLine":  1,
@@ -60,15 +50,12 @@ null
 "endLine":  1,
 "endColumn":  1
 }
-},
-null
-]
+}
 },
 {
 "id":  "S104",
 "message":  "This file has 1471 lines, which is greater than 1000 authorized. Split it into smaller files.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
 "region":  {
 "startLine":  1,
@@ -76,9 +63,7 @@ null
 "endLine":  1,
 "endColumn":  1
 }
-},
-null
-]
+}
 }
 ]
 }

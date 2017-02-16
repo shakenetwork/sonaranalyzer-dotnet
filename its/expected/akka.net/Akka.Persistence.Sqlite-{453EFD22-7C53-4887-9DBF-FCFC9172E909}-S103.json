@@ -3,8 +3,7 @@
 {
 "id":  "S103",
 "message":  "Split this 201 characters long line (which is greater than 200 authorized).",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sqlite\\Journal\\SqliteQueryBuilder.cs",
 "region":  {
 "startLine":  31,
@@ -12,15 +11,12 @@
 "endLine":  31,
 "endColumn":  202
 }
-},
-null
-]
+}
 },
 {
 "id":  "S103",
 "message":  "Split this 212 characters long line (which is greater than 200 authorized).",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sqlite\\Snapshot\\QueryBuilder.cs",
 "region":  {
 "startLine":  26,
@@ -28,9 +24,7 @@ null
 "endLine":  26,
 "endColumn":  213
 }
-},
-null
-]
+}
 }
 ]
 }

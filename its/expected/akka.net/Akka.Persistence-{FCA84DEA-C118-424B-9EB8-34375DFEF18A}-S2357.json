@@ -3,8 +3,7 @@
 {
 "id":  "S2357",
 "message":  "Make \"DeliveryId\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\AtLeastOnceDeliverySemantic.cs",
 "region":  {
 "startLine":  30,
@@ -12,15 +11,12 @@
 "endLine":  30,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"UnconfirmedDeliveries\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\AtLeastOnceDeliverySemantic.cs",
 "region":  {
 "startLine":  31,
@@ -28,15 +24,12 @@ null
 "endLine":  31,
 "endColumn":  68
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"DeliveryId\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\AtLeastOnceDeliverySemantic.cs",
 "region":  {
 "startLine":  80,
@@ -44,15 +37,12 @@ null
 "endLine":  80,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Destination\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\AtLeastOnceDeliverySemantic.cs",
 "region":  {
 "startLine":  81,
@@ -60,15 +50,12 @@ null
 "endLine":  81,
 "endColumn":  46
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Message\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\AtLeastOnceDeliverySemantic.cs",
 "region":  {
 "startLine":  82,
@@ -76,15 +63,12 @@ null
 "endLine":  82,
 "endColumn":  39
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"UnconfirmedDeliveries\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\AtLeastOnceDeliverySemantic.cs",
 "region":  {
 "startLine":  131,
@@ -92,15 +76,12 @@ null
 "endLine":  131,
 "endColumn":  68
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Attempt\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\AtLeastOnceDeliverySemantic.cs",
 "region":  {
 "startLine":  170,
@@ -108,15 +89,12 @@ null
 "endLine":  170,
 "endColumn":  36
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Destination\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\AtLeastOnceDeliverySemantic.cs",
 "region":  {
 "startLine":  171,
@@ -124,15 +102,12 @@ null
 "endLine":  171,
 "endColumn":  46
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Message\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\AtLeastOnceDeliverySemantic.cs",
 "region":  {
 "startLine":  172,
@@ -140,15 +115,12 @@ null
 "endLine":  172,
 "endColumn":  39
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Timestamp\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\AtLeastOnceDeliverySemantic.cs",
 "region":  {
 "startLine":  173,
@@ -156,15 +128,12 @@ null
 "endLine":  173,
 "endColumn":  43
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Message\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Journal\\AsyncWriteJournal.cs",
 "region":  {
 "startLine":  164,
@@ -172,15 +141,12 @@ null
 "endLine":  164,
 "endColumn":  43
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"SequenceNr\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Journal\\AsyncWriteJournal.cs",
 "region":  {
 "startLine":  165,
@@ -188,15 +154,12 @@ null
 "endLine":  165,
 "endColumn":  44
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Target\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Journal\\AsyncWriteJournal.cs",
 "region":  {
 "startLine":  166,
@@ -204,15 +167,12 @@ null
 "endLine":  166,
 "endColumn":  45
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Sender\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Journal\\AsyncWriteJournal.cs",
 "region":  {
 "startLine":  167,
@@ -220,15 +180,12 @@ null
 "endLine":  167,
 "endColumn":  45
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Store\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Journal\\AsyncWriteProxy.cs",
 "region":  {
 "startLine":  61,
@@ -236,15 +193,12 @@ null
 "endLine":  61,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"MessageIds\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  24,
@@ -252,15 +206,12 @@ null
 "endLine":  24,
 "endColumn":  68
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"IsPermanent\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  25,
@@ -268,15 +219,12 @@ null
 "endLine":  25,
 "endColumn":  41
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Requestor\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  26,
@@ -284,15 +232,12 @@ null
 "endLine":  26,
 "endColumn":  44
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"MessageIds\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  68,
@@ -300,15 +245,12 @@ null
 "endLine":  68,
 "endColumn":  68
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Cause\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  108,
@@ -316,15 +258,12 @@ null
 "endLine":  108,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"PersistenceId\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  149,
@@ -332,15 +271,12 @@ null
 "endLine":  149,
 "endColumn":  45
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"ToSequenceNr\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  150,
@@ -348,15 +284,12 @@ null
 "endLine":  150,
 "endColumn":  42
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"IsPermanent\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  156,
@@ -364,15 +297,12 @@ null
 "endLine":  156,
 "endColumn":  41
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Cause\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  201,
@@ -380,15 +310,12 @@ null
 "endLine":  201,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Messages\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  238,
@@ -396,15 +323,12 @@ null
 "endLine":  238,
 "endColumn":  66
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"PersistentActor\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  239,
@@ -412,15 +336,12 @@ null
 "endLine":  239,
 "endColumn":  50
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"ActorInstanceId\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  240,
@@ -428,15 +349,12 @@ null
 "endLine":  240,
 "endColumn":  44
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Cause\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  318,
@@ -444,15 +362,12 @@ null
 "endLine":  318,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Persistent\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  360,
@@ -460,15 +375,12 @@ null
 "endLine":  360,
 "endColumn":  61
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"ActorInstanceId\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  361,
@@ -476,15 +388,12 @@ null
 "endLine":  361,
 "endColumn":  44
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Persistent\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  411,
@@ -492,15 +401,12 @@ null
 "endLine":  411,
 "endColumn":  61
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Cause\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  416,
@@ -508,15 +414,12 @@ null
 "endLine":  416,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"ActorInstanceId\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  418,
@@ -524,15 +427,12 @@ null
 "endLine":  418,
 "endColumn":  44
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Message\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  462,
@@ -540,15 +440,12 @@ null
 "endLine":  462,
 "endColumn":  39
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"PersistentActor\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  463,
@@ -556,15 +453,12 @@ null
 "endLine":  463,
 "endColumn":  50
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"ActorInstanceId\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  464,
@@ -572,15 +466,12 @@ null
 "endLine":  464,
 "endColumn":  44
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Message\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  513,
@@ -588,15 +479,12 @@ null
 "endLine":  513,
 "endColumn":  39
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"ActorInstanceId\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  514,
@@ -604,15 +492,12 @@ null
 "endLine":  514,
 "endColumn":  44
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"FromSequenceNr\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  564,
@@ -620,15 +505,12 @@ null
 "endLine":  564,
 "endColumn":  44
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"ToSequenceNr\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  569,
@@ -636,15 +518,12 @@ null
 "endLine":  569,
 "endColumn":  42
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Max\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  574,
@@ -652,15 +531,12 @@ null
 "endLine":  574,
 "endColumn":  33
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"PersistenceId\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  579,
@@ -668,15 +544,12 @@ null
 "endLine":  579,
 "endColumn":  45
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"PersistentActor\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  584,
@@ -684,15 +557,12 @@ null
 "endLine":  584,
 "endColumn":  50
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"ReplayDeleted\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  589,
@@ -700,15 +570,12 @@ null
 "endLine":  589,
 "endColumn":  43
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Persistent\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  635,
@@ -716,15 +583,12 @@ null
 "endLine":  635,
 "endColumn":  61
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Cause\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  700,
@@ -732,15 +596,12 @@ null
 "endLine":  700,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"FromSequenceNr\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  736,
@@ -748,15 +609,12 @@ null
 "endLine":  736,
 "endColumn":  44
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"PersistenceId\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  738,
@@ -764,15 +622,12 @@ null
 "endLine":  738,
 "endColumn":  45
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"PersistentActor\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  740,
@@ -780,15 +635,12 @@ null
 "endLine":  740,
 "endColumn":  50
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"HighestSequenceNr\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  783,
@@ -796,15 +648,12 @@ null
 "endLine":  783,
 "endColumn":  47
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Cause\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
 "startLine":  826,
@@ -812,15 +661,12 @@ null
 "endLine":  826,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Ref\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistence.cs",
 "region":  {
 "startLine":  21,
@@ -828,15 +674,12 @@ null
 "endLine":  21,
 "endColumn":  38
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Adapters\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistence.cs",
 "region":  {
 "startLine":  22,
@@ -844,15 +687,12 @@ null
 "endLine":  22,
 "endColumn":  47
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"PersistenceId\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot.cs",
 "region":  {
 "startLine":  43,
@@ -860,15 +700,12 @@ null
 "endLine":  43,
 "endColumn":  45
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"SequenceNr\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot.cs",
 "region":  {
 "startLine":  48,
@@ -876,15 +713,12 @@ null
 "endLine":  48,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Timestamp\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot.cs",
 "region":  {
 "startLine":  53,
@@ -892,15 +726,12 @@ null
 "endLine":  53,
 "endColumn":  43
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Metadata\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot.cs",
 "region":  {
 "startLine":  96,
@@ -908,15 +739,12 @@ null
 "endLine":  96,
 "endColumn":  50
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Metadata\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot.cs",
 "region":  {
 "startLine":  137,
@@ -924,15 +752,12 @@ null
 "endLine":  137,
 "endColumn":  50
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Cause\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot.cs",
 "region":  {
 "startLine":  142,
@@ -940,15 +765,12 @@ null
 "endLine":  142,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Metadata\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot.cs",
 "region":  {
 "startLine":  184,
@@ -956,15 +778,12 @@ null
 "endLine":  184,
 "endColumn":  50
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Snapshot\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot.cs",
 "region":  {
 "startLine":  185,
@@ -972,15 +791,12 @@ null
 "endLine":  185,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"MaxSequenceNr\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot.cs",
 "region":  {
 "startLine":  237,
@@ -988,15 +804,12 @@ null
 "endLine":  237,
 "endColumn":  43
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"MaxTimeStamp\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot.cs",
 "region":  {
 "startLine":  242,
@@ -1004,15 +817,12 @@ null
 "endLine":  242,
 "endColumn":  46
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Metadata\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot.cs",
 "region":  {
 "startLine":  295,
@@ -1020,15 +830,12 @@ null
 "endLine":  295,
 "endColumn":  50
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Snapshot\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot.cs",
 "region":  {
 "startLine":  296,
@@ -1036,15 +843,12 @@ null
 "endLine":  296,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"PersistenceId\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot.cs",
 "region":  {
 "startLine":  344,
@@ -1052,15 +856,12 @@ null
 "endLine":  344,
 "endColumn":  45
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Criteria\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot.cs",
 "region":  {
 "startLine":  349,
@@ -1068,15 +869,12 @@ null
 "endLine":  349,
 "endColumn":  59
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"ToSequenceNr\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot.cs",
 "region":  {
 "startLine":  354,
@@ -1084,15 +882,12 @@ null
 "endLine":  354,
 "endColumn":  42
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Snapshot\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot.cs",
 "region":  {
 "startLine":  403,
@@ -1100,15 +895,12 @@ null
 "endLine":  403,
 "endColumn":  50
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"ToSequenceNr\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot.cs",
 "region":  {
 "startLine":  404,
@@ -1116,15 +908,12 @@ null
 "endLine":  404,
 "endColumn":  42
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Metadata\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot.cs",
 "region":  {
 "startLine":  449,
@@ -1132,15 +921,12 @@ null
 "endLine":  449,
 "endColumn":  50
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Snapshot\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot.cs",
 "region":  {
 "startLine":  450,
@@ -1148,15 +934,12 @@ null
 "endLine":  450,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Metadata\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot.cs",
 "region":  {
 "startLine":  493,
@@ -1164,15 +947,12 @@ null
 "endLine":  493,
 "endColumn":  50
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"PersistenceId\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot.cs",
 "region":  {
 "startLine":  531,
@@ -1180,15 +960,12 @@ null
 "endLine":  531,
 "endColumn":  45
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Criteria\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot.cs",
 "region":  {
 "startLine":  532,
@@ -1196,15 +973,12 @@ null
 "endLine":  532,
 "endColumn":  59
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"Dir\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot\\LocalSnapshotStore.cs",
 "region":  {
 "startLine":  29,
@@ -1212,15 +986,12 @@ null
 "endLine":  29,
 "endColumn":  39
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"StreamDispatcher\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot\\LocalSnapshotStore.cs",
 "region":  {
 "startLine":  34,
@@ -1228,15 +999,12 @@ null
 "endLine":  34,
 "endColumn":  52
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"LoadAttempts\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot\\LocalSnapshotStore.cs",
 "region":  {
 "startLine":  39,
@@ -1244,9 +1012,7 @@ null
 "endLine":  39,
 "endColumn":  45
 }
-},
-null
-]
+}
 }
 ]
 }

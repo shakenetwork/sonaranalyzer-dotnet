@@ -3,8 +3,7 @@
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"nancyBootstrapper\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Hosting.Self.Tests\\NancySelfHostFixture.cs",
 "region":  {
 "startLine":  140,
@@ -12,9 +11,7 @@
 "endLine":  140,
 "endColumn":  46
 }
-},
-null
-]
+}
 }
 ]
 }

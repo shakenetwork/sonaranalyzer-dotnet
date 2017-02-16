@@ -3,8 +3,7 @@
 {
 "id":  "S1659",
 "message":  "Declare \"b\" in a separate statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\MurmurHash.cs",
 "region":  {
 "startLine":  215,
@@ -12,15 +11,12 @@
 "endLine":  215,
 "endColumn":  30
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1659",
 "message":  "Declare \"n\" in a separate statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\MurmurHash.cs",
 "region":  {
 "startLine":  215,
@@ -28,9 +24,7 @@ null
 "endLine":  215,
 "endColumn":  37
 }
-},
-null
-]
+}
 }
 ]
 }

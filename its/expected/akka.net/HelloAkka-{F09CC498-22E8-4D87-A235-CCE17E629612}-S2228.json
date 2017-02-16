@@ -3,8 +3,7 @@
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\HelloWorld\\HelloAkka\\GreetingActor.cs",
 "region":  {
 "startLine":  21,
@@ -12,9 +11,7 @@
 "endLine":  21,
 "endColumn":  54
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S3235",
 "message":  "Remove these redundant parentheses.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Hosting.Aspnet.Tests\\NancyHandlerFixture.cs",
 "region":  {
 "startLine":  96,
@@ -12,9 +11,7 @@
 "endLine":  96,
 "endColumn":  50
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S2583",
 "message":  "Change this condition so that it does not always evaluate to \"false\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Routing\\Router.cs",
 "region":  {
 "startLine":  192,
@@ -12,15 +11,12 @@
 "endLine":  192,
 "endColumn":  32
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2583",
 "message":  "Change this condition so that it does not always evaluate to \"true\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\MonoConcurrentQueue.cs",
 "region":  {
 "startLine":  157,
@@ -28,15 +24,12 @@ null
 "endLine":  157,
 "endColumn":  37
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2583",
 "message":  "Change this condition so that it does not always evaluate to \"true\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\MonoConcurrentQueue.cs",
 "region":  {
 "startLine":  188,
@@ -44,9 +37,7 @@ null
 "endLine":  188,
 "endColumn":  37
 }
-},
-null
-]
+}
 }
 ]
 }

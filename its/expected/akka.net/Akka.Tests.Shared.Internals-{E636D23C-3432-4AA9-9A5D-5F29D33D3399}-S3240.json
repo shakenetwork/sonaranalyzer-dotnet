@@ -3,8 +3,7 @@
 {
 "id":  "S3240",
 "message":  "Use the \"?:\" operator here.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests.Shared.Internals\\Helpers\\XAssert.cs",
 "region":  {
 "startLine":  62,
@@ -12,9 +11,7 @@
 "endLine":  62,
 "endColumn":  15
 }
-},
-null
-]
+}
 }
 ]
 }

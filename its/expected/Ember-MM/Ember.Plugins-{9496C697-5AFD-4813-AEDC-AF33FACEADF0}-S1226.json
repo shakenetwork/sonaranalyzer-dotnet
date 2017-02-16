@@ -3,8 +3,7 @@
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"context\".",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\Ember.Plugins\\Scraper\\MovieScraperManager.cs",
 "region":  {
 "startLine":  75,
@@ -12,15 +11,12 @@
 "endLine":  75,
 "endColumn":  24
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"context\".",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\Ember.Plugins\\Scraper\\MovieScraperManager.cs",
 "region":  {
 "startLine":  115,
@@ -28,15 +24,12 @@ null
 "endLine":  115,
 "endColumn":  24
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"imdbId\".",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\Ember.Plugins\\Utility.cs",
 "region":  {
 "startLine":  39,
@@ -44,15 +37,12 @@ null
 "endLine":  39,
 "endColumn":  19
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"imdbId\".",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\Ember.Plugins\\Utility.cs",
 "region":  {
 "startLine":  41,
@@ -60,15 +50,12 @@ null
 "endLine":  41,
 "endColumn":  23
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"imdbId\".",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\Ember.Plugins\\Utility.cs",
 "region":  {
 "startLine":  45,
@@ -76,15 +63,12 @@ null
 "endLine":  45,
 "endColumn":  27
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"imdbId\".",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\Ember.Plugins\\Utility.cs",
 "region":  {
 "startLine":  47,
@@ -92,9 +76,7 @@ null
 "endLine":  47,
 "endColumn":  27
 }
-},
-null
-]
+}
 }
 ]
 }

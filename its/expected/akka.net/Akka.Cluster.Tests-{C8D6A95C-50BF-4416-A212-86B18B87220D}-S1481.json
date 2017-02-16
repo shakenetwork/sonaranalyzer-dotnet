@@ -3,8 +3,7 @@
 {
 "id":  "S1481",
 "message":  "Remove this unused \"oldReceivers\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\ClusterHeartBeatSenderStateSpec.cs",
 "region":  {
 "startLine":  252,
@@ -12,15 +11,12 @@
 "endLine":  252,
 "endColumn":  49
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"merged34\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\MetricsCollectorSpec.cs",
 "region":  {
 "startLine":  63,
@@ -28,15 +24,12 @@ null
 "endLine":  63,
 "endColumn":  29
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"beforeMergeNodes\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\MetricsGossipSpec.cs",
 "region":  {
 "startLine":  58,
@@ -44,15 +37,12 @@ null
 "endLine":  58,
 "endColumn":  33
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"echo\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\Routing\\ClusterRouterAsk1343BugFixSpec.cs",
 "region":  {
 "startLine":  85,
@@ -60,15 +50,12 @@ null
 "endLine":  85,
 "endColumn":  21
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1481",
 "message":  "Remove this unused \"result\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\Routing\\ClusterRouterAsk1343BugFixSpec.cs",
 "region":  {
 "startLine":  101,
@@ -76,9 +63,7 @@ null
 "endLine":  101,
 "endColumn":  27
 }
-},
-null
-]
+}
 }
 ]
 }

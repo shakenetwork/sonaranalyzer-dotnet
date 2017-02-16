@@ -3,8 +3,7 @@
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\AsyncExceptionTests.cs",
 "region":  {
 "startLine":  46,
@@ -12,15 +11,12 @@
 "endLine":  46,
 "endColumn":  59
 }
-},
-null
-]
+}
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\AsyncExceptionTests.cs",
 "region":  {
 "startLine":  50,
@@ -28,9 +24,7 @@ null
 "endLine":  50,
 "endColumn":  70
 }
-},
-null
-]
+}
 }
 ]
 }

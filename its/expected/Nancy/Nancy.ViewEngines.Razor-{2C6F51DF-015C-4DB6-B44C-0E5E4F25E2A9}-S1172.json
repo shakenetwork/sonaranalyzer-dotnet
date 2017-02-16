@@ -3,8 +3,7 @@
 {
 "id":  "S1172",
 "message":  "Remove this unused method parameter \"name\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\NancyRazorViewBase.cs",
 "region":  {
 "startLine":  201,
@@ -12,9 +11,7 @@
 "endLine":  201,
 "endColumn":  50
 }
-},
-null
-]
+}
 }
 ]
 }

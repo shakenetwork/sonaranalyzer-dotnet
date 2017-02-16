@@ -3,8 +3,7 @@
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit.Tests\\BarrierSpec.cs",
 "region":  {
 "startLine":  46,
@@ -12,15 +11,12 @@
 "endLine":  46,
 "endColumn":  19
 }
-},
-null
-]
+}
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit.Tests\\BarrierSpec.cs",
 "region":  {
 "startLine":  47,
@@ -28,15 +24,12 @@ null
 "endLine":  47,
 "endColumn":  19
 }
-},
-null
-]
+}
 },
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"foreach\" block.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit.Tests\\BarrierSpec.cs",
 "region":  {
 "startLine":  377,
@@ -44,9 +37,7 @@ null
 "endLine":  377,
 "endColumn":  20
 }
-},
-null
-]
+}
 }
 ]
 }

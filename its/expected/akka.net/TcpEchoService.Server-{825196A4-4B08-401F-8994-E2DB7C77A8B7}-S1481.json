@@ -3,8 +3,7 @@
 {
 "id":  "S1481",
 "message":  "Remove this unused \"actor\" local variable.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\TcpEchoService.Server\\Program.cs",
 "region":  {
 "startLine":  21,
@@ -12,9 +11,7 @@
 "endLine":  21,
 "endColumn":  26
 }
-},
-null
-]
+}
 }
 ]
 }

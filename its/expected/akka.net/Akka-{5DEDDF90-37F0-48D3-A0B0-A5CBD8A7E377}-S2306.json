@@ -3,8 +3,7 @@
 {
 "id":  "S2306",
 "message":  "Rename \"async\" to not use a contextual keyword as an identifier.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorCell.Children.cs",
 "region":  {
 "startLine":  336,
@@ -12,15 +11,12 @@
 "endLine":  336,
 "endColumn":  81
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2306",
 "message":  "Rename \"async\" to not use a contextual keyword as an identifier.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorCell.DefaultMessages.cs",
 "region":  {
 "startLine":  246,
@@ -28,15 +24,12 @@ null
 "endLine":  246,
 "endColumn":  59
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2306",
 "message":  "Rename \"async\" to not use a contextual keyword as an identifier.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorCell.DefaultMessages.cs",
 "region":  {
 "startLine":  267,
@@ -44,15 +37,12 @@ null
 "endLine":  267,
 "endColumn":  65
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2306",
 "message":  "Rename \"async\" to not use a contextual keyword as an identifier.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorRefProvider.cs",
 "region":  {
 "startLine":  90,
@@ -60,15 +50,12 @@ null
 "endLine":  90,
 "endColumn":  182
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2306",
 "message":  "Rename \"async\" to not use a contextual keyword as an identifier.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorRefProvider.cs",
 "region":  {
 "startLine":  351,
@@ -76,15 +63,12 @@ null
 "endLine":  351,
 "endColumn":  189
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2306",
 "message":  "Rename \"async\" to not use a contextual keyword as an identifier.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\RepointableActorRef.cs",
 "region":  {
 "startLine":  74,
@@ -92,15 +76,12 @@ null
 "endLine":  74,
 "endColumn":  57
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2306",
 "message":  "Rename \"async\" to not use a contextual keyword as an identifier.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Dispatch\\SysMsg\\ISystemMessage.cs",
 "region":  {
 "startLine":  131,
@@ -108,9 +89,7 @@ null
 "endLine":  131,
 "endColumn":  53
 }
-},
-null
-]
+}
 }
 ]
 }

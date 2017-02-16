@@ -3,8 +3,7 @@
 {
 "id":  "S1117",
 "message":  "Rename \"identifier\" which hides the field with the same name.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\ClrTypeResolver.cs",
 "region":  {
 "startLine":  92,
@@ -12,9 +11,7 @@
 "endLine":  92,
 "endColumn":  27
 }
-},
-null
-]
+}
 }
 ]
 }

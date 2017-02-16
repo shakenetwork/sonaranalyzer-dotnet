@@ -3,8 +3,7 @@
 {
 "id":  "S103",
 "message":  "Split this 213 characters long line (which is greater than 200 authorized).",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\benchmark\\PingPong\\Program.cs",
 "region":  {
 "startLine":  162,
@@ -12,15 +11,12 @@
 "endLine":  162,
 "endColumn":  214
 }
-},
-null
-]
+}
 },
 {
 "id":  "S103",
 "message":  "Split this 228 characters long line (which is greater than 200 authorized).",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\benchmark\\PingPong\\Program.cs",
 "region":  {
 "startLine":  229,
@@ -28,9 +24,7 @@ null
 "endLine":  229,
 "endColumn":  229
 }
-},
-null
-]
+}
 }
 ]
 }

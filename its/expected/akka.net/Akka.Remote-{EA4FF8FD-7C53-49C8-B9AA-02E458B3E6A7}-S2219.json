@@ -3,8 +3,7 @@
 {
 "id":  "S2219",
 "message":  "Use a \"null\" check instead.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointRegistry.cs",
 "region":  {
 "startLine":  64,
@@ -12,9 +11,7 @@
 "endLine":  64,
 "endColumn":  81
 }
-},
-null
-]
+}
 }
 ]
 }

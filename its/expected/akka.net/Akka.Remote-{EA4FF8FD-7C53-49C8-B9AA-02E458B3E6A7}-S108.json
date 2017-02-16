@@ -3,8 +3,7 @@
 {
 "id":  "S108",
 "message":  "Either remove or fill this block of code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  379,
@@ -12,15 +11,12 @@
 "endLine":  379,
 "endColumn":  110
 }
-},
-null
-]
+}
 },
 {
 "id":  "S108",
 "message":  "Either remove or fill this block of code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
 "region":  {
 "startLine":  219,
@@ -28,9 +24,7 @@ null
 "endLine":  220,
 "endColumn":  18
 }
-},
-null
-]
+}
 }
 ]
 }

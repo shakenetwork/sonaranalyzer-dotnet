@@ -3,8 +3,7 @@
 {
 "id":  "S1121",
 "message":  "Extract the assignment of \"_until\" from this expression.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\ByteIterator.cs",
 "region":  {
 "startLine":  55,
@@ -12,15 +11,12 @@
 "endLine":  55,
 "endColumn":  33
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1121",
 "message":  "Extract the assignment of \"_head\" from this expression.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\MonoConcurrentQueue.cs",
 "region":  {
 "startLine":  245,
@@ -28,9 +24,7 @@ null
 "endLine":  245,
 "endColumn":  28
 }
-},
-null
-]
+}
 }
 ]
 }

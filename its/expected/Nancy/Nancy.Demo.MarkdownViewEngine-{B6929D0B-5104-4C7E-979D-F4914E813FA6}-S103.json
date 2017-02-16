@@ -3,8 +3,7 @@
 {
 "id":  "S103",
 "message":  "Split this 303 characters long line (which is greater than 200 authorized).",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Demo.MarkdownViewEngine\\Model\\BlogModel.cs",
 "region":  {
 "startLine":  120,
@@ -12,9 +11,7 @@
 "endLine":  120,
 "endColumn":  304
 }
-},
-null
-]
+}
 }
 ]
 }

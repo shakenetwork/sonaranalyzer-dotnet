@@ -3,8 +3,7 @@
 {
 "id":  "S1450",
 "message":  "Remove the \"_di\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.TestKit\\DiResolverSpec.cs",
 "region":  {
 "startLine":  167,
@@ -12,15 +11,12 @@
 "endLine":  167,
 "endColumn":  41
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"_di\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.TestKit\\DiResolverSpec.cs",
 "region":  {
 "startLine":  179,
@@ -28,9 +24,7 @@ null
 "endLine":  179,
 "endColumn":  41
 }
-},
-null
-]
+}
 }
 ]
 }

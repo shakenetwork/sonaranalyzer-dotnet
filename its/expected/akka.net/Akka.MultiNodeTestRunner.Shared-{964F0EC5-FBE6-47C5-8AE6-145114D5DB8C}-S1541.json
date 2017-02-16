@@ -3,8 +3,7 @@
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\MessageSink.cs",
 "region":  {
 "startLine":  114,
@@ -12,15 +11,12 @@
 "endLine":  114,
 "endColumn":  74
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\MessageSink.cs",
 "region":  {
 "startLine":  279,
@@ -28,9 +24,7 @@ null
 "endLine":  279,
 "endColumn":  26
 }
-},
-null
-]
+}
 }
 ]
 }

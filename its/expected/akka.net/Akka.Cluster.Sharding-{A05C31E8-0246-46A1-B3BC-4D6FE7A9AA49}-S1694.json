@@ -3,8 +3,7 @@
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\Shard.cs",
 "region":  {
 "startLine":  71,
@@ -12,9 +11,7 @@
 "endLine":  71,
 "endColumn":  42
 }
-},
-null
-]
+}
 }
 ]
 }

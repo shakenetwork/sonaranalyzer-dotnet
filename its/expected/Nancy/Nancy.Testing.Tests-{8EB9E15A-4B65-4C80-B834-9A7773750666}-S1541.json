@@ -3,8 +3,7 @@
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this constructor is 12 which is greater than 10 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Testing.Tests\\BrowserFixture.cs",
 "region":  {
 "startLine":  601,
@@ -12,9 +11,7 @@
 "endLine":  601,
 "endColumn":  30
 }
-},
-null
-]
+}
 }
 ]
 }

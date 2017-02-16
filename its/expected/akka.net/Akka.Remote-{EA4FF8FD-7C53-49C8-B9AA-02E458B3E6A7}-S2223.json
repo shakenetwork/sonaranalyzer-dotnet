@@ -3,8 +3,7 @@
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"Empty\" or make it \"const\" or \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteWatcher.cs",
 "region":  {
 "startLine":  198,
@@ -12,15 +11,12 @@
 "endLine":  198,
 "endColumn":  38
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"UniqueId\" or make it \"const\" or \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
 "startLine":  131,
@@ -28,9 +24,7 @@ null
 "endLine":  131,
 "endColumn":  45
 }
-},
-null
-]
+}
 }
 ]
 }

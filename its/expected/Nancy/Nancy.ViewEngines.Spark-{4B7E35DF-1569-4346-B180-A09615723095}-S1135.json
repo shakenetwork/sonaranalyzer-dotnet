@@ -3,8 +3,7 @@
 {
 "id":  "S1135",
 "message":  "Complete the task associated to this \"TODO\" comment.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Spark\\Descriptors\\DefaultDescriptorBuilder.cs",
 "region":  {
 "startLine":  206,
@@ -12,15 +11,12 @@
 "endLine":  206,
 "endColumn":  17
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1135",
 "message":  "Complete the task associated to this \"TODO\" comment.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Spark\\Descriptors\\IDescriptorBuilder.cs",
 "region":  {
 "startLine":  16,
@@ -28,9 +24,7 @@ null
 "endLine":  16,
 "endColumn":  15
 }
-},
-null
-]
+}
 }
 ]
 }

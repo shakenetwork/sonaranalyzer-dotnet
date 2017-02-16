@@ -3,8 +3,7 @@
 {
 "id":  "S3241",
 "message":  "Change return type to \"void\"; not a single caller uses the returned value.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Hosting.Self\\NancyHost.cs",
 "region":  {
 "startLine":  410,
@@ -12,9 +11,7 @@
 "endLine":  410,
 "endColumn":  27
 }
-},
-null
-]
+}
 }
 ]
 }

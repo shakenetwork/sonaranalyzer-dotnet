@@ -3,8 +3,7 @@
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"repeat\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\BarrierCoordinator.cs",
 "region":  {
 "startLine":  485,
@@ -12,15 +11,12 @@
 "endLine":  485,
 "endColumn":  98
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"repeat\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\BarrierCoordinator.cs",
 "region":  {
 "startLine":  519,
@@ -28,9 +24,7 @@ null
 "endLine":  519,
 "endColumn":  150
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S2219",
 "message":  "Use the \"IsInstanceOfType()\" method instead.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Validation.FluentValidation\\FluentValidationValidatorFactory.cs",
 "region":  {
 "startLine":  50,
@@ -12,9 +11,7 @@
 "endLine":  50,
 "endColumn":  93
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\EventFilter\\Internal\\ErrorFilter.cs",
 "region":  {
 "startLine":  50,
@@ -12,15 +11,12 @@
 "endLine":  50,
 "endColumn":  29
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\EventFilter\\TestEventListener.cs",
 "region":  {
 "startLine":  27,
@@ -28,15 +24,12 @@ null
 "endLine":  27,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\Internal\\InternalTestActor.cs",
 "region":  {
 "startLine":  29,
@@ -44,15 +37,12 @@ null
 "endLine":  29,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_Within.cs",
 "region":  {
 "startLine":  61,
@@ -60,9 +50,7 @@ null
 "endLine":  61,
 "endColumn":  24
 }
-},
-null
-]
+}
 }
 ]
 }

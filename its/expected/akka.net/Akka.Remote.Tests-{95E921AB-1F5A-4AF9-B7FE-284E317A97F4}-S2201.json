@@ -3,8 +3,7 @@
 {
 "id":  "S2201",
 "message":  "Use the return value of method \"Zip\", which has no side effect.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Serialization\\DaemonMsgCreateSerializerSpec.cs",
 "region":  {
 "startLine":  100,
@@ -12,9 +11,7 @@
 "endLine":  110,
 "endColumn":  15
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this procedure is 17 which is greater than 10 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.XBMC\\dlgXBMCHost.vb",
 "region":  {
 "startLine":  22,
@@ -12,15 +11,12 @@
 "endLine":  22,
 "endColumn":  116
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this procedure is 12 which is greater than 10 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.XBMC\\dlgXBMCHost.vb",
 "region":  {
 "startLine":  110,
@@ -28,15 +24,12 @@ null
 "endLine":  110,
 "endColumn":  26
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this procedure is 20 which is greater than 10 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.XBMC\\Module.XBMCxCom.vb",
 "region":  {
 "startLine":  155,
@@ -44,15 +37,12 @@ null
 "endLine":  155,
 "endColumn":  140
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this function is 13 which is greater than 10 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.XBMC\\Module.XBMCxCom.vb",
 "region":  {
 "startLine":  581,
@@ -60,9 +50,7 @@ null
 "endLine":  581,
 "endColumn":  52
 }
-},
-null
-]
+}
 }
 ]
 }

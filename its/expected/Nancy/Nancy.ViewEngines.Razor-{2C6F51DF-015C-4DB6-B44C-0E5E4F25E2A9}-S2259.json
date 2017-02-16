@@ -3,8 +3,7 @@
 {
 "id":  "S2259",
 "message":  "\"modelType\" is null on at least one execution path.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\CSharp\\NancyCSharpRazorCodeParser.cs",
 "region":  {
 "startLine":  49,
@@ -12,15 +11,12 @@
 "endLine":  49,
 "endColumn":  67
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2259",
 "message":  "\"modelType\" is null on at least one execution path.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\VisualBasic\\NancyVisualBasicRazorCodeParser.cs",
 "region":  {
 "startLine":  76,
@@ -28,9 +24,7 @@ null
 "endLine":  76,
 "endColumn":  82
 }
-},
-null
-]
+}
 }
 ]
 }

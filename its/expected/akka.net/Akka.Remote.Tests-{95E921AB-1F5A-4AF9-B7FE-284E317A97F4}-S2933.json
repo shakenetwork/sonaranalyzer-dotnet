@@ -3,8 +3,7 @@
 {
 "id":  "S2933",
 "message":  "Make \"actorA\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\EndpointRegistrySpec.cs",
 "region":  {
 "startLine":  19,
@@ -12,15 +11,12 @@
 "endLine":  19,
 "endColumn":  33
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"actorB\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\EndpointRegistrySpec.cs",
 "region":  {
 "startLine":  20,
@@ -28,15 +24,12 @@ null
 "endLine":  20,
 "endColumn":  33
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"address1\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\EndpointRegistrySpec.cs",
 "region":  {
 "startLine":  22,
@@ -44,15 +37,12 @@ null
 "endLine":  22,
 "endColumn":  25
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"address2\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\EndpointRegistrySpec.cs",
 "region":  {
 "startLine":  23,
@@ -60,15 +50,12 @@ null
 "endLine":  23,
 "endColumn":  25
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"port\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\RemoteRouterSpec.cs",
 "region":  {
 "startLine":  37,
@@ -76,15 +63,12 @@ null
 "endLine":  37,
 "endColumn":  25
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"sysName\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\RemoteRouterSpec.cs",
 "region":  {
 "startLine":  38,
@@ -92,15 +76,12 @@ null
 "endLine":  38,
 "endColumn":  31
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"conf\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\RemoteRouterSpec.cs",
 "region":  {
 "startLine":  39,
@@ -108,15 +89,12 @@ null
 "endLine":  39,
 "endColumn":  28
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"masterActorSystem\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\RemoteRouterSpec.cs",
 "region":  {
 "startLine":  40,
@@ -124,15 +102,12 @@ null
 "endLine":  40,
 "endColumn":  46
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"intendedRemoteAddress\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\RemoteRouterSpec.cs",
 "region":  {
 "startLine":  41,
@@ -140,15 +115,12 @@ null
 "endLine":  41,
 "endColumn":  46
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"remoteSystem\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\RemotingSpec.cs",
 "region":  {
 "startLine":  135,
@@ -156,15 +128,12 @@ null
 "endLine":  135,
 "endColumn":  41
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"remote\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\RemotingSpec.cs",
 "region":  {
 "startLine":  136,
@@ -172,15 +141,12 @@ null
 "endLine":  136,
 "endColumn":  32
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"here\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\RemotingSpec.cs",
 "region":  {
 "startLine":  137,
@@ -188,15 +154,12 @@ null
 "endLine":  137,
 "endColumn":  30
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_reportTarget\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\RemotingSpec.cs",
 "region":  {
 "startLine":  366,
@@ -204,15 +167,12 @@ null
 "endLine":  366,
 "endColumn":  44
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_reporterProps\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\RemotingSpec.cs",
 "region":  {
 "startLine":  382,
@@ -220,15 +180,12 @@ null
 "endLine":  382,
 "endColumn":  41
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_one\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\RemotingSpec.cs",
 "region":  {
 "startLine":  465,
@@ -236,15 +193,12 @@ null
 "endLine":  465,
 "endColumn":  35
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_another\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\RemotingSpec.cs",
 "region":  {
 "startLine":  466,
@@ -252,15 +206,12 @@ null
 "endLine":  466,
 "endColumn":  39
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"localAddress\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolSpec.cs",
 "region":  {
 "startLine":  26,
@@ -268,15 +219,12 @@ null
 "endLine":  26,
 "endColumn":  29
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"localAkkaAddress\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolSpec.cs",
 "region":  {
 "startLine":  27,
@@ -284,15 +232,12 @@ null
 "endLine":  27,
 "endColumn":  33
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"remoteAddress\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolSpec.cs",
 "region":  {
 "startLine":  29,
@@ -300,15 +245,12 @@ null
 "endLine":  29,
 "endColumn":  30
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"remoteAkkaAddress\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolSpec.cs",
 "region":  {
 "startLine":  30,
@@ -316,15 +258,12 @@ null
 "endLine":  30,
 "endColumn":  34
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"codec\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolSpec.cs",
 "region":  {
 "startLine":  32,
@@ -332,15 +271,12 @@ null
 "endLine":  32,
 "endColumn":  27
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"testMsg\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolSpec.cs",
 "region":  {
 "startLine":  34,
@@ -348,15 +284,12 @@ null
 "endLine":  34,
 "endColumn":  34
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"testEnvelope\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolSpec.cs",
 "region":  {
 "startLine":  37,
@@ -364,15 +297,12 @@ null
 "endLine":  37,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"testMsgPdu\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolSpec.cs",
 "region":  {
 "startLine":  38,
@@ -380,15 +310,12 @@ null
 "endLine":  38,
 "endColumn":  38
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"testHeartbeat\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolSpec.cs",
 "region":  {
 "startLine":  40,
@@ -396,15 +323,12 @@ null
 "endLine":  40,
 "endColumn":  43
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"testPayload\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolSpec.cs",
 "region":  {
 "startLine":  41,
@@ -412,15 +336,12 @@ null
 "endLine":  41,
 "endColumn":  41
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"config\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolSpec.cs",
 "region":  {
 "startLine":  104,
@@ -428,15 +349,12 @@ null
 "endLine":  104,
 "endColumn":  30
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"Limit\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolStressTest.cs",
 "region":  {
 "startLine":  69,
@@ -444,15 +362,12 @@ null
 "endLine":  69,
 "endColumn":  30
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_remote\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolStressTest.cs",
 "region":  {
 "startLine":  74,
@@ -460,15 +375,12 @@ null
 "endLine":  74,
 "endColumn":  38
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_controller\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolStressTest.cs",
 "region":  {
 "startLine":  75,
@@ -476,15 +388,12 @@ null
 "endLine":  75,
 "endColumn":  42
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"systemB\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolStressTest.cs",
 "region":  {
 "startLine":  148,
@@ -492,15 +401,12 @@ null
 "endLine":  148,
 "endColumn":  36
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"remote\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolStressTest.cs",
 "region":  {
 "startLine":  149,
@@ -508,15 +414,12 @@ null
 "endLine":  149,
 "endColumn":  33
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"addressATest\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\GenericTransportSpec.cs",
 "region":  {
 "startLine":  21,
@@ -524,15 +427,12 @@ null
 "endLine":  21,
 "endColumn":  37
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"addressBTest\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\GenericTransportSpec.cs",
 "region":  {
 "startLine":  22,
@@ -540,15 +440,12 @@ null
 "endLine":  22,
 "endColumn":  37
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"addressA\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\GenericTransportSpec.cs",
 "region":  {
 "startLine":  24,
@@ -556,15 +453,12 @@ null
 "endLine":  24,
 "endColumn":  33
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"addressB\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\GenericTransportSpec.cs",
 "region":  {
 "startLine":  25,
@@ -572,15 +466,12 @@ null
 "endLine":  25,
 "endColumn":  33
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"nonExistingAddress\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\GenericTransportSpec.cs",
 "region":  {
 "startLine":  26,
@@ -588,15 +479,12 @@ null
 "endLine":  26,
 "endColumn":  43
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"withAkkaProtocol\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\GenericTransportSpec.cs",
 "region":  {
 "startLine":  27,
@@ -604,15 +492,12 @@ null
 "endLine":  27,
 "endColumn":  38
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_remoteRef\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\ThrottlerTransportAdapterSpec.cs",
 "region":  {
 "startLine":  53,
@@ -620,15 +505,12 @@ null
 "endLine":  53,
 "endColumn":  41
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_controller\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\ThrottlerTransportAdapterSpec.cs",
 "region":  {
 "startLine":  54,
@@ -636,15 +518,12 @@ null
 "endLine":  54,
 "endColumn":  42
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"systemB\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\ThrottlerTransportAdapterSpec.cs",
 "region":  {
 "startLine":  128,
@@ -652,15 +531,12 @@ null
 "endLine":  128,
 "endColumn":  36
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"remote\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\ThrottlerTransportAdapterSpec.cs",
 "region":  {
 "startLine":  129,
@@ -668,9 +544,7 @@ null
 "endLine":  129,
 "endColumn":  33
 }
-},
-null
-]
+}
 }
 ]
 }

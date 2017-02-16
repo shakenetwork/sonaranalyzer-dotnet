@@ -3,8 +3,7 @@
 {
 "id":  "S100",
 "message":  "Rename property \"key1\" to match camel case naming rules, consider using \"Key1\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\ModelBindingTests.cs",
 "region":  {
 "startLine":  84,
@@ -12,15 +11,12 @@
 "endLine":  84,
 "endColumn":  27
 }
-},
-null
-]
+}
 },
 {
 "id":  "S100",
 "message":  "Rename property \"key1\" to match camel case naming rules, consider using \"Key1\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\ModelBindingTests.cs",
 "region":  {
 "startLine":  89,
@@ -28,15 +24,12 @@ null
 "endLine":  89,
 "endColumn":  27
 }
-},
-null
-]
+}
 },
 {
 "id":  "S100",
 "message":  "Rename property \"key2\" to match camel case naming rules, consider using \"Key2\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\ModelBindingTests.cs",
 "region":  {
 "startLine":  90,
@@ -44,9 +37,7 @@ null
 "endLine":  90,
 "endColumn":  27
 }
-},
-null
-]
+}
 }
 ]
 }

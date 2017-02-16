@@ -3,8 +3,7 @@
 {
 "id":  "S100",
 "message":  "Rename method \"InitializeFSM\" to match camel case naming rules, consider using \"InitializeFsm\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManager.cs",
 "region":  {
 "startLine":  378,
@@ -12,9 +11,7 @@
 "endLine":  378,
 "endColumn":  35
 }
-},
-null
-]
+}
 }
 ]
 }

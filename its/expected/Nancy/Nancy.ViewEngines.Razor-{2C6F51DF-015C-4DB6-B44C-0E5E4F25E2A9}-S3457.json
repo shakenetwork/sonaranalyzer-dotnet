@@ -3,8 +3,7 @@
 {
 "id":  "S3457",
 "message":  "Remove this formatting call and simply use the input string.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\CSharp\\NancyCSharpRazorCodeParser.cs",
 "region":  {
 "startLine":  54,
@@ -12,15 +11,12 @@
 "endLine":  54,
 "endColumn":  69
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3457",
 "message":  "Remove this formatting call and simply use the input string.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\CSharp\\NancyCSharpRazorCodeParser.cs",
 "region":  {
 "startLine":  78,
@@ -28,15 +24,12 @@ null
 "endLine":  78,
 "endColumn":  83
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3457",
 "message":  "Remove this formatting call and simply use the input string.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\VisualBasic\\NancyVisualBasicRazorCodeParser.cs",
 "region":  {
 "startLine":  52,
@@ -44,15 +37,12 @@ null
 "endLine":  52,
 "endColumn":  69
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3457",
 "message":  "Remove this formatting call and simply use the input string.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\VisualBasic\\NancyVisualBasicRazorCodeParser.cs",
 "region":  {
 "startLine":  104,
@@ -60,9 +50,7 @@ null
 "endLine":  104,
 "endColumn":  83
 }
-},
-null
-]
+}
 }
 ]
 }

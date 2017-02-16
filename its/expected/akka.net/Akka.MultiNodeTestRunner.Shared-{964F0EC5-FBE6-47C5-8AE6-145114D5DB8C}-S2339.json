@@ -3,8 +3,7 @@
 {
 "id":  "S2339",
 "message":  "Change this constant to a \"static\" read-only property.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\MessageSink.cs",
 "region":  {
 "startLine":  77,
@@ -12,9 +11,7 @@
 "endLine":  77,
 "endColumn":  38
 }
-},
-null
-]
+}
 }
 ]
 }

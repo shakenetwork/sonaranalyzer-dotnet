@@ -3,8 +3,7 @@
 {
 "id":  "S126",
 "message":  "Add the missing \"else\" clause.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Spark\\Descriptors\\DefaultDescriptorBuilder.cs",
 "region":  {
 "startLine":  80,
@@ -12,9 +11,7 @@
 "endLine":  80,
 "endColumn":  20
 }
-},
-null
-]
+}
 }
 ]
 }

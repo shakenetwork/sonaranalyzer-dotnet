@@ -3,8 +3,7 @@
 {
 "id":  "S3235",
 "message":  "Remove these redundant parentheses.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\Routing\\ClusterConsistentHashingRouterSpec.cs",
 "region":  {
 "startLine":  161,
@@ -12,15 +11,12 @@
 "endLine":  161,
 "endColumn":  59
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3235",
 "message":  "Remove these redundant parentheses.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\Routing\\ClusterConsistentHashingRouterSpec.cs",
 "region":  {
 "startLine":  286,
@@ -28,9 +24,7 @@ null
 "endLine":  286,
 "endColumn":  59
 }
-},
-null
-]
+}
 }
 ]
 }

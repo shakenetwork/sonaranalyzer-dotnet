@@ -3,8 +3,7 @@
 {
 "id":  "S122",
 "message":  "Reformat the code to have only one statement per line.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRandomSpec.cs",
 "region":  {
 "startLine":  123,
@@ -12,15 +11,12 @@
 "endLine":  123,
 "endColumn":  89
 }
-},
-null
-]
+}
 },
 {
 "id":  "S122",
 "message":  "Reformat the code to have only one statement per line.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRoundRobinSpec.cs",
 "region":  {
 "startLine":  153,
@@ -28,15 +24,12 @@ null
 "endLine":  153,
 "endColumn":  89
 }
-},
-null
-]
+}
 },
 {
 "id":  "S122",
 "message":  "Reformat the code to have only one statement per line.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRoundRobinSpec.cs",
 "region":  {
 "startLine":  260,
@@ -44,9 +37,7 @@ null
 "endLine":  260,
 "endColumn":  89
 }
-},
-null
-]
+}
 }
 ]
 }

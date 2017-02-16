@@ -3,8 +3,7 @@
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSM.cs",
 "region":  {
 "startLine":  58,
@@ -12,15 +11,12 @@
 "endLine":  58,
 "endColumn":  70
 }
-},
-null
-]
+}
 },
 {
 "id":  "S125",
 "message":  "Remove this commented out code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Journal\\WriteJournal.cs",
 "region":  {
 "startLine":  26,
@@ -28,9 +24,7 @@ null
 "endLine":  26,
 "endColumn":  12
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_n\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding.Tests\\ClusterShardingFailureSpec.cs",
 "region":  {
 "startLine":  98,
@@ -12,15 +11,12 @@
 "endLine":  98,
 "endColumn":  31
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_locations\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding.Tests\\ClusterShardingLeavingSpec.cs",
 "region":  {
 "startLine":  100,
@@ -28,15 +24,12 @@ null
 "endLine":  100,
 "endColumn":  48
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_count\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding.Tests\\ClusterShardingSpec.cs",
 "region":  {
 "startLine":  164,
@@ -44,9 +37,7 @@ null
 "endLine":  164,
 "endColumn":  31
 }
-},
-null
-]
+}
 }
 ]
 }

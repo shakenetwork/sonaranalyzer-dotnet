@@ -3,8 +3,7 @@
 {
 "id":  "S122",
 "message":  "Reformat the code to have only one statement per line.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests.Shared.Internals\\Helpers\\XAssert.cs",
 "region":  {
 "startLine":  51,
@@ -12,9 +11,7 @@
 "endLine":  51,
 "endColumn":  46
 }
-},
-null
-]
+}
 }
 ]
 }

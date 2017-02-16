@@ -3,8 +3,7 @@
 {
 "id":  "S1449",
 "message":  "Use \"CompareOrdinal\" or \"Compare\" with the locale specified instead of \"CompareTo\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedPubSubMediator.cs",
 "region":  {
 "startLine":  472,
@@ -12,15 +11,12 @@
 "endLine":  472,
 "endColumn":  83
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1449",
 "message":  "Use \"CompareOrdinal\" or \"Compare\" with the locale specified instead of \"CompareTo\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedPubSubMediator.cs",
 "region":  {
 "startLine":  472,
@@ -28,9 +24,7 @@ null
 "endLine":  472,
 "endColumn":  117
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S134",
 "message":  "Refactor this code to not nest more than 3 control flow statements.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\EventFilter\\Internal\\EventFilterApplier.cs",
 "region":  {
 "startLine":  125,
@@ -12,9 +11,7 @@
 "endLine":  125,
 "endColumn":  27
 }
-},
-null
-]
+}
 }
 ]
 }

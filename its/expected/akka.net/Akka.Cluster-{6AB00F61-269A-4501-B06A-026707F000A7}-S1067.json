@@ -3,8 +3,7 @@
 {
 "id":  "S1067",
 "message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterEvent.cs",
 "region":  {
 "startLine":  356,
@@ -12,15 +11,12 @@
 "endLine":  357,
 "endColumn":  119
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1067",
 "message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\VectorClock.cs",
 "region":  {
 "startLine":  199,
@@ -28,9 +24,7 @@ null
 "endLine":  239,
 "endColumn":  18
 }
-},
-null
-]
+}
 }
 ]
 }

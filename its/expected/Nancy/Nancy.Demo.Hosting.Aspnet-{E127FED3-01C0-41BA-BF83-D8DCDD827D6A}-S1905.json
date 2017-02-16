@@ -3,8 +3,7 @@
 {
 "id":  "S1905",
 "message":  "Remove this unnecessary cast to \"System.Collections.Generic.IEnumerable\u003cMyUberRouteMetadata\u003e\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Demo.Hosting.Aspnet\\MainModule.cs",
 "region":  {
 "startLine":  38,
@@ -12,9 +11,7 @@
 "endLine":  38,
 "endColumn":  131
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S100",
 "message":  "Rename method \"HTML\" to match camel case naming rules, consider using \"Html\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Spark\\NancySparkView.cs",
 "region":  {
 "startLine":  33,
@@ -12,9 +11,7 @@
 "endLine":  33,
 "endColumn":  27
 }
-},
-null
-]
+}
 }
 ]
 }

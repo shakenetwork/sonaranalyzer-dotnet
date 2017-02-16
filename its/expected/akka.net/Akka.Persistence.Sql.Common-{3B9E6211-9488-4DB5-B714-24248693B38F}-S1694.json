@@ -3,8 +3,7 @@
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Journal\\SqlJournal.cs",
 "region":  {
 "startLine":  17,
@@ -12,9 +11,7 @@
 "endLine":  17,
 "endColumn":  37
 }
-},
-null
-]
+}
 }
 ]
 }

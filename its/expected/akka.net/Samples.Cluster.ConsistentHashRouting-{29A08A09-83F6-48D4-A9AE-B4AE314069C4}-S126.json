@@ -3,8 +3,7 @@
 {
 "id":  "S126",
 "message":  "Add the missing \"else\" clause.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\Cluster\\Routing\\Samples.Cluster.ConsistentHashRouting\\FrontendActor.cs",
 "region":  {
 "startLine":  73,
@@ -12,9 +11,7 @@
 "endLine":  73,
 "endColumn":  20
 }
-},
-null
-]
+}
 }
 ]
 }

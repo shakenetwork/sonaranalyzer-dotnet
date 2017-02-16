@@ -3,8 +3,7 @@
 {
 "id":  "S1135",
 "message":  "Complete the task associated to this \"TODO\" comment.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner\\Discovery.cs",
 "region":  {
 "startLine":  36,
@@ -12,15 +11,12 @@
 "endLine":  36,
 "endColumn":  23
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1135",
 "message":  "Complete the task associated to this \"TODO\" comment.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\CommandLine.cs",
 "region":  {
 "startLine":  13,
@@ -28,9 +24,7 @@ null
 "endLine":  13,
 "endColumn":  11
 }
-},
-null
-]
+}
 }
 ]
 }

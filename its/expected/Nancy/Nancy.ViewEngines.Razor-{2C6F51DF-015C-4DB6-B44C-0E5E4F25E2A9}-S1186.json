@@ -3,8 +3,7 @@
 {
 "id":  "S1186",
 "message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\RazorViewEngine.cs",
 "region":  {
 "startLine":  65,
@@ -12,9 +11,7 @@
 "endLine":  65,
 "endColumn":  31
 }
-},
-null
-]
+}
 }
 ]
 }

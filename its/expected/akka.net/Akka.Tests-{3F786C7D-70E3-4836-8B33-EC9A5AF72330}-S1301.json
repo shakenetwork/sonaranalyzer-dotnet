@@ -3,8 +3,7 @@
 {
 "id":  "S1301",
 "message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorBecomeTests.cs",
 "region":  {
 "startLine":  107,
@@ -12,15 +11,12 @@
 "endLine":  107,
 "endColumn":  23
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1301",
 "message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorBecomeTests.cs",
 "region":  {
 "startLine":  161,
@@ -28,9 +24,7 @@ null
 "endLine":  161,
 "endColumn":  23
 }
-},
-null
-]
+}
 }
 ]
 }

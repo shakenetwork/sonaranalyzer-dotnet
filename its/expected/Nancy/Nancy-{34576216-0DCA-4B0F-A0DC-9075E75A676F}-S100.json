@@ -3,8 +3,7 @@
 {
 "id":  "S100",
 "message":  "Rename property \"ISO8601DateFormat\" to match camel case naming rules, consider using \"Iso8601DateFormat\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
 "startLine":  119,
@@ -12,15 +11,12 @@
 "endLine":  119,
 "endColumn":  38
 }
-},
-null
-]
+}
 },
 {
 "id":  "S100",
 "message":  "Rename property \"UseISO8601DateFormat\" to match camel case naming rules, consider using \"UseIso8601DateFormat\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonConfiguration.cs",
 "region":  {
 "startLine":  92,
@@ -28,15 +24,12 @@ null
 "endLine":  92,
 "endColumn":  41
 }
-},
-null
-]
+}
 },
 {
 "id":  "S100",
 "message":  "Rename property \"ISO8601DateFormat\" to match camel case naming rules, consider using \"Iso8601DateFormat\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Responses\\DefaultJsonSerializer.cs",
 "region":  {
 "startLine":  65,
@@ -44,9 +37,7 @@ null
 "endLine":  65,
 "endColumn":  38
 }
-},
-null
-]
+}
 }
 ]
 }

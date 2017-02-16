@@ -3,8 +3,7 @@
 {
 "id":  "S1186",
 "message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Testing.Tests\\ConfigurableBootstrapperFixture.cs",
 "region":  {
 "startLine":  210,
@@ -12,9 +11,7 @@
 "endLine":  210,
 "endColumn":  32
 }
-},
-null
-]
+}
 }
 ]
 }

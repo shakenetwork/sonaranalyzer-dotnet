@@ -3,8 +3,7 @@
 {
 "id":  "S2223",
 "message":  "Change the visibility of \"Empty\" or make it \"const\" or \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Fakes\\FakeRouteCache.cs",
 "region":  {
 "startLine":  11,
@@ -12,9 +11,7 @@
 "endLine":  11,
 "endColumn":  43
 }
-},
-null
-]
+}
 }
 ]
 }

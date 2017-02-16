@@ -3,8 +3,7 @@
 {
 "id":  "S2364",
 "message":  "Rename \"_AssemblyName\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\Addons\\multi.EmberExtras\\genericGenresEditor.vb",
 "region":  {
 "startLine":  9,
@@ -12,15 +11,12 @@
 "endLine":  9,
 "endColumn":  23
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2364",
 "message":  "Rename \"_AssemblyName\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\Addons\\multi.EmberExtras\\genericMediaSources.vb",
 "region":  {
 "startLine":  9,
@@ -28,15 +24,12 @@ null
 "endLine":  9,
 "endColumn":  23
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2364",
 "message":  "Rename \"_AssemblyName\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\Addons\\multi.EmberExtras\\genericMetadataEditor.vb",
 "region":  {
 "startLine":  9,
@@ -44,15 +37,12 @@ null
 "endLine":  9,
 "endColumn":  23
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2364",
 "message":  "Rename \"_Name\" to match the regular expression: \"^(s_|_)?[a-z][a-z0-9]*([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$\".",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\Addons\\multi.EmberExtras\\scraperMoviesEmberModule.vb",
 "region":  {
 "startLine":  10,
@@ -60,9 +50,7 @@ null
 "endLine":  10,
 "endColumn":  18
 }
-},
-null
-]
+}
 }
 ]
 }

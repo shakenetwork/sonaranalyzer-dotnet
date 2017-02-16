@@ -3,8 +3,7 @@
 {
 "id":  "S2486",
 "message":  "Handle the exception or explain in a comment why it can be ignored.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\SelectionHandler.cs",
 "region":  {
 "startLine":  181,
@@ -12,15 +11,12 @@
 "endLine":  181,
 "endColumn":  44
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2486",
 "message":  "Handle the exception or explain in a comment why it can be ignored.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\SelectionHandler.cs",
 "region":  {
 "startLine":  363,
@@ -28,9 +24,7 @@ null
 "endLine":  363,
 "endColumn":  39
 }
-},
-null
-]
+}
 }
 ]
 }

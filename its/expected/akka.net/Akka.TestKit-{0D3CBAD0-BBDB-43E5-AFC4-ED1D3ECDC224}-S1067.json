@@ -3,8 +3,7 @@
 {
 "id":  "S1067",
 "message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\EventFilter\\Internal\\ErrorFilter.cs",
 "region":  {
 "startLine":  80,
@@ -12,9 +11,7 @@
 "endLine":  83,
 "endColumn":  106
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S1121",
 "message":  "Extract the assignment of \"m\" from this expression.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\MemoryEventAdapterSpec.cs",
 "region":  {
 "startLine":  143,
@@ -12,9 +11,7 @@
 "endLine":  143,
 "endColumn":  49
 }
-},
-null
-]
+}
 }
 ]
 }

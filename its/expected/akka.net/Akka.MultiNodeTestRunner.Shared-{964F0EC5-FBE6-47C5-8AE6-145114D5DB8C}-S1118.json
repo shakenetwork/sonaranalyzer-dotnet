@@ -3,8 +3,7 @@
 {
 "id":  "S1118",
 "message":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Persistence\\FileNameGenerator.cs",
 "region":  {
 "startLine":  12,
@@ -12,9 +11,7 @@
 "endLine":  12,
 "endColumn":  35
 }
-},
-null
-]
+}
 }
 ]
 }

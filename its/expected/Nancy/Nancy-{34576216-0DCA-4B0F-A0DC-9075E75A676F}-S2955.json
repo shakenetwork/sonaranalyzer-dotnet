@@ -3,8 +3,7 @@
 {
 "id":  "S2955",
 "message":  "Use a comparison to \"default(TModel)\" instead or add a constraint to \"TModel\" so that it can\u0027t be a value type.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Responses\\JsonResponse.cs",
 "region":  {
 "startLine":  32,
@@ -12,9 +11,7 @@
 "endLine":  32,
 "endColumn":  42
 }
-},
-null
-]
+}
 }
 ]
 }

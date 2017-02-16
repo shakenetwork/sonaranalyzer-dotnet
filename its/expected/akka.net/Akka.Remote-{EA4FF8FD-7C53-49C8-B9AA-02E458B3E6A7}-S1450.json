@@ -3,8 +3,7 @@
 {
 "id":  "S1450",
 "message":  "Remove the \"_acceptableHeartbeatPause\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\DeadlineFailureDetector.cs",
 "region":  {
 "startLine":  21,
@@ -12,15 +11,12 @@
 "endLine":  21,
 "endColumn":  51
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"handleOrActive\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  276,
@@ -28,15 +24,12 @@ null
 "endLine":  276,
 "endColumn":  50
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"codec\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  282,
@@ -44,15 +37,12 @@ null
 "endLine":  282,
 "endColumn":  35
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"_handleOrActive\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  817,
@@ -60,15 +50,12 @@ null
 "endLine":  817,
 "endColumn":  51
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"_transportSupervisor\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Remoting.cs",
 "region":  {
 "startLine":  109,
@@ -76,15 +63,12 @@ null
 "endLine":  109,
 "endColumn":  47
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"_allMode\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
 "region":  {
 "startLine":  139,
@@ -92,15 +76,12 @@ null
 "endLine":  139,
 "endColumn":  67
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"_transport\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Helios\\HeliosTcpTransport.cs",
 "region":  {
 "startLine":  199,
@@ -108,9 +89,7 @@ null
 "endLine":  199,
 "endColumn":  43
 }
-},
-null
-]
+}
 }
 ]
 }

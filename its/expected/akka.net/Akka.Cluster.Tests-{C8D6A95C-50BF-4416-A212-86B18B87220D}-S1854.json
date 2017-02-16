@@ -3,8 +3,7 @@
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"peer\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\MetricsCollectorSpec.cs",
 "region":  {
 "startLine":  48,
@@ -12,15 +11,12 @@
 "endLine":  48,
 "endColumn":  39
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"peer\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\MetricsCollectorSpec.cs",
 "region":  {
 "startLine":  66,
@@ -28,9 +24,7 @@ null
 "endLine":  66,
 "endColumn":  39
 }
-},
-null
-]
+}
 }
 ]
 }

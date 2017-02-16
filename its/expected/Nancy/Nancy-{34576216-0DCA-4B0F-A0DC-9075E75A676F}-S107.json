@@ -3,8 +3,7 @@
 {
 "id":  "S107",
 "message":  "Constructor has 12 parameters, which is greater than the 7 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Diagnostics\\DefaultDiagnostics.cs",
 "region":  {
 "startLine":  46,
@@ -12,15 +11,12 @@
 "endLine":  58,
 "endColumn":  43
 }
-},
-null
-]
+}
 },
 {
 "id":  "S107",
 "message":  "Method has 13 parameters, which is greater than the 7 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Diagnostics\\DiagnosticsHook.cs",
 "region":  {
 "startLine":  37,
@@ -28,15 +24,12 @@ null
 "endLine":  37,
 "endColumn":  558
 }
-},
-null
-]
+}
 },
 {
 "id":  "S107",
 "message":  "Constructor has 8 parameters, which is greater than the 7 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
 "startLine":  80,
@@ -44,15 +37,12 @@ null
 "endLine":  80,
 "endColumn":  284
 }
-},
-null
-]
+}
 },
 {
 "id":  "S107",
 "message":  "Method has 8 parameters, which is greater than the 7 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonConfigurationExtensions.cs",
 "region":  {
 "startLine":  25,
@@ -60,9 +50,7 @@ null
 "endLine":  25,
 "endColumn":  327
 }
-},
-null
-]
+}
 }
 ]
 }

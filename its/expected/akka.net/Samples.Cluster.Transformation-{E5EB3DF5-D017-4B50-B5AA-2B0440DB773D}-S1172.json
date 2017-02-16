@@ -3,8 +3,7 @@
 {
 "id":  "S1172",
 "message":  "Remove this unused method parameter \"args\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\Cluster\\Roles\\Samples.Cluster.Transformation\\Program.cs",
 "region":  {
 "startLine":  21,
@@ -12,9 +11,7 @@
 "endLine":  21,
 "endColumn":  39
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S1227",
 "message":  "Refactor the code in order to remove this break statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_Receive.cs",
 "region":  {
 "startLine":  226,
@@ -12,15 +11,12 @@
 "endLine":  226,
 "endColumn":  27
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1227",
 "message":  "Refactor the code in order to remove this break statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_Receive.cs",
 "region":  {
 "startLine":  234,
@@ -28,15 +24,12 @@ null
 "endLine":  234,
 "endColumn":  27
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1227",
 "message":  "Refactor the code in order to remove this break statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_Receive.cs",
 "region":  {
 "startLine":  276,
@@ -44,15 +37,12 @@ null
 "endLine":  276,
 "endColumn":  27
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1227",
 "message":  "Refactor the code in order to remove this break statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_Receive.cs",
 "region":  {
 "startLine":  301,
@@ -60,9 +50,7 @@ null
 "endLine":  301,
 "endColumn":  27
 }
-},
-null
-]
+}
 }
 ]
 }

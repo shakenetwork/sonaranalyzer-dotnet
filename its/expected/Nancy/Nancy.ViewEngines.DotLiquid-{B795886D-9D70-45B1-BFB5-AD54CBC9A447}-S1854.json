@@ -3,8 +3,7 @@
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"value\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.DotLiquid\\DynamicDrop.cs",
 "region":  {
 "startLine":  35,
@@ -12,9 +11,7 @@
 "endLine":  35,
 "endColumn":  32
 }
-},
-null
-]
+}
 }
 ]
 }

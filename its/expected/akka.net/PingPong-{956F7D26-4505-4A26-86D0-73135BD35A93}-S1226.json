@@ -3,8 +3,7 @@
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"bestThroughput\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\benchmark\\PingPong\\Program.cs",
 "region":  {
 "startLine":  212,
@@ -12,15 +11,12 @@
 "endLine":  212,
 "endColumn":  31
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"redCount\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\benchmark\\PingPong\\Program.cs",
 "region":  {
 "startLine":  213,
@@ -28,9 +24,7 @@ null
 "endLine":  213,
 "endColumn":  25
 }
-},
-null
-]
+}
 }
 ]
 }

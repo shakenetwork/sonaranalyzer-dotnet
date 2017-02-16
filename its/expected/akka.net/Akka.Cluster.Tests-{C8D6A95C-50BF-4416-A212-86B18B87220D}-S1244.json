@@ -3,8 +3,7 @@
 {
 "id":  "S1244",
 "message":  "Do not check floating point inequality with exact values, use a range instead.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\EWMASpec.cs",
 "region":  {
 "startLine":  114,
@@ -12,9 +11,7 @@
 "endLine":  114,
 "endColumn":  59
 }
-},
-null
-]
+}
 }
 ]
 }

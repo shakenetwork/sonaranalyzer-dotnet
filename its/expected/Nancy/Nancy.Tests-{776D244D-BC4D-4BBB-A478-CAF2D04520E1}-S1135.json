@@ -3,8 +3,7 @@
 {
 "id":  "S1135",
 "message":  "Complete the task associated to this \"TODO\" comment.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\JsonBodyDeserializerFixture.cs",
 "region":  {
 "startLine":  288,
@@ -12,9 +11,7 @@
 "endLine":  288,
 "endColumn":  20
 }
-},
-null
-]
+}
 }
 ]
 }

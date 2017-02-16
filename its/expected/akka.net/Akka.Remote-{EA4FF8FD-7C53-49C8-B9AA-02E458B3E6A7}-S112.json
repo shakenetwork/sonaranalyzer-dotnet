@@ -3,8 +3,7 @@
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
 "region":  {
 "startLine":  244,
@@ -12,9 +11,7 @@
 "endLine":  244,
 "endColumn":  84
 }
-},
-null
-]
+}
 }
 ]
 }

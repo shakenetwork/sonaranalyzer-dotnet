@@ -3,8 +3,7 @@
 {
 "id":  "S126",
 "message":  "Add the missing \"else\" clause.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\BarrierCoordinator.cs",
 "region":  {
 "startLine":  520,
@@ -12,15 +11,12 @@
 "endLine":  520,
 "endColumn":  24
 }
-},
-null
-]
+}
 },
 {
 "id":  "S126",
 "message":  "Add the missing \"else\" clause.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Controller.cs",
 "region":  {
 "startLine":  292,
@@ -28,9 +24,7 @@ null
 "endLine":  292,
 "endColumn":  28
 }
-},
-null
-]
+}
 }
 ]
 }

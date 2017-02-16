@@ -3,8 +3,7 @@
 {
 "id":  "S121",
 "message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Spark\\Descriptors\\DefaultDescriptorBuilder.cs",
 "region":  {
 "startLine":  235,
@@ -12,9 +11,7 @@
 "endLine":  235,
 "endColumn":  35
 }
-},
-null
-]
+}
 }
 ]
 }

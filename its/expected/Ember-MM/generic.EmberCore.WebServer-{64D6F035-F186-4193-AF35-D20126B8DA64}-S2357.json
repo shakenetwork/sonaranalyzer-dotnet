@@ -3,8 +3,7 @@
 {
 "id":  "S2357",
 "message":  "Make \"Ext\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.WebServer\\Module.WebServer.vb",
 "region":  {
 "startLine":  35,
@@ -12,15 +11,12 @@
 "endLine":  35,
 "endColumn":  23
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"MineType\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.WebServer\\Module.WebServer.vb",
 "region":  {
 "startLine":  37,
@@ -28,15 +24,12 @@ null
 "endLine":  37,
 "endColumn":  28
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2357",
 "message":  "Make \"MimeTypes\" private.",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\Addons\\generic.EmberCore.WebServer\\Module.WebServer.vb",
 "region":  {
 "startLine":  40,
@@ -44,9 +37,7 @@ null
 "endLine":  40,
 "endColumn":  26
 }
-},
-null
-]
+}
 }
 ]
 }

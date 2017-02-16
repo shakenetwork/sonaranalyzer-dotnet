@@ -3,8 +3,7 @@
 {
 "id":  "S1210",
 "message":  "When implementing IComparable\u003cT\u003e, you should also override \u003c, \u003e, ==, !=.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Reporting\\MultiNodeMessage.cs",
 "region":  {
 "startLine":  16,
@@ -12,9 +11,7 @@
 "endLine":  16,
 "endColumn":  43
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S3216",
 "message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Helios\\HeliosTransport.cs",
 "region":  {
 "startLine":  313,
@@ -12,15 +11,12 @@
 "endLine":  313,
 "endColumn":  58
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3216",
 "message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TransportAdapters.cs",
 "region":  {
 "startLine":  176,
@@ -28,9 +24,7 @@ null
 "endLine":  176,
 "endColumn":  112
 }
-},
-null
-]
+}
 }
 ]
 }

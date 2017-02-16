@@ -3,8 +3,7 @@
 {
 "id":  "S100",
 "message":  "Rename method \"XMLBody\" to match camel case naming rules, consider using \"XmlBody\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Testing\\BrowserContextExtensions.cs",
 "region":  {
 "startLine":  76,
@@ -12,9 +11,7 @@
 "endLine":  76,
 "endColumn":  35
 }
-},
-null
-]
+}
 }
 ]
 }

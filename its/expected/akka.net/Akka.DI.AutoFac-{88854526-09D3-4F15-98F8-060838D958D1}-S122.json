@@ -3,8 +3,7 @@
 {
 "id":  "S122",
 "message":  "Reformat the code to have only one statement per line.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.AutoFac\\AutoFacDependencyResolver.cs",
 "region":  {
 "startLine":  39,
@@ -12,15 +11,12 @@
 "endLine":  39,
 "endColumn":  75
 }
-},
-null
-]
+}
 },
 {
 "id":  "S122",
 "message":  "Reformat the code to have only one statement per line.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.AutoFac\\AutoFacDependencyResolver.cs",
 "region":  {
 "startLine":  40,
@@ -28,9 +24,7 @@ null
 "endLine":  40,
 "endColumn":  81
 }
-},
-null
-]
+}
 }
 ]
 }

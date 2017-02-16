@@ -3,8 +3,7 @@
 {
 "id":  "S1858",
 "message":  "There\u0027s no need to call \"ToString()\" on a string.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\RemoteDaemonSpec.cs",
 "region":  {
 "startLine":  72,
@@ -12,9 +11,7 @@
 "endLine":  72,
 "endColumn":  102
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"IsShutdown\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\TimeServer\\TimeClient\\Program.cs",
 "region":  {
 "startLine":  18,
@@ -12,9 +11,7 @@
 "endLine":  18,
 "endColumn":  39
 }
-},
-null
-]
+}
 }
 ]
 }

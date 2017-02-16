@@ -3,8 +3,7 @@
 {
 "id":  "S122",
 "message":  "Reformat the code to have only one statement per line.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\loggers\\Akka.Logger.Serilog\\MessageTemplateCache.cs",
 "region":  {
 "startLine":  29,
@@ -12,15 +11,12 @@
 "endLine":  29,
 "endColumn":  85
 }
-},
-null
-]
+}
 },
 {
 "id":  "S122",
 "message":  "Reformat the code to have only one statement per line.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\loggers\\Akka.Logger.Serilog\\MessageTemplateCache.cs",
 "region":  {
 "startLine":  35,
@@ -28,9 +24,7 @@ null
 "endLine":  35,
 "endColumn":  93
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S2971",
 "message":  "Drop \"Where\" and move the condition into the \"FirstOrDefault\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\NegotiatorExtensions.cs",
 "region":  {
 "startLine":  256,
@@ -12,15 +11,12 @@
 "endLine":  256,
 "endColumn":  43
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2971",
 "message":  "Drop \"Where\" and move the condition into the \"FirstOrDefault\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\NegotiatorExtensions.cs",
 "region":  {
 "startLine":  260,
@@ -28,15 +24,12 @@ null
 "endLine":  260,
 "endColumn":  43
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2971",
 "message":  "Drop \"Where\" and move the condition into the \"FirstOrDefault\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ResponseExtensions.cs",
 "region":  {
 "startLine":  190,
@@ -44,15 +37,12 @@ null
 "endLine":  190,
 "endColumn":  43
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2971",
 "message":  "Drop \"Where\" and move the condition into the \"FirstOrDefault\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ResponseExtensions.cs",
 "region":  {
 "startLine":  194,
@@ -60,15 +50,12 @@ null
 "endLine":  194,
 "endColumn":  43
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2971",
 "message":  "Drop \"Where\" and move the condition into the \"FirstOrDefault\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
 "region":  {
 "startLine":  221,
@@ -76,15 +63,12 @@ null
 "endLine":  221,
 "endColumn":  33
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2971",
 "message":  "Drop \"Where\" and move the condition into the \"FirstOrDefault\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
 "region":  {
 "startLine":  232,
@@ -92,9 +76,7 @@ null
 "endLine":  232,
 "endColumn":  29
 }
-},
-null
-]
+}
 }
 ]
 }

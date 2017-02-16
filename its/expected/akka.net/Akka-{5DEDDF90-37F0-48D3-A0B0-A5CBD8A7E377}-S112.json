@@ -3,8 +3,7 @@
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorRefProvider.cs",
 "region":  {
 "startLine":  261,
@@ -12,15 +11,12 @@
 "endLine":  261,
 "endColumn":  36
 }
-},
-null
-]
+}
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorRefProvider.cs",
 "region":  {
 "startLine":  268,
@@ -28,15 +24,12 @@ null
 "endLine":  268,
 "endColumn":  36
 }
-},
-null
-]
+}
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Internal\\ActorSystemImpl.cs",
 "region":  {
 "startLine":  396,
@@ -44,15 +37,12 @@ null
 "endLine":  396,
 "endColumn":  36
 }
-},
-null
-]
+}
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Configuration\\Hocon\\HoconParser.cs",
 "region":  {
 "startLine":  144,
@@ -60,15 +50,12 @@ null
 "endLine":  144,
 "endColumn":  36
 }
-},
-null
-]
+}
 },
 {
 "id":  "S112",
 "message":  "\"System.IndexOutOfRangeException\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\ByteBuffer.cs",
 "region":  {
 "startLine":  99,
@@ -76,15 +63,12 @@ null
 "endLine":  99,
 "endColumn":  51
 }
-},
-null
-]
+}
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\Dns.cs",
 "region":  {
 "startLine":  75,
@@ -92,15 +76,12 @@ null
 "endLine":  75,
 "endColumn":  59
 }
-},
-null
-]
+}
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\SocketAsyncEventArgsPool.cs",
 "region":  {
 "startLine":  47,
@@ -108,15 +89,12 @@ null
 "endLine":  47,
 "endColumn":  32
 }
-},
-null
-]
+}
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Serialization\\Serialization.cs",
 "region":  {
 "startLine":  135,
@@ -124,15 +102,12 @@ null
 "endLine":  135,
 "endColumn":  32
 }
-},
-null
-]
+}
 },
 {
 "id":  "S112",
 "message":  "\"System.IndexOutOfRangeException\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\ByteIterator.cs",
 "region":  {
 "startLine":  48,
@@ -140,15 +115,12 @@ null
 "endLine":  48,
 "endColumn":  65
 }
-},
-null
-]
+}
 },
 {
 "id":  "S112",
 "message":  "\"System.IndexOutOfRangeException\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\ByteIterator.cs",
 "region":  {
 "startLine":  125,
@@ -156,15 +128,12 @@ null
 "endLine":  125,
 "endColumn":  64
 }
-},
-null
-]
+}
 },
 {
 "id":  "S112",
 "message":  "\"System.IndexOutOfRangeException\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\ByteString.cs",
 "region":  {
 "startLine":  178,
@@ -172,15 +141,12 @@ null
 "endLine":  178,
 "endColumn":  51
 }
-},
-null
-]
+}
 },
 {
 "id":  "S112",
 "message":  "\"System.IndexOutOfRangeException\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\ByteString.cs",
 "region":  {
 "startLine":  266,
@@ -188,9 +154,7 @@ null
 "endLine":  266,
 "endColumn":  55
 }
-},
-null
-]
+}
 }
 ]
 }

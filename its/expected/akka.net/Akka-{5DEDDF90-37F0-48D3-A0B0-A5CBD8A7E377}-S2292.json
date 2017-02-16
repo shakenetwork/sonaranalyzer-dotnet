@@ -3,8 +3,7 @@
 {
 "id":  "S2292",
 "message":  "Make this an auto-implemented property and remove its backing field.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Stash\\UntypedActorWithBoundedStash.cs",
 "region":  {
 "startLine":  25,
@@ -12,15 +11,12 @@
 "endLine":  25,
 "endColumn":  35
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2292",
 "message":  "Make this an auto-implemented property and remove its backing field.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Stash\\UntypedActorWithBoundedStash.cs",
 "region":  {
 "startLine":  26,
@@ -28,15 +24,12 @@ null
 "endLine":  26,
 "endColumn":  33
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2292",
 "message":  "Make this an auto-implemented property and remove its backing field.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Stash\\UntypedActorWithUnboundedStash.cs",
 "region":  {
 "startLine":  24,
@@ -44,15 +37,12 @@ null
 "endLine":  24,
 "endColumn":  35
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2292",
 "message":  "Make this an auto-implemented property and remove its backing field.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Stash\\UntypedActorWithUnboundedStash.cs",
 "region":  {
 "startLine":  25,
@@ -60,15 +50,12 @@ null
 "endLine":  25,
 "endColumn":  33
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2292",
 "message":  "Make this an auto-implemented property and remove its backing field.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Dispatch\\MessageQueues\\BlockingMessageQueue.cs",
 "region":  {
 "startLine":  23,
@@ -76,9 +63,7 @@ null
 "endLine":  23,
 "endColumn":  37
 }
-},
-null
-]
+}
 }
 ]
 }

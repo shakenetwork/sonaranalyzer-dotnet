@@ -3,8 +3,7 @@
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\Ember.Plugins\\PluginSectionHandler.cs",
 "region":  {
 "startLine":  46,
@@ -12,15 +11,12 @@
 "endLine":  46,
 "endColumn":  29
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\Ember.Plugins\\Scraper\\MovieScraperManager.cs",
 "region":  {
 "startLine":  67,
@@ -28,15 +24,12 @@ null
 "endLine":  67,
 "endColumn":  50
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "Ember-MM\\Ember.Plugins\\Scraper\\MovieScraperManager.cs",
 "region":  {
 "startLine":  107,
@@ -44,9 +37,7 @@ null
 "endLine":  107,
 "endColumn":  51
 }
-},
-null
-]
+}
 }
 ]
 }

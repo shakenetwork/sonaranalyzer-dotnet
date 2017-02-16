@@ -3,8 +3,7 @@
 {
 "id":  "S3235",
 "message":  "Remove these redundant parentheses.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  648,
@@ -12,15 +11,12 @@
 "endLine":  648,
 "endColumn":  103
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3235",
 "message":  "Remove these redundant parentheses.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteActorRefProvider.cs",
 "region":  {
 "startLine":  180,
@@ -28,15 +24,12 @@ null
 "endLine":  180,
 "endColumn":  48
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3235",
 "message":  "Remove these redundant parentheses.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteActorRefProvider.cs",
 "region":  {
 "startLine":  181,
@@ -44,15 +37,12 @@ null
 "endLine":  181,
 "endColumn":  49
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3235",
 "message":  "Remove these redundant parentheses.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Helios\\HeliosHelpers.cs",
 "region":  {
 "startLine":  71,
@@ -60,15 +50,12 @@ null
 "endLine":  71,
 "endColumn":  41
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3235",
 "message":  "Remove these redundant parentheses.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
 "region":  {
 "startLine":  272,
@@ -76,9 +63,7 @@ null
 "endLine":  272,
 "endColumn":  61
 }
-},
-null
-]
+}
 }
 ]
 }

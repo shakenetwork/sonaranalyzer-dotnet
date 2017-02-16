@@ -3,8 +3,7 @@
 {
 "id":  "S2339",
 "message":  "Change this constant to a \"static\" read-only property.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sqlite\\Extension.cs",
 "region":  {
 "startLine":  16,
@@ -12,15 +11,12 @@
 "endLine":  16,
 "endColumn":  39
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2339",
 "message":  "Change this constant to a \"static\" read-only property.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sqlite\\Extension.cs",
 "region":  {
 "startLine":  31,
@@ -28,9 +24,7 @@ null
 "endLine":  31,
 "endColumn":  39
 }
-},
-null
-]
+}
 }
 ]
 }

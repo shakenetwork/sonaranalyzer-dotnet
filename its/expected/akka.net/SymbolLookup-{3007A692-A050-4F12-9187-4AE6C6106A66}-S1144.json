@@ -3,8 +3,7 @@
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\Actors\\DispatcherActor.cs",
 "region":  {
 "startLine":  24,
@@ -12,15 +11,12 @@
 "endLine":  24,
 "endColumn":  125
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\Actors\\DispatcherActor.cs",
 "region":  {
 "startLine":  25,
@@ -28,15 +24,12 @@ null
 "endLine":  25,
 "endColumn":  126
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\MainForm.cs",
 "region":  {
 "startLine":  22,
@@ -44,9 +37,7 @@ null
 "endLine":  22,
 "endColumn":  55
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\ClusterDeathWatchSpec.cs",
 "region":  {
 "startLine":  372,
@@ -12,15 +11,12 @@
 "endLine":  392,
 "endColumn":  10
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1144",
 "message":  "Remove this unused private member.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\ClusterDeathWatchSpec.cs",
 "region":  {
 "startLine":  376,
@@ -28,9 +24,7 @@ null
 "endLine":  391,
 "endColumn":  14
 }
-},
-null
-]
+}
 }
 ]
 }

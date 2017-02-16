@@ -3,8 +3,7 @@
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
 "startLine":  723,
@@ -12,15 +11,12 @@
 "endLine":  723,
 "endColumn":  42
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  29,
@@ -28,15 +24,12 @@ null
 "endLine":  29,
 "endColumn":  45
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  98,
@@ -44,15 +37,12 @@ null
 "endLine":  98,
 "endColumn":  46
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to an interface.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\FailureDetector.cs",
 "region":  {
 "startLine":  16,
@@ -60,15 +50,12 @@ null
 "endLine":  16,
 "endColumn":  42
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteWatcher.cs",
 "region":  {
 "startLine":  50,
@@ -76,15 +63,12 @@ null
 "endLine":  50,
 "endColumn":  43
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to an interface.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemotingLifecycleEvent.cs",
 "region":  {
 "startLine":  21,
@@ -92,15 +76,12 @@ null
 "endLine":  21,
 "endColumn":  49
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
 "startLine":  355,
@@ -108,15 +89,12 @@ null
 "endLine":  355,
 "endColumn":  46
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
 "startLine":  356,
@@ -124,15 +102,12 @@ null
 "endLine":  356,
 "endColumn":  53
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Helios\\HeliosTransport.cs",
 "region":  {
 "startLine":  28,
@@ -140,15 +115,12 @@ null
 "endLine":  28,
 "endColumn":  33
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TestTransport.cs",
 "region":  {
 "startLine":  229,
@@ -156,15 +128,12 @@ null
 "endLine":  229,
 "endColumn":  35
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to an interface.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
 "region":  {
 "startLine":  458,
@@ -172,15 +141,12 @@ null
 "endLine":  458,
 "endColumn":  39
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TransportAdapters.cs",
 "region":  {
 "startLine":  247,
@@ -188,9 +154,7 @@ null
 "endLine":  247,
 "endColumn":  47
 }
-},
-null
-]
+}
 }
 ]
 }

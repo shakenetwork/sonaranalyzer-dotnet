@@ -3,8 +3,7 @@
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\GenericTransportSpec.cs",
 "region":  {
 "startLine":  128,
@@ -12,15 +11,12 @@
 "endLine":  128,
 "endColumn":  58
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\TestTransportSpec.cs",
 "region":  {
 "startLine":  109,
@@ -28,9 +24,7 @@ null
 "endLine":  109,
 "endColumn":  62
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S1450",
 "message":  "Remove the \"_actorAwaitingResultSender\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorRef.cs",
 "region":  {
 "startLine":  85,
@@ -12,15 +11,12 @@
 "endLine":  85,
 "endColumn":  62
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"Actor\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Exceptions.cs",
 "region":  {
 "startLine":  352,
@@ -28,15 +24,12 @@ null
 "endLine":  352,
 "endColumn":  32
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"e\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Exceptions.cs",
 "region":  {
 "startLine":  353,
@@ -44,15 +37,12 @@ null
 "endLine":  353,
 "endColumn":  28
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"exception\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Exceptions.cs",
 "region":  {
 "startLine":  354,
@@ -60,15 +50,12 @@ null
 "endLine":  354,
 "endColumn":  36
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"optionalMessage\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Exceptions.cs",
 "region":  {
 "startLine":  355,
@@ -76,15 +63,12 @@ null
 "endLine":  355,
 "endColumn":  39
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"_mcn\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Futures.cs",
 "region":  {
 "startLine":  111,
@@ -92,15 +76,12 @@ null
 "endLine":  111,
 "endColumn":  37
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"_subscribers\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Inbox.cs",
 "region":  {
 "startLine":  242,
@@ -108,15 +89,12 @@ null
 "endLine":  242,
 "endColumn":  62
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"_logDeadLetterListener\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Internal\\ActorSystemImpl.cs",
 "region":  {
 "startLine":  28,
@@ -124,15 +102,12 @@ null
 "endLine":  28,
 "endColumn":  49
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"_root\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Configuration\\Hocon\\HoconParser.cs",
 "region":  {
 "startLine":  22,
@@ -140,15 +115,12 @@ null
 "endLine":  22,
 "endColumn":  33
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"_system\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Dispatch\\Dispatchers.cs",
 "region":  {
 "startLine":  115,
@@ -156,15 +128,12 @@ null
 "endLine":  115,
 "endColumn":  45
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"respondTo\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Dispatch\\FutureActor.cs",
 "region":  {
 "startLine":  18,
@@ -172,15 +141,12 @@ null
 "endLine":  18,
 "endColumn":  36
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"_order\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\ByteBuffer.cs",
 "region":  {
 "startLine":  17,
@@ -188,15 +154,12 @@ null
 "endLine":  17,
 "endColumn":  33
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"_tc\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\Inet.cs",
 "region":  {
 "startLine":  111,
@@ -204,15 +167,12 @@ null
 "endLine":  111,
 "endColumn":  41
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"_log\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\SelectionHandler.cs",
 "region":  {
 "startLine":  190,
@@ -220,15 +180,12 @@ null
 "endLine":  190,
 "endColumn":  50
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"_ext\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\SimpleDnsManager.cs",
 "region":  {
 "startLine":  16,
@@ -236,15 +193,12 @@ null
 "endLine":  16,
 "endColumn":  37
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"_channelRegistry\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\UdpListener.cs",
 "region":  {
 "startLine":  23,
@@ -252,15 +206,12 @@ null
 "endLine":  23,
 "endColumn":  59
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1450",
 "message":  "Remove the \"_selector\" field and declare it as a local variable in the relevant methods.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\UdpListener.cs",
 "region":  {
 "startLine":  30,
@@ -268,9 +219,7 @@ null
 "endLine":  30,
 "endColumn":  36
 }
-},
-null
-]
+}
 }
 ]
 }

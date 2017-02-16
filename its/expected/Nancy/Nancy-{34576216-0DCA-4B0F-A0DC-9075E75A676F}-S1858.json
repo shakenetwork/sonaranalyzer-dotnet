@@ -3,8 +3,7 @@
 {
 "id":  "S1858",
 "message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Diagnostics\\Modules\\InfoModule.cs",
 "region":  {
 "startLine":  28,
@@ -12,15 +11,12 @@
 "endLine":  28,
 "endColumn":  112
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1858",
 "message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
 "region":  {
 "startLine":  390,
@@ -28,9 +24,7 @@ null
 "endLine":  390,
 "endColumn":  48
 }
-},
-null
-]
+}
 }
 ]
 }

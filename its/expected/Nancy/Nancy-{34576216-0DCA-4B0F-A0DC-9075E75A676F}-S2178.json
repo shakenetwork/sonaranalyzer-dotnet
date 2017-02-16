@@ -3,8 +3,7 @@
 {
 "id":  "S2178",
 "message":  "Correct this \"\u0026\" to \"\u0026\u0026\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Diagnostics\\InteractiveDiagnostics.cs",
 "region":  {
 "startLine":  24,
@@ -12,9 +11,7 @@
 "endLine":  24,
 "endColumn":  75
 }
-},
-null
-]
+}
 }
 ]
 }

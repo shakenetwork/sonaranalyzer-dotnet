@@ -3,8 +3,7 @@
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"routingLogic\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedPubSubSettings.cs",
 "region":  {
 "startLine":  33,
@@ -12,9 +11,7 @@
 "endLine":  33,
 "endColumn":  45
 }
-},
-null
-]
+}
 }
 ]
 }

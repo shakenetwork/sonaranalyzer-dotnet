@@ -3,8 +3,7 @@
 {
 "id":  "S2933",
 "message":  "Make \"_storageLocations\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding.Tests\\ClusterShardingFailureSpec.cs",
 "region":  {
 "startLine":  121,
@@ -12,15 +11,12 @@
 "endLine":  121,
 "endColumn":  50
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_region\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding.Tests\\ClusterShardingFailureSpec.cs",
 "region":  {
 "startLine":  122,
@@ -28,15 +24,12 @@ null
 "endLine":  122,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_first\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding.Tests\\ClusterShardingFailureSpec.cs",
 "region":  {
 "startLine":  123,
@@ -44,15 +37,12 @@ null
 "endLine":  123,
 "endColumn":  32
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_second\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding.Tests\\ClusterShardingFailureSpec.cs",
 "region":  {
 "startLine":  124,
@@ -60,15 +50,12 @@ null
 "endLine":  124,
 "endColumn":  33
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_controller\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding.Tests\\ClusterShardingFailureSpec.cs",
 "region":  {
 "startLine":  125,
@@ -76,9 +63,7 @@ null
 "endLine":  125,
 "endColumn":  37
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S1172",
 "message":  "Remove this unused method parameter \"serializer\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Diagnostics\\DiagnosticsHook.cs",
 "region":  {
 "startLine":  259,
@@ -12,15 +11,12 @@
 "endLine":  259,
 "endColumn":  163
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1172",
 "message":  "Remove this unused method parameter \"diagnosticsProvider\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Diagnostics\\InteractiveDiagnostics.cs",
 "region":  {
 "startLine":  176,
@@ -28,15 +24,12 @@ null
 "endLine":  176,
 "endColumn":  99
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1172",
 "message":  "Remove this unused method parameter \"model\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
 "region":  {
 "startLine":  377,
@@ -44,15 +37,12 @@ null
 "endLine":  377,
 "endColumn":  88
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1172",
 "message":  "Remove this unused method parameter \"model\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
 "region":  {
 "startLine":  439,
@@ -60,15 +50,12 @@ null
 "endLine":  439,
 "endColumn":  88
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1172",
 "message":  "Remove this unused method parameter \"model\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
 "region":  {
 "startLine":  597,
@@ -76,15 +63,12 @@ null
 "endLine":  597,
 "endColumn":  85
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1172",
 "message":  "Remove this unused method parameter \"model\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
 "region":  {
 "startLine":  633,
@@ -92,15 +76,12 @@ null
 "endLine":  633,
 "endColumn":  97
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1172",
 "message":  "Remove this unused method parameter \"viewEngine\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\ViewEngineApplicationStartup.cs",
 "region":  {
 "startLine":  42,
@@ -108,9 +89,7 @@ null
 "endLine":  42,
 "endColumn":  95
 }
-},
-null
-]
+}
 }
 ]
 }

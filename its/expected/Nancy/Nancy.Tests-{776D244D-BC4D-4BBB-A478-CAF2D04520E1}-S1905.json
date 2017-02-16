@@ -3,8 +3,7 @@
 {
 "id":  "S1905",
 "message":  "Remove this unnecessary cast to \"int\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Extensions\\TypeExtensionsFixture.cs",
 "region":  {
 "startLine":  103,
@@ -12,9 +11,7 @@
 "endLine":  103,
 "endColumn":  30
 }
-},
-null
-]
+}
 }
 ]
 }

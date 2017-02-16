@@ -3,8 +3,7 @@
 {
 "id":  "S2971",
 "message":  "Drop \"Where\" and move the condition into the \"FirstOrDefault\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Bootstrapper\\NancyBootstrapperBaseFixture.cs",
 "region":  {
 "startLine":  76,
@@ -12,15 +11,12 @@
 "endLine":  76,
 "endColumn":  50
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2971",
 "message":  "Drop \"Where\" and move the condition into the \"FirstOrDefault\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Bootstrapper\\NancyBootstrapperBaseFixture.cs",
 "region":  {
 "startLine":  77,
@@ -28,15 +24,12 @@ null
 "endLine":  77,
 "endColumn":  50
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2971",
 "message":  "Drop \"Where\" and move the condition into the \"Any\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Bootstrapper\\NancyInternalConfigurationFixture.cs",
 "region":  {
 "startLine":  52,
@@ -44,15 +37,12 @@ null
 "endLine":  52,
 "endColumn":  25
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2971",
 "message":  "Use \"Count\" property here instead.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRequestDispatcherFixture.cs",
 "region":  {
 "startLine":  103,
@@ -60,15 +50,12 @@ null
 "endLine":  103,
 "endColumn":  41
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2971",
 "message":  "Use \"Count\" property here instead.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRequestDispatcherFixture.cs",
 "region":  {
 "startLine":  149,
@@ -76,15 +63,12 @@ null
 "endLine":  149,
 "endColumn":  41
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2971",
 "message":  "Use \"Count\" property here instead.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRequestDispatcherFixture.cs",
 "region":  {
 "startLine":  778,
@@ -92,15 +76,12 @@ null
 "endLine":  778,
 "endColumn":  41
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2971",
 "message":  "Use \"Count\" property here instead.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRequestDispatcherFixture.cs",
 "region":  {
 "startLine":  820,
@@ -108,15 +89,12 @@ null
 "endLine":  820,
 "endColumn":  41
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2971",
 "message":  "Use \"Count\" property here instead.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRequestDispatcherFixture.cs",
 "region":  {
 "startLine":  862,
@@ -124,15 +102,12 @@ null
 "endLine":  862,
 "endColumn":  41
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2971",
 "message":  "Use \"Count\" property here instead.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\RouteCacheFixture.cs",
 "region":  {
 "startLine":  60,
@@ -140,9 +115,7 @@ null
 "endLine":  60,
 "endColumn":  76
 }
-},
-null
-]
+}
 }
 ]
 }

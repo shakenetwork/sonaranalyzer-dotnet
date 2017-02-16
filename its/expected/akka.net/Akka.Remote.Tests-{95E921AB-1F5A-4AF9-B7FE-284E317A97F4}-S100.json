@@ -3,8 +3,7 @@
 {
 "id":  "S100",
 "message":  "Rename method \"cdf\" to match camel case naming rules, consider using \"Cdf\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AccrualFailureDetectorSpec.cs",
 "region":  {
 "startLine":  308,
@@ -12,15 +11,12 @@
 "endLine":  308,
 "endColumn":  33
 }
-},
-null
-]
+}
 },
 {
 "id":  "S100",
 "message":  "Rename method \"testDisassociate\" to match camel case naming rules, consider using \"TestDisassociate\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolSpec.cs",
 "region":  {
 "startLine":  42,
@@ -28,15 +24,12 @@ null
 "endLine":  42,
 "endColumn":  46
 }
-},
-null
-]
+}
 },
 {
 "id":  "S100",
 "message":  "Rename method \"testAssociate\" to match camel case naming rules, consider using \"TestAssociate\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolSpec.cs",
 "region":  {
 "startLine":  43,
@@ -44,9 +37,7 @@ null
 "endLine":  43,
 "endColumn":  43
 }
-},
-null
-]
+}
 }
 ]
 }

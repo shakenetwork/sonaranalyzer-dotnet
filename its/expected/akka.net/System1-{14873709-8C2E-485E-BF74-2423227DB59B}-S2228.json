@@ -3,8 +3,7 @@
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\RemoteDeploy\\System1\\Program.cs",
 "region":  {
 "startLine":  20,
@@ -12,9 +11,7 @@
 "endLine":  20,
 "endColumn":  30
 }
-},
-null
-]
+}
 }
 ]
 }

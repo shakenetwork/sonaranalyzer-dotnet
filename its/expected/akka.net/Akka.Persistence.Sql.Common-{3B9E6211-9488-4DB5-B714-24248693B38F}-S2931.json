@@ -3,8 +3,7 @@
 {
 "id":  "S2931",
 "message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_pendingRequestsCancellation\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Snapshot\\SqlSnapshotStore.cs",
 "region":  {
 "startLine":  20,
@@ -12,9 +11,7 @@
 "endLine":  20,
 "endColumn":  43
 }
-},
-null
-]
+}
 }
 ]
 }

@@ -3,8 +3,7 @@
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_count\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\AtLeastOnceDeliverySpec.cs",
 "region":  {
 "startLine":  149,
@@ -12,15 +11,12 @@
 "endLine":  149,
 "endColumn":  35
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_stashed\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
 "region":  {
 "startLine":  392,
@@ -28,15 +24,12 @@ null
 "endLine":  392,
 "endColumn":  42
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_counter\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
 "region":  {
 "startLine":  477,
@@ -44,15 +37,12 @@ null
 "endLine":  477,
 "endColumn":  37
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_counter\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
 "region":  {
 "startLine":  506,
@@ -60,15 +50,12 @@ null
 "endLine":  506,
 "endColumn":  37
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_counter\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
 "region":  {
 "startLine":  572,
@@ -76,15 +63,12 @@ null
 "endLine":  572,
 "endColumn":  37
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_counter\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
 "region":  {
 "startLine":  601,
@@ -92,15 +76,12 @@ null
 "endLine":  601,
 "endColumn":  37
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3052",
 "message":  "Remove this initialization to \"_counter\", the compiler will do that for you.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
 "region":  {
 "startLine":  630,
@@ -108,9 +89,7 @@ null
 "endLine":  630,
 "endColumn":  37
 }
-},
-null
-]
+}
 }
 ]
 }

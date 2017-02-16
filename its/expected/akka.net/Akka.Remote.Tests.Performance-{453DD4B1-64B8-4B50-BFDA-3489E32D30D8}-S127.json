@@ -3,8 +3,7 @@
 {
 "id":  "S127",
 "message":  "Do not update the loop counter \"i\" within the loop body.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.Performance\\Transports\\RemoteMessagingThroughputSpecBase.cs",
 "region":  {
 "startLine":  106,
@@ -12,15 +11,12 @@
 "endLine":  106,
 "endColumn":  20
 }
-},
-null
-]
+}
 },
 {
 "id":  "S127",
 "message":  "Do not update the loop counter \"i\" within the loop body.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.Performance\\Transports\\RemoteMessagingThroughputSpecBase.cs",
 "region":  {
 "startLine":  123,
@@ -28,9 +24,7 @@ null
 "endLine":  123,
 "endColumn":  20
 }
-},
-null
-]
+}
 }
 ]
 }

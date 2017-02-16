@@ -3,8 +3,7 @@
 {
 "id":  "S112",
 "message":  "\"System.NullReferenceException\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
 "startLine":  89,
@@ -12,15 +11,12 @@
 "endLine":  89,
 "endColumn":  49
 }
-},
-null
-]
+}
 },
 {
 "id":  "S112",
 "message":  "\"System.NullReferenceException\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
 "startLine":  538,
@@ -28,15 +24,12 @@ null
 "endLine":  538,
 "endColumn":  49
 }
-},
-null
-]
+}
 },
 {
 "id":  "S112",
 "message":  "\"System.NullReferenceException\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
 "startLine":  579,
@@ -44,15 +37,12 @@ null
 "endLine":  579,
 "endColumn":  49
 }
-},
-null
-]
+}
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\ReflectionUtils.cs",
 "region":  {
 "startLine":  109,
@@ -60,15 +50,12 @@ null
 "endLine":  109,
 "endColumn":  36
 }
-},
-null
-]
+}
 },
 {
 "id":  "S112",
 "message":  "\"System.Exception\" should not be thrown by user code.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\ReflectionUtils.cs",
 "region":  {
 "startLine":  124,
@@ -76,9 +63,7 @@ null
 "endLine":  124,
 "endColumn":  36
 }
-},
-null
-]
+}
 }
 ]
 }

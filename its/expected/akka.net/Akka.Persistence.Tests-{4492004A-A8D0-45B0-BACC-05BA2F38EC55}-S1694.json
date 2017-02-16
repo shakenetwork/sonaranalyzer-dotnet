@@ -3,8 +3,7 @@
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\EndToEndEventAdapterSpec.cs",
 "region":  {
 "startLine":  35,
@@ -12,15 +11,12 @@
 "endLine":  35,
 "endColumn":  51
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistenceSpec.cs",
 "region":  {
 "startLine":  19,
@@ -28,15 +24,12 @@ null
 "endLine":  19,
 "endColumn":  42
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1694",
 "message":  "Convert this \"abstract\" class to a concrete class with a private constructor.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\ReceivePersistentActorTests.cs",
 "region":  {
 "startLine":  155,
@@ -44,9 +37,7 @@ null
 "endLine":  155,
 "endColumn":  58
 }
-},
-null
-]
+}
 }
 ]
 }

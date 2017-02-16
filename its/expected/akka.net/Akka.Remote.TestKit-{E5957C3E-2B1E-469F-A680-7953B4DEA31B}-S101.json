@@ -3,8 +3,7 @@
 {
 "id":  "S101",
 "message":  "Rename class \"ServerFSM\" to match camel case naming rules, consider using \"ServerFsm\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Conductor.cs",
 "region":  {
 "startLine":  321,
@@ -12,15 +11,12 @@
 "endLine":  321,
 "endColumn":  20
 }
-},
-null
-]
+}
 },
 {
 "id":  "S101",
 "message":  "Rename class \"CreateServerFSM\" to match camel case naming rules, consider using \"CreateServerFsm\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Controller.cs",
 "region":  {
 "startLine":  193,
@@ -28,15 +24,12 @@ null
 "endLine":  193,
 "endColumn":  44
 }
-},
-null
-]
+}
 },
 {
 "id":  "S101",
 "message":  "Rename class \"WaitForClientFSMToConnect\" to match camel case naming rules, consider using \"WaitForClientFsmToConnect\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
 "region":  {
 "startLine":  64,
@@ -44,15 +37,12 @@ null
 "endLine":  64,
 "endColumn":  48
 }
-},
-null
-]
+}
 },
 {
 "id":  "S101",
 "message":  "Rename class \"ClientFSM\" to match camel case naming rules, consider using \"ClientFsm\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
 "region":  {
 "startLine":  167,
@@ -60,9 +50,7 @@ null
 "endLine":  167,
 "endColumn":  20
 }
-},
-null
-]
+}
 }
 ]
 }

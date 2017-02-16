@@ -3,8 +3,7 @@
 {
 "id":  "S2933",
 "message":  "Make \"configuration\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Fakes\\FakeDefaultNancyBootstrapper.cs",
 "region":  {
 "startLine":  16,
@@ -12,15 +11,12 @@
 "endLine":  16,
 "endColumn":  57
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_Modules\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Fakes\\FakeModuleCatalog.cs",
 "region":  {
 "startLine":  9,
@@ -28,15 +24,12 @@ null
 "endLine":  9,
 "endColumn":  56
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"etag\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Helpers\\CacheHelpersFixture.cs",
 "region":  {
 "startLine":  13,
@@ -44,15 +37,12 @@ null
 "endLine":  13,
 "endColumn":  28
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"lastModified\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Helpers\\CacheHelpersFixture.cs",
 "region":  {
 "startLine":  15,
@@ -60,15 +50,12 @@ null
 "endLine":  15,
 "endColumn":  38
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"provider\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Cryptography\\RijndaelEncryptionProviderFixture.cs",
 "region":  {
 "startLine":  9,
@@ -76,15 +63,12 @@ null
 "endLine":  9,
 "endColumn":  52
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"bootstrapper\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\DefaultNancyBootstrapperModuleCatalogFixture.cs",
 "region":  {
 "startLine":  10,
@@ -92,15 +76,12 @@ null
 "endLine":  10,
 "endColumn":  46
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"moduleRegistrations\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\DefaultNancyBootstrapperModuleCatalogFixture.cs",
 "region":  {
 "startLine":  29,
@@ -108,15 +89,12 @@ null
 "endLine":  29,
 "endColumn":  72
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"buffer\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\HttpMultipartBufferFixture.cs",
 "region":  {
 "startLine":  9,
@@ -124,15 +102,12 @@ null
 "endLine":  9,
 "endColumn":  43
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"converter\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultConverters\\CollectionConverterFixture.cs",
 "region":  {
 "startLine":  15,
@@ -140,15 +115,12 @@ null
 "endLine":  15,
 "endColumn":  41
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"context\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultConverters\\CollectionConverterFixture.cs",
 "region":  {
 "startLine":  16,
@@ -156,15 +128,12 @@ null
 "endLine":  16,
 "endColumn":  39
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"mockStringTypeConverter\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultConverters\\CollectionConverterFixture.cs",
 "region":  {
 "startLine":  17,
@@ -172,15 +141,12 @@ null
 "endLine":  17,
 "endColumn":  55
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"converter\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultConverters\\FallbackConverterFixture.cs",
 "region":  {
 "startLine":  13,
@@ -188,15 +154,12 @@ null
 "endLine":  13,
 "endColumn":  41
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"negotiator\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRequestDispatcherFixture.cs",
 "region":  {
 "startLine":  24,
@@ -204,15 +167,12 @@ null
 "endLine":  24,
 "endColumn":  47
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_Provider\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRouteCacheProviderFixture.cs",
 "region":  {
 "startLine":  11,
@@ -220,15 +180,12 @@ null
 "endLine":  11,
 "endColumn":  46
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_RouteCache\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRouteCacheProviderFixture.cs",
 "region":  {
 "startLine":  12,
@@ -236,15 +193,12 @@ null
 "endLine":  12,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"rijndaelEncryptionProvider\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Sessions\\CookieBasedSessionsFixture.cs",
 "region":  {
 "startLine":  29,
@@ -252,15 +206,12 @@ null
 "endLine":  29,
 "endColumn":  70
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"defaultHmacProvider\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Sessions\\CookieBasedSessionsFixture.cs",
 "region":  {
 "startLine":  31,
@@ -268,15 +219,12 @@ null
 "endLine":  31,
 "endColumn":  56
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"defaultObjectSerializer\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Sessions\\CookieBasedSessionsFixture.cs",
 "region":  {
 "startLine":  33,
@@ -284,15 +232,12 @@ null
 "endLine":  33,
 "endColumn":  58
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"serializer\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Sessions\\DefaultSessionObjectFormatterFixture.cs",
 "region":  {
 "startLine":  9,
@@ -300,15 +245,12 @@ null
 "endLine":  9,
 "endColumn":  51
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"provider\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Sessions\\NullSessionProviderFixture.cs",
 "region":  {
 "startLine":  11,
@@ -316,15 +258,12 @@ null
 "endLine":  11,
 "endColumn":  45
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"views\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\ViewEngineStartupFixture.cs",
 "region":  {
 "startLine":  13,
@@ -332,9 +271,7 @@ null
 "endLine":  13,
 "endColumn":  48
 }
-},
-null
-]
+}
 }
 ]
 }

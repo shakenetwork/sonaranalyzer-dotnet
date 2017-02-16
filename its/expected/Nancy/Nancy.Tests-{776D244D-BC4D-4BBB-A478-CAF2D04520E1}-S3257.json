@@ -3,8 +3,7 @@
 {
 "id":  "S3257",
 "message":  "Remove the array type; it is redundant.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultModelBinderLocatorFixture.cs",
 "region":  {
 "startLine":  44,
@@ -12,15 +11,12 @@
 "endLine":  44,
 "endColumn":  73
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3257",
 "message":  "Remove the array type; it is redundant.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultModelBinderLocatorFixture.cs",
 "region":  {
 "startLine":  56,
@@ -28,15 +24,12 @@ null
 "endLine":  56,
 "endColumn":  73
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3257",
 "message":  "Remove the array type; it is redundant.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultModelBinderLocatorFixture.cs",
 "region":  {
 "startLine":  68,
@@ -44,9 +37,7 @@ null
 "endLine":  68,
 "endColumn":  73
 }
-},
-null
-]
+}
 }
 ]
 }

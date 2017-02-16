@@ -3,8 +3,7 @@
 {
 "id":  "S101",
 "message":  "Rename class \"FSMBase\" to match camel case naming rules, consider using \"FsmBase\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\FSM.cs",
 "region":  {
 "startLine":  21,
@@ -12,15 +11,12 @@
 "endLine":  21,
 "endColumn":  34
 }
-},
-null
-]
+}
 },
 {
 "id":  "S101",
 "message":  "Rename class \"FSM\" to match camel case naming rules, consider using \"Fsm\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\FSM.cs",
 "region":  {
 "startLine":  385,
@@ -28,15 +24,12 @@ null
 "endLine":  385,
 "endColumn":  30
 }
-},
-null
-]
+}
 },
 {
 "id":  "S101",
 "message":  "Rename interface \"ILoggingFSM\" to match camel case naming rules, consider using \"ILoggingFsm\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\FSM.cs",
 "region":  {
 "startLine":  978,
@@ -44,15 +37,12 @@ null
 "endLine":  978,
 "endColumn":  33
 }
-},
-null
-]
+}
 },
 {
 "id":  "S101",
 "message":  "Rename interface \"IInternalSupportsTestFSMRef\" to match camel case naming rules, consider using \"IInternalSupportsTestFsmRef\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Internal\\InternalSupportsTestFSMRef.cs",
 "region":  {
 "startLine":  15,
@@ -60,15 +50,12 @@ null
 "endLine":  15,
 "endColumn":  49
 }
-},
-null
-]
+}
 },
 {
 "id":  "S101",
 "message":  "Rename class \"SO\" to match camel case naming rules, consider using \"So\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\Inet.cs",
 "region":  {
 "startLine":  46,
@@ -76,15 +63,12 @@ null
 "endLine":  46,
 "endColumn":  31
 }
-},
-null
-]
+}
 },
 {
 "id":  "S101",
 "message":  "Rename class \"IOExtension\" to match camel case naming rules, consider using \"IoExtension\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\IO.cs",
 "region":  {
 "startLine":  12,
@@ -92,15 +76,12 @@ null
 "endLine":  12,
 "endColumn":  38
 }
-},
-null
-]
+}
 },
 {
 "id":  "S101",
 "message":  "Rename class \"SO\" to match camel case naming rules, consider using \"So\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\Udp.cs",
 "region":  {
 "startLine":  264,
@@ -108,9 +89,7 @@ null
 "endLine":  264,
 "endColumn":  24
 }
-},
-null
-]
+}
 }
 ]
 }

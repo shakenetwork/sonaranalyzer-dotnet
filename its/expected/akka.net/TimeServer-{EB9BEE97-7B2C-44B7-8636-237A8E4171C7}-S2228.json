@@ -3,8 +3,7 @@
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\TimeServer\\TimeServer\\Program.cs",
 "region":  {
 "startLine":  23,
@@ -12,15 +11,12 @@
 "endLine":  23,
 "endColumn":  34
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2228",
 "message":  "Remove this logging statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\examples\\TimeServer\\TimeServer\\Program.cs",
 "region":  {
 "startLine":  24,
@@ -28,9 +24,7 @@ null
 "endLine":  24,
 "endColumn":  34
 }
-},
-null
-]
+}
 }
 ]
 }

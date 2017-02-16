@@ -3,8 +3,7 @@
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"count\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.cs",
 "region":  {
 "startLine":  209,
@@ -12,15 +11,12 @@
 "endLine":  209,
 "endColumn":  42
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"shouldHandle\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\ReceivePersistentActorTests.cs",
 "region":  {
 "startLine":  222,
@@ -28,15 +24,12 @@ null
 "endLine":  222,
 "endColumn":  70
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3254",
 "message":  "Remove this default value assigned to parameter \"shouldHandle\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\ReceivePersistentActorTests.cs",
 "region":  {
 "startLine":  244,
@@ -44,9 +37,7 @@ null
 "endLine":  244,
 "endColumn":  78
 }
-},
-null
-]
+}
 }
 ]
 }

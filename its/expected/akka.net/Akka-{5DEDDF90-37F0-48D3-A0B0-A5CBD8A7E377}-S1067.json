@@ -3,8 +3,7 @@
 {
 "id":  "S1067",
 "message":  "Reduce the number of conditional operators (6) used in the expression (maximum allowed 3).",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorPath.cs",
 "region":  {
 "startLine":  120,
@@ -12,15 +11,12 @@
 "endLine":  120,
 "endColumn":  151
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1067",
 "message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorPath.cs",
 "region":  {
 "startLine":  121,
@@ -28,15 +24,12 @@ null
 "endLine":  121,
 "endColumn":  121
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1067",
 "message":  "Reduce the number of conditional operators (12) used in the expression (maximum allowed 3).",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Deploy.cs",
 "region":  {
 "startLine":  118,
@@ -44,15 +37,12 @@ null
 "endLine":  125,
 "endColumn":  111
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1067",
 "message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\FSM.cs",
 "region":  {
 "startLine":  310,
@@ -60,15 +50,12 @@ null
 "endLine":  310,
 "endColumn":  261
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1067",
 "message":  "Reduce the number of conditional operators (7) used in the expression (maximum allowed 3).",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Dispatch\\ConcurrentQueueMailbox.cs",
 "region":  {
 "startLine":  41,
@@ -76,15 +63,12 @@ null
 "endLine":  125,
 "endColumn":  14
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1067",
 "message":  "Reduce the number of conditional operators (7) used in the expression (maximum allowed 3).",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Dispatch\\GenericMailbox.cs",
 "region":  {
 "startLine":  62,
@@ -92,15 +76,12 @@ null
 "endLine":  146,
 "endColumn":  14
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1067",
 "message":  "Reduce the number of conditional operators (6) used in the expression (maximum allowed 3).",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Routing\\Resizer.cs",
 "region":  {
 "startLine":  61,
@@ -108,9 +89,7 @@ null
 "endLine":  61,
 "endColumn":  311
 }
-},
-null
-]
+}
 }
 ]
 }

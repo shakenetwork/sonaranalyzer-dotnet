@@ -3,8 +3,7 @@
 {
 "id":  "S2933",
 "message":  "Make \"_log\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorProducerPipeline.cs",
 "region":  {
 "startLine":  197,
@@ -12,15 +11,12 @@
 "endLine":  197,
 "endColumn":  43
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"Actor\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Exceptions.cs",
 "region":  {
 "startLine":  352,
@@ -28,15 +24,12 @@ null
 "endLine":  352,
 "endColumn":  32
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"e\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Exceptions.cs",
 "region":  {
 "startLine":  353,
@@ -44,15 +37,12 @@ null
 "endLine":  353,
 "endColumn":  28
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"exception\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Exceptions.cs",
 "region":  {
 "startLine":  354,
@@ -60,15 +50,12 @@ null
 "endLine":  354,
 "endColumn":  36
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"optionalMessage\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Exceptions.cs",
 "region":  {
 "startLine":  355,
@@ -76,15 +63,12 @@ null
 "endLine":  355,
 "endColumn":  39
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_mcn\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Futures.cs",
 "region":  {
 "startLine":  111,
@@ -92,15 +76,12 @@ null
 "endLine":  111,
 "endColumn":  37
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_size\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Inbox.Actor.cs",
 "region":  {
 "startLine":  27,
@@ -108,15 +89,12 @@ null
 "endLine":  27,
 "endColumn":  26
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_log\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Inbox.Actor.cs",
 "region":  {
 "startLine":  28,
@@ -124,15 +102,12 @@ null
 "endLine":  28,
 "endColumn":  37
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_cell\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\LocalActorRef.cs",
 "region":  {
 "startLine":  25,
@@ -140,15 +115,12 @@ null
 "endLine":  25,
 "endColumn":  32
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"producer\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Props.cs",
 "region":  {
 "startLine":  163,
@@ -156,15 +128,12 @@ null
 "endLine":  163,
 "endColumn":  48
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_shouldUnhandle\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ReceiveActor.cs",
 "region":  {
 "startLine":  20,
@@ -172,15 +141,12 @@ null
 "endLine":  20,
 "endColumn":  37
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_log\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Scheduler\\DedicatedThreadScheduler.cs",
 "region":  {
 "startLine":  19,
@@ -188,15 +154,12 @@ null
 "endLine":  19,
 "endColumn":  37
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_dispatcherConfigurators\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Dispatch\\Dispatchers.cs",
 "region":  {
 "startLine":  124,
@@ -204,15 +167,12 @@ null
 "endLine":  124,
 "endColumn":  101
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"respondTo\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Dispatch\\FutureActor.cs",
 "region":  {
 "startLine":  18,
@@ -220,15 +180,12 @@ null
 "endLine":  18,
 "endColumn":  36
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"result\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Dispatch\\FutureActor.cs",
 "region":  {
 "startLine":  19,
@@ -236,15 +193,12 @@ null
 "endLine":  19,
 "endColumn":  52
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_cacheCleanup\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\SimpleDnsManager.cs",
 "region":  {
 "startLine":  19,
@@ -252,15 +206,12 @@ null
 "endLine":  19,
 "endColumn":  52
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_cleanupTimer\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\SimpleDnsManager.cs",
 "region":  {
 "startLine":  20,
@@ -268,15 +219,12 @@ null
 "endLine":  20,
 "endColumn":  42
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_selector\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\UdpListener.cs",
 "region":  {
 "startLine":  30,
@@ -284,15 +232,12 @@ null
 "endLine":  30,
 "endColumn":  36
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_hashMapping\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Routing\\ConsistentHashRouter.cs",
 "region":  {
 "startLine":  116,
@@ -300,15 +245,12 @@ null
 "endLine":  116,
 "endColumn":  51
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"resizer\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Routing\\ResizablePoolCell.cs",
 "region":  {
 "startLine":  25,
@@ -316,15 +258,12 @@ null
 "endLine":  25,
 "endColumn":  32
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_resizeInProgress\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Routing\\ResizablePoolCell.cs",
 "region":  {
 "startLine":  29,
@@ -332,15 +271,12 @@ null
 "endLine":  29,
 "endColumn":  48
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_resizeCounter\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Routing\\ResizablePoolCell.cs",
 "region":  {
 "startLine":  30,
@@ -348,15 +284,12 @@ null
 "endLine":  30,
 "endColumn":  49
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_pool\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Routing\\ResizablePoolCell.cs",
 "region":  {
 "startLine":  32,
@@ -364,15 +297,12 @@ null
 "endLine":  32,
 "endColumn":  27
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_within\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Routing\\ScatterGatherFirstCompleted.cs",
 "region":  {
 "startLine":  25,
@@ -380,15 +310,12 @@ null
 "endLine":  25,
 "endColumn":  33
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_routees\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Routing\\ScatterGatherFirstCompleted.cs",
 "region":  {
 "startLine":  60,
@@ -396,15 +323,12 @@ null
 "endLine":  60,
 "endColumn":  34
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_within\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Routing\\ScatterGatherFirstCompleted.cs",
 "region":  {
 "startLine":  61,
@@ -412,15 +336,12 @@ null
 "endLine":  61,
 "endColumn":  33
 }
-},
-null
-]
+}
 },
 {
 "id":  "S2933",
 "message":  "Make \"_within\" \"readonly\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Routing\\ScatterGatherFirstCompleted.cs",
 "region":  {
 "startLine":  284,
@@ -428,9 +349,7 @@ null
 "endLine":  284,
 "endColumn":  34
 }
-},
-null
-]
+}
 }
 ]
 }

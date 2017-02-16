@@ -3,8 +3,7 @@
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"system\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\MultiNodeSpec.cs",
 "region":  {
 "startLine":  534,
@@ -12,15 +11,12 @@
 "endLine":  534,
 "endColumn":  39
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1226",
 "message":  "Introduce a new variable instead of reusing the parameter \"a\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
 "region":  {
 "startLine":  120,
@@ -28,9 +24,7 @@ null
 "endLine":  120,
 "endColumn":  82
 }
-},
-null
-]
+}
 }
 ]
 }

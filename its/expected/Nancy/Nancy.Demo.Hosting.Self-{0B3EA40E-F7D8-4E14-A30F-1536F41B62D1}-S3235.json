@@ -3,8 +3,7 @@
 {
 "id":  "S3235",
 "message":  "Remove these redundant parentheses.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Demo.Hosting.Self\\TestModule.cs",
 "region":  {
 "startLine":  22,
@@ -12,15 +11,12 @@
 "endLine":  22,
 "endColumn":  40
 }
-},
-null
-]
+}
 },
 {
 "id":  "S3235",
 "message":  "Remove these redundant parentheses.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Demo.Hosting.Self\\TestModule.cs",
 "region":  {
 "startLine":  29,
@@ -28,9 +24,7 @@ null
 "endLine":  29,
 "endColumn":  40
 }
-},
-null
-]
+}
 }
 ]
 }

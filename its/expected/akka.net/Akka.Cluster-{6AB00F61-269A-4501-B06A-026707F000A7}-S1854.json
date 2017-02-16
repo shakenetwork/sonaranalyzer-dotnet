@@ -3,8 +3,7 @@
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"set\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Proto\\ClusterMessageSerializer.cs",
 "region":  {
 "startLine":  334,
@@ -12,15 +11,12 @@
 "endLine":  334,
 "endColumn":  87
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"observerRows\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Reachability.cs",
 "region":  {
 "startLine":  165,
@@ -28,15 +24,12 @@ null
 "endLine":  165,
 "endColumn":  75
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"oldRecord\".",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Reachability.cs",
 "region":  {
 "startLine":  206,
@@ -44,9 +37,7 @@ null
 "endLine":  206,
 "endColumn":  36
 }
-},
-null
-]
+}
 }
 ]
 }

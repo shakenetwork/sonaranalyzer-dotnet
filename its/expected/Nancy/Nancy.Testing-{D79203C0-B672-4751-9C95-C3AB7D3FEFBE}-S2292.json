@@ -3,8 +3,7 @@
 {
 "id":  "S2292",
 "message":  "Make this an auto-implemented property and remove its backing field.",
-"location":  [
-{
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Testing\\Fakes\\FakeRootPathProvider.cs",
 "region":  {
 "startLine":  13,
@@ -12,9 +11,7 @@
 "endLine":  13,
 "endColumn":  38
 }
-},
-null
-]
+}
 }
 ]
 }

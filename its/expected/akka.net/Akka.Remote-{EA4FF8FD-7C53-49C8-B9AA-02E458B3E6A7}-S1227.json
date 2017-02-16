@@ -3,8 +3,7 @@
 {
 "id":  "S1227",
 "message":  "Refactor the code in order to remove this break statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\DefaultFailureDetectorRegistry.cs",
 "region":  {
 "startLine":  97,
@@ -12,15 +11,12 @@
 "endLine":  97,
 "endColumn":  23
 }
-},
-null
-]
+}
 },
 {
 "id":  "S1227",
 "message":  "Refactor the code in order to remove this break statement.",
-"location":  [
-{
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\DefaultFailureDetectorRegistry.cs",
 "region":  {
 "startLine":  108,
@@ -28,9 +24,7 @@ null
 "endLine":  108,
 "endColumn":  23
 }
-},
-null
-]
+}
 }
 ]
 }
