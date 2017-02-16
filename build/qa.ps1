@@ -72,7 +72,6 @@ Get-ChildItem .\sha1.properties | ForEach-Object {
 }
 
 #checkout commit
-git pull origin $GITHUB_BRANCH
 git fetch --tags --progress git@github.com:$env:GITHUB_REPOSITORY_OWNER_NAME/$env:CI_BUILD_NAME.git +refs/heads/*:refs/remotes/origin/*
 testExitCode
 git checkout -f $sha1
@@ -101,6 +100,9 @@ if ($env:FILENAME -like '*Scanner*') {
 Write-Host "Copying analyzers"
 Copy-Item .\analyzers\*.dll .\src\$dllpath\bin\Release -force
 Copy-Item .\analyzers\*.dll .\its\binaries -force
+
+dir .\src\$dllpath\bin\Release
+dir .\its\binaries
 
 #run tests
 Write-Host "Start tests"
