@@ -2,7 +2,7 @@
 "issues":  [
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 21 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 18 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\BarrierCoordinator.cs",
 "region":  {
@@ -15,7 +15,7 @@
 },
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 28 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Conductor.cs",
 "region":  {
@@ -28,20 +28,7 @@
 },
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Controller.cs",
-"region":  {
-"startLine":  230,
-"startColumn":  47,
-"endLine":  230,
-"endColumn":  65
-}
-}
-},
-{
-"id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 39 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 27 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Controller.cs",
 "region":  {
@@ -54,7 +41,7 @@
 },
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 36 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 20 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\MsgDecoder.cs",
 "region":  {
@@ -67,20 +54,7 @@
 },
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
-"region":  {
-"startLine":  68,
-"startColumn":  37,
-"endLine":  68,
-"endColumn":  46
-}
-}
-},
-{
-"id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 69 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 44 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
 "region":  {

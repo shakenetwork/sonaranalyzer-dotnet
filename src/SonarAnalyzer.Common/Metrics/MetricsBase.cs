@@ -158,17 +158,15 @@ namespace SonarAnalyzer.Common
 
         #region Complexity
 
-        protected abstract bool IsReturnButNotLast(SyntaxNode node);
-
         protected abstract bool IsComplexityIncreasingKind(SyntaxNode node);
 
         public int Complexity => GetComplexity(tree.GetRoot());
 
-        public int GetComplexity(SyntaxNode node) => node.DescendantNodesAndSelf()
-            .Count(n =>
-                IsComplexityIncreasingKind(n) ||
-                IsReturnButNotLast(n) ||
-                IsFunction(n));
+        public int GetComplexity(SyntaxNode node) =>
+            node.DescendantNodesAndSelf()
+                .Count(n =>
+                    IsComplexityIncreasingKind(n) ||
+                    IsFunction(n));
 
         public Distribution FunctionComplexityDistribution
         {

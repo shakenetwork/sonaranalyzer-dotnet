@@ -28,7 +28,7 @@
 },
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 26 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
@@ -41,52 +41,13 @@
 },
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 19 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
 "startLine":  479,
 "startColumn":  24,
 "endLine":  479,
-"endColumn":  33
-}
-}
-},
-{
-"id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteActorRefProvider.cs",
-"region":  {
-"startLine":  142,
-"startColumn":  34,
-"endLine":  142,
-"endColumn":  41
-}
-}
-},
-{
-"id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteActorRefProvider.cs",
-"region":  {
-"startLine":  310,
-"startColumn":  26,
-"endLine":  310,
-"endColumn":  41
-}
-}
-},
-{
-"id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteActorRefProvider.cs",
-"region":  {
-"startLine":  452,
-"startColumn":  26,
-"endLine":  452,
 "endColumn":  33
 }
 }
@@ -119,33 +80,7 @@
 },
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaPduCodec.cs",
-"region":  {
-"startLine":  275,
-"startColumn":  26,
-"endLine":  275,
-"endColumn":  42
-}
-}
-},
-{
-"id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
-"region":  {
-"startLine":  510,
-"startColumn":  22,
-"endLine":  510,
-"endColumn":  35
-}
-}
-},
-{
-"id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
 "region":  {
@@ -158,7 +93,7 @@
 },
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 49 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 26 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
 "region":  {

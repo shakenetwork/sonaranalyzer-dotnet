@@ -2,33 +2,7 @@
 "issues":  [
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Persistence\\Eventsourced.Recovery.cs",
-"region":  {
-"startLine":  65,
-"startColumn":  35,
-"endLine":  65,
-"endColumn":  50
-}
-}
-},
-{
-"id":  "S1541",
 "message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Persistence\\Eventsourced.Recovery.cs",
-"region":  {
-"startLine":  259,
-"startColumn":  22,
-"endLine":  259,
-"endColumn":  51
-}
-}
-},
-{
-"id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot\\SnapshotStore.cs",
 "region":  {

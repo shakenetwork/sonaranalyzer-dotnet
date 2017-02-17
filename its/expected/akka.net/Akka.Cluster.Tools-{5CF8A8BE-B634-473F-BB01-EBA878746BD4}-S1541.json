@@ -2,7 +2,7 @@
 "issues":  [
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 20 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 19 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterReceptionist.cs",
 "region":  {
@@ -28,7 +28,7 @@
 },
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Internal\\Topics.cs",
 "region":  {
@@ -41,33 +41,7 @@
 },
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Serialization\\DistributedPubSubMessageSerializer.cs",
-"region":  {
-"startLine":  57,
-"startColumn":  32,
-"endLine":  57,
-"endColumn":  40
-}
-}
-},
-{
-"id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Serialization\\DistributedPubSubMessageSerializer.cs",
-"region":  {
-"startLine":  78,
-"startColumn":  32,
-"endLine":  78,
-"endColumn":  40
-}
-}
-},
-{
-"id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 146 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 92 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManager.cs",
 "region":  {
@@ -75,19 +49,6 @@
 "startColumn":  22,
 "endLine":  378,
 "endColumn":  35
-}
-}
-},
-{
-"id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\Serialization\\ClusterSingletonMessageSerializer.cs",
-"region":  {
-"startLine":  66,
-"startColumn":  32,
-"endLine":  66,
-"endColumn":  40
 }
 }
 }

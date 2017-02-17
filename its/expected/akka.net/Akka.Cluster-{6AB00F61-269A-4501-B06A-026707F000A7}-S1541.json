@@ -2,7 +2,7 @@
 "issues":  [
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 19 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\AutoDown.cs",
 "region":  {
@@ -10,19 +10,6 @@
 "startColumn":  33,
 "endLine":  111,
 "endColumn":  42
-}
-}
-},
-{
-"id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterActorRefProvider.cs",
-"region":  {
-"startLine":  94,
-"startColumn":  32,
-"endLine":  94,
-"endColumn":  43
 }
 }
 },
@@ -67,7 +54,7 @@
 },
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 28 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 21 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
 "region":  {
@@ -80,7 +67,7 @@
 },
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
 "region":  {
@@ -106,20 +93,7 @@
 },
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
-"region":  {
-"startLine":  520,
-"startColumn":  30,
-"endLine":  520,
-"endColumn":  43
-}
-}
-},
-{
-"id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterRemoteWatcher.cs",
 "region":  {
@@ -132,20 +106,7 @@
 },
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\Member.cs",
-"region":  {
-"startLine":  147,
-"startColumn":  24,
-"endLine":  147,
-"endColumn":  31
-}
-}
-},
-{
-"id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 21 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Member.cs",
 "region":  {
@@ -158,7 +119,7 @@
 },
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 25 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Proto\\ClusterMessageSerializer.cs",
 "region":  {
@@ -171,7 +132,7 @@
 },
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 25 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Proto\\ClusterMessageSerializer.cs",
 "region":  {
@@ -184,7 +145,7 @@
 },
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 18 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Reachability.cs",
 "region":  {
@@ -210,7 +171,7 @@
 },
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 31 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 18 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\VectorClock.cs",
 "region":  {

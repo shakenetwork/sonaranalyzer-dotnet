@@ -2,7 +2,7 @@
 "issues":  [
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
 "location":  {
 "uri":  "Ember-MM\\Ember.Plugins\\PluginSectionHandler.cs",
 "region":  {
@@ -10,32 +10,6 @@
 "startColumn":  23,
 "endLine":  46,
 "endColumn":  29
-}
-}
-},
-{
-"id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
-"uri":  "Ember-MM\\Ember.Plugins\\Scraper\\MovieScraperManager.cs",
-"region":  {
-"startLine":  67,
-"startColumn":  35,
-"endLine":  67,
-"endColumn":  50
-}
-}
-},
-{
-"id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
-"uri":  "Ember-MM\\Ember.Plugins\\Scraper\\MovieScraperManager.cs",
-"region":  {
-"startLine":  107,
-"startColumn":  35,
-"endLine":  107,
-"endColumn":  51
 }
 }
 }

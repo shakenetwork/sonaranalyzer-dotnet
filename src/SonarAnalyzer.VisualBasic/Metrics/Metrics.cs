@@ -72,39 +72,6 @@ namespace SonarAnalyzer.Common.VisualBasic
         protected override bool IsComplexityIncreasingKind(SyntaxNode node) =>
             ComplexityIncreasingKinds.Contains(node.Kind());
 
-        protected override bool IsReturnButNotLast(SyntaxNode node)
-        {
-            if (!node.IsKind(SyntaxKind.ReturnStatement))
-            {
-                return false;
-            }
-
-            var blockType = node.Parent.GetType();
-            if (!BlockTypes.Any(bType => bType.IsAssignableFrom(blockType)))
-            {
-                return true;
-            }
-
-            if (!IsFunctionLike(node.Parent))
-            {
-                return true;
-            }
-
-            var nextToken = node.GetLastToken().GetNextToken();
-            var nextNode = nextToken.Parent;
-
-            return !nextToken.IsKind(SyntaxKind.EndKeyword) ||
-                node.Parent != nextNode.Parent;
-        }
-
-        private static bool IsFunctionLike(SyntaxNode node) =>
-            node.IsKind(SyntaxKind.FunctionBlock) ||
-            node.IsKind(SyntaxKind.OperatorBlock) ||
-            node.IsKind(SyntaxKind.MultiLineFunctionLambdaExpression) ||
-            node.IsKind(SyntaxKind.SingleLineFunctionLambdaExpression) ||
-            node.IsKind(SyntaxKind.GetAccessorBlock);
-
-
         private static readonly ISet<SyntaxKind> TriviaKinds = ImmutableHashSet.Create(
             SyntaxKind.CommentTrivia,
             SyntaxKind.DocumentationCommentExteriorTrivia,
@@ -142,25 +109,6 @@ namespace SonarAnalyzer.Common.VisualBasic
             SyntaxKind.RaiseEventAccessorBlock,
             SyntaxKind.AddHandlerAccessorBlock,
             SyntaxKind.RemoveHandlerAccessorBlock
-        );
-
-        private static readonly ISet<Type> BlockTypes = ImmutableHashSet.Create(
-            typeof(MethodBlockBaseSyntax),
-            typeof(CaseBlockSyntax),
-            typeof(CatchBlockSyntax),
-            typeof(DoLoopBlockSyntax),
-            typeof(ElseBlockSyntax),
-            typeof(ElseIfBlockSyntax),
-            typeof(EventBlockSyntax),
-            typeof(FinallyBlockSyntax),
-            typeof(ForOrForEachBlockSyntax),
-            typeof(MultiLineIfBlockSyntax),
-            typeof(SyncLockBlockSyntax),
-            typeof(TryBlockSyntax),
-            typeof(UsingBlockSyntax),
-            typeof(WhileBlockSyntax),
-            typeof(WithBlockSyntax),
-            typeof(MultiLineLambdaExpressionSyntax)
         );
 
         private static readonly ISet<SyntaxKind> ComplexityIncreasingKinds = ImmutableHashSet.Create(

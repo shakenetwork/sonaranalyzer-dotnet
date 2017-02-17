@@ -407,74 +407,143 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
         [TestCategory(MetricsTestCategoryName)]
         public void Complexity()
         {
-            Complexity(AnalyzerLanguage.CSharp, "").Should().Be(0);
-            Complexity(AnalyzerLanguage.CSharp, "class MyClass { }").Should().Be(0);
-            Complexity(AnalyzerLanguage.CSharp, "abstract class MyClass { abstract void MyMethod(); }").Should().Be(0);
-            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod() { } }").Should().Be(1);
-            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod() { return; } }").Should().Be(1);
-            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod() { return; return; } }").Should().Be(2);
-            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod() { { return; } } }").Should().Be(2);
-            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod() { if (false) { } } }").Should().Be(2);
-            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod() { if (false) { } else { } } }").Should().Be(2);
-            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod(int p) { switch (p) { default: break; } } }").Should().Be(2);
-            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod(int p) { switch (p) { case 0: break; default: break; } } }").Should().Be(3);
-            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod(int p) { foo: ; } }").Should().Be(2);
-            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod(int p) { do { } while (false); } }").Should().Be(2);
-            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod(int p) { for (;;) { } } }").Should().Be(2);
-            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod(List<int> p) { foreach (var i in p) { } } }").Should().Be(2);
-            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod(int p) { var a = false; } }").Should().Be(1);
-            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod(int p) { var a = false && false; } }").Should().Be(2);
-            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod(int p) { var a = false || true; } }").Should().Be(2);
-            Complexity(AnalyzerLanguage.CSharp, "class MyClass { int MyProperty { get; set; } }").Should().Be(2);
-            Complexity(AnalyzerLanguage.CSharp, "class MyClass { int MyProperty { get {} set {} } }").Should().Be(2);
-            Complexity(AnalyzerLanguage.CSharp, "class MyClass { public MyClass() { } }").Should().Be(1);
-            Complexity(AnalyzerLanguage.CSharp, "class MyClass { ~MyClass() { } }").Should().Be(1);
-            Complexity(AnalyzerLanguage.CSharp, "class MyClass { public static MyClass operator +(MyClass a) { return a; } }").Should().Be(1);
-            Complexity(AnalyzerLanguage.CSharp, "class MyClass { public event EventHandler OnSomething { add { } remove {} } }").Should().Be(2);
+            Complexity(AnalyzerLanguage.CSharp, "")
+                .Should().Be(0);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { }")
+                .Should().Be(0);
+            Complexity(AnalyzerLanguage.CSharp, "abstract class MyClass { abstract void MyMethod(); }")
+                .Should().Be(0);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod() { } }")
+                .Should().Be(1);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod() { return; } }")
+                .Should().Be(1);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod() { return; return; } }")
+                .Should().Be(1);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod() { { return; } } }")
+                .Should().Be(1);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod() { if (false) { } } }")
+                .Should().Be(2);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod() { if (false) { } else { } } }")
+                .Should().Be(2);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod() { var t = false ? 0 : 1; } }")
+                .Should().Be(2);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod(int p) { switch (p) { default: break; } } }")
+                .Should().Be(1);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod(int p) { switch (p) { case 0: break; default: break; } } }")
+                .Should().Be(2);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod(int p) { foo: ; } }")
+                .Should().Be(1);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod(int p) { do { } while (false); } }")
+                .Should().Be(2);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod(int p) { for (;;) { } } }")
+                .Should().Be(2);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod(List<int> p) { foreach (var i in p) { } } }")
+                .Should().Be(2);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod(int p) { var a = false; } }")
+                .Should().Be(1);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod(int p) { var a = false && false; } }")
+                .Should().Be(2);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod(int p) { var a = false || true; } }")
+                .Should().Be(2);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { int MyProperty { get; set; } }")
+                .Should().Be(2);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { int MyProperty { get {} set {} } }")
+                .Should().Be(2);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { public MyClass() { } }")
+                .Should().Be(1);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { ~MyClass() { } }")
+                .Should().Be(1);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { public static MyClass operator +(MyClass a) { return a; } }")
+                .Should().Be(1);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { public event EventHandler OnSomething { add { } remove {} } }")
+                .Should().Be(2);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod() { var t = null ?? 0; } }")
+                .Should().Be(2);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod() { int? t = null; t?.ToString(); } }")
+                .Should().Be(2);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod() { throw new Exception(); } }")
+               .Should().Be(1);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod() { try { } catch(Exception e) { } } }")
+               .Should().Be(1);
+            Complexity(AnalyzerLanguage.CSharp, "class MyClass { void MyMethod() { goto Foo; Foo: var i = 0; } }")
+               .Should().Be(1);
 
-            Complexity(AnalyzerLanguage.VisualBasic, "").Should().Be(0);
-            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n End Class").Should().Be(0);
-            Complexity(AnalyzerLanguage.VisualBasic, "MustInherit Class MyClass \n Private MustOverride Sub MyMethod() \n End Class").Should().Be(0);
-            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n End Sub \n End Class").Should().Be(1);
-            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Return \n End Sub \n End Class").Should().Be(2);
-            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Return \n Return \n End Sub \n End Class").Should().Be(3);
-            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n If False Then \n End If \n End Sub \n End Class").Should().Be(2);
-            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n If False Then \n Else \n End If \n End Sub \n End Class").Should().Be(2);
-            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Select Case p \n Case Else \n Exit Select \n End Select \n End Sub \n End Class").Should().Be(2);
+            Complexity(AnalyzerLanguage.VisualBasic, "")
+                .Should().Be(0);
+            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n End Class")
+                .Should().Be(0);
+            Complexity(AnalyzerLanguage.VisualBasic, "MustInherit Class MyClass \n Private MustOverride Sub MyMethod() \n End Class")
+                .Should().Be(0);
+            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n End Sub \n End Class")
+                .Should().Be(1);
+            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Return \n End Sub \n End Class")
+                .Should().Be(1);
+            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Return \n Return \n End Sub \n End Class")
+                .Should().Be(1);
+            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n If False Then \n End If \n End Sub \n End Class")
+                .Should().Be(2);
+            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n If False Then \n Else \n End If \n End Sub \n End Class")
+                .Should().Be(2);
+            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Select Case p \n Case Else \n Exit Select \n End Select \n End Sub \n End Class")
+                .Should().Be(2);
             Complexity(AnalyzerLanguage.VisualBasic,
                 "Class MyClass \n Sub MyMethod() \n Select Case p \n Case 3 \n Exit Select \n Case Else \n Exit Select \n " +
-                "End Select \n End Sub \n End Class").Should().Be(4);
-            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Foo: \n End Sub \n End Class").Should().Be(1);
-            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Do \n Loop While True \n End Sub \n End Class").Should().Be(2);
-            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n For i As Integer = 0 To -1 \n Next \n End Sub \n End Class").Should().Be(2);
-            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n For Each e As var In c \n Next\n End Sub \n End Class").Should().Be(2);
-            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Dim a As Boolean = False\n End Sub \n End Class").Should().Be(1);
-            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Dim a As Boolean = False And False\n End Sub \n End Class").Should().Be(1);
-            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Dim a As Boolean = False Or False\n End Sub \n End Class").Should().Be(1);
-            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public Property MyProperty As Integer \n End Class").Should().Be(0);
+                "End Select \n End Sub \n End Class")
+                .Should().Be(4);
+            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Foo: \n End Sub \n End Class")
+                .Should().Be(1);
+            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Do \n Loop While True \n End Sub \n End Class")
+                .Should().Be(2);
+            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n For i As Integer = 0 To -1 \n Next \n End Sub \n End Class")
+                .Should().Be(2);
+            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n For Each e As var In c \n Next\n End Sub \n End Class")
+                .Should().Be(2);
+            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Dim a As Boolean = False\n End Sub \n End Class")
+                .Should().Be(1);
+            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Dim a As Boolean = False And False\n End Sub \n End Class")
+                .Should().Be(1);
+            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Dim a As Boolean = False Or False\n End Sub \n End Class")
+                .Should().Be(1);
+            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public Property MyProperty As Integer \n End Class")
+                .Should().Be(0);
             Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public Property MyProperty As Integer \n Get \n End Get " +
-                "\n Set(value As Integer) \n End Set \n End Property \n End Class").Should().Be(2);
-            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub New() \n End Sub \n End Class").Should().Be(1);
-            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Protected Overrides Sub Finalize() \n End Sub \n End Class").Should().Be(1);
-            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public Shared Operator +(a As MyClass) As MyClass \n Return a \n End Operator \n End Class").Should().Be(1);
+                "\n Set(value As Integer) \n End Set \n End Property \n End Class")
+                .Should().Be(2);
+            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub New() \n End Sub \n End Class")
+                .Should().Be(1);
+            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Protected Overrides Sub Finalize() \n End Sub \n End Class")
+                .Should().Be(1);
+            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public Shared Operator +(a As MyClass) As MyClass \n Return a \n End Operator \n End Class")
+                .Should().Be(1);
             Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public Custom Event OnSomething As EventHandler \n " +
                 "AddHandler(ByVal value As EventHandler) \n End AddHandler \n RemoveHandler(ByVal value As EventHandler) \n " +
-                "End RemoveHandler \n End Event \n End Class").Should().Be(2);
+                "End RemoveHandler \n End Event \n End Class")
+                .Should().Be(2);
 
-            Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n Function Bar() \n Return 0\n End Function \n End Class\n End Module").Should().Be(1);
+            Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n Function Bar() \n Return 0\n End Function \n End Class\n End Module")
+                .Should().Be(1);
             Complexity(AnalyzerLanguage.VisualBasic,
                 "Module Module1\n Class Foo\n Function Bar() \n If False Then \n Return 1 \n Else \n Return 0 " +
-                "\n End If\n End Function\n End Class\n End Module").Should().Be(4);
-            Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n Function Foo() \n Dim foo = Sub() Return 42\n End Function\n End Class\n End Module").Should().Be(2);
-            Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n ReadOnly Property MyProp \n Get \n Return \"\" \n End Get \n End Property\n End Class\n End Module").Should().Be(1);
-            Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n Sub Foo() \n End Sub\n End Class\n End Module").Should().Be(1);
-            Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n Sub Foo() \n Dim Foo = If(True, True, False)\n End Sub\n End Class\n End Module").Should().Be(2);
-            Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n Sub Foo() \n Dim Foo = Function() 0\n End Sub\n End Class\n End Module").Should().Be(1);
+                "\n End If\n End Function\n End Class\n End Module")
+                .Should().Be(2);
+            Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n Function Foo() \n Dim foo = Sub() Return 42\n End Function\n End Class\n End Module")
+                .Should().Be(1);
+            Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n ReadOnly Property MyProp \n Get \n Return \"\" \n End Get \n End Property\n End Class\n End Module")
+                .Should().Be(1);
+            Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n Sub Foo() \n End Sub\n End Class\n End Module")
+                .Should().Be(1);
+            Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n Sub Foo() \n Dim Foo = If(True, True, False)\n End Sub\n End Class\n End Module")
+                .Should().Be(2);
+            Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n Sub Foo() \n Dim Foo = Function() 0\n End Sub\n End Class\n End Module")
+                .Should().Be(1);
             Complexity(AnalyzerLanguage.VisualBasic,
                 "Module Module1\n Class Foo\n Sub Foo() \n Dim Foo = Function() \n Return False \n " +
-                "End Function\n End Sub\n End Class\n End Module").Should().Be(1);
-            Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n Sub Foo() \n Throw New AccessViolationException()\n End Sub\n End Class\n End Module").Should().Be(2);
-            Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n Sub Foo() \n GoTo Foo\n End Sub\n End Class\n End Module").Should().Be(2);
+                "End Function\n End Sub\n End Class\n End Module")
+                .Should().Be(1);
+            Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n Sub Foo() \n Throw New AccessViolationException()\n End Sub\n End Class\n End Module")
+                .Should().Be(2);
+            Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n Sub Foo() \n GoTo Foo\n End Sub\n End Class\n End Module")
+                .Should().Be(2);
         }
 
         private static int Complexity(AnalyzerLanguage language, string text) => MetricsFor(language, text).Complexity;

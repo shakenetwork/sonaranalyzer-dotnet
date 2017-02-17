@@ -2,7 +2,7 @@
 "issues":  [
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 21 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
 "region":  {
@@ -15,7 +15,7 @@
 },
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
 "region":  {
@@ -28,7 +28,7 @@
 },
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 18 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
 "region":  {
@@ -36,19 +36,6 @@
 "startColumn":  33,
 "endLine":  581,
 "endColumn":  47
-}
-}
-},
-{
-"id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
-"region":  {
-"startLine":  413,
-"startColumn":  33,
-"endLine":  413,
-"endColumn":  40
 }
 }
 },

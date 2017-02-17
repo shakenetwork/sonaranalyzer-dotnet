@@ -2,7 +2,7 @@
 "issues":  [
 {
 "id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
 "location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Spark\\Descriptors\\BuildDescriptorParams.cs",
 "region":  {
@@ -10,19 +10,6 @@
 "startColumn":  30,
 "endLine":  73,
 "endColumn":  36
-}
-}
-},
-{
-"id":  "S1541",
-"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"location":  {
-"uri":  "Nancy\\src\\Nancy.ViewEngines.Spark\\Descriptors\\DefaultDescriptorBuilder.cs",
-"region":  {
-"startLine":  52,
-"startColumn":  44,
-"endLine":  52,
-"endColumn":  59
 }
 }
 }

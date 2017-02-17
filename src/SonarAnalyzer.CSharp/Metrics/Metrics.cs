@@ -139,18 +139,8 @@ namespace SonarAnalyzer.Common.CSharp
             }
         }
 
-        protected override bool IsReturnButNotLast(SyntaxNode node) =>
-            node.IsKind(SyntaxKind.ReturnStatement) && !IsLastStatement(node);
-
         protected override bool IsComplexityIncreasingKind(SyntaxNode node) =>
             ComplexityIncreasingKinds.Contains(node.Kind());
-
-        private bool IsLastStatement(SyntaxNode node)
-        {
-            var nextToken = node.GetLastToken().GetNextToken();
-            return nextToken.Parent.IsKind(SyntaxKind.Block) &&
-                IsFunction(nextToken.Parent.Parent);
-        }
 
         private static readonly ISet<SyntaxKind> TriviaKinds = ImmutableHashSet.Create(
             SyntaxKind.SingleLineCommentTrivia,
@@ -177,8 +167,6 @@ namespace SonarAnalyzer.Common.CSharp
             SyntaxKind.CoalesceExpression,
             SyntaxKind.ConditionalAccessExpression,
             SyntaxKind.ConditionalExpression,
-            SyntaxKind.SwitchStatement,
-            SyntaxKind.LabeledStatement,
             SyntaxKind.WhileStatement,
             SyntaxKind.DoStatement,
             SyntaxKind.ForStatement,
