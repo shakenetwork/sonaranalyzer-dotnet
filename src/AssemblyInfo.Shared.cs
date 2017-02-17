@@ -21,9 +21,9 @@
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyVersion("1.22.0")]
-[assembly: AssemblyFileVersion("1.22.0.0")]
-[assembly: AssemblyInformationalVersion("Version:1.22.0.0 Branch:not-set Sha1:not-set")]
+[assembly: AssemblyVersion("1.23.0")]
+[assembly: AssemblyFileVersion("1.23.0.0")]
+[assembly: AssemblyInformationalVersion("Version:1.23.0.0 Branch:not-set Sha1:not-set")]
 
 [assembly: AssemblyConfiguration("")]
 
