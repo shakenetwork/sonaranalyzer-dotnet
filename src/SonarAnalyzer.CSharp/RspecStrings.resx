@@ -1689,6 +1689,30 @@
   <data name="S2123_Title" xml:space="preserve">
     <value>Values should not be uselessly incremented</value>
   </data>
+  <data name="S2156_Category" xml:space="preserve">
+    <value>Sonar Code Smell</value>
+  </data>
+  <data name="S2156_Description" xml:space="preserve">
+    <value>The difference between private and protected visibility is that child classes can see and use protected members, but they cannot see private ones. Since a sealed class cannot have children, marking its members protected is confusingly pointless.</value>
+  </data>
+  <data name="S2156_IsActivatedByDefault" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="S2156_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S2156_RemediationCost" xml:space="preserve">
+    <value>5min</value>
+  </data>
+  <data name="S2156_Severity" xml:space="preserve">
+    <value>Minor</value>
+  </data>
+  <data name="S2156_Tags" xml:space="preserve">
+    <value>confusing</value>
+  </data>
+  <data name="S2156_Title" xml:space="preserve">
+    <value>"sealed" classes should not have "protected" members</value>
+  </data>
   <data name="S2178_Category" xml:space="preserve">
     <value>Sonar Bug</value>
   </data>
