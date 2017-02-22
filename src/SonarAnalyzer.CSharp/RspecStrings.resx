@@ -3537,6 +3537,30 @@
   <data name="S3246_Title" xml:space="preserve">
     <value>Generic type parameters should be co/contravariant when possible</value>
   </data>
+  <data name="S3247_Category" xml:space="preserve">
+    <value>Sonar Code Smell</value>
+  </data>
+  <data name="S3247_Description" xml:space="preserve">
+    <value>Because the is operator performs a cast if the object is not null, using is to check type and then casting the same argument to that type, necessarily performs two casts. The same result can be achieved more efficiently with a single cast using as, followed by a null-check.</value>
+  </data>
+  <data name="S3247_IsActivatedByDefault" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="S3247_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S3247_RemediationCost" xml:space="preserve">
+    <value>10min</value>
+  </data>
+  <data name="S3247_Severity" xml:space="preserve">
+    <value>Minor</value>
+  </data>
+  <data name="S3247_Tags" xml:space="preserve">
+    <value>performance</value>
+  </data>
+  <data name="S3247_Title" xml:space="preserve">
+    <value>Duplicate casts should not be made</value>
+  </data>
   <data name="S3249_Category" xml:space="preserve">
     <value>Sonar Bug</value>
   </data>
