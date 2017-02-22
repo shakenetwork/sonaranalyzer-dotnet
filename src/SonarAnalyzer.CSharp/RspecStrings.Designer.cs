@@ -70,7 +70,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased. Toreduce noise, two consecutive upper case characters are allowed unless they form the whole name. So, MyXMethod is compliant, butXM on its own is not..
+        ///   Looks up a localized string similar to Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased. To reduce noise, two consecutive upper case characters are allowed unless they form the whole name. So, MyXMethod is compliant, but XM on its own is not..
         /// </summary>
         internal static string S100_Description {
             get {
@@ -142,7 +142,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Default arguments are determined by the static type of the object. If a default argument is different for a parameter in an overriding method, thevalue used in the call will be different when calls are made via the base or derived object, which may be contrary to developer expectations. .
+        ///   Looks up a localized string similar to Default arguments are determined by the static type of the object. If a default argument is different for a parameter in an overriding method, the value used in the call will be different when calls are made via the base or derived object, which may be contrary to developer expectations. .
         /// </summary>
         internal static string S1006_Description {
             get {
@@ -214,7 +214,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased. To reduce noise, twoconsecutive upper case characters are allowed unless they form the whole type name. So, MyXClass is compliant, but XC on itsown is not..
+        ///   Looks up a localized string similar to Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased. To reduce noise, two consecutive upper case characters are allowed unless they form the whole type name. So, MyXClass is compliant, but XC on its own is not..
         /// </summary>
         internal static string S101_Description {
             get {
@@ -295,7 +295,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to True.
+        ///   Looks up a localized string similar to False.
         /// </summary>
         internal static string S103_IsActivatedByDefault {
             get {
@@ -358,7 +358,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A source file that grows too much tends to aggregate too many responsibilities and inevitably becomes harder to understand and therefore tomaintain. Above a specific threshold, it is strongly advised to refactor it into smaller pieces of code which focus on well defined tasks. Thosesmaller files will not only be easier to understand but also probably easier to test..
+        ///   Looks up a localized string similar to A source file that grows too much tends to aggregate too many responsibilities and inevitably becomes harder to understand and therefore to maintain. Above a specific threshold, it is strongly advised to refactor it into smaller pieces of code which focus on well defined tasks. Those smaller files will not only be easier to understand but also probably easier to test..
         /// </summary>
         internal static string S104_Description {
             get {
@@ -574,7 +574,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The complexity of an expression is defined by the number of &amp;amp;&amp;amp;, || and condition ? ifTrue : ifFalseoperators it contains..
+        ///   Looks up a localized string similar to The complexity of an expression is defined by the number of &amp;amp;&amp;amp;, || and condition ? ifTrue : ifFalse operators it contains..
         /// </summary>
         internal static string S1067_Description {
             get {
@@ -646,7 +646,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A long parameter list can indicate that a new structure should be created to wrap the numerous parameters or that the function is doing too manythings..
+        ///   Looks up a localized string similar to A long parameter list can indicate that a new structure should be created to wrap the numerous parameters or that the function is doing too many things..
         /// </summary>
         internal static string S107_Description {
             get {
@@ -790,7 +790,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Shared coding conventions make it possible for a team to efficiently collaborate. This rule makes it mandatory to place a close curly brace at thebeginning of a line..
+        ///   Looks up a localized string similar to Shared coding conventions make it possible for a team to efficiently collaborate. This rule makes it mandatory to place a close curly brace at the beginning of a line..
         /// </summary>
         internal static string S1109_Description {
             get {
@@ -934,7 +934,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Shadowing fields with a local variable is a bad practice that reduces code readability: it makes it confusing to know whether the field or thevariable is being used..
+        ///   Looks up a localized string similar to Shadowing fields with a local variable is a bad practice that reduces code readability: it makes it confusing to know whether the field or the variable is being used..
         /// </summary>
         internal static string S1117_Description {
             get {
@@ -1006,7 +1006,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Utility classes, which are collections of static members, are not meant to be instantiated. Even abstract utilityclasses, which can be extended, should not have public constructors..
+        ///   Looks up a localized string similar to Utility classes, which are collections of static members, are not meant to be instantiated. Even abstract utility classes, which can be extended, should not have public constructors..
         /// </summary>
         internal static string S1118_Description {
             get {
@@ -1065,6 +1065,78 @@ namespace SonarAnalyzer {
         internal static string S1118_Title {
             get {
                 return ResourceManager.GetString("S1118_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sonar Bug.
+        /// </summary>
+        internal static string S112_Category {
+            get {
+                return ResourceManager.GetString("S112_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Throwing such general exceptions as Exception, SystemException, ApplicationException, IndexOutOfRangeException, NullReferenceException, OutOfMemoryException and ExecutionEngineException prevents calling methods from handling true, system-generated exceptions differently than application-generated errors. .
+        /// </summary>
+        internal static string S112_Description {
+            get {
+                return ResourceManager.GetString("S112_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True.
+        /// </summary>
+        internal static string S112_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S112_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S112_Remediation {
+            get {
+                return ResourceManager.GetString("S112_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 20min.
+        /// </summary>
+        internal static string S112_RemediationCost {
+            get {
+                return ResourceManager.GetString("S112_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Major.
+        /// </summary>
+        internal static string S112_Severity {
+            get {
+                return ResourceManager.GetString("S112_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to cwe,error-handling,bug,cert.
+        /// </summary>
+        internal static string S112_Tags {
+            get {
+                return ResourceManager.GetString("S112_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to General exceptions should never be thrown.
+        /// </summary>
+        internal static string S112_Title {
+            get {
+                return ResourceManager.GetString("S112_Title", resourceCulture);
             }
         }
         
@@ -1330,7 +1402,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Private types or members that are never executed or referenced are dead code: unnecessary, inoperative code that should be removed. Cleaning outdead code decreases the size of the maintained codebase, making it easier to understand the program and preventing bugs from being introduced..
+        ///   Looks up a localized string similar to Private types or members that are never executed or referenced are dead code: unnecessary, inoperative code that should be removed. Cleaning out dead code decreases the size of the maintained codebase, making it easier to understand the program and preventing bugs from being introduced..
         /// </summary>
         internal static string S1144_Description {
             get {
@@ -1402,7 +1474,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to if statements with conditions that are always false have the effect of making blocks of code non-functional. ifstatements with conditions that are always true are completely redundant, and make the code less readable..
+        ///   Looks up a localized string similar to if statements with conditions that are always false have the effect of making blocks of code non-functional. if statements with conditions that are always true are completely redundant, and make the code less readable..
         /// </summary>
         internal static string S1145_Description {
             get {
@@ -1411,7 +1483,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to False.
+        ///   Looks up a localized string similar to True.
         /// </summary>
         internal static string S1145_IsActivatedByDefault {
             get {
@@ -1537,6 +1609,78 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sonar Bug.
+        /// </summary>
+        internal static string S1163_Category {
+            get {
+                return ResourceManager.GetString("S1163_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Throwing an exception from within a finally block will mask any exception which was previously thrown in the try or catch block..
+        /// </summary>
+        internal static string S1163_Description {
+            get {
+                return ResourceManager.GetString("S1163_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True.
+        /// </summary>
+        internal static string S1163_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S1163_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S1163_Remediation {
+            get {
+                return ResourceManager.GetString("S1163_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 30min.
+        /// </summary>
+        internal static string S1163_RemediationCost {
+            get {
+                return ResourceManager.GetString("S1163_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Major.
+        /// </summary>
+        internal static string S1163_Severity {
+            get {
+                return ResourceManager.GetString("S1163_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to error-handling,bug,cert,suspicious.
+        /// </summary>
+        internal static string S1163_Tags {
+            get {
+                return ResourceManager.GetString("S1163_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exceptions should not be thrown in finally blocks.
+        /// </summary>
+        internal static string S1163_Title {
+            get {
+                return ResourceManager.GetString("S1163_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sonar Code Smell.
         /// </summary>
         internal static string S1172_Category {
@@ -1618,7 +1762,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Overriding a method just to call the same method from the base class without performing any other actions is useless and misleading. The only timethis is justified is in sealed overriding methods, where the effect is to lock in the parent class behavior. This rule ignores overridesof Equals and GetHashCode..
+        ///   Looks up a localized string similar to Overriding a method just to call the same method from the base class without performing any other actions is useless and misleading. The only time this is justified is in sealed overriding methods, where the effect is to lock in the parent class behavior. This rule ignores overrides of Equals and GetHashCode..
         /// </summary>
         internal static string S1185_Description {
             get {
@@ -1825,6 +1969,78 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sonar Bug.
+        /// </summary>
+        internal static string S1210_Category {
+            get {
+                return ResourceManager.GetString("S1210_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When you implement IComparable or IComparable&amp;lt;T&amp;gt; on a class, the CLR cannot automatically call your implementation in the comparison operators &amp;lt;, ==, &amp;gt; and !=. Also, you could get weird and unpredictable results if the Equals() method does not follow the same logic as CompareTo()..
+        /// </summary>
+        internal static string S1210_Description {
+            get {
+                return ResourceManager.GetString("S1210_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True.
+        /// </summary>
+        internal static string S1210_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S1210_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S1210_Remediation {
+            get {
+                return ResourceManager.GetString("S1210_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 15min.
+        /// </summary>
+        internal static string S1210_RemediationCost {
+            get {
+                return ResourceManager.GetString("S1210_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minor.
+        /// </summary>
+        internal static string S1210_Severity {
+            get {
+                return ResourceManager.GetString("S1210_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to bug.
+        /// </summary>
+        internal static string S1210_Tags {
+            get {
+                return ResourceManager.GetString("S1210_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When implementing &quot;IComparable&quot;, &quot;Equals(object o)&quot; and the &quot;&lt;&quot;, &quot;&gt;&quot;, &quot;==&quot;, &quot;!=&quot; operators should be overridden.
+        /// </summary>
+        internal static string S1210_Title {
+            get {
+                return ResourceManager.GetString("S1210_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sonar Code Smell.
         /// </summary>
         internal static string S122_Category {
@@ -1906,7 +2122,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediateresults..
+        ///   Looks up a localized string similar to While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results..
         /// </summary>
         internal static string S1226_Description {
             get {
@@ -2050,7 +2266,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Floating point math is imprecise because of the challenges of storing such values in a binary representation. Even worse, floating point math isnot associative; push a float or a double through a series of simple mathematical operations and the answer will bedifferent based on the order of those operation because of the rounding that takes place at each step..
+        ///   Looks up a localized string similar to Floating point math is imprecise because of the challenges of storing such values in a binary representation. Even worse, floating point math is not associative; push a float or a double through a series of simple mathematical operations and the answer will be different based on the order of those operation because of the rounding that takes place at each step..
         /// </summary>
         internal static string S1244_Description {
             get {
@@ -2194,7 +2410,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This rule applies whenever an if statement is followed by one or more else if statements; the final else ifshould be followed by an else statement..
+        ///   Looks up a localized string similar to This rule applies whenever an if statement is followed by one or more else if statements; the final else if should be followed by an else statement..
         /// </summary>
         internal static string S126_Description {
             get {
@@ -2266,7 +2482,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A for loop stop condition should test the loop counter against an invariant value (i.e. one that is true at both the beginning andending of every loop iteration). Ideally, this means that the stop condition is set to a local variable just before the loop begins. .
+        ///   Looks up a localized string similar to A for loop stop condition should test the loop counter against an invariant value (i.e. one that is true at both the beginning and ending of every loop iteration). Ideally, this means that the stop condition is set to a local variable just before the loop begins. .
         /// </summary>
         internal static string S127_Description {
             get {
@@ -2482,7 +2698,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The requirement for a final default clause is defensive programming. The clause should either take appropriate action, or contain asuitable comment as to why no action is taken. Even when the switch covers all current values of an enum, adefault case should still be used because there is no guarantee that the enum won&apos;t be extended..
+        ///   Looks up a localized string similar to The requirement for a final default clause is defensive programming. The clause should either take appropriate action, or contain a suitable comment as to why no action is taken. Even when the switch covers all current values of an enum, a default case should still be used because there is no guarantee that the enum won&apos;t be extended..
         /// </summary>
         internal static string S131_Description {
             get {
@@ -2626,7 +2842,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nested if, switch, for, foreach, while, do, and trystatements are key ingredients for making what&apos;s known as &quot;Spaghetti code&quot;..
+        ///   Looks up a localized string similar to Nested if, switch, for, foreach, while, do, and try statements are key ingredients for making what&apos;s known as &quot;Spaghetti code&quot;..
         /// </summary>
         internal static string S134_Description {
             get {
@@ -2698,7 +2914,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to string.ToLower(), ToUpper, IndexOf, LastIndexOf, and Compare are allculture-dependent, as are some (floating point number and DateTime-related) calls to ToString. Fortunately, all havevariants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system defaultculture, possibly creating problems with international characters..
+        ///   Looks up a localized string similar to string.ToLower(), ToUpper, IndexOf, LastIndexOf, and Compare are all culture-dependent, as are some (floating point number and DateTime-related) calls to ToString. Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters..
         /// </summary>
         internal static string S1449_Description {
             get {
@@ -2770,7 +2986,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to When the value of a private field is always assigned to in a class&apos; methods before being read, then it is not being used to store classinformation. Therefore, it should become a local variable in the relevant methods to prevent any misunderstanding..
+        ///   Looks up a localized string similar to When the value of a private field is always assigned to in a class&apos; methods before being read, then it is not being used to store class information. Therefore, it should become a local variable in the relevant methods to prevent any misunderstanding..
         /// </summary>
         internal static string S1450_Description {
             get {
@@ -2835,6 +3051,78 @@ namespace SonarAnalyzer {
         /// <summary>
         ///   Looks up a localized string similar to Sonar Code Smell.
         /// </summary>
+        internal static string S1451_Category {
+            get {
+                return ResourceManager.GetString("S1451_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Each source file should start with a header stating file ownership and the license which must be used to distribute the application. .
+        /// </summary>
+        internal static string S1451_Description {
+            get {
+                return ResourceManager.GetString("S1451_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to False.
+        /// </summary>
+        internal static string S1451_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S1451_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S1451_Remediation {
+            get {
+                return ResourceManager.GetString("S1451_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5min.
+        /// </summary>
+        internal static string S1451_RemediationCost {
+            get {
+                return ResourceManager.GetString("S1451_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blocker.
+        /// </summary>
+        internal static string S1451_Severity {
+            get {
+                return ResourceManager.GetString("S1451_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string S1451_Tags {
+            get {
+                return ResourceManager.GetString("S1451_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Track lack of copyright and license headers.
+        /// </summary>
+        internal static string S1451_Title {
+            get {
+                return ResourceManager.GetString("S1451_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sonar Code Smell.
+        /// </summary>
         internal static string S1479_Category {
             get {
                 return ResourceManager.GetString("S1479_Category", resourceCulture);
@@ -2842,7 +3130,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to When switch statements have large sets of case clauses, it is usually an attempt to map two sets of data. A real mapstructure would be more readable and maintainable, and should be used instead..
+        ///   Looks up a localized string similar to When switch statements have large sets of case clauses, it is usually an attempt to map two sets of data. A real map structure would be more readable and maintainable, and should be used instead..
         /// </summary>
         internal static string S1479_Description {
             get {
@@ -2914,7 +3202,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers willnot wonder what the variable is used for..
+        ///   Looks up a localized string similar to If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for..
         /// </summary>
         internal static string S1481_Description {
             get {
@@ -2986,7 +3274,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The cyclomatic complexity of methods and properties should not exceed a defined threshold. Complex code can perform poorly and will in any case bedifficult to understand and therefore to maintain..
+        ///   Looks up a localized string similar to The cyclomatic complexity of methods and properties should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain..
         /// </summary>
         internal static string S1541_Description {
             get {
@@ -3130,7 +3418,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to There is no reason to re-assign a variable to itself. Either this statement is redundant and should be removed, or the re-assignment is a mistakeand some other value or variable was intended for the assignment instead..
+        ///   Looks up a localized string similar to There is no reason to re-assign a variable to itself. Either this statement is redundant and should be removed, or the re-assignment is a mistake and some other value or variable was intended for the assignment instead..
         /// </summary>
         internal static string S1656_Description {
             get {
@@ -3346,7 +3634,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to When either the equality operator in a null test or the logical operator that follows it is reversed, the code has the appearance of safelynull-testing the object before dereferencing it. Unfortunately the effect is just the opposite - the object is null-tested and then dereferencedonly if it is null, leading to a guaranteed null pointer dereference..
+        ///   Looks up a localized string similar to When either the equality operator in a null test or the logical operator that follows it is reversed, the code has the appearance of safely null-testing the object before dereferencing it. Unfortunately the effect is just the opposite - the object is null-tested and then dereferenced only if it is null, leading to a guaranteed null pointer dereference..
         /// </summary>
         internal static string S1697_Description {
             get {
@@ -3418,7 +3706,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Using the equality == and inequality != operators to compare two objects generally works. The operators can beoverloaded, and therefore the comparison can resolve to the appropriate method. However, when the operators are used on interface instances, then== resolves to reference equality, which may result in unexpected behavior if implementing classes override Equals.Similarly, when a class overrides Equals, but instances are compared with non-overloaded ==, there is a high chance thatvalue comparison was m [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Using the equality == and inequality != operators to compare two objects generally works. The operators can be overloaded, and therefore the comparison can resolve to the appropriate method. However, when the operators are used on interface instances, then == resolves to reference equality, which may result in unexpected behavior if implementing classes override Equals. Similarly, when a class overrides Equals, but instances are compared with non-overloaded ==, there is a high chance that value comparison w [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string S1698_Description {
             get {
@@ -3490,7 +3778,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Calling an overridable method from a constructor could result in failures or strange behaviors when instantiating a subclass which overrides themethod..
+        ///   Looks up a localized string similar to Calling an overridable method from a constructor could result in failures or strange behaviors when instantiating a subclass which overrides the method..
         /// </summary>
         internal static string S1699_Description {
             get {
@@ -3562,7 +3850,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Using the same value on either side of a binary operator is almost always a mistake. In the case of logical operators, it is either a copy/pasteerror and therefore a bug, or it is simply wasted code, and should be simplified. In the case of bitwise operators and most binary mathematicaloperators, having the same value on both sides of an operator yields predictable results, and should be simplified..
+        ///   Looks up a localized string similar to Using the same value on either side of a binary operator is almost always a mistake. In the case of logical operators, it is either a copy/paste error and therefore a bug, or it is simply wasted code, and should be simplified. In the case of bitwise operators and most binary mathematical operators, having the same value on both sides of an operator yields predictable results, and should be simplified..
         /// </summary>
         internal static string S1764_Description {
             get {
@@ -3634,7 +3922,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to There is no good reason to create a new object to not do anything with it. Most of the time, this is due to a missing piece of code and so couldlead to an unexpected behavior in production..
+        ///   Looks up a localized string similar to There is no good reason to create a new object to not do anything with it. Most of the time, this is due to a missing piece of code and so could lead to an unexpected behavior in production..
         /// </summary>
         internal static string S1848_Description {
             get {
@@ -3643,7 +3931,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to False.
+        ///   Looks up a localized string similar to True.
         /// </summary>
         internal static string S1848_IsActivatedByDefault {
             get {
@@ -3706,7 +3994,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A dead store happens when a local variable is assigned a value that is not read by any subsequent instruction. Calculating or retrieving a valueonly to then overwrite it or throw it away, could indicate a serious error in the code. Even if it&apos;s not an error, it is at best a waste of resources.Therefore all calculated values should be used..
+        ///   Looks up a localized string similar to A dead store happens when a local variable is assigned a value that is not read by any subsequent instruction. Calculating or retrieving a value only to then overwrite it or throw it away, could indicate a serious error in the code. Even if it&apos;s not an error, it is at best a waste of resources. Therefore all calculated values should be used..
         /// </summary>
         internal static string S1854_Description {
             get {
@@ -3778,7 +4066,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Invoking a method designed to return a string representation of an object which is already a string is a waste of keystrokes. Similarly, explicitlyinvoking ToString() when the compiler would do it implicitly is also needless code-bloat..
+        ///   Looks up a localized string similar to Invoking a method designed to return a string representation of an object which is already a string is a waste of keystrokes. Similarly, explicitly invoking ToString() when the compiler would do it implicitly is also needless code-bloat..
         /// </summary>
         internal static string S1858_Description {
             get {
@@ -3850,7 +4138,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A chain of if/else if statements is evaluated from top to bottom. At most, only one branch will be executed: the firstone with a condition that evaluates to true. .
+        ///   Looks up a localized string similar to A chain of if/else if statements is evaluated from top to bottom. At most, only one branch will be executed: the first one with a condition that evaluates to true. .
         /// </summary>
         internal static string S1862_Description {
             get {
@@ -3922,7 +4210,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Having two cases in the same switch statement or branches in the same if structure with the sameimplementation is at best duplicate code, and at worst a coding error. If the same logic is truly needed for both instances, then in anif structure they should be combined, or for a switch, one should fall through to the other..
+        ///   Looks up a localized string similar to Having two cases in the same switch statement or branches in the same if structure with the same implementation is at best duplicate code, and at worst a coding error. If the same logic is truly needed for both instances, then in an if structure they should be combined, or for a switch, one should fall through to the other..
         /// </summary>
         internal static string S1871_Description {
             get {
@@ -4075,7 +4363,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to False.
+        ///   Looks up a localized string similar to True.
         /// </summary>
         internal static string S1939_IsActivatedByDefault {
             get {
@@ -4210,7 +4498,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Inappropriate casts are issues that will lead to unexpected behavior or runtime errors, such as InvalidCastExceptions. The compilerwill catch bad casts from one class to another, but not bad casts to interfaces. Nor will it catch nullable values that are known to be null but thatare cast to their underlying value types anyway..
+        ///   Looks up a localized string similar to Inappropriate casts are issues that will lead to unexpected behavior or runtime errors, such as InvalidCastExceptions. The compiler will catch bad casts from one class to another, but not bad casts to interfaces. Nor will it catch nullable values that are known to be null but that are cast to their underlying value types anyway..
         /// </summary>
         internal static string S1944_Description {
             get {
@@ -4282,7 +4570,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to It is almost always an error when a for loop&apos;s stop condition and incrementer don&apos;t act on the same variable. Even when it is not, itcould confuse future maintainers of the code, and should be avoided..
+        ///   Looks up a localized string similar to It is almost always an error when a for loop&apos;s stop condition and incrementer don&apos;t act on the same variable. Even when it is not, it could confuse future maintainers of the code, and should be avoided..
         /// </summary>
         internal static string S1994_Description {
             get {
@@ -4354,7 +4642,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The MD5 algorithm and its successor, SHA-1, are no longer considered secure, because it is too easy to create hash collisions with them. That is,it takes too little computational effort to come up with a different input that produces the same MD5 or SHA-1 hash, and using the new, same-hashvalue gives an attacker the same access as if he had the originally-hashed value. This applies as well to the other Message-Digest algorithms: MD2,MD4, MD6..
+        ///   Looks up a localized string similar to The MD5 algorithm and its successor, SHA-1, are no longer considered secure, because it is too easy to create hash collisions with them. That is, it takes too little computational effort to come up with a different input that produces the same MD5 or SHA-1 hash, and using the new, same-hash value gives an attacker the same access as if he had the originally-hashed value. This applies as well to the other Message-Digest algorithms: MD2, MD4, MD6..
         /// </summary>
         internal static string S2070_Description {
             get {
@@ -4489,6 +4777,78 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sonar Code Smell.
+        /// </summary>
+        internal static string S2156_Category {
+            get {
+                return ResourceManager.GetString("S2156_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The difference between private and protected visibility is that child classes can see and use protected members, but they cannot see private ones. Since a sealed class cannot have children, marking its members protected is confusingly pointless..
+        /// </summary>
+        internal static string S2156_Description {
+            get {
+                return ResourceManager.GetString("S2156_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to False.
+        /// </summary>
+        internal static string S2156_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S2156_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S2156_Remediation {
+            get {
+                return ResourceManager.GetString("S2156_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5min.
+        /// </summary>
+        internal static string S2156_RemediationCost {
+            get {
+                return ResourceManager.GetString("S2156_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minor.
+        /// </summary>
+        internal static string S2156_Severity {
+            get {
+                return ResourceManager.GetString("S2156_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to confusing.
+        /// </summary>
+        internal static string S2156_Tags {
+            get {
+                return ResourceManager.GetString("S2156_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;sealed&quot; classes should not have &quot;protected&quot; members.
+        /// </summary>
+        internal static string S2156_Title {
+            get {
+                return ResourceManager.GetString("S2156_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sonar Bug.
         /// </summary>
         internal static string S2178_Category {
@@ -4498,7 +4858,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The use of non-short-circuit logic in a boolean context is likely a mistake - one that could cause serious program errors as conditions areevaluated under the wrong circumstances..
+        ///   Looks up a localized string similar to The use of non-short-circuit logic in a boolean context is likely a mistake - one that could cause serious program errors as conditions are evaluated under the wrong circumstances..
         /// </summary>
         internal static string S2178_Description {
             get {
@@ -4570,7 +4930,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to When division is performed on ints, the result will always be an int. You can assign that result to adouble, float or decimal with automatic type conversion, but having started as an int, the resultwill likely not be what you expect. If the result of int division is assigned to a floating-point variable, precision will have been lostbefore the assignment. Instead, at least one operand should be cast or promoted to the final type before the operation takes place..
+        ///   Looks up a localized string similar to When division is performed on ints, the result will always be an int. You can assign that result to a double, float or decimal with automatic type conversion, but having started as an int, the result will likely not be what you expect. If the result of int division is assigned to a floating-point variable, precision will have been lost before the assignment. Instead, at least one operand should be cast or promoted to the final type before the operation takes place..
         /// </summary>
         internal static string S2184_Description {
             get {
@@ -4642,7 +5002,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Recursion happens when control enters a loop that has no exit. This can happen a method invokes itself, when a pair of methods invoke each other,or when gotos are used to move between two segments of code. It can be a useful tool, but unless the method includes a provision to breakout of the recursion and return, the recursion will continue until the stack overflows and the program crashes..
+        ///   Looks up a localized string similar to Recursion happens when control enters a loop that has no exit. This can happen a method invokes itself, when a pair of methods invoke each other, or when gotos are used to move between two segments of code. It can be a useful tool, but unless the method includes a provision to break out of the recursion and return, the recursion will continue until the stack overflows and the program crashes..
         /// </summary>
         internal static string S2190_Description {
             get {
@@ -4714,7 +5074,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to When the modulus of a negative number is calculated, the result will either be negative or zero. Thus, comparing the modulus of a variable forequality with a positive number (or a negative one) could result in unexpected results. .
+        ///   Looks up a localized string similar to When the modulus of a negative number is calculated, the result will either be negative or zero. Thus, comparing the modulus of a variable for equality with a positive number (or a negative one) could result in unexpected results. .
         /// </summary>
         internal static string S2197_Description {
             get {
@@ -4786,7 +5146,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to When the call to a function doesn&apos;t have any side effects, what is the point of making the call if the results are ignored? In such case, eitherthe function call is useless and should be dropped or the source code doesn&apos;t behave as expected..
+        ///   Looks up a localized string similar to When the call to a function doesn&apos;t have any side effects, what is the point of making the call if the results are ignored? In such case, either the function call is useless and should be dropped or the source code doesn&apos;t behave as expected..
         /// </summary>
         internal static string S2201_Description {
             get {
@@ -4930,7 +5290,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A static field that is neither constant nor read-only is not thread-safe. Correctly accessing these fields from different threadsneeds synchronization with locks. Improper synchronization may lead to unexpected results, thus publicly visible static fields are bestsuited for storing non-changing data shared by many consumers. To enforce this intent, these fields should be marked readonly orconverted to constants..
+        ///   Looks up a localized string similar to A static field that is neither constant nor read-only is not thread-safe. Correctly accessing these fields from different threads needs synchronization with locks. Improper synchronization may lead to unexpected results, thus publicly visible static fields are best suited for storing non-changing data shared by many consumers. To enforce this intent, these fields should be marked readonly or converted to constants..
         /// </summary>
         internal static string S2223_Description {
             get {
@@ -5002,7 +5362,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Calling ToString() on an object should always return a string. Returning null instead contravenes the method&apos;s implicitcontract..
+        ///   Looks up a localized string similar to Calling ToString() on an object should always return a string. Returning null instead contravenes the method&apos;s implicit contract..
         /// </summary>
         internal static string S2225_Description {
             get {
@@ -5074,7 +5434,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and yourun the risk of inadvertently exposing sensitive information..
+        ///   Looks up a localized string similar to Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and you run the risk of inadvertently exposing sensitive information..
         /// </summary>
         internal static string S2228_Description {
             get {
@@ -5146,7 +5506,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to When the names of parameters in a method call match the names of the method arguments, it contributes to clearer, more readable code. However, whenthe names match, but are passed in a different order than the method arguments, it indicates a mistake in the parameter order which will likely leadto unexpected results..
+        ///   Looks up a localized string similar to When the names of parameters in a method call match the names of the method arguments, it contributes to clearer, more readable code. However, when the names match, but are passed in a different order than the method arguments, it indicates a mistake in the parameter order which will likely lead to unexpected results..
         /// </summary>
         internal static string S2234_Description {
             get {
@@ -5218,7 +5578,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A reference to null should never be dereferenced/accessed. Doing so will cause a NullReferenceException to be thrown. Atbest, such an exception will cause abrupt program termination. At worst, it could expose debugging information that would be useful to an attacker, orit could allow an attacker to bypass security measures..
+        ///   Looks up a localized string similar to A reference to null should never be dereferenced/accessed. Doing so will cause a NullReferenceException to be thrown. At best, such an exception will cause abrupt program termination. At worst, it could expose debugging information that would be useful to an attacker, or it could allow an attacker to bypass security measures..
         /// </summary>
         internal static string S2259_Description {
             get {
@@ -5290,7 +5650,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Use fewer arguments than are expected in your format string, and you&apos;ll get an error at runtime. Use more arguments than are expected, and youprobably won&apos;t get the output you expect. Either way, it&apos;s a bug..
+        ///   Looks up a localized string similar to Use fewer arguments than are expected in your format string, and you&apos;ll get an error at runtime. Use more arguments than are expected, and you probably won&apos;t get the output you expect. Either way, it&apos;s a bug..
         /// </summary>
         internal static string S2275_Description {
             get {
@@ -5434,7 +5794,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Field-like events are events that do not have explicit add and remove methods. The compiler generates aprivate delegate field to back the event, as well as generating the implicit add and removemethods..
+        ///   Looks up a localized string similar to Field-like events are events that do not have explicit add and remove methods. The compiler generates a private delegate field to back the event, as well as generating the implicit add and remove methods..
         /// </summary>
         internal static string S2290_Description {
             get {
@@ -5506,7 +5866,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enumerable.Sum() always executes addition in a checked context, so an OverflowException will be thrown ifthe value exceeds MaxValue even if an unchecked context was specified. Using an unchecked context anywayrepresents a misunderstanding of how Sum works..
+        ///   Looks up a localized string similar to Enumerable.Sum() always executes addition in a checked context, so an OverflowException will be thrown if the value exceeds MaxValue even if an unchecked context was specified. Using an unchecked context anyway represents a misunderstanding of how Sum works..
         /// </summary>
         internal static string S2291_Description {
             get {
@@ -5578,7 +5938,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Trivial properties, which include no logic but setting and getting a backing field should be converted to auto-implemented properties, yieldingcleaner and more readable code..
+        ///   Looks up a localized string similar to Trivial properties, which include no logic but setting and getting a backing field should be converted to auto-implemented properties, yielding cleaner and more readable code..
         /// </summary>
         internal static string S2292_Description {
             get {
@@ -5650,7 +6010,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Since C# 5.0, async and await are contextual keywords. Contextual keywords do have a particular meaning in some contexts,but can still be used as variable names. Keywords, on the other hand, are always reserved, and therefore are not valid variable names. To avoid anyconfusion though, it is best to not use async and await as identifiers..
+        ///   Looks up a localized string similar to Since C# 5.0, async and await are contextual keywords. Contextual keywords do have a particular meaning in some contexts, but can still be used as variable names. Keywords, on the other hand, are always reserved, and therefore are not valid variable names. To avoid any confusion though, it is best to not use async and await as identifiers..
         /// </summary>
         internal static string S2306_Description {
             get {
@@ -5722,7 +6082,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Type parameters that aren&apos;t used are dead code, which can only distract and possibly confuse developers during maintenance. Therefore, unused typeparameters should be removed..
+        ///   Looks up a localized string similar to Type parameters that aren&apos;t used are dead code, which can only distract and possibly confuse developers during maintenance. Therefore, unused type parameters should be removed..
         /// </summary>
         internal static string S2326_Description {
             get {
@@ -5794,7 +6154,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to GetHashCode is used to file an object in a Dictionary or Hashtable. If GetHashCode usesnon-readonly fields and those fields change after the object is stored, the object immediately becomes mis-filed in theHashtable. Any subsequent test to see if the object is in the Hashtable will return a false negative..
+        ///   Looks up a localized string similar to GetHashCode is used to file an object in a Dictionary or Hashtable. If GetHashCode uses non-readonly fields and those fields change after the object is stored, the object immediately becomes mis-filed in the Hashtable. Any subsequent test to see if the object is in the Hashtable will return a false negative..
         /// </summary>
         internal static string S2328_Description {
             get {
@@ -5866,7 +6226,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Array covariance is the principle that if an implicit or explicit reference conversion exits from type A to B, then thesame conversion exists from the array type A[] to B[]..
+        ///   Looks up a localized string similar to Array covariance is the principle that if an implicit or explicit reference conversion exits from type A to B, then the same conversion exists from the array type A[] to B[]..
         /// </summary>
         internal static string S2330_Description {
             get {
@@ -6154,7 +6514,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Flags enumerations should not rely on the language to initialize the values of their members. Implicit initialization will set the first member to0, and increment the value by one for each subsequent member. This implicit behavior does not allow members to be combined using the bitwise oroperator in a useful way..
+        ///   Looks up a localized string similar to Flags enumerations should not rely on the language to initialize the values of their members. Implicit initialization will set the first member to 0, and increment the value by one for each subsequent member. This implicit behavior does not allow members to be combined using the bitwise or operator in a useful way..
         /// </summary>
         internal static string S2345_Description {
             get {
@@ -6226,7 +6586,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Consisitent use of &quot;None&quot; in flags enumerations indicates that all flag values are cleared. The value 0 should not be used to indicate any otherstate, since there is no way to check that the bit 0 is set..
+        ///   Looks up a localized string similar to Consisitent use of &quot;None&quot; in flags enumerations indicates that all flag values are cleared. The value 0 should not be used to indicate any other state, since there is no way to check that the bit 0 is set..
         /// </summary>
         internal static string S2346_Description {
             get {
@@ -6298,7 +6658,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, andvalidation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties.Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system..
+        ///   Looks up a localized string similar to Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system..
         /// </summary>
         internal static string S2357_Description {
             get {
@@ -6379,7 +6739,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to True.
+        ///   Looks up a localized string similar to False.
         /// </summary>
         internal static string S2360_IsActivatedByDefault {
             get {
@@ -6442,7 +6802,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exposing methods with multidimensional array parameters requires developers to have advanced knowledge about the language in order to be able touse them. Moreover, what exactly to pass to such parameters is not intuitive. Therefore, such methods should not be exposed, but can be usedinternally..
+        ///   Looks up a localized string similar to Exposing methods with multidimensional array parameters requires developers to have advanced knowledge about the language in order to be able to use them. Moreover, what exactly to pass to such parameters is not intuitive. Therefore, such methods should not be exposed, but can be used internally..
         /// </summary>
         internal static string S2368_Description {
             get {
@@ -6514,7 +6874,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to amethod. .
+        ///   Looks up a localized string similar to Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method. .
         /// </summary>
         internal static string S2372_Description {
             get {
@@ -6586,7 +6946,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Properties with only setters are confusing and counterintuitive. Instead, a property getter should be added if possible, or the property should bereplaced with a setter method..
+        ///   Looks up a localized string similar to Properties with only setters are confusing and counterintuitive. Instead, a property getter should be added if possible, or the property should be replaced with a setter method..
         /// </summary>
         internal static string S2376_Description {
             get {
@@ -6658,7 +7018,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Having a variable with the same name in two unrelated classes is fine, but do the same thing within a class hierarchy and you&apos;ll get confusion atbest, chaos at worst. Perhaps even worse is the case where a child class field varies from the name of a parent class only by case..
+        ///   Looks up a localized string similar to Having a variable with the same name in two unrelated classes is fine, but do the same thing within a class hierarchy and you&apos;ll get confusion at best, chaos at worst. Perhaps even worse is the case where a child class field varies from the name of a parent class only by case..
         /// </summary>
         internal static string S2387_Description {
             get {
@@ -6874,7 +7234,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Locking on the current object instance (i.e. this), or on a Type object increases the chance of deadlocks because anyother thread could acquire (or attempt to acquire) the same lock for another unrelated purpose. .
+        ///   Looks up a localized string similar to Locking on the current object instance (i.e. this), or on a Type object increases the chance of deadlocks because any other thread could acquire (or attempt to acquire) the same lock for another unrelated purpose. .
         /// </summary>
         internal static string S2551_Description {
             get {
@@ -6946,7 +7306,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Conditional statements using a condition which cannot be anything but false have the effect of making blocks of code non-functional.If the condition cannot evaluate to anything but true, the conditional statement is completely redundant, and makes the code lessreadable..
+        ///   Looks up a localized string similar to Conditional statements using a condition which cannot be anything but false have the effect of making blocks of code non-functional. If the condition cannot evaluate to anything but true, the conditional statement is completely redundant, and makes the code less readable..
         /// </summary>
         internal static string S2583_Description {
             get {
@@ -7018,7 +7378,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You cannot assume that any given stream reading call will fill the byte[] passed in to the method with the number of bytes requested.Instead, you must check the value returned by the read method to see how many bytes were read. Fail to do so, and you introduce a bug that is bothharmful and difficult to reproduce..
+        ///   Looks up a localized string similar to You cannot assume that any given stream reading call will fill the byte[] passed in to the method with the number of bytes requested. Instead, you must check the value returned by the read method to see how many bytes were read. Fail to do so, and you introduce a bug that is both harmful and difficult to reproduce..
         /// </summary>
         internal static string S2674_Description {
             get {
@@ -7027,7 +7387,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to True.
+        ///   Looks up a localized string similar to False.
         /// </summary>
         internal static string S2674_IsActivatedByDefault {
             get {
@@ -7090,7 +7450,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Curly braces can be omitted from a one-line block, such as with an if statement or for loop, but doing so can bemisleading and induce bugs. .
+        ///   Looks up a localized string similar to Curly braces can be omitted from a one-line block, such as with an if statement or for loop, but doing so can be misleading and induce bugs. .
         /// </summary>
         internal static string S2681_Description {
             get {
@@ -7155,6 +7515,78 @@ namespace SonarAnalyzer {
         /// <summary>
         ///   Looks up a localized string similar to Sonar Bug.
         /// </summary>
+        internal static string S2688_Category {
+            get {
+                return ResourceManager.GetString("S2688_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NaN is not equal to anything, even itself. Testing for equality or inequality against NaN will yield predictable results, but probably not the ones you want. .
+        /// </summary>
+        internal static string S2688_Description {
+            get {
+                return ResourceManager.GetString("S2688_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True.
+        /// </summary>
+        internal static string S2688_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S2688_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S2688_Remediation {
+            get {
+                return ResourceManager.GetString("S2688_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5min.
+        /// </summary>
+        internal static string S2688_RemediationCost {
+            get {
+                return ResourceManager.GetString("S2688_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Major.
+        /// </summary>
+        internal static string S2688_Severity {
+            get {
+                return ResourceManager.GetString("S2688_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to bug,cert.
+        /// </summary>
+        internal static string S2688_Tags {
+            get {
+                return ResourceManager.GetString("S2688_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;NaN&quot; should not be used in comparisons.
+        /// </summary>
+        internal static string S2688_Title {
+            get {
+                return ResourceManager.GetString("S2688_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sonar Bug.
+        /// </summary>
         internal static string S2692_Category {
             get {
                 return ResourceManager.GetString("S2692_Category", resourceCulture);
@@ -7162,7 +7594,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Most checks against an IndexOf value compare it with -1 because 0 is a valid index. Any checks which look for values&amp;gt;0 ignore the first element, which is likely a bug. If the intent is merely to check inclusion of a value in a string,List, or an array, consider using the Contains method instead..
+        ///   Looks up a localized string similar to Most checks against an IndexOf value compare it with -1 because 0 is a valid index. Any checks which look for values &amp;gt;0 ignore the first element, which is likely a bug. If the intent is merely to check inclusion of a value in a string, List, or an array, consider using the Contains method instead..
         /// </summary>
         internal static string S2692_Description {
             get {
@@ -7216,7 +7648,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &quot;indexOf&quot; checks should not be for positive numbers.
+        ///   Looks up a localized string similar to &quot;IndexOf&quot; checks should not be for positive numbers.
         /// </summary>
         internal static string S2692_Title {
             get {
@@ -7234,7 +7666,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Correctly updating a static field from a non-static method is tricky to get right and could easily lead to bugs if there are multipleclass instances and/or multiple threads in play. .
+        ///   Looks up a localized string similar to Correctly updating a static field from a non-static method is tricky to get right and could easily lead to bugs if there are multiple class instances and/or multiple threads in play. .
         /// </summary>
         internal static string S2696_Description {
             get {
@@ -7306,7 +7738,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A catch clause that only rethrows the caught exception has the same effect as omitting the catch altogether and lettingit bubble up automatically, but with more code and the additional detrement of leaving maintainers scratching their heads. .
+        ///   Looks up a localized string similar to A catch clause that only rethrows the caught exception has the same effect as omitting the catch altogether and letting it bubble up automatically, but with more code and the additional detrement of leaving maintainers scratching their heads. .
         /// </summary>
         internal static string S2737_Description {
             get {
@@ -7378,7 +7810,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A static field in a generic type is not shared among instances of different closed constructed types, thusLengthLimitedSingletonCollection&amp;lt;int&amp;gt;.instances and LengthLimitedSingletonCollection&amp;lt;string&amp;gt;.instances willpoint to different objects, even though instances is seemingly shared among all LengthLimitedSingletonCollection&amp;lt;&amp;gt;generic classes..
+        ///   Looks up a localized string similar to A static field in a generic type is not shared among instances of different closed constructed types, thus LengthLimitedSingletonCollection&amp;lt;int&amp;gt;.instances and LengthLimitedSingletonCollection&amp;lt;string&amp;gt;.instances will point to different objects, even though instances is seemingly shared among all LengthLimitedSingletonCollection&amp;lt;&amp;gt; generic classes..
         /// </summary>
         internal static string S2743_Description {
             get {
@@ -7450,7 +7882,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The use of operators pairs (=+, =- or =!) where the reversed, single operator was meant (+=,-= or !=) will compile and run, but not produce the expected results..
+        ///   Looks up a localized string similar to The use of operators pairs (=+, =- or =!) where the reversed, single operator was meant (+=, -= or !=) will compile and run, but not produce the expected results..
         /// </summary>
         internal static string S2757_Description {
             get {
@@ -7522,7 +7954,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to When the second and third operands of a ternary operator are the same, the operator will always return the same value regardless of the condition.Either the operator itself is pointless, or a mistake was made in coding it. .
+        ///   Looks up a localized string similar to When the second and third operands of a ternary operator are the same, the operator will always return the same value regardless of the condition. Either the operator itself is pointless, or a mistake was made in coding it. .
         /// </summary>
         internal static string S2758_Description {
             get {
@@ -7531,7 +7963,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to False.
+        ///   Looks up a localized string similar to True.
         /// </summary>
         internal static string S2758_IsActivatedByDefault {
             get {
@@ -7594,7 +8026,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to When the same condition is checked twice in a row, it is either confusing - why have separate checks? - or an error - some other condition shouldhave been checked in the second test..
+        ///   Looks up a localized string similar to When the same condition is checked twice in a row, it is either confusing - why have separate checks? - or an error - some other condition should have been checked in the second test..
         /// </summary>
         internal static string S2760_Description {
             get {
@@ -7666,7 +8098,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Calling the ! or ~ prefix operator twice does nothing: the second invocation undoes the first. Such mistakes aretypically caused by accidentally double-tapping the key in question without noticing..
+        ///   Looks up a localized string similar to Calling the ! or ~ prefix operator twice does nothing: the second invocation undoes the first. Such mistakes are typically caused by accidentally double-tapping the key in question without noticing..
         /// </summary>
         internal static string S2761_Description {
             get {
@@ -7738,7 +8170,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to When writing managed code, you don&apos;t need to worry about allocating or freeing memory: The garbage collector takes care of it. For efficiencyreasons, some objects such as Bitmap use unmanaged memory, enabling for example the use of pointer arithmetic. Such objects havepotentially huge unmanaged memory footprints, but will have tiny managed ones. Unfortunately, the garbage collector only sees the tiny managedfootprint, and fails to reclaim the unmanaged memory (by calling Bitmap&apos;s finalizer method) in a time [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to When writing managed code, you don&apos;t need to worry about allocating or freeing memory: The garbage collector takes care of it. For efficiency reasons, some objects such as Bitmap use unmanaged memory, enabling for example the use of pointer arithmetic. Such objects have potentially huge unmanaged memory footprints, but will have tiny managed ones. Unfortunately, the garbage collector only sees the tiny managed footprint, and fails to reclaim the unmanaged memory (by calling Bitmap&apos;s finalizer method) in a t [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string S2930_Description {
             get {
@@ -7810,7 +8242,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Classes with IDisposable members are responsible for cleaning up those members by calling their Dispose methods. The bestpractice here is for the owning class to itself implement IDisposable and call its members&apos; Dispose methods from its ownDispose method..
+        ///   Looks up a localized string similar to Classes with IDisposable members are responsible for cleaning up those members by calling their Dispose methods. The best practice here is for the owning class to itself implement IDisposable and call its members&apos; Dispose methods from its own Dispose method..
         /// </summary>
         internal static string S2931_Description {
             get {
@@ -7882,7 +8314,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to readonly fields can only be assigned in a class constructor. If a class has a field that&apos;s not marked readonly but isonly set in the constructor, it could cause confusion about the field&apos;s intended use. To avoid confusion, such fields should be markedreadonly to make their intended use explicit, and to prevent future maintainers from inadvertently changing their use..
+        ///   Looks up a localized string similar to readonly fields can only be assigned in a class constructor. If a class has a field that&apos;s not marked readonly but is only set in the constructor, it could cause confusion about the field&apos;s intended use. To avoid confusion, such fields should be marked readonly to make their intended use explicit, and to prevent future maintainers from inadvertently changing their use..
         /// </summary>
         internal static string S2933_Description {
             get {
@@ -7954,7 +8386,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to While the properties of a readonly reference type field can still be changed after initialization, those of a readonlyvalue field, such as a struct, cannot. .
+        ///   Looks up a localized string similar to While the properties of a readonly reference type field can still be changed after initialization, those of a readonly value field, such as a struct, cannot. .
         /// </summary>
         internal static string S2934_Description {
             get {
@@ -8026,7 +8458,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to It is possible in an IDisposable to call Dispose on class members from any method, but the contract ofDispose is that it will clean up all unmanaged resources. Move disposing of members to some other method, and you risk resourceleaks..
+        ///   Looks up a localized string similar to It is possible in an IDisposable to call Dispose on class members from any method, but the contract of Dispose is that it will clean up all unmanaged resources. Move disposing of members to some other method, and you risk resource leaks..
         /// </summary>
         internal static string S2952_Description {
             get {
@@ -8170,7 +8602,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to When constraints have not been applied to restrict a generic type parameter to be a reference type, then a value type, such as astruct, could also be passed. In such cases, comparing the type parameter to null would always be false, because astruct can be empty, but never null. If a value type is truly what&apos;s expected, then the comparison should usedefault(). If it&apos;s not, then constraints should be added so that no value type can be passed..
+        ///   Looks up a localized string similar to When constraints have not been applied to restrict a generic type parameter to be a reference type, then a value type, such as a struct, could also be passed. In such cases, comparing the type parameter to null would always be false, because a struct can be empty, but never null. If a value type is truly what&apos;s expected, then the comparison should use default(). If it&apos;s not, then constraints should be added so that no value type can be passed..
         /// </summary>
         internal static string S2955_Description {
             get {
@@ -8242,7 +8674,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to In the interests of readability, code that can be simplified should be simplified. To that end, there are several ways IEnumerableLINQs can be simplified.
+        ///   Looks up a localized string similar to In the interests of readability, code that can be simplified should be simplified. To that end, there are several ways IEnumerable LINQs can be simplified.
         /// </summary>
         internal static string S2971_Description {
             get {
@@ -8314,7 +8746,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Using Object.ReferenceEquals to compare the references of two value types simply won&apos;t return the expected results most of the timebecause such types are passed by value, not by reference..
+        ///   Looks up a localized string similar to Using Object.ReferenceEquals to compare the references of two value types simply won&apos;t return the expected results most of the time because such types are passed by value, not by reference..
         /// </summary>
         internal static string S2995_Description {
             get {
@@ -8386,7 +8818,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to When an object has a field annotated with ThreadStatic, that field is shared within a given thread, but unique across threads. Since aclass&apos; static initializer is only invoked for the first thread created, it also means that only the first thread will have the expected initialvalues..
+        ///   Looks up a localized string similar to When an object has a field annotated with ThreadStatic, that field is shared within a given thread, but unique across threads. Since a class&apos; static initializer is only invoked for the first thread created, it also means that only the first thread will have the expected initial values..
         /// </summary>
         internal static string S2996_Description {
             get {
@@ -8458,7 +8890,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Typically you want to use using to create a local IDisposable variable; it will trigger disposal of the object whencontrol passes out of the block&apos;s scope. The exception to this rule is when your method returns that IDisposable. In that caseusing disposes of the object before the caller can make use of it, likely causing exceptions at runtime. So you should either removeusing or avoid returning the IDisposable..
+        ///   Looks up a localized string similar to Typically you want to use using to create a local IDisposable variable; it will trigger disposal of the object when control passes out of the block&apos;s scope. The exception to this rule is when your method returns that IDisposable. In that case using disposes of the object before the caller can make use of it, likely causing exceptions at runtime. So you should either remove using or avoid returning the IDisposable..
         /// </summary>
         internal static string S2997_Description {
             get {
@@ -8530,7 +8962,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to When a non-static class field is annotated with ThreadStatic, the code seems to show that the field can have differentvalues for different calling threads, but that&apos;s not the case, since the ThreadStatic attribute is simply ignored onnon-static fields. .
+        ///   Looks up a localized string similar to When a non-static class field is annotated with ThreadStatic, the code seems to show that the field can have different values for different calling threads, but that&apos;s not the case, since the ThreadStatic attribute is simply ignored on non-static fields. .
         /// </summary>
         internal static string S3005_Description {
             get {
@@ -8593,6 +9025,78 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sonar Bug.
+        /// </summary>
+        internal static string S3010_Category {
+            get {
+                return ResourceManager.GetString("S3010_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Assigning a value to a static field in a constructor could cause unreliable behavior at runtime since it will change the value for all instances of the class..
+        /// </summary>
+        internal static string S3010_Description {
+            get {
+                return ResourceManager.GetString("S3010_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True.
+        /// </summary>
+        internal static string S3010_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S3010_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S3010_Remediation {
+            get {
+                return ResourceManager.GetString("S3010_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 20min.
+        /// </summary>
+        internal static string S3010_RemediationCost {
+            get {
+                return ResourceManager.GetString("S3010_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Major.
+        /// </summary>
+        internal static string S3010_Severity {
+            get {
+                return ResourceManager.GetString("S3010_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to bug.
+        /// </summary>
+        internal static string S3010_Tags {
+            get {
+                return ResourceManager.GetString("S3010_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Static fields should not be updated in constructors.
+        /// </summary>
+        internal static string S3010_Title {
+            get {
+                return ResourceManager.GetString("S3010_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sonar Code Smell.
         /// </summary>
         internal static string S3052_Category {
@@ -8602,7 +9106,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The compiler automatically initializes class fields, auto-properties and events to their default values before setting them with any initializationvalues, so there is no need to explicitly set a member to its default value. Further, under the logic that cleaner code is better code, it&apos;sconsidered poor style to do so..
+        ///   Looks up a localized string similar to The compiler automatically initializes class fields, auto-properties and events to their default values before setting them with any initialization values, so there is no need to explicitly set a member to its default value. Further, under the logic that cleaner code is better code, it&apos;s considered poor style to do so..
         /// </summary>
         internal static string S3052_Description {
             get {
@@ -8674,7 +9178,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An async method with a void return type is a &quot;fire and forget&quot; method best reserved for event handlers because there&apos;s noway to wait for the method&apos;s execution to complete and respond accordingly. There&apos;s also no way to catch exceptions thrown from themethod..
+        ///   Looks up a localized string similar to An async method with a void return type is a &quot;fire and forget&quot; method best reserved for event handlers because there&apos;s no way to wait for the method&apos;s execution to complete and respond accordingly. There&apos;s also no way to catch exceptions thrown from the method..
         /// </summary>
         internal static string S3168_Description {
             get {
@@ -8746,7 +9250,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to There&apos;s no point in chaining multiple OrderBy calls in a LINQ; only the last one will be reflected in the result because eachsubsequent call completely reorders the list. Thus, calling OrderBy multiple times is a performance issue as well, because all of thesorting will be executed, but only the result of the last sort will be kept..
+        ///   Looks up a localized string similar to There&apos;s no point in chaining multiple OrderBy calls in a LINQ; only the last one will be reflected in the result because each subsequent call completely reorders the list. Thus, calling OrderBy multiple times is a performance issue as well, because all of the sorting will be executed, but only the result of the last sort will be kept..
         /// </summary>
         internal static string S3169_Description {
             get {
@@ -8890,7 +9394,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely thatsomething is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to theinterface. Otherwise there is a risk of runtime exceptions..
+        ///   Looks up a localized string similar to Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is a risk of runtime exceptions..
         /// </summary>
         internal static string S3215_Description {
             get {
@@ -8962,7 +9466,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to After an awaited Task has executed, you can continue execution in the original, calling thread or any arbitrary thread.Unless the rest of the code needs the context from which the Task was spawned, Task.ConfigureAwait(false) should be used tokeep execution in the Task thread to avoid the need for context switching and the possibility of deadlocks..
+        ///   Looks up a localized string similar to After an awaited Task has executed, you can continue execution in the original, calling thread or any arbitrary thread. Unless the rest of the code needs the context from which the Task was spawned, Task.ConfigureAwait(false) should be used to keep execution in the Task thread to avoid the need for context switching and the possibility of deadlocks..
         /// </summary>
         internal static string S3216_Description {
             get {
@@ -9034,7 +9538,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The foreach statement was introduced in the C# language prior to generics to make it easier to work with the non-generic collectionsavailable at that time such as ArrayList. The foreach statements allows you to downcast elements of a collection ofObjects to any other type. The problem is that to achieve the cast, the foreach statements silently performsexplicit type conversion, which at runtime can result in an InvalidCastException..
+        ///   Looks up a localized string similar to The foreach statement was introduced in the C# language prior to generics to make it easier to work with the non-generic collections available at that time such as ArrayList. The foreach statements allows you to downcast elements of a collection of Objects to any other type. The problem is that to achieve the cast, the foreach statements silently performs explicit type conversion, which at runtime can result in an InvalidCastException..
         /// </summary>
         internal static string S3217_Description {
             get {
@@ -9106,7 +9610,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to It&apos;s possible to name the members of an inner class the same as the static members of its enclosing class - possible, but a bad idea.That&apos;s because maintainers may be confused about which members are being used where. Instead the inner class&apos; members should be renamed and all thereferences updated..
+        ///   Looks up a localized string similar to It&apos;s possible to name the members of an inner class the same as the static members of its enclosing class - possible, but a bad idea. That&apos;s because maintainers may be confused about which members are being used where. Instead the inner class&apos; members should be renamed and all the references updated..
         /// </summary>
         internal static string S3218_Description {
             get {
@@ -9178,7 +9682,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The rules for method resolution are complex and perhaps not properly understood by all coders. The params keyword can make methoddeclarations overlap in non-obvious ways, so that slight changes in the argument types of an invocation can resolve to different methods..
+        ///   Looks up a localized string similar to The rules for method resolution are complex and perhaps not properly understood by all coders. The params keyword can make method declarations overlap in non-obvious ways, so that slight changes in the argument types of an invocation can resolve to different methods..
         /// </summary>
         internal static string S3220_Description {
             get {
@@ -9250,7 +9754,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to GC.SuppressFinalize asks the Common Language Runtime not to call the finalizer of an object. This is useful when implementing thedispose pattern where object finalization is already handled in IDisposable.Dispose. However, it has no effect if there is no finalizerdefined in the object&apos;s type, so using it in such cases is just confusing..
+        ///   Looks up a localized string similar to GC.SuppressFinalize asks the Common Language Runtime not to call the finalizer of an object. This is useful when implementing the dispose pattern where object finalization is already handled in IDisposable.Dispose. However, it has no effect if there is no finalizer defined in the object&apos;s type, so using it in such cases is just confusing..
         /// </summary>
         internal static string S3234_Description {
             get {
@@ -9394,7 +9898,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Caller information attributes (CallerFilePathAttribute, CallerLineNumberAttribute, andCallerMemberNameAttribute) provide a way to get information about the caller of a method through optional parameters. But the argumentsfor these optional parameters are only generated if they are not explicitly defined in the call. Thus, specifying the argument values defeats thepurpose of the attributes..
+        ///   Looks up a localized string similar to Caller information attributes (CallerFilePathAttribute, CallerLineNumberAttribute, and CallerMemberNameAttribute) provide a way to get information about the caller of a method through optional parameters. But the arguments for these optional parameters are only generated if they are not explicitly defined in the call. Thus, specifying the argument values defeats the purpose of the attributes..
         /// </summary>
         internal static string S3236_Description {
             get {
@@ -9466,7 +9970,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to In property and indexer set methods, and in event add and remove methods, the implicit valueparameter holds the value the accessor was called with. Not using the value means that the accessor ignores the caller&apos;s intent whichcould cause unexpected results at runtime..
+        ///   Looks up a localized string similar to In property and indexer set methods, and in event add and remove methods, the implicit value parameter holds the value the accessor was called with. Not using the value means that the accessor ignores the caller&apos;s intent which could cause unexpected results at runtime..
         /// </summary>
         internal static string S3237_Description {
             get {
@@ -9547,7 +10051,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to True.
+        ///   Looks up a localized string similar to False.
         /// </summary>
         internal static string S3240_IsActivatedByDefault {
             get {
@@ -9610,7 +10114,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Private methods are clearly intended for use only within their own scope. When such methods return values that are never used by any of theircallers, then clearly there is no need to actually make the return, and it should be removed in the interests of efficiency and clarity. .
+        ///   Looks up a localized string similar to Private methods are clearly intended for use only within their own scope. When such methods return values that are never used by any of their callers, then clearly there is no need to actually make the return, and it should be removed in the interests of efficiency and clarity. .
         /// </summary>
         internal static string S3241_Description {
             get {
@@ -9682,7 +10186,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to It is possible to subscribe to events with anonymous delegates, but having done so, it is impossible to unsubscribe from them. That&apos;s because theprocess of subscribing adds the delegate to a list. The process of unsubscribing essentially says: remove this item from the subscriptionlist. But because an anonymous delegate was used in both cases, the unsubscribe attempt tries to remove a different item from the list than was added.The result: NOOP..
+        ///   Looks up a localized string similar to It is possible to subscribe to events with anonymous delegates, but having done so, it is impossible to unsubscribe from them. That&apos;s because the process of subscribing adds the delegate to a list. The process of unsubscribing essentially says: remove this item from the subscription list. But because an anonymous delegate was used in both cases, the unsubscribe attempt tries to remove a different item from the list than was added. The result: NOOP..
         /// </summary>
         internal static string S3244_Description {
             get {
@@ -9754,7 +10258,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to In the interests of making code as usable as possible, interfaces and delegates with generic parameters should use the out andin modifiers when possible to make the interfaces and delegates covariant and contravariant, respectively..
+        ///   Looks up a localized string similar to In the interests of making code as usable as possible, interfaces and delegates with generic parameters should use the out and in modifiers when possible to make the interfaces and delegates covariant and contravariant, respectively..
         /// </summary>
         internal static string S3246_Description {
             get {
@@ -9817,6 +10321,78 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sonar Code Smell.
+        /// </summary>
+        internal static string S3247_Category {
+            get {
+                return ResourceManager.GetString("S3247_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Because the is operator performs a cast if the object is not null, using is to check type and then casting the same argument to that type, necessarily performs two casts. The same result can be achieved more efficiently with a single cast using as, followed by a null-check..
+        /// </summary>
+        internal static string S3247_Description {
+            get {
+                return ResourceManager.GetString("S3247_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True.
+        /// </summary>
+        internal static string S3247_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S3247_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S3247_Remediation {
+            get {
+                return ResourceManager.GetString("S3247_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 10min.
+        /// </summary>
+        internal static string S3247_RemediationCost {
+            get {
+                return ResourceManager.GetString("S3247_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minor.
+        /// </summary>
+        internal static string S3247_Severity {
+            get {
+                return ResourceManager.GetString("S3247_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to performance.
+        /// </summary>
+        internal static string S3247_Tags {
+            get {
+                return ResourceManager.GetString("S3247_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Duplicate casts should not be made.
+        /// </summary>
+        internal static string S3247_Title {
+            get {
+                return ResourceManager.GetString("S3247_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sonar Bug.
         /// </summary>
         internal static string S3249_Category {
@@ -9826,7 +10402,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Making a base call in an overriding method is generally a good idea, but not in GetHashCode and Equals forclasses that directly extend object because those methods are based on the object reference. Meaning that no two objectsthat use those base methods will ever be equal or have the same hash..
+        ///   Looks up a localized string similar to Making a base call in an overriding method is generally a good idea, but not in GetHashCode and Equals for classes that directly extend object because those methods are based on the object reference. Meaning that no two objects that use those base methods will ever be equal or have the same hash..
         /// </summary>
         internal static string S3249_Description {
             get {
@@ -9898,7 +10474,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to partial methods allow an increased degree of flexibility in programming a system. Hooks can be added to generated code by invokingmethods that define their signature, but might not have an implementation yet. But if the implementation is still missing when the code makes it toproduction, the compiler silently removes the call. In the best case scenario, such calls simply represent cruft, but in they worst case they arecritical, missing functionality, the loss of which will lead to unexpected results at runt [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to partial methods allow an increased degree of flexibility in programming a system. Hooks can be added to generated code by invoking methods that define their signature, but might not have an implementation yet. But if the implementation is still missing when the code makes it to production, the compiler silently removes the call. In the best case scenario, such calls simply represent cruft, but in they worst case they are critical, missing functionality, the loss of which will lead to unexpected results at r [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string S3251_Description {
             get {
@@ -9970,7 +10546,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Since the compiler will automatically invoke the base type&apos;s no-argument constructor, there&apos;s no need to specify its invocation explicitly. Also,when only a single public parameterless constructor is defined in a class, then that constructor can be removed because the compilerwould generate it automatically. Similarly, empty static constructors and empty destructors are also wasted keystrokes..
+        ///   Looks up a localized string similar to Since the compiler will automatically invoke the base type&apos;s no-argument constructor, there&apos;s no need to specify its invocation explicitly. Also, when only a single public parameterless constructor is defined in a class, then that constructor can be removed because the compiler would generate it automatically. Similarly, empty static constructors and empty destructors are also wasted keystrokes..
         /// </summary>
         internal static string S3253_Description {
             get {
@@ -10101,6 +10677,78 @@ namespace SonarAnalyzer {
         internal static string S3254_Title {
             get {
                 return ResourceManager.GetString("S3254_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sonar Code Smell.
+        /// </summary>
+        internal static string S3256_Category {
+            get {
+                return ResourceManager.GetString("S3256_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Using string.Equals to determine if a string is empty is significantly slower than using string.IsNullOrEmpty() or checking for string.Length == 0. string.IsNullOrEmpty() is both clear and concise, and therefore preferred to laborious, error-prone, manual null- and emptiness-checking..
+        /// </summary>
+        internal static string S3256_Description {
+            get {
+                return ResourceManager.GetString("S3256_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True.
+        /// </summary>
+        internal static string S3256_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S3256_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S3256_Remediation {
+            get {
+                return ResourceManager.GetString("S3256_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5min.
+        /// </summary>
+        internal static string S3256_RemediationCost {
+            get {
+                return ResourceManager.GetString("S3256_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minor.
+        /// </summary>
+        internal static string S3256_Severity {
+            get {
+                return ResourceManager.GetString("S3256_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to clumsy.
+        /// </summary>
+        internal static string S3256_Tags {
+            get {
+                return ResourceManager.GetString("S3256_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;string.IsNullOrEmpty&quot; should be used.
+        /// </summary>
+        internal static string S3256_Title {
+            get {
+                return ResourceManager.GetString("S3256_Title", resourceCulture);
             }
         }
         
@@ -10258,7 +10906,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Overriding methods automatically inherit the params behavior. To ease readability, this modifier should be explicitly used in theoverriding method as well..
+        ///   Looks up a localized string similar to Overriding methods automatically inherit the params behavior. To ease readability, this modifier should be explicitly used in the overriding method as well..
         /// </summary>
         internal static string S3262_Description {
             get {
@@ -10330,7 +10978,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Static field initializers are executed in the order in which they appear in the class from top to bottom. Thus, placing a static field in a classabove the field or fields required for its initialization will yield unexpected results..
+        ///   Looks up a localized string similar to Static field initializers are executed in the order in which they appear in the class from top to bottom. Thus, placing a static field in a class above the field or fields required for its initialization will yield unexpected results..
         /// </summary>
         internal static string S3263_Description {
             get {
@@ -10474,7 +11122,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to enums are usually used to identify distinct elements in a set of values. However enums can be treated as bit fields andbitwise operations can be used on them to combine the values. This is a good way of specifying multiple elements of set with a single value. Whenenums are used this way, it is a best practice to mark the enum with the FlagsAttribute..
+        ///   Looks up a localized string similar to enums are usually used to identify distinct elements in a set of values. However enums can be treated as bit fields and bitwise operations can be used on them to combine the values. This is a good way of specifying multiple elements of set with a single value. When enums are used this way, it is a best practice to mark the enum with the FlagsAttribute..
         /// </summary>
         internal static string S3265_Description {
             get {
@@ -10546,7 +11194,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Adherence to the standard naming conventions makes your code not only more readable, but more usable. For instance, class FirstAttribute :Attribute can be used simply with First, but you must use the full name for class AttributeOne : Attribute..
+        ///   Looks up a localized string similar to Adherence to the standard naming conventions makes your code not only more readable, but more usable. For instance, class FirstAttribute : Attribute can be used simply with First, but you must use the full name for class AttributeOne : Attribute..
         /// </summary>
         internal static string S3376_Description {
             get {
@@ -10618,7 +11266,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to object.Equals() overrides can be optimized by checking first for reference equality between this and the parameter. Thischeck can be implemented by calling object.ReferenceEquals() or base.Equals(), where base isobject. However, using base.Equals() is a maintenance hazard because while it works if you extend Objectdirectly, if you introduce a new base class that overrides Equals, it suddenly stops working..
+        ///   Looks up a localized string similar to object.Equals() overrides can be optimized by checking first for reference equality between this and the parameter. This check can be implemented by calling object.ReferenceEquals() or base.Equals(), where base is object. However, using base.Equals() is a maintenance hazard because while it works if you extend Object directly, if you introduce a new base class that overrides Equals, it suddenly stops working..
         /// </summary>
         internal static string S3397_Description {
             get {
@@ -10690,7 +11338,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The rules for method resolution are complex and perhaps not properly understood by all coders. Having overloads with optional parameter valuesmakes the matter even harder to understand. .
+        ///   Looks up a localized string similar to The rules for method resolution are complex and perhaps not properly understood by all coders. Having overloads with optional parameter values makes the matter even harder to understand. .
         /// </summary>
         internal static string S3427_Description {
             get {
@@ -10762,7 +11410,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to There&apos;s no point in checking a variable against the value you&apos;re about to assign it. Save the cycles and lines of code, and simply perform theassignment..
+        ///   Looks up a localized string similar to There&apos;s no point in checking a variable against the value you&apos;re about to assign it. Save the cycles and lines of code, and simply perform the assignment..
         /// </summary>
         internal static string S3440_Description {
             get {
@@ -10834,7 +11482,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to When an anonymous type&apos;s properties are copied from properties or variables with the same names, it yields cleaner code to omit the new type&apos;sproperty name and the assignment operator..
+        ///   Looks up a localized string similar to When an anonymous type&apos;s properties are copied from properties or variables with the same names, it yields cleaner code to omit the new type&apos;s property name and the assignment operator..
         /// </summary>
         internal static string S3441_Description {
             get {
@@ -10897,6 +11545,78 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sonar Code Smell.
+        /// </summary>
+        internal static string S3442_Category {
+            get {
+                return ResourceManager.GetString("S3442_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Since abstract classes can&apos;t be instantiated, there&apos;s no point in their having public or internal constructors. If there is basic initialization logic that should run when an extending class instance is created, you can by all means put it in a constructor, but make that constructor private or protected..
+        /// </summary>
+        internal static string S3442_Description {
+            get {
+                return ResourceManager.GetString("S3442_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True.
+        /// </summary>
+        internal static string S3442_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S3442_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S3442_Remediation {
+            get {
+                return ResourceManager.GetString("S3442_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2min.
+        /// </summary>
+        internal static string S3442_RemediationCost {
+            get {
+                return ResourceManager.GetString("S3442_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Major.
+        /// </summary>
+        internal static string S3442_Severity {
+            get {
+                return ResourceManager.GetString("S3442_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to confusing.
+        /// </summary>
+        internal static string S3442_Tags {
+            get {
+                return ResourceManager.GetString("S3442_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;abstract&quot; classes should not have &quot;public&quot; constructors.
+        /// </summary>
+        internal static string S3442_Title {
+            get {
+                return ResourceManager.GetString("S3442_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sonar Bug.
         /// </summary>
         internal static string S3443_Category {
@@ -10906,7 +11626,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to If you call GetType() on a Type variable, the return value will always be typeof(System.Type). So there&apos;s noreal point in making that call. The same applies to passing a type argument to IsInstanceOfType. In both cases the results are entirelypredictable..
+        ///   Looks up a localized string similar to If you call GetType() on a Type variable, the return value will always be typeof(System.Type). So there&apos;s no real point in making that call. The same applies to passing a type argument to IsInstanceOfType. In both cases the results are entirely predictable..
         /// </summary>
         internal static string S3443_Description {
             get {
@@ -10978,7 +11698,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to When an interface inherits from two interfaces that both define a member with the same name, trying to access that member through the derivedinterface will result in the compiler error CS0229 Ambiguity between &apos;IBase1.SomeProperty&apos; and &apos;IBase2.SomeProperty&apos;..
+        ///   Looks up a localized string similar to When an interface inherits from two interfaces that both define a member with the same name, trying to access that member through the derived interface will result in the compiler error CS0229 Ambiguity between &apos;IBase1.SomeProperty&apos; and &apos;IBase2.SomeProperty&apos;..
         /// </summary>
         internal static string S3444_Description {
             get {
@@ -11050,7 +11770,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to When rethrowing an exception, you should do it by simply calling throw; and not throw exc;, because the stack trace isreset with the second syntax, making debugging a lot harder..
+        ///   Looks up a localized string similar to When rethrowing an exception, you should do it by simply calling throw; and not throw exc;, because the stack trace is reset with the second syntax, making debugging a lot harder..
         /// </summary>
         internal static string S3445_Description {
             get {
@@ -11122,7 +11842,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The use of ref or out in combination with [Optional] is both confusing and contradictory.[Optional] indicates that the parameter doesn&apos;t have to be provided, while out and ref mean that the parameterwill be used to return data to the caller (ref additionally indicates that the parameter may also be used to pass data into themethod)..
+        ///   Looks up a localized string similar to The use of ref or out in combination with [Optional] is both confusing and contradictory. [Optional] indicates that the parameter doesn&apos;t have to be provided, while out and ref mean that the parameter will be used to return data to the caller (ref additionally indicates that the parameter may also be used to pass data into the method)..
         /// </summary>
         internal static string S3447_Description {
             get {
@@ -11194,7 +11914,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Numbers can be shifted with the &amp;lt;&amp;lt; and &amp;gt;&amp;gt; operators, but the right operand of the operation needs to be anint or a type that has an implicit conversion to int. However, with dynamic, the compiler&apos;s type checking isturned off, so you can pass anything to a shift operator and have it compile. And if the argument can&apos;t be converted to int at runtime,then a RuntimeBinderException will be raised..
+        ///   Looks up a localized string similar to Numbers can be shifted with the &amp;lt;&amp;lt; and &amp;gt;&amp;gt; operators, but the right operand of the operation needs to be an int or a type that has an implicit conversion to int. However, with dynamic, the compiler&apos;s type checking is turned off, so you can pass anything to a shift operator and have it compile. And if the argument can&apos;t be converted to int at runtime, then a RuntimeBinderException will be raised..
         /// </summary>
         internal static string S3449_Description {
             get {
@@ -11266,7 +11986,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to There is no point in providing a default value for a parameter if callers are required to provide a value for it anyway. Thus,[DefaultParameterValue] should always be used in conjunction with [Optional]..
+        ///   Looks up a localized string similar to There is no point in providing a default value for a parameter if callers are required to provide a value for it anyway. Thus, [DefaultParameterValue] should always be used in conjunction with [Optional]..
         /// </summary>
         internal static string S3450_Description {
             get {
@@ -11338,7 +12058,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The use of [DefaultValue] with [Optional] has no more effect than [Optional] alone. That&apos;s because[DefaultValue] doesn&apos;t actually do anything; it merely indicates the intent for the value. More than likely, [DefaultValue]was used in confusion instead of [DefaultParameterValue]..
+        ///   Looks up a localized string similar to The use of [DefaultValue] with [Optional] has no more effect than [Optional] alone. That&apos;s because [DefaultValue] doesn&apos;t actually do anything; it merely indicates the intent for the value. More than likely, [DefaultValue] was used in confusion instead of [DefaultParameterValue]..
         /// </summary>
         internal static string S3451_Description {
             get {
@@ -11482,7 +12202,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ToCharArray can be omitted when the operation on the array could have been done directly on the string, such as when iterating overthe characters in a string, and when accessing a character in a string via an array index. In those cases, explicit ToCharArray callsshould be omitted..
+        ///   Looks up a localized string similar to ToCharArray can be omitted when the operation on the array could have been done directly on the string, such as when iterating over the characters in a string, and when accessing a character in a string via an array index. In those cases, explicit ToCharArray calls should be omitted..
         /// </summary>
         internal static string S3456_Description {
             get {
@@ -11554,7 +12274,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to There&apos;s no need to incur the overhead of a formatting call when the string to be formatted contains no placeholders. Instead, simply use theoriginal input string..
+        ///   Looks up a localized string similar to There&apos;s no need to incur the overhead of a formatting call when the string to be formatted contains no placeholders. Instead, simply use the original input string..
         /// </summary>
         internal static string S3457_Description {
             get {
@@ -11626,7 +12346,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Empty case clauses that fall through to the default are useless. Whether or not such a case is present, thedefault clause will be invoked. Such cases simply clutter the code, and should be removed..
+        ///   Looks up a localized string similar to Empty case clauses that fall through to the default are useless. Whether or not such a case is present, the default clause will be invoked. Such cases simply clutter the code, and should be removed..
         /// </summary>
         internal static string S3458_Description {
             get {
@@ -11698,7 +12418,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fields and auto-properties that are never assigned to hold the default values for their types. They are either pointless code or, more likely,mistakes. .
+        ///   Looks up a localized string similar to Fields and auto-properties that are never assigned to hold the default values for their types. They are either pointless code or, more likely, mistakes. .
         /// </summary>
         internal static string S3459_Description {
             get {
@@ -11770,7 +12490,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Generally, writing the least code that will readably do the job is a good thing, so omitting default parameter values seems to make sense.Unfortunately, when you omit them from the base call in an override, you&apos;re not actually getting the job done thoroughly, because you&apos;reignoring the value the caller passed in. The result will likely not be what the caller expected..
+        ///   Looks up a localized string similar to Generally, writing the least code that will readably do the job is a good thing, so omitting default parameter values seems to make sense. Unfortunately, when you omit them from the base call in an override, you&apos;re not actually getting the job done thoroughly, because you&apos;re ignoring the value the caller passed in. The result will likely not be what the caller expected..
         /// </summary>
         internal static string S3466_Description {
             get {
@@ -11914,7 +12634,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The ServiceContract attribute specifies that a class or interface defines the communication contract of a Windows CommunicationFoundation (WCF) service. The service operations of this class or interface are defined by OperationContract attributes added to methods.It doesn&apos;t make sense to define a contract without any service operations; thus, in a ServiceContract class or interface at least onemethod should be annotated with OperationContract. Similarly, WCF only serves OperationContract methods that are de [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to The ServiceContract attribute specifies that a class or interface defines the communication contract of a Windows Communication Foundation (WCF) service. The service operations of this class or interface are defined by OperationContract attributes added to methods. It doesn&apos;t make sense to define a contract without any service operations; thus, in a ServiceContract class or interface at least one method should be annotated with OperationContract. Similarly, WCF only serves OperationContract methods that are [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string S3597_Description {
             get {
@@ -11986,7 +12706,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to When declaring a Windows Communication Foundation (WCF) OperationContract method one-way, that service method won&apos;t return any result,not even an underlying empty confirmation message. These are fire-and-forget methods that are useful in event-like communication. Specifying a returntype therefore does not make sense..
+        ///   Looks up a localized string similar to When declaring a Windows Communication Foundation (WCF) OperationContract method one-way, that service method won&apos;t return any result, not even an underlying empty confirmation message. These are fire-and-forget methods that are useful in event-like communication. Specifying a return type therefore does not make sense..
         /// </summary>
         internal static string S3598_Description {
             get {
@@ -12058,7 +12778,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Adding params to a method override has no effect. The compiler accepts it, but the callers won&apos;t be able to benefit from the addedmodifier..
+        ///   Looks up a localized string similar to Adding params to a method override has no effect. The compiler accepts it, but the callers won&apos;t be able to benefit from the added modifier..
         /// </summary>
         internal static string S3600_Description {
             get {
@@ -12130,7 +12850,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Marking a method with the [Pure] attribute specifies that the method doesn&apos;t make any visible changes; thus, the method should returna result, otherwise the call to the method should be equal to no-operation. So [Pure] on a void method is either a mistake,or the method doesn&apos;t do any meaningful task..
+        ///   Looks up a localized string similar to Marking a method with the [Pure] attribute specifies that the method doesn&apos;t make any visible changes; thus, the method should return a result, otherwise the call to the method should be equal to no-operation. So [Pure] on a void method is either a mistake, or the method doesn&apos;t do any meaningful task..
         /// </summary>
         internal static string S3603_Description {
             get {
@@ -12202,7 +12922,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fields, properties and events can be initialized either inline or in the constructor. Initializing them inline and in the constructor at the sametime is redundant; the inline initialization will be overridden..
+        ///   Looks up a localized string similar to Fields, properties and events can be initialized either inline or in the constructor. Initializing them inline and in the constructor at the same time is redundant; the inline initialization will be overridden..
         /// </summary>
         internal static string S3604_Description {
             get {
@@ -12274,7 +12994,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Calling GetType() on a nullable object returns the underlying value type. Thus, comparing the returned Type object totypeof(Nullable&amp;lt;SomeType&amp;gt;) doesn&apos;t make sense. The comparison either throws an exception or the result can be known at compiletime..
+        ///   Looks up a localized string similar to Calling GetType() on a nullable object returns the underlying value type. Thus, comparing the returned Type object to typeof(Nullable&amp;lt;SomeType&amp;gt;) doesn&apos;t make sense. The comparison either throws an exception or the result can be known at compile time..
         /// </summary>
         internal static string S3610_Description {
             get {
@@ -12346,7 +13066,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Jump statements, such as return, yield break, goto, and continue let you change the defaultflow of program execution, but jump statements that direct the control flow to the original direction are just a waste of keystrokes..
+        ///   Looks up a localized string similar to Jump statements, such as return, yield break, goto, and continue let you change the default flow of program execution, but jump statements that direct the control flow to the original direction are just a waste of keystrokes..
         /// </summary>
         internal static string S3626_Description {
             get {
@@ -12418,7 +13138,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nullable value types can hold either a value or null. The value held in the nullable type can be accessed with the Valueproperty, but .Value throws an InvalidOperationException when the value is null. To avoid the exception, anullable type should always be tested before .Value is accessed..
+        ///   Looks up a localized string similar to Nullable value types can hold either a value or null. The value held in the nullable type can be accessed with the Value property, but .Value throws an InvalidOperationException when the value is null. To avoid the exception, a nullable type should always be tested before .Value is accessed..
         /// </summary>
         internal static string S3655_Description {
             get {
@@ -12477,6 +13197,294 @@ namespace SonarAnalyzer {
         internal static string S3655_Title {
             get {
                 return ResourceManager.GetString("S3655_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sonar Code Smell.
+        /// </summary>
+        internal static string S3776_Category {
+            get {
+                return ResourceManager.GetString("S3776_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cognitive Complexity is a measure of how hard the control flow of a method is to understand. Methods with high Cognitive Complexity will be difficult to maintain..
+        /// </summary>
+        internal static string S3776_Description {
+            get {
+                return ResourceManager.GetString("S3776_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True.
+        /// </summary>
+        internal static string S3776_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S3776_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string S3776_Remediation {
+            get {
+                return ResourceManager.GetString("S3776_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string S3776_RemediationCost {
+            get {
+                return ResourceManager.GetString("S3776_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Critical.
+        /// </summary>
+        internal static string S3776_Severity {
+            get {
+                return ResourceManager.GetString("S3776_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to brain-overload.
+        /// </summary>
+        internal static string S3776_Tags {
+            get {
+                return ResourceManager.GetString("S3776_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cognitive Complexity of methods should not be too high.
+        /// </summary>
+        internal static string S3776_Title {
+            get {
+                return ResourceManager.GetString("S3776_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sonar Bug.
+        /// </summary>
+        internal static string S3880_Category {
+            get {
+                return ResourceManager.GetString("S3880_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Finalizers come with a performance cost due to the overhead of tracking the life cycle of objects. An empty one is consequently costly with no benefit or justification..
+        /// </summary>
+        internal static string S3880_Description {
+            get {
+                return ResourceManager.GetString("S3880_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True.
+        /// </summary>
+        internal static string S3880_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S3880_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S3880_Remediation {
+            get {
+                return ResourceManager.GetString("S3880_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2min.
+        /// </summary>
+        internal static string S3880_RemediationCost {
+            get {
+                return ResourceManager.GetString("S3880_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Major.
+        /// </summary>
+        internal static string S3880_Severity {
+            get {
+                return ResourceManager.GetString("S3880_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to performance.
+        /// </summary>
+        internal static string S3880_Tags {
+            get {
+                return ResourceManager.GetString("S3880_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Finalizers should not be empty.
+        /// </summary>
+        internal static string S3880_Title {
+            get {
+                return ResourceManager.GetString("S3880_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sonar Bug.
+        /// </summary>
+        internal static string S3881_Category {
+            get {
+                return ResourceManager.GetString("S3881_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The IDisposable interface is a mechanism to release unmanaged resources, if not implemented correctly this could result in resource leaks or more severe bugs..
+        /// </summary>
+        internal static string S3881_Description {
+            get {
+                return ResourceManager.GetString("S3881_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True.
+        /// </summary>
+        internal static string S3881_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S3881_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S3881_Remediation {
+            get {
+                return ResourceManager.GetString("S3881_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 10min.
+        /// </summary>
+        internal static string S3881_RemediationCost {
+            get {
+                return ResourceManager.GetString("S3881_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Major.
+        /// </summary>
+        internal static string S3881_Severity {
+            get {
+                return ResourceManager.GetString("S3881_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string S3881_Tags {
+            get {
+                return ResourceManager.GetString("S3881_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;IDisposable&quot; should be implemented correctly.
+        /// </summary>
+        internal static string S3881_Title {
+            get {
+                return ResourceManager.GetString("S3881_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sonar Bug.
+        /// </summary>
+        internal static string S3889_Category {
+            get {
+                return ResourceManager.GetString("S3889_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thread.Suspend and Thread.Resume can give unpredictable results, and have been deprecated. Instead, other synchronization mechanisms should be used, such as Monitor, Mutex, and Semaphore..
+        /// </summary>
+        internal static string S3889_Description {
+            get {
+                return ResourceManager.GetString("S3889_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True.
+        /// </summary>
+        internal static string S3889_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S3889_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S3889_Remediation {
+            get {
+                return ResourceManager.GetString("S3889_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 20min.
+        /// </summary>
+        internal static string S3889_RemediationCost {
+            get {
+                return ResourceManager.GetString("S3889_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blocker.
+        /// </summary>
+        internal static string S3889_Severity {
+            get {
+                return ResourceManager.GetString("S3889_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to multi-threading,unpredictable.
+        /// </summary>
+        internal static string S3889_Tags {
+            get {
+                return ResourceManager.GetString("S3889_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Neither &quot;Thread.Resume&quot; nor &quot;Thread.Suspend&quot; should be used.
+        /// </summary>
+        internal static string S3889_Title {
+            get {
+                return ResourceManager.GetString("S3889_Title", resourceCulture);
             }
         }
         
@@ -12562,7 +13570,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to goto is an unstructured control flow statement. It makes code less readable and maintainable. Structured control flow statements suchas if, for, while, continue or break should be used instead..
+        ///   Looks up a localized string similar to goto is an unstructured control flow statement. It makes code less readable and maintainable. Structured control flow statements such as if, for, while, continue or break should be used instead..
         /// </summary>
         internal static string S907_Description {
             get {
@@ -12634,7 +13642,7 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to When the parameters to the implementation of a partial method don&apos;t match those in the signature declaration, then confusion is almostguaranteed. Either the implementer was confused when he renamed, swapped or mangled the parameter names in the implementation, or callers will beconfused..
+        ///   Looks up a localized string similar to When the parameters to the implementation of a partial method don&apos;t match those in the signature declaration, then confusion is almost guaranteed. Either the implementer was confused when he renamed, swapped or mangled the parameter names in the implementation, or callers will be confused..
         /// </summary>
         internal static string S927_Description {
             get {

@@ -4665,6 +4665,30 @@
   <data name="S3889_Title" xml:space="preserve">
     <value>Neither "Thread.Resume" nor "Thread.Suspend" should be used</value>
   </data>
+  <data name="S3881_Category" xml:space="preserve">
+    <value>Sonar Bug</value>
+  </data>
+  <data name="S3881_Description" xml:space="preserve">
+    <value>The IDisposable interface is a mechanism to release unmanaged resources, if not implemented correctly this could result in resource leaks or more severe bugs.</value>
+  </data>
+  <data name="S3881_IsActivatedByDefault" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="S3881_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S3881_RemediationCost" xml:space="preserve">
+    <value>10min</value>
+  </data>
+  <data name="S3881_Severity" xml:space="preserve">
+    <value>Major</value>
+  </data>
+  <data name="S3881_Tags" xml:space="preserve">
+    <value />
+  </data>
+  <data name="S3881_Title" xml:space="preserve">
+    <value>"IDisposable" should be implemented correctly</value>
+  </data>
   <data name="S818_Category" xml:space="preserve">
     <value>Sonar Code Smell</value>
   </data>

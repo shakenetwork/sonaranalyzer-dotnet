@@ -34,10 +34,10 @@ namespace SonarAnalyzer.UnitTest.PackagingTests
             const string vsixFileName = "SonarAnalyzer.vsix";
 #if DEBUG
             const string pathEnding = @"bin\Debug";
-            const int approxFileSize = 1521 * 1024;
+            const int approxFileSize = 1621 * 1024;
 #else
             const string pathEnding = @"bin\Release";
-            const int approxFileSize = 501 * 1024;
+            const int approxFileSize = 551 * 1024;
 #endif
 
             var currentDirectory = Directory.GetCurrentDirectory();
@@ -48,11 +48,11 @@ namespace SonarAnalyzer.UnitTest.PackagingTests
 
             const double upperBound = approxFileSize * 1.1;
             vsixFile.Length
-                .Should().BeLessThan((long)upperBound, "VSIX file is larger than {0}B, it is {1}B", upperBound, vsixFile.Length);
+                .Should().BeLessThan((long)upperBound, "VSIX file has grown", upperBound, vsixFile.Length);
 
             const double lowerBound = approxFileSize * 0.9;
             vsixFile.Length
-                .Should().BeGreaterThan((long)lowerBound, "VSIX file is smaller than {0}B, it is {1}B", lowerBound, vsixFile.Length);
+                .Should().BeGreaterThan((long)lowerBound, "VSIX file has shrunk", lowerBound, vsixFile.Length);
         }
     }
 }
