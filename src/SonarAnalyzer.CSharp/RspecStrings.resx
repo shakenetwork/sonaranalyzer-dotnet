@@ -4497,6 +4497,30 @@
   <data name="S3776_Title" xml:space="preserve">
     <value>Cognitive Complexity of methods should not be too high</value>
   </data>
+  <data name="S3880_Category" xml:space="preserve">
+    <value>Sonar Bug</value>
+  </data>
+  <data name="S3880_Description" xml:space="preserve">
+    <value>Finalizers come with a performance cost due to the overhead of tracking the life cycle of objects. An empty one is consequently costly with no benefit or justification.</value>
+  </data>
+  <data name="S3880_IsActivatedByDefault" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="S3880_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S3880_RemediationCost" xml:space="preserve">
+    <value>2min</value>
+  </data>
+  <data name="S3880_Severity" xml:space="preserve">
+    <value>Major</value>
+  </data>
+  <data name="S3880_Tags" xml:space="preserve">
+    <value>performance</value>
+  </data>
+  <data name="S3880_Title" xml:space="preserve">
+    <value>Finalizers should not be empty</value>
+  </data>
   <data name="S818_Category" xml:space="preserve">
     <value>Sonar Code Smell</value>
   </data>
