@@ -139,8 +139,12 @@ namespace SonarAnalyzer.Common.CSharp
             }
         }
 
-        protected override bool IsComplexityIncreasingKind(SyntaxNode node) =>
-            ComplexityIncreasingKinds.Contains(node.Kind());
+        public override int GetComplexity(SyntaxNode node)
+        {
+            var walker = new CyclomaticComplexityWalker();
+            walker.Visit(node);
+            return walker.CyclomaticComplexity;
+        }
 
         private static readonly ISet<SyntaxKind> TriviaKinds = ImmutableHashSet.Create(
             SyntaxKind.SingleLineCommentTrivia,
@@ -160,20 +164,6 @@ namespace SonarAnalyzer.Common.CSharp
             SyntaxKind.DestructorDeclaration,
             SyntaxKind.MethodDeclaration,
             SyntaxKind.OperatorDeclaration
-        );
-
-        private static readonly ISet<SyntaxKind> ComplexityIncreasingKinds = ImmutableHashSet.Create(
-            SyntaxKind.IfStatement,
-            SyntaxKind.CoalesceExpression,
-            SyntaxKind.ConditionalAccessExpression,
-            SyntaxKind.ConditionalExpression,
-            SyntaxKind.WhileStatement,
-            SyntaxKind.DoStatement,
-            SyntaxKind.ForStatement,
-            SyntaxKind.ForEachStatement,
-            SyntaxKind.LogicalAndExpression,
-            SyntaxKind.LogicalOrExpression,
-            SyntaxKind.CaseSwitchLabel
         );
     }
 }

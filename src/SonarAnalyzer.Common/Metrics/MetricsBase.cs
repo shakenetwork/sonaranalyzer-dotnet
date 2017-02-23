@@ -158,15 +158,9 @@ namespace SonarAnalyzer.Common
 
         #region Complexity
 
-        protected abstract bool IsComplexityIncreasingKind(SyntaxNode node);
-
         public int Complexity => GetComplexity(tree.GetRoot());
 
-        public int GetComplexity(SyntaxNode node) =>
-            node.DescendantNodesAndSelf()
-                .Count(n =>
-                    IsComplexityIncreasingKind(n) ||
-                    IsFunction(n));
+        public abstract int GetComplexity(SyntaxNode node);
 
         public Distribution FunctionComplexityDistribution
         {

@@ -23,15 +23,26 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
-using SonarAnalyzer.Common.CSharp;
 using SonarAnalyzer.Helpers;
+using System;
+using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Linq;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [Rule(DiagnosticId)]
-    public class FunctionComplexity : FunctionComplexityBase
+    public class FunctionComplexity : ParameterLoadingDiagnosticAnalyzer
     {
+        protected const string DiagnosticId = "S1541";
+        protected const string MessageFormat = "The Cyclomatic Complexity of this {2} is {1} which is greater than {0} authorized.";
+
+        protected const int DefaultValueMaximum = 10;
+
+        [RuleParameter("maximumFunctionComplexityThreshold", PropertyType.Integer, "The maximum authorized complexity.", DefaultValueMaximum)]
+        public int Maximum { get; set; } = DefaultValueMaximum;
+
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager)
                                        .DisabledByDefault();
@@ -45,7 +56,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 SyntaxKind.MethodDeclaration);
 
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c => CheckComplexity<PropertyDeclarationSyntax>(c, p => p.ExpressionBody, p => p.Identifier.GetLocation(), "property"),
+                c => CheckComplexity<PropertyDeclarationSyntax>(c, p => p.Identifier.GetLocation(), p => p.ExpressionBody, "property"),
                 SyntaxKind.PropertyDeclaration);
 
             context.RegisterSyntaxNodeActionInNonGenerated(
@@ -68,10 +79,37 @@ namespace SonarAnalyzer.Rules.CSharp
                 SyntaxKind.RemoveAccessorDeclaration);
         }
 
-        protected override int GetComplexity(SyntaxNode node) =>
-            new Metrics(node.SyntaxTree).GetComplexity(node);
+        protected void CheckComplexity<TSyntax>(SyntaxNodeAnalysisContext context, Func<TSyntax, Location> getLocation, string declarationType)
+            where TSyntax : SyntaxNode
+        {
+            CheckComplexity(context, getLocation, n => n, declarationType);
+        }
 
-        protected sealed override GeneratedCodeRecognizer GeneratedCodeRecognizer =>
-            Helpers.CSharp.GeneratedCodeRecognizer.Instance;
+        protected void CheckComplexity<TSyntax>(SyntaxNodeAnalysisContext context, Func<TSyntax, Location> getLocation, Func<TSyntax, SyntaxNode> getNodeToCheck, string declarationType)
+            where TSyntax : SyntaxNode
+        {
+            var node = (TSyntax)context.Node;
+
+            var walker = new CyclomaticComplexityWalker();
+
+            var nodeToCheck = getNodeToCheck(node);
+            if (nodeToCheck == null)
+            {
+                return;
+            }
+
+            walker.Visit(nodeToCheck);
+
+            if (walker.CyclomaticComplexity > Maximum)
+            {
+                context.ReportDiagnostic(
+                    Diagnostic.Create(
+                        Rule,
+                        getLocation(node),
+                        walker.IncrementLocations.ToAdditionalLocations(),
+                        walker.IncrementLocations.ToProperties(),
+                        new object[] { Maximum, walker.CyclomaticComplexity, declarationType}));
+            }
+        }
     }
 }

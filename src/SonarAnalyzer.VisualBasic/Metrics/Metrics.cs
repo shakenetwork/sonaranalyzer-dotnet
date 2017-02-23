@@ -69,8 +69,14 @@ namespace SonarAnalyzer.Common.VisualBasic
 
         protected override IEnumerable<SyntaxNode> PublicApiNodes => Enumerable.Empty<SyntaxNode>(); // Not calculated for VB.Net
 
-        protected override bool IsComplexityIncreasingKind(SyntaxNode node) =>
+        protected bool IsComplexityIncreasingKind(SyntaxNode node) =>
             ComplexityIncreasingKinds.Contains(node.Kind());
+
+        public override int GetComplexity(SyntaxNode node) =>
+            node.DescendantNodesAndSelf()
+                .Count(n =>
+                    IsComplexityIncreasingKind(n) ||
+                    IsFunction(n));
 
         private static readonly ISet<SyntaxKind> TriviaKinds = ImmutableHashSet.Create(
             SyntaxKind.CommentTrivia,
