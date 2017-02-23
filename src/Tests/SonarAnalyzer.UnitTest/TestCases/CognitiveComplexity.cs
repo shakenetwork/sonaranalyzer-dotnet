@@ -371,6 +371,32 @@ namespace Tests.Diagnostics
                 }
             }
         }
+
+        string ArrowedProperty => string.Empty;
+    }
+
+    class EventsComplexity
+    {
+        event EventHandler Bar;
+        event EventHandler Foo
+        {
+            add // Noncompliant {{Refactor this accessor to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+            {
+                if (true)
+//              ^^ Secondary {{+1}}
+                {
+                    Bar += value;
+                }
+            }
+            remove // Noncompliant {{Refactor this accessor to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+            {
+                if (true)
+//              ^^ Secondary {{+1}}
+                {
+                    Bar -= value;
+                }
+            }
+        }
     }
 
     class ConstructorsComplexity
@@ -427,10 +453,11 @@ namespace Tests.Diagnostics
 
     class RecursionsComplexity
     {
-        void DirectRecursionComplexity() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+        void DirectRecursionComplexity()
+//           ^^^^^^^^^^^^^^^^^^^^^^^^^ {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+//           ^^^^^^^^^^^^^^^^^^^^^^^^^ Secondary@-1 {{+1 (recursion)}}
         {
             DirectRecursionComplexity();
-//          ^^^^^^^^^^^^^^^^^^^^^^^^^ Secondary {{+1}}
         }
 
         void IndirectRecursionComplexity()
@@ -443,10 +470,11 @@ namespace Tests.Diagnostics
             IndirectRecursionComplexity();
         }
 
-        void IndirectRecursionFromLocalLambda() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 2 to the 0 allowed}}
+        void IndirectRecursionFromLocalLambda()
+//           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+//           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Secondary@-1 {{+1 (recursion)}}
         {
             var act = () => IndirectRecursionFromLocalLambda();
-//                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Secondary {{+2 (incl 1 for nesting)}}
             act();
         }
     }

@@ -161,7 +161,7 @@
 },
 {
 "id":  "S3776",
-"message":  "Refactor this method to reduce its Cognitive Complexity from 52 to the 15 allowed",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 45 to the 15 allowed",
 "location":  [
 {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorSelection.cs",
@@ -328,10 +328,10 @@
 {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorSelection.cs",
 "region":  {
-"startLine":  195,
-"startColumn":  75,
-"endLine":  195,
-"endColumn":  91
+"startLine":  129,
+"startColumn":  30,
+"endLine":  129,
+"endColumn":  46
 }
 }
 ]
@@ -443,7 +443,7 @@
 },
 {
 "id":  "S3776",
-"message":  "Refactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed",
 "location":  [
 {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Futures.cs",
@@ -502,15 +502,6 @@
 {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Futures.cs",
 "region":  {
-"startLine":  407,
-"startColumn":  22,
-"endLine":  407,
-"endColumn":  26
-}
-},
-{
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\Futures.cs",
-"region":  {
 "startLine":  409,
 "startColumn":  13,
 "endLine":  409,
@@ -533,15 +524,6 @@
 "startColumn":  17,
 "endLine":  423,
 "endColumn":  21
-}
-},
-{
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\Futures.cs",
-"region":  {
-"startLine":  425,
-"startColumn":  21,
-"endLine":  425,
-"endColumn":  25
 }
 },
 {
@@ -574,10 +556,10 @@
 {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Futures.cs",
 "region":  {
-"startLine":  435,
-"startColumn":  17,
-"endLine":  435,
-"endColumn":  21
+"startLine":  386,
+"startColumn":  30,
+"endLine":  386,
+"endColumn":  34
 }
 }
 ]
@@ -1922,7 +1904,7 @@
 },
 {
 "id":  "S3776",
-"message":  "Refactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed",
 "location":  [
 {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\TcpOutgoingConnection.cs",
@@ -1981,15 +1963,6 @@
 {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\TcpOutgoingConnection.cs",
 "region":  {
-"startLine":  137,
-"startColumn":  48,
-"endLine":  137,
-"endColumn":  58
-}
-},
-{
-"uri":  "akka.net\\src\\core\\Akka\\IO\\TcpOutgoingConnection.cs",
-"region":  {
 "startLine":  139,
 "startColumn":  29,
 "endLine":  139,
@@ -2012,6 +1985,15 @@
 "startColumn":  21,
 "endLine":  150,
 "endColumn":  23
+}
+},
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\TcpOutgoingConnection.cs",
+"region":  {
+"startLine":  117,
+"startColumn":  25,
+"endLine":  117,
+"endColumn":  35
 }
 }
 ]
@@ -2660,7 +2642,7 @@
 },
 {
 "id":  "S3776",
-"message":  "Refactor this method to reduce its Cognitive Complexity from 33 to the 15 allowed",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed",
 "location":  [
 {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\Collections\\ImmutableAvlTreeBase.cs",
@@ -2710,15 +2692,6 @@
 {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\Collections\\ImmutableAvlTreeBase.cs",
 "region":  {
-"startLine":  399,
-"startColumn":  5,
-"endLine":  399,
-"endColumn":  14
-}
-},
-{
-"uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\Collections\\ImmutableAvlTreeBase.cs",
-"region":  {
 "startLine":  402,
 "startColumn":  4,
 "endLine":  402,
@@ -2741,15 +2714,6 @@
 "startColumn":  6,
 "endLine":  408,
 "endColumn":  8
-}
-},
-{
-"uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\Collections\\ImmutableAvlTreeBase.cs",
-"region":  {
-"startLine":  410,
-"startColumn":  28,
-"endLine":  410,
-"endColumn":  37
 }
 },
 {
@@ -2782,26 +2746,26 @@
 {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\Collections\\ImmutableAvlTreeBase.cs",
 "region":  {
-"startLine":  425,
-"startColumn":  29,
-"endLine":  425,
-"endColumn":  38
+"startLine":  427,
+"startColumn":  6,
+"endLine":  427,
+"endColumn":  8
 }
 },
 {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\Collections\\ImmutableAvlTreeBase.cs",
 "region":  {
-"startLine":  427,
-"startColumn":  6,
-"endLine":  427,
-"endColumn":  8
+"startLine":  370,
+"startColumn":  16,
+"endLine":  370,
+"endColumn":  25
 }
 }
 ]
 },
 {
 "id":  "S3776",
-"message":  "Refactor this method to reduce its Cognitive Complexity from 40 to the 15 allowed",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 37 to the 15 allowed",
 "location":  [
 {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\Collections\\ImmutableAvlTreeBase.cs",
@@ -2851,15 +2815,6 @@
 {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\Collections\\ImmutableAvlTreeBase.cs",
 "region":  {
-"startLine":  137,
-"startColumn":  20,
-"endLine":  137,
-"endColumn":  26
-}
-},
-{
-"uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\Collections\\ImmutableAvlTreeBase.cs",
-"region":  {
 "startLine":  138,
 "startColumn":  5,
 "endLine":  138,
@@ -2873,15 +2828,6 @@
 "startColumn":  4,
 "endLine":  145,
 "endColumn":  8
-}
-},
-{
-"uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\Collections\\ImmutableAvlTreeBase.cs",
-"region":  {
-"startLine":  148,
-"startColumn":  20,
-"endLine":  148,
-"endColumn":  26
 }
 },
 {
@@ -3008,6 +2954,15 @@
 "startColumn":  6,
 "endLine":  196,
 "endColumn":  10
+}
+},
+{
+"uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\Collections\\ImmutableAvlTreeBase.cs",
+"region":  {
+"startLine":  103,
+"startColumn":  25,
+"endLine":  103,
+"endColumn":  31
 }
 }
 ]

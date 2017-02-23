@@ -20,8 +20,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Collections.Immutable;
-using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -54,106 +52,99 @@ namespace SonarAnalyzer.Rules.CSharp
         protected override void Initialize(ParameterLoadingAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c => CheckComplexity<MethodDeclarationSyntax>(c, m => m.Identifier.GetLocation(),
+                c => CheckComplexity<MethodDeclarationSyntax>(c, m => m, m => m.Identifier.GetLocation(),
                     "method", Threshold),
                 SyntaxKind.MethodDeclaration);
 
+            // Here, we only care about arrowed properties, others will be handled by the accessor.
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c => CheckComplexity<ConstructorDeclarationSyntax>(c, co => co.Identifier.GetLocation(),
+                c => CheckComplexity<PropertyDeclarationSyntax>(c, p => p.ExpressionBody, p => p.Identifier.GetLocation(),
+                    "property", PropertyThreshold),
+                SyntaxKind.PropertyDeclaration);
+
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c => CheckComplexity<ConstructorDeclarationSyntax>(c, co => co, co => co.Identifier.GetLocation(),
                     "constructor", Threshold),
                 SyntaxKind.ConstructorDeclaration);
 
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c => CheckComplexity<DestructorDeclarationSyntax>(c, d => d.Identifier.GetLocation(),
+                c => CheckComplexity<DestructorDeclarationSyntax>(c, d => d, d => d.Identifier.GetLocation(),
                     "destructor", Threshold),
                 SyntaxKind.DestructorDeclaration);
 
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c => CheckComplexity<OperatorDeclarationSyntax>(c, o => o.OperatorToken.GetLocation(),
+                c => CheckComplexity<OperatorDeclarationSyntax>(c, o => o, o => o.OperatorToken.GetLocation(),
                     "operator", Threshold),
                 SyntaxKind.OperatorDeclaration);
 
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c => CheckComplexity<AccessorDeclarationSyntax>(c, a => a.Keyword.GetLocation(),
+                c => CheckComplexity<AccessorDeclarationSyntax>(c, a => a, a => a.Keyword.GetLocation(),
                     "accessor", PropertyThreshold),
                 SyntaxKind.GetAccessorDeclaration,
-                SyntaxKind.SetAccessorDeclaration);
+                SyntaxKind.SetAccessorDeclaration,
+                SyntaxKind.AddAccessorDeclaration,
+                SyntaxKind.RemoveAccessorDeclaration);
 
             context.RegisterSyntaxNodeActionInNonGenerated(
-               c => CheckComplexity<FieldDeclarationSyntax>(c, m => m.Declaration.Variables[0].Identifier.GetLocation(),
+               c => CheckComplexity<FieldDeclarationSyntax>(c, m => m, m => m.Declaration.Variables[0].Identifier.GetLocation(),
                     "field", Threshold),
                SyntaxKind.FieldDeclaration);
         }
 
-        protected void CheckComplexity<TSyntax>(SyntaxNodeAnalysisContext context,
+        protected void CheckComplexity<TSyntax>(SyntaxNodeAnalysisContext context, Func<TSyntax, SyntaxNode> nodeSelector,
             Func<TSyntax, Location> getLocationToReport, string declarationType, int threshold)
             where TSyntax : SyntaxNode
         {
             var syntax = (TSyntax)context.Node;
+            var nodeToAnalyze = nodeSelector(syntax);
+            if (nodeToAnalyze == null)
+            {
+                return;
+            }
 
             var cognitiveWalker = new CognitiveComplexityWalker();
-            cognitiveWalker.Visit(syntax);
-            if (cognitiveWalker.NestingLevel != 0)
-            {
-                throw new Exception($"There is a problem with the cognitive complexity walker. Expecting ending nesting to be '0' got '{cognitiveWalker.NestingLevel}'");
-            }
+            cognitiveWalker.Visit(nodeToAnalyze);
+            cognitiveWalker.EnsureVisitEndedCorrectly();
 
             if (cognitiveWalker.Complexity > Threshold)
             {
-                context.ReportDiagnostic(Diagnostic.Create(SupportedDiagnostics.First(), getLocationToReport(syntax),
-                    cognitiveWalker.Flow.Select(x => x.Location),
-                    CreatePropertiesFromCognitiveTrace(cognitiveWalker.Flow),
+                context.ReportDiagnostic(Diagnostic.Create(Rule, getLocationToReport(syntax),
+                    cognitiveWalker.SecondaryLocations.ToAdditionalLocations(),
+                    cognitiveWalker.SecondaryLocations.ToProperties(),
                     new object[] { declarationType, cognitiveWalker.Complexity, threshold }));
             }
         }
 
-        private ImmutableDictionary<string, string> CreatePropertiesFromCognitiveTrace(
-            IEnumerable<CognitiveIncrement> cognitiveTrace)
-        {
-            int index = 0;
-
-            return cognitiveTrace.ToDictionary(
-                x =>
-                {
-                    string val = index.ToString();
-                    index++;
-                    return val;
-                },
-                x => x.Message).ToImmutableDictionary();
-        }
-
-        private class CognitiveIncrement
-        {
-            public CognitiveIncrement(Location location, int localComplexity)
-            {
-                Location = location;
-                Message = localComplexity == 1
-                    ? "+1"
-                    : $"+{localComplexity} (incl {localComplexity - 1} for nesting)";
-            }
-
-            public Location Location { get; }
-            public string Message { get; }
-        }
-
         private class CognitiveComplexityWalker : CSharpSyntaxWalker
         {
-            private readonly HashSet<CognitiveIncrement> flow = new HashSet<CognitiveIncrement>();
-            private readonly HashSet<ExpressionSyntax> logicalOperationsToIgnore = new HashSet<ExpressionSyntax>();
+            private readonly List<SecondaryLocation> secondaryLocations = new List<SecondaryLocation>();
+            private readonly List<ExpressionSyntax> logicalOperationsToIgnore = new List<ExpressionSyntax>();
 
             private string currentMethodName;
+            private int nestingLevel = 0;
+            private bool hasDirectRecursiveCall = false;
 
-            public int NestingLevel { get; private set; } = 0;
             public int Complexity { get; private set; } = 0;
-            public IEnumerable<CognitiveIncrement> Flow
+            public IEnumerable<SecondaryLocation> SecondaryLocations => secondaryLocations;
+
+            public void EnsureVisitEndedCorrectly()
             {
-                get { return flow; }
+                if (nestingLevel != 0)
+                {
+                    throw new InvalidOperationException(
+                        $"There is a problem with the cognitive complexity walker. Expecting ending nesting to be '0' got '{nestingLevel}'");
+                }
             }
 
             public override void VisitMethodDeclaration(MethodDeclarationSyntax node)
             {
                 currentMethodName = node.Identifier.ValueText;
                 base.VisitMethodDeclaration(node);
+
+                if (hasDirectRecursiveCall)
+                {
+                    IncreaseComplexity(node.Identifier, 1, "+1 (recursion)");
+                }
             }
 
             public override void VisitIfStatement(IfStatementSyntax node)
@@ -223,7 +214,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 if (identifierNameSyntax != null &&
                     identifierNameSyntax.Identifier.ValueText.Equals(currentMethodName, StringComparison.Ordinal))
                 {
-                    IncreaseComplexityByNestingPlusOne(identifierNameSyntax.Identifier);
+                    hasDirectRecursiveCall = true;
                 }
 
                 base.VisitInvocationExpression(node);
@@ -270,25 +261,29 @@ namespace SonarAnalyzer.Rules.CSharp
 
             private void VisitWithNesting<TSyntaxNode>(TSyntaxNode node, Action<TSyntaxNode> visit)
             {
-                NestingLevel++;
+                nestingLevel++;
                 visit(node);
-                NestingLevel--;
+                nestingLevel--;
             }
 
             private void IncreaseComplexityByOne(SyntaxToken token)
             {
-                IncreaseComplexity(token, 1);
+                IncreaseComplexity(token, 1, "+1");
             }
 
             private void IncreaseComplexityByNestingPlusOne(SyntaxToken token)
             {
-                IncreaseComplexity(token, NestingLevel + 1);
+                var increment = nestingLevel + 1;
+                var message = increment == 1
+                    ? "+1"
+                    : $"+{increment} (incl {increment - 1} for nesting)";
+                IncreaseComplexity(token, increment, message);
             }
 
-            private void IncreaseComplexity(SyntaxToken token, int increment)
+            private void IncreaseComplexity(SyntaxToken token, int increment, string message)
             {
                 Complexity += increment;
-                flow.Add(new CognitiveIncrement(token.GetLocation(), increment));
+                secondaryLocations.Add(new SecondaryLocation(token.GetLocation(), message));
             }
         }
     }

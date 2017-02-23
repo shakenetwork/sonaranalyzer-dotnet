@@ -992,129 +992,6 @@
 },
 {
 "id":  "S3776",
-"message":  "Refactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed",
-"location":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\ReflectionUtils.cs",
-"region":  {
-"startLine":  71,
-"startColumn":  28,
-"endLine":  71,
-"endColumn":  38
-}
-},
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\ReflectionUtils.cs",
-"region":  {
-"startLine":  73,
-"startColumn":  13,
-"endLine":  73,
-"endColumn":  15
-}
-},
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\ReflectionUtils.cs",
-"region":  {
-"startLine":  73,
-"startColumn":  30,
-"endLine":  73,
-"endColumn":  32
-}
-},
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\ReflectionUtils.cs",
-"region":  {
-"startLine":  76,
-"startColumn":  13,
-"endLine":  76,
-"endColumn":  15
-}
-},
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\ReflectionUtils.cs",
-"region":  {
-"startLine":  79,
-"startColumn":  13,
-"endLine":  79,
-"endColumn":  15
-}
-},
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\ReflectionUtils.cs",
-"region":  {
-"startLine":  81,
-"startColumn":  17,
-"endLine":  81,
-"endColumn":  24
-}
-},
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\ReflectionUtils.cs",
-"region":  {
-"startLine":  83,
-"startColumn":  21,
-"endLine":  83,
-"endColumn":  23
-}
-},
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\ReflectionUtils.cs",
-"region":  {
-"startLine":  83,
-"startColumn":  25,
-"endLine":  83,
-"endColumn":  35
-}
-},
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\ReflectionUtils.cs",
-"region":  {
-"startLine":  86,
-"startColumn":  13,
-"endLine":  86,
-"endColumn":  15
-}
-},
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\ReflectionUtils.cs",
-"region":  {
-"startLine":  86,
-"startColumn":  36,
-"endLine":  86,
-"endColumn":  38
-}
-},
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\ReflectionUtils.cs",
-"region":  {
-"startLine":  88,
-"startColumn":  17,
-"endLine":  88,
-"endColumn":  19
-}
-},
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\ReflectionUtils.cs",
-"region":  {
-"startLine":  88,
-"startColumn":  21,
-"endLine":  88,
-"endColumn":  31
-}
-},
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\ReflectionUtils.cs",
-"region":  {
-"startLine":  91,
-"startColumn":  20,
-"endLine":  91,
-"endColumn":  30
-}
-}
-]
-},
-{
-"id":  "S3776",
 "message":  "Refactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed",
 "location":  [
 {
@@ -2126,7 +2003,7 @@
 },
 {
 "id":  "S3776",
-"message":  "Refactor this method to reduce its Cognitive Complexity from 39 to the 15 allowed",
+"message":  "Refactor this method to reduce its Cognitive Complexity from 37 to the 15 allowed",
 "location":  [
 {
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
@@ -2243,15 +2120,6 @@
 "startColumn":  21,
 "endLine":  150,
 "endColumn":  23
-}
-},
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
-"region":  {
-"startLine":  152,
-"startColumn":  6,
-"endLine":  152,
-"endColumn":  24
 }
 },
 {
@@ -2378,6 +2246,15 @@
 "startColumn":  5,
 "endLine":  261,
 "endColumn":  7
+}
+},
+{
+"uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
+"region":  {
+"startLine":  104,
+"startColumn":  8,
+"endLine":  104,
+"endColumn":  26
 }
 }
 ]
