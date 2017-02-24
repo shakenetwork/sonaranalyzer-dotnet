@@ -160,7 +160,7 @@ namespace SonarAnalyzer.Helpers
 
         public static readonly KnownType System_Linq_Enumerable = new KnownType("System.Linq.Enumerable");
         public static readonly KnownType System_Linq_ImmutableArrayExtensions = new KnownType("System.Linq.ImmutableArrayExtensions");
-        
+
         public static readonly KnownType System_Runtime_Serialization_ISerializable = new KnownType("System.Runtime.Serialization.ISerializable");
         public static readonly KnownType System_Runtime_Serialization_SerializationInfo = new KnownType("System.Runtime.Serialization.SerializationInfo");
         public static readonly KnownType System_Runtime_Serialization_StreamingContext = new KnownType("System.Runtime.Serialization.StreamingContext");
@@ -176,6 +176,8 @@ namespace SonarAnalyzer.Helpers
 
         public static readonly KnownType System_IComparable = new KnownType("System.IComparable");
         public static readonly KnownType System_IComparable_T = new KnownType("System.IComparable<T>");
+
+        public static readonly KnownType System_Threading_Thread = new KnownType("System.Threading.Thread");
 
         #endregion
 

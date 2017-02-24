@@ -4545,6 +4545,30 @@
   <data name="S3880_Title" xml:space="preserve">
     <value>Finalizers should not be empty</value>
   </data>
+  <data name="S3889_Category" xml:space="preserve">
+    <value>Sonar Bug</value>
+  </data>
+  <data name="S3889_Description" xml:space="preserve">
+    <value>Thread.Suspend and Thread.Resume can give unpredictable results, and have been deprecated. Instead, other synchronization mechanisms should be used, such as Monitor, Mutex, and Semaphore.</value>
+  </data>
+  <data name="S3889_IsActivatedByDefault" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="S3889_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S3889_RemediationCost" xml:space="preserve">
+    <value>20min</value>
+  </data>
+  <data name="S3889_Severity" xml:space="preserve">
+    <value>Blocker</value>
+  </data>
+  <data name="S3889_Tags" xml:space="preserve">
+    <value>multi-threading,unpredictable</value>
+  </data>
+  <data name="S3889_Title" xml:space="preserve">
+    <value>Neither "Thread.Resume" nor "Thread.Suspend" should be used</value>
+  </data>
   <data name="S818_Category" xml:space="preserve">
     <value>Sonar Code Smell</value>
   </data>
