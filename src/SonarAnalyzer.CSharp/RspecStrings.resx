@@ -777,6 +777,30 @@
   <data name="S1210_Title" xml:space="preserve">
     <value>When implementing "IComparable", "Equals(object o)" and the "&lt;", "&gt;", "==", "!=" operators should be overridden</value>
   </data>
+  <data name="S1215_Category" xml:space="preserve">
+    <value>Sonar Bug</value>
+  </data>
+  <data name="S1215_Description" xml:space="preserve">
+    <value>Calling GC.Collect is rarely necessary, and can significantly affect application performance. That's because it triggers a blocking operation that examines ever object in memory for cleanup. Further, you don't have control over when this blocking cleanup will actually run.</value>
+  </data>
+  <data name="S1215_IsActivatedByDefault" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="S1215_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S1215_RemediationCost" xml:space="preserve">
+    <value>30min</value>
+  </data>
+  <data name="S1215_Severity" xml:space="preserve">
+    <value>Minor</value>
+  </data>
+  <data name="S1215_Tags" xml:space="preserve">
+    <value>performance,unpredictable,bad-practice</value>
+  </data>
+  <data name="S1215_Title" xml:space="preserve">
+    <value>"GC.Collect" should not be called</value>
+  </data>
   <data name="S122_Category" xml:space="preserve">
     <value>Sonar Code Smell</value>
   </data>
