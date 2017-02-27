@@ -4521,6 +4521,30 @@
   <data name="S3776_Title" xml:space="preserve">
     <value>Cognitive Complexity of methods should not be too high</value>
   </data>
+  <data name="S3869_Category" xml:space="preserve">
+    <value>Sonar Bug</value>
+  </data>
+  <data name="S3869_Description" xml:space="preserve">
+    <value>Not surprisingly, the SafeHandle.DangerousGetHandle method is dangerous. That's because it may not return a valid handle. Using it can lead to leaks and vulnerabilities. While it is possible to use the method successfully, it's extremely difficult to do correctly, so the method should simply be avoided altogether.</value>
+  </data>
+  <data name="S3869_IsActivatedByDefault" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="S3869_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S3869_RemediationCost" xml:space="preserve">
+    <value>20min</value>
+  </data>
+  <data name="S3869_Severity" xml:space="preserve">
+    <value>Blocker</value>
+  </data>
+  <data name="S3869_Tags" xml:space="preserve">
+    <value>leak,unpredictable</value>
+  </data>
+  <data name="S3869_Title" xml:space="preserve">
+    <value>"SafeHandle.DangerousGetHandle" should not be called</value>
+  </data>
   <data name="S3880_Category" xml:space="preserve">
     <value>Sonar Bug</value>
   </data>

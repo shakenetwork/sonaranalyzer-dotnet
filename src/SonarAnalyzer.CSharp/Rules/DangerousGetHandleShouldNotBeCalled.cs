@@ -18,6 +18,7 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+using System;
 using System.Collections.Generic;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
@@ -28,9 +29,9 @@ namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [Rule(DiagnosticId)]
-    public sealed class ThreadResumeOrSuspendShouldNotBeCalled : MethodShouldNotBeCalled
+    public class DangerousGetHandleShouldNotBeCalled : MethodShouldNotBeCalled
     {
-        internal const string DiagnosticId = "S3889";
+        internal const string DiagnosticId = "S3869";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
@@ -38,8 +39,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
         private static readonly IEnumerable<MethodSignature> invalidMethods = new List<MethodSignature>
         {
-            new MethodSignature(KnownType.System_Threading_Thread, "Suspend"),
-            new MethodSignature(KnownType.System_Threading_Thread, "Resume")
+            new MethodSignature(KnownType.System_Runtime_InteropServices_SafeHandle, "DangerousGetHandle")
         };
         protected sealed override IEnumerable<MethodSignature> InvalidMethods => invalidMethods;
     }
