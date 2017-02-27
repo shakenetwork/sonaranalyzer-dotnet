@@ -18,6 +18,7 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.CodeAnalysis;
@@ -54,20 +55,20 @@ namespace SonarAnalyzer.Rules
         private void CheckForIssue(SyntaxNodeAnalysisContext analysisContext)
         {
             var invocation = (InvocationExpressionSyntax)analysisContext.Node;
-            var call = invocation.Expression as MemberAccessExpressionSyntax;
-            if (call == null)
+
+            var identifier = GetMethodCallIdentifier(invocation);
+            if (identifier == null)
             {
                 return;
             }
 
-            var methodName = InvalidMethods.FirstOrDefault(method =>
-                method.MethodName.Equals(call.Name.Identifier.ValueText));
+            var methodName = InvalidMethods.FirstOrDefault(method => method.MethodName.Equals(identifier.Value.ValueText));
             if (methodName == null)
             {
                 return;
             }
 
-            var methodCallSymbol = analysisContext.SemanticModel.GetSymbolInfo(call.Name);
+            var methodCallSymbol = analysisContext.SemanticModel.GetSymbolInfo(identifier.Value.Parent);
             if (methodCallSymbol.Symbol == null)
             {
                 return;
@@ -79,7 +80,24 @@ namespace SonarAnalyzer.Rules
             }
 
             analysisContext.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(),
-                methodName.MethodName));
+                    methodName.MethodName));
+        }
+
+        private SyntaxToken? GetMethodCallIdentifier(InvocationExpressionSyntax invocation)
+        {
+            var directMethodCall = invocation.Expression as IdentifierNameSyntax;
+            if (directMethodCall != null)
+            {
+                return directMethodCall.Identifier;
+            }
+
+            var memberAccessCall = invocation.Expression as MemberAccessExpressionSyntax;
+            if (memberAccessCall != null)
+            {
+                return memberAccessCall.Name.Identifier;
+            }
+
+            return null;
         }
     }
 }
