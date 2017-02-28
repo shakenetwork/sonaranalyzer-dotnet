@@ -18,7 +18,6 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-using System;
 using System.Collections.Generic;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
@@ -32,6 +31,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class DangerousGetHandleShouldNotBeCalled : MethodShouldNotBeCalled
     {
         internal const string DiagnosticId = "S3869";
+        private const string MessageFormat = "Refactor the code to remove this use of '{0}'";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

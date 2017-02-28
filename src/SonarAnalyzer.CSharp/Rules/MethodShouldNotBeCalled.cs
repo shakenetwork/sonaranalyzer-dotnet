@@ -18,7 +18,6 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.CodeAnalysis;
@@ -33,26 +32,24 @@ namespace SonarAnalyzer.Rules
     {
         protected class MethodSignature
         {
-            internal MethodSignature(KnownType namespaceName, string methodName)
+            internal MethodSignature(KnownType containingType, string name)
             {
-                Namespace = namespaceName;
-                MethodName = methodName;
+                ContainingType = containingType;
+                Name = name;
             }
 
-            internal KnownType Namespace { get; }
-            internal string MethodName { get; }
+            internal KnownType ContainingType { get; }
+            internal string Name { get; }
         }
-
-        protected const string MessageFormat = "Refactor the code to remove this use of '{0}'";
 
         protected abstract IEnumerable<MethodSignature> InvalidMethods { get; }
 
         protected override void Initialize(SonarAnalysisContext context)
         {
-            context.RegisterSyntaxNodeActionInNonGenerated(CheckForIssue, SyntaxKind.InvocationExpression);
+            context.RegisterSyntaxNodeActionInNonGenerated(ReportIfInvalidMethodIsCalled, SyntaxKind.InvocationExpression);
         }
 
-        private void CheckForIssue(SyntaxNodeAnalysisContext analysisContext)
+        private void ReportIfInvalidMethodIsCalled(SyntaxNodeAnalysisContext analysisContext)
         {
             var invocation = (InvocationExpressionSyntax)analysisContext.Node;
 
@@ -62,7 +59,7 @@ namespace SonarAnalyzer.Rules
                 return;
             }
 
-            var methodName = InvalidMethods.FirstOrDefault(method => method.MethodName.Equals(identifier.Value.ValueText));
+            var methodName = InvalidMethods.FirstOrDefault(method => method.Name.Equals(identifier.Value.ValueText));
             if (methodName == null)
             {
                 return;
@@ -74,13 +71,13 @@ namespace SonarAnalyzer.Rules
                 return;
             }
 
-            if (!methodCallSymbol.Symbol.ContainingType.ConstructedFrom.Is(methodName.Namespace))
+            if (!methodCallSymbol.Symbol.ContainingType.ConstructedFrom.Is(methodName.ContainingType))
             {
                 return;
             }
 
-            analysisContext.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(),
-                    methodName.MethodName));
+            analysisContext.ReportDiagnostic(Diagnostic.Create(Rule, identifier.Value.GetLocation(),
+                GetMethodTypeName(methodName)));
         }
 
         private SyntaxToken? GetMethodCallIdentifier(InvocationExpressionSyntax invocation)
@@ -98,6 +95,12 @@ namespace SonarAnalyzer.Rules
             }
 
             return null;
+        }
+
+        private string GetMethodTypeName(MethodSignature method)
+        {
+            var containingTypeName = method.ContainingType.TypeName.Split('.').Last();
+            return string.Concat(containingTypeName, ".", method.Name);
         }
     }
 }

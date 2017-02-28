@@ -28,19 +28,21 @@ namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [Rule(DiagnosticId)]
-    public sealed class ThreadResumeOrSuspendShouldNotBeCalled : MethodShouldNotBeCalled
+    public class AssemblyLoadShouldBeUsed : MethodShouldNotBeCalled
     {
-        internal const string DiagnosticId = "S3889";
-        private const string MessageFormat = "Refactor the code to remove this use of '{0}'";
+        internal const string DiagnosticId = "S3885";
+        private const string MessageFormat = "Replace this call to '{0}' with 'Assembly.Load'";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
+
         protected sealed override DiagnosticDescriptor Rule => rule;
 
         private static readonly IEnumerable<MethodSignature> invalidMethods = new List<MethodSignature>
         {
-            new MethodSignature(KnownType.System_Threading_Thread, "Suspend"),
-            new MethodSignature(KnownType.System_Threading_Thread, "Resume")
+            new MethodSignature(KnownType.System_Reflection_Assembly, "LoadFrom"),
+            new MethodSignature(KnownType.System_Reflection_Assembly, "LoadFile"),
+            new MethodSignature(KnownType.System_Reflection_Assembly, "LoadWithPartialName")
         };
         protected sealed override IEnumerable<MethodSignature> InvalidMethods => invalidMethods;
     }
