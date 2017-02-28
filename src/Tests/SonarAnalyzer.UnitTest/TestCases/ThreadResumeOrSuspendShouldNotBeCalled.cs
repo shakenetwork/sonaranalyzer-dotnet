@@ -6,8 +6,10 @@ namespace Tests.Diagnostics
     {
         void Foo()
         {
-            Thread.CurrentThread.Suspend(); // Noncompliant
-            Thread.CurrentThread.Resume(); // Noncompliant
+            Thread.CurrentThread.Suspend(); // Noncompliant {{Refactor the code to remove this use of 'Thread.Suspend'}}
+//                               ^^^^^^^
+            Thread.CurrentThread.Resume(); // Noncompliant{{Refactor the code to remove this use of 'Thread.Resume'}}
+//                               ^^^^^^
 
             var thread = Thread.CurrentThread;
             thread.Suspend(); // Noncompliant

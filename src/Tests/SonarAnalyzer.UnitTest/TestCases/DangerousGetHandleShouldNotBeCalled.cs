@@ -17,7 +17,8 @@ namespace Tests.Diagnostics
             if (fieldInfo != null)
             {
                 SafeHandle handle = (SafeHandle)fieldInfo.GetValue(rKey);
-                IntPtr dangerousHandle = handle.DangerousGetHandle(); // Noncompliant
+                IntPtr dangerousHandle = handle.DangerousGetHandle(); // Noncompliant {{Refactor the code to remove this use of 'SafeHandle.DangerousGetHandle'}}
+//                                              ^^^^^^^^^^^^^^^^^^
                 IntPtr dangerousHandle2 = (((handle))).DangerousGetHandle(); // Noncompliant
                 return dangerousHandle;
             }
