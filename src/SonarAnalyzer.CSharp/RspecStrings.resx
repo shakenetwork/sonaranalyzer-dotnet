@@ -4569,6 +4569,30 @@
   <data name="S3869_Title" xml:space="preserve">
     <value>"SafeHandle.DangerousGetHandle" should not be called</value>
   </data>
+  <data name="S3871_Category" xml:space="preserve">
+    <value>Sonar Bug</value>
+  </data>
+  <data name="S3871_Description" xml:space="preserve">
+    <value>The point of having custom exception types is to convey more information than is available in standard types. But custom exception types must be public for that to work. </value>
+  </data>
+  <data name="S3871_IsActivatedByDefault" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="S3871_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S3871_RemediationCost" xml:space="preserve">
+    <value>5min</value>
+  </data>
+  <data name="S3871_Severity" xml:space="preserve">
+    <value>Major</value>
+  </data>
+  <data name="S3871_Tags" xml:space="preserve">
+    <value>error-handling</value>
+  </data>
+  <data name="S3871_Title" xml:space="preserve">
+    <value>Exception types should be "public"</value>
+  </data>
   <data name="S3875_Category" xml:space="preserve">
     <value>Sonar Code Smell</value>
   </data>
