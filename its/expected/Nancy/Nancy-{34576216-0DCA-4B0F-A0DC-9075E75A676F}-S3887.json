@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S3887",
+"message":  "Use an immutable collection here instead or reduce the accessibility of this field",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\AsyncNamedPipelineBase.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  9,
+"endLine":  12,
+"endColumn":  77
+}
+}
+},
+{
+"id":  "S3887",
+"message":  "Use an immutable collection here instead or reduce the accessibility of this field",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\NamedPipelineBase.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  9,
+"endLine":  12,
+"endColumn":  72
+}
+}
+},
+{
+"id":  "S3887",
+"message":  "Use an immutable collection here instead or reduce the accessibility of this field",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\ViewEngines\\ResourceViewLocationProvider.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  9,
+"endLine":  20,
+"endColumn":  114
+}
+}
+},
+{
+"id":  "S3887",
+"message":  "Use an immutable collection here instead or reduce the accessibility of this field",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\ViewEngines\\ResourceViewLocationProvider.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  9,
+"endLine":  25,
+"endColumn":  78
+}
+}
+}
+]
+}

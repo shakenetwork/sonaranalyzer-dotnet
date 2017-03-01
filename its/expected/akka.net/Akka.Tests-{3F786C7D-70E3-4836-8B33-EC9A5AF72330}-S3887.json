@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S3887",
+"message":  "Use an immutable collection here instead or reduce the accessibility of this field",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\SupervisorStrategySpecs.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  9,
+"endLine":  22,
+"endColumn":  11
+}
+}
+},
+{
+"id":  "S3887",
+"message":  "Use an immutable collection here instead or reduce the accessibility of this field",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\SupervisorStrategySpecs.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  9,
+"endLine":  32,
+"endColumn":  11
+}
+}
+},
+{
+"id":  "S3887",
+"message":  "Use an immutable collection here instead or reduce the accessibility of this field",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\CachedMatchCompilerTests.cs",
+"region":  {
+"startLine":  133,
+"startColumn":  13,
+"endLine":  133,
+"endColumn":  130
+}
+}
+},
+{
+"id":  "S3887",
+"message":  "Use an immutable collection here instead or reduce the accessibility of this field",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\CachedMatchCompilerTests.cs",
+"region":  {
+"startLine":  134,
+"startColumn":  13,
+"endLine":  134,
+"endColumn":  128
+}
+}
+}
+]
+}

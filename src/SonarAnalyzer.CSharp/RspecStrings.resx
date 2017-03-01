@@ -4641,6 +4641,30 @@
   <data name="S3885_Title" xml:space="preserve">
     <value>"Assembly.Load" should be used</value>
   </data>
+  <data name="S3887_Category" xml:space="preserve">
+    <value>Sonar Bug</value>
+  </data>
+  <data name="S3887_Description" xml:space="preserve">
+    <value>Using the readonly keyword on a field means that it can't be changed after initialization. However, when applied to collections or arrays, that's only partly true. readonly enforces that another instance can't be assigned to the field, but it cannot keep the contents from being updated. That means that in practice, the field value really can be changed, and the use of readonly on such a field is misleading, and you're likely to not be getting the behavior you expect.</value>
+  </data>
+  <data name="S3887_IsActivatedByDefault" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="S3887_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S3887_RemediationCost" xml:space="preserve">
+    <value>15min</value>
+  </data>
+  <data name="S3887_Severity" xml:space="preserve">
+    <value>Minor</value>
+  </data>
+  <data name="S3887_Tags" xml:space="preserve">
+    <value />
+  </data>
+  <data name="S3887_Title" xml:space="preserve">
+    <value>"readonly" mutable collection and array fields should be private</value>
+  </data>
   <data name="S3889_Category" xml:space="preserve">
     <value>Sonar Bug</value>
   </data>

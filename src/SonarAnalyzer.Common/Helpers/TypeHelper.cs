@@ -122,7 +122,7 @@ namespace SonarAnalyzer.Helpers
                 {
                     return true;
                 }
-                currentType = currentType.BaseType;
+                currentType = currentType.BaseType?.ConstructedFrom;
             }
 
             return false;
@@ -137,7 +137,7 @@ namespace SonarAnalyzer.Helpers
                 {
                     return true;
                 }
-                currentType = currentType.BaseType;
+                currentType = currentType.BaseType?.ConstructedFrom;
             }
 
             return false;
@@ -152,7 +152,7 @@ namespace SonarAnalyzer.Helpers
                 {
                     return true;
                 }
-                currentType = currentType.BaseType;
+                currentType = currentType.BaseType?.ConstructedFrom;
             }
 
             return false;

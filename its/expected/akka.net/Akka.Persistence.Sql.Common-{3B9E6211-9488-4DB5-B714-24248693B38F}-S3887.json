@@ -1,0 +1,56 @@
+{
+"issues":  [
+{
+"id":  "S3887",
+"message":  "Use an immutable collection here instead or reduce the accessibility of this field",
+"location":  {
+"uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Journal\\JournalDbEngine.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  9,
+"endLine":  32,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S3887",
+"message":  "Use an immutable collection here instead or reduce the accessibility of this field",
+"location":  {
+"uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Queries\\Hints.cs",
+"region":  {
+"startLine":  101,
+"startColumn":  9,
+"endLine":  101,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S3887",
+"message":  "Use an immutable collection here instead or reduce the accessibility of this field",
+"location":  {
+"uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Queries\\Query.cs",
+"region":  {
+"startLine":  30,
+"startColumn":  9,
+"endLine":  30,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3887",
+"message":  "Use an immutable collection here instead or reduce the accessibility of this field",
+"location":  {
+"uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Snapshot\\QueryBuilder.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  9,
+"endLine":  42,
+"endColumn":  41
+}
+}
+}
+]
+}
