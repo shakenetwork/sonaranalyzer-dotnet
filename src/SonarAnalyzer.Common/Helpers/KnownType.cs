@@ -182,6 +182,7 @@ namespace SonarAnalyzer.Helpers
 
         public static readonly KnownType System_IComparable = new KnownType("System.IComparable");
         public static readonly KnownType System_IComparable_T = new KnownType("System.IComparable<T>");
+        public static readonly KnownType System_IEquatable_T = new KnownType("System.IEquatable<T>");
 
         public static readonly KnownType System_Threading_Thread = new KnownType("System.Threading.Thread");
 

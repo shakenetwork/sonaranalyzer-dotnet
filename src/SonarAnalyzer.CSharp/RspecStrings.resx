@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!--
-    Microsoft ResX Schema
-
+  <!-- 
+    Microsoft ResX Schema 
+    
     Version 2.0
-
-    The primary goals of this format is to allow a simple XML format
-    that is mostly human readable. The generation and parsing of the
-    various data types are done through the TypeConverter classes
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
     associated with the data types.
-
+    
     Example:
-
+    
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
@@ -26,36 +26,36 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-
-    There are any number of "resheader" rows that contain simple
+                
+    There are any number of "resheader" rows that contain simple 
     name/value pairs.
-
-    Each data row contains a name, and value. The row also contains a
-    type or mimetype. Type corresponds to a .NET class that support
-    text/value conversion through the TypeConverter architecture.
-    Classes that don't support this are serialized and stored with the
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
     mimetype set.
-
-    The mimetype is used for serialized objects, and tells the
-    ResXResourceReader how to depersist the object. This is currently not
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
     extensible. For a given mimetype the value must be set accordingly:
-
-    Note - application/x-microsoft.net.object.binary.base64 is the format
-    that the ResXResourceWriter will generate, however the reader can
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
     read any of the formats listed below.
-
+    
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with
+    value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-
+    
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with
+    value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array
+    value   : The object must be serialized into a byte array 
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -4569,6 +4569,30 @@
   <data name="S3869_Title" xml:space="preserve">
     <value>"SafeHandle.DangerousGetHandle" should not be called</value>
   </data>
+  <data name="S3875_Category" xml:space="preserve">
+    <value>Sonar Code Smell</value>
+  </data>
+  <data name="S3875_Description" xml:space="preserve">
+    <value>The use of == to compare to objects is expected to do a reference comparison. That is, it is expected to return true if and only if they are the same object instance. Overloading the operator to do anything else will inevitably lead to the introduction bugs by callers. On the other hand, overloading it to do exactly that is pointless; that's what == does by default.</value>
+  </data>
+  <data name="S3875_IsActivatedByDefault" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="S3875_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S3875_RemediationCost" xml:space="preserve">
+    <value>15min</value>
+  </data>
+  <data name="S3875_Severity" xml:space="preserve">
+    <value>Blocker</value>
+  </data>
+  <data name="S3875_Tags" xml:space="preserve">
+    <value>pitfall</value>
+  </data>
+  <data name="S3875_Title" xml:space="preserve">
+    <value>"operator==" should not be overloaded on reference types</value>
+  </data>
   <data name="S3880_Category" xml:space="preserve">
     <value>Sonar Bug</value>
   </data>
@@ -4592,6 +4616,30 @@
   </data>
   <data name="S3880_Title" xml:space="preserve">
     <value>Finalizers should not be empty</value>
+  </data>
+  <data name="S3881_Category" xml:space="preserve">
+    <value>Sonar Bug</value>
+  </data>
+  <data name="S3881_Description" xml:space="preserve">
+    <value>The IDisposable interface is a mechanism to release unmanaged resources, if not implemented correctly this could result in resource leaks or more severe bugs.</value>
+  </data>
+  <data name="S3881_IsActivatedByDefault" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="S3881_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S3881_RemediationCost" xml:space="preserve">
+    <value>10min</value>
+  </data>
+  <data name="S3881_Severity" xml:space="preserve">
+    <value>Major</value>
+  </data>
+  <data name="S3881_Tags" xml:space="preserve">
+    <value />
+  </data>
+  <data name="S3881_Title" xml:space="preserve">
+    <value>"IDisposable" should be implemented correctly</value>
   </data>
   <data name="S3884_Category" xml:space="preserve">
     <value>Sonar Vulnerability</value>
@@ -4688,30 +4736,6 @@
   </data>
   <data name="S3889_Title" xml:space="preserve">
     <value>Neither "Thread.Resume" nor "Thread.Suspend" should be used</value>
-  </data>
-  <data name="S3881_Category" xml:space="preserve">
-    <value>Sonar Bug</value>
-  </data>
-  <data name="S3881_Description" xml:space="preserve">
-    <value>The IDisposable interface is a mechanism to release unmanaged resources, if not implemented correctly this could result in resource leaks or more severe bugs.</value>
-  </data>
-  <data name="S3881_IsActivatedByDefault" xml:space="preserve">
-    <value>True</value>
-  </data>
-  <data name="S3881_Remediation" xml:space="preserve">
-    <value>Constant/Issue</value>
-  </data>
-  <data name="S3881_RemediationCost" xml:space="preserve">
-    <value>10min</value>
-  </data>
-  <data name="S3881_Severity" xml:space="preserve">
-    <value>Major</value>
-  </data>
-  <data name="S3881_Tags" xml:space="preserve">
-    <value />
-  </data>
-  <data name="S3881_Title" xml:space="preserve">
-    <value>"IDisposable" should be implemented correctly</value>
   </data>
   <data name="S818_Category" xml:space="preserve">
     <value>Sonar Code Smell</value>
