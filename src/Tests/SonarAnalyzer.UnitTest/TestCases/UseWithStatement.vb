@@ -8,7 +8,7 @@ Namespace Tests.TestCases
     Class UseWithStatement
 
         Sub Main()
-            product.X.Name = ""           ' Noncompliant {{Wrap this and the following 3 statements that use "product.X" in a "With" statement.}}
+            product.X.Name = ""           ' Noncompliant {{Wrap this and the following 3 statements that use 'product.X' in a 'With' statement.}}
             product.X.RetailPrice += 0
             X = product.X.WholesalePrice
             product.X.ToString()
@@ -40,11 +40,11 @@ Namespace Tests.TestCases
                 .Equals(x.y.zzz)
             End With
 
-            a.b.c.d.ToString ' Noncompliant {{Wrap this and the following 2 statements that use "a.b.c" in a "With" statement.}}
+            a.b.c.d.ToString ' Noncompliant {{Wrap this and the following 2 statements that use 'a.b.c' in a 'With' statement.}}
             a.b.c.e.ToString
             a.b.c.f.g.ToString
 
-            b.a.c.d.ToString ' Noncompliant {{Wrap this and the following 1 statement that use "b.a.c" in a "With" statement.}}
+            b.a.c.d.ToString ' Noncompliant {{Wrap this and the following 1 statement that use 'b.a.c' in a 'With' statement.}}
             b.a.c.e.ToString
             b.a.d.f.g.ToString
 

@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class DisposableReturnedFromUsing : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2997";
-        internal const string MessageFormat = "Remove the \"using\" statement; it will cause automatic disposal of {0}.";
+        internal const string MessageFormat = "Remove the 'using' statement; it will cause automatic disposal of {0}.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
@@ -87,7 +87,7 @@ namespace SonarAnalyzer.Rules.CSharp
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, usingStatement.UsingKeyword.GetLocation(),
                             string.Join(", ",
-                                returnedSymbols.Select(s => $"\"{s.Name}\"").OrderBy(s => s))));
+                                returnedSymbols.Select(s => $"'{s.Name}'").OrderBy(s => s))));
                     }
                 },
                 SyntaxKind.UsingStatement);

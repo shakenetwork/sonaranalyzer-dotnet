@@ -28,7 +28,7 @@ namespace Tests.Diagnostics
             5.Ext2(5);
 
             RedundantArgument.Ext(5, 5, 4, 4, 5, 6); //Noncompliant
-            RedundantArgument.Ext(5, y: 5, parameters: new int[] { 4, 4, 5, 6 }); //Noncompliant {{Remove this default value assigned to parameter "y".}}
+            RedundantArgument.Ext(5, y: 5, parameters: new int[] { 4, 4, 5, 6 }); //Noncompliant {{Remove this default value assigned to parameter 'y'.}}
             RedundantArgument.Ext(5, 5); //Noncompliant
 
             M3(1,//Noncompliant

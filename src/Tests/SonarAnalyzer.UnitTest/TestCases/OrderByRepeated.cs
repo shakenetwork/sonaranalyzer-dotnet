@@ -14,7 +14,7 @@ namespace Tests.Diagnostics
             new int[] { 1, 2, 3 }.OrderBy(i => i).ThenBy(i => i);
             new string[] { "" }
                 .OrderBy(i => i, StringComparer.CurrentCultureIgnoreCase)
-                .OrderBy(i => i); //Noncompliant {{Use "ThenBy" instead.}}
+                .OrderBy(i => i); //Noncompliant {{Use 'ThenBy' instead.}}
             new string[] { "" }
                 .OrderBy(i => i, StringComparer.CurrentCultureIgnoreCase)
                 .ThenBy(i => i, StringComparer.CurrentCultureIgnoreCase)

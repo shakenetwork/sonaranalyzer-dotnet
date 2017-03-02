@@ -25,14 +25,14 @@ namespace Tests.Diagnostics
             private int field; // Noncompliant, shouldn't it be initialized? This way the value is always default(int), 0.
 //                      ^^^^^
             private int field2;
-            private static int field3; // Noncompliant {{Remove unassigned field "field3", or set its value.}}
+            private static int field3; // Noncompliant {{Remove unassigned field 'field3', or set its value.}}
             private static int field4;
 
             private static int field5; //reported by unused member rule
 
             private static int field6 = 42;
             private readonly int field7; // Noncompliant
-            private int Property { get; }  // Noncompliant {{Remove unassigned auto-property "Property", or set its value.}}
+            private int Property { get; }  // Noncompliant {{Remove unassigned auto-property 'Property', or set its value.}}
             private int Property2 { get; }
             private int Property3 { get; } = 42; // Unused, S1144 reports on it
 

@@ -18,7 +18,7 @@ namespace Tests.Diagnostics
 
     class DefaultBaseConstructorCall : MyClass
     {
-        public DefaultBaseConstructorCall() /*c*/  : /*don't keep*/ base() // Noncompliant {{Remove this redundant "base()" call.}}
+        public DefaultBaseConstructorCall() /*c*/  : /*don't keep*/ base() // Noncompliant {{Remove this redundant 'base()' call.}}
 
 
         {

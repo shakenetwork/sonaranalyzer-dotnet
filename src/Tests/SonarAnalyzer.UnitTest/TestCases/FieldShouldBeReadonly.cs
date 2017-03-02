@@ -17,7 +17,7 @@ namespace Tests.Diagnostics
 
     class Person
     {
-        private int _birthYear;  // Noncompliant {{Make "_birthYear" "readonly".}}
+        private int _birthYear;  // Noncompliant {{Make '_birthYear' 'readonly'.}}
 //                  ^^^^^^^^^^
         int _birthMonth = 3;  // Noncompliant
         int _birthDay = 31;  // Compliant, the setter action references it

@@ -35,7 +35,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class AsyncAwaitIdentifier : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2306";
-        internal const string MessageFormat = "Rename \"{0}\" to not use a contextual keyword as an identifier.";
+        internal const string MessageFormat = "Rename '{0}' to not use a contextual keyword as an identifier.";
 
         private static readonly ISet<string> AsyncOrAwait = ImmutableHashSet.Create("async", "await");
 

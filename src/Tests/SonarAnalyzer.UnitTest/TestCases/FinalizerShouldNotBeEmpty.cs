@@ -5,7 +5,7 @@ namespace Tests.Diagnostics
 {
     class Program
     {
-        ~Program() // Noncompliant {{Remove this empty finalizer}}
+        ~Program() // Noncompliant {{Remove this empty finalizer.}}
         {
 
         }
@@ -13,7 +13,7 @@ namespace Tests.Diagnostics
 
     class Program1
     {
-        ~Program1() // Noncompliant {{Remove this empty finalizer}}
+        ~Program1() // Noncompliant {{Remove this empty finalizer.}}
         {
             // Some comment
         }

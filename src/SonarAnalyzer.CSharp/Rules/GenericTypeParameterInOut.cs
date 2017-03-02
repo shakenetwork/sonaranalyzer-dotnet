@@ -35,7 +35,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class GenericTypeParameterInOut : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3246";
-        internal const string MessageFormat = "Add the \"{0}\" keyword to parameter \"{1}\" to make it \"{2}\".";
+        internal const string MessageFormat = "Add the '{0}' keyword to parameter '{1}' to make it '{2}'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

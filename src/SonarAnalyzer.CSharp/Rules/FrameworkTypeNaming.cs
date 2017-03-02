@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class FrameworkTypeNaming : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3376";
-        internal const string MessageFormat = "Make this class name end with \"{0}\".";
+        internal const string MessageFormat = "Make this class name end with '{0}'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

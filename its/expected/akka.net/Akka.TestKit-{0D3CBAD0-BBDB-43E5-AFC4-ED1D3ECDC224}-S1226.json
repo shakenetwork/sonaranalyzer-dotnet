@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"matchedEventHandler\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'matchedEventHandler'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\EventFilter\\Internal\\EventFilterApplier.cs",
+"uri":  "akka.net\src\core\Akka.TestKit\EventFilter\Internal\EventFilterApplier.cs",
 "region":  {
 "startLine":  108,
 "startColumn":  13,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"sender\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'sender'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\Internal\\InternalTestActorRef.cs",
+"uri":  "akka.net\src\core\Akka.TestKit\Internal\InternalTestActorRef.cs",
 "region":  {
 "startLine":  74,
 "startColumn":  13,
@@ -28,9 +28,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"name\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'name'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\Internal\\InternalTestActorRef.cs",
+"uri":  "akka.net\src\core\Akka.TestKit\Internal\InternalTestActorRef.cs",
 "region":  {
 "startLine":  132,
 "startColumn":  17,
@@ -41,9 +41,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"supervisor\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'supervisor'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\Internal\\InternalTestActorRef.cs",
+"uri":  "akka.net\src\core\Akka.TestKit\Internal\InternalTestActorRef.cs",
 "region":  {
 "startLine":  137,
 "startColumn":  17,
@@ -54,9 +54,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"props\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'props'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\Internal\\InternalTestActorRef.cs",
+"uri":  "akka.net\src\core\Akka.TestKit\Internal\InternalTestActorRef.cs",
 "region":  {
 "startLine":  143,
 "startColumn":  17,
@@ -67,9 +67,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"system\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'system'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase.cs",
+"uri":  "akka.net\src\core\Akka.TestKit\TestKitBase.cs",
 "region":  {
 "startLine":  102,
 "startColumn":  17,
@@ -80,9 +80,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"testActorName\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'testActorName'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase.cs",
+"uri":  "akka.net\src\core\Akka.TestKit\TestKitBase.cs",
 "region":  {
 "startLine":  120,
 "startColumn":  17,
@@ -93,9 +93,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"system\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'system'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase.cs",
+"uri":  "akka.net\src\core\Akka.TestKit\TestKitBase.cs",
 "region":  {
 "startLine":  343,
 "startColumn":  33,
@@ -106,9 +106,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"msgAssert\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'msgAssert'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_Expect.cs",
+"uri":  "akka.net\src\core\Akka.TestKit\TestKitBase_Expect.cs",
 "region":  {
 "startLine":  172,
 "startColumn":  13,
@@ -119,9 +119,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"senderAssert\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'senderAssert'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_Expect.cs",
+"uri":  "akka.net\src\core\Akka.TestKit\TestKitBase_Expect.cs",
 "region":  {
 "startLine":  173,
 "startColumn":  13,
@@ -132,9 +132,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"areEqual\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'areEqual'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_Expect.cs",
+"uri":  "akka.net\src\core\Akka.TestKit\TestKitBase_Expect.cs",
 "region":  {
 "startLine":  328,
 "startColumn":  13,
@@ -145,9 +145,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"max\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'max'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_Within.cs",
+"uri":  "akka.net\src\core\Akka.TestKit\TestKitBase_Within.cs",
 "region":  {
 "startLine":  65,
 "startColumn":  13,
@@ -158,9 +158,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"timeout\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'timeout'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestLatch.cs",
+"uri":  "akka.net\src\core\Akka.TestKit\TestLatch.cs",
 "region":  {
 "startLine":  141,
 "startColumn":  17,

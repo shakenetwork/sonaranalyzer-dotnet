@@ -209,7 +209,7 @@ internal class MyClass : IInterface1 // there should be no Noncompliant comment
             }
         }
 
-        [DebuggerDisplay("ID:{IssueId} @{LineNumber} Primary:{IsPrimary} Start:{Start} Length:{Length} \"{Message}\"")]
+        [DebuggerDisplay("ID:{IssueId} @{LineNumber} Primary:{IsPrimary} Start:{Start} Length:{Length} '{Message}'")]
         internal class IssueLocation : IIssueLocation
         {
             public bool IsPrimary { get; set; }

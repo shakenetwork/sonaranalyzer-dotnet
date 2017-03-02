@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"_currentMessages\", the compiler will do that for you.",
+"message":  "Remove this initialization to '_currentMessages', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote.Tests.Performance\\Transports\\RemoteMessagingThroughputSpecBase.cs",
+"uri":  "akka.net\src\core\Akka.Remote.Tests.Performance\Transports\RemoteMessagingThroughputSpecBase.cs",
 "region":  {
 "startLine":  41,
 "startColumn":  43,

@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S3220",
-"message":  "Review this call, which partially matches an overload without \"params\". The partial match is \"ConsistentHashingGroup.ConsistentHashingGroup(Config config)\".",
+"message":  "Review this call, which partially matches an overload without 'params'. The partial match is 'ConsistentHashingGroup.ConsistentHashingGroup(Config config)'.",
 "location":  {
-"uri":  "akka.net\\src\\examples\\Cluster\\Routing\\Samples.Cluster.ConsistentHashRouting\\Program.cs",
+"uri":  "akka.net\src\examples\Cluster\Routing\Samples.Cluster.ConsistentHashRouting\Program.cs",
 "region":  {
 "startLine":  60,
 "startColumn":  67,

@@ -1,7 +1,7 @@
 ﻿Class MyClass1
     Public Sub MySub()
         If condition Then
-            Exit Sub                  ' Noncompliant {{Remove this "Exit" statement.}}
+            Exit Sub                  ' Noncompliant {{Remove this 'Exit' statement.}}
 '           ^^^^^^^^
         End If
         If condition Then

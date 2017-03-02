@@ -195,14 +195,14 @@ namespace SonarAnalyzer.Integration.UnitTest
             issues.Should().Contain(new FileIssues.Types.Issue
             {
                 Id = "S1134",
-                Message = "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+                Message = "Take the required action to fix the issue indicated by this 'FIXME' comment.",
                 Location = new TextRange { StartLine = 8, EndLine = 8, StartOffset = 7, EndOffset = 12 }
             });
 
             issues.Should().Contain(new FileIssues.Types.Issue
             {
                 Id = "S101",
-                Message = "Rename class \"TTTestClass\" to match camel case naming rules, consider using \"TtTestClass\".",
+                Message = "Rename class 'TTTestClass' to match camel case naming rules, consider using 'TtTestClass'.",
                 Location = new TextRange { StartLine = 6, EndLine = 6, StartOffset = 13, EndOffset = 24 }
             });
 

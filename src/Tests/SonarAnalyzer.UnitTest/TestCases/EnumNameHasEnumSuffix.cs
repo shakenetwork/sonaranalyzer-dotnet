@@ -1,11 +1,11 @@
 ﻿namespace Tests.Diagnostics
 {
-    public enum MyEnum //Noncompliant {{Rename this enumeration to remove the "Enum" suffix.}}
+    public enum MyEnum //Noncompliant {{Rename this enumeration to remove the 'Enum' suffix.}}
 //              ^^^^^^
     {
         Value
     }
-    public enum MyFlags //Noncompliant {{Rename this enumeration to remove the "Flags" suffix.}}
+    public enum MyFlags //Noncompliant {{Rename this enumeration to remove the 'Flags' suffix.}}
     {
         Value
     }

@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.CSharp
     [ExportCodeFixProvider(LanguageNames.CSharp)]
     public class VirtualEventFieldCodeFixProvider : SonarCodeFixProvider
     {
-        internal const string Title = "Remove \"virtual\" keyword";
+        internal const string Title = "Remove 'virtual' keyword";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
             get

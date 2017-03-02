@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S3216",
-"message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
+"message":  "Add '.ConfigureAwait(false)' to this call to allow execution to continue in any thread.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Persistence\\Snapshot\\LocalSnapshotStore.cs",
+"uri":  "akka.net\src\core\Akka.Persistence\Snapshot\LocalSnapshotStore.cs",
 "region":  {
 "startLine":  116,
 "startColumn":  23,

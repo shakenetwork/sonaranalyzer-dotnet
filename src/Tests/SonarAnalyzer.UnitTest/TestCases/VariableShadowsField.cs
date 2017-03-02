@@ -22,7 +22,7 @@ namespace Tests.Diagnostics
             for (myField = 0; myField < 10; myField++) // Compliant
             {
             }
-            for (int myField2 = 0; myField2 < 10; myField2++) // Noncompliant {{Rename "myField2" which hides the field with the same name.}}
+            for (int myField2 = 0; myField2 < 10; myField2++) // Noncompliant {{Rename 'myField2' which hides the field with the same name.}}
             {
             }
 

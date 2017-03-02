@@ -7,7 +7,7 @@ namespace Tests.Diagnostics
     {
         public int field0; // Compliant
 
-        protected int field1; // Noncompliant {{Remove this "protected" modifier.}}
+        protected int field1; // Noncompliant {{Remove this 'protected' modifier.}}
 //      ^^^^^^^^^
 
         internal protected int field2; // Noncompliant

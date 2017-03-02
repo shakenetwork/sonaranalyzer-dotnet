@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S101",
-"message":  "Rename class \"AkkaIOTransport\" to match camel case naming rules, consider using \"AkkaIoTransport\".",
+"message":  "Rename class 'AkkaIOTransport' to match camel case naming rules, consider using 'AkkaIoTransport'.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\transports\\Akka.Remote.AkkaIOTransport\\AkkaIOTransport.cs",
+"uri":  "akka.net\src\contrib\transports\Akka.Remote.AkkaIOTransport\AkkaIOTransport.cs",
 "region":  {
 "startLine":  16,
 "startColumn":  18,

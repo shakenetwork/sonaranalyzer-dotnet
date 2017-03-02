@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"comparer\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'comparer'.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy.Testing\\Asserts.cs",
+"uri":  "Nancy\src\Nancy.Testing\Asserts.cs",
 "region":  {
 "startLine":  14,
 "startColumn":  13,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"serializer\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'serializer'.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy.Testing\\BrowserContextExtensions.cs",
+"uri":  "Nancy\src\Nancy.Testing\BrowserContextExtensions.cs",
 "region":  {
 "startLine":  58,
 "startColumn":  17,
@@ -28,9 +28,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"serializer\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'serializer'.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy.Testing\\BrowserContextExtensions.cs",
+"uri":  "Nancy\src\Nancy.Testing\BrowserContextExtensions.cs",
 "region":  {
 "startLine":  80,
 "startColumn":  17,

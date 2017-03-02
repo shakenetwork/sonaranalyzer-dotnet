@@ -35,9 +35,9 @@ namespace SonarAnalyzer.Rules.CSharp
     {
         internal const string DiagnosticId = "S2219";
         internal const string MessageFormat = "Use {0} instead.";
-        internal const string MessageIsOperator = "the \"is\" operator";
-        internal const string MessageIsInstanceOfType = "the \"IsInstanceOfType()\" method";
-        internal const string MessageNullCheck = "a \"null\" check";
+        internal const string MessageIsOperator = "the 'is' operator";
+        internal const string MessageIsInstanceOfType = "the 'IsInstanceOfType()' method";
+        internal const string MessageNullCheck = "a 'null' check";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

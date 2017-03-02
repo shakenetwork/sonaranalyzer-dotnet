@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S2223",
-"message":  "Change the visibility of \"ValidSymbols\" or make it \"const\" or \"readonly\".",
+"message":  "Change the visibility of 'ValidSymbols' or make it 'const' or 'readonly'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorPath.cs",
+"uri":  "akka.net\src\core\Akka\Actor\ActorPath.cs",
 "region":  {
 "startLine":  102,
 "startColumn":  32,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S2223",
-"message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
+"message":  "Change the visibility of 'Instance' or make it 'const' or 'readonly'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorRef.cs",
+"uri":  "akka.net\src\core\Akka\Actor\ActorRef.cs",
 "region":  {
 "startLine":  341,
 "startColumn":  30,
@@ -28,9 +28,9 @@
 },
 {
 "id":  "S2223",
-"message":  "Change the visibility of \"DefaultDecider\" or make it \"const\" or \"readonly\".",
+"message":  "Change the visibility of 'DefaultDecider' or make it 'const' or 'readonly'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\SupervisorStrategy.cs",
+"uri":  "akka.net\src\core\Akka\Actor\SupervisorStrategy.cs",
 "region":  {
 "startLine":  82,
 "startColumn":  32,
@@ -41,9 +41,9 @@
 },
 {
 "id":  "S2223",
-"message":  "Change the visibility of \"CurrentWorker\" or make it \"const\" or \"readonly\".",
+"message":  "Change the visibility of 'CurrentWorker' or make it 'const' or 'readonly'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Helios.Concurrency.DedicatedThreadPool.cs",
+"uri":  "akka.net\src\core\Akka\Helios.Concurrency.DedicatedThreadPool.cs",
 "region":  {
 "startLine":  292,
 "startColumn":  36,
@@ -54,9 +54,9 @@
 },
 {
 "id":  "S2223",
-"message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
+"message":  "Change the visibility of 'Instance' or make it 'const' or 'readonly'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"uri":  "akka.net\src\core\Akka\IO\Tcp.cs",
 "region":  {
 "startLine":  439,
 "startColumn":  42,
@@ -67,9 +67,9 @@
 },
 {
 "id":  "S2223",
-"message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
+"message":  "Change the visibility of 'Instance' or make it 'const' or 'readonly'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"uri":  "akka.net\src\core\Akka\IO\Tcp.cs",
 "region":  {
 "startLine":  452,
 "startColumn":  41,
@@ -80,9 +80,9 @@
 },
 {
 "id":  "S2223",
-"message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
+"message":  "Change the visibility of 'Instance' or make it 'const' or 'readonly'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"uri":  "akka.net\src\core\Akka\IO\Tcp.cs",
 "region":  {
 "startLine":  538,
 "startColumn":  42,
@@ -93,9 +93,9 @@
 },
 {
 "id":  "S2223",
-"message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
+"message":  "Change the visibility of 'Instance' or make it 'const' or 'readonly'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"uri":  "akka.net\src\core\Akka\IO\Tcp.cs",
 "region":  {
 "startLine":  562,
 "startColumn":  35,
@@ -106,9 +106,9 @@
 },
 {
 "id":  "S2223",
-"message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
+"message":  "Change the visibility of 'Instance' or make it 'const' or 'readonly'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"uri":  "akka.net\src\core\Akka\IO\Tcp.cs",
 "region":  {
 "startLine":  614,
 "startColumn":  35,
@@ -119,9 +119,9 @@
 },
 {
 "id":  "S2223",
-"message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
+"message":  "Change the visibility of 'Instance' or make it 'const' or 'readonly'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"uri":  "akka.net\src\core\Akka\IO\Tcp.cs",
 "region":  {
 "startLine":  632,
 "startColumn":  43,
@@ -132,9 +132,9 @@
 },
 {
 "id":  "S2223",
-"message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
+"message":  "Change the visibility of 'Instance' or make it 'const' or 'readonly'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"uri":  "akka.net\src\core\Akka\IO\Tcp.cs",
 "region":  {
 "startLine":  649,
 "startColumn":  38,
@@ -145,9 +145,9 @@
 },
 {
 "id":  "S2223",
-"message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
+"message":  "Change the visibility of 'Instance' or make it 'const' or 'readonly'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\IO\\TcpConnection.cs",
+"uri":  "akka.net\src\core\Akka\IO\TcpConnection.cs",
 "region":  {
 "startLine":  787,
 "startColumn":  40,

@@ -7,7 +7,7 @@ namespace Tests.Diagnostics
     {
         abstract class Base
         {
-            public Base() // Noncompliant {{Change the visibility of this constructor to "protected".}}
+            public Base() // Noncompliant {{Change the visibility of this constructor to 'protected'.}}
 //          ^^^^^^
             {
                 //...

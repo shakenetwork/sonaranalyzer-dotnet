@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S1450",
-"message":  "Remove the \"_config\" field and declare it as a local variable in the relevant methods.",
+"message":  "Remove the '_config' field and declare it as a local variable in the relevant methods.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\AtLeastOnceDeliveryFailureSpec.cs",
+"uri":  "akka.net\src\core\Akka.Persistence.Tests\AtLeastOnceDeliveryFailureSpec.cs",
 "region":  {
 "startLine":  142,
 "startColumn":  37,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S1450",
-"message":  "Remove the \"_config\" field and declare it as a local variable in the relevant methods.",
+"message":  "Remove the '_config' field and declare it as a local variable in the relevant methods.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\AtLeastOnceDeliveryFailureSpec.cs",
+"uri":  "akka.net\src\core\Akka.Persistence.Tests\AtLeastOnceDeliveryFailureSpec.cs",
 "region":  {
 "startLine":  245,
 "startColumn":  37,
@@ -28,9 +28,9 @@
 },
 {
 "id":  "S1450",
-"message":  "Remove the \"_probe\" field and declare it as a local variable in the relevant methods.",
+"message":  "Remove the '_probe' field and declare it as a local variable in the relevant methods.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\EndToEndEventAdapterSpec.cs",
+"uri":  "akka.net\src\core\Akka.Persistence.Tests\EndToEndEventAdapterSpec.cs",
 "region":  {
 "startLine":  214,
 "startColumn":  40,
@@ -41,9 +41,9 @@
 },
 {
 "id":  "S1450",
-"message":  "Remove the \"_deleteFailureRate\" field and declare it as a local variable in the relevant methods.",
+"message":  "Remove the '_deleteFailureRate' field and declare it as a local variable in the relevant methods.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\Journal\\ChaosJournal.cs",
+"uri":  "akka.net\src\core\Akka.Persistence.Tests\Journal\ChaosJournal.cs",
 "region":  {
 "startLine":  43,
 "startColumn":  33,

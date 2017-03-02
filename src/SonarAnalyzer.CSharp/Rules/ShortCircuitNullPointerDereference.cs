@@ -38,7 +38,7 @@ namespace SonarAnalyzer.Rules.CSharp
     {
         internal const string DiagnosticId = "S1697";
         internal const string MessageFormat =
-            "Either reverse the equality operator in the \"{0}\" null test, or reverse the logical operator that follows it.";
+            "Either reverse the equality operator in the '{0}' null test, or reverse the logical operator that follows it.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S100",
-"message":  "Rename property \"ISO8601DateFormat\" to match camel case naming rules, consider using \"Iso8601DateFormat\".",
+"message":  "Rename property 'ISO8601DateFormat' to match camel case naming rules, consider using 'Iso8601DateFormat'.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
+"uri":  "Nancy\src\Nancy\Json\JavaScriptSerializer.cs",
 "region":  {
 "startLine":  119,
 "startColumn":  21,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S100",
-"message":  "Rename property \"UseISO8601DateFormat\" to match camel case naming rules, consider using \"UseIso8601DateFormat\".",
+"message":  "Rename property 'UseISO8601DateFormat' to match camel case naming rules, consider using 'UseIso8601DateFormat'.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy\\Json\\JsonConfiguration.cs",
+"uri":  "Nancy\src\Nancy\Json\JsonConfiguration.cs",
 "region":  {
 "startLine":  92,
 "startColumn":  21,
@@ -28,9 +28,9 @@
 },
 {
 "id":  "S100",
-"message":  "Rename property \"ISO8601DateFormat\" to match camel case naming rules, consider using \"Iso8601DateFormat\".",
+"message":  "Rename property 'ISO8601DateFormat' to match camel case naming rules, consider using 'Iso8601DateFormat'.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy\\Responses\\DefaultJsonSerializer.cs",
+"uri":  "Nancy\src\Nancy\Responses\DefaultJsonSerializer.cs",
 "region":  {
 "startLine":  65,
 "startColumn":  21,

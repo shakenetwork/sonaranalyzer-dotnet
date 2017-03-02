@@ -43,7 +43,7 @@ namespace Tests.Diagnostics
                 Console.WriteLine(i1.Value);
             }
 
-            Console.WriteLine(i1.Value); // Noncompliant {{"i1" is null on at least one execution path.}}
+            Console.WriteLine(i1.Value); // Noncompliant {{'i1' is null on at least one execution path.}}
 //                            ^^^^^^^^
         }
 

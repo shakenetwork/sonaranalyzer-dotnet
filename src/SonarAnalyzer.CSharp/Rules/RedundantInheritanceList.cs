@@ -39,9 +39,9 @@ namespace SonarAnalyzer.Rules.CSharp
     {
         internal const string DiagnosticId = "S1939";
         internal const string MessageFormat = "{0}";
-        internal const string MessageEnum = "\"int\" should not be explicitly used as the underlying type.";
-        internal const string MessageObjectBase = "\"Object\" should not be explicitly extended.";
-        internal const string MessageAlreadyImplements = "\"{0}\" implements \"{1}\" so \"{1}\" can be removed from the inheritance list.";
+        internal const string MessageEnum = "'int' should not be explicitly used as the underlying type.";
+        internal const string MessageObjectBase = "'Object' should not be explicitly extended.";
+        internal const string MessageAlreadyImplements = "'{0}' implements '{1}' so '{1}' can be removed from the inheritance list.";
         internal const string RedundantIndexKey = "redundantIndex";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 

@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class PublicMutableFieldsShoudNotBeReadonly : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3887";
-        internal const string MessageFormat = "Use an immutable collection here instead or reduce the accessibility of this field";
+        internal const string MessageFormat = "Use an immutable collection here instead or reduce the accessibility of this field.";
 
         private static readonly ISet<KnownType> InvalidMutableTypes = new HashSet<KnownType>
         {

@@ -8,7 +8,7 @@ namespace Tests.Diagnostics
     {
         public TernaryOperatorPointless(bool b  )
         {
-            var x = 1> 18 ? true : true; // Noncompliant {{This operation returns the same value whether the condition is "true" or "false".}}
+            var x = 1> 18 ? true : true; // Noncompliant {{This operation returns the same value whether the condition is 'true' or 'false'.}}
 //                  ^^^^^^^^^^^^^^^^^^^
             var y = 1> 18 ? true : false;
             y = 1 > 18 ? (true) : true; //Noncompliant

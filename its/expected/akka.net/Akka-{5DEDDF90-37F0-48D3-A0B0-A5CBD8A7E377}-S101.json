@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S101",
-"message":  "Rename class \"FSMBase\" to match camel case naming rules, consider using \"FsmBase\".",
+"message":  "Rename class 'FSMBase' to match camel case naming rules, consider using 'FsmBase'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\FSM.cs",
+"uri":  "akka.net\src\core\Akka\Actor\FSM.cs",
 "region":  {
 "startLine":  21,
 "startColumn":  27,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S101",
-"message":  "Rename class \"FSM\" to match camel case naming rules, consider using \"Fsm\".",
+"message":  "Rename class 'FSM' to match camel case naming rules, consider using 'Fsm'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\FSM.cs",
+"uri":  "akka.net\src\core\Akka\Actor\FSM.cs",
 "region":  {
 "startLine":  385,
 "startColumn":  27,
@@ -28,9 +28,9 @@
 },
 {
 "id":  "S101",
-"message":  "Rename interface \"ILoggingFSM\" to match camel case naming rules, consider using \"ILoggingFsm\".",
+"message":  "Rename interface 'ILoggingFSM' to match camel case naming rules, consider using 'ILoggingFsm'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\FSM.cs",
+"uri":  "akka.net\src\core\Akka\Actor\FSM.cs",
 "region":  {
 "startLine":  978,
 "startColumn":  22,
@@ -41,9 +41,9 @@
 },
 {
 "id":  "S101",
-"message":  "Rename interface \"IInternalSupportsTestFSMRef\" to match camel case naming rules, consider using \"IInternalSupportsTestFsmRef\".",
+"message":  "Rename interface 'IInternalSupportsTestFSMRef' to match camel case naming rules, consider using 'IInternalSupportsTestFsmRef'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\Internal\\InternalSupportsTestFSMRef.cs",
+"uri":  "akka.net\src\core\Akka\Actor\Internal\InternalSupportsTestFSMRef.cs",
 "region":  {
 "startLine":  15,
 "startColumn":  22,
@@ -54,9 +54,9 @@
 },
 {
 "id":  "S101",
-"message":  "Rename class \"SO\" to match camel case naming rules, consider using \"So\".",
+"message":  "Rename class 'SO' to match camel case naming rules, consider using 'So'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\IO\\Inet.cs",
+"uri":  "akka.net\src\core\Akka\IO\Inet.cs",
 "region":  {
 "startLine":  46,
 "startColumn":  29,
@@ -67,9 +67,9 @@
 },
 {
 "id":  "S101",
-"message":  "Rename class \"IOExtension\" to match camel case naming rules, consider using \"IoExtension\".",
+"message":  "Rename class 'IOExtension' to match camel case naming rules, consider using 'IoExtension'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\IO\\IO.cs",
+"uri":  "akka.net\src\core\Akka\IO\IO.cs",
 "region":  {
 "startLine":  12,
 "startColumn":  27,
@@ -80,9 +80,9 @@
 },
 {
 "id":  "S101",
-"message":  "Rename class \"SO\" to match camel case naming rules, consider using \"So\".",
+"message":  "Rename class 'SO' to match camel case naming rules, consider using 'So'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\IO\\Udp.cs",
+"uri":  "akka.net\src\core\Akka\IO\Udp.cs",
 "region":  {
 "startLine":  264,
 "startColumn":  22,

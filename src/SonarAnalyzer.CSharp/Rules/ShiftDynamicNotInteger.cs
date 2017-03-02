@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ShiftDynamicNotInteger : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3449";
-        internal const string MessageFormat = "Remove this erroneous shift, it will fail because \"{0}\" can't be implicitly converted to \"int\".";
+        internal const string MessageFormat = "Remove this erroneous shift, it will fail because '{0}' can't be implicitly converted to 'int'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

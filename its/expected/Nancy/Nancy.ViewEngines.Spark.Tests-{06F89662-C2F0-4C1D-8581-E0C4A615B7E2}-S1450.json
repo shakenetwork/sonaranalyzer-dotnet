@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S1450",
-"message":  "Remove the \"extensions\" field and declare it as a local variable in the relevant methods.",
+"message":  "Remove the 'extensions' field and declare it as a local variable in the relevant methods.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy.ViewEngines.Spark.Tests\\NancyViewFolderFixture.cs",
+"uri":  "Nancy\src\Nancy.ViewEngines.Spark.Tests\NancyViewFolderFixture.cs",
 "region":  {
 "startLine":  15,
 "startColumn":  46,

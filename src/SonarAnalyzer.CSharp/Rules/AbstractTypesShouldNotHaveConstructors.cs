@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class AbstractTypesShouldNotHaveConstructors : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3442";
-        internal const string MessageFormat = "Change the visibility of this constructor to \"protected\".";
+        internal const string MessageFormat = "Change the visibility of this constructor to 'protected'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

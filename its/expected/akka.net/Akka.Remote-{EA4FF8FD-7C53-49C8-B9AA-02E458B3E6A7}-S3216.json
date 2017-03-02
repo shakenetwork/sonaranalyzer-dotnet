@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S3216",
-"message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
+"message":  "Add '.ConfigureAwait(false)' to this call to allow execution to continue in any thread.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Helios\\HeliosTransport.cs",
+"uri":  "akka.net\src\core\Akka.Remote\Transport\Helios\HeliosTransport.cs",
 "region":  {
 "startLine":  313,
 "startColumn":  26,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S3216",
-"message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
+"message":  "Add '.ConfigureAwait(false)' to this call to allow execution to continue in any thread.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TransportAdapters.cs",
+"uri":  "akka.net\src\core\Akka.Remote\Transport\TransportAdapters.cs",
 "region":  {
 "startLine":  176,
 "startColumn":  52,

@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S2357",
-"message":  "Make \"_fsm\" private.",
+"message":  "Make '_fsm' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTimingSpec.cs",
+"uri":  "akka.net\src\core\Akka.Tests\Actor\FSMTimingSpec.cs",
 "region":  {
 "startLine":  22,
 "startColumn":  26,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"S\" private.",
+"message":  "Make 'S' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Stash\\ActorWithStashSpec.cs",
+"uri":  "akka.net\src\core\Akka.Tests\Actor\Stash\ActorWithStashSpec.cs",
 "region":  {
 "startLine":  326,
 "startColumn":  27,
@@ -28,9 +28,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Finished\" private.",
+"message":  "Make 'Finished' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Stash\\ActorWithStashSpec.cs",
+"uri":  "akka.net\src\core\Akka.Tests\Actor\Stash\ActorWithStashSpec.cs",
 "region":  {
 "startLine":  327,
 "startColumn":  32,
@@ -41,9 +41,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"ExpectedException\" private.",
+"message":  "Make 'ExpectedException' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Stash\\ActorWithStashSpec.cs",
+"uri":  "akka.net\src\core\Akka.Tests\Actor\Stash\ActorWithStashSpec.cs",
 "region":  {
 "startLine":  328,
 "startColumn":  30,
@@ -54,9 +54,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"TestSize\" private.",
+"message":  "Make 'TestSize' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\TcpConnectionSpec.cs",
+"uri":  "akka.net\src\core\Akka.Tests\IO\TcpConnectionSpec.cs",
 "region":  {
 "startLine":  946,
 "startColumn":  29,
@@ -67,9 +67,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"BuildLambdaExpressionCalls\" private.",
+"message":  "Make 'BuildLambdaExpressionCalls' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\CachedMatchCompilerTests.cs",
+"uri":  "akka.net\src\core\Akka.Tests\MatchHandler\CachedMatchCompilerTests.cs",
 "region":  {
 "startLine":  133,
 "startColumn":  62,
@@ -80,9 +80,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"CreateArgumentValuesArrayCalls\" private.",
+"message":  "Make 'CreateArgumentValuesArrayCalls' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\CachedMatchCompilerTests.cs",
+"uri":  "akka.net\src\core\Akka.Tests\MatchHandler\CachedMatchCompilerTests.cs",
 "region":  {
 "startLine":  134,
 "startColumn":  59,
@@ -93,9 +93,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"BuildLambdaExpressionResult\" private.",
+"message":  "Make 'BuildLambdaExpressionResult' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\CachedMatchCompilerTests.cs",
+"uri":  "akka.net\src\core\Akka.Tests\MatchHandler\CachedMatchCompilerTests.cs",
 "region":  {
 "startLine":  135,
 "startColumn":  49,
@@ -106,9 +106,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"CreateArgumentValuesArrayResult\" private.",
+"message":  "Make 'CreateArgumentValuesArrayResult' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\CachedMatchCompilerTests.cs",
+"uri":  "akka.net\src\core\Akka.Tests\MatchHandler\CachedMatchCompilerTests.cs",
 "region":  {
 "startLine":  136,
 "startColumn":  29,
@@ -119,9 +119,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"BuildResult\" private.",
+"message":  "Make 'BuildResult' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\CachedMatchCompilerTests.cs",
+"uri":  "akka.net\src\core\Akka.Tests\MatchHandler\CachedMatchCompilerTests.cs",
 "region":  {
 "startLine":  160,
 "startColumn":  42,
@@ -132,9 +132,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"BuildCalls\" private.",
+"message":  "Make 'BuildCalls' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\CachedMatchCompilerTests.cs",
+"uri":  "akka.net\src\core\Akka.Tests\MatchHandler\CachedMatchCompilerTests.cs",
 "region":  {
 "startLine":  161,
 "startColumn":  60,
@@ -145,9 +145,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"CompileResult\" private.",
+"message":  "Make 'CompileResult' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\CachedMatchCompilerTests.cs",
+"uri":  "akka.net\src\core\Akka.Tests\MatchHandler\CachedMatchCompilerTests.cs",
 "region":  {
 "startLine":  178,
 "startColumn":  29,
@@ -158,9 +158,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"CompileCalls\" private.",
+"message":  "Make 'CompileCalls' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\CachedMatchCompilerTests.cs",
+"uri":  "akka.net\src\core\Akka.Tests\MatchHandler\CachedMatchCompilerTests.cs",
 "region":  {
 "startLine":  179,
 "startColumn":  43,
@@ -171,9 +171,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Handlers\" private.",
+"message":  "Make 'Handlers' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchHandlerBuilderTests.cs",
+"uri":  "akka.net\src\core\Akka.Tests\MatchHandler\MatchHandlerBuilderTests.cs",
 "region":  {
 "startLine":  237,
 "startColumn":  53,
@@ -184,9 +184,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"CapturedArguments\" private.",
+"message":  "Make 'CapturedArguments' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchHandlerBuilderTests.cs",
+"uri":  "akka.net\src\core\Akka.Tests\MatchHandler\MatchHandlerBuilderTests.cs",
 "region":  {
 "startLine":  238,
 "startColumn":  50,
@@ -197,9 +197,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Signature\" private.",
+"message":  "Make 'Signature' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchHandlerBuilderTests.cs",
+"uri":  "akka.net\src\core\Akka.Tests\MatchHandler\MatchHandlerBuilderTests.cs",
 "region":  {
 "startLine":  239,
 "startColumn":  42,

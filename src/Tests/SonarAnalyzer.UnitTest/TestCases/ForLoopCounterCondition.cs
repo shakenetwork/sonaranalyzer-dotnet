@@ -35,12 +35,12 @@
 
             }
 
-            for (int i = 0; i < 10; j++) //Noncompliant {{This loop's stop condition tests "i" but the incrementer updates "j".}}
+            for (int i = 0; i < 10; j++) //Noncompliant {{This loop's stop condition tests 'i' but the incrementer updates 'j'.}}
 //                          ^^^^^^
             {
 
             }
-            for (int i = 0; ; i++) //Noncompliant {{This loop's stop incrementer updates "i" but the stop condition doesn't test any variables.}}
+            for (int i = 0; ; i++) //Noncompliant {{This loop's stop incrementer updates 'i' but the stop condition doesn't test any variables.}}
             {
 
             }

@@ -20,7 +20,7 @@
                     break;
             }
 
-            switch (n) // Noncompliant {{Consider reworking this "switch" to reduce the number of "case"s from 3 to at most 2.}}
+            switch (n) // Noncompliant {{Consider reworking this 'switch' to reduce the number of 'case' from 3 to at most 2.}}
 //          ^^^^^^
             {
                 case 0:

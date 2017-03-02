@@ -34,7 +34,7 @@ namespace Tests.Diagnostics
             s = new DateTime().ToString(); //Noncompliant
             s = 1.8.ToString(CultureInfo.InstalledUICulture);
 
-            i = "".CompareTo(""); // Noncompliant {{Use "CompareOrdinal" or "Compare" with the locale specified instead of "CompareTo".}}
+            i = "".CompareTo(""); // Noncompliant {{Use 'CompareOrdinal' or 'Compare' with the locale specified instead of 'CompareTo'.}}
             object o = "";
             i = "".CompareTo(o); // Noncompliant
 

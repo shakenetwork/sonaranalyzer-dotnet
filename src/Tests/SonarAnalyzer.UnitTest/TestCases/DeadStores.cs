@@ -23,7 +23,7 @@ namespace Tests.Diagnostics
     {
         void calculateRate(int a, int b)
         {
-            b = doSomething(); // Noncompliant {{Remove this useless assignment to local variable "b".}}
+            b = doSomething(); // Noncompliant {{Remove this useless assignment to local variable 'b'.}}
 //            ^^^^^^^^^^^^^^^
 
             int i, j;

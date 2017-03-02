@@ -17,7 +17,7 @@ namespace Tests.Diagnostics
         public static string Prop { get; set; }
     }
 
-    public class StringUtils // Noncompliant {{Add a "protected" constructor or the "static" keyword to the class declaration.}}
+    public class StringUtils // Noncompliant {{Add a 'protected' constructor or the 'static' keyword to the class declaration.}}
 //               ^^^^^^^^^^^
     {
         public static string Concatenate(string s1, string s2)
@@ -38,7 +38,7 @@ namespace Tests.Diagnostics
 
     public class StringUtilsAsBase
     {
-        public StringUtilsAsBase() //Noncompliant {{Hide this public constructor by making it "protected".}}
+        public StringUtilsAsBase() //Noncompliant {{Hide this public constructor by making it 'protected'.}}
         { }
         public static string Concatenate(string s1, string s2)
         {

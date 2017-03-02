@@ -17,7 +17,7 @@ namespace Tests.Diagnostics
     }
     abstract class Derived : Base
     {
-        public override void Method(int[] numbers) // Noncompliant {{"params" should not be removed from an override.}}
+        public override void Method(int[] numbers) // Noncompliant {{'params' should not be removed from an override.}}
 //                                  ^^^^^^^^^^^^^
         {
         }

@@ -1,6 +1,6 @@
 ﻿Module Module1
     Sub Main(x As Boolean)
-        Dim a = Not "a" Is Nothing ' Noncompliant {{Replace this use of "Not...Is..." with "IsNot".}}
+        Dim a = Not "a" Is Nothing ' Noncompliant {{Replace this use of 'Not...Is...' with 'IsNot'.}}
 '               ^^^^^^^^^^^^^^^^^^
         a = Not "a" Is ' Noncompliant
             Nothing 'some comment

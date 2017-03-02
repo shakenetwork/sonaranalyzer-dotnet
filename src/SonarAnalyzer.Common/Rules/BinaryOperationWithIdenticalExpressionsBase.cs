@@ -25,6 +25,6 @@ namespace SonarAnalyzer.Rules
     public abstract class BinaryOperationWithIdenticalExpressionsBase : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1764";
-        internal const string MessageFormat = "Identical sub-expressions on both sides of operator \"{0}\".";
+        internal const string MessageFormat = "Identical sub-expressions on both sides of operator '{0}'.";
     }
 }

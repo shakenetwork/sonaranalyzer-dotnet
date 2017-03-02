@@ -2,10 +2,10 @@
 "issues":  [
 {
 "id":  "S3010",
-"message":  "Remove this assignment of \u0027rootPathProvider\u0027 or initialize it statically.",
+"message":  "Remove this assignment of 'rootPathProvider' or initialize it statically.",
 "location":  [
 {
-"uri":  "Nancy\\src\\Nancy\\Bootstrapper\\FavIconApplicationStartup.cs",
+"uri":  "Nancy\src\Nancy\Bootstrapper\FavIconApplicationStartup.cs",
 "region":  {
 "startLine":  25,
 "startColumn":  13,
@@ -14,7 +14,7 @@
 }
 },
 {
-"uri":  "Nancy\\src\\Nancy\\Bootstrapper\\FavIconApplicationStartup.cs",
+"uri":  "Nancy\src\Nancy\Bootstrapper\FavIconApplicationStartup.cs",
 "region":  {
 "startLine":  15,
 "startColumn":  42,
@@ -26,10 +26,10 @@
 },
 {
 "id":  "S3010",
-"message":  "Remove this assignment of \u0027rootPathProvider\u0027 or initialize it statically.",
+"message":  "Remove this assignment of 'rootPathProvider' or initialize it statically.",
 "location":  [
 {
-"uri":  "Nancy\\src\\Nancy\\StaticContent.cs",
+"uri":  "Nancy\src\Nancy\StaticContent.cs",
 "region":  {
 "startLine":  25,
 "startColumn":  13,
@@ -38,7 +38,7 @@
 }
 },
 {
-"uri":  "Nancy\\src\\Nancy\\StaticContent.cs",
+"uri":  "Nancy\src\Nancy\StaticContent.cs",
 "region":  {
 "startLine":  14,
 "startColumn":  42,
@@ -50,10 +50,10 @@
 },
 {
 "id":  "S3010",
-"message":  "Remove this assignment of \u0027conventions\u0027 or initialize it statically.",
+"message":  "Remove this assignment of 'conventions' or initialize it statically.",
 "location":  [
 {
-"uri":  "Nancy\\src\\Nancy\\StaticContent.cs",
+"uri":  "Nancy\src\Nancy\StaticContent.cs",
 "region":  {
 "startLine":  26,
 "startColumn":  13,
@@ -62,7 +62,7 @@
 }
 },
 {
-"uri":  "Nancy\\src\\Nancy\\StaticContent.cs",
+"uri":  "Nancy\src\Nancy\StaticContent.cs",
 "region":  {
 "startLine":  15,
 "startColumn":  50,

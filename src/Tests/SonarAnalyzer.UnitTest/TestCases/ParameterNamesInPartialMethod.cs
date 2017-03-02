@@ -24,7 +24,7 @@ namespace Tests.Diagnostics
 
         }
 
-        partial void DoSomething2(int someParam, int y) //Noncompliant {{Rename parameter "someParam" to "x".}}
+        partial void DoSomething2(int someParam, int y) //Noncompliant {{Rename parameter 'someParam' to 'x'.}}
 //                                    ^^^^^^^^^
         {
 

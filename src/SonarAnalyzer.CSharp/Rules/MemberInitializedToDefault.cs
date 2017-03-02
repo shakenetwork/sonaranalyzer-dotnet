@@ -35,7 +35,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class MemberInitializedToDefault : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3052";
-        internal const string MessageFormat = "Remove this initialization to \"{0}\", the compiler will do that for you.";
+        internal const string MessageFormat = "Remove this initialization to '{0}', the compiler will do that for you.";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly DiagnosticDescriptor rule =

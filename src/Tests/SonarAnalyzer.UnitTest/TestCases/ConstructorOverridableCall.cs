@@ -7,7 +7,7 @@ namespace Tests.Diagnostics
     {
         protected ParentAbstract(ParentAbstract other)
         {
-            DoSomething();  // Noncompliant {{Remove this call from a constructor to the overridable "DoSomething" method.}}
+            DoSomething();  // Noncompliant {{Remove this call from a constructor to the overridable 'DoSomething' method.}}
 //          ^^^^^^^^^^^
             this.DoSomething();  // Noncompliant
             other.DoSomething(); // Compliant

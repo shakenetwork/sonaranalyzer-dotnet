@@ -20,13 +20,13 @@ namespace Tests.Diagnostics
 
             var zz = (int) l;
             int i = 0;
-            var z = (int) i; // Noncompliant {{Remove this unnecessary cast to "int".}}
+            var z = (int) i; // Noncompliant {{Remove this unnecessary cast to 'int'.}}
 //                   ^^^
-            z = (Int32) i; // Noncompliant {{Remove this unnecessary cast to "int".}}
+            z = (Int32) i; // Noncompliant {{Remove this unnecessary cast to 'int'.}}
 
             var w = (object) i;
 
-            method(new int[] { 1, 2, 3 }.Cast<int>()); // Noncompliant {{Remove this unnecessary cast to "IEnumerable<int>".}}
+            method(new int[] { 1, 2, 3 }.Cast<int>()); // Noncompliant {{Remove this unnecessary cast to 'IEnumerable<int>'.}}
         }
         void method(IEnumerable<int> enumerable)
         { }

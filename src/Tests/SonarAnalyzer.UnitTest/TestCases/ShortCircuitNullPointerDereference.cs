@@ -23,7 +23,7 @@ namespace Tests.Diagnostics
             List<int> l = new List<int>();
             bool someOtherCondition = a== b;
 
-            if ( someOtherCondition && null == l && l.Count()>5)  // Noncompliant {{Either reverse the equality operator in the "l" null test, or reverse the logical operator that follows it.}}
+            if ( someOtherCondition && null == l && l.Count()>5)  // Noncompliant {{Either reverse the equality operator in the 'l' null test, or reverse the logical operator that follows it.}}
 //                                     ^^^^^^^^^
             {
                 Console.WriteLine("Message");

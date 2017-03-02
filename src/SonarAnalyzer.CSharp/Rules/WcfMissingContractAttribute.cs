@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class WcfMissingContractAttribute : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3597";
-        internal const string MessageFormat = "Add the \"{0}\" attribute to {1}.";
+        internal const string MessageFormat = "Add the '{0}' attribute to {1}.";
         internal const string MessageOperation = "the methods of this {0}";
         internal const string MessageService = " this {0}";
 

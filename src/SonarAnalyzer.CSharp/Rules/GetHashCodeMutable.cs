@@ -35,7 +35,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class GetHashCodeMutable : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2328";
-        internal const string MessageFormat = "Remove this use of \"{0}\" from the \"GetHashCode\" declaration, or make it \"readonly\".";
+        internal const string MessageFormat = "Remove this use of '{0}' from the 'GetHashCode' declaration, or make it 'readonly'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

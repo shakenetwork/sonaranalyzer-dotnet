@@ -19,7 +19,7 @@ namespace Tests.Diagnostics
             var x = d >> 5.4; // Noncompliant
 //                       ^^^
             x = d >> null; // Noncompliant
-            x <<= new object(); // Noncompliant {{Remove this erroneous shift, it will fail because "object" can't be implicitly converted to "int".}}
+            x <<= new object(); // Noncompliant {{Remove this erroneous shift, it will fail because 'object' can't be implicitly converted to 'int'.}}
 
             x = d << d; // okay
             x = d >> new MyClass(); // okay

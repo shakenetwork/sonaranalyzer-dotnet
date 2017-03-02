@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S100",
-"message":  "Rename property \"FileIODispatcher\" to match camel case naming rules, consider using \"FileIoDispatcher\".",
+"message":  "Rename property 'FileIODispatcher' to match camel case naming rules, consider using 'FileIoDispatcher'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"uri":  "akka.net\src\core\Akka\IO\Tcp.cs",
 "region":  {
 "startLine":  722,
 "startColumn":  27,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S100",
-"message":  "Rename method \"PeerSentEOF\" to match camel case naming rules, consider using \"PeerSentEof\".",
+"message":  "Rename method 'PeerSentEOF' to match camel case naming rules, consider using 'PeerSentEof'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\IO\\TcpConnection.cs",
+"uri":  "akka.net\src\core\Akka\IO\TcpConnection.cs",
 "region":  {
 "startLine":  156,
 "startColumn":  25,
@@ -28,9 +28,9 @@
 },
 {
 "id":  "S100",
-"message":  "Rename method \"checkRangeConvert\" to match camel case naming rules, consider using \"CheckRangeConvert\".",
+"message":  "Rename method 'checkRangeConvert' to match camel case naming rules, consider using 'CheckRangeConvert'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Util\\ByteString.cs",
+"uri":  "akka.net\src\core\Akka\Util\ByteString.cs",
 "region":  {
 "startLine":  174,
 "startColumn":  25,
@@ -41,9 +41,9 @@
 },
 {
 "id":  "S100",
-"message":  "Rename method \"newBuilder\" to match camel case naming rules, consider using \"NewBuilder\".",
+"message":  "Rename method 'newBuilder' to match camel case naming rules, consider using 'NewBuilder'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Util\\ByteString.cs",
+"uri":  "akka.net\src\core\Akka\Util\ByteString.cs",
 "region":  {
 "startLine":  363,
 "startColumn":  45,

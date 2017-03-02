@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
     public class EventHandlerName : ParameterLoadingDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2347";
-        internal const string MessageFormat = "Rename event handler \"{0}\" to match the regular expression: \"{1}\".";
+        internal const string MessageFormat = "Rename event handler '{0}' to match the regular expression: '{1}'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager)

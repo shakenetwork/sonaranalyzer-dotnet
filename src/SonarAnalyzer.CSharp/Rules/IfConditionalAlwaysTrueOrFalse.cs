@@ -34,8 +34,8 @@ namespace SonarAnalyzer.Rules.CSharp
     {
         internal const string DiagnosticId = "S1145";
         internal const string MessageFormat = "Remove this useless {0}.";
-        private const string ifStatementLiteral = "\"if\" statement";
-        private const string elseClauseLiteral = "\"else\" clause";
+        private const string ifStatementLiteral = "'if' statement";
+        private const string elseClauseLiteral = "'else' clause";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly DiagnosticDescriptor rule =

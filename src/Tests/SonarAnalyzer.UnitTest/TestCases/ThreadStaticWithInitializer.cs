@@ -8,7 +8,7 @@ namespace Tests.Diagnostics
         public class Foo
         {
             [ThreadStatic]
-            public static object PerThreadObject = new object(); // Noncompliant {{Remove this initialization of "PerThreadObject" or make it lazy.}}
+            public static object PerThreadObject = new object(); // Noncompliant {{Remove this initialization of 'PerThreadObject' or make it lazy.}}
 //                                               ^^^^^^^^^^^^^^
 
             [ThreadStatic]

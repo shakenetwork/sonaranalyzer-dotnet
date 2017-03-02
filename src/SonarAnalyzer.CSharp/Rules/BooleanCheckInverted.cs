@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class BooleanCheckInverted : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1940";
-        internal const string MessageFormat = "Use the opposite operator (\"{0}\") instead.";
+        internal const string MessageFormat = "Use the opposite operator ('{0}') instead.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

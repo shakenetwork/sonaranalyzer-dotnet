@@ -4,7 +4,7 @@
         Select Case x
             Case 0
                 Console.WriteLine("0")
-                Exit Select                ' Noncompliant {{Remove this redundant use of "Exit Select".}}
+                Exit Select                ' Noncompliant {{Remove this redundant use of 'Exit Select'.}}
 '               ^^^^^^^^^^^
             Case 1
                 Console.WriteLine("1")

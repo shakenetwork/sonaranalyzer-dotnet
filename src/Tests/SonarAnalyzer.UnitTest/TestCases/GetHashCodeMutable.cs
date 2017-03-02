@@ -24,7 +24,7 @@ namespace Tests.Diagnostics
         public override int GetHashCode()
         {
             int hash = Zero;
-            hash += foo.GetHashCode(); // Noncompliant {{Remove this use of "foo" from the "GetHashCode" declaration, or make it "readonly".}}
+            hash += foo.GetHashCode(); // Noncompliant {{Remove this use of 'foo' from the 'GetHashCode' declaration, or make it 'readonly'.}}
 //                  ^^^
             hash += age.GetHashCode(); // Noncompliant
             hash += this.name.GetHashCode(); // Noncompliant

@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ThreadStaticWithInitializer : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2996";
-        internal const string MessageFormat = "Remove this initialization of \"{0}\" or make it lazy.";
+        internal const string MessageFormat = "Remove this initialization of '{0}' or make it lazy.";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly DiagnosticDescriptor rule =

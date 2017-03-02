@@ -28,7 +28,7 @@ namespace Tests.Diagnostics
                 case 'b':
                     handleB();
                     break;
-                case 'c':  // Noncompliant {{Remove this empty "case" clause.}}
+                case 'c':  // Noncompliant {{Remove this empty 'case' clause.}}
                 case 'e':  // Noncompliant
                 default:
                     handleTheRest();

@@ -23,7 +23,7 @@ namespace Tests.TestCases
 
         public void MovePointVertically(int newX)
         {
-            point.X = newX; //Noncompliant {{Restrict "point" to be a reference type or remove this assignment of "X"; it is useless if "point" is a value type.}}
+            point.X = newX; //Noncompliant {{Restrict 'point' to be a reference type or remove this assignment of 'X'; it is useless if 'point' is a value type.}}
 //          ^^^^^^^
             point.X++; //Noncompliant; if point is a struct, then nothing happened
             Console.WriteLine(point.X);

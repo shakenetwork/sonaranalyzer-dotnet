@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S1939",
-"message":  "\"IDateTimeOffsetNowTimeProvider\" implements \"ITimeProvider\" so \"ITimeProvider\" can be removed from the inheritance list.",
+"message":  "'IDateTimeOffsetNowTimeProvider' implements 'ITimeProvider' so 'ITimeProvider' can be removed from the inheritance list.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\Scheduler\\DateTimeNowTimeProvider.cs",
+"uri":  "akka.net\src\core\Akka\Actor\Scheduler\DateTimeNowTimeProvider.cs",
 "region":  {
 "startLine":  12,
 "startColumn":  50,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S1939",
-"message":  "\"ICollection\u003cT\u003e\" implements \"IEnumerable\u003cT\u003e\" so \"IEnumerable\u003cT\u003e\" can be removed from the inheritance list.",
+"message":  "'ICollection<T>' implements 'IEnumerable<T>' so 'IEnumerable<T>' can be removed from the inheritance list.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Util\\ConcurrentSet.cs",
+"uri":  "akka.net\src\core\Akka\Util\ConcurrentSet.cs",
 "region":  {
 "startLine":  15,
 "startColumn":  51,
@@ -28,9 +28,9 @@
 },
 {
 "id":  "S1939",
-"message":  "\"ICollection\u003cT\u003e\" implements \"IEnumerable\" so \"IEnumerable\" can be removed from the inheritance list.",
+"message":  "'ICollection<T>' implements 'IEnumerable' so 'IEnumerable' can be removed from the inheritance list.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Util\\ConcurrentSet.cs",
+"uri":  "akka.net\src\core\Akka\Util\ConcurrentSet.cs",
 "region":  {
 "startLine":  15,
 "startColumn":  67,
@@ -41,9 +41,9 @@
 },
 {
 "id":  "S1939",
-"message":  "\"IProducerConsumerCollection\u003cT\u003e\" implements \"IEnumerable\u003cT\u003e\" so \"IEnumerable\u003cT\u003e\" can be removed from the inheritance list.",
+"message":  "'IProducerConsumerCollection<T>' implements 'IEnumerable<T>' so 'IEnumerable<T>' can be removed from the inheritance list.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Util\\MonoConcurrentQueue.cs",
+"uri":  "akka.net\src\core\Akka\Util\MonoConcurrentQueue.cs",
 "region":  {
 "startLine":  41,
 "startColumn":  73,
@@ -54,9 +54,9 @@
 },
 {
 "id":  "S1939",
-"message":  "\"IProducerConsumerCollection\u003cT\u003e\" implements \"ICollection\" so \"ICollection\" can be removed from the inheritance list.",
+"message":  "'IProducerConsumerCollection<T>' implements 'ICollection' so 'ICollection' can be removed from the inheritance list.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Util\\MonoConcurrentQueue.cs",
+"uri":  "akka.net\src\core\Akka\Util\MonoConcurrentQueue.cs",
 "region":  {
 "startLine":  41,
 "startColumn":  89,
@@ -67,9 +67,9 @@
 },
 {
 "id":  "S1939",
-"message":  "\"IProducerConsumerCollection\u003cT\u003e\" implements \"IEnumerable\" so \"IEnumerable\" can be removed from the inheritance list.",
+"message":  "'IProducerConsumerCollection<T>' implements 'IEnumerable' so 'IEnumerable' can be removed from the inheritance list.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Util\\MonoConcurrentQueue.cs",
+"uri":  "akka.net\src\core\Akka\Util\MonoConcurrentQueue.cs",
 "region":  {
 "startLine":  41,
 "startColumn":  102,

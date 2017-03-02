@@ -36,7 +36,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
     public class ArrayInitializationMultipleStatements : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2429";
-        internal const string MessageFormat = "Refactor this code to use the \"... = {}\" syntax.";
+        internal const string MessageFormat = "Refactor this code to use the '... = {}' syntax.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

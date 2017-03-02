@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S1450",
-"message":  "Remove the \"oldResponseOutput\" field and declare it as a local variable in the relevant methods.",
+"message":  "Remove the 'oldResponseOutput' field and declare it as a local variable in the relevant methods.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy.Demo.Hosting.Aspnet\\HereBeAResponseYouScurvyDog.cs",
+"uri":  "Nancy\src\Nancy.Demo.Hosting.Aspnet\HereBeAResponseYouScurvyDog.cs",
 "region":  {
 "startLine":  11,
 "startColumn":  33,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S1450",
-"message":  "Remove the \"sentenceCaseSubstitutions\" field and declare it as a local variable in the relevant methods.",
+"message":  "Remove the 'sentenceCaseSubstitutions' field and declare it as a local variable in the relevant methods.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy.Demo.Hosting.Aspnet\\Piratizer4000.cs",
+"uri":  "Nancy\src\Nancy.Demo.Hosting.Aspnet\Piratizer4000.cs",
 "region":  {
 "startLine":  19,
 "startColumn":  60,

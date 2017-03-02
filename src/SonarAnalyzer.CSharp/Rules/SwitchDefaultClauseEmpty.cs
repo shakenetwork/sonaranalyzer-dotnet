@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class SwitchDefaultClauseEmpty : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3532";
-        internal const string MessageFormat = "Remove this empty \"default\" clause.";
+        internal const string MessageFormat = "Remove this empty 'default' clause.";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly DiagnosticDescriptor rule =

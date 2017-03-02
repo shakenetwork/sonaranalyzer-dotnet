@@ -35,7 +35,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class DisposableMemberInNonDisposableClass : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2931";
-        internal const string MessageFormat = "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on {0}.";
+        internal const string MessageFormat = "Implement 'IDisposable' in this class and use the 'Dispose' method to call 'Dispose' on {0}.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
@@ -115,7 +115,7 @@ namespace SonarAnalyzer.Rules.CSharp
                                 continue;
                             }
                             var variableNames = string.Join(", ",
-                                assignedFields.Select(symbol => $"\"{symbol.Name}\"").OrderBy(s => s));
+                                assignedFields.Select(symbol => $"'{symbol.Name}'").OrderBy(s => s));
 
                             c.ReportDiagnosticIfNonGenerated(
                                 Diagnostic.Create(Rule, classSyntax.Identifier.GetLocation(), variableNames),

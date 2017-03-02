@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class VirtualEventField : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2290";
-        internal const string MessageFormat = "Remove this \"virtual\" modifier of {0}.";
+        internal const string MessageFormat = "Remove this 'virtual' modifier of {0}.";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly DiagnosticDescriptor rule =
@@ -52,7 +52,7 @@ namespace SonarAnalyzer.Rules.CSharp
                     {
                         var virt = eventField.Modifiers.First(modifier => modifier.IsKind(SyntaxKind.VirtualKeyword));
                         var names = string.Join(", ", eventField.Declaration.Variables
-                            .Select(syntax => $"\"{syntax.Identifier.ValueText}\"")
+                            .Select(syntax => $"'{syntax.Identifier.ValueText}'")
                             .OrderBy(s => s));
                         c.ReportDiagnostic(Diagnostic.Create(Rule, virt.GetLocation(), names));
                     }

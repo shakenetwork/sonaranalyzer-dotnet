@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S1698",
-"message":  "Consider using \"Equals\" if value comparison was intended.",
+"message":  "Consider using 'Equals' if value comparison was intended.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\RealMessageEnvelope.cs",
+"uri":  "akka.net\src\core\Akka.TestKit\RealMessageEnvelope.cs",
 "region":  {
 "startLine":  28,
 "startColumn":  68,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S1698",
-"message":  "Consider using \"Equals\" if value comparison was intended.",
+"message":  "Consider using 'Equals' if value comparison was intended.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestActors\\EchoActor.cs",
+"uri":  "akka.net\src\core\Akka.TestKit\TestActors\EchoActor.cs",
 "region":  {
 "startLine":  26,
 "startColumn":  56,

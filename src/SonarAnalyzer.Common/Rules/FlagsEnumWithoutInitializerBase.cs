@@ -31,7 +31,7 @@ namespace SonarAnalyzer.Rules.Common
         protected const int AllowedEmptyMemberCount = 3;
 
         protected const string DiagnosticId = "S2345";
-        protected const string MessageFormat = "Initialize all the members of this \"Flags\" enumeration.";
+        protected const string MessageFormat = "Initialize all the members of this 'Flags' enumeration.";
 
         internal static bool HasFlagsAttribute(SyntaxNode node, SemanticModel semanticModel)
         {

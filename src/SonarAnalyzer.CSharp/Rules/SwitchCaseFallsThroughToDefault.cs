@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class SwitchCaseFallsThroughToDefault : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3458";
-        internal const string MessageFormat = "Remove this empty \"case\" clause.";
+        internal const string MessageFormat = "Remove this empty 'case' clause.";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly DiagnosticDescriptor rule =

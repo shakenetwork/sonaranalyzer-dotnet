@@ -29,7 +29,7 @@ namespace SonarAnalyzer.Rules.Common
     public abstract class MultipleVariableDeclarationBase : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1659";
-        protected const string MessageFormat = "Declare \"{0}\" in a separate statement.";
+        protected const string MessageFormat = "Declare '{0}' in a separate statement.";
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
     }

@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"PersistCount\", the compiler will do that for you.",
+"message":  "Remove this initialization to 'PersistCount', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShard.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Sharding\PersistentShard.cs",
 "region":  {
 "startLine":  18,
 "startColumn":  36,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"_persistCount\", the compiler will do that for you.",
+"message":  "Remove this initialization to '_persistCount', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Sharding\PersistentShardCoordinator.cs",
 "region":  {
 "startLine":  165,
 "startColumn":  35,
@@ -28,9 +28,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"HandOffStopper\", the compiler will do that for you.",
+"message":  "Remove this initialization to 'HandOffStopper', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\Shard.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Sharding\Shard.cs",
 "region":  {
 "startLine":  181,
 "startColumn":  44,
@@ -41,9 +41,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"_coordinator\", the compiler will do that for you.",
+"message":  "Remove this initialization to '_coordinator', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Sharding\ShardRegion.cs",
 "region":  {
 "startLine":  332,
 "startColumn":  40,
@@ -54,9 +54,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"_retryCount\", the compiler will do that for you.",
+"message":  "Remove this initialization to '_retryCount', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Sharding\ShardRegion.cs",
 "region":  {
 "startLine":  333,
 "startColumn":  33,
@@ -67,9 +67,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"_loggedFullBufferWarning\", the compiler will do that for you.",
+"message":  "Remove this initialization to '_loggedFullBufferWarning', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Sharding\ShardRegion.cs",
 "region":  {
 "startLine":  334,
 "startColumn":  47,

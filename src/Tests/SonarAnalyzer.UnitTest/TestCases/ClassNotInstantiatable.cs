@@ -9,12 +9,12 @@ namespace Tests.Diagnostics
         public void M() { }
     }
 
-    public class Class1 // Noncompliant {{This class can't be instantiated; make its constructor "public".}}
+    public class Class1 // Noncompliant {{This class can't be instantiated; make its constructor 'public'.}}
 //               ^^^^^^
     {
         private Class1() { }
     }
-    public sealed class Class1b // Noncompliant {{This class can't be instantiated; make at least one of its constructors "public".}}
+    public sealed class Class1b // Noncompliant {{This class can't be instantiated; make at least one of its constructors 'public'.}}
     {
         private Class1b() { }
         private Class1b(int i) { }

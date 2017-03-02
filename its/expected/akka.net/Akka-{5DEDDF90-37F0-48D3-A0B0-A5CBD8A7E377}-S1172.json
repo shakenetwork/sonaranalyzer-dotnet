@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S1172",
-"message":  "Remove this parameter \"other\", whose value is ignored in the method.",
+"message":  "Remove this parameter 'other', whose value is ignored in the method.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\Props.cs",
+"uri":  "akka.net\src\core\Akka\Actor\Props.cs",
 "region":  {
 "startLine":  76,
 "startColumn":  48,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S1172",
-"message":  "Remove this unused method parameter \"address\".",
+"message":  "Remove this unused method parameter 'address'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\IO\\UdpConnection.cs",
+"uri":  "akka.net\src\core\Akka\IO\UdpConnection.cs",
 "region":  {
 "startLine":  77,
 "startColumn":  32,
@@ -28,9 +28,9 @@
 },
 {
 "id":  "S1172",
-"message":  "Remove this unused method parameter \"capturedArguments\".",
+"message":  "Remove this unused method parameter 'capturedArguments'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Util\\MatchHandler\\CachedMatchCompiler.cs",
+"uri":  "akka.net\src\core\Akka\Util\MatchHandler\CachedMatchCompiler.cs",
 "region":  {
 "startLine":  47,
 "startColumn":  81,

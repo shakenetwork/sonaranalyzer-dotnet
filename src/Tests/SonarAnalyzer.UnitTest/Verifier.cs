@@ -139,7 +139,7 @@ namespace SonarAnalyzer.UnitTest
 
             if (expectedIssue.Message != null && expectedIssue.Message != message)
             {
-                Execute.Assertion.FailWith($"Expected message on line {lineNumber} to be \"{expectedIssue.Message}\", but got \"{message}\".");
+                Execute.Assertion.FailWith($"Expected message on line {lineNumber} to be '{expectedIssue.Message}', but got '{message}'.");
             }
 
             var diagnosticStart = location.GetLineSpan().StartLinePosition.Character;

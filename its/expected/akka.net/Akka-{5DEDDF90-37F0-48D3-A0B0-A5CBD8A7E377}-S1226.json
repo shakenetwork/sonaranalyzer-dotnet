@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"name\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'name'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorCell.Children.cs",
+"uri":  "akka.net\src\core\Akka\Actor\ActorCell.Children.cs",
 "region":  {
 "startLine":  67,
 "startColumn":  17,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"message\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'message'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorCell.cs",
+"uri":  "akka.net\src\core\Akka\Actor\ActorCell.cs",
 "region":  {
 "startLine":  281,
 "startColumn":  17,
@@ -28,9 +28,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"childrenNotToSuspend\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'childrenNotToSuspend'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorCell.FaultHandling.cs",
+"uri":  "akka.net\src\core\Akka\Actor\ActorCell.FaultHandling.cs",
 "region":  {
 "startLine":  233,
 "startColumn":  25,
@@ -41,9 +41,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"sender\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'sender'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorRef.cs",
+"uri":  "akka.net\src\core\Akka\Actor\ActorRef.cs",
 "region":  {
 "startLine":  174,
 "startColumn":  17,
@@ -54,9 +54,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"deadLettersFactory\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'deadLettersFactory'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorRefProvider.cs",
+"uri":  "akka.net\src\core\Akka\Actor\ActorRefProvider.cs",
 "region":  {
 "startLine":  153,
 "startColumn":  17,
@@ -67,9 +67,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"sender\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'sender'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorSelection.cs",
+"uri":  "akka.net\src\core\Akka\Actor\ActorSelection.cs",
 "region":  {
 "startLine":  97,
 "startColumn":  17,
@@ -80,9 +80,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"timeout\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'timeout'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\Futures.cs",
+"uri":  "akka.net\src\core\Akka\Actor\Futures.cs",
 "region":  {
 "startLine":  69,
 "startColumn":  13,
@@ -93,9 +93,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"sender\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'sender'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\Futures.cs",
+"uri":  "akka.net\src\core\Akka\Actor\Futures.cs",
 "region":  {
 "startLine":  190,
 "startColumn":  13,
@@ -106,9 +106,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"sender\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'sender'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\PipeToSupport.cs",
+"uri":  "akka.net\src\core\Akka\Actor\PipeToSupport.cs",
 "region":  {
 "startLine":  26,
 "startColumn":  13,
@@ -119,9 +119,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"sender\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'sender'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\PipeToSupport.cs",
+"uri":  "akka.net\src\core\Akka\Actor\PipeToSupport.cs",
 "region":  {
 "startLine":  46,
 "startColumn":  13,
@@ -132,9 +132,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"actor\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'actor'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\Props.cs",
+"uri":  "akka.net\src\core\Akka\Actor\Props.cs",
 "region":  {
 "startLine":  556,
 "startColumn":  17,
@@ -145,9 +145,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"actor\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'actor'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\Props.cs",
+"uri":  "akka.net\src\core\Akka\Actor\Props.cs",
 "region":  {
 "startLine":  584,
 "startColumn":  17,
@@ -158,9 +158,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"actor\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'actor'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\Props.cs",
+"uri":  "akka.net\src\core\Akka\Actor\Props.cs",
 "region":  {
 "startLine":  610,
 "startColumn":  17,
@@ -171,9 +171,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"actor\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'actor'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\Props.cs",
+"uri":  "akka.net\src\core\Akka\Actor\Props.cs",
 "region":  {
 "startLine":  638,
 "startColumn":  17,
@@ -184,9 +184,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"routees\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'routees'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Routing\\Router.cs",
+"uri":  "akka.net\src\core\Akka\Routing\Router.cs",
 "region":  {
 "startLine":  219,
 "startColumn":  17,
@@ -197,9 +197,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"separator\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'separator'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\StringBuilderExtensions.cs",
+"uri":  "akka.net\src\core\Akka\Util\Internal\StringBuilderExtensions.cs",
 "region":  {
 "startLine":  27,
 "startColumn":  36,
@@ -210,9 +210,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"valueAppender\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'valueAppender'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\StringBuilderExtensions.cs",
+"uri":  "akka.net\src\core\Akka\Util\Internal\StringBuilderExtensions.cs",
 "region":  {
 "startLine":  28,
 "startColumn":  40,
@@ -223,9 +223,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"actor\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'actor'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Util\\Resolver.cs",
+"uri":  "akka.net\src\core\Akka\Util\Resolver.cs",
 "region":  {
 "startLine":  32,
 "startColumn":  13,
@@ -236,9 +236,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"pattern\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'pattern'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Util\\StringLike.cs",
+"uri":  "akka.net\src\core\Akka\Util\StringLike.cs",
 "region":  {
 "startLine":  17,
 "startColumn":  13,
@@ -249,9 +249,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"pattern\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'pattern'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Util\\StringLike.cs",
+"uri":  "akka.net\src\core\Akka\Util\StringLike.cs",
 "region":  {
 "startLine":  18,
 "startColumn":  13,
@@ -262,9 +262,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"pattern\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'pattern'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Util\\StringLike.cs",
+"uri":  "akka.net\src\core\Akka\Util\StringLike.cs",
 "region":  {
 "startLine":  19,
 "startColumn":  13,
@@ -275,9 +275,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"pattern\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'pattern'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Util\\StringLike.cs",
+"uri":  "akka.net\src\core\Akka\Util\StringLike.cs",
 "region":  {
 "startLine":  20,
 "startColumn":  13,
@@ -288,9 +288,9 @@
 },
 {
 "id":  "S1226",
-"message":  "Introduce a new variable instead of reusing the parameter \"pattern\".",
+"message":  "Introduce a new variable instead of reusing the parameter 'pattern'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Util\\StringLike.cs",
+"uri":  "akka.net\src\core\Akka\Util\StringLike.cs",
 "region":  {
 "startLine":  21,
 "startColumn":  13,

@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S3443",
-"message":  "Pass an argument that is not a \"System.Type\" or consider using \"IsAssignableFrom\".",
+"message":  "Pass an argument that is not a 'System.Type' or consider using 'IsAssignableFrom'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\EventFilter\\EventFilterFactory.cs",
+"uri":  "akka.net\src\core\Akka.TestKit\EventFilter\EventFilterFactory.cs",
 "region":  {
 "startLine":  244,
 "startColumn":  91,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S3443",
-"message":  "Pass an argument that is not a \"System.Type\" or consider using \"IsAssignableFrom\".",
+"message":  "Pass an argument that is not a 'System.Type' or consider using 'IsAssignableFrom'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\EventFilter\\EventFilterFactory.cs",
+"uri":  "akka.net\src\core\Akka.TestKit\EventFilter\EventFilterFactory.cs",
 "region":  {
 "startLine":  253,
 "startColumn":  91,

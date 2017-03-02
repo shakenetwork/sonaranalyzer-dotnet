@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class LossOfFractionInDivision : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2184";
-        internal const string MessageFormat = "Cast one of the operands of this division to \"{0}\".";
+        internal const string MessageFormat = "Cast one of the operands of this division to '{0}'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

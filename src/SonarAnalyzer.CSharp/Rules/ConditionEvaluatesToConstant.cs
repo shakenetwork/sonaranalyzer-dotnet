@@ -39,7 +39,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ConditionEvaluatesToConstant : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2583";
-        internal const string MessageFormat = "Change this condition so that it does not always evaluate to \"{0}\".";
+        internal const string MessageFormat = "Change this condition so that it does not always evaluate to '{0}'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

@@ -2,10 +2,10 @@
 "issues":  [
 {
 "id":  "S3010",
-"message":  "Remove this assignment of \u0027_state\u0027 or initialize it statically.",
+"message":  "Remove this assignment of '_state' or initialize it statically.",
 "location":  [
 {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Stash\\ActorWithStashSpec.cs",
+"uri":  "akka.net\src\core\Akka.Tests\Actor\Stash\ActorWithStashSpec.cs",
 "region":  {
 "startLine":  23,
 "startColumn":  13,
@@ -14,7 +14,7 @@
 }
 },
 {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Stash\\ActorWithStashSpec.cs",
+"uri":  "akka.net\src\core\Akka.Tests\Actor\Stash\ActorWithStashSpec.cs",
 "region":  {
 "startLine":  20,
 "startColumn":  33,

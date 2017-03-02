@@ -15,7 +15,7 @@ namespace Tests.TestCases
     class Person
     {
         private int age;
-        [Pure] // Noncompliant {{Remove the "Pure" attribute or change the method to return a value.}}
+        [Pure] // Noncompliant {{Remove the 'Pure' attribute or change the method to return a value.}}
 //       ^^^^
         void ConfigureAge(int age)
         {

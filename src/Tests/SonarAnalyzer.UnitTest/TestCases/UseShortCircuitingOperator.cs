@@ -8,8 +8,8 @@ namespace Tests.Diagnostics
     {
         public UseShortCircuitingOperator()
         {
-            var b = true | false;   // Noncompliant {{Correct this "|" to "||".}}
-            b = true & false;       // Noncompliant {{Correct this "&" to "&&".}}
+            var b = true | false;   // Noncompliant {{Correct this '|' to '||'.}}
+            b = true & false;       // Noncompliant {{Correct this '&' to '&&'.}}
 //                   ^
             b = true && false;
 

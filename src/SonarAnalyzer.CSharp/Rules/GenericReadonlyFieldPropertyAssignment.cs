@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     {
         internal const string DiagnosticId = "S2934";
         internal const string MessageFormat =
-            "Restrict \"{0}\" to be a reference type or remove this assignment of \"{1}\"; it is useless if \"{0}\" " +
+            "Restrict '{0}' to be a reference type or remove this assignment of '{1}'; it is useless if '{0}' " +
             "is a value type.";
 
         private static readonly DiagnosticDescriptor rule =

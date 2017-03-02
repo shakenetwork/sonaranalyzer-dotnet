@@ -6,7 +6,7 @@ Namespace Tests.Diagnostics
 
         <Extension()>
         Static Sub MySub(ByVal a As Integer)
-            a = 42 ' Noncompliant {{Introduce a new variable instead of reusing the parameter "a".}}
+            a = 42 ' Noncompliant {{Introduce a new variable instead of reusing the parameter 'a'.}}
 '           ^
             Try
 

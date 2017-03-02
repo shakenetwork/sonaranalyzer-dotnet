@@ -76,7 +76,7 @@ namespace SonarAnalyzer.Rules.CSharp
             if (initializer != null &&
                 IsInitializerRedundant(initializer))
             {
-                context.ReportDiagnostic(Diagnostic.Create(rule, initializer.GetLocation(), "\"base()\" call"));
+                context.ReportDiagnostic(Diagnostic.Create(rule, initializer.GetLocation(), "'base()' call"));
             }
         }
 

@@ -16,7 +16,7 @@ namespace Tests.Diagnostics
         }
 
         [Conditional("DEBUG")]
-        void F4()    // Noncompliant {{Add a nested comment explaining why this method is empty, throw a "NotSupportedException" or complete the implementation.}}
+        void F4()    // Noncompliant {{Add a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.}}
         {
         }
 

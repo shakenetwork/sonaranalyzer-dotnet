@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"cookieCulture\".",
+"message":  "Remove this useless assignment to local variable 'cookieCulture'.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy\\Conventions\\BuiltInCultureConventions.cs",
+"uri":  "Nancy\src\Nancy\Conventions\BuiltInCultureConventions.cs",
 "region":  {
 "startLine":  120,
 "startColumn":  34,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"uri\".",
+"message":  "Remove this useless assignment to local variable 'uri'.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy\\Extensions\\RequestExtensions.cs",
+"uri":  "Nancy\src\Nancy\Extensions\RequestExtensions.cs",
 "region":  {
 "startLine":  35,
 "startColumn":  21,
@@ -28,9 +28,9 @@
 },
 {
 "id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"bytes\".",
+"message":  "Remove this useless assignment to local variable 'bytes'.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
+"uri":  "Nancy\src\Nancy\Helpers\HttpUtility.cs",
 "region":  {
 "startLine":  187,
 "startColumn":  19,
@@ -41,9 +41,9 @@
 },
 {
 "id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"acc\".",
+"message":  "Remove this useless assignment to local variable 'acc'.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
+"uri":  "Nancy\src\Nancy\Helpers\HttpUtility.cs",
 "region":  {
 "startLine":  318,
 "startColumn":  17,
@@ -54,9 +54,9 @@
 },
 {
 "id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"js\".",
+"message":  "Remove this useless assignment to local variable 'js'.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy\\Json\\Json.cs",
+"uri":  "Nancy\src\Nancy\Json\Json.cs",
 "region":  {
 "startLine":  48,
 "startColumn":  16,
@@ -67,9 +67,9 @@
 },
 {
 "id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"js\".",
+"message":  "Remove this useless assignment to local variable 'js'.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy\\Json\\Json.cs",
+"uri":  "Nancy\src\Nancy\Json\Json.cs",
 "region":  {
 "startLine":  60,
 "startColumn":  16,
@@ -80,9 +80,9 @@
 },
 {
 "id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"current\".",
+"message":  "Remove this useless assignment to local variable 'current'.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+"uri":  "Nancy\src\Nancy\TinyIoc\TinyIoC.cs",
 "region":  {
 "startLine":  3209,
 "startColumn":  39,

@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S2931",
-"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"provider\".",
+"message":  "Implement 'IDisposable' in this class and use the 'Dispose' method to call 'Dispose' on 'provider'.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy\\Cryptography\\PassphraseKeyGenerator.cs",
+"uri":  "Nancy\src\Nancy\Cryptography\PassphraseKeyGenerator.cs",
 "region":  {
 "startLine":  12,
 "startColumn":  18,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S2931",
-"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"provider\".",
+"message":  "Implement 'IDisposable' in this class and use the 'Dispose' method to call 'Dispose' on 'provider'.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy\\Cryptography\\RandomKeyGenerator.cs",
+"uri":  "Nancy\src\Nancy\Cryptography\RandomKeyGenerator.cs",
 "region":  {
 "startLine":  8,
 "startColumn":  18,
@@ -28,9 +28,9 @@
 },
 {
 "id":  "S2931",
-"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"padlock\".",
+"message":  "Implement 'IDisposable' in this class and use the 'Dispose' method to call 'Dispose' on 'padlock'.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy\\ViewEngines\\DefaultViewLocator.cs",
+"uri":  "Nancy\src\Nancy\ViewEngines\DefaultViewLocator.cs",
 "region":  {
 "startLine":  12,
 "startColumn":  18,

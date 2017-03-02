@@ -17,7 +17,7 @@ namespace Tests.Diagnostics
             bool b = false;
             bool c = !!!b; // Noncompliant
 
-            NonComp(!!!b); // Noncompliant {{Use the "!" operator just once or not at all.}}
+            NonComp(!!!b); // Noncompliant {{Use the '!' operator just once or not at all.}}
         }
 
         static void Comp()

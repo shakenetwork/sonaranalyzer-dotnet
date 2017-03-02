@@ -141,8 +141,13 @@ function CreateIssueReports
       $object | Add-Member –Type NoteProperty –Name issues –Value $_.Group
 
       $path = Join-Path (Join-Path 'actual' $project) ($file.BaseName + '-' + $_.Name + $file.Extension)
-      $lines = ((ConvertTo-Json $object -Depth 42) -split "`r`n") |  # Convert JSON to String and split lines
-        Foreach-Object { $_.TrimStart() }                            # Remove leading spaces
+      $lines = 
+	    (
+			(ConvertTo-Json $object -Depth 42 | 
+				% { [System.Text.RegularExpressions.Regex]::Unescape($_) }  # Unescape powershell to json automatic escape
+			) -split "`r`n"													# Convert JSON to String and split lines
+		) |  
+        Foreach-Object { $_.TrimStart() }                            		# Remove leading spaces
       Set-Content $path $lines
     }
 }

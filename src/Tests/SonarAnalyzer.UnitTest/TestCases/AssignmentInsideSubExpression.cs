@@ -27,7 +27,7 @@ namespace Tests.Diagnostics
         {
             int i = 0;
 
-            foo(i = 42); // Noncompliant {{Extract the assignment of "i" from this expression.}}
+            foo(i = 42); // Noncompliant {{Extract the assignment of 'i' from this expression.}}
 //                ^
             foo(i += 42); // Noncompliant
             foo(i -= 42); // Noncompliant
@@ -56,7 +56,7 @@ namespace Tests.Diagnostics
 
             if (b = false) { } // Noncompliant
 //                ^
-            if ((b = false)) { } // Noncompliant  {{Extract the assignment of "b" from this expression.}}
+            if ((b = false)) { } // Noncompliant  {{Extract the assignment of 'b' from this expression.}}
             for (int j = 0; b &= false; j++) { } // Noncompliant
             for (int j = 0; b == false; j++) { }
 

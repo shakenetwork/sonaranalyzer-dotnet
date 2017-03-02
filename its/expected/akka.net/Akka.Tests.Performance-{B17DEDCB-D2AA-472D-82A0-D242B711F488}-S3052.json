@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"_currentMessages\", the compiler will do that for you.",
+"message":  "Remove this initialization to '_currentMessages', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests.Performance\\Actor\\MinimalActorRefThroughputSpec.cs",
+"uri":  "akka.net\src\core\Akka.Tests.Performance\Actor\MinimalActorRefThroughputSpec.cs",
 "region":  {
 "startLine":  16,
 "startColumn":  43,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"_currentMessages\", the compiler will do that for you.",
+"message":  "Remove this initialization to '_currentMessages', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests.Performance\\Actor\\ReceiveActorThroughputSpec.cs",
+"uri":  "akka.net\src\core\Akka.Tests.Performance\Actor\ReceiveActorThroughputSpec.cs",
 "region":  {
 "startLine":  13,
 "startColumn":  43,
@@ -28,9 +28,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"_currentMessages\", the compiler will do that for you.",
+"message":  "Remove this initialization to '_currentMessages', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests.Performance\\Actor\\UntypedActorThroughputSpec.cs",
+"uri":  "akka.net\src\core\Akka.Tests.Performance\Actor\UntypedActorThroughputSpec.cs",
 "region":  {
 "startLine":  13,
 "startColumn":  43,

@@ -2,7 +2,7 @@
 
     Public Function [And](first As Boolean, second As Boolean) As Boolean
 
-        If first And second Then ' Noncompliant {{Correct this "And" to "AndAlso".}}
+        If first And second Then ' Noncompliant {{Correct this 'And' to 'AndAlso'.}}
 '                ^^^
             Return True
         End If
@@ -21,7 +21,7 @@
 
     Public Function [Or](first As Boolean, second As Boolean) As Boolean
 
-        If first Or second Then ' Noncompliant {{Correct this "Or" to "OrElse".}}
+        If first Or second Then ' Noncompliant {{Correct this 'Or' to 'OrElse'.}}
             Return True
         End If
         Return False

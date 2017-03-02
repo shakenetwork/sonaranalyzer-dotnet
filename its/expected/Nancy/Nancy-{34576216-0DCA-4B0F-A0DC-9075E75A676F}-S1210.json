@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S1210",
-"message":  "When implementing IComparable\u003cT\u003e, you should also override Equals, \u003c, \u003e, ==, !=.",
+"message":  "When implementing IComparable<T>, you should also override Equals, <, >, ==, !=.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy\\Routing\\Trie\\MatchResult.cs",
+"uri":  "Nancy\src\Nancy\Routing\Trie\MatchResult.cs",
 "region":  {
 "startLine":  9,
 "startColumn":  18,

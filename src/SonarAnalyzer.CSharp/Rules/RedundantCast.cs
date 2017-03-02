@@ -36,7 +36,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class RedundantCast : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1905";
-        internal const string MessageFormat = "Remove this unnecessary cast to \"{0}\".";
+        internal const string MessageFormat = "Remove this unnecessary cast to '{0}'.";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly DiagnosticDescriptor rule =

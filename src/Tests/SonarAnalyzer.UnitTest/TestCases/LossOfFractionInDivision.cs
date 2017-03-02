@@ -20,7 +20,7 @@ namespace Tests.TestCases
             Action<float> a = (f) => { };
             a(3 / 2); // Noncompliant
 
-            ((Action<float>)(f => { }))(3 / 2); // Noncompliant {{Cast one of the operands of this division to "float".}}
+            ((Action<float>)(f => { }))(3 / 2); // Noncompliant {{Cast one of the operands of this division to 'float'.}}
         }
 
         static void Method(float f) { }

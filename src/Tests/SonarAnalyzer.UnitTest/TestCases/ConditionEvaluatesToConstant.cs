@@ -16,7 +16,7 @@ namespace Tests.Diagnostics
 
         void Nameof(string s)
         {
-            if (null == nameof(Method1)) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (null == nameof(Method1)) // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
 //              ^^^^^^^^^^^^^^^^^^^^^^^
             {
             }
@@ -25,7 +25,7 @@ namespace Tests.Diagnostics
         public void Method1()
         {
             var b = true;
-            if (b) // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+            if (b) // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
 //              ^
             {
                 Console.WriteLine();
@@ -166,7 +166,7 @@ namespace Tests.Diagnostics
                     break;
             }
 
-            if (b) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (b) // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             {
 
             }
@@ -352,7 +352,7 @@ namespace Tests.Diagnostics
             var b = a;
             if (a)
             {
-                if (b) // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+                if (b) // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
                 {
 
                 }
@@ -365,7 +365,7 @@ namespace Tests.Diagnostics
             var b = a;
             if (!a)
             {
-                if (b) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+                if (b) // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
                 {
 
                 }
@@ -383,34 +383,34 @@ namespace Tests.Diagnostics
         {
             if (a & !b)
             {
-                if (a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
-                if (b) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+                if (a) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
+                if (b) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             }
 
             if (!(a | b))
             {
-                if (a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+                if (a) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             }
 
             if (a ^ b)
             {
-                if (!a ^ !b) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+                if (!a ^ !b) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
             }
 
             a = false;
-            if (a & b) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (a & b) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
 
             a &= true;
-            if (a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (a) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
 
             a |= true;
-            if (a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+            if (a) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
 
             a ^= true;
-            if (a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (a) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
 
             a ^= true;
-            if (a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+            if (a) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
         }
 
         public void IsAsExpression()
@@ -421,9 +421,9 @@ namespace Tests.Diagnostics
             if (oo == null) { }
 
             o = null;
-            if (o is object) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (o is object) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             oo = o as object;
-            if (oo == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+            if (oo == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
         }
 
         public void Equals(bool b)
@@ -431,20 +431,20 @@ namespace Tests.Diagnostics
             var a = true;
             if (a == b)
             {
-                if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+                if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
             }
             else
             {
-                if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+                if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             }
 
             if (!(a == b))
             {
-                if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+                if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             }
             else
             {
-                if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+                if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
             }
         }
 
@@ -453,20 +453,20 @@ namespace Tests.Diagnostics
             var a = true;
             if (a != b)
             {
-                if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+                if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             }
             else
             {
-                if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+                if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
             }
 
             if (!(a != b))
             {
-                if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+                if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
             }
             else
             {
-                if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+                if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             }
         }
 
@@ -474,33 +474,33 @@ namespace Tests.Diagnostics
         {
             if (a == b)
             {
-                if (b == a) { }    // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
-                if (b == !a) { }   // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
-                if (!b == !!a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
-                if (!(a == b)) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+                if (b == a) { }    // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
+                if (b == !a) { }   // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
+                if (!b == !!a) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
+                if (!(a == b)) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             }
             else
             {
-                if (b != a) { }    // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
-                if (b != !a) { }   // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
-                if (!b != !!a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+                if (b != a) { }    // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
+                if (b != !a) { }   // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
+                if (!b != !!a) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             }
 
             if (a != b)
             {
-                if (b == a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+                if (b == a) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             }
             else
             {
-                if (b != a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+                if (b != a) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             }
         }
 
         public void RelationshipWithConstraint(bool a, bool b)
         {
-            if (a == b && a) { if (b) { } } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+            if (a == b && a) { if (b) { } } // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
 //                                 ^
-            if (a != b && a) { if (b) { } } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (a != b && a) { if (b) { } } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
 //                                 ^
             if (a && b) { if (a == b) { } } // Noncompliant
 //                            ^^^^^^
@@ -527,9 +527,9 @@ namespace Tests.Diagnostics
         {
             if (object.ReferenceEquals(a, b))
             {
-                if (object.Equals(a, b)) { }    // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
-                if (Equals(a, b)) { }           // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
-                if (a.Equals(b)) { }            // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+                if (object.Equals(a, b)) { }    // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
+                if (Equals(a, b)) { }           // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
+                if (a.Equals(b)) { }            // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
             }
 
             if (this == a)
@@ -551,12 +551,12 @@ namespace Tests.Diagnostics
         {
             if (object.ReferenceEquals(a, b))
             {
-                if (a == b) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+                if (a == b) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
             }
 
             if (a == b)
             {
-                if (object.ReferenceEquals(a, b)) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+                if (object.ReferenceEquals(a, b)) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
             }
         }
 
@@ -564,7 +564,7 @@ namespace Tests.Diagnostics
         {
             if (object.ReferenceEquals(a, b))
             {
-                if (a == b) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+                if (a == b) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
             }
 
             if (a == b)
@@ -577,34 +577,34 @@ namespace Tests.Diagnostics
         {
             if (object.ReferenceEquals(a, b)) { }
 
-            if (object.ReferenceEquals(a, a)) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+            if (object.ReferenceEquals(a, a)) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
 
             a = null;
-            if (object.ReferenceEquals(null, a)) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+            if (object.ReferenceEquals(null, a)) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
 
-            if (object.ReferenceEquals(null, new object())) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (object.ReferenceEquals(null, new object())) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
 
             int i = 10;
-            if (object.ReferenceEquals(i, i)) { } // Noncompliant because of boxing {{Change this condition so that it does not always evaluate to "false".}}
+            if (object.ReferenceEquals(i, i)) { } // Noncompliant because of boxing {{Change this condition so that it does not always evaluate to 'false'.}}
 
             int? ii = null;
             int? jj = null;
-            if (object.ReferenceEquals(ii, jj)) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+            if (object.ReferenceEquals(ii, jj)) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
 
             jj = 10;
-            if (object.ReferenceEquals(ii, jj)) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (object.ReferenceEquals(ii, jj)) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
         }
 
         public void ReferenceEqualsBool(bool a, bool b)
         {
-            if (object.ReferenceEquals(a, b)) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (object.ReferenceEquals(a, b)) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
         }
 
         public void ReferenceEqualsNullable(int? ii, int? jj)
         {
             if (object.ReferenceEquals(ii, jj)) { } // Compliant, they might be both null
             jj = 1;
-            if (object.ReferenceEquals(ii, jj)) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (object.ReferenceEquals(ii, jj)) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
         }
 
         public override bool Equals(object obj)
@@ -620,8 +620,8 @@ namespace Tests.Diagnostics
         public void StringEmpty()
         {
             string s = null;
-            if (string.IsNullOrEmpty(s)) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
-            if (string.IsNullOrWhiteSpace(s)) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+            if (string.IsNullOrEmpty(s)) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
+            if (string.IsNullOrWhiteSpace(s)) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
             if (string.IsInterned(s)) { }
             s = "";
             if (string.IsNullOrEmpty(s)) { }
@@ -632,27 +632,27 @@ namespace Tests.Diagnostics
         {
             if (i < j)
             {
-                if (j < i) { }  // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
-                if (j <= i) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
-                if (j == i) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
-                if (j != i) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+                if (j < i) { }  // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
+                if (j <= i) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
+                if (j == i) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
+                if (j != i) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
             }
 
             if (i <= j)
             {
-                if (j < i) { }  // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+                if (j < i) { }  // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
                 if (j <= i)
                 {
-                    if (j == i) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
-                    if (j != i) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+                    if (j == i) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
+                    if (j != i) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
                 }
                 if (j == i)
                 {
-                    if (i >= j) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+                    if (i >= j) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
                 }
                 if (j != i)
                 {
-                    if (i >= j) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+                    if (i >= j) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
                 }
             }
         }
@@ -675,8 +675,8 @@ namespace Tests.Diagnostics
         {
             if (o == null)
             {
-                if (o?.ToString() == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
-                if (o?.GetHashCode() == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+                if (o?.ToString() == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
+                if (o?.GetHashCode() == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'true'.}}
             }
         }
 
@@ -684,27 +684,27 @@ namespace Tests.Diagnostics
         {
             var i = 5;
             var o = (object)i;
-            if (o == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (o == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
 
             var x = (ConditionEvaluatesToConstant)o; // This would throw and invalid cast exception
-            if (x == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (x == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
         }
 
         public async Task NotNullAfterAccess(object o, int[,] arr, IEnumerable<int> coll, Task task)
         {
             Console.WriteLine(o.ToString());
-            if (o == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (o == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
 
             Console.WriteLine(arr[42, 42]);
-            if (arr == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (arr == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
 
             foreach (var item in coll)
             {
             }
-            if (coll == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (coll == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
 
             await task;
-            if (task == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (task == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
         }
 
         public void EnumMemberAccess()
@@ -712,7 +712,7 @@ namespace Tests.Diagnostics
             var m = new MyClass();
             Console.WriteLine(m.myEnum);
             m = null;
-            if (m?.myEnum == MyEnum.One) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (m?.myEnum == MyEnum.One) // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             {
             }
         }
@@ -893,51 +893,51 @@ namespace Tests.Diagnostics
             int? i = null;
             int? j = 5;
 
-            if (i < j) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (i < j) // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             {
             }
 
-            if (i <= j) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (i <= j) // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             {
             }
 
-            if (i > j) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (i > j) // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             {
             }
 
-            if (i >= j) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (i >= j) // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             {
             }
 
-            if (i > 0) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (i > 0) // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             {
             }
 
-            if (i >= 0) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (i >= 0) // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             {
             }
 
-            if (i < 0) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (i < 0) // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             {
             }
 
-            if (i <= 0) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (i <= 0) // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             {
             }
 
-            if (j > null) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (j > null) // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             {
             }
 
-            if (j >= null) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (j >= null) // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             {
             }
 
-            if (j < null) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (j < null) // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             {
             }
 
-            if (j <= null) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            if (j <= null) // Noncompliant {{Change this condition so that it does not always evaluate to 'false'.}}
             {
             }
         }

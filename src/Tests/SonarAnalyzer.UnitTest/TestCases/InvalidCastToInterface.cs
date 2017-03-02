@@ -41,7 +41,7 @@ namespace Tests.Diagnostics
 //                   ^^^^^^^^^^^^
             x = myclass1 as IMyInterface; // Noncompliant
 //                          ^^^^^^^^^^^^
-            bool b = myclass1 is IMyInterface; // Noncompliant {{Review this cast; in this project there's no type that extends "MyClass1" and implements "IMyInterface".}}
+            bool b = myclass1 is IMyInterface; // Noncompliant {{Review this cast; in this project there's no type that extends 'MyClass1' and implements 'IMyInterface'.}}
 
             var arr = new MyClass1[10];
             var arr2 = (IMyInterface[])arr;

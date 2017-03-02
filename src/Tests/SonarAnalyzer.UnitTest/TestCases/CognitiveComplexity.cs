@@ -8,7 +8,7 @@ namespace Tests.Diagnostics
     {
         void Zero() { }
 
-        void If() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+        void If() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed.}}
         {
             if (true)
 //          ^^ Secondary {{+1}}
@@ -17,7 +17,7 @@ namespace Tests.Diagnostics
             }
         }
 
-        void IfElseIfElse() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed}}
+        void IfElseIfElse() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed.}}
         {
             if (1 == 2)
 //          ^^ Secondary {{+1}}
@@ -35,7 +35,7 @@ namespace Tests.Diagnostics
             }
         }
 
-        void IfNestedInElse() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 4 to the 0 allowed}}
+        void IfNestedInElse() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 4 to the 0 allowed.}}
         {
             if (true)
 //          ^^ Secondary {{+1}}
@@ -52,7 +52,7 @@ namespace Tests.Diagnostics
             }
         }
 
-        void IfElseNestedInIf() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 4 to the 0 allowed}}
+        void IfElseNestedInIf() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 4 to the 0 allowed.}}
         {
             if (true)
 //          ^^ Secondary {{+1}}
@@ -70,7 +70,7 @@ namespace Tests.Diagnostics
             }
         }
 
-        void MultipleIfNested() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 6 to the 0 allowed}}
+        void MultipleIfNested() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 6 to the 0 allowed.}}
         {
             if (true)
 //          ^^ Secondary {{+1}}
@@ -83,7 +83,7 @@ namespace Tests.Diagnostics
                     }
         }
 
-        void Switch() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+        void Switch() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed.}}
         {
             switch (10)
 //          ^^^^^^ Secondary {{+1}}
@@ -97,7 +97,7 @@ namespace Tests.Diagnostics
             }
         }
 
-        void NestedSwitch() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed}}
+        void NestedSwitch() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed.}}
         {
             if (true)
 //          ^^ Secondary {{+1}}
@@ -115,7 +115,7 @@ namespace Tests.Diagnostics
             }
         }
 
-        void SwitchWithNestedIf() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed}}
+        void SwitchWithNestedIf() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed.}}
         {
             switch (10)
 //          ^^^^^^ Secondary {{+1}}
@@ -132,13 +132,13 @@ namespace Tests.Diagnostics
             }
         }
 
-        void TernaryOperator() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+        void TernaryOperator() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed.}}
         {
             var t = true ? 0 : 1;
 //                       ^ Secondary {{+1}}
         }
 
-        void NestedTernaryOperator() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed}}
+        void NestedTernaryOperator() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed.}}
         {
             if (true)
 //          ^^ Secondary {{+1}}
@@ -148,14 +148,14 @@ namespace Tests.Diagnostics
             }
         }
 
-        void TernaryOperatorWihtInnerTernayOperator() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed}}
+        void TernaryOperatorWihtInnerTernayOperator() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed.}}
         {
             var t = true ? false ? -1 : 0 : 1;
 //                       ^ Secondary {{+1}}
 //                               ^ Secondary@-1 {{+2 (incl 1 for nesting)}}
         }
 
-        void While() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+        void While() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed.}}
         {
             while (true)
 //          ^^^^^ Secondary {{+1}}
@@ -164,7 +164,7 @@ namespace Tests.Diagnostics
             }
         }
 
-        void NestedWhile() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed}}
+        void NestedWhile() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed.}}
         {
             if (true)
 //          ^^ Secondary {{+1}}
@@ -177,7 +177,7 @@ namespace Tests.Diagnostics
             }
         }
 
-        void For() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+        void For() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed.}}
         {
             for (int i = 0; i < 10; i++)
 //          ^^^ Secondary {{+1}}
@@ -186,7 +186,7 @@ namespace Tests.Diagnostics
             }
         }
 
-        void NestedFor() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed}}
+        void NestedFor() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed.}}
         {
             if (true)
 //          ^^ Secondary {{+1}}
@@ -199,7 +199,7 @@ namespace Tests.Diagnostics
             }
         }
 
-        void Foreach() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+        void Foreach() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed.}}
         {
             foreach (var item in Enumerable.Empty<int>())
 //          ^^^^^^^ Secondary {{+1}}
@@ -207,7 +207,7 @@ namespace Tests.Diagnostics
             }
         }
 
-        void NestedForeach() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed}}
+        void NestedForeach() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed.}}
         {
             if (true)
 //          ^^ Secondary {{+1}}
@@ -219,7 +219,7 @@ namespace Tests.Diagnostics
             }
         }
 
-        void DoWhile() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+        void DoWhile() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed.}}
         {
             do
 //          ^^ Secondary {{+1}}
@@ -228,7 +228,7 @@ namespace Tests.Diagnostics
             } while (true);
         }
 
-        void NestedDoWhile() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed}}
+        void NestedDoWhile() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed.}}
         {
             if (true)
 //          ^^ Secondary {{+1}}
@@ -241,7 +241,7 @@ namespace Tests.Diagnostics
             }
         }
 
-        void TryCatch() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+        void TryCatch() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed.}}
         {
             try
             {
@@ -254,7 +254,7 @@ namespace Tests.Diagnostics
             }
         }
 
-        void TryCatchIf() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed}}
+        void TryCatchIf() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed.}}
         {
             try
             {
@@ -271,7 +271,7 @@ namespace Tests.Diagnostics
             }
         }
 
-        void NestedTryCatch() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed}}
+        void NestedTryCatch() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed.}}
         {
             if (true)
 //          ^^ Secondary {{+1}}
@@ -288,7 +288,7 @@ namespace Tests.Diagnostics
             }
         }
 
-        void TryCatchFinally() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+        void TryCatchFinally() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed.}}
         {
             try
             {
@@ -320,7 +320,7 @@ namespace Tests.Diagnostics
         void EmptyMethodBody() => Console.Write();
 
         void IfMethodBody() => a && b || c;
-//           ^^^^^^^^^^^^ {{Refactor this method to reduce its Cognitive Complexity from 2 to the 0 allowed}}
+//           ^^^^^^^^^^^^ {{Refactor this method to reduce its Cognitive Complexity from 2 to the 0 allowed.}}
 //                               ^^ Secondary@-1 {{+1}}
 //                                    ^^ Secondary@-2 {{+1}}
     }
@@ -342,7 +342,7 @@ namespace Tests.Diagnostics
 
         string IfInProperty
         {
-            get // Noncompliant {{Refactor this accessor to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+            get // Noncompliant {{Refactor this accessor to reduce its Cognitive Complexity from 1 to the 0 allowed.}}
             {
                 if (true)
 //              ^^ Secondary {{+1}}
@@ -354,7 +354,7 @@ namespace Tests.Diagnostics
 
         string IfInPropertyGetSet
         {
-            get // Noncompliant {{Refactor this accessor to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+            get // Noncompliant {{Refactor this accessor to reduce its Cognitive Complexity from 1 to the 0 allowed.}}
             {
                 if (true)
 //              ^^ Secondary {{+1}}
@@ -362,7 +362,7 @@ namespace Tests.Diagnostics
                     return "foo";
                 }
             }
-            set // Noncompliant {{Refactor this accessor to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+            set // Noncompliant {{Refactor this accessor to reduce its Cognitive Complexity from 1 to the 0 allowed.}}
             {
                 if (true)
 //              ^^ Secondary {{+1}}
@@ -380,7 +380,7 @@ namespace Tests.Diagnostics
         event EventHandler Bar;
         event EventHandler Foo
         {
-            add // Noncompliant {{Refactor this accessor to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+            add // Noncompliant {{Refactor this accessor to reduce its Cognitive Complexity from 1 to the 0 allowed.}}
             {
                 if (true)
 //              ^^ Secondary {{+1}}
@@ -388,7 +388,7 @@ namespace Tests.Diagnostics
                     Bar += value;
                 }
             }
-            remove // Noncompliant {{Refactor this accessor to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+            remove // Noncompliant {{Refactor this accessor to reduce its Cognitive Complexity from 1 to the 0 allowed.}}
             {
                 if (true)
 //              ^^ Secondary {{+1}}
@@ -406,7 +406,7 @@ namespace Tests.Diagnostics
 
         }
 
-        ConstructorsComplexity(string foo) // Noncompliant {{Refactor this constructor to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+        ConstructorsComplexity(string foo) // Noncompliant {{Refactor this constructor to reduce its Cognitive Complexity from 1 to the 0 allowed.}}
         {
             if (foo == null)
 //          ^^ Secondary {{+1}}
@@ -423,7 +423,7 @@ namespace Tests.Diagnostics
 
         }
 
-        ~DestructorsComplexity() // Noncompliant {{Refactor this destructor to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+        ~DestructorsComplexity() // Noncompliant {{Refactor this destructor to reduce its Cognitive Complexity from 1 to the 0 allowed.}}
         {
             if (true)
 //          ^^ Secondary {{+1}}
@@ -440,7 +440,7 @@ namespace Tests.Diagnostics
             return null;
         }
 
-        public static OperatorsComplexity operator -(OperatorsComplexity left, OperatorsComplexity right) // Noncompliant {{Refactor this operator to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+        public static OperatorsComplexity operator -(OperatorsComplexity left, OperatorsComplexity right) // Noncompliant {{Refactor this operator to reduce its Cognitive Complexity from 1 to the 0 allowed.}}
         {
             if (true)
 //          ^^ Secondary {{+1}}
@@ -454,7 +454,7 @@ namespace Tests.Diagnostics
     class RecursionsComplexity
     {
         void DirectRecursionComplexity()
-//           ^^^^^^^^^^^^^^^^^^^^^^^^^ {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+//           ^^^^^^^^^^^^^^^^^^^^^^^^^ {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed.}}
 //           ^^^^^^^^^^^^^^^^^^^^^^^^^ Secondary@-1 {{+1 (recursion)}}
         {
             DirectRecursionComplexity();
@@ -471,7 +471,7 @@ namespace Tests.Diagnostics
         }
 
         void IndirectRecursionFromLocalLambda()
-//           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+//           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed.}}
 //           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Secondary@-1 {{+1 (recursion)}}
         {
             var act = () => IndirectRecursionFromLocalLambda();
@@ -486,13 +486,13 @@ namespace Tests.Diagnostics
             var a = true;
         }
 
-        void SimpleAnd() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+        void SimpleAnd() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed.}}
         {
             var a = true && false;
 //                       ^^ Secondary {{+1}}
         }
 
-        void SimpleOr() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+        void SimpleOr() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed.}}
         {
             var a = true || false;
 //                       ^^ Secondary {{+1}}
@@ -503,14 +503,14 @@ namespace Tests.Diagnostics
             var a = !true;
         }
 
-        void AndOr() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 2 to the 0 allowed}}
+        void AndOr() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 2 to the 0 allowed.}}
         {
             var a = true && false || true;
 //                       ^^ Secondary {{+1}}
 //                                ^^ Secondary@-1 {{+1}}
         }
 
-        void AndOrIf() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 4 to the 0 allowed}}
+        void AndOrIf() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 4 to the 0 allowed.}}
         {
             if (a
 //          ^^ Secondary {{+1}}
@@ -525,7 +525,7 @@ namespace Tests.Diagnostics
             }
         }
 
-        void AndNotIf() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 2 to the 0 allowed}}
+        void AndNotIf() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 2 to the 0 allowed.}}
         {
             var res =
                 a
@@ -536,7 +536,7 @@ namespace Tests.Diagnostics
                 && d;
         }
 
-        void AndOrNot1() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed}}
+        void AndOrNot1() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed.}}
         {
             var res =
                 d
@@ -549,7 +549,7 @@ namespace Tests.Diagnostics
 //                  ^^ Secondary {{+1}}
         }
 
-        void AndOrNot2() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed}}
+        void AndOrNot2() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed.}}
         {
             var res =
                 a
@@ -561,14 +561,14 @@ namespace Tests.Diagnostics
 //              ^^ Secondary {{+1}}
         }
 
-        void AndNot3() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 2 to the 0 allowed}}
+        void AndNot3() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 2 to the 0 allowed.}}
         {
             var res = a && d && !(b && c);
 //                      ^^ Secondary {{+1}}
 //                                  ^^ Secondary@-1 {{+1}}
         }
 
-        void AndNotParenthesis() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 2 to the 0 allowed}}
+        void AndNotParenthesis() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 2 to the 0 allowed.}}
         {
             var res =
                 a
@@ -581,7 +581,7 @@ namespace Tests.Diagnostics
 
     class GotoComplexity
     {
-        void Foo() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed}}
+        void Foo() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 1 to the 0 allowed.}}
         {
             goto Outer;
 //          ^^^^ Secondary {{+1}}
@@ -589,7 +589,7 @@ namespace Tests.Diagnostics
             Console.WriteLine();
         }
 
-        void Bar() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed}}
+        void Bar() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 3 to the 0 allowed.}}
         {
             switch (5)
 //          ^^^^^^ Secondary {{+1}}
@@ -607,7 +607,7 @@ namespace Tests.Diagnostics
 
     class LambdasComplexity
     {
-        private Action<int> act = // Noncompliant {{Refactor this field to reduce its Cognitive Complexity from 2 to the 0 allowed}}
+        private Action<int> act = // Noncompliant {{Refactor this field to reduce its Cognitive Complexity from 2 to the 0 allowed.}}
             x =>
             {
                 if (x > 0)
@@ -617,7 +617,7 @@ namespace Tests.Diagnostics
                 }
             };
 
-        private Func<int, string> act = // Noncompliant {{Refactor this field to reduce its Cognitive Complexity from 2 to the 0 allowed}}
+        private Func<int, string> act = // Noncompliant {{Refactor this field to reduce its Cognitive Complexity from 2 to the 0 allowed.}}
             x =>
             {
                 if (x > 0)
@@ -641,7 +641,7 @@ namespace Tests.Diagnostics
             };
         }
 
-        void IfFunc() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 2 to the 0 allowed}}
+        void IfFunc() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 2 to the 0 allowed.}}
         {
             Func<int, string> func =
                 x =>
@@ -669,7 +669,7 @@ namespace Tests.Diagnostics
             };
         }
 
-        void IfAction() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 2 to the 0 allowed}}
+        void IfAction() // Noncompliant {{Refactor this method to reduce its Cognitive Complexity from 2 to the 0 allowed.}}
         {
             Action<int> func =
                 x =>

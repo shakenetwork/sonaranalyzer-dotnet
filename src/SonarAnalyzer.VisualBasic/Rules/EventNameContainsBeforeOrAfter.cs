@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
     public class EventNameContainsBeforeOrAfter : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2349";
-        internal const string MessageFormat = "Rename this event to remove the \"{0}\" {1}.";
+        internal const string MessageFormat = "Rename this event to remove the '{0}' {1}.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

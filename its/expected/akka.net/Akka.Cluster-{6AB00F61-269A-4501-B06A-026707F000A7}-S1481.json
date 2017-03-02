@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S1481",
-"message":  "Remove this unused \"val\" local variable.",
+"message":  "Remove this unused 'val' local variable.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\Cluster.cs",
+"uri":  "akka.net\src\core\Akka.Cluster\Cluster.cs",
 "region":  {
 "startLine":  133,
 "startColumn":  17,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S1481",
-"message":  "Remove this unused \"hasPartionHandoffCompletedSuccessfully\" local variable.",
+"message":  "Remove this unused 'hasPartionHandoffCompletedSuccessfully' local variable.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
+"uri":  "akka.net\src\core\Akka.Cluster\ClusterDaemon.cs",
 "region":  {
 "startLine":  1504,
 "startColumn":  17,
@@ -28,9 +28,9 @@
 },
 {
 "id":  "S1481",
-"message":  "Remove this unused \"currentRoutees\" local variable.",
+"message":  "Remove this unused 'currentRoutees' local variable.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\Routing\\ClusterRoutingConfig.cs",
+"uri":  "akka.net\src\core\Akka.Cluster\Routing\ClusterRoutingConfig.cs",
 "region":  {
 "startLine":  503,
 "startColumn":  25,

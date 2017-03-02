@@ -31,7 +31,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class DangerousGetHandleShouldNotBeCalled : MethodShouldNotBeCalled
     {
         internal const string DiagnosticId = "S3869";
-        private const string MessageFormat = "Refactor the code to remove this use of '{0}'";
+        private const string MessageFormat = "Refactor the code to remove this use of '{0}'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

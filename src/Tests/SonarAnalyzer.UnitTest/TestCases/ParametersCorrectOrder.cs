@@ -8,7 +8,7 @@ namespace Tests.Diagnostics
     public class Params
     {
         public void method(int i, int k = 5, params int[] rest)
-//                  ^^^^^^ Secondary [0] 
+//                  ^^^^^^ Secondary [0]
         {
         }
 
@@ -39,7 +39,7 @@ namespace Tests.Diagnostics
 
     public static class Extensions
     {
-        public static void Ex(this string self, string v1, string v2) 
+        public static void Ex(this string self, string v1, string v2)
 //                         ^^ Secondary [6]
         {
         }
@@ -54,7 +54,7 @@ namespace Tests.Diagnostics
 
     public partial class ParametersCorrectOrder
     {
-        partial void divide(int divisor, int someOther, int dividend, int p = 10, int some = 5, int other2 = 7); 
+        partial void divide(int divisor, int someOther, int dividend, int p = 10, int some = 5, int other2 = 7);
 //                   ^^^^^^ Secondary [1,2,3,4]
     }
 
@@ -81,7 +81,7 @@ namespace Tests.Diagnostics
             divide(dividend, 1 + 1, divisor, other2: 6);  // Noncompliant [1] operation succeeds, but result is unexpected
 
             divide(divisor, other2, dividend);
-            divide(divisor, other2, dividend, other2: someOther); // Noncompliant [2] {{Parameters to "divide" have the same names but not the same order as the method arguments.}}
+            divide(divisor, other2, dividend, other2: someOther); // Noncompliant [2] {{Parameters to 'divide' have the same names but not the same order as the method arguments.}}
 
             divide(divisor, someOther, dividend, other2: some, some: other2); // Noncompliant [3]
 

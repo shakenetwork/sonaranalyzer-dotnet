@@ -21,7 +21,7 @@ namespace Tests.Diagnostics
             object o = null;
             if (condition)
             {
-                M1(o.ToString()); // Noncompliant {{"o" is null on at least one execution path.}}
+                M1(o.ToString()); // Noncompliant {{'o' is null on at least one execution path.}}
 //                 ^
             }
             else

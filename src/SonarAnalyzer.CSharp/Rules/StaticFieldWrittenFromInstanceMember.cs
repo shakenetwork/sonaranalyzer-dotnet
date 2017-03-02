@@ -35,8 +35,8 @@ namespace SonarAnalyzer.Rules.CSharp
     {
         internal const string DiagnosticId = "S2696";
         internal const string MessageFormat = "{0}";
-        internal const string MessageFormatMultipleOptions = "Make the enclosing instance {0} \"static\" or remove this set on the \"static\" field.";
-        internal const string MessageFormatRemoveSet = "Remove this set, which updates a \"static\" field from an instance {0}.";
+        internal const string MessageFormatMultipleOptions = "Make the enclosing instance {0} 'static' or remove this set on the 'static' field.";
+        internal const string MessageFormatRemoveSet = "Remove this set, which updates a 'static' field from an instance {0}.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

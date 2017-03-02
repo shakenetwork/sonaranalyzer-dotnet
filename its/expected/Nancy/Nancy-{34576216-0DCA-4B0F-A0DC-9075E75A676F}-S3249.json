@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S3249",
-"message":  "Remove this \"base\" call to \"object.Equals\", which is directly based on the object reference.",
+"message":  "Remove this 'base' call to 'object.Equals', which is directly based on the object reference.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy\\Bootstrapper\\NancyBootstrapperBase.cs",
+"uri":  "Nancy\src\Nancy\Bootstrapper\NancyBootstrapperBase.cs",
 "region":  {
 "startLine":  438,
 "startColumn":  20,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S3249",
-"message":  "Remove this \"base\" call to \"object.GetHashCode\", which is directly based on the object reference.",
+"message":  "Remove this 'base' call to 'object.GetHashCode', which is directly based on the object reference.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy\\Bootstrapper\\NancyBootstrapperBase.cs",
+"uri":  "Nancy\src\Nancy\Bootstrapper\NancyBootstrapperBase.cs",
 "region":  {
 "startLine":  447,
 "startColumn":  20,

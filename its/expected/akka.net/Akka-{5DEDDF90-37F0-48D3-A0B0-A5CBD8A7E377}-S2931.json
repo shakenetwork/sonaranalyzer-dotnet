@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S2931",
-"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_dedicatedThreadPool\".",
+"message":  "Implement 'IDisposable' in this class and use the 'Dispose' method to call 'Dispose' on '_dedicatedThreadPool'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Dispatch\\ForkJoinDispatcher.cs",
+"uri":  "akka.net\src\core\Akka\Dispatch\ForkJoinDispatcher.cs",
 "region":  {
 "startLine":  61,
 "startColumn":  18,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S2931",
-"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_deadLetterMailbox\".",
+"message":  "Implement 'IDisposable' in this class and use the 'Dispose' method to call 'Dispose' on '_deadLetterMailbox'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Dispatch\\Mailboxes.cs",
+"uri":  "akka.net\src\core\Akka\Dispatch\Mailboxes.cs",
 "region":  {
 "startLine":  19,
 "startColumn":  18,
@@ -28,9 +28,9 @@
 },
 {
 "id":  "S2931",
-"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_queue\".",
+"message":  "Implement 'IDisposable' in this class and use the 'Dispose' method to call 'Dispose' on '_queue'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Dispatch\\MessageQueues\\BoundedMessageQueue.cs",
+"uri":  "akka.net\src\core\Akka\Dispatch\MessageQueues\BoundedMessageQueue.cs",
 "region":  {
 "startLine":  16,
 "startColumn":  18,
@@ -41,9 +41,9 @@
 },
 {
 "id":  "S2931",
-"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_dedicatedThreadPool\".",
+"message":  "Implement 'IDisposable' in this class and use the 'Dispose' method to call 'Dispose' on '_dedicatedThreadPool'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Dispatch\\SingleThreadDispatcher.cs",
+"uri":  "akka.net\src\core\Akka\Dispatch\SingleThreadDispatcher.cs",
 "region":  {
 "startLine":  84,
 "startColumn":  18,
@@ -54,9 +54,9 @@
 },
 {
 "id":  "S2931",
-"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_queue\".",
+"message":  "Implement 'IDisposable' in this class and use the 'Dispose' method to call 'Dispose' on '_queue'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\IO\\SelectionHandler.cs",
+"uri":  "akka.net\src\core\Akka\IO\SelectionHandler.cs",
 "region":  {
 "startLine":  402,
 "startColumn":  11,

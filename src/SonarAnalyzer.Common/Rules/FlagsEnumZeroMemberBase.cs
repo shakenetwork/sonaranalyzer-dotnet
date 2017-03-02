@@ -30,7 +30,7 @@ namespace SonarAnalyzer.Rules.Common
     public abstract class FlagsEnumZeroMemberBase : SonarDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S2346";
-        protected const string MessageFormat = "Rename \"{0}\" to \"None\".";
+        protected const string MessageFormat = "Rename '{0}' to 'None'.";
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
     }

@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S3249",
-"message":  "Remove this \"base\" call to \"object.GetHashCode\", which is directly based on the object reference.",
+"message":  "Remove this 'base' call to 'object.GetHashCode', which is directly based on the object reference.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Stash\\ActorWithStashSpec.cs",
+"uri":  "akka.net\src\core\Akka.Tests\Actor\Stash\ActorWithStashSpec.cs",
 "region":  {
 "startLine":  353,
 "startColumn":  24,

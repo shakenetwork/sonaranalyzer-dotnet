@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S3234",
-"message":  "Remove this useless call to \"GC.SuppressFinalize\".",
+"message":  "Remove this useless call to 'GC.SuppressFinalize'.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+"uri":  "Nancy\src\Nancy\TinyIoc\TinyIoC.cs",
 "region":  {
 "startLine":  3842,
 "startColumn":  17,

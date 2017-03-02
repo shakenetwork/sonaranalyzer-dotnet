@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class LockOnThisOrType : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2551";
-        internal const string MessageFormat = "Lock on a new \"object\" instead.";
+        internal const string MessageFormat = "Lock on a new 'object' instead.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

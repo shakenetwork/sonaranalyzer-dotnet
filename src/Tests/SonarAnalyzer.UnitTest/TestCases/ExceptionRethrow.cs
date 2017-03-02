@@ -9,7 +9,7 @@
             catch (ExceptionType1 exc)
             {
                 Console.WriteLine(exc);
-                throw exc; // Noncompliant {{Consider using "throw;" to preserve the stack trace.}}
+                throw exc; // Noncompliant {{Consider using 'throw;' to preserve the stack trace.}}
 //              ^^^^^^^^^^
                 throw;
             }

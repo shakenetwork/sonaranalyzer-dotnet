@@ -39,7 +39,7 @@ namespace SonarAnalyzer.Rules.CSharp
         protected override DiagnosticDescriptor Rule => rule;
 
         public override SyntaxKind FieldDeclarationKind => SyntaxKind.FieldDeclaration;
-        public override string MessageArgument => "\"static\" read-only";
+        public override string MessageArgument => "'static' read-only";
 
         protected override Location GetReportLocation(VariableDeclaratorSyntax node) =>
             node.Identifier.GetLocation();

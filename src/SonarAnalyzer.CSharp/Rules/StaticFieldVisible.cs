@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class StaticFieldVisible : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2223";
-        internal const string MessageFormat = "Change the visibility of \"{0}\" or make it \"const\" or \"readonly\".";
+        internal const string MessageFormat = "Change the visibility of '{0}' or make it 'const' or 'readonly'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

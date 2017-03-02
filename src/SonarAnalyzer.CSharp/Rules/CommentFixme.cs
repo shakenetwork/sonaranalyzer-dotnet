@@ -18,7 +18,6 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-using System;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
@@ -34,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
         internal const string DiagnosticId = "S1134";
         internal const string MessageFormat =
-            "Take the required action to fix the issue indicated by this \"FIXME\" comment.";
+            "Take the required action to fix the issue indicated by this 'FIXME' comment.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

@@ -13,7 +13,7 @@ namespace Tests.Diagnostics
             for (int i = 0; i < 10; i++) ; // Noncompliant
             foreach (int i in new List<int>()) ; // Noncompliant
             while (false) ; // Noncompliant
-            do; while (false); // Noncompliant {{Add curly braces around the nested statement(s) in this "do" block.}}
+            do; while (false); // Noncompliant {{Add curly braces around the nested statement(s) in this 'do' block.}}
 
             if (false)
             {

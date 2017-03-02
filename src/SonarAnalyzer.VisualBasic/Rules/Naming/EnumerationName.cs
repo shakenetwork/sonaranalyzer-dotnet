@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
     public class EnumerationName : ParameterLoadingDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2342";
-        internal const string MessageFormat = "Rename this enumeration to match the regular expression: \"{0}\".";
+        internal const string MessageFormat = "Rename this enumeration to match the regular expression: '{0}'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager)

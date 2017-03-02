@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"_pendingReceiveTimeout\", the compiler will do that for you.",
+"message":  "Remove this initialization to '_pendingReceiveTimeout', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorCell.ReceiveTimeout.cs",
+"uri":  "akka.net\src\core\Akka\Actor\ActorCell.ReceiveTimeout.cs",
 "region":  {
 "startLine":  15,
 "startColumn":  52,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"NoSender\", the compiler will do that for you.",
+"message":  "Remove this initialization to 'NoSender', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorRef.cs",
+"uri":  "akka.net\src\core\Akka\Actor\ActorRef.cs",
 "region":  {
 "startLine":  148,
 "startColumn":  51,
@@ -28,9 +28,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"_generation\", the compiler will do that for you.",
+"message":  "Remove this initialization to '_generation', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\FSM.cs",
+"uri":  "akka.net\src\core\Akka\Actor\FSM.cs",
 "region":  {
 "startLine":  656,
 "startColumn":  34,
@@ -41,9 +41,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"inboxNr\", the compiler will do that for you.",
+"message":  "Remove this initialization to 'inboxNr', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\Inbox.cs",
+"uri":  "akka.net\src\core\Akka\Actor\Inbox.cs",
 "region":  {
 "startLine":  241,
 "startColumn":  36,
@@ -54,9 +54,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"None\", the compiler will do that for you.",
+"message":  "Remove this initialization to 'None', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\Props.cs",
+"uri":  "akka.net\src\core\Akka\Actor\Props.cs",
 "region":  {
 "startLine":  143,
 "startColumn":  43,
@@ -67,9 +67,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"_parallelWorkers\", the compiler will do that for you.",
+"message":  "Remove this initialization to '_parallelWorkers', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Helios.Concurrency.DedicatedThreadPool.cs",
+"uri":  "akka.net\src\core\Akka\Helios.Concurrency.DedicatedThreadPool.cs",
 "region":  {
 "startLine":  88,
 "startColumn":  47,
@@ -80,9 +80,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"_restartCount\", the compiler will do that for you.",
+"message":  "Remove this initialization to '_restartCount', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Pattern\\BackoffSupervisor.cs",
+"uri":  "akka.net\src\core\Akka\Pattern\BackoffSupervisor.cs",
 "region":  {
 "startLine":  70,
 "startColumn":  35,
@@ -93,9 +93,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"_child\", the compiler will do that for you.",
+"message":  "Remove this initialization to '_child', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Pattern\\BackoffSupervisor.cs",
+"uri":  "akka.net\src\core\Akka\Pattern\BackoffSupervisor.cs",
 "region":  {
 "startLine":  71,
 "startColumn":  34,
@@ -106,9 +106,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"_ring\", the compiler will do that for you.",
+"message":  "Remove this initialization to '_ring', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Routing\\ConsistentHash.cs",
+"uri":  "akka.net\src\core\Akka\Routing\ConsistentHash.cs",
 "region":  {
 "startLine":  44,
 "startColumn":  41,

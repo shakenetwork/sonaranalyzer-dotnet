@@ -13,7 +13,7 @@ namespace Tests.Diagnostics
 
         public void DoSomething()
         {
-            count++;  // Noncompliant [0] {{Make the enclosing instance method "static" or remove this set on the "static" field.}}
+            count++;  // Noncompliant [0] {{Make the enclosing instance method 'static' or remove this set on the 'static' field.}}
 //          ^^^^^
             var action = new Action(() =>
             {

@@ -13,7 +13,7 @@ namespace Tests.Diagnostics
         unsafe int Method(int[,] parameter, int* pointer);
 //                 ^^^^^^ Secondary
     }
-    public interface IMyInterfaceCommon1 : IMyInterface1, IMyInterface2 // Noncompliant {{Rename or add member "Method(int[*,*], int*)" to this interface to resolve ambiguities.}}
+    public interface IMyInterfaceCommon1 : IMyInterface1, IMyInterface2 // Noncompliant {{Rename or add member 'Method(int[*,*], int*)' to this interface to resolve ambiguities.}}
 //                   ^^^^^^^^^^^^^^^^^^^
     {
         int Method(int i, string s);

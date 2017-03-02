@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class OptionalParameterWithDefaultValue : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3451";
-        internal const string MessageFormat = "Use \"[DefaultParameterValue]\" instead.";
+        internal const string MessageFormat = "Use '[DefaultParameterValue]' instead.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

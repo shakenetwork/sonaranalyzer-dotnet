@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S3216",
-"message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
+"message":  "Add '.ConfigureAwait(false)' to this call to allow execution to continue in any thread.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy.Hosting.Self\\NancyHost.cs",
+"uri":  "Nancy\src\Nancy.Hosting.Self\NancyHost.cs",
 "region":  {
 "startLine":  132,
 "startColumn":  61,

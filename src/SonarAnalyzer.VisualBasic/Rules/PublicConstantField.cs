@@ -40,7 +40,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
         protected override DiagnosticDescriptor Rule => rule;
 
         public override SyntaxKind FieldDeclarationKind => SyntaxKind.FieldDeclaration;
-        public override string MessageArgument => "\"Shared Read-Only\"";
+        public override string MessageArgument => "'Shared Read-Only'";
 
         protected override Location GetReportLocation(ModifiedIdentifierSyntax node) =>
             node.GetLocation();

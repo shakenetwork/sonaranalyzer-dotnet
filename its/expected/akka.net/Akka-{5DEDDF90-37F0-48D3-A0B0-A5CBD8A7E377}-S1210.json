@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S1210",
-"message":  "When implementing IComparable\u003cT\u003e, you should also override \u003c, \u003e.",
+"message":  "When implementing IComparable<T>, you should also override <, >.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorPath.cs",
+"uri":  "akka.net\src\core\Akka\Actor\ActorPath.cs",
 "region":  {
 "startLine":  31,
 "startColumn":  27,

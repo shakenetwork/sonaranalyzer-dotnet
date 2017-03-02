@@ -18,7 +18,7 @@ namespace Tests.Diagnostics
 
         public void CleanUp()
         {
-            this.fs.Dispose(); // Noncompliant {{Move this "Dispose" call into this class' own "Dispose" method.}}
+            this.fs.Dispose(); // Noncompliant {{Move this 'Dispose' call into this class' own 'Dispose' method.}}
 //                  ^^^^^^^
         }
 

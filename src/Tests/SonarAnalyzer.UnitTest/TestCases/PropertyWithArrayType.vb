@@ -2,7 +2,7 @@
     ' Internal state
     Dim array = {"apple", "banana", "orange", "pineapple", "strawberry"}
 
-    ReadOnly Property Foo As String() ' Noncompliant {{Refactor "Foo" into a method, properties should not be based on arrays.}}
+    ReadOnly Property Foo As String() ' Noncompliant {{Refactor 'Foo' into a method, properties should not be based on arrays.}}
 '                     ^^^
         Get
             Dim copy = array.Clone      ' Expensive call

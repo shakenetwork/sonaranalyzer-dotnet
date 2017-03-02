@@ -29,7 +29,7 @@ namespace SonarAnalyzer.Rules
     public abstract class EnumNameHasEnumSuffixBase : SonarDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S2344";
-        protected const string MessageFormat = "Rename this enumeration to remove the \"{0}\" suffix.";
+        protected const string MessageFormat = "Rename this enumeration to remove the '{0}' suffix.";
 
         protected static readonly IEnumerable<string> NameEndings = ImmutableArray.Create("enum", "flags");
 

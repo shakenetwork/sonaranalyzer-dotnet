@@ -34,8 +34,8 @@ namespace SonarAnalyzer.Rules.CSharp
     {
         internal const string DiagnosticId = "S2387";
         internal const string MessageFormat = "{0}";
-        internal const string MessageMatch = "\"{0}\" is the name of a field in \"{1}\".";
-        internal const string MessageSimilar = "\"{0}\" differs only by case from \"{2}\" in \"{1}\".";
+        internal const string MessageMatch = "'{0}' is the name of a field in '{1}'.";
+        internal const string MessageSimilar = "'{0}' differs only by case from '{2}' in '{1}'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

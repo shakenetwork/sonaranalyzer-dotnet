@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class DisposeFromDispose : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2952";
-        internal const string MessageFormat = "Move this \"Dispose\" call into this class' own \"Dispose\" method.";
+        internal const string MessageFormat = "Move this 'Dispose' call into this class' own 'Dispose' method.";
 
         private const string DisposeMethodName = "Dispose";
         private const string DisposeMethodExplicitName = "System.IDisposable.Dispose";

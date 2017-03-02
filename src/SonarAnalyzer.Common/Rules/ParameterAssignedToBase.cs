@@ -28,7 +28,7 @@ namespace SonarAnalyzer.Rules
     public abstract class ParameterAssignedToBase : SonarDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S1226";
-        protected const string MessageFormat = "Introduce a new variable instead of reusing the parameter \"{0}\".";
+        protected const string MessageFormat = "Introduce a new variable instead of reusing the parameter '{0}'.";
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
     }

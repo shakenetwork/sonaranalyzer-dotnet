@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class IfChainWithoutElse : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S126";
-        internal const string MessageFormat = "Add the missing \"else\" clause.";
+        internal const string MessageFormat = "Add the missing 'else' clause.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

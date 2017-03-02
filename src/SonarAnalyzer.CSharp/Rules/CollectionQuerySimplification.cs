@@ -38,8 +38,8 @@ namespace SonarAnalyzer.Rules.CSharp
         internal const string DiagnosticId = "S2971";
         internal const string MessageFormat = "{0}";
         internal const string MessageUseInstead = "Use {0} here instead.";
-        internal const string MessageDropAndChange = "Drop \"{0}\" and move the condition into the \"{1}\".";
-        internal const string MessageDropFromMiddle = "Drop \"{0}\" from the middle of the call chain.";
+        internal const string MessageDropAndChange = "Drop '{0}' and move the condition into the '{1}'.";
+        internal const string MessageDropFromMiddle = "Drop '{0}' from the middle of the call chain.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
@@ -116,7 +116,7 @@ namespace SonarAnalyzer.Rules.CSharp
             if (symbol.GetMembers(CountName).OfType<IPropertySymbol>().Any())
             {
                 context.ReportDiagnostic(Diagnostic.Create(rule, GetReportLocation(invocation),
-                    string.Format(MessageUseInstead, $"\"{CountName}\" property")));
+                    string.Format(MessageUseInstead, $"'{CountName}' property")));
             }
         }
 
@@ -268,7 +268,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 TryGetCastInLambda(SyntaxKind.AsExpression, innerMethodSymbol, innerInvocation, out typeNameInInner))
             {
                 context.ReportDiagnostic(Diagnostic.Create(rule, GetReportLocation(innerInvocation),
-                    string.Format(MessageUseInstead, $"\"OfType<{typeNameInInner}>()\"")));
+                    string.Format(MessageUseInstead, $"'OfType<{typeNameInInner}>()'")));
                 return true;
             }
 
@@ -280,7 +280,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 typeNameInOuter == typeNameInInner)
             {
                 context.ReportDiagnostic(Diagnostic.Create(rule, GetReportLocation(innerInvocation),
-                    string.Format(MessageUseInstead, $"\"OfType<{typeNameInInner}>()\"")));
+                    string.Format(MessageUseInstead, $"'OfType<{typeNameInInner}>()'")));
                 return true;
             }
 

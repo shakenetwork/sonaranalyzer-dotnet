@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S2223",
-"message":  "Change the visibility of \"DefaultAssembliesToScan\" or make it \"const\" or \"readonly\".",
+"message":  "Change the visibility of 'DefaultAssembliesToScan' or make it 'const' or 'readonly'.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy\\Bootstrapper\\AppDomainAssemblyTypeScanner.cs",
+"uri":  "Nancy\src\Nancy\Bootstrapper\AppDomainAssemblyTypeScanner.cs",
 "region":  {
 "startLine":  47,
 "startColumn":  46,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S2223",
-"message":  "Change the visibility of \"DefaultAutoRegisterIgnoredAssemblies\" or make it \"const\" or \"readonly\".",
+"message":  "Change the visibility of 'DefaultAutoRegisterIgnoredAssemblies' or make it 'const' or 'readonly'.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy\\DefaultNancyBootstrapper.cs",
+"uri":  "Nancy\src\Nancy\DefaultNancyBootstrapper.cs",
 "region":  {
 "startLine":  21,
 "startColumn":  57,
@@ -28,9 +28,9 @@
 },
 {
 "id":  "S2223",
-"message":  "Change the visibility of \"DEFAULT_SWITCHOVER_THRESHOLD\" or make it \"const\" or \"readonly\".",
+"message":  "Change the visibility of 'DEFAULT_SWITCHOVER_THRESHOLD' or make it 'const' or 'readonly'.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy\\IO\\RequestStream.cs",
+"uri":  "Nancy\src\Nancy\IO\RequestStream.cs",
 "region":  {
 "startLine":  14,
 "startColumn":  28,
@@ -41,9 +41,9 @@
 },
 {
 "id":  "S2223",
-"message":  "Change the visibility of \"NoBody\" or make it \"const\" or \"readonly\".",
+"message":  "Change the visibility of 'NoBody' or make it 'const' or 'readonly'.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy\\Response.cs",
+"uri":  "Nancy\src\Nancy\Response.cs",
 "region":  {
 "startLine":  23,
 "startColumn":  38,
@@ -54,9 +54,9 @@
 },
 {
 "id":  "S2223",
-"message":  "Change the visibility of \"BufferSize\" or make it \"const\" or \"readonly\".",
+"message":  "Change the visibility of 'BufferSize' or make it 'const' or 'readonly'.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy\\Responses\\GenericFileResponse.cs",
+"uri":  "Nancy\src\Nancy\Responses\GenericFileResponse.cs",
 "region":  {
 "startLine":  26,
 "startColumn":  27,
@@ -67,9 +67,9 @@
 },
 {
 "id":  "S2223",
-"message":  "Change the visibility of \"None\" or make it \"const\" or \"readonly\".",
+"message":  "Change the visibility of 'None' or make it 'const' or 'readonly'.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy\\Responses\\Negotiation\\ProcessorMatch.cs",
+"uri":  "Nancy\src\Nancy\Responses\Negotiation\ProcessorMatch.cs",
 "region":  {
 "startLine":  11,
 "startColumn":  38,

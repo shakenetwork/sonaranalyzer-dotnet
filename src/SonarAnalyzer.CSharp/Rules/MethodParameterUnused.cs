@@ -40,8 +40,8 @@ namespace SonarAnalyzer.Rules.CSharp
     {
         internal const string DiagnosticId = "S1172";
         internal const string MessageFormat = "Remove this {0}.";
-        internal const string MessageUnused = "unused method parameter \"{0}\"";
-        internal const string MessageDead = "parameter \"{0}\", whose value is ignored in the method";
+        internal const string MessageUnused = "unused method parameter '{0}'";
+        internal const string MessageDead = "parameter '{0}', whose value is ignored in the method";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly DiagnosticDescriptor rule =

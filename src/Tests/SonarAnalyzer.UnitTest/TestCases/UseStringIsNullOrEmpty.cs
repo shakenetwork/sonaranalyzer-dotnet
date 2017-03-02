@@ -9,31 +9,31 @@ namespace Tests.TestCases
 
         public void Test(string value, string otherValue)
         {
-            if (value.Equals("")) // Noncompliant {{Use "string.IsNullOrEmpty()" instead of comparing to empty string.}}
+            if (value.Equals("")) // Noncompliant {{Use 'string.IsNullOrEmpty()' instead of comparing to empty string.}}
 //              ^^^^^^^^^^^^^^^^
             { }
 
-            if (StaticString.Equals("")) // Noncompliant {{Use "string.IsNullOrEmpty()" instead of comparing to empty string.}}
+            if (StaticString.Equals("")) // Noncompliant {{Use 'string.IsNullOrEmpty()' instead of comparing to empty string.}}
 //              ^^^^^^^^^^^^^^^^^^^^^^^
             { }
 
-            if (string.Empty.Equals(value)) // Noncompliant {{Use "string.IsNullOrEmpty()" instead of comparing to empty string.}}
+            if (string.Empty.Equals(value)) // Noncompliant {{Use 'string.IsNullOrEmpty()' instead of comparing to empty string.}}
 //              ^^^^^^^^^^^^^^^^^^^^^^^^^^
             { }
 
-            if (value.Equals(string.Empty)) // Noncompliant {{Use "string.IsNullOrEmpty()" instead of comparing to empty string.}}
+            if (value.Equals(string.Empty)) // Noncompliant {{Use 'string.IsNullOrEmpty()' instead of comparing to empty string.}}
 //              ^^^^^^^^^^^^^^^^^^^^^^^^^^
             { }
 
-            if (ConstEmptyString.Equals(value)) // Noncompliant {{Use "string.IsNullOrEmpty()" instead of comparing to empty string.}}
+            if (ConstEmptyString.Equals(value)) // Noncompliant {{Use 'string.IsNullOrEmpty()' instead of comparing to empty string.}}
 //              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             { }
 
-            if ("".Equals(value)) // Noncompliant {{Use "string.IsNullOrEmpty()" instead of comparing to empty string.}}
+            if ("".Equals(value)) // Noncompliant {{Use 'string.IsNullOrEmpty()' instead of comparing to empty string.}}
 //              ^^^^^^^^^^^^^^^^
             { }
 
-            if (value.Equals(ConstEmptyString)) // Noncompliant {{Use "string.IsNullOrEmpty()" instead of comparing to empty string.}}
+            if (value.Equals(ConstEmptyString)) // Noncompliant {{Use 'string.IsNullOrEmpty()' instead of comparing to empty string.}}
 //              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             { }
 

@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S2357",
-"message":  "Make \"Path\" private.",
+"message":  "Make 'Path' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterClient.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Client\ClusterClient.cs",
 "region":  {
 "startLine":  64,
 "startColumn":  36,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Message\" private.",
+"message":  "Make 'Message' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterClient.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Client\ClusterClient.cs",
 "region":  {
 "startLine":  65,
 "startColumn":  36,
@@ -28,9 +28,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"LocalAffinity\" private.",
+"message":  "Make 'LocalAffinity' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterClient.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Client\ClusterClient.cs",
 "region":  {
 "startLine":  66,
 "startColumn":  34,
@@ -41,9 +41,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Path\" private.",
+"message":  "Make 'Path' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterClient.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Client\ClusterClient.cs",
 "region":  {
 "startLine":  79,
 "startColumn":  36,
@@ -54,9 +54,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Message\" private.",
+"message":  "Make 'Message' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterClient.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Client\ClusterClient.cs",
 "region":  {
 "startLine":  80,
 "startColumn":  36,
@@ -67,9 +67,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Topic\" private.",
+"message":  "Make 'Topic' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterClient.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Client\ClusterClient.cs",
 "region":  {
 "startLine":  92,
 "startColumn":  36,
@@ -80,9 +80,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Message\" private.",
+"message":  "Make 'Message' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterClient.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Client\ClusterClient.cs",
 "region":  {
 "startLine":  93,
 "startColumn":  36,
@@ -93,9 +93,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Settings\" private.",
+"message":  "Make 'Settings' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterClient.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Client\ClusterClient.cs",
 "region":  {
 "startLine":  121,
 "startColumn":  47,
@@ -106,9 +106,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"InitialContacts\" private.",
+"message":  "Make 'InitialContacts' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterClientSettings.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Client\ClusterClientSettings.cs",
 "region":  {
 "startLine":  36,
 "startColumn":  50,
@@ -119,9 +119,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"EstablishingGetContactsInterval\" private.",
+"message":  "Make 'EstablishingGetContactsInterval' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterClientSettings.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Client\ClusterClientSettings.cs",
 "region":  {
 "startLine":  41,
 "startColumn":  34,
@@ -132,9 +132,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"RefreshContactsInterval\" private.",
+"message":  "Make 'RefreshContactsInterval' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterClientSettings.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Client\ClusterClientSettings.cs",
 "region":  {
 "startLine":  46,
 "startColumn":  34,
@@ -145,9 +145,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"HeartbeatInterval\" private.",
+"message":  "Make 'HeartbeatInterval' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterClientSettings.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Client\ClusterClientSettings.cs",
 "region":  {
 "startLine":  51,
 "startColumn":  34,
@@ -158,9 +158,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"AcceptableHeartbeatPause\" private.",
+"message":  "Make 'AcceptableHeartbeatPause' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterClientSettings.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Client\ClusterClientSettings.cs",
 "region":  {
 "startLine":  58,
 "startColumn":  34,
@@ -171,9 +171,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"BufferSize\" private.",
+"message":  "Make 'BufferSize' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterClientSettings.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Client\ClusterClientSettings.cs",
 "region":  {
 "startLine":  65,
 "startColumn":  29,
@@ -184,9 +184,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"ContactPoints\" private.",
+"message":  "Make 'ContactPoints' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterReceptionist.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Client\ClusterReceptionist.cs",
 "region":  {
 "startLine":  60,
 "startColumn":  38,
@@ -197,9 +197,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Role\" private.",
+"message":  "Make 'Role' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterReceptionistSettings.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Client\ClusterReceptionistSettings.cs",
 "region":  {
 "startLine":  40,
 "startColumn":  32,
@@ -210,9 +210,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"NumberOfContacts\" private.",
+"message":  "Make 'NumberOfContacts' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterReceptionistSettings.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Client\ClusterReceptionistSettings.cs",
 "region":  {
 "startLine":  45,
 "startColumn":  29,
@@ -223,9 +223,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"ResponseTunnelReceiveTimeout\" private.",
+"message":  "Make 'ResponseTunnelReceiveTimeout' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Client\\ClusterReceptionistSettings.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Client\ClusterReceptionistSettings.cs",
 "region":  {
 "startLine":  50,
 "startColumn":  34,
@@ -236,9 +236,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Ref\" private.",
+"message":  "Make 'Ref' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedMessages.cs",
 "region":  {
 "startLine":  20,
 "startColumn":  39,
@@ -249,9 +249,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Path\" private.",
+"message":  "Make 'Path' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedMessages.cs",
 "region":  {
 "startLine":  53,
 "startColumn":  36,
@@ -262,9 +262,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Topic\" private.",
+"message":  "Make 'Topic' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedMessages.cs",
 "region":  {
 "startLine":  86,
 "startColumn":  36,
@@ -275,9 +275,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Group\" private.",
+"message":  "Make 'Group' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedMessages.cs",
 "region":  {
 "startLine":  87,
 "startColumn":  36,
@@ -288,9 +288,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Ref\" private.",
+"message":  "Make 'Ref' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedMessages.cs",
 "region":  {
 "startLine":  88,
 "startColumn":  39,
@@ -301,9 +301,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Topic\" private.",
+"message":  "Make 'Topic' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedMessages.cs",
 "region":  {
 "startLine":  133,
 "startColumn":  36,
@@ -314,9 +314,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Group\" private.",
+"message":  "Make 'Group' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedMessages.cs",
 "region":  {
 "startLine":  134,
 "startColumn":  36,
@@ -327,9 +327,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Ref\" private.",
+"message":  "Make 'Ref' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedMessages.cs",
 "region":  {
 "startLine":  135,
 "startColumn":  39,
@@ -340,9 +340,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Subscribe\" private.",
+"message":  "Make 'Subscribe' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedMessages.cs",
 "region":  {
 "startLine":  180,
 "startColumn":  39,
@@ -353,9 +353,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Unsubscribe\" private.",
+"message":  "Make 'Unsubscribe' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedMessages.cs",
 "region":  {
 "startLine":  213,
 "startColumn":  41,
@@ -366,9 +366,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Topic\" private.",
+"message":  "Make 'Topic' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedMessages.cs",
 "region":  {
 "startLine":  246,
 "startColumn":  36,
@@ -379,9 +379,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Message\" private.",
+"message":  "Make 'Message' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedMessages.cs",
 "region":  {
 "startLine":  247,
 "startColumn":  36,
@@ -392,9 +392,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"SendOneMessageToEachGroup\" private.",
+"message":  "Make 'SendOneMessageToEachGroup' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedMessages.cs",
 "region":  {
 "startLine":  248,
 "startColumn":  34,
@@ -405,9 +405,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Path\" private.",
+"message":  "Make 'Path' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedMessages.cs",
 "region":  {
 "startLine":  291,
 "startColumn":  36,
@@ -418,9 +418,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Message\" private.",
+"message":  "Make 'Message' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedMessages.cs",
 "region":  {
 "startLine":  292,
 "startColumn":  36,
@@ -431,9 +431,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"LocalAffinity\" private.",
+"message":  "Make 'LocalAffinity' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedMessages.cs",
 "region":  {
 "startLine":  293,
 "startColumn":  34,
@@ -444,9 +444,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Path\" private.",
+"message":  "Make 'Path' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedMessages.cs",
 "region":  {
 "startLine":  336,
 "startColumn":  36,
@@ -457,9 +457,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Message\" private.",
+"message":  "Make 'Message' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedMessages.cs",
 "region":  {
 "startLine":  337,
 "startColumn":  36,
@@ -470,9 +470,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"ExcludeSelf\" private.",
+"message":  "Make 'ExcludeSelf' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedMessages.cs",
 "region":  {
 "startLine":  338,
 "startColumn":  34,
@@ -483,9 +483,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Topics\" private.",
+"message":  "Make 'Topics' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedMessages.cs",
 "region":  {
 "startLine":  404,
 "startColumn":  38,
@@ -496,9 +496,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Role\" private.",
+"message":  "Make 'Role' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedPubSubSettings.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedPubSubSettings.cs",
 "region":  {
 "startLine":  64,
 "startColumn":  32,
@@ -509,9 +509,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"RoutingLogic\" private.",
+"message":  "Make 'RoutingLogic' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedPubSubSettings.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedPubSubSettings.cs",
 "region":  {
 "startLine":  69,
 "startColumn":  38,
@@ -522,9 +522,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"GossipInterval\" private.",
+"message":  "Make 'GossipInterval' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedPubSubSettings.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedPubSubSettings.cs",
 "region":  {
 "startLine":  74,
 "startColumn":  34,
@@ -535,9 +535,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"RemovedTimeToLive\" private.",
+"message":  "Make 'RemovedTimeToLive' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedPubSubSettings.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedPubSubSettings.cs",
 "region":  {
 "startLine":  79,
 "startColumn":  34,
@@ -548,9 +548,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"MaxDeltaElements\" private.",
+"message":  "Make 'MaxDeltaElements' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedPubSubSettings.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\DistributedPubSubSettings.cs",
 "region":  {
 "startLine":  85,
 "startColumn":  29,
@@ -561,9 +561,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Owner\" private.",
+"message":  "Make 'Owner' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Internal\\TopicMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\Internal\TopicMessages.cs",
 "region":  {
 "startLine":  33,
 "startColumn":  33,
@@ -574,9 +574,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Version\" private.",
+"message":  "Make 'Version' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Internal\\TopicMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\Internal\TopicMessages.cs",
 "region":  {
 "startLine":  34,
 "startColumn":  30,
@@ -587,9 +587,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Content\" private.",
+"message":  "Make 'Content' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Internal\\TopicMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\Internal\TopicMessages.cs",
 "region":  {
 "startLine":  35,
 "startColumn":  67,
@@ -600,9 +600,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Version\" private.",
+"message":  "Make 'Version' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Internal\\TopicMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\Internal\TopicMessages.cs",
 "region":  {
 "startLine":  52,
 "startColumn":  30,
@@ -613,9 +613,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Ref\" private.",
+"message":  "Make 'Ref' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Internal\\TopicMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\Internal\TopicMessages.cs",
 "region":  {
 "startLine":  53,
 "startColumn":  35,
@@ -626,9 +626,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Versions\" private.",
+"message":  "Make 'Versions' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Internal\\TopicMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\Internal\TopicMessages.cs",
 "region":  {
 "startLine":  70,
 "startColumn":  52,
@@ -639,9 +639,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Buckets\" private.",
+"message":  "Make 'Buckets' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Internal\\TopicMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\Internal\TopicMessages.cs",
 "region":  {
 "startLine":  81,
 "startColumn":  34,
@@ -652,9 +652,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"TopicRef\" private.",
+"message":  "Make 'TopicRef' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Internal\\TopicMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\Internal\TopicMessages.cs",
 "region":  {
 "startLine":  100,
 "startColumn":  35,
@@ -665,9 +665,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Ack\" private.",
+"message":  "Make 'Ack' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Internal\\TopicMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\Internal\TopicMessages.cs",
 "region":  {
 "startLine":  111,
 "startColumn":  50,
@@ -678,9 +678,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Subscriber\" private.",
+"message":  "Make 'Subscriber' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Internal\\TopicMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\Internal\TopicMessages.cs",
 "region":  {
 "startLine":  112,
 "startColumn":  35,
@@ -691,9 +691,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Ack\" private.",
+"message":  "Make 'Ack' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Internal\\TopicMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\Internal\TopicMessages.cs",
 "region":  {
 "startLine":  124,
 "startColumn":  52,
@@ -704,9 +704,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Subscriber\" private.",
+"message":  "Make 'Subscriber' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Internal\\TopicMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\Internal\TopicMessages.cs",
 "region":  {
 "startLine":  125,
 "startColumn":  35,
@@ -717,9 +717,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Message\" private.",
+"message":  "Make 'Message' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Internal\\TopicMessages.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\PublishSubscribe\Internal\TopicMessages.cs",
 "region":  {
 "startLine":  137,
 "startColumn":  32,
@@ -730,9 +730,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Count\" private.",
+"message":  "Make 'Count' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManager.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Singleton\ClusterSingletonManager.cs",
 "region":  {
 "startLine":  39,
 "startColumn":  29,
@@ -743,9 +743,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Count\" private.",
+"message":  "Make 'Count' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManager.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Singleton\ClusterSingletonManager.cs",
 "region":  {
 "startLine":  50,
 "startColumn":  29,
@@ -756,9 +756,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Oldest\" private.",
+"message":  "Make 'Oldest' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManager.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Singleton\ClusterSingletonManager.cs",
 "region":  {
 "startLine":  70,
 "startColumn":  33,
@@ -769,9 +769,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"PreviousOldest\" private.",
+"message":  "Make 'PreviousOldest' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManager.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Singleton\ClusterSingletonManager.cs",
 "region":  {
 "startLine":  81,
 "startColumn":  33,
@@ -782,9 +782,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Singleton\" private.",
+"message":  "Make 'Singleton' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManager.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Singleton\ClusterSingletonManager.cs",
 "region":  {
 "startLine":  92,
 "startColumn":  35,
@@ -795,9 +795,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"SingletonTerminated\" private.",
+"message":  "Make 'SingletonTerminated' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManager.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Singleton\ClusterSingletonManager.cs",
 "region":  {
 "startLine":  93,
 "startColumn":  30,
@@ -808,9 +808,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Singleton\" private.",
+"message":  "Make 'Singleton' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManager.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Singleton\ClusterSingletonManager.cs",
 "region":  {
 "startLine":  105,
 "startColumn":  35,
@@ -821,9 +821,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"SingletonTerminated\" private.",
+"message":  "Make 'SingletonTerminated' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManager.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Singleton\ClusterSingletonManager.cs",
 "region":  {
 "startLine":  106,
 "startColumn":  30,
@@ -834,9 +834,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"NewOldest\" private.",
+"message":  "Make 'NewOldest' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManager.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Singleton\ClusterSingletonManager.cs",
 "region":  {
 "startLine":  107,
 "startColumn":  33,
@@ -847,9 +847,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Singleton\" private.",
+"message":  "Make 'Singleton' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManager.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Singleton\ClusterSingletonManager.cs",
 "region":  {
 "startLine":  120,
 "startColumn":  35,
@@ -860,9 +860,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"HandOverTo\" private.",
+"message":  "Make 'HandOverTo' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManager.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Singleton\ClusterSingletonManager.cs",
 "region":  {
 "startLine":  121,
 "startColumn":  35,
@@ -873,9 +873,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Member\" private.",
+"message":  "Make 'Member' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManager.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Singleton\ClusterSingletonManager.cs",
 "region":  {
 "startLine":  143,
 "startColumn":  32,
@@ -886,9 +886,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"SingletonName\" private.",
+"message":  "Make 'SingletonName' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManagerSettings.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Singleton\ClusterSingletonManagerSettings.cs",
 "region":  {
 "startLine":  37,
 "startColumn":  32,
@@ -899,9 +899,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Role\" private.",
+"message":  "Make 'Role' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManagerSettings.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Singleton\ClusterSingletonManagerSettings.cs",
 "region":  {
 "startLine":  38,
 "startColumn":  32,
@@ -912,9 +912,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"RemovalMargin\" private.",
+"message":  "Make 'RemovalMargin' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManagerSettings.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Singleton\ClusterSingletonManagerSettings.cs",
 "region":  {
 "startLine":  39,
 "startColumn":  34,
@@ -925,9 +925,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"HandOverRetryInterval\" private.",
+"message":  "Make 'HandOverRetryInterval' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonManagerSettings.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Singleton\ClusterSingletonManagerSettings.cs",
 "region":  {
 "startLine":  40,
 "startColumn":  34,
@@ -938,9 +938,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"SingletonName\" private.",
+"message":  "Make 'SingletonName' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonProxySettings.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Singleton\ClusterSingletonProxySettings.cs",
 "region":  {
 "startLine":  37,
 "startColumn":  32,
@@ -951,9 +951,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Role\" private.",
+"message":  "Make 'Role' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonProxySettings.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Singleton\ClusterSingletonProxySettings.cs",
 "region":  {
 "startLine":  38,
 "startColumn":  32,
@@ -964,9 +964,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"SingletonIdentificationInterval\" private.",
+"message":  "Make 'SingletonIdentificationInterval' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonProxySettings.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Singleton\ClusterSingletonProxySettings.cs",
 "region":  {
 "startLine":  39,
 "startColumn":  34,
@@ -977,9 +977,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"BufferSize\" private.",
+"message":  "Make 'BufferSize' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\ClusterSingletonProxySettings.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Singleton\ClusterSingletonProxySettings.cs",
 "region":  {
 "startLine":  40,
 "startColumn":  29,
@@ -990,9 +990,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Oldest\" private.",
+"message":  "Make 'Oldest' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\OldestChangedBuffer.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Singleton\OldestChangedBuffer.cs",
 "region":  {
 "startLine":  38,
 "startColumn":  37,
@@ -1003,9 +1003,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"SafeToBeOldest\" private.",
+"message":  "Make 'SafeToBeOldest' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\OldestChangedBuffer.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Singleton\OldestChangedBuffer.cs",
 "region":  {
 "startLine":  39,
 "startColumn":  34,
@@ -1016,9 +1016,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Oldest\" private.",
+"message":  "Make 'Oldest' private.",
 "location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\Singleton\\OldestChangedBuffer.cs",
+"uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Tools\Singleton\OldestChangedBuffer.cs",
 "region":  {
 "startLine":  51,
 "startColumn":  37,

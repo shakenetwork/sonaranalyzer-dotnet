@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S2357",
-"message":  "Make \"Status\" private.",
+"message":  "Make 'Status' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorBase.cs",
+"uri":  "akka.net\src\core\Akka\Actor\ActorBase.cs",
 "region":  {
 "startLine":  25,
 "startColumn":  36,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Cause\" private.",
+"message":  "Make 'Cause' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorBase.cs",
+"uri":  "akka.net\src\core\Akka\Actor\ActorBase.cs",
 "region":  {
 "startLine":  39,
 "startColumn":  39,
@@ -28,9 +28,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Result\" private.",
+"message":  "Make 'Result' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\Futures.cs",
+"uri":  "akka.net\src\core\Akka\Actor\Futures.cs",
 "region":  {
 "startLine":  106,
 "startColumn":  54,
@@ -41,9 +41,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Workers\" private.",
+"message":  "Make 'Workers' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Helios.Concurrency.DedicatedThreadPool.cs",
+"uri":  "akka.net\src\core\Akka\Helios.Concurrency.DedicatedThreadPool.cs",
 "region":  {
 "startLine":  289,
 "startColumn":  39,
@@ -54,9 +54,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Ref\" private.",
+"message":  "Make 'Ref' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Pattern\\BackoffSupervisor.cs",
+"uri":  "akka.net\src\core\Akka\Pattern\BackoffSupervisor.cs",
 "region":  {
 "startLine":  36,
 "startColumn":  39,
@@ -67,9 +67,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Current\" private.",
+"message":  "Make 'Current' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Pattern\\BackoffSupervisor.cs",
+"uri":  "akka.net\src\core\Akka\Pattern\BackoffSupervisor.cs",
 "region":  {
 "startLine":  54,
 "startColumn":  33,
@@ -80,9 +80,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Next\" private.",
+"message":  "Make 'Next' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Util\\MonoConcurrentQueue.cs",
+"uri":  "akka.net\src\core\Akka\Util\MonoConcurrentQueue.cs",
 "region":  {
 "startLine":  259,
 "startColumn":  25,
@@ -93,9 +93,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Value\" private.",
+"message":  "Make 'Value' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Util\\MonoConcurrentQueue.cs",
+"uri":  "akka.net\src\core\Akka\Util\MonoConcurrentQueue.cs",
 "region":  {
 "startLine":  260,
 "startColumn":  22,

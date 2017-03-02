@@ -10,7 +10,7 @@ namespace Tests.Diagnostics
         {
             int a = list.Sum();  // Compliant
 
-            int d = unchecked(list.Sum());  // Noncompliant {{Refactor this code to handle "OverflowException".}}
+            int d = unchecked(list.Sum());  // Noncompliant {{Refactor this code to handle 'OverflowException'.}}
 //                                 ^^^
 
             unchecked

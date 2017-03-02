@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S1301",
-"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"message":  "Replace this 'switch' statement with 'if' statements to increase readability.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Dispatch\\ActorTaskScheduler.cs",
+"uri":  "akka.net\src\core\Akka\Dispatch\ActorTaskScheduler.cs",
 "region":  {
 "startLine":  120,
 "startColumn":  13,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S1301",
-"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"message":  "Replace this 'switch' statement with 'if' statements to increase readability.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\Collections\\ImmutableAvlTreeBase.cs",
+"uri":  "akka.net\src\core\Akka\Util\Internal\Collections\ImmutableAvlTreeBase.cs",
 "region":  {
 "startLine":  115,
 "startColumn":  5,

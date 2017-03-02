@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ReversedOperators : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2757";
-        internal const string MessageFormat = "Was \"{0}\" meant instead?";
+        internal const string MessageFormat = "Was '{0}' meant instead?";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

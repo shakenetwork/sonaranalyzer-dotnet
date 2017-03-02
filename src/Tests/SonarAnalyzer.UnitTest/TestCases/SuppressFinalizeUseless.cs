@@ -52,7 +52,7 @@ namespace Tests.Diagnostics
     {
         public void M()
         {
-            GC.SuppressFinalize(this); //Noncompliant {{Remove this useless call to "GC.SuppressFinalize".}}
+            GC.SuppressFinalize(this); //Noncompliant {{Remove this useless call to 'GC.SuppressFinalize'.}}
         }
     }
 

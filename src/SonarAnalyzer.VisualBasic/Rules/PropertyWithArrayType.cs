@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
     public class PropertyWithArrayType : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2365";
-        internal const string MessageFormat = "Refactor \"{0}\" into a method, properties should not be based on arrays.";
+        internal const string MessageFormat = "Refactor '{0}' into a method, properties should not be based on arrays.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

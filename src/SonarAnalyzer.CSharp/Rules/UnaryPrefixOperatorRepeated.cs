@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class UnaryPrefixOperatorRepeated : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2761";
-        internal const string MessageFormat = "Use the \"{0}\" operator just once or not at all.";
+        internal const string MessageFormat = "Use the '{0}' operator just once or not at all.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

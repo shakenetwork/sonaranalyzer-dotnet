@@ -11,7 +11,7 @@ namespace Tests.Diagnostics
             int target = -5;
             int num = 3;
 
-            target =- num;  // Noncompliant {{Was "-=" meant instead?}}
+            target =- num;  // Noncompliant {{Was '-=' meant instead?}}
 //                  ^
             target =+ num;  // Noncompliant; target = 3
 

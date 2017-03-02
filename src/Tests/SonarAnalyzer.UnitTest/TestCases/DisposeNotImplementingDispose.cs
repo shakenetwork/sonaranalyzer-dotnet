@@ -11,7 +11,7 @@ namespace Tests.Diagnostics
 
     public interface IMine2 : IDisposable
     {
-        void Dispose(); //Noncompliant {{Either implement "IDisposable.Dispose", or totally rename this method to prevent confusion.}}
+        void Dispose(); //Noncompliant {{Either implement 'IDisposable.Dispose', or totally rename this method to prevent confusion.}}
     }
 
     public class Mine3 : IDisposable

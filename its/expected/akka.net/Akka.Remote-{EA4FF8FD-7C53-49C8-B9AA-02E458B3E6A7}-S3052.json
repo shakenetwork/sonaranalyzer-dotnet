@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"_heartbeatTimestamp\", the compiler will do that for you.",
+"message":  "Remove this initialization to '_heartbeatTimestamp', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\DeadlineFailureDetector.cs",
+"uri":  "akka.net\src\core\Akka.Remote\DeadlineFailureDetector.cs",
 "region":  {
 "startLine":  53,
 "startColumn":  42,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"_active\", the compiler will do that for you.",
+"message":  "Remove this initialization to '_active', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\DeadlineFailureDetector.cs",
+"uri":  "akka.net\src\core\Akka.Remote\DeadlineFailureDetector.cs",
 "region":  {
 "startLine":  55,
 "startColumn":  39,
@@ -28,9 +28,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"_lastAck\", the compiler will do that for you.",
+"message":  "Remove this initialization to '_lastAck', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
+"uri":  "akka.net\src\core\Akka.Remote\Endpoint.cs",
 "region":  {
 "startLine":  830,
 "startColumn":  30,
@@ -41,9 +41,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"_writeCount\", the compiler will do that for you.",
+"message":  "Remove this initialization to '_writeCount', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
+"uri":  "akka.net\src\core\Akka.Remote\Endpoint.cs",
 "region":  {
 "startLine":  1123,
 "startColumn":  33,
@@ -54,9 +54,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"_fullBackoff\", the compiler will do that for you.",
+"message":  "Remove this initialization to '_fullBackoff', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
+"uri":  "akka.net\src\core\Akka.Remote\Endpoint.cs",
 "region":  {
 "startLine":  1126,
 "startColumn":  35,
@@ -67,9 +67,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"_smallBackoffCount\", the compiler will do that for you.",
+"message":  "Remove this initialization to '_smallBackoffCount', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
+"uri":  "akka.net\src\core\Akka.Remote\Endpoint.cs",
 "region":  {
 "startLine":  1130,
 "startColumn":  40,
@@ -80,9 +80,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"_noBackoffCount\", the compiler will do that for you.",
+"message":  "Remove this initialization to '_noBackoffCount', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
+"uri":  "akka.net\src\core\Akka.Remote\Endpoint.cs",
 "region":  {
 "startLine":  1131,
 "startColumn":  37,
@@ -93,9 +93,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"_normalShutdown\", the compiler will do that for you.",
+"message":  "Remove this initialization to '_normalShutdown', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
+"uri":  "akka.net\src\core\Akka.Remote\EndpointManager.cs",
 "region":  {
 "startLine":  289,
 "startColumn":  38,
@@ -106,9 +106,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"_upstreamListener\", the compiler will do that for you.",
+"message":  "Remove this initialization to '_upstreamListener', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
+"uri":  "akka.net\src\core\Akka.Remote\Transport\FailureInjectorTransportAdapter.cs",
 "region":  {
 "startLine":  137,
 "startColumn":  70,
@@ -119,9 +119,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"MaximumOverhead\", the compiler will do that for you.",
+"message":  "Remove this initialization to 'MaximumOverhead', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
+"uri":  "akka.net\src\core\Akka.Remote\Transport\FailureInjectorTransportAdapter.cs",
 "region":  {
 "startLine":  141,
 "startColumn":  39,
@@ -132,9 +132,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"_upstreamListener\", the compiler will do that for you.",
+"message":  "Remove this initialization to '_upstreamListener', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
+"uri":  "akka.net\src\core\Akka.Remote\Transport\FailureInjectorTransportAdapter.cs",
 "region":  {
 "startLine":  300,
 "startColumn":  65,
@@ -145,9 +145,9 @@
 },
 {
 "id":  "S3052",
-"message":  "Remove this initialization to \"UniqueId\", the compiler will do that for you.",
+"message":  "Remove this initialization to 'UniqueId', the compiler will do that for you.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TransportAdapters.cs",
+"uri":  "akka.net\src\core\Akka.Remote\Transport\TransportAdapters.cs",
 "region":  {
 "startLine":  350,
 "startColumn":  33,

@@ -6,7 +6,7 @@ namespace Tests.Diagnostics
     {
         private int F0 = 0; // Compliant - unused
 
-        private int F1 = 0; // Noncompliant {{Remove the "F1" field and declare it as a local variable in the relevant methods.}}
+        private int F1 = 0; // Noncompliant {{Remove the 'F1' field and declare it as a local variable in the relevant methods.}}
 //                  ^^^^^^
         public int F2 = 0; // Compliant - Public
 
@@ -22,7 +22,7 @@ namespace Tests.Diagnostics
         private int F9 = 0; // Noncompliant
         private int F10 = 0; // Compliant - not assigned from every path
 
-        private int F11 = 0; // Compliant - first read through "this."
+        private int F11 = 0; // Compliant - first read through 'this.'
         private int F12 = 0; // Noncompliant
 
         private int F13 = 0; // Compliant - parameter of same name is assigned, not the field
@@ -40,8 +40,8 @@ namespace Tests.Diagnostics
         private static int F22 = 42; // Noncompliant
         private int F23 = 42; // Noncompliant - access through this?.
 
-        private int F24 = 42; // Noncompliant - passed as "out"
-        private int F25 = 42; // Compliant - passed as "ref"
+        private int F24 = 42; // Noncompliant - passed as 'out'
+        private int F25 = 42; // Compliant - passed as 'ref'
 
         private int F26 = 42; // Noncompliant - always assigned from constructor
         private int F27 = 42; // Compliant - passed to another constructor

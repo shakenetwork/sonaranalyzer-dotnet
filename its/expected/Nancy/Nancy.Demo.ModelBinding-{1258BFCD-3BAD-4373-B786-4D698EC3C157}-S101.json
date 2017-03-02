@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S101",
-"message":  "Rename class \"DB\" to match camel case naming rules, consider using \"Db\".",
+"message":  "Rename class 'DB' to match camel case naming rules, consider using 'Db'.",
 "location":  {
-"uri":  "Nancy\\src\\Nancy.Demo.ModelBinding\\Database\\DB.cs",
+"uri":  "Nancy\src\Nancy.Demo.ModelBinding\Database\DB.cs",
 "region":  {
 "startLine":  7,
 "startColumn":  25,

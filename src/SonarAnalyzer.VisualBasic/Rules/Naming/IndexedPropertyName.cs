@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
     public class IndexedPropertyName : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2353";
-        internal const string MessageFormat = "Rename this property to \"Item\".";
+        internal const string MessageFormat = "Rename this property to 'Item'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

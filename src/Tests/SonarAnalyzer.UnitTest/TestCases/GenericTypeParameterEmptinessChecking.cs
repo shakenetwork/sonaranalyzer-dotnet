@@ -22,7 +22,7 @@ namespace Tests.Diagnostics
     {
         public void M<T>(List<T> t)
         {
-            if (t[0] == null) // Noncompliant {{Use a comparison to "default(T)" instead or add a constraint to "T" so that it can't be a value type.}}
+            if (t[0] == null) // Noncompliant {{Use a comparison to 'default(T)' instead or add a constraint to 'T' so that it can't be a value type.}}
 //                      ^^^^
             {
             }

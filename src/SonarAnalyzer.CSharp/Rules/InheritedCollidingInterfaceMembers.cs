@@ -160,7 +160,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 parts = parts.Take(parts.Count - 2).ToList();
             }
 
-            return $"\"{string.Join(string.Empty, parts)}\"";
+            return $"'{string.Join(string.Empty, parts)}'";
         }
 
         private static bool AreCollidingMethods(IMethodSymbol methodSymbol1, IMethodSymbol methodSymbol2)

@@ -28,7 +28,7 @@ namespace Tests.TestCases
             Action<string> y = WriteLine<int>;
         }
 
-        private void BasicTest1(int a) { } // Noncompliant {{Remove this unused method parameter "a".}}
+        private void BasicTest1(int a) { } // Noncompliant {{Remove this unused method parameter 'a'.}}
         void BasicTest2(int a) { } // Noncompliant
         private void BasicTest3(int a) { } // Noncompliant
         public void Caller()
@@ -213,7 +213,7 @@ namespace Tests.TestCases
             }
         }
 
-        private void Method3(int p) // Noncompliant {{Remove this parameter "p", whose value is ignored in the method.}}
+        private void Method3(int p) // Noncompliant {{Remove this parameter 'p', whose value is ignored in the method.}}
         {
             var x = true;
             if (x)

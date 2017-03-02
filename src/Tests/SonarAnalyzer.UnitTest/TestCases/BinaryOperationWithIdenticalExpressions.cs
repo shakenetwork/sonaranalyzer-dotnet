@@ -13,14 +13,14 @@ namespace Tests.TestCases
         public void Test(bool a, bool b)
         {
             if (a == a)
-//                   ^ {{Identical sub-expressions on both sides of operator "==".}}
+//                   ^ {{Identical sub-expressions on both sides of operator '=='.}}
 //              ^ Secondary@-1
             {
                 doZ();
             }
 
             if (a == b || (a == /*comment*/ b))
-//                        ^^^^^^^^^^^^^^^^^^^^ {{Identical sub-expressions on both sides of operator "||".}}
+//                        ^^^^^^^^^^^^^^^^^^^^ {{Identical sub-expressions on both sides of operator '||'.}}
 //              ^^^^^^ Secondary@-1
             {
                 doW();

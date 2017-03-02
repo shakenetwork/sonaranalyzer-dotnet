@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class VariableUnused : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1481";
-        internal const string MessageFormat = "Remove this unused \"{0}\" local variable.";
+        internal const string MessageFormat = "Remove this unused '{0}' local variable.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

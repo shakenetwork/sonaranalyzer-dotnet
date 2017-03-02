@@ -1,5 +1,5 @@
 ﻿Class Foo
-    Event BeforeClose() ' Noncompliant {{Rename this event to remove the "Before" prefix.}}
+    Event BeforeClose() ' Noncompliant {{Rename this event to remove the 'Before' prefix.}}
 '         ^^^^^^^^^^^
     Event afterClose()  ' Noncompliant
     Event Closing()

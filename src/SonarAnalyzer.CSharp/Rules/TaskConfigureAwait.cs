@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     {
         internal const string DiagnosticId = "S3216";
         internal const string MessageFormat =
-            "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.";
+            "Add '.ConfigureAwait(false)' to this call to allow execution to continue in any thread.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

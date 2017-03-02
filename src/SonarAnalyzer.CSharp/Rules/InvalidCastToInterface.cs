@@ -214,8 +214,8 @@ namespace SonarAnalyzer.Rules.CSharp
             var expressionTypeName = expressionType.ToMinimalDisplayString(context.SemanticModel, issueLocation.SourceSpan.Start);
 
             var messageReasoning = expressionType.IsInterface()
-                ? $"implements both \"{expressionTypeName}\" and \"{interfaceTypeName}\""
-                : $"extends \"{expressionTypeName}\" and implements \"{interfaceTypeName}\"";
+                ? $"implements both '{expressionTypeName}' and '{interfaceTypeName}'"
+                : $"extends '{expressionTypeName}' and implements '{interfaceTypeName}'";
 
             context.ReportDiagnostic(Diagnostic.Create(rule, issueLocation, string.Format(MessageReviewFormat, messageReasoning)));
         }

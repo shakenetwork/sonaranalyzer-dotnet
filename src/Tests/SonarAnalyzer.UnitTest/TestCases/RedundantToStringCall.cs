@@ -17,7 +17,7 @@ namespace Tests.Diagnostics
         public RedundantToStringCall()
         {
             var s = "foo";
-            var t = "fee fie foe " + s.ToString();  // Noncompliant {{There's no need to call "ToString()" on a string.}}
+            var t = "fee fie foe " + s.ToString();  // Noncompliant {{There's no need to call 'ToString()' on a string.}}
 //                                    ^^^^^^^^^^^
             t = "fee fie foe " + s.ToString(System.Globalization.CultureInfo.InvariantCulture);
             var u = "" + 1.ToString(); // Compliant, value type
@@ -25,7 +25,7 @@ namespace Tests.Diagnostics
             u = new object().ToString() // Noncompliant
                 + new object().ToString(); // Noncompliant, note: this is why we don't have a global fix
 
-            u += new object().ToString(); // Noncompliant {{There's no need to call "ToString()", the compiler will do it for you.}}
+            u += new object().ToString(); // Noncompliant {{There's no need to call 'ToString()', the compiler will do it for you.}}
             u = 1.ToString() + 2;
 
             var x = 1 + 3;

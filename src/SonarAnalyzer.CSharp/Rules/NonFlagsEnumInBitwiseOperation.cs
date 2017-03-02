@@ -35,8 +35,8 @@ namespace SonarAnalyzer.Rules.CSharp
     {
         internal const string DiagnosticId = "S3265";
         internal const string MessageFormat = "{0}";
-        internal const string MessageRemove = "Remove this bitwise operation; the enum \"{0}\" is not marked with \"Flags\" attribute.";
-        internal const string MessageChangeOrRemove = "Mark enum \"{0}\" with \"Flags\" attribute or remove this bitwise operation.";
+        internal const string MessageRemove = "Remove this bitwise operation; the enum '{0}' is not marked with 'Flags' attribute.";
+        internal const string MessageChangeOrRemove = "Mark enum '{0}' with 'Flags' attribute or remove this bitwise operation.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

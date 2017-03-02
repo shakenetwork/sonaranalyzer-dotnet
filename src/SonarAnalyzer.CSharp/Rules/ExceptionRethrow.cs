@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ExceptionRethrow : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3445";
-        internal const string MessageFormat = "Consider using \"throw;\" to preserve the stack trace.";
+        internal const string MessageFormat = "Consider using 'throw;' to preserve the stack trace.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

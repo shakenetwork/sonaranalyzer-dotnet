@@ -20,7 +20,7 @@ namespace Tests.TestCases
         {
             object x;
 
-            if (a != null) // Noncompliant {{Use the "??" operator here.}}
+            if (a != null) // Noncompliant {{Use the '??' operator here.}}
 //          ^^
             {
                 /*some comment*/
@@ -31,14 +31,14 @@ namespace Tests.TestCases
                 x = b/*some other comment*/;
             }
 
-            x = a != null ? (a) : b;  // Noncompliant {{Use the "??" operator here.}}
+            x = a != null ? (a) : b;  // Noncompliant {{Use the '??' operator here.}}
 //              ^^^^^^^^^^^^^^^^^^^
             x = a != null ? a : a;  // Compliant, triggers S2758
 
             int i = 5;
             var z = i == null ? 4 : i; //can't be converted
 
-            x = (y == null) ? Identity(new object()) : Identity(y);  // Noncompliant {{Use the "??" operator here.}}
+            x = (y == null) ? Identity(new object()) : Identity(y);  // Noncompliant {{Use the '??' operator here.}}
 //              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
             x = a ?? b;
@@ -46,7 +46,7 @@ namespace Tests.TestCases
             x = y ?? new object();
             x = condition ? a : b;
 
-            if (condition) // Noncompliant {{Use the "?:" operator here.}}
+            if (condition) // Noncompliant {{Use the '?:' operator here.}}
             {
                 x = a;
             }

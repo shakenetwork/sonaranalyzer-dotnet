@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S2933",
-"message":  "Make \"_clusterCore\" \"readonly\".",
+"message":  "Make '_clusterCore' 'readonly'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\Cluster.cs",
+"uri":  "akka.net\src\core\Akka.Cluster\Cluster.cs",
 "region":  {
 "startLine":  292,
 "startColumn":  19,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S2933",
-"message":  "Make \"_logInfo\" \"readonly\".",
+"message":  "Make '_logInfo' 'readonly'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
+"uri":  "akka.net\src\core\Akka.Cluster\ClusterDaemon.cs",
 "region":  {
 "startLine":  655,
 "startColumn":  22,
@@ -28,9 +28,9 @@
 },
 {
 "id":  "S2933",
-"message":  "Make \"_selfHeartbeat\" \"readonly\".",
+"message":  "Make '_selfHeartbeat' 'readonly'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterHeartbeat.cs",
+"uri":  "akka.net\src\core\Akka.Cluster\ClusterHeartbeat.cs",
 "region":  {
 "startLine":  50,
 "startColumn":  27,
@@ -41,9 +41,9 @@
 },
 {
 "id":  "S2933",
-"message":  "Make \"_gossipCancelable\" \"readonly\".",
+"message":  "Make '_gossipCancelable' 'readonly'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
+"uri":  "akka.net\src\core\Akka.Cluster\ClusterMetricsCollector.cs",
 "region":  {
 "startLine":  55,
 "startColumn":  29,
@@ -54,9 +54,9 @@
 },
 {
 "id":  "S2933",
-"message":  "Make \"_metricsCancelable\" \"readonly\".",
+"message":  "Make '_metricsCancelable' 'readonly'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
+"uri":  "akka.net\src\core\Akka.Cluster\ClusterMetricsCollector.cs",
 "region":  {
 "startLine":  60,
 "startColumn":  29,
@@ -67,9 +67,9 @@
 },
 {
 "id":  "S2933",
-"message":  "Make \"_cluster\" \"readonly\".",
+"message":  "Make '_cluster' 'readonly'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
+"uri":  "akka.net\src\core\Akka.Cluster\ClusterMetricsCollector.cs",
 "region":  {
 "startLine":  62,
 "startColumn":  25,
@@ -80,9 +80,9 @@
 },
 {
 "id":  "S2933",
-"message":  "Make \"_systemLoadAverageCounter\" \"readonly\".",
+"message":  "Make '_systemLoadAverageCounter' 'readonly'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
+"uri":  "akka.net\src\core\Akka.Cluster\ClusterMetricsCollector.cs",
 "region":  {
 "startLine":  747,
 "startColumn":  36,
@@ -93,9 +93,9 @@
 },
 {
 "id":  "S2933",
-"message":  "Make \"_systemAvailableMemory\" \"readonly\".",
+"message":  "Make '_systemAvailableMemory' 'readonly'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
+"uri":  "akka.net\src\core\Akka.Cluster\ClusterMetricsCollector.cs",
 "region":  {
 "startLine":  748,
 "startColumn":  36,
@@ -106,9 +106,9 @@
 },
 {
 "id":  "S2933",
-"message":  "Make \"_monoSystemMaxMemory\" \"readonly\".",
+"message":  "Make '_monoSystemMaxMemory' 'readonly'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
+"uri":  "akka.net\src\core\Akka.Cluster\ClusterMetricsCollector.cs",
 "region":  {
 "startLine":  755,
 "startColumn":  36,
@@ -119,9 +119,9 @@
 },
 {
 "id":  "S2933",
-"message":  "Make \"_membersMap\" \"readonly\".",
+"message":  "Make '_membersMap' 'readonly'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\Gossip.cs",
+"uri":  "akka.net\src\core\Akka.Cluster\Gossip.cs",
 "region":  {
 "startLine":  130,
 "startColumn":  58,
@@ -132,9 +132,9 @@
 },
 {
 "id":  "S2933",
-"message":  "Make \"_gossipTimeToLive\" \"readonly\".",
+"message":  "Make '_gossipTimeToLive' 'readonly'.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\Proto\\ClusterMessageSerializer.cs",
+"uri":  "akka.net\src\core\Akka.Cluster\Proto\ClusterMessageSerializer.cs",
 "region":  {
 "startLine":  45,
 "startColumn":  32,

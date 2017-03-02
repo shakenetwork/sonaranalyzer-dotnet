@@ -2,9 +2,9 @@
 "issues":  [
 {
 "id":  "S2357",
-"message":  "Make \"Uid\" private.",
+"message":  "Make 'Uid' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\AddressUidExtension.cs",
+"uri":  "akka.net\src\core\Akka.Remote\AddressUidExtension.cs",
 "region":  {
 "startLine":  41,
 "startColumn":  29,
@@ -15,9 +15,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"IsTombstone\" private.",
+"message":  "Make 'IsTombstone' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
+"uri":  "akka.net\src\core\Akka.Remote\EndpointManager.cs",
 "region":  {
 "startLine":  34,
 "startColumn":  34,
@@ -28,9 +28,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"LogLevel\" private.",
+"message":  "Make 'LogLevel' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\RemotingLifecycleEvent.cs",
+"uri":  "akka.net\src\core\Akka.Remote\RemotingLifecycleEvent.cs",
 "region":  {
 "startLine":  208,
 "startColumn":  34,
@@ -41,9 +41,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"HandshakeInfo\" private.",
+"message":  "Make 'HandshakeInfo' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
+"uri":  "akka.net\src\core\Akka.Remote\Transport\AkkaProtocolTransport.cs",
 "region":  {
 "startLine":  280,
 "startColumn":  39,
@@ -54,9 +54,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"StateActor\" private.",
+"message":  "Make 'StateActor' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
+"uri":  "akka.net\src\core\Akka.Remote\Transport\AkkaProtocolTransport.cs",
 "region":  {
 "startLine":  282,
 "startColumn":  35,
@@ -67,9 +67,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Codec\" private.",
+"message":  "Make 'Codec' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
+"uri":  "akka.net\src\core\Akka.Remote\Transport\AkkaProtocolTransport.cs",
 "region":  {
 "startLine":  284,
 "startColumn":  38,
@@ -80,9 +80,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"ExtendedActorSystem\" private.",
+"message":  "Make 'ExtendedActorSystem' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
+"uri":  "akka.net\src\core\Akka.Remote\Transport\FailureInjectorTransportAdapter.cs",
 "region":  {
 "startLine":  121,
 "startColumn":  45,
@@ -93,9 +93,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"AssociateBehavior\" private.",
+"message":  "Make 'AssociateBehavior' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TestTransport.cs",
+"uri":  "akka.net\src\core\Akka.Remote\Transport\TestTransport.cs",
 "region":  {
 "startLine":  31,
 "startColumn":  78,
@@ -106,9 +106,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"DisassociateBehavior\" private.",
+"message":  "Make 'DisassociateBehavior' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TestTransport.cs",
+"uri":  "akka.net\src\core\Akka.Remote\Transport\TestTransport.cs",
 "region":  {
 "startLine":  32,
 "startColumn":  79,
@@ -119,9 +119,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"ListenBehavior\" private.",
+"message":  "Make 'ListenBehavior' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TestTransport.cs",
+"uri":  "akka.net\src\core\Akka.Remote\Transport\TestTransport.cs",
 "region":  {
 "startLine":  38,
 "startColumn":  13,
@@ -132,9 +132,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"LocalAddress\" private.",
+"message":  "Make 'LocalAddress' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TestTransport.cs",
+"uri":  "akka.net\src\core\Akka.Remote\Transport\TestTransport.cs",
 "region":  {
 "startLine":  40,
 "startColumn":  33,
@@ -145,9 +145,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"ShutdownBehavior\" private.",
+"message":  "Make 'ShutdownBehavior' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TestTransport.cs",
+"uri":  "akka.net\src\core\Akka.Remote\Transport\TestTransport.cs",
 "region":  {
 "startLine":  41,
 "startColumn":  62,
@@ -158,9 +158,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"WriteBehavior\" private.",
+"message":  "Make 'WriteBehavior' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TestTransport.cs",
+"uri":  "akka.net\src\core\Akka.Remote\Transport\TestTransport.cs",
 "region":  {
 "startLine":  42,
 "startColumn":  98,
@@ -171,9 +171,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Inbound\" private.",
+"message":  "Make 'Inbound' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TestTransport.cs",
+"uri":  "akka.net\src\core\Akka.Remote\Transport\TestTransport.cs",
 "region":  {
 "startLine":  608,
 "startColumn":  30,
@@ -184,9 +184,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"Actor\" private.",
+"message":  "Make 'Actor' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Transport.cs",
+"uri":  "akka.net\src\core\Akka.Remote\Transport\Transport.cs",
 "region":  {
 "startLine":  168,
 "startColumn":  35,
@@ -197,9 +197,9 @@
 },
 {
 "id":  "S2357",
-"message":  "Make \"AddedSchemeIdentifier\" private.",
+"message":  "Make 'AddedSchemeIdentifier' private.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TransportAdapters.cs",
+"uri":  "akka.net\src\core\Akka.Remote\Transport\TransportAdapters.cs",
 "region":  {
 "startLine":  101,
 "startColumn":  32,

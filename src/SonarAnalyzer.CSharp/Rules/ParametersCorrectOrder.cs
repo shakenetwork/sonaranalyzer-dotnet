@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ParametersCorrectOrder : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2234";
-        internal const string MessageFormat = "Parameters to \"{0}\" have the same names but not the same order as the method arguments.";
+        internal const string MessageFormat = "Parameters to '{0}' have the same names but not the same order as the method arguments.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
