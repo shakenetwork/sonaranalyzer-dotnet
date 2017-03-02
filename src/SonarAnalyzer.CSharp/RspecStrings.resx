@@ -4593,6 +4593,30 @@
   <data name="S3871_Title" xml:space="preserve">
     <value>Exception types should be "public"</value>
   </data>
+  <data name="S3872_Category" xml:space="preserve">
+    <value>Sonar Code Smell</value>
+  </data>
+  <data name="S3872_Description" xml:space="preserve">
+    <value>The name of a method should communicate what it does, and the names of its parameters should indicate how they're used. If a method and its parameter have the same name it is an indication that one of these rules of thumb has been broken, if not both. Even if by some trick of language that's not the case, it is still likely to confuse callers and maintainers.</value>
+  </data>
+  <data name="S3872_IsActivatedByDefault" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="S3872_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S3872_RemediationCost" xml:space="preserve">
+    <value>5min</value>
+  </data>
+  <data name="S3872_Severity" xml:space="preserve">
+    <value>Minor</value>
+  </data>
+  <data name="S3872_Tags" xml:space="preserve">
+    <value>convention,confusing</value>
+  </data>
+  <data name="S3872_Title" xml:space="preserve">
+    <value>Parameter names should not duplicate the names of their methods</value>
+  </data>
   <data name="S3875_Category" xml:space="preserve">
     <value>Sonar Code Smell</value>
   </data>
