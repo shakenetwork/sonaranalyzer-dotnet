@@ -41,8 +41,8 @@ namespace SonarAnalyzer.Rules.VisualBasic
         protected sealed override DiagnosticDescriptor Rule => rule;
 
         [RuleParameter("format", PropertyType.String,
-            "Regular expression used to check the function names against.", FieldNameChecker.PascalCasingPattern)]
-        public string Pattern { get; set; } = FieldNameChecker.PascalCasingPattern;
+            "Regular expression used to check the function names against.", NamingHelper.PascalCasingPattern)]
+        public string Pattern { get; set; } = NamingHelper.PascalCasingPattern;
 
         protected override void Initialize(ParameterLoadingAnalysisContext context)
         {
@@ -50,7 +50,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
                 c =>
                 {
                     var methodDeclaration = (MethodStatementSyntax)c.Node;
-                    if (!FieldNameChecker.IsRegexMatch(methodDeclaration.Identifier.ValueText, Pattern))
+                    if (!NamingHelper.IsRegexMatch(methodDeclaration.Identifier.ValueText, Pattern))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, methodDeclaration.Identifier.GetLocation(),
                             "function", methodDeclaration.Identifier.ValueText, Pattern));
@@ -62,7 +62,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
                 c =>
                 {
                     var methodDeclaration = (MethodStatementSyntax)c.Node;
-                    if (!FieldNameChecker.IsRegexMatch(methodDeclaration.Identifier.ValueText, Pattern) &&
+                    if (!NamingHelper.IsRegexMatch(methodDeclaration.Identifier.ValueText, Pattern) &&
                         !EventHandlerName.IsEventHandler(methodDeclaration, c.SemanticModel))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, methodDeclaration.Identifier.GetLocation(),

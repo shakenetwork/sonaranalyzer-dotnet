@@ -41,8 +41,8 @@ namespace SonarAnalyzer.Rules.VisualBasic
         protected sealed override DiagnosticDescriptor Rule => rule;
 
         [RuleParameter("format", PropertyType.String,
-            "Regular expression used to check the property names against.", FieldNameChecker.PascalCasingPattern)]
-        public string Pattern { get; set; } = FieldNameChecker.PascalCasingPattern;
+            "Regular expression used to check the property names against.", NamingHelper.PascalCasingPattern)]
+        public string Pattern { get; set; } = NamingHelper.PascalCasingPattern;
 
         protected override void Initialize(ParameterLoadingAnalysisContext context)
         {
@@ -51,7 +51,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
                 {
                     var propertyDeclaration = (PropertyStatementSyntax)c.Node;
 
-                    if (!FieldNameChecker.IsRegexMatch(propertyDeclaration.Identifier.ValueText, Pattern))
+                    if (!NamingHelper.IsRegexMatch(propertyDeclaration.Identifier.ValueText, Pattern))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, propertyDeclaration.Identifier.GetLocation(), Pattern));
                     }

@@ -1,4 +1,4 @@
-﻿/*
+/*
  * SonarAnalyzer for .NET
  * Copyright (C) 2015-2017 SonarSource SA
  * mailto: contact AT sonarsource DOT com
@@ -19,36 +19,26 @@
  */
 
 using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
-using Microsoft.CodeAnalysis.VisualBasic;
 using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
 
-namespace SonarAnalyzer.Rules.VisualBasic
+namespace SonarAnalyzer.Rules.CSharp
 {
-    [DiagnosticAnalyzer(LanguageNames.VisualBasic)]
+    [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [Rule(DiagnosticId)]
-    public sealed class PrivateSharedReadonlyFieldName : FieldNameChecker
+    public sealed class EnumNameShouldFollowRegex : EnumNameShouldFollowRegexBase<SyntaxKind, EnumDeclarationSyntax>
     {
-        internal const string DiagnosticId = "S2363";
-        internal const string MessageFormat = "Rename '{0}' to match the regular expression: '{1}'.";
-
         private static readonly DiagnosticDescriptor rule =
-            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager)
-                                       .DisabledByDefault();
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
         protected sealed override DiagnosticDescriptor Rule => rule;
+        protected sealed override SyntaxKind EnumStatementSyntaxKind => SyntaxKind.EnumDeclaration;
+        protected sealed override GeneratedCodeRecognizer GeneratedCodeRecognizer =>
+            Helpers.CSharp.GeneratedCodeRecognizer.Instance;
 
-        [RuleParameter("format", PropertyType.String,
-            "Regular expression used to check the \"Private Shared ReadOnly\" field names against.",
-            NamingHelper.CamelCasingPatternWithOptionalPrefixes)]
-        public override string Pattern { get; set; } = NamingHelper.CamelCasingPatternWithOptionalPrefixes;
-
-        protected override bool IsCandidateSymbol(IFieldSymbol symbol)
-        {
-            return symbol.DeclaredAccessibility == Accessibility.Private &&
-                symbol.IsShared() &&
-                symbol.IsReadOnly;
-        }
+        protected sealed override SyntaxToken GetIdentifier(EnumDeclarationSyntax declaration) => declaration.Identifier;
     }
 }

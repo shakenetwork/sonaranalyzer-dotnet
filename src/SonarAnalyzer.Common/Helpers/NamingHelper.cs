@@ -18,19 +18,22 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarAnalyzer.Rules.VisualBasic;
+using System.Text.RegularExpressions;
 
-namespace SonarAnalyzer.UnitTest.Rules
+namespace SonarAnalyzer.Helpers
 {
-    [TestClass]
-    public class EnumerationNameTest
+    public static class NamingHelper
     {
-        [TestMethod]
-        [TestCategory("Rule")]
-        public void EnumerationName()
+        internal const string MaxTwoLongIdPattern = "([A-Z]{2})?";
+        internal const string PascalCasingInternalPattern = "([A-Z]{1,3}[a-z0-9]+)*" + MaxTwoLongIdPattern;
+        internal const string CamelCasingInternalPattern = "[a-z][a-z0-9]*" + PascalCasingInternalPattern;
+        internal const string PascalCasingPattern = "^" + PascalCasingInternalPattern + "$";
+        internal const string CamelCasingPattern = "^" + CamelCasingInternalPattern + "$";
+        internal const string CamelCasingPatternWithOptionalPrefixes = "^(s_|_)?" + CamelCasingInternalPattern + "$";
+
+        internal static bool IsRegexMatch(string name, string pattern)
         {
-            Verifier.VerifyAnalyzer(@"TestCases\EnumerationName.vb", new EnumerationName());
+            return Regex.IsMatch(name, pattern, RegexOptions.CultureInvariant | RegexOptions.Compiled);
         }
     }
 }

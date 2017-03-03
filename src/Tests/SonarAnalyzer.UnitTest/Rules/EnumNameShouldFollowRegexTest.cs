@@ -1,4 +1,4 @@
-﻿/*
+/*
  * SonarAnalyzer for .NET
  * Copyright (C) 2015-2017 SonarSource SA
  * mailto: contact AT sonarsource DOT com
@@ -18,25 +18,27 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-using System.Linq;
-using System.Text.RegularExpressions;
-using Microsoft.CodeAnalysis;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace SonarAnalyzer.Helpers
+namespace SonarAnalyzer.UnitTest.Rules
 {
-    public static class EnumHelper
+    [TestClass]
+    public class EnumNameShouldFollowRegexTest
     {
-        public static string[] SplitCamelCase(this string source)
+        [TestMethod]
+        [TestCategory("Rule")]
+        public void EnumNameShouldFollowRegexCSharp()
         {
-            return Regex.Split(source, @"(?<!^)(?=[A-Z])");
+            Verifier.VerifyAnalyzer(@"TestCases\EnumNameShouldFollowRegex.cs",
+                new SonarAnalyzer.Rules.CSharp.EnumNameShouldFollowRegex());
         }
 
-        internal static bool HasFlagsAttribute(this SyntaxNode node, SemanticModel semanticModel)
+        [TestMethod]
+        [TestCategory("Rule")]
+        public void EnumNameShouldFollowRegexVisualBasic()
         {
-            var symbol = semanticModel.GetDeclaredSymbol(node);
-
-            return symbol != null &&
-                symbol.GetAttributes().Any(attribute => attribute.AttributeClass.Is(KnownType.System_FlagsAttribute));
+            Verifier.VerifyAnalyzer(@"TestCases\EnumNameShouldFollowRegex.vb",
+                new SonarAnalyzer.Rules.VisualBasic.EnumNameShouldFollowRegex());
         }
     }
 }

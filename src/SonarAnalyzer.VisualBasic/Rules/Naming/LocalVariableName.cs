@@ -43,8 +43,8 @@ namespace SonarAnalyzer.Rules.VisualBasic
         protected sealed override DiagnosticDescriptor Rule => rule;
 
         [RuleParameter("format", PropertyType.String,
-            "Regular expression used to check the local variable names against.", FieldNameChecker.CamelCasingPattern)]
-        public string Pattern { get; set; } = FieldNameChecker.CamelCasingPattern;
+            "Regular expression used to check the local variable names against.", NamingHelper.CamelCasingPattern)]
+        public string Pattern { get; set; } = NamingHelper.CamelCasingPattern;
 
         protected override void Initialize(ParameterLoadingAnalysisContext context)
         {
@@ -73,7 +73,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
             var symbol = context.SemanticModel.GetSymbolInfo(controlVar).Symbol as ILocalSymbol;
             if (symbol == null ||
                 !isDeclaredInLoop(symbol) ||
-                FieldNameChecker.IsRegexMatch(symbol.Name, Pattern))
+                NamingHelper.IsRegexMatch(symbol.Name, Pattern))
             {
                 return;
             }
@@ -91,7 +91,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
 
             foreach (var name in declarator.Names
                 .Where(n => n != null &&
-                    !FieldNameChecker.IsRegexMatch(n.Identifier.ValueText, Pattern)))
+                    !NamingHelper.IsRegexMatch(n.Identifier.ValueText, Pattern)))
             {
                 var symbol = context.SemanticModel.GetDeclaredSymbol(name) as ILocalSymbol;
                 if (symbol == null ||

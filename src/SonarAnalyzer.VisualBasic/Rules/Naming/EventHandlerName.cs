@@ -40,8 +40,8 @@ namespace SonarAnalyzer.Rules.VisualBasic
 
         protected sealed override DiagnosticDescriptor Rule => rule;
 
-        private const string DefaultPattern = "^(([a-z][a-z0-9]*)?" + FieldNameChecker.PascalCasingInternalPattern + "_)?" +
-            FieldNameChecker.PascalCasingInternalPattern + "$";
+        private const string DefaultPattern = "^(([a-z][a-z0-9]*)?" + NamingHelper.PascalCasingInternalPattern + "_)?" +
+            NamingHelper.PascalCasingInternalPattern + "$";
 
         [RuleParameter("format", PropertyType.String,
             "Regular expression used to check the even handler names against.", DefaultPattern)]
@@ -53,7 +53,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
                 c =>
                 {
                     var methodDeclaration = (MethodStatementSyntax)c.Node;
-                    if (!FieldNameChecker.IsRegexMatch(methodDeclaration.Identifier.ValueText, Pattern) &&
+                    if (!NamingHelper.IsRegexMatch(methodDeclaration.Identifier.ValueText, Pattern) &&
                         IsEventHandler(methodDeclaration, c.SemanticModel))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, methodDeclaration.Identifier.GetLocation(),

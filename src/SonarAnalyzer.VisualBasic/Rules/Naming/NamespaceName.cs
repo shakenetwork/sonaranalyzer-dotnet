@@ -41,7 +41,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
         protected sealed override DiagnosticDescriptor Rule => rule;
 
         private const string DefaultPattern =
-            "^" + FieldNameChecker.PascalCasingInternalPattern + @"(\." + FieldNameChecker.PascalCasingInternalPattern + ")*$";
+            "^" + NamingHelper.PascalCasingInternalPattern + @"(\." + NamingHelper.PascalCasingInternalPattern + ")*$";
 
         [RuleParameter("format", PropertyType.String,
             "Regular expression used to check the namespace names against.", DefaultPattern)]
@@ -55,7 +55,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
                     var declaration = (NamespaceStatementSyntax)c.Node;
                     var declarationName = declaration.Name?.ToString();
                     if (declarationName != null &&
-                        !FieldNameChecker.IsRegexMatch(declarationName, Pattern))
+                        !NamingHelper.IsRegexMatch(declarationName, Pattern))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, declaration.Name.GetLocation(), Pattern));
                     }

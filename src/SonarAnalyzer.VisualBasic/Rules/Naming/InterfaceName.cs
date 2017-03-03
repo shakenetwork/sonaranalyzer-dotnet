@@ -40,7 +40,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
 
         protected sealed override DiagnosticDescriptor Rule => rule;
 
-        private const string DefaultPattern = "^I" + FieldNameChecker.PascalCasingInternalPattern + "$";
+        private const string DefaultPattern = "^I" + NamingHelper.PascalCasingInternalPattern + "$";
 
         [RuleParameter("format", PropertyType.String,
             "Regular expression used to check the interface names against.", DefaultPattern)]
@@ -52,7 +52,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
                 c =>
                 {
                     var declaration = (InterfaceStatementSyntax)c.Node;
-                    if (!FieldNameChecker.IsRegexMatch(declaration.Identifier.ValueText, Pattern))
+                    if (!NamingHelper.IsRegexMatch(declaration.Identifier.ValueText, Pattern))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, declaration.Identifier.GetLocation(), Pattern));
                     }

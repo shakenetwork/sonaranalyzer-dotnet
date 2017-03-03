@@ -2265,6 +2265,30 @@
   <data name="S2339_Title" xml:space="preserve">
     <value>Public constant members should not be used</value>
   </data>
+  <data name="S2342_Category" xml:space="preserve">
+    <value>Sonar Code Smell</value>
+  </data>
+  <data name="S2342_Description" xml:space="preserve">
+    <value>Shared naming conventions allow teams to collaborate efficiently. This rule checks that all enum names match a provided regular expression.</value>
+  </data>
+  <data name="S2342_IsActivatedByDefault" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="S2342_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S2342_RemediationCost" xml:space="preserve">
+    <value>5min</value>
+  </data>
+  <data name="S2342_Severity" xml:space="preserve">
+    <value>Minor</value>
+  </data>
+  <data name="S2342_Tags" xml:space="preserve">
+    <value>convention</value>
+  </data>
+  <data name="S2342_Title" xml:space="preserve">
+    <value>Enumeration types should comply with a naming convention</value>
+  </data>
   <data name="S2344_Category" xml:space="preserve">
     <value>Sonar Code Smell</value>
   </data>

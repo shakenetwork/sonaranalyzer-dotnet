@@ -41,8 +41,8 @@ namespace SonarAnalyzer.Rules.VisualBasic
         protected sealed override DiagnosticDescriptor Rule => rule;
 
         [RuleParameter("format", PropertyType.String,
-            "Regular expression used to check the parameter names against.", FieldNameChecker.CamelCasingPattern)]
-        public string Pattern { get; set; } = FieldNameChecker.CamelCasingPattern;
+            "Regular expression used to check the parameter names against.", NamingHelper.CamelCasingPattern)]
+        public string Pattern { get; set; } = NamingHelper.CamelCasingPattern;
 
         protected override void Initialize(ParameterLoadingAnalysisContext context)
         {
@@ -51,7 +51,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
                 {
                     var parameterDeclaration = (ParameterSyntax)c.Node;
                     if (parameterDeclaration.Identifier != null &&
-                        !FieldNameChecker.IsRegexMatch(parameterDeclaration.Identifier.Identifier.ValueText, Pattern))
+                        !NamingHelper.IsRegexMatch(parameterDeclaration.Identifier.Identifier.ValueText, Pattern))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, parameterDeclaration.Identifier.Identifier.GetLocation(), Pattern));
                     }

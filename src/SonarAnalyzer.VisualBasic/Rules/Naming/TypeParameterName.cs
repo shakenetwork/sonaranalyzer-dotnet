@@ -40,7 +40,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
 
         protected sealed override DiagnosticDescriptor Rule => rule;
 
-        private const string DefaultFormat = "^T(" + FieldNameChecker.PascalCasingInternalPattern + ")?";
+        private const string DefaultFormat = "^T(" + NamingHelper.PascalCasingInternalPattern + ")?";
 
         [RuleParameter("format", PropertyType.String,
             "Regular expression used to check the generic type parameter names against.", DefaultFormat)]
@@ -52,7 +52,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
                 c =>
                 {
                     var typeParameter = (TypeParameterSyntax)c.Node;
-                    if (!FieldNameChecker.IsRegexMatch(typeParameter.Identifier.ValueText, Pattern))
+                    if (!NamingHelper.IsRegexMatch(typeParameter.Identifier.ValueText, Pattern))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, typeParameter.Identifier.GetLocation(),
                             typeParameter.Identifier.ValueText, Pattern));

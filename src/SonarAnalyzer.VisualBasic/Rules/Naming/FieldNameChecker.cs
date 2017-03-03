@@ -24,29 +24,16 @@ using Microsoft.CodeAnalysis.VisualBasic;
 using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
-using System.Text.RegularExpressions;
 
 namespace SonarAnalyzer.Rules.VisualBasic
 {
     public abstract class FieldNameChecker : ParameterLoadingDiagnosticAnalyzer
     {
-        private const string MaxTwoLongIdPattern = "([A-Z]{2})?";
-        internal const string PascalCasingInternalPattern = "([A-Z]{1,3}[a-z0-9]+)*" + MaxTwoLongIdPattern;
-        internal const string CamelCasingInternalPattern = "[a-z][a-z0-9]*" + PascalCasingInternalPattern;
-        internal const string PascalCasingPattern = "^" + PascalCasingInternalPattern + "$";
-        internal const string CamelCasingPattern = "^" + CamelCasingInternalPattern + "$";
-        internal const string CamelCasingPatternWithOptionalPrefixes = "^(s_|_)?" + CamelCasingInternalPattern + "$";
-
         internal const string Category = SonarAnalyzer.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = false;
 
         public virtual string Pattern { get; set; }
-
-        internal static bool IsRegexMatch(string name, string pattern)
-        {
-            return Regex.IsMatch(name, pattern, RegexOptions.CultureInvariant);
-        }
 
         protected abstract bool IsCandidateSymbol(IFieldSymbol symbol);
 
@@ -61,7 +48,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
                         var symbol = c.SemanticModel.GetDeclaredSymbol(name) as IFieldSymbol;
                         if (symbol != null &&
                             IsCandidateSymbol(symbol) &&
-                            !IsRegexMatch(symbol.Name, Pattern))
+                            !NamingHelper.IsRegexMatch(symbol.Name, Pattern))
                         {
                             c.ReportDiagnostic(Diagnostic.Create(SupportedDiagnostics.First(), name.GetLocation(), symbol.Name, Pattern));
                         }

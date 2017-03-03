@@ -40,8 +40,9 @@ namespace SonarAnalyzer.Rules.VisualBasic
         protected sealed override DiagnosticDescriptor Rule => rule;
 
         [RuleParameter("format", PropertyType.String,
-            "Regular expression used to check the non-private field names against.", PascalCasingPattern)]
-        public override string Pattern { get; set; } = PascalCasingPattern;
+            "Regular expression used to check the non-private field names against.",
+            NamingHelper.PascalCasingPattern)]
+        public override string Pattern { get; set; } = NamingHelper.PascalCasingPattern;
 
         protected override bool IsCandidateSymbol(IFieldSymbol symbol)
         {

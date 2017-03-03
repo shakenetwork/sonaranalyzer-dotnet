@@ -48,8 +48,7 @@ namespace SonarAnalyzer.Rules.Common
                 {
                     var enumDeclaration = (TEnumDeclarationSyntax)c.Node;
 
-                    var hasFlagsAttribute = FlagsEnumWithoutInitializerBase.HasFlagsAttribute(enumDeclaration, c.SemanticModel);
-                    if (!hasFlagsAttribute)
+                    if (!enumDeclaration.HasFlagsAttribute(c.SemanticModel))
                     {
                         return;
                     }

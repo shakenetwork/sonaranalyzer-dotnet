@@ -29,33 +29,16 @@ namespace SonarAnalyzer.Rules.VisualBasic
 {
     [DiagnosticAnalyzer(LanguageNames.VisualBasic)]
     [Rule(DiagnosticId)]
-    public class EnumerationName : ParameterLoadingDiagnosticAnalyzer
+    public class EnumNameShouldFollowRegex : EnumNameShouldFollowRegexBase<SyntaxKind, EnumStatementSyntax>
     {
-        internal const string DiagnosticId = "S2342";
-        internal const string MessageFormat = "Rename this enumeration to match the regular expression: '{0}'.";
-
         private static readonly DiagnosticDescriptor rule =
-            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager)
-                                       .DisabledByDefault();
+            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
 
         protected sealed override DiagnosticDescriptor Rule => rule;
+        protected sealed override SyntaxKind EnumStatementSyntaxKind => SyntaxKind.EnumStatement;
+        protected sealed override GeneratedCodeRecognizer GeneratedCodeRecognizer =>
+            Helpers.VisualBasic.GeneratedCodeRecognizer.Instance;
 
-        [RuleParameter("format", PropertyType.String,
-            "Regular expression used to check the enumeration type names against.", FieldNameChecker.PascalCasingPattern)]
-        public string Pattern { get; set; } = FieldNameChecker.PascalCasingPattern;
-
-        protected override void Initialize(ParameterLoadingAnalysisContext context)
-        {
-            context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
-                    var enumDeclaration = (EnumStatementSyntax)c.Node;
-                    if (!FieldNameChecker.IsRegexMatch(enumDeclaration.Identifier.ValueText, Pattern))
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, enumDeclaration.Identifier.GetLocation(), Pattern));
-                    }
-                },
-                SyntaxKind.EnumStatement);
-        }
+        protected sealed override SyntaxToken GetIdentifier(EnumStatementSyntax declaration) => declaration.Identifier;
     }
 }

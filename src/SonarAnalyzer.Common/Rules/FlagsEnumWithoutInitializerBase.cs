@@ -33,14 +33,6 @@ namespace SonarAnalyzer.Rules.Common
         protected const string DiagnosticId = "S2345";
         protected const string MessageFormat = "Initialize all the members of this 'Flags' enumeration.";
 
-        internal static bool HasFlagsAttribute(SyntaxNode node, SemanticModel semanticModel)
-        {
-            var symbol = semanticModel.GetDeclaredSymbol(node);
-
-            return symbol != null &&
-                symbol.GetAttributes().Any(attribute => attribute.AttributeClass.Is(KnownType.System_FlagsAttribute));
-        }
-
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
     }
 
@@ -56,8 +48,7 @@ namespace SonarAnalyzer.Rules.Common
                 c =>
                 {
                     var enumDeclaration = (TEnumDeclarationSyntax)c.Node;
-                    var hasFlagsAttribute = HasFlagsAttribute(enumDeclaration, c.SemanticModel);
-                    if (!hasFlagsAttribute)
+                    if (!enumDeclaration.HasFlagsAttribute(c.SemanticModel))
                     {
                         return;
                     }

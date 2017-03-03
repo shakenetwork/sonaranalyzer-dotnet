@@ -41,8 +41,8 @@ namespace SonarAnalyzer.Rules.VisualBasic
         protected sealed override DiagnosticDescriptor Rule => rule;
 
         [RuleParameter("format", PropertyType.String,
-            "Regular expression used to check the class names against.", FieldNameChecker.PascalCasingPattern)]
-        public string Pattern { get; set; } = FieldNameChecker.PascalCasingPattern;
+            "Regular expression used to check the class names against.", NamingHelper.PascalCasingPattern)]
+        public string Pattern { get; set; } = NamingHelper.PascalCasingPattern;
 
         protected override void Initialize(ParameterLoadingAnalysisContext context)
         {
@@ -50,7 +50,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
                 c =>
                 {
                     var declaration = (ClassStatementSyntax)c.Node;
-                    if (!FieldNameChecker.IsRegexMatch(declaration.Identifier.ValueText, Pattern))
+                    if (!NamingHelper.IsRegexMatch(declaration.Identifier.ValueText, Pattern))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, declaration.Identifier.GetLocation(), Pattern));
                     }
