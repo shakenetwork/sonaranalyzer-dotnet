@@ -228,4 +228,7 @@ CreateStringResources "vbnet" $vbRules
 if ($className -And $ruleKey)
 {
     GenerateRuleClasses
+
+    $vsFolder = "${PSScriptRoot}\\..\\.vs"
+    Remove-Item $vsFolder -Recurse -Force
 }
