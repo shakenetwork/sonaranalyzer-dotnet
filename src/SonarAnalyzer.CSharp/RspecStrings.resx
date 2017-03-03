@@ -4641,6 +4641,30 @@
   <data name="S3875_Title" xml:space="preserve">
     <value>"operator==" should not be overloaded on reference types</value>
   </data>
+  <data name="S3876_Category" xml:space="preserve">
+    <value>Sonar Code Smell</value>
+  </data>
+  <data name="S3876_Description" xml:space="preserve">
+    <value>Strings and integral types are typically used as indexers. When some other type is required, it typically indicates design problems, and potentially a situation where a method should be used instead.</value>
+  </data>
+  <data name="S3876_IsActivatedByDefault" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="S3876_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S3876_RemediationCost" xml:space="preserve">
+    <value>20min</value>
+  </data>
+  <data name="S3876_Severity" xml:space="preserve">
+    <value>Minor</value>
+  </data>
+  <data name="S3876_Tags" xml:space="preserve">
+    <value>design</value>
+  </data>
+  <data name="S3876_Title" xml:space="preserve">
+    <value>Strings or integral types should be used for indexers</value>
+  </data>
   <data name="S3880_Category" xml:space="preserve">
     <value>Sonar Bug</value>
   </data>
