@@ -4833,6 +4833,30 @@
   <data name="S3889_Title" xml:space="preserve">
     <value>Neither "Thread.Resume" nor "Thread.Suspend" should be used</value>
   </data>
+  <data name="S3898_Category" xml:space="preserve">
+    <value>Sonar Bug</value>
+  </data>
+  <data name="S3898_Description" xml:space="preserve">
+    <value>If you're using a struct, it is likely because you're interested in performance. But by failing to implement IEquatable&amp;lt;T&amp;gt; you're loosing performance when comparisons are made because without IEquatable&amp;lt;T&amp;gt;, boxing and reflection are used to make comparisons. </value>
+  </data>
+  <data name="S3898_IsActivatedByDefault" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="S3898_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S3898_RemediationCost" xml:space="preserve">
+    <value>20min</value>
+  </data>
+  <data name="S3898_Severity" xml:space="preserve">
+    <value>Minor</value>
+  </data>
+  <data name="S3898_Tags" xml:space="preserve">
+    <value>performance</value>
+  </data>
+  <data name="S3898_Title" xml:space="preserve">
+    <value>Value types should implement "IEquatable&lt;T&gt;"</value>
+  </data>
   <data name="S818_Category" xml:space="preserve">
     <value>Sonar Code Smell</value>
   </data>
