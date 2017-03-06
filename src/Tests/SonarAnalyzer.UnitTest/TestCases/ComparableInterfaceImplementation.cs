@@ -57,6 +57,16 @@ namespace Tests.Diagnostics.ComparableInterfaceImplementation
         {
             return Compare(left, right) > 0;
         }
+
+        public static bool operator >=(MissingEquals left, MissingEquals right)
+        {
+            return Compare(left, right) >= 0;
+        }
+
+        public static bool operator <=(MissingEquals left, MissingEquals right)
+        {
+            return Compare(left, right) <= 0;
+        }
     }
 
     public class DerivedCompliant : Compliant, IComparable // Compliant
@@ -112,6 +122,16 @@ namespace Tests.Diagnostics.ComparableInterfaceImplementation
         {
             return Compare(left, right) > 0;
         }
+        public static bool operator >=(MissingEquals left, MissingEquals right)
+        {
+            return Compare(left, right) >= 0;
+        }
+
+        public static bool operator <=(MissingEquals left, MissingEquals right)
+        {
+            return Compare(left, right) <= 0;
+        }
+
     }
 
     public class DiferentEquals : IComparable // Noncompliant {{When implementing IComparable, you should also override Equals.}}
@@ -183,6 +203,16 @@ namespace Tests.Diagnostics.ComparableInterfaceImplementation
         {
             return Compare(left, right) > 0;
         }
+
+        public static bool operator >=(MissingEquals left, MissingEquals right)
+        {
+            return Compare(left, right) >= 0;
+        }
+
+        public static bool operator <=(MissingEquals left, MissingEquals right)
+        {
+            return Compare(left, right) <= 0;
+        }
     }
 
     public class MissingGreaterThan : IComparable // Noncompliant {{When implementing IComparable, you should also override <, >.}}
@@ -229,6 +259,16 @@ namespace Tests.Diagnostics.ComparableInterfaceImplementation
         public static bool operator !=(MissingGreaterThan left, MissingGreaterThan right)
         {
             return !(left == right);
+        }
+
+        public static bool operator >=(MissingEquals left, MissingEquals right)
+        {
+            return Compare(left, right) >= 0;
+        }
+
+        public static bool operator <=(MissingEquals left, MissingEquals right)
+        {
+            return Compare(left, right) <= 0;
         }
     }
 
@@ -277,9 +317,143 @@ namespace Tests.Diagnostics.ComparableInterfaceImplementation
         {
             return Compare(left, right) > 0;
         }
+
+        public static bool operator >=(MissingEquals left, MissingEquals right)
+        {
+            return Compare(left, right) >= 0;
+        }
+
+        public static bool operator <=(MissingEquals left, MissingEquals right)
+        {
+            return Compare(left, right) <= 0;
+        }
     }
 
-    public struct Struct : IComparable // Noncompliant {{When implementing IComparable, you should also override Equals, <, >, ==, !=.}}
+    public class MissingGreaterThanOrEqualTo : IComparable // Noncompliant {{When implementing IComparable, you should also override >=.}}
+//               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    {
+        public string Name { get; set; }
+
+        public int CompareTo(object obj)
+        {
+            return Compare(this, obj as MissingGreaterThanOrEqualTo);
+        }
+
+        private static int Compare(MissingGreaterThanOrEqualTo left, MissingGreaterThanOrEqualTo right)
+        {
+            if (left == null && right == null)
+            {
+                return 0;
+            }
+
+            if (left == null)
+            {
+                return -1;
+            }
+
+            if (right == null)
+            {
+                return 1;
+            }
+
+            return left.Name.CompareTo(right.Name);
+        }
+
+        public override bool Equals(object obj)
+        {
+            var other = obj as MissingNotEqual;
+            return other != null && this.Name != other.Name;
+        }
+
+        public static bool operator <(MissingGreaterThanOrEqualTo left, MissingGreaterThanOrEqualTo right)
+        {
+            return Compare(left, right) < 0;
+        }
+
+        public static bool operator >(MissingGreaterThanOrEqualTo left, MissingGreaterThanOrEqualTo right)
+        {
+            return Compare(left, right) > 0;
+        }
+
+        public static bool operator ==(MissingGreaterThanOrEqualTo left, MissingGreaterThanOrEqualTo right)
+        {
+            return left.Equals(right);
+        }
+
+        public static bool operator !=(MissingGreaterThanOrEqualTo left, MissingGreaterThanOrEqualTo right)
+        {
+            return !(left == right);
+        }
+
+        public static bool operator <=(MissingGreaterThanOrEqualTo left, MissingGreaterThanOrEqualTo right)
+        {
+            return Compare(left, right) <= 0;
+        }
+    }
+
+    public class MissingLessThanOrEqualTo : IComparable // Noncompliant {{When implementing IComparable, you should also override <=.}}
+//               ^^^^^^^^^^^^^^^^^^^^^^^^
+    {
+        public string Name { get; set; }
+
+        public int CompareTo(object obj)
+        {
+            return Compare(this, obj as MissingNotEqual);
+        }
+
+        private static int Compare(MissingLessThanOrEqualTo left, MissingLessThanOrEqualTo right)
+        {
+            if (left == null && right == null)
+            {
+                return 0;
+            }
+
+            if (left == null)
+            {
+                return -1;
+            }
+
+            if (right == null)
+            {
+                return 1;
+            }
+
+            return left.Name.CompareTo(right.Name);
+        }
+
+        public override bool Equals(object obj)
+        {
+            var other = obj as MissingNotEqual;
+            return other != null && this.Name != other.Name;
+        }
+
+        public static bool operator <(MissingLessThanOrEqualTo left, MissingLessThanOrEqualTo right)
+        {
+            return Compare(left, right) < 0;
+        }
+
+        public static bool operator >(MissingLessThanOrEqualTo left, MissingLessThanOrEqualTo right)
+        {
+            return Compare(left, right) > 0;
+        }
+
+        public static bool operator ==(MissingLessThanOrEqualTo left, MissingLessThanOrEqualTo right)
+        {
+            return left.Equals(right);
+        }
+
+        public static bool operator !=(MissingLessThanOrEqualTo left, MissingLessThanOrEqualTo right)
+        {
+            return !(left == right);
+        }
+
+        public static bool operator >=(MissingLessThanOrEqualTo left, MissingLessThanOrEqualTo right)
+        {
+            return Compare(left, right) >= 0;
+        }
+    }
+
+    public struct Struct : IComparable // Noncompliant {{When implementing IComparable, you should also override Equals, <, >, <=, >=, ==, !=.}}
     {
         public int CompareTo(object obj)
         {
@@ -344,6 +518,16 @@ namespace Tests.Diagnostics.ComparableGenericInterfaceImplementation
         {
             return Compare(left, right) > 0;
         }
+        public static bool operator >=(MissingEquals left, MissingEquals right)
+        {
+            return Compare(left, right) >= 0;
+        }
+
+        public static bool operator <=(MissingEquals left, MissingEquals right)
+        {
+            return Compare(left, right) <= 0;
+        }
+
     }
 
     public class MissingEquals : IComparable<MissingEquals> // Noncompliant {{When implementing IComparable<T>, you should also override Equals.}}
@@ -394,6 +578,16 @@ namespace Tests.Diagnostics.ComparableGenericInterfaceImplementation
         public static bool operator >(MissingEquals left, MissingEquals right)
         {
             return Compare(left, right) > 0;
+        }
+
+        public static bool operator >=(MissingEquals left, MissingEquals right)
+        {
+            return Compare(left, right) >= 0;
+        }
+
+        public static bool operator <=(MissingEquals left, MissingEquals right)
+        {
+            return Compare(left, right) <= 0;
         }
     }
 
@@ -456,6 +650,16 @@ namespace Tests.Diagnostics.ComparableGenericInterfaceImplementation
         {
             return Compare(left, right) > 0;
         }
+
+        public static bool operator >=(MissingEquals left, MissingEquals right)
+        {
+            return Compare(left, right) >= 0;
+        }
+
+        public static bool operator <=(MissingEquals left, MissingEquals right)
+        {
+            return Compare(left, right) <= 0;
+        }
     }
 
     public class MissingGreaterThan : IComparable<MissingGreaterThan> // Noncompliant {{When implementing IComparable<T>, you should also override <, >.}}
@@ -502,6 +706,16 @@ namespace Tests.Diagnostics.ComparableGenericInterfaceImplementation
         public static bool operator !=(MissingGreaterThan left, MissingGreaterThan right)
         {
             return !(left == right);
+        }
+
+        public static bool operator >=(MissingEquals left, MissingEquals right)
+        {
+            return Compare(left, right) >= 0;
+        }
+
+        public static bool operator <=(MissingEquals left, MissingEquals right)
+        {
+            return Compare(left, right) <= 0;
         }
     }
 
@@ -550,12 +764,146 @@ namespace Tests.Diagnostics.ComparableGenericInterfaceImplementation
         {
             return Compare(left, right) > 0;
         }
+
+        public static bool operator >=(MissingEquals left, MissingEquals right)
+        {
+            return Compare(left, right) >= 0;
+        }
+
+        public static bool operator <=(MissingEquals left, MissingEquals right)
+        {
+            return Compare(left, right) <= 0;
+        }
+    }
+
+    public class MissingGreaterThanOrEqualTo : IComparable<MissingGreaterThanOrEqualTo> // Noncompliant {{When implementing IComparable<T>, you should also override >=.}}
+//               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    {
+        public string Name { get; set; }
+
+        public int CompareTo(MissingGreaterThanOrEqualTo obj)
+        {
+            return Compare(this, obj);
+        }
+
+        private static int Compare(MissingNotEqual left, MissingNotEqual right)
+        {
+            if (left == null && right == null)
+            {
+                return 0;
+            }
+
+            if (left == null)
+            {
+                return -1;
+            }
+
+            if (right == null)
+            {
+                return 1;
+            }
+
+            return left.Name.CompareTo(right.Name);
+        }
+
+        public override bool Equals(object obj)
+        {
+            var other = obj as MissingNotEqual;
+            return other != null && this.Name != other.Name;
+        }
+
+        public static bool operator <(MissingNotEqual left, MissingNotEqual right)
+        {
+            return Compare(left, right) < 0;
+        }
+
+        public static bool operator >(MissingNotEqual left, MissingNotEqual right)
+        {
+            return Compare(left, right) > 0;
+        }
+
+        public static bool operator ==(MissingGreaterThan left, MissingGreaterThan right)
+        {
+            return left.Equals(right);
+        }
+
+        public static bool operator !=(MissingGreaterThan left, MissingGreaterThan right)
+        {
+            return !(left == right);
+        }
+
+        public static bool operator <=(MissingEquals left, MissingEquals right)
+        {
+            return Compare(left, right) <= 0;
+        }
+    }
+
+    public class MissingLessThanOrEqualTo : IComparable<MissingLessThanOrEqualTo> // Noncompliant {{When implementing IComparable<T>, you should also override <=.}}
+//               ^^^^^^^^^^^^^^^^^^^^^^^^
+    {
+        public string Name { get; set; }
+
+        public int CompareTo(MissingLessThanOrEqualTo obj)
+        {
+            return Compare(this, obj);
+        }
+
+        private static int Compare(MissingNotEqual left, MissingNotEqual right)
+        {
+            if (left == null && right == null)
+            {
+                return 0;
+            }
+
+            if (left == null)
+            {
+                return -1;
+            }
+
+            if (right == null)
+            {
+                return 1;
+            }
+
+            return left.Name.CompareTo(right.Name);
+        }
+
+        public override bool Equals(object obj)
+        {
+            var other = obj as MissingNotEqual;
+            return other != null && this.Name != other.Name;
+        }
+
+        public static bool operator <(MissingNotEqual left, MissingNotEqual right)
+        {
+            return Compare(left, right) < 0;
+        }
+
+        public static bool operator >(MissingNotEqual left, MissingNotEqual right)
+        {
+            return Compare(left, right) > 0;
+        }
+
+        public static bool operator ==(MissingGreaterThan left, MissingGreaterThan right)
+        {
+            return left.Equals(right);
+        }
+
+        public static bool operator !=(MissingGreaterThan left, MissingGreaterThan right)
+        {
+            return !(left == right);
+        }
+
+        public static bool operator >=(MissingEquals left, MissingEquals right)
+        {
+            return Compare(left, right) >= 0;
+        }
     }
 }
 
 namespace Tests.Diagnostics.BothInterfacesImplementation
 {
-    public class NonCompliant : IComparable, IComparable<NonCompliant> // Noncompliant {{When implementing IComparable or IComparable<T>, you should also override Equals, <, >, ==, !=.}}
+    public class NonCompliant : IComparable, IComparable<NonCompliant> // Noncompliant {{When implementing IComparable or IComparable<T>, you should also override Equals, <, >, <=, >=, ==, !=.}}
     {
         public string Name { get; set; }
 

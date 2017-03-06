@@ -52,6 +52,8 @@ namespace SonarAnalyzer.Rules.CSharp
         private static readonly IList<string> RequiredOperators = ImmutableList.Create(
             "op_LessThan",
             "op_GreaterThan",
+            "op_LessThanOrEqual",
+            "op_GreaterThanOrEqual",
             "op_Equality",
             "op_Inequality");
 
@@ -59,6 +61,8 @@ namespace SonarAnalyzer.Rules.CSharp
         {
             { "op_LessThan", "<" },
             { "op_GreaterThan", ">" },
+            { "op_LessThanOrEqual", "<=" },
+            { "op_GreaterThanOrEqual", ">=" },
             { "op_Equality", "==" },
             { "op_Inequality" , "!=" },
         }.ToImmutableDictionary();
@@ -98,7 +102,7 @@ namespace SonarAnalyzer.Rules.CSharp
                     if (membersToOverride.Any())
                     {
                         c.ReportDiagnostic(Diagnostic.Create(
-                            Rule, 
+                            Rule,
                             classDeclaration.Identifier.GetLocation(),
                             string.Join(" or ", implementedComparableInterfaces),
                             string.Join(", ", membersToOverride)));
