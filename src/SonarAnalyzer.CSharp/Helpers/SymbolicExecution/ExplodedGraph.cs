@@ -68,6 +68,17 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.CSharp
                 return;
             }
 
+            var lockBlock = block as LockBlock;
+            if (lockBlock != null)
+            {
+                newProgramState = newProgramState.PopValue();
+
+                newProgramState = newProgramState.RemoveSymbols(IsFieldSymbol);
+
+                EnqueueAllSuccessors(block, newProgramState);
+                return;
+            }
+
             base.VisitSimpleBlock(block, node);
         }
 

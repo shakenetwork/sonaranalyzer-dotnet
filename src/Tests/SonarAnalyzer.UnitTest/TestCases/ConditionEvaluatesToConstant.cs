@@ -949,6 +949,31 @@ namespace Tests.Diagnostics
             }
         }
 
+        class Singleton
+        {
+            private static object syncRoot = new object();
+
+            private static Singleton instance;
+
+            public static Singleton Instance
+            {
+                get
+                {
+                    if (instance == null)
+                    {
+                        lock (syncRoot)
+                        {
+                            if (instance == null) // Compliant
+                            {
+                                instance = new Singleton();
+                            }
+                        }
+                    }
+                    return instance;
+                }
+            }
+        }
+
         class Comp
         {
             public static bool operator <(Comp a, Comp b) { return true; }

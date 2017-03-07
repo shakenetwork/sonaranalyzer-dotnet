@@ -673,7 +673,16 @@ namespace NS
         public void Cfg_Lock()
         {
             var cfg = Build("lock(this) { var x = 10; }");
-            VerifySimpleJumpBlock(cfg, SyntaxKind.LockStatement);
+
+            VerifyCfg(cfg, 3);
+            var lockBlock = cfg.EntryBlock as LockBlock;
+            var bodyBlock = cfg.Blocks.Skip(1).First();
+            var exitBlock = cfg.ExitBlock;
+
+            lockBlock.SuccessorBlocks.Should().OnlyContain(bodyBlock);
+            bodyBlock.SuccessorBlocks.Should().OnlyContain(exitBlock);
+
+            lockBlock.LockNode.Kind().Should().Be(SyntaxKind.LockStatement);
 
             VerifyAllInstructions(cfg.EntryBlock, "this");
         }
@@ -684,21 +693,20 @@ namespace NS
         {
             var cfg = Build("lock(this) { lock(that) { var x = 10; }}");
             VerifyCfg(cfg, 4);
-            var jumpBlock = cfg.EntryBlock as JumpBlock;
-            var blocks = cfg.Blocks.ToList();
-            var innerJumpBlock = blocks[1] as JumpBlock;
-            var bodyBlock = blocks[2];
+            var lockBlock = cfg.EntryBlock as LockBlock;
+            var innerLockBlock = cfg.Blocks.Skip(1).First() as LockBlock;
+            var bodyBlock = cfg.Blocks.Skip(2).First();
             var exitBlock = cfg.ExitBlock;
 
-            jumpBlock.SuccessorBlocks.Should().OnlyContain(innerJumpBlock);
-            innerJumpBlock.SuccessorBlocks.Should().OnlyContain(bodyBlock);
+            lockBlock.SuccessorBlocks.Should().OnlyContain(innerLockBlock);
+            innerLockBlock.SuccessorBlocks.Should().OnlyContain(bodyBlock);
             bodyBlock.SuccessorBlocks.Should().OnlyContain(exitBlock);
 
-            jumpBlock.JumpNode.Kind().Should().Be(SyntaxKind.LockStatement);
-            jumpBlock.Instructions.Should().Contain(n => n.IsKind(SyntaxKind.ThisExpression));
+            lockBlock.LockNode.Kind().Should().Be(SyntaxKind.LockStatement);
+            lockBlock.Instructions.Should().Contain(n => n.IsKind(SyntaxKind.ThisExpression));
 
-            innerJumpBlock.JumpNode.Kind().Should().Be(SyntaxKind.LockStatement);
-            innerJumpBlock.Instructions.Should().Contain(n => n.IsKind(SyntaxKind.IdentifierName) && n.ToString() == "that");
+            innerLockBlock.LockNode.Kind().Should().Be(SyntaxKind.LockStatement);
+            innerLockBlock.Instructions.Should().Contain(n => n.IsKind(SyntaxKind.IdentifierName) && n.ToString() == "that");
         }
 
         #endregion

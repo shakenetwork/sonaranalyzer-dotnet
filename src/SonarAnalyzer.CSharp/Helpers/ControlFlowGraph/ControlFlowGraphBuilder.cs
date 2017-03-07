@@ -679,7 +679,7 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.CSharp
             currentBlock = CreateBlock(currentBlock);
             BuildStatement(lockStatement.Statement);
 
-            currentBlock = CreateJumpBlock(lockStatement, currentBlock);
+            currentBlock = CreateLockBlock(lockStatement, currentBlock);
             BuildExpression(lockStatement.Expression);
         }
 
@@ -1086,6 +1086,13 @@ namespace SonarAnalyzer.Helpers.FlowAnalysis.CSharp
                 BuildExpression(initializer);
             }
         }
+
+        #endregion
+
+        #region Create*
+
+        internal LockBlock CreateLockBlock(LockStatementSyntax lockStatement, Block successor) =>
+            AddBlock(new LockBlock(lockStatement, successor));
 
         #endregion
 
