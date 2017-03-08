@@ -1,4 +1,4 @@
-﻿/*
+/*
  * SonarAnalyzer for .NET
  * Copyright (C) 2015-2017 SonarSource SA
  * mailto: contact AT sonarsource DOT com
@@ -18,27 +18,20 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-using System.Collections.Generic;
-using System.Collections.Immutable;
-using System.Linq;
-using Microsoft.CodeAnalysis;
-using SonarAnalyzer.Common;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SonarAnalyzer.Rules.CSharp;
 
-namespace SonarAnalyzer.Helpers
+namespace SonarAnalyzer.UnitTest.Rules
 {
-    public static class SecondaryLocationHelper
+    [TestClass]
+    public class ExceptionShouldNotBeThrownFromUnexpectedMethodsTest
     {
-        public static IEnumerable<Location> ToAdditionalLocations(this IEnumerable<SecondaryLocation> secondaryLocations)
+        [TestMethod]
+        [TestCategory("Rule")]
+        public void ExceptionShouldNotBeThrownFromUnexpectedMethods()
         {
-            return secondaryLocations.Select(x => x.Location);
-        }
-
-        public static ImmutableDictionary<string, string> ToProperties(this IEnumerable<SecondaryLocation> secondaryLocations)
-        {
-            return secondaryLocations
-                .Select((item, index) => new { Message = item.Message, Index = index.ToString() })
-                .ToDictionary(i => i.Index, i => i.Message)
-                .ToImmutableDictionary();
+            Verifier.VerifyAnalyzer(@"TestCases\ExceptionShouldNotBeThrownFromUnexpectedMethods.cs", 
+                new ExceptionShouldNotBeThrownFromUnexpectedMethods());
         }
     }
 }

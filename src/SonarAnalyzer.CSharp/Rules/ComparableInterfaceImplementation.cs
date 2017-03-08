@@ -132,7 +132,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
         private static IEnumerable<string> GetMembersToOverride(IEnumerable<IMethodSymbol> methods)
         {
-            if (!methods.Any(IsObjectEquals))
+            if (!methods.Any(KnownMethods.IsObjectEquals))
             {
                 yield return ObjectEquals;
             }
@@ -145,16 +145,6 @@ namespace SonarAnalyzer.Rules.CSharp
             {
                 yield return OperatorNamesMap[op];
             }
-        }
-
-        private static bool IsObjectEquals(IMethodSymbol methodSymbol)
-        {
-            return methodSymbol.MethodKind == MethodKind.Ordinary &&
-                methodSymbol.Name == ObjectEquals &&
-                methodSymbol.Parameters.Length == 1 &&
-                methodSymbol.Parameters[0].Type.Is(KnownType.System_Object) &&
-                !methodSymbol.ReturnsVoid &&
-                methodSymbol.ReturnType.Is(KnownType.System_Boolean);
         }
     }
 }

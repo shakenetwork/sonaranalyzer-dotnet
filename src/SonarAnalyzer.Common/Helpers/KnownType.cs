@@ -191,6 +191,10 @@ namespace SonarAnalyzer.Helpers
         public static readonly KnownType System_NullReferenceException = new KnownType("System.NullReferenceException");
         public static readonly KnownType System_OutOfMemoryException = new KnownType("System.OutOfMemoryException");
         public static readonly KnownType System_NotImplementedException = new KnownType("System.NotImplementedException");
+        public static readonly KnownType System_InvalidOperationException = new KnownType("System.InvalidOperationException");
+        public static readonly KnownType System_NotSupportedException = new KnownType("System.NotSupportedException");
+        public static readonly KnownType System_ArgumentException = new KnownType("System.ArgumentException");
+
 
         public static readonly KnownType System_IComparable = new KnownType("System.IComparable");
         public static readonly KnownType System_IComparable_T = new KnownType("System.IComparable<T>");

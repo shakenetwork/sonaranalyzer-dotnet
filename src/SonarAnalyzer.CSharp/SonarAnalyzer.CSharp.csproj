@@ -98,6 +98,7 @@
     <Compile Include="Helpers\EquivalenceChecker.cs" />
     <Compile Include="Helpers\ExpressionNumericConverter.cs" />
     <Compile Include="Helpers\GeneratedCodeRecognizer.cs" />
+    <Compile Include="Helpers\KnownMethods.cs" />
     <Compile Include="Helpers\MethodParameterLookup.cs" />
     <Compile Include="Helpers\RemovableDeclarationCollector.cs" />
     <Compile Include="Helpers\FlowAnalysisExtensions.cs" />

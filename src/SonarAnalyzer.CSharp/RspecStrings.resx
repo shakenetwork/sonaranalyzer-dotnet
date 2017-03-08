@@ -4737,6 +4737,30 @@
   <data name="S3876_Title" xml:space="preserve">
     <value>Strings or integral types should be used for indexers</value>
   </data>
+  <data name="S3877_Category" xml:space="preserve">
+    <value>Sonar Code Smell</value>
+  </data>
+  <data name="S3877_Description" xml:space="preserve">
+    <value>It is expected that some methods should be called with caution, but others, such as ToString, are expected to "just work". Throwing an exception from such a method is likely to break callers' code unexpectedly.</value>
+  </data>
+  <data name="S3877_IsActivatedByDefault" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="S3877_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S3877_RemediationCost" xml:space="preserve">
+    <value>20min</value>
+  </data>
+  <data name="S3877_Severity" xml:space="preserve">
+    <value>Blocker</value>
+  </data>
+  <data name="S3877_Tags" xml:space="preserve">
+    <value>pitfall</value>
+  </data>
+  <data name="S3877_Title" xml:space="preserve">
+    <value>Exceptions should not be thrown from unexpected methods</value>
+  </data>
   <data name="S3880_Category" xml:space="preserve">
     <value>Sonar Bug</value>
   </data>

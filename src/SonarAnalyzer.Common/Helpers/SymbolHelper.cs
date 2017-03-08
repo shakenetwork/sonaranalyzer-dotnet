@@ -252,15 +252,5 @@ namespace SonarAnalyzer.Helpers
             }
             return result;
         }
-
-        public static bool IsMainMethod(this IMethodSymbol methodSymbol)
-        {
-            // Based on Microsoft definition: https://msdn.microsoft.com/en-us/library/1y814bzs.aspx
-            return methodSymbol.IsStatic &&
-                (methodSymbol.ReturnsVoid || methodSymbol.ReturnType.Is(KnownType.System_Int32)) &&
-                methodSymbol.Name.Equals("Main", StringComparison.Ordinal) &&
-                (methodSymbol.Parameters.Length == 0 ||
-                    (methodSymbol.Parameters.Length == 1 && methodSymbol.Parameters[0].IsType(KnownType.System_String_Array)));
-        }
     }
 }

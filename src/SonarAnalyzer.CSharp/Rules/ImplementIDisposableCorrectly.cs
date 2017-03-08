@@ -93,7 +93,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
                 var hasFinalizer = finalizer != null;
 
-                var disposeMethods = FindMethods(classSymbol, IsIDisposableDispose)
+                var disposeMethods = FindMethods(classSymbol, KnownMethods.IsIDisposableDispose)
                     .OfType<MethodDeclarationSyntax>();
                 implementationErrors.AddRange(
                     disposeMethods.SelectMany(disposeMethod => VerifyDispose(disposeMethod, c.SemanticModel, classSymbol, hasFinalizer)));
@@ -195,11 +195,6 @@ namespace SonarAnalyzer.Rules.CSharp
         private static bool IsFinalizer(IMethodSymbol method)
         {
             return method.MethodKind == MethodKind.Destructor;
-        }
-
-        private static bool IsIDisposableDispose(IMethodSymbol method)
-        {
-            return method.ReturnsVoid && !method.Parameters.Any() && (method.Name == DisposeName || method.Name == "System.IDisposable.Dispose");
         }
 
         private static bool IsSuppressFinalize(IMethodSymbol method)

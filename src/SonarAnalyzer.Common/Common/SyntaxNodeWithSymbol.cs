@@ -18,38 +18,36 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-using System.Collections.Generic;
-using System.Collections.Immutable;
-using System.Linq;
 using Microsoft.CodeAnalysis;
 
 namespace SonarAnalyzer.Common
 {
-    public class SecondaryLocation
+    public class SyntaxNodeWithSymbol<TSyntaxNode>
+        where TSyntaxNode : SyntaxNode
     {
-        public SecondaryLocation(Location location, string message)
+
+        public SyntaxNodeWithSymbol(TSyntaxNode syntax, ISymbol symbol)
         {
-            Location = location;
-            Message = message;
+            Syntax = syntax;
+            Symbol = symbol;
         }
 
-        public Location Location { get; }
-        public string Message { get; }
+        public TSyntaxNode Syntax { get; }
+        public ISymbol Symbol { get; }
     }
 
-    public static class SecondaryLocationHelper
+    public static class SyntaxNodeWithSymbolHelper
     {
-        public static IEnumerable<Location> ToAdditionalLocations(this IEnumerable<SecondaryLocation> secondaryLocations)
+        public static SyntaxNodeWithSymbol<TSyntaxNode> ToSyntaxWithSymbol<TSyntaxNode>(this TSyntaxNode syntax, ISymbol symbol)
+            where TSyntaxNode : SyntaxNode
         {
-            return secondaryLocations.Select(x => x.Location);
+            return new SyntaxNodeWithSymbol<TSyntaxNode>(syntax, symbol);
         }
 
-        public static ImmutableDictionary<string, string> ToProperties(this IEnumerable<SecondaryLocation> secondaryLocations)
+        public static SyntaxNodeWithSymbol<TSyntaxNode> ToSyntaxWithSymbol<TSyntaxNode>(this ISymbol symbol, TSyntaxNode syntax)
+            where TSyntaxNode : SyntaxNode
         {
-            return secondaryLocations
-                .Select((item, index) => new { Message = item.Message, Index = index.ToString() })
-                .ToDictionary(i => i.Index, i => i.Message)
-                .ToImmutableDictionary();
+            return new SyntaxNodeWithSymbol<TSyntaxNode>(syntax, symbol);
         }
     }
 }
