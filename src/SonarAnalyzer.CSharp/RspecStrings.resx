@@ -4665,6 +4665,30 @@
   <data name="S3872_Title" xml:space="preserve">
     <value>Parameter names should not duplicate the names of their methods</value>
   </data>
+  <data name="S3874_Category" xml:space="preserve">
+    <value>Sonar Bug</value>
+  </data>
+  <data name="S3874_Description" xml:space="preserve">
+    <value>Passing a parameter by reference, which is what happens when you use the out or ref parameter modifiers, means that the method will receive a pointer to the argument, rather than the argument itself. If the argument was a value type, the method will be able to change the argument's values. If it was a reference type, then the method receives a pointer to a pointer, is is usually not what was intended. Even when it is what was intended, this is the sort of thing that's difficult to get right, and should be used with caution.</value>
+  </data>
+  <data name="S3874_IsActivatedByDefault" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="S3874_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S3874_RemediationCost" xml:space="preserve">
+    <value>20min</value>
+  </data>
+  <data name="S3874_Severity" xml:space="preserve">
+    <value>Major</value>
+  </data>
+  <data name="S3874_Tags" xml:space="preserve">
+    <value>suspicious</value>
+  </data>
+  <data name="S3874_Title" xml:space="preserve">
+    <value>"out" and "ref" parameters should not be used</value>
+  </data>
   <data name="S3875_Category" xml:space="preserve">
     <value>Sonar Code Smell</value>
   </data>
