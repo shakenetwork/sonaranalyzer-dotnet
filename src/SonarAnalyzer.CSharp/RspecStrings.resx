@@ -2481,6 +2481,30 @@
   <data name="S2376_Title" xml:space="preserve">
     <value>Write-only properties should not be used</value>
   </data>
+  <data name="S2386_Category" xml:space="preserve">
+    <value>Sonar Vulnerability</value>
+  </data>
+  <data name="S2386_Description" xml:space="preserve">
+    <value>public static mutable fields of classes which are accessed directly should be protected to the degree possible. This can be done by reducing the accessibility of the field or by changing the return type to an immutable type.</value>
+  </data>
+  <data name="S2386_IsActivatedByDefault" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="S2386_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S2386_RemediationCost" xml:space="preserve">
+    <value>15min</value>
+  </data>
+  <data name="S2386_Severity" xml:space="preserve">
+    <value>Minor</value>
+  </data>
+  <data name="S2386_Tags" xml:space="preserve">
+    <value>cwe,security,unpredictable,cert</value>
+  </data>
+  <data name="S2386_Title" xml:space="preserve">
+    <value>Mutable fields should not be "public static"</value>
+  </data>
   <data name="S2387_Category" xml:space="preserve">
     <value>Sonar Code Smell</value>
   </data>
@@ -4807,7 +4831,7 @@
     <value />
   </data>
   <data name="S3887_Title" xml:space="preserve">
-    <value>"readonly" mutable collection and array fields should be private</value>
+    <value>Mutable, non-private fields should not be "readonly"</value>
   </data>
   <data name="S3889_Category" xml:space="preserve">
     <value>Sonar Bug</value>

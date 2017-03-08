@@ -2,14 +2,14 @@
 "issues":  [
 {
 "id":  "S3887",
-"message":  "Use an immutable collection here instead or reduce the accessibility of this field.",
+"message":  "Use an immutable collection or reduce the accessibility of this field.",
 "location":  {
 "uri":  "akka.net\src\contrib\cluster\Akka.Cluster.Sharding.Tests\ClusterShardingLeavingSpec.cs",
 "region":  {
 "startLine":  83,
-"startColumn":  13,
+"startColumn":  60,
 "endLine":  83,
-"endColumn":  72
+"endColumn":  71
 }
 }
 }

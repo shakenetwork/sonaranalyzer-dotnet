@@ -92,6 +92,9 @@ namespace SonarAnalyzer.Helpers
         public static readonly KnownType System_EventArgs = new KnownType("System.EventArgs");
         public static readonly KnownType System_Delegate = new KnownType("System.Delegate");
 
+        public static readonly KnownType System_Collections_Generic_IReadOnlyCollection_T = new KnownType("System.Collections.Generic.IReadOnlyCollection<T>");
+        public static readonly KnownType System_Collections_Generic_IReadOnlyDictionary_TKey_TValue = new KnownType("System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>");
+
         public static readonly KnownType System_IO_FileStream = new KnownType("System.IO.FileStream");
         public static readonly KnownType System_IO_StreamReader = new KnownType("System.IO.StreamReader");
         public static readonly KnownType System_IO_StreamWriter = new KnownType("System.IO.StreamWriter");
@@ -129,20 +132,26 @@ namespace SonarAnalyzer.Helpers
 
         public static readonly KnownType System_Collections_Immutable_ImmutableArray = new KnownType("System.Collections.Immutable.ImmutableArray");
         public static readonly KnownType System_Collections_Immutable_ImmutableArray_T = new KnownType("System.Collections.Immutable.ImmutableArray<T>");
+        public static readonly KnownType System_Collections_Immutable_IImmutableArray_T = new KnownType("System.Collections.Immutable.IImmutableArray<T>");
         public static readonly KnownType System_Collections_Immutable_ImmutableDictionary = new KnownType("System.Collections.Immutable.ImmutableDictionary");
         public static readonly KnownType System_Collections_Immutable_ImmutableDictionary_TKey_TValue = new KnownType("System.Collections.Immutable.ImmutableDictionary<TKey, TValue>");
+        public static readonly KnownType System_Collections_Immutable_IImmutableDictionary_TKey_TValue = new KnownType("System.Collections.Immutable.IImmutableDictionary<TKey, TValue>");
         public static readonly KnownType System_Collections_Immutable_ImmutableHashSet = new KnownType("System.Collections.Immutable.ImmutableHashSet");
         public static readonly KnownType System_Collections_Immutable_ImmutableHashSet_T = new KnownType("System.Collections.Immutable.ImmutableHashSet<T>");
+        public static readonly KnownType System_Collections_Immutable_IImmutableSet_T = new KnownType("System.Collections.Immutable.IImmutableSet<T>");
         public static readonly KnownType System_Collections_Immutable_ImmutableList = new KnownType("System.Collections.Immutable.ImmutableList");
         public static readonly KnownType System_Collections_Immutable_ImmutableList_T = new KnownType("System.Collections.Immutable.ImmutableList<T>");
+        public static readonly KnownType System_Collections_Immutable_IImmutableList_T = new KnownType("System.Collections.Immutable.IImmutableList<T>");
         public static readonly KnownType System_Collections_Immutable_ImmutableQueue = new KnownType("System.Collections.Immutable.ImmutableQueue");
         public static readonly KnownType System_Collections_Immutable_ImmutableQueue_T = new KnownType("System.Collections.Immutable.ImmutableQueue<T>");
+        public static readonly KnownType System_Collections_Immutable_IImmutableQueue_T = new KnownType("System.Collections.Immutable.IImmutableQueue<T>");
         public static readonly KnownType System_Collections_Immutable_ImmutableSortedDictionary = new KnownType("System.Collections.Immutable.ImmutableSortedDictionary");
         public static readonly KnownType System_Collections_Immutable_ImmutableSortedDictionary_TKey_TValue = new KnownType("System.Collections.Immutable.ImmutableSortedDictionary<TKey, TValue>");
         public static readonly KnownType System_Collections_Immutable_ImmutableSortedSet = new KnownType("System.Collections.Immutable.ImmutableSortedSet");
         public static readonly KnownType System_Collections_Immutable_ImmutableSortedSet_T = new KnownType("System.Collections.Immutable.ImmutableSortedSet<T>");
         public static readonly KnownType System_Collections_Immutable_ImmutableStack = new KnownType("System.Collections.Immutable.ImmutableStack");
         public static readonly KnownType System_Collections_Immutable_ImmutableStack_T = new KnownType("System.Collections.Immutable.ImmutableStack<T>");
+        public static readonly KnownType System_Collections_Immutable_IImmutableStack_T = new KnownType("System.Collections.Immutable.IImmutableStack<T>");
 
         public static readonly KnownType System_Collections_ObjectModel_ReadOnlyCollection_T = new KnownType("System.Collections.ObjectModel.ReadOnlyCollection<T>");
         public static readonly KnownType System_Collections_ObjectModel_ReadOnlyDictionary_TKey_TValue = new KnownType("System.Collections.ObjectModel.ReadOnlyDictionary<TKey, TValue>");

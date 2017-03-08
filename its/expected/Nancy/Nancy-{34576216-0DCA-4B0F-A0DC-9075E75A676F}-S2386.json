@@ -1,7 +1,20 @@
 {
 "issues":  [
 {
-"id":  "S3887",
+"id":  "S2386",
+"message":  "Use an immutable collection or reduce the accessibility of this field.",
+"location":  {
+"uri":  "Nancy\src\Nancy\Bootstrapper\AppDomainAssemblyTypeScanner.cs",
+"region":  {
+"startLine":  47,
+"startColumn":  46,
+"endLine":  55,
+"endColumn":  10
+}
+}
+},
+{
+"id":  "S2386",
 "message":  "Use an immutable collection or reduce the accessibility of this field.",
 "location":  {
 "uri":  "Nancy\src\Nancy\ViewEngines\ResourceViewLocationProvider.cs",
@@ -14,7 +27,7 @@
 }
 },
 {
-"id":  "S3887",
+"id":  "S2386",
 "message":  "Use an immutable collection or reduce the accessibility of this field.",
 "location":  {
 "uri":  "Nancy\src\Nancy\ViewEngines\ResourceViewLocationProvider.cs",

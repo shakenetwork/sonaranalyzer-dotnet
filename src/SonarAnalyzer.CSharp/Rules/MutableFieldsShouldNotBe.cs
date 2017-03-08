@@ -1,4 +1,4 @@
-/*
+﻿/*
  * SonarAnalyzer for .NET
  * Copyright (C) 2015-2017 SonarSource SA
  * mailto: contact AT sonarsource DOT com
@@ -24,36 +24,35 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
-using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
 
-namespace SonarAnalyzer.Rules.CSharp
+namespace SonarAnalyzer.Rules
 {
-    [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [Rule(DiagnosticId)]
-    public class PublicMutableFieldsShoudNotBeReadonly : SonarDiagnosticAnalyzer
+    public abstract class MutableFieldsShouldNotBe : SonarDiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S3887";
-        internal const string MessageFormat = "Use an immutable collection here instead or reduce the accessibility of this field.";
+        protected const string MessageFormat = "Use an immutable collection or reduce the accessibility of this field.";
 
         private static readonly ISet<KnownType> InvalidMutableTypes = new HashSet<KnownType>
         {
-            KnownType.System_Array,
-            KnownType.System_Collections_Generic_ICollection_T
+            KnownType.System_Collections_Generic_ICollection_T,
+            KnownType.System_Array
         };
 
-        private static readonly ISet<KnownType> AuthorizedTypes = new HashSet<KnownType>
+        private static readonly ISet<KnownType> AllowedTypes = new HashSet<KnownType>
         {
             KnownType.System_Collections_ObjectModel_ReadOnlyCollection_T,
-            KnownType.System_Collections_ObjectModel_ReadOnlyDictionary_TKey_TValue
+            KnownType.System_Collections_ObjectModel_ReadOnlyDictionary_TKey_TValue,
+            KnownType.System_Collections_Immutable_IImmutableArray_T,
+            KnownType.System_Collections_Immutable_IImmutableDictionary_TKey_TValue,
+            KnownType.System_Collections_Immutable_IImmutableList_T,
+            KnownType.System_Collections_Immutable_IImmutableSet_T,
+            KnownType.System_Collections_Immutable_IImmutableStack_T,
+            KnownType.System_Collections_Immutable_IImmutableQueue_T
         };
 
-        private static readonly DiagnosticDescriptor rule =
-            DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
+        protected abstract ISet<SyntaxKind> InvalidModifiers { get; }
 
-        protected sealed override DiagnosticDescriptor Rule => rule;
-
-        protected override void Initialize(SonarAnalysisContext context)
+        protected sealed override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(CheckForIssue, SyntaxKind.FieldDeclaration);
         }
@@ -61,7 +60,7 @@ namespace SonarAnalyzer.Rules.CSharp
         private void CheckForIssue(SyntaxNodeAnalysisContext analysisContext)
         {
             var fieldDeclaration = (FieldDeclarationSyntax)analysisContext.Node;
-            if (!IsPublicOrProtectedAndReadonly(fieldDeclaration))
+            if (!IsFieldToAnalyze(fieldDeclaration))
             {
                 return;
             }
@@ -69,20 +68,13 @@ namespace SonarAnalyzer.Rules.CSharp
             var symbolInfo = analysisContext.SemanticModel.GetSymbolInfo(fieldDeclaration.Declaration.Type);
             if (IsInvalidMutableType(symbolInfo.Symbol))
             {
-                analysisContext.ReportDiagnostic(Diagnostic.Create(Rule, fieldDeclaration.GetLocation()));
+                analysisContext.ReportDiagnostic(Diagnostic.Create(Rule, fieldDeclaration.Declaration.Variables[0].GetLocation()));
             }
         }
 
-        private bool IsPublicOrProtectedAndReadonly(FieldDeclarationSyntax fieldDeclaration)
+        private bool IsFieldToAnalyze(FieldDeclarationSyntax fieldDeclaration)
         {
-            const int expectedModifiersCount = 2;
-
-            var modifiersCount =
-                fieldDeclaration.Modifiers.Count(m => m.IsKind(SyntaxKind.ReadOnlyKeyword) ||
-                                                      m.IsKind(SyntaxKind.PublicKeyword) ||
-                                                      m.IsKind(SyntaxKind.ProtectedKeyword));
-
-            return modifiersCount == expectedModifiersCount;
+            return fieldDeclaration.Modifiers.Count(m => InvalidModifiers.Contains(m.Kind())) == InvalidModifiers.Count;
         }
 
         private bool IsInvalidMutableType(ISymbol symbol)
@@ -91,21 +83,23 @@ namespace SonarAnalyzer.Rules.CSharp
             if (namedTypeSymbol != null)
             {
                 return IsOrDerivesOrImplementsAny(namedTypeSymbol.ConstructedFrom, InvalidMutableTypes) &&
-                    !IsOrDerivesOrImplementsAny(namedTypeSymbol.ConstructedFrom, AuthorizedTypes);
+                    !IsOrDerivesOrImplementsAny(namedTypeSymbol.ConstructedFrom, AllowedTypes);
             }
 
             var typeSymbol = symbol as ITypeSymbol;
             if (typeSymbol != null)
             {
-                return IsOrDerivesOrImplementsAny(typeSymbol, InvalidMutableTypes);
+                return IsOrDerivesOrImplementsAny(typeSymbol, InvalidMutableTypes) &&
+                    !IsOrDerivesOrImplementsAny(typeSymbol, AllowedTypes);
             }
 
             return false;
         }
 
-        private bool IsOrDerivesOrImplementsAny(ITypeSymbol typeSymbol, ISet<KnownType> knownTypes)
+        private static bool IsOrDerivesOrImplementsAny(ITypeSymbol typeSymbol, ISet<KnownType> knownTypes)
         {
-            return typeSymbol.IsAny(knownTypes) || typeSymbol.DerivesOrImplementsAny(knownTypes);
+            return typeSymbol.IsAny(knownTypes) ||
+                typeSymbol.DerivesOrImplementsAny(knownTypes);
         }
     }
 }

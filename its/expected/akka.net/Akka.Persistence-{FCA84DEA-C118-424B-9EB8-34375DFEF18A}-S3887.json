@@ -2,40 +2,27 @@
 "issues":  [
 {
 "id":  "S3887",
-"message":  "Use an immutable collection here instead or reduce the accessibility of this field.",
+"message":  "Use an immutable collection or reduce the accessibility of this field.",
 "location":  {
 "uri":  "akka.net\src\core\Akka.Persistence\AtLeastOnceDeliverySemantic.cs",
 "region":  {
 "startLine":  31,
-"startColumn":  9,
+"startColumn":  47,
 "endLine":  31,
-"endColumn":  69
+"endColumn":  68
 }
 }
 },
 {
 "id":  "S3887",
-"message":  "Use an immutable collection here instead or reduce the accessibility of this field.",
+"message":  "Use an immutable collection or reduce the accessibility of this field.",
 "location":  {
 "uri":  "akka.net\src\core\Akka.Persistence\AtLeastOnceDeliverySemantic.cs",
 "region":  {
 "startLine":  131,
-"startColumn":  9,
+"startColumn":  47,
 "endLine":  131,
-"endColumn":  69
-}
-}
-},
-{
-"id":  "S3887",
-"message":  "Use an immutable collection here instead or reduce the accessibility of this field.",
-"location":  {
-"uri":  "akka.net\src\core\Akka.Persistence\Fsm\PersistentFSMBase.cs",
-"region":  {
-"startLine":  44,
-"startColumn":  9,
-"endLine":  44,
-"endColumn":  97
+"endColumn":  68
 }
 }
 }

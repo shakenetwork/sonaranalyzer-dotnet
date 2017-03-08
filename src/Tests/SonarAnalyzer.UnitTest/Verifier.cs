@@ -46,6 +46,7 @@ namespace SonarAnalyzer.UnitTest
         private static readonly MetadataReference systemAssembly = MetadataReference.CreateFromFile(typeof(object).Assembly.Location);
         private static readonly MetadataReference systemLinqAssembly = MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location);
         private static readonly MetadataReference systemNetAssembly = MetadataReference.CreateFromFile(typeof(WebClient).Assembly.Location);
+        internal static readonly MetadataReference SystemImmutableAssembly = MetadataReference.CreateFromFile(typeof(ImmutableArray).Assembly.Location);
 
         private const string NONCOMPLIANT_START = "Noncompliant";
         private const string FIXED_MESSAGE = "Fixed";
@@ -56,7 +57,7 @@ namespace SonarAnalyzer.UnitTest
         private const string AnalyzerFailedDiagnosticId = "AD0001";
         private const string CSharpFileExtension = ".cs";
 
-        #region Verify*
+        #region Verify
 
         public static void VerifyNoExceptionThrown(string path,
             IEnumerable<DiagnosticAnalyzer> diagnosticAnalyzers)
