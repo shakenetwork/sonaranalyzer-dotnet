@@ -112,7 +112,7 @@ namespace SonarAnalyzer.Helpers
         {
             return IsRemovable((ISymbol)methodSymbol, maxAccessibility) &&
                 RemovableMethodKinds.Contains(methodSymbol.MethodKind) &&
-                !IsMainMethod(methodSymbol) &&
+                !methodSymbol.IsMainMethod() &&
                 !methodSymbol.IsProbablyEventHandler();
         }
 
@@ -149,11 +149,6 @@ namespace SonarAnalyzer.Helpers
             return IsRemovable(symbol, maxAccessibility) &&
                 !symbol.ContainingType.IsInterface() &&
                 !symbol.IsInterfaceImplementationOrMemberOverride();
-        }
-
-        private static bool IsMainMethod(IMethodSymbol methodSymbol)
-        {
-            return methodSymbol.IsStatic && methodSymbol.Name == "Main";
         }
     }
 }

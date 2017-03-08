@@ -27,9 +27,9 @@ namespace Tests.TestCases
             Action<string> y = WriteLine<int>;
         }
 
-        private void BasicTest1() { } // Fixed
-        void BasicTest2() { } // Fixed
-        private void BasicTest3() { } // Fixed
+        private void BasicTest1(int a) { } // Compliant
+        void BasicTest2(int a) { } // Compliant
+        private void BasicTest3(int a) { } // Compliant
         public void Caller()
         {
             BasicTest3(42); // Doesn't make it compliant
@@ -43,14 +43,51 @@ namespace Tests.TestCases
 
         private static void WriteLine(string format) { } // Compliant
         private static void WriteLine<T>(string format) { } // Compliant
+
+        void Foo(string a) // Compliant because only throws NotImplementedException
+        {
+            throw new NotImplementedException();
+        }
+
+        static void Main(string[] args) // Compliant because Main is ignored + empty method
+        {
+        }
+
+        public void Foo(int arg1) // Compliant
+        {
+            // Empty on purpose
+        }
+    }
+
+    public class Program1
+    {
+        static void Main(string[] args) // Compliant because Main is ignored + only a throw NotImplemented
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class Program2
+    {
+        static void Main(string[] args) // Compliant because Main is ignored
+        {
+            Console.WriteLine("foo");
+        }
+    }
+
+    public class FooBar
+    {
+        public FooBar(string a) // Compliant
+        {
+        }
     }
 
     public class AnyAttribute : Attribute { }
 
     public static class Extensions
     {
-        private static void MyMethod(this string s
-            ) // Fixed
+        private static void MyMethod(this string s,
+            int i) // Compliant
         {
 
         }
@@ -80,7 +117,7 @@ namespace Tests.TestCases
 
     class MethodParameterUnused : Base, IMy
     {
-        private void M1() //Fixed
+        private void M1(int a) // Compliant
         {
         }
 
@@ -178,7 +215,7 @@ namespace Tests.TestCases
     {
         private static void MyMethod5(int arg) { } // Compliant, because of the below assignment
 
-        private static void MyNonCompliantMethod() { } // Fixed
+        private static void MyNonCompliantMethod(int arg) { }
     }
 
     partial class MethodAssignedToActionFromPartialClass

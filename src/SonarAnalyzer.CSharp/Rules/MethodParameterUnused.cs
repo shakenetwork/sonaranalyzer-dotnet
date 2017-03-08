@@ -57,9 +57,18 @@ namespace SonarAnalyzer.Rules.CSharp
                 c =>
                 {
                     var declaration = (BaseMethodDeclarationSyntax)c.Node;
+
+                    if (declaration.Body == null ||
+                        declaration.Body.Statements.Count == 0) // Don't report on empty methods
+                    {
+                        return;
+                    }
+
                     var symbol = c.SemanticModel.GetDeclaredSymbol(declaration);
                     if (symbol == null ||
-                        !symbol.ContainingType.IsClassOrStruct())
+                        !symbol.ContainingType.IsClassOrStruct() ||
+                        symbol.IsMainMethod() ||
+                        IsBodyOnlyThrowNotImplementedException(declaration, c.SemanticModel))
                     {
                         return;
                     }
@@ -68,6 +77,19 @@ namespace SonarAnalyzer.Rules.CSharp
                 },
                 SyntaxKind.MethodDeclaration,
                 SyntaxKind.ConstructorDeclaration);
+        }
+
+        private static bool IsBodyOnlyThrowNotImplementedException(BaseMethodDeclarationSyntax declaration,
+            SemanticModel semanticModel)
+        {
+            return declaration.Body.Statements.Count == 1 &&
+                declaration.Body.Statements
+                           .OfType<ThrowStatementSyntax>()
+                           .Select(tss => tss.Expression)
+                           .OfType<ObjectCreationExpressionSyntax>()
+                           .Select(oces => semanticModel.GetSymbolInfo(oces).Symbol)
+                           .OfType<IMethodSymbol>()
+                           .Any(s => s != null && s.ContainingType.Is(KnownType.System_NotImplementedException));
         }
 
         private static void ReportUnusedParametersOnMethod(BaseMethodDeclarationSyntax declaration, IMethodSymbol methodSymbol,

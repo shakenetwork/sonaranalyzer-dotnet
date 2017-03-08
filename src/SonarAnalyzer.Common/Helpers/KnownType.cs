@@ -53,6 +53,8 @@ namespace SonarAnalyzer.Helpers
         public static readonly KnownType System_SByte = new KnownType(SpecialType.System_SByte, "sbyte");
         public static readonly KnownType System_DateTime = new KnownType(SpecialType.System_DateTime, "DateTime");
 
+        public static readonly KnownType System_String_Array = new KnownType("string[]");
+
         public static readonly ISet<KnownType> FloatingPointNumbers = ImmutableHashSet.Create(
             System_Single,
             System_Double);
@@ -179,6 +181,7 @@ namespace SonarAnalyzer.Helpers
         public static readonly KnownType System_IndexOutOfRangeException = new KnownType("System.IndexOutOfRangeException");
         public static readonly KnownType System_NullReferenceException = new KnownType("System.NullReferenceException");
         public static readonly KnownType System_OutOfMemoryException = new KnownType("System.OutOfMemoryException");
+        public static readonly KnownType System_NotImplementedException = new KnownType("System.NotImplementedException");
 
         public static readonly KnownType System_IComparable = new KnownType("System.IComparable");
         public static readonly KnownType System_IComparable_T = new KnownType("System.IComparable<T>");
