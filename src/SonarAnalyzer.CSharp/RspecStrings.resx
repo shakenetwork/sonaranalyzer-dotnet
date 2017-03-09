@@ -4881,6 +4881,30 @@
   <data name="S3889_Title" xml:space="preserve">
     <value>Neither "Thread.Resume" nor "Thread.Suspend" should be used</value>
   </data>
+  <data name="S3897_Category" xml:space="preserve">
+    <value>Sonar Code Smell</value>
+  </data>
+  <data name="S3897_Description" xml:space="preserve">
+    <value>The IEquatable&amp;lt;T&amp;gt; interface has only one method in it: Equals(&amp;lt;T&amp;gt;). If you've already written Equals(T), there's no reason not to explicitly implement IEquatable&amp;lt;T&amp;gt;. Doing so expands the utility of your class by allowing it to be used where an IEquatable is called for.</value>
+  </data>
+  <data name="S3897_IsActivatedByDefault" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="S3897_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S3897_RemediationCost" xml:space="preserve">
+    <value>2min</value>
+  </data>
+  <data name="S3897_Severity" xml:space="preserve">
+    <value>Major</value>
+  </data>
+  <data name="S3897_Tags" xml:space="preserve">
+    <value>api-design</value>
+  </data>
+  <data name="S3897_Title" xml:space="preserve">
+    <value>Classes that provide "Equals(&lt;T&gt;)" or override "Equals(Object)" should implement "IEquatable&lt;T&gt;"</value>
+  </data>
   <data name="S3898_Category" xml:space="preserve">
     <value>Sonar Bug</value>
   </data>
