@@ -4953,6 +4953,30 @@
   <data name="S3898_Title" xml:space="preserve">
     <value>Value types should implement "IEquatable&lt;T&gt;"</value>
   </data>
+  <data name="S3902_Category" xml:space="preserve">
+    <value>Sonar Bug</value>
+  </data>
+  <data name="S3902_Description" xml:space="preserve">
+    <value>For performance reasons, you should never try to retrieve the current assembly object using Assembly.GetExecutingAssembly() but instead you should use the Type.Assembly property using a type defined in the current assembly. The Assembly.GetExecutingAssembly() call will walk up the call stack to find the assembly leading to a much slower access.</value>
+  </data>
+  <data name="S3902_IsActivatedByDefault" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="S3902_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S3902_RemediationCost" xml:space="preserve">
+    <value>5min</value>
+  </data>
+  <data name="S3902_Severity" xml:space="preserve">
+    <value>Major</value>
+  </data>
+  <data name="S3902_Tags" xml:space="preserve">
+    <value>performance</value>
+  </data>
+  <data name="S3902_Title" xml:space="preserve">
+    <value>"Assembly.GetExecutingAssembly" should not be called</value>
+  </data>
   <data name="S818_Category" xml:space="preserve">
     <value>Sonar Code Smell</value>
   </data>
