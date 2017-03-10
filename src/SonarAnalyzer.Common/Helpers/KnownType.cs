@@ -125,6 +125,7 @@ namespace SonarAnalyzer.Helpers
         public static readonly KnownType System_Security_Cryptography_MD5 = new KnownType("System.Security.Cryptography.MD5");
 
         public static readonly KnownType System_Reflection_Assembly = new KnownType("System.Reflection.Assembly");
+        public static readonly KnownType System_Reflection_AssemblyVersionAttribute = new KnownType("System.Reflection.AssemblyVersionAttribute");
         public static readonly KnownType System_Reflection_MemberInfo = new KnownType("System.Reflection.MemberInfo");
         public static readonly KnownType System_Reflection_Module = new KnownType("System.Reflection.Module");
         public static readonly KnownType System_Data_Common_CommandTrees_DbExpression = new KnownType("System.Data.Common.CommandTrees.DbExpression");

@@ -13275,6 +13275,510 @@ namespace SonarAnalyzer {
         /// <summary>
         ///   Looks up a localized string similar to Sonar Bug.
         /// </summary>
+        internal static string S3869_Category {
+            get {
+                return ResourceManager.GetString("S3869_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not surprisingly, the SafeHandle.DangerousGetHandle method is dangerous. That&apos;s because it may not return a valid handle. Using it can lead to leaks and vulnerabilities. While it is possible to use the method successfully, it&apos;s extremely difficult to do correctly, so the method should simply be avoided altogether..
+        /// </summary>
+        internal static string S3869_Description {
+            get {
+                return ResourceManager.GetString("S3869_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True.
+        /// </summary>
+        internal static string S3869_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S3869_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S3869_Remediation {
+            get {
+                return ResourceManager.GetString("S3869_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 20min.
+        /// </summary>
+        internal static string S3869_RemediationCost {
+            get {
+                return ResourceManager.GetString("S3869_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blocker.
+        /// </summary>
+        internal static string S3869_Severity {
+            get {
+                return ResourceManager.GetString("S3869_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to leak,unpredictable.
+        /// </summary>
+        internal static string S3869_Tags {
+            get {
+                return ResourceManager.GetString("S3869_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;SafeHandle.DangerousGetHandle&quot; should not be called.
+        /// </summary>
+        internal static string S3869_Title {
+            get {
+                return ResourceManager.GetString("S3869_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sonar Bug.
+        /// </summary>
+        internal static string S3871_Category {
+            get {
+                return ResourceManager.GetString("S3871_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The point of having custom exception types is to convey more information than is available in standard types. But custom exception types must be public for that to work. .
+        /// </summary>
+        internal static string S3871_Description {
+            get {
+                return ResourceManager.GetString("S3871_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True.
+        /// </summary>
+        internal static string S3871_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S3871_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S3871_Remediation {
+            get {
+                return ResourceManager.GetString("S3871_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5min.
+        /// </summary>
+        internal static string S3871_RemediationCost {
+            get {
+                return ResourceManager.GetString("S3871_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Major.
+        /// </summary>
+        internal static string S3871_Severity {
+            get {
+                return ResourceManager.GetString("S3871_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to error-handling.
+        /// </summary>
+        internal static string S3871_Tags {
+            get {
+                return ResourceManager.GetString("S3871_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception types should be &quot;public&quot;.
+        /// </summary>
+        internal static string S3871_Title {
+            get {
+                return ResourceManager.GetString("S3871_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sonar Code Smell.
+        /// </summary>
+        internal static string S3872_Category {
+            get {
+                return ResourceManager.GetString("S3872_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The name of a method should communicate what it does, and the names of its parameters should indicate how they&apos;re used. If a method and its parameter have the same name it is an indication that one of these rules of thumb has been broken, if not both. Even if by some trick of language that&apos;s not the case, it is still likely to confuse callers and maintainers..
+        /// </summary>
+        internal static string S3872_Description {
+            get {
+                return ResourceManager.GetString("S3872_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to False.
+        /// </summary>
+        internal static string S3872_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S3872_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S3872_Remediation {
+            get {
+                return ResourceManager.GetString("S3872_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5min.
+        /// </summary>
+        internal static string S3872_RemediationCost {
+            get {
+                return ResourceManager.GetString("S3872_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minor.
+        /// </summary>
+        internal static string S3872_Severity {
+            get {
+                return ResourceManager.GetString("S3872_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to convention,confusing.
+        /// </summary>
+        internal static string S3872_Tags {
+            get {
+                return ResourceManager.GetString("S3872_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parameter names should not duplicate the names of their methods.
+        /// </summary>
+        internal static string S3872_Title {
+            get {
+                return ResourceManager.GetString("S3872_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sonar Bug.
+        /// </summary>
+        internal static string S3874_Category {
+            get {
+                return ResourceManager.GetString("S3874_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Passing a parameter by reference, which is what happens when you use the out or ref parameter modifiers, means that the method will receive a pointer to the argument, rather than the argument itself. If the argument was a value type, the method will be able to change the argument&apos;s values. If it was a reference type, then the method receives a pointer to a pointer, is is usually not what was intended. Even when it is what was intended, this is the sort of thing that&apos;s difficult to get right, and should be u [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string S3874_Description {
+            get {
+                return ResourceManager.GetString("S3874_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to False.
+        /// </summary>
+        internal static string S3874_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S3874_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S3874_Remediation {
+            get {
+                return ResourceManager.GetString("S3874_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 20min.
+        /// </summary>
+        internal static string S3874_RemediationCost {
+            get {
+                return ResourceManager.GetString("S3874_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Major.
+        /// </summary>
+        internal static string S3874_Severity {
+            get {
+                return ResourceManager.GetString("S3874_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to suspicious.
+        /// </summary>
+        internal static string S3874_Tags {
+            get {
+                return ResourceManager.GetString("S3874_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;out&quot; and &quot;ref&quot; parameters should not be used.
+        /// </summary>
+        internal static string S3874_Title {
+            get {
+                return ResourceManager.GetString("S3874_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sonar Code Smell.
+        /// </summary>
+        internal static string S3875_Category {
+            get {
+                return ResourceManager.GetString("S3875_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The use of == to compare to objects is expected to do a reference comparison. That is, it is expected to return true if and only if they are the same object instance. Overloading the operator to do anything else will inevitably lead to the introduction bugs by callers. On the other hand, overloading it to do exactly that is pointless; that&apos;s what == does by default..
+        /// </summary>
+        internal static string S3875_Description {
+            get {
+                return ResourceManager.GetString("S3875_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True.
+        /// </summary>
+        internal static string S3875_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S3875_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S3875_Remediation {
+            get {
+                return ResourceManager.GetString("S3875_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 15min.
+        /// </summary>
+        internal static string S3875_RemediationCost {
+            get {
+                return ResourceManager.GetString("S3875_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blocker.
+        /// </summary>
+        internal static string S3875_Severity {
+            get {
+                return ResourceManager.GetString("S3875_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to pitfall.
+        /// </summary>
+        internal static string S3875_Tags {
+            get {
+                return ResourceManager.GetString("S3875_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;operator==&quot; should not be overloaded on reference types.
+        /// </summary>
+        internal static string S3875_Title {
+            get {
+                return ResourceManager.GetString("S3875_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sonar Code Smell.
+        /// </summary>
+        internal static string S3876_Category {
+            get {
+                return ResourceManager.GetString("S3876_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Strings and integral types are typically used as indexers. When some other type is required, it typically indicates design problems, and potentially a situation where a method should be used instead..
+        /// </summary>
+        internal static string S3876_Description {
+            get {
+                return ResourceManager.GetString("S3876_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to False.
+        /// </summary>
+        internal static string S3876_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S3876_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S3876_Remediation {
+            get {
+                return ResourceManager.GetString("S3876_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 20min.
+        /// </summary>
+        internal static string S3876_RemediationCost {
+            get {
+                return ResourceManager.GetString("S3876_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minor.
+        /// </summary>
+        internal static string S3876_Severity {
+            get {
+                return ResourceManager.GetString("S3876_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to design.
+        /// </summary>
+        internal static string S3876_Tags {
+            get {
+                return ResourceManager.GetString("S3876_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Strings or integral types should be used for indexers.
+        /// </summary>
+        internal static string S3876_Title {
+            get {
+                return ResourceManager.GetString("S3876_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sonar Code Smell.
+        /// </summary>
+        internal static string S3877_Category {
+            get {
+                return ResourceManager.GetString("S3877_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to It is expected that some methods should be called with caution, but others, such as ToString, are expected to &quot;just work&quot;. Throwing an exception from such a method is likely to break callers&apos; code unexpectedly..
+        /// </summary>
+        internal static string S3877_Description {
+            get {
+                return ResourceManager.GetString("S3877_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True.
+        /// </summary>
+        internal static string S3877_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S3877_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S3877_Remediation {
+            get {
+                return ResourceManager.GetString("S3877_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 20min.
+        /// </summary>
+        internal static string S3877_RemediationCost {
+            get {
+                return ResourceManager.GetString("S3877_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blocker.
+        /// </summary>
+        internal static string S3877_Severity {
+            get {
+                return ResourceManager.GetString("S3877_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to pitfall.
+        /// </summary>
+        internal static string S3877_Tags {
+            get {
+                return ResourceManager.GetString("S3877_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exceptions should not be thrown from unexpected methods.
+        /// </summary>
+        internal static string S3877_Title {
+            get {
+                return ResourceManager.GetString("S3877_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sonar Bug.
+        /// </summary>
         internal static string S3880_Category {
             get {
                 return ResourceManager.GetString("S3880_Category", resourceCulture);
@@ -13417,6 +13921,222 @@ namespace SonarAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sonar Vulnerability.
+        /// </summary>
+        internal static string S3884_Category {
+            get {
+                return ResourceManager.GetString("S3884_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CoSetProxyBlanket and CoInitializeSecurity both work to set the permissions context in which the process invoked immediately after is executed. Calling them from within that process is useless because it&apos;s to late at that point; the permissions context has already been set..
+        /// </summary>
+        internal static string S3884_Description {
+            get {
+                return ResourceManager.GetString("S3884_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True.
+        /// </summary>
+        internal static string S3884_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S3884_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S3884_Remediation {
+            get {
+                return ResourceManager.GetString("S3884_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 20min.
+        /// </summary>
+        internal static string S3884_RemediationCost {
+            get {
+                return ResourceManager.GetString("S3884_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blocker.
+        /// </summary>
+        internal static string S3884_Severity {
+            get {
+                return ResourceManager.GetString("S3884_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string S3884_Tags {
+            get {
+                return ResourceManager.GetString("S3884_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;CoSetProxyBlanket&quot; and &quot;CoInitializeSecurity&quot; should not be used.
+        /// </summary>
+        internal static string S3884_Title {
+            get {
+                return ResourceManager.GetString("S3884_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sonar Bug.
+        /// </summary>
+        internal static string S3885_Category {
+            get {
+                return ResourceManager.GetString("S3885_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The parameter to Assembly.Load includes the full specification of the dll to be loaded. Use another method, and you might end up with a dll other than the one you expected. .
+        /// </summary>
+        internal static string S3885_Description {
+            get {
+                return ResourceManager.GetString("S3885_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True.
+        /// </summary>
+        internal static string S3885_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S3885_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S3885_Remediation {
+            get {
+                return ResourceManager.GetString("S3885_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5min.
+        /// </summary>
+        internal static string S3885_RemediationCost {
+            get {
+                return ResourceManager.GetString("S3885_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Major.
+        /// </summary>
+        internal static string S3885_Severity {
+            get {
+                return ResourceManager.GetString("S3885_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to unpredictable.
+        /// </summary>
+        internal static string S3885_Tags {
+            get {
+                return ResourceManager.GetString("S3885_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;Assembly.Load&quot; should be used.
+        /// </summary>
+        internal static string S3885_Title {
+            get {
+                return ResourceManager.GetString("S3885_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sonar Bug.
+        /// </summary>
+        internal static string S3887_Category {
+            get {
+                return ResourceManager.GetString("S3887_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Using the readonly keyword on a field means that it can&apos;t be changed after initialization. However, when applied to collections or arrays, that&apos;s only partly true. readonly enforces that another instance can&apos;t be assigned to the field, but it cannot keep the contents from being updated. That means that in practice, the field value really can be changed, and the use of readonly on such a field is misleading, and you&apos;re likely to not be getting the behavior you expect..
+        /// </summary>
+        internal static string S3887_Description {
+            get {
+                return ResourceManager.GetString("S3887_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True.
+        /// </summary>
+        internal static string S3887_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S3887_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S3887_Remediation {
+            get {
+                return ResourceManager.GetString("S3887_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 15min.
+        /// </summary>
+        internal static string S3887_RemediationCost {
+            get {
+                return ResourceManager.GetString("S3887_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minor.
+        /// </summary>
+        internal static string S3887_Severity {
+            get {
+                return ResourceManager.GetString("S3887_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string S3887_Tags {
+            get {
+                return ResourceManager.GetString("S3887_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mutable, non-private fields should not be &quot;readonly&quot;.
+        /// </summary>
+        internal static string S3887_Title {
+            get {
+                return ResourceManager.GetString("S3887_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sonar Bug.
         /// </summary>
         internal static string S3889_Category {
@@ -13485,6 +14205,294 @@ namespace SonarAnalyzer {
         internal static string S3889_Title {
             get {
                 return ResourceManager.GetString("S3889_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sonar Code Smell.
+        /// </summary>
+        internal static string S3897_Category {
+            get {
+                return ResourceManager.GetString("S3897_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The IEquatable&amp;lt;T&amp;gt; interface has only one method in it: Equals(&amp;lt;T&amp;gt;). If you&apos;ve already written Equals(T), there&apos;s no reason not to explicitly implement IEquatable&amp;lt;T&amp;gt;. Doing so expands the utility of your class by allowing it to be used where an IEquatable is called for..
+        /// </summary>
+        internal static string S3897_Description {
+            get {
+                return ResourceManager.GetString("S3897_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True.
+        /// </summary>
+        internal static string S3897_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S3897_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S3897_Remediation {
+            get {
+                return ResourceManager.GetString("S3897_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2min.
+        /// </summary>
+        internal static string S3897_RemediationCost {
+            get {
+                return ResourceManager.GetString("S3897_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Major.
+        /// </summary>
+        internal static string S3897_Severity {
+            get {
+                return ResourceManager.GetString("S3897_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to api-design.
+        /// </summary>
+        internal static string S3897_Tags {
+            get {
+                return ResourceManager.GetString("S3897_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Classes that provide &quot;Equals(&lt;T&gt;)&quot; or override &quot;Equals(Object)&quot; should implement &quot;IEquatable&lt;T&gt;&quot;.
+        /// </summary>
+        internal static string S3897_Title {
+            get {
+                return ResourceManager.GetString("S3897_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sonar Bug.
+        /// </summary>
+        internal static string S3898_Category {
+            get {
+                return ResourceManager.GetString("S3898_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you&apos;re using a struct, it is likely because you&apos;re interested in performance. But by failing to implement IEquatable&amp;lt;T&amp;gt; you&apos;re loosing performance when comparisons are made because without IEquatable&amp;lt;T&amp;gt;, boxing and reflection are used to make comparisons. .
+        /// </summary>
+        internal static string S3898_Description {
+            get {
+                return ResourceManager.GetString("S3898_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to False.
+        /// </summary>
+        internal static string S3898_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S3898_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S3898_Remediation {
+            get {
+                return ResourceManager.GetString("S3898_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 20min.
+        /// </summary>
+        internal static string S3898_RemediationCost {
+            get {
+                return ResourceManager.GetString("S3898_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minor.
+        /// </summary>
+        internal static string S3898_Severity {
+            get {
+                return ResourceManager.GetString("S3898_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to performance.
+        /// </summary>
+        internal static string S3898_Tags {
+            get {
+                return ResourceManager.GetString("S3898_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value types should implement &quot;IEquatable&lt;T&gt;&quot;.
+        /// </summary>
+        internal static string S3898_Title {
+            get {
+                return ResourceManager.GetString("S3898_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sonar Bug.
+        /// </summary>
+        internal static string S3902_Category {
+            get {
+                return ResourceManager.GetString("S3902_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to For performance reasons, you should never try to retrieve the current assembly object using Assembly.GetExecutingAssembly() but instead you should use the Type.Assembly property using a type defined in the current assembly. The Assembly.GetExecutingAssembly() call will walk up the call stack to find the assembly leading to a much slower access..
+        /// </summary>
+        internal static string S3902_Description {
+            get {
+                return ResourceManager.GetString("S3902_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to False.
+        /// </summary>
+        internal static string S3902_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S3902_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S3902_Remediation {
+            get {
+                return ResourceManager.GetString("S3902_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5min.
+        /// </summary>
+        internal static string S3902_RemediationCost {
+            get {
+                return ResourceManager.GetString("S3902_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Major.
+        /// </summary>
+        internal static string S3902_Severity {
+            get {
+                return ResourceManager.GetString("S3902_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to performance.
+        /// </summary>
+        internal static string S3902_Tags {
+            get {
+                return ResourceManager.GetString("S3902_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;Assembly.GetExecutingAssembly&quot; should not be called.
+        /// </summary>
+        internal static string S3902_Title {
+            get {
+                return ResourceManager.GetString("S3902_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sonar Bug.
+        /// </summary>
+        internal static string S3904_Category {
+            get {
+                return ResourceManager.GetString("S3904_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If no AssemblyVersionAttribute is provided, the same default version will be used for every build. Since the version number is used by The .NET Framework to uniquely identify an assembly this can lead to broken dependencies..
+        /// </summary>
+        internal static string S3904_Description {
+            get {
+                return ResourceManager.GetString("S3904_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True.
+        /// </summary>
+        internal static string S3904_IsActivatedByDefault {
+            get {
+                return ResourceManager.GetString("S3904_IsActivatedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Constant/Issue.
+        /// </summary>
+        internal static string S3904_Remediation {
+            get {
+                return ResourceManager.GetString("S3904_Remediation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2min.
+        /// </summary>
+        internal static string S3904_RemediationCost {
+            get {
+                return ResourceManager.GetString("S3904_RemediationCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Critical.
+        /// </summary>
+        internal static string S3904_Severity {
+            get {
+                return ResourceManager.GetString("S3904_Severity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to bug,pitfall.
+        /// </summary>
+        internal static string S3904_Tags {
+            get {
+                return ResourceManager.GetString("S3904_Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Assemblies should have version information.
+        /// </summary>
+        internal static string S3904_Title {
+            get {
+                return ResourceManager.GetString("S3904_Title", resourceCulture);
             }
         }
         
