@@ -357,6 +357,30 @@
   <data name="S108_Title" xml:space="preserve">
     <value>Nested blocks of code should not be left empty</value>
   </data>
+  <data name="S1104_Category" xml:space="preserve">
+    <value>Sonar Vulnerability</value>
+  </data>
+  <data name="S1104_Description" xml:space="preserve">
+    <value>Public fields in public classes do not respect the encapsulation principle and has three main disadvantages:</value>
+  </data>
+  <data name="S1104_IsActivatedByDefault" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="S1104_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S1104_RemediationCost" xml:space="preserve">
+    <value>10min</value>
+  </data>
+  <data name="S1104_Severity" xml:space="preserve">
+    <value>Minor</value>
+  </data>
+  <data name="S1104_Tags" xml:space="preserve">
+    <value>cwe,security</value>
+  </data>
+  <data name="S1104_Title" xml:space="preserve">
+    <value>Fields should not have public accessibility</value>
+  </data>
   <data name="S1109_Category" xml:space="preserve">
     <value>Sonar Code Smell</value>
   </data>
