@@ -36,7 +36,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class UnusedPrivateMember : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1144";
-        internal const string MessageFormat = "Remove this unused private member.";
+        private const string MessageFormat = "Remove this unused private member.";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly DiagnosticDescriptor rule =

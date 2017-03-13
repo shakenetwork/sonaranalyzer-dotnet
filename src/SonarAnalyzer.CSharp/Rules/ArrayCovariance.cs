@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ArrayCovariance : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2330";
-        internal const string MessageFormat = "Refactor the code to not rely on potentially unsafe array conversions.";
+        private const string MessageFormat = "Refactor the code to not rely on potentially unsafe array conversions.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

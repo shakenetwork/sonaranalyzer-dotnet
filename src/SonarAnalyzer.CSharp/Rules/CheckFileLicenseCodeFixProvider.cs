@@ -38,20 +38,20 @@ namespace SonarAnalyzer.Rules.CSharp
         public sealed override ImmutableArray<string> FixableDiagnosticIds => ImmutableArray.Create(CheckFileLicense.DiagnosticId);
         public sealed override FixAllProvider GetFixAllProvider() => WellKnownFixAllProviders.BatchFixer;
 
-        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
+        protected sealed override Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
             var diagnostic = context.Diagnostics.First();
             if (!diagnostic.Properties.Any() ||
                 !diagnostic.Properties.ContainsKey(CheckFileLicense.IsRegularExpressionPropertyKey) ||
                 !diagnostic.Properties.ContainsKey(CheckFileLicense.HeaderFormatPropertyKey))
             {
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             bool b;
             if (!bool.TryParse(diagnostic.Properties[CheckFileLicense.IsRegularExpressionPropertyKey], out b) || b)
             {
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             var diagnosticSpan = diagnostic.Location.SourceSpan;
@@ -67,6 +67,8 @@ namespace SonarAnalyzer.Rules.CSharp
                         return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                     }),
                 context.Diagnostics);
+
+            return TaskHelper.CompletedTask;
         }
 
         private static IEnumerable<SyntaxTrivia> CreateFileHeaderTrivias(string comment)

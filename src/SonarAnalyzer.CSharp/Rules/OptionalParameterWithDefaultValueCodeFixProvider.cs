@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     [ExportCodeFixProvider(LanguageNames.CSharp)]
     public class OptionalParameterWithDefaultValueCodeFixProvider : SonarCodeFixProvider
     {
-        internal const string Title = "Change to \"[DefaultParameterValue]\"";
+        internal const string Title = "Change to '[DefaultParameterValue]'";
         public sealed override ImmutableArray<string> FixableDiagnosticIds =>
             ImmutableArray.Create(OptionalParameterWithDefaultValue.DiagnosticId);
 

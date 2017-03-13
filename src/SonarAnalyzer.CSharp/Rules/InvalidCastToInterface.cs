@@ -38,7 +38,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class InvalidCastToInterface : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1944";
-        internal const string MessageFormat = "{0}";
+        private const string MessageFormat = "{0}";
         internal const string MessageReviewFormat = "Review this cast; in this project there's no type that {0}.";
         internal const string MessageDefinite = "Nullable is known to be empty, this cast throws an exception.";
 

@@ -19,9 +19,9 @@
  */
 
 using System;
-using Microsoft.CodeAnalysis;
-using System.Linq;
 using System.IO;
+using System.Linq;
+using Microsoft.CodeAnalysis;
 
 namespace SonarAnalyzer.Helpers
 {

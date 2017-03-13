@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class IndexOfCheckAgainstZero : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2692";
-        internal const string MessageFormat = "0 is a valid index, but this check ignores it.";
+        private const string MessageFormat = "0 is a valid index, but this check ignores it.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

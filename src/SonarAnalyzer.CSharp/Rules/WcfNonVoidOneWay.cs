@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class WcfNonVoidOneWay : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3598";
-        internal const string MessageFormat = "This method can't return any values because it is marked as one-way operation.";
+        private const string MessageFormat = "This method can't return any values because it is marked as one-way operation.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

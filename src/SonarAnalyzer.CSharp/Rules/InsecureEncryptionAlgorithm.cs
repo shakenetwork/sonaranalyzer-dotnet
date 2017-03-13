@@ -35,7 +35,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class InsecureEncryptionAlgorithm : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2278";
-        internal const string MessageFormat = "Use the recommended AES (Advanced Encryption Standard) instead.";
+        private const string MessageFormat = "Use the recommended AES (Advanced Encryption Standard) instead.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

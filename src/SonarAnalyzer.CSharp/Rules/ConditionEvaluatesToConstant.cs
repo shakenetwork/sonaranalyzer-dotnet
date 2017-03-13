@@ -18,17 +18,17 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+using System;
+using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
-using System.Linq;
-using System;
 using SonarAnalyzer.Helpers.FlowAnalysis.Common;
 using SonarAnalyzer.Helpers.FlowAnalysis.CSharp;
-using System.Collections.Generic;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
@@ -39,7 +39,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ConditionEvaluatesToConstant : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2583";
-        internal const string MessageFormat = "Change this condition so that it does not always evaluate to '{0}'.";
+        private const string MessageFormat = "Change this condition so that it does not always evaluate to '{0}'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class EmptyNamespace : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3261";
-        internal const string MessageFormat = "Remove this empty namespace.";
+        private const string MessageFormat = "Remove this empty namespace.";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly DiagnosticDescriptor rule =

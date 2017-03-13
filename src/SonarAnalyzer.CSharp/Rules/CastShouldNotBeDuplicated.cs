@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class CastShouldNotBeDuplicated : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3247";
-        internal const string MessageFormat = "Replace this type-check-and-cast sequence with an 'as' and a null check.";
+        private const string MessageFormat = "Replace this type-check-and-cast sequence with an 'as' and a null check.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

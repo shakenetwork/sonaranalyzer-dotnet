@@ -35,7 +35,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ClassName : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S101";
-        internal const string MessageFormat = "Rename {0} '{1}' to match camel case naming rules, {2}.";
+        private const string MessageFormat = "Rename {0} '{1}' to match camel case naming rules, {2}.";
         internal const string MessageFormatNonUnderscore = "consider using '{0}'";
         internal const string MessageFormatUnderscore = "trim underscores from the name";
 

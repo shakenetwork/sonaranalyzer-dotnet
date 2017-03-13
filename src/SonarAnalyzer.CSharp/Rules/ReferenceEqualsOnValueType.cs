@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ReferenceEqualsOnValueType : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2995";
-        internal const string MessageFormat = "Use a different kind of comparison for these value types.";
+        private const string MessageFormat = "Use a different kind of comparison for these value types.";
 
         private const string ReferenceEqualsName = "ReferenceEquals";
 

@@ -30,7 +30,7 @@ namespace SonarAnalyzer.Rules.CSharp
     [Rule(DiagnosticId)]
     public class DoNotCallAssemblyGetExecutingAssembly : MethodShouldNotBeCalled
     {
-        private const string DiagnosticId = "S3902";
+        internal const string DiagnosticId = "S3902";
         private const string MessageFormat = "Replace this call to 'Assembly.GetExecutingAssembly()' with 'Type.Assembly'.";
 
         private static readonly DiagnosticDescriptor rule =

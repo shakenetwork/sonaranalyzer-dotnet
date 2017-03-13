@@ -45,7 +45,7 @@ namespace SonarAnalyzer.Rules.Common
             return DocumentBasedFixAllProvider.Instance;
         }
 
-        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
+        protected sealed override Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
@@ -61,6 +61,8 @@ namespace SonarAnalyzer.Rules.Common
                     },
                     Title),
                 context.Diagnostics);
+
+            return TaskHelper.CompletedTask;
         }
 
         protected abstract SyntaxNode CalculateNewRoot(SyntaxNode root, SyntaxNode node);

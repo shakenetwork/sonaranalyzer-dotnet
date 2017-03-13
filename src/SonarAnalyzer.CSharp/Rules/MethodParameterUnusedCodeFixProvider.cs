@@ -19,11 +19,11 @@
  */
 
 using System.Collections.Immutable;
-using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CodeFixes;
-using System.Threading.Tasks;
 using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CodeActions;
+using Microsoft.CodeAnalysis.CodeFixes;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
@@ -39,7 +39,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
         public sealed override FixAllProvider GetFixAllProvider() => DocumentBasedFixAllProvider.Instance;
 
-        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
+        protected sealed override Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
@@ -47,7 +47,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
             if (!bool.Parse(diagnostic.Properties[MethodParameterUnused.IsRemovableKey]))
             {
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             context.RegisterCodeFix(
@@ -61,6 +61,8 @@ namespace SonarAnalyzer.Rules.CSharp
                         return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                     }),
                 context.Diagnostics);
+
+            return TaskHelper.CompletedTask;
         }
     }
 }

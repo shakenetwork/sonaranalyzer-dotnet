@@ -36,7 +36,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class CatchRethrow : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2737";
-        internal const string MessageFormat = @"Add logic to this catch clause or eliminate it and rethrow the exception automatically.";
+        private const string MessageFormat = @"Add logic to this catch clause or eliminate it and rethrow the exception automatically.";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly BlockSyntax ThrowBlock = SyntaxFactory.Block(SyntaxFactory.ThrowStatement());

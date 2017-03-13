@@ -19,11 +19,11 @@
  */
 
 using System.Collections.Immutable;
-using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CodeFixes;
-using System.Threading.Tasks;
 using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CodeActions;
+using Microsoft.CodeAnalysis.CodeFixes;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using SonarAnalyzer.Helpers;
@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     [ExportCodeFixProvider(LanguageNames.CSharp)]
     public class MethodOverrideNoParamsCodeFixProvider : SonarCodeFixProvider
     {
-        internal const string Title = "Add the \"params\" modifier";
+        internal const string Title = "Add the 'params' modifier";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
             get
@@ -46,7 +46,7 @@ namespace SonarAnalyzer.Rules.CSharp
             return WellKnownFixAllProviders.BatchFixer;
         }
 
-        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
+        protected sealed override Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
@@ -66,6 +66,8 @@ namespace SonarAnalyzer.Rules.CSharp
                         return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                     }),
                 context.Diagnostics);
+
+            return TaskHelper.CompletedTask;
         }
     }
 }

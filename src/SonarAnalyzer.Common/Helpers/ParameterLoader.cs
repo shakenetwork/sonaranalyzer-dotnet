@@ -19,17 +19,17 @@
  */
 
 using System;
-using System.Globalization;
-using SonarAnalyzer.Common;
-using System.Collections.Immutable;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Xml;
 using System.Xml.Linq;
 using Microsoft.CodeAnalysis.Diagnostics;
-using System.Reflection;
-using System.IO;
-using System.Collections.Concurrent;
-using System.Xml;
+using SonarAnalyzer.Common;
 
 namespace SonarAnalyzer.Helpers
 {

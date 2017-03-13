@@ -18,10 +18,7 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
@@ -34,7 +31,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class StaticFieldWrittenFromInstanceMember : StaticFieldWrittenFrom
     {
         internal const string DiagnosticId = "S2696";
-        internal const string MessageFormat = "{0}";
+        private const string MessageFormat = "{0}";
         internal const string MessageFormatMultipleOptions = "Make the enclosing instance {0} 'static' or remove this set on the 'static' field.";
         internal const string MessageFormatRemoveSet = "Remove this set, which updates a 'static' field from an instance {0}.";
 

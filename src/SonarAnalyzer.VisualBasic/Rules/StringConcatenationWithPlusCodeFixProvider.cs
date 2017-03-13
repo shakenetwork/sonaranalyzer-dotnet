@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
     [ExportCodeFixProvider(LanguageNames.VisualBasic)]
     public class StringConcatenationWithPlusCodeFixProvider : SonarCodeFixProvider
     {
-        internal const string Title = "Change to \"&\"";
+        internal const string Title = "Change to '&'";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
             get
@@ -48,7 +48,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
             return DocumentBasedFixAllProvider.Instance;
         }
 
-        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
+        protected sealed override Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
@@ -66,6 +66,8 @@ namespace SonarAnalyzer.Rules.VisualBasic
                         }),
                     context.Diagnostics);
             }
+
+            return TaskHelper.CompletedTask;
         }
 
         private static SyntaxNode CalculateNewRoot(SyntaxNode root, BinaryExpressionSyntax currentAsBinary)

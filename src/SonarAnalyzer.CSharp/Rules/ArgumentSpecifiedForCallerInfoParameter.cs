@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ArgumentSpecifiedForCallerInfoParameter : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3236";
-        internal const string MessageFormat = "Remove this argument from the method call; it hides the caller information.";
+        private const string MessageFormat = "Remove this argument from the method call; it hides the caller information.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

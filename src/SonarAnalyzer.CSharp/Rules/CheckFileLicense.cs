@@ -36,7 +36,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class CheckFileLicense : ParameterLoadingDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1451";
-        internal const string MessageFormat = "Add or update the header of this file.";
+        private const string MessageFormat = "Add or update the header of this file.";
 
         internal const string HeaderFormatRuleParameterKey = "headerFormat";
         internal const string HeaderFormatPropertyKey = nameof(HeaderFormat);
@@ -138,14 +138,9 @@ namespace SonarAnalyzer.Rules.CSharp
 
         private bool AreHeadersEqual(string currentHeader)
         {
-            if (IsRegularExpression)
-            {
-                return Regex.IsMatch(currentHeader, HeaderFormat, RegexOptions.Compiled);
-            }
-            else
-            {
-                return currentHeader == HeaderFormat;
-            }
+            return IsRegularExpression
+                ? Regex.IsMatch(currentHeader, HeaderFormat, RegexOptions.Compiled)
+                : currentHeader == HeaderFormat;
         }
 
         private ImmutableDictionary<string, string> CreateDiagnosticProperties()

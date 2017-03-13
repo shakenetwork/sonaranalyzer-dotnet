@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class TernaryOperatorPointless : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2758";
-        internal const string MessageFormat =
+        private const string MessageFormat =
             "This operation returns the same value whether the condition is 'true' or 'false'.";
 
         private static readonly DiagnosticDescriptor rule =

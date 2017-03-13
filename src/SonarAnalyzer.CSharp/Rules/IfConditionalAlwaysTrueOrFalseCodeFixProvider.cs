@@ -35,7 +35,7 @@ namespace SonarAnalyzer.Rules.CSharp
     [ExportCodeFixProvider(LanguageNames.CSharp)]
     public class IfConditionalAlwaysTrueOrFalseCodeFixProvider : SonarCodeFixProvider
     {
-        internal const string Title = "Remove useless \"if\" statement";
+        internal const string Title = "Remove useless 'if' statement";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
             get
@@ -49,7 +49,7 @@ namespace SonarAnalyzer.Rules.CSharp
             return DocumentBasedFixAllProvider.Instance;
         }
 
-        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
+        protected sealed override Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
@@ -64,6 +64,8 @@ namespace SonarAnalyzer.Rules.CSharp
                         return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                     }),
                 context.Diagnostics);
+
+            return TaskHelper.CompletedTask;
         }
 
         private static SyntaxNode CalculateNewRoot(SyntaxNode root, IfStatementSyntax ifStatement)

@@ -34,19 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     [Rule(DiagnosticId)]
     public class ClassWithEqualityShouldImplementIEquatable : SonarDiagnosticAnalyzer
     {
-        private class MethodSymbolWithLocation
-        {
-            public MethodSymbolWithLocation(IMethodSymbol methodSymbol, Location methodLocation)
-            {
-                Symbol = methodSymbol;
-                Location = methodLocation;
-            }
-
-            public IMethodSymbol Symbol { get; }
-            public Location Location { get; }
-        }
-
-        private const string DiagnosticId = "S3897";
+        internal const string DiagnosticId = "S3897";
         private const string MessageFormat = "{0}";
         private const string ImplementAndOverrideMessage = "Implement 'IEquatable<{0}>' and override 'Equals(object)'.";
         private const string ImplementIEquatableMessage = "Implement 'IEquatable<{0}>'.";
@@ -74,12 +62,12 @@ namespace SonarAnalyzer.Rules.CSharp
 
                     var equalsMethodSymbols = classDeclaration.Members
                         .OfType<MethodDeclarationSyntax>()
-                        .Select(mds => new MethodSymbolWithLocation(c.SemanticModel.GetDeclaredSymbol(mds), mds.Identifier.GetLocation()))
-                        .Where(mswl => IsValidEqualsMethodSymbol(mswl.Symbol))
+                        .Select(mds => c.SemanticModel.GetDeclaredSymbol(mds).ToSymbolWithSyntax(mds))
+                        .Where(node => IsValidEqualsMethodSymbol(node.Symbol))
                         .ToList();
 
-                    var objectEqualsMethod = equalsMethodSymbols.FirstOrDefault(ms => ms.Symbol.Parameters[0].Type.Is(KnownType.System_Object));
-                    var equatableInterface = classSymbol.AllInterfaces.FirstOrDefault(nts => nts.ConstructedFrom?.Is(KnownType.System_IEquatable_T) ?? false);
+                    var objectEqualsMethod = equalsMethodSymbols.FirstOrDefault(ms => ms.Symbol.Parameters[0].Type.Is(KnownType.System_Object))?.Syntax;
+                    var equatableInterface = classSymbol.AllInterfaces.FirstOrDefault(nts => nts.ConstructedFrom.Is(KnownType.System_IEquatable_T));
                     var typeSpecificEqualsMethod = FindTypeSpecificEqualsMethod(equalsMethodSymbols, equatableInterface, classSymbol);
 
                     if (HasNoTriggeringEqualsMethod(objectEqualsMethod, typeSpecificEqualsMethod) ||
@@ -101,32 +89,33 @@ namespace SonarAnalyzer.Rules.CSharp
                 methodSymbol.ReturnType.Is(KnownType.System_Boolean);
         }
 
-        private static MethodSymbolWithLocation FindTypeSpecificEqualsMethod(
-            IList<MethodSymbolWithLocation> equalsMethodSymbols, INamedTypeSymbol equatableInterface,
-            INamedTypeSymbol classSymbol)
+        private static MethodDeclarationSyntax FindTypeSpecificEqualsMethod(
+            IList<SyntaxNodeWithSymbol<MethodDeclarationSyntax, IMethodSymbol>> equalsMethodSymbols,
+            INamedTypeSymbol equatableInterface, INamedTypeSymbol classSymbol)
         {
             var equalsParameterType = equatableInterface == null ?
                 classSymbol :
                 equatableInterface.TypeArguments[0];
 
-            return equalsMethodSymbols.FirstOrDefault(ms =>
-                !ms.Symbol.IsOverride && ms.Symbol.Parameters[0].Type.Equals(equalsParameterType));
+            return equalsMethodSymbols.FirstOrDefault(
+                    ms => !ms.Symbol.IsOverride && ms.Symbol.Parameters[0].Type.Equals(equalsParameterType))
+                ?.Syntax;
         }
 
-        private static bool HasNoTriggeringEqualsMethod(MethodSymbolWithLocation objectEqualsMethod,
-            MethodSymbolWithLocation typeSpecificEqualsMethod)
+        private static bool HasNoTriggeringEqualsMethod(MethodDeclarationSyntax objectEqualsMethod,
+            MethodDeclarationSyntax typeSpecificEqualsMethod)
         {
             return objectEqualsMethod == null && typeSpecificEqualsMethod == null;
         }
 
-        private static bool IsEquatableInterfaceCorrectlyImplemented(MethodSymbolWithLocation objectEqualsMethod,
-            MethodSymbolWithLocation typeSpecificEqualsMethod, INamedTypeSymbol equatableInterface)
+        private static bool IsEquatableInterfaceCorrectlyImplemented(MethodDeclarationSyntax objectEqualsMethod,
+            MethodDeclarationSyntax typeSpecificEqualsMethod, INamedTypeSymbol equatableInterface)
         {
             return objectEqualsMethod != null && typeSpecificEqualsMethod != null && equatableInterface != null;
         }
 
-        private Diagnostic CreateReportDiagnostic(bool implementsIEquatable, MethodSymbolWithLocation objectEqualsMethod,
-            MethodSymbolWithLocation typeSpecificEqualsMethod, SyntaxToken classIdentifier)
+        private Diagnostic CreateReportDiagnostic(bool implementsIEquatable, MethodDeclarationSyntax objectEqualsMethod,
+            MethodDeclarationSyntax typeSpecificEqualsMethod, SyntaxToken classIdentifier)
         {
             if (objectEqualsMethod != null && typeSpecificEqualsMethod != null)
             {
@@ -137,7 +126,7 @@ namespace SonarAnalyzer.Rules.CSharp
             if (objectEqualsMethod != null)
             {
                 return Diagnostic.Create(Rule, classIdentifier.GetLocation(),
-                    additionalLocations: new[] { objectEqualsMethod.Location },
+                    additionalLocations: new[] { objectEqualsMethod.Identifier.GetLocation() },
                     properties: new Dictionary<string, string> { ["0"] = EqualsObjectSecondaryMessage }.ToImmutableDictionary(),
                     messageArgs: string.Format(ImplementIEquatableMessage, classIdentifier.ValueText));
             }
@@ -145,13 +134,13 @@ namespace SonarAnalyzer.Rules.CSharp
             if (!implementsIEquatable)
             {
                 return Diagnostic.Create(Rule, classIdentifier.GetLocation(),
-                    additionalLocations: new[] { typeSpecificEqualsMethod.Location },
+                    additionalLocations: new[] { typeSpecificEqualsMethod.Identifier.GetLocation() },
                     properties: new Dictionary<string, string> { ["0"] = EqualsTSecondaryMessage }.ToImmutableDictionary(),
                     messageArgs: string.Format(ImplementAndOverrideMessage, classIdentifier.ValueText));
             }
 
             return Diagnostic.Create(Rule, classIdentifier.GetLocation(),
-                additionalLocations: new[] { typeSpecificEqualsMethod.Location },
+                additionalLocations: new[] { typeSpecificEqualsMethod.Identifier.GetLocation() },
                 properties: new Dictionary<string, string> { ["0"] = EqualsTSecondaryMessage }.ToImmutableDictionary(),
                 messageArgs: OverrideEqualsMessage);
         }

@@ -19,10 +19,10 @@
  */
 
 using Microsoft.CodeAnalysis;
-using SonarAnalyzer.Common;
-using SonarAnalyzer.Helpers;
-using SonarAnalyzer.Common.CSharp;
 using Microsoft.CodeAnalysis.Diagnostics;
+using SonarAnalyzer.Common;
+using SonarAnalyzer.Common.CSharp;
+using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
 {

@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class MemberShadowsOuterStaticMember : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3218";
-        internal const string MessageFormat = "Rename this {0} to not shadow the outer class' member with the same name.";
+        private const string MessageFormat = "Rename this {0} to not shadow the outer class' member with the same name.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

@@ -35,7 +35,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class InsecureHashAlgorithm : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2070";
-        internal const string MessageFormat = "Use a stronger encryption algorithm than {0}.";
+        private const string MessageFormat = "Use a stronger encryption algorithm than {0}.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

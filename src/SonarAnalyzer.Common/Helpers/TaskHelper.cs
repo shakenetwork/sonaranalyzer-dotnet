@@ -18,31 +18,12 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-using System;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
-using SonarAnalyzer.Helpers.FlowAnalysis.Common;
+using System.Threading.Tasks;
 
-namespace SonarAnalyzer.Helpers.FlowAnalysis.CSharp
+namespace SonarAnalyzer.Helpers
 {
-    public sealed class ForInitializerBlock : SimpleBlock
+    public static class TaskHelper
     {
-        internal ForInitializerBlock(ForStatementSyntax forNode, Block successor)
-            : base(successor)
-        {
-            if (forNode == null)
-            {
-                throw new ArgumentNullException(nameof(forNode));
-            }
-
-            ForNode = forNode;
-        }
-
-        public ForStatementSyntax ForNode { get; }
-
-        internal override Block GetPossibleNonEmptySuccessorBlock()
-        {
-            // This block can't be removed by the CFG simplification, unlike the base class SimpleBlock
-            return this;
-        }
+        public static Task CompletedTask { get; } = Task.Delay(0);
     }
 }

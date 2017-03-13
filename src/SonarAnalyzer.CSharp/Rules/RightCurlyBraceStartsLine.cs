@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class RightCurlyBraceStartsLine : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1109";
-        internal const string MessageFormat = "Move this closing curly brace to the next line.";
+        private const string MessageFormat = "Move this closing curly brace to the next line.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

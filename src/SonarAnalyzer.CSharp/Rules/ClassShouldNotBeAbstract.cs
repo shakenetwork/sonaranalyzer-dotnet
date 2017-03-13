@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ClassShouldNotBeAbstract : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1694";
-        internal const string MessageFormat = "Convert this 'abstract' class to {0}.";
+        private const string MessageFormat = "Convert this 'abstract' class to {0}.";
         internal const string MessageToInterface = "an interface";
         internal const string MessageToConcreteClass = "a concrete class with a private constructor";
 

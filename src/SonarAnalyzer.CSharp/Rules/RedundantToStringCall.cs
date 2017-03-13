@@ -35,7 +35,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class RedundantToStringCall : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1858";
-        internal const string MessageFormat = "There's no need to call 'ToString()'{0}.";
+        private const string MessageFormat = "There's no need to call 'ToString()'{0}.";
         internal const string MessageCallOnString = " on a string";
         internal const string MessageCompiler = ", the compiler will do it for you";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;

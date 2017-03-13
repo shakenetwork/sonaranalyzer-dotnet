@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     [Rule(DiagnosticId)]
     public class FieldsShouldNotBePublic : SonarDiagnosticAnalyzer
     {
-        private const string DiagnosticId = "S1104";
+        internal const string DiagnosticId = "S1104";
         private const string MessageFormat = "Make this field 'private' and encapsulate it in a 'public' property.";
 
         private static readonly DiagnosticDescriptor rule =

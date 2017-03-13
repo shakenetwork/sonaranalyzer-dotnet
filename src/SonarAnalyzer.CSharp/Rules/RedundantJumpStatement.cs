@@ -35,7 +35,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class RedundantJumpStatement : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3626";
-        internal const string MessageFormat = "Remove this redundant jump.";
+        private const string MessageFormat = "Remove this redundant jump.";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly DiagnosticDescriptor rule =

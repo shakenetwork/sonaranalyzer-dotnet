@@ -41,7 +41,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class MemberInitializerRedundant : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3604";
-        internal const string MessageFormat = "Remove the member initializer, all constructors set an initial value for the member.";
+        private const string MessageFormat = "Remove the member initializer, all constructors set an initial value for the member.";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly DiagnosticDescriptor rule =

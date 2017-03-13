@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class IssueSuppression : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1309";
-        internal const string MessageFormat = "Do not suppress issues.";
+        private const string MessageFormat = "Do not suppress issues.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

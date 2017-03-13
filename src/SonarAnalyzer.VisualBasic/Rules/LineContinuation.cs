@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
     public class LineContinuation : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2354";
-        internal const string MessageFormat = "Reformat the code to remove this use of the line continuation character.";
+        private const string MessageFormat = "Reformat the code to remove this use of the line continuation character.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

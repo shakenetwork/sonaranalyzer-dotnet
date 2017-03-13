@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.CSharp
         protected override string Word => "FIXME";
 
         internal const string DiagnosticId = "S1134";
-        internal const string MessageFormat =
+        private const string MessageFormat =
             "Take the required action to fix the issue indicated by this 'FIXME' comment.";
 
         private static readonly DiagnosticDescriptor rule =

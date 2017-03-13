@@ -36,7 +36,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ComparableInterfaceImplementation : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1210";
-        internal const string MessageFormat = "When implementing {0}, you should also override {1}.";
+        private const string MessageFormat = "When implementing {0}, you should also override {1}.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

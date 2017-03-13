@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class PureAttributeOnVoidMethod : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3603";
-        internal const string MessageFormat = "Remove the 'Pure' attribute or change the method to return a value.";
+        private const string MessageFormat = "Remove the 'Pure' attribute or change the method to return a value.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

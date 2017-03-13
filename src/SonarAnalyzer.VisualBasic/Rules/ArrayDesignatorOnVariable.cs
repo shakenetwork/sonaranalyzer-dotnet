@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
     public class ArrayDesignatorOnVariable : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1197";
-        internal const string MessageFormat = "Move the array designator from the variable to the type.";
+        private const string MessageFormat = "Move the array designator from the variable to the type.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class StringFormatArgumentNumberMismatch : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2275";
-        internal const string MessageFormat = "The passed arguments do not match the format string.";
+        private const string MessageFormat = "The passed arguments do not match the format string.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

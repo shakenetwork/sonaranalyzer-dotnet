@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class CastConcreteTypeToInterface : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3215";
-        internal const string MessageFormat = "Remove this cast and edit the interface to add the missing functionality.";
+        private const string MessageFormat = "Remove this cast and edit the interface to add the missing functionality.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

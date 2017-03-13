@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
     public class SimpleDoLoop : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2340";
-        internal const string MessageFormat = "Use a structured loop instead.";
+        private const string MessageFormat = "Use a structured loop instead.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

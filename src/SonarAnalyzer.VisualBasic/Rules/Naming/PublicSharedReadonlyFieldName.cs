@@ -31,7 +31,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
     public sealed class PublicSharedReadonlyFieldName : FieldNameChecker
     {
         internal const string DiagnosticId = "S2370";
-        internal const string MessageFormat = "Rename '{0}' to match the regular expression: '{1}'.";
+        private const string MessageFormat = "Rename '{0}' to match the regular expression: '{1}'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager)
@@ -40,7 +40,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
         protected override DiagnosticDescriptor Rule => rule;
 
         [RuleParameter("format", PropertyType.String,
-            "Regular expression used to check the non-private \"Shared ReadOnly\" field names against.",
+            "Regular expression used to check the non-private 'Shared ReadOnly' field names against.",
             NamingHelper.PascalCasingPattern)]
         public override string Pattern { get; set; } = NamingHelper.PascalCasingPattern;
 

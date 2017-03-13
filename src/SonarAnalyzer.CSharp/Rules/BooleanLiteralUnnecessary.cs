@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class BooleanLiteralUnnecessary : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1125";
-        internal const string MessageFormat = "Remove the unnecessary Boolean literal(s).";
+        private const string MessageFormat = "Remove the unnecessary Boolean literal(s).";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly DiagnosticDescriptor rule =

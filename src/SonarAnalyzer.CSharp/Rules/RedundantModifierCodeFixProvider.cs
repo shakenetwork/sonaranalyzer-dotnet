@@ -18,17 +18,17 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+using System.Collections.Generic;
 using System.Collections.Immutable;
-using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CodeFixes;
-using System.Threading.Tasks;
 using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CodeActions;
+using Microsoft.CodeAnalysis.CodeFixes;
 using Microsoft.CodeAnalysis.CSharp;
-using SonarAnalyzer.Common;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Formatting;
-using System.Collections.Generic;
+using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
 
 namespace SonarAnalyzer.Rules.CSharp
@@ -36,10 +36,10 @@ namespace SonarAnalyzer.Rules.CSharp
     [ExportCodeFixProvider(LanguageNames.CSharp)]
     public class RedundantModifierCodeFixProvider : SonarCodeFixProvider
     {
-        internal const string TitleUnsafe = "Remove redundant \"unsafe\" modifier";
-        internal const string TitleChecked = "Remove redundant \"checked\" and \"unchecked\"modifier";
-        internal const string TitlePartial = "Remove redundant \"partial\" modifier";
-        internal const string TitleSealed = "Remove redundant \"sealed\" modifier";
+        internal const string TitleUnsafe = "Remove redundant 'unsafe' modifier";
+        internal const string TitleChecked = "Remove redundant 'checked' and 'unchecked'modifier";
+        internal const string TitlePartial = "Remove redundant 'partial' modifier";
+        internal const string TitleSealed = "Remove redundant 'sealed' modifier";
 
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
@@ -58,7 +58,7 @@ namespace SonarAnalyzer.Rules.CSharp
             SyntaxKind.PartialKeyword,
             SyntaxKind.SealedKeyword);
 
-        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
+        protected sealed override Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
@@ -75,7 +75,8 @@ namespace SonarAnalyzer.Rules.CSharp
                             return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                         }),
                     context.Diagnostics);
-                return;
+
+                return TaskHelper.CompletedTask;
             }
 
             if (SimpleTokenKinds.Contains(token.Kind()))
@@ -91,10 +92,13 @@ namespace SonarAnalyzer.Rules.CSharp
                             return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                         }),
                     context.Diagnostics);
-                return;
+
+                return TaskHelper.CompletedTask;
             }
 
             RegisterCodeFixForChecked(token.Parent, root, context);
+
+            return TaskHelper.CompletedTask;
         }
 
         private static void RegisterCodeFixForChecked(SyntaxNode node, SyntaxNode root, CodeFixContext context)

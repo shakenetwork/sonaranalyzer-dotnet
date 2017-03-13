@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
     public class IndexedPropertyWithMultipleParameters : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2352";
-        internal const string MessageFormat = "This indexed property has {0} parameters, use methods instead.";
+        private const string MessageFormat = "This indexed property has {0} parameters, use methods instead.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

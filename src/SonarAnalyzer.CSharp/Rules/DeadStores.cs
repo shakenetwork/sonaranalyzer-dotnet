@@ -40,7 +40,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class DeadStores : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1854";
-        internal const string MessageFormat = "Remove this useless assignment to local variable '{0}'.";
+        private const string MessageFormat = "Remove this useless assignment to local variable '{0}'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

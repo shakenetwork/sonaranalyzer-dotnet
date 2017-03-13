@@ -37,7 +37,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
     public class UseWithStatement : ParameterLoadingDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2375";
-        internal const string MessageFormat = "Wrap this and the following {0} statement{2} that use '{1}' in a 'With' statement.";
+        private const string MessageFormat = "Wrap this and the following {0} statement{2} that use '{1}' in a 'With' statement.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager)

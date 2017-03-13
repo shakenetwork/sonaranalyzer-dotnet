@@ -35,7 +35,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class BreakOutsideSwitch : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1227";
-        internal const string MessageFormat = "Refactor the code in order to remove this break statement.";
+        private const string MessageFormat = "Refactor the code in order to remove this break statement.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

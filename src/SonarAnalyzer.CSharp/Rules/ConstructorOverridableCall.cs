@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ConstructorOverridableCall : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1699";
-        internal const string MessageFormat = "Remove this call from a constructor to the overridable '{0}' method.";
+        private const string MessageFormat = "Remove this call from a constructor to the overridable '{0}' method.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

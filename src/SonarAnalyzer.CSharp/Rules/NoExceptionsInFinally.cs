@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class NoExceptionsInFinally : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1163";
-        internal const string MessageFormat = "Refactor this code to not throw exceptions in finally blocks.";
+        private const string MessageFormat = "Refactor this code to not throw exceptions in finally blocks.";
 
         protected static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

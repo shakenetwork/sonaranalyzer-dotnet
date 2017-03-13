@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class StaticSealedClassProtectedMembers : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2156";
-        internal const string MessageFormat = "Remove this 'protected' modifier.";
+        private const string MessageFormat = "Remove this 'protected' modifier.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

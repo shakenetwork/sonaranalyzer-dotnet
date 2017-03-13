@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ValuesUselesslyIncremented : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2123";
-        internal const string MessageFormat = "Remove this {0} or correct the code not to waste it.";
+        private const string MessageFormat = "Remove this {0} or correct the code not to waste it.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

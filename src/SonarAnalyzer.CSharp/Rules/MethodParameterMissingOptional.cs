@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class MethodParameterMissingOptional : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3450";
-        internal const string MessageFormat = "Add the 'Optional' attribute to this parameter.";
+        private const string MessageFormat = "Add the 'Optional' attribute to this parameter.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

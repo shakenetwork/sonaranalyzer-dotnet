@@ -35,7 +35,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class EmptyNestedBlock : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S108";
-        internal const string MessageFormat = "Either remove or fill this block of code.";
+        private const string MessageFormat = "Either remove or fill this block of code.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class CatchEmpty : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2486";
-        internal const string MessageFormat = "Handle the exception or explain in a comment why it can be ignored.";
+        private const string MessageFormat = "Handle the exception or explain in a comment why it can be ignored.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

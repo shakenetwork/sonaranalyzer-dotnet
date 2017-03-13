@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class RedundancyInConstructorDestructorDeclaration : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3253";
-        internal const string MessageFormat = "Remove this redundant {0}.";
+        private const string MessageFormat = "Remove this redundant {0}.";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly DiagnosticDescriptor rule =

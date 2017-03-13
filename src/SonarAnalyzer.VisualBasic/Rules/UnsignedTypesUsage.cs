@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
     public class UnsignedTypesUsage : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2374";
-        internal const string MessageFormat = "Change this unsigned type to '{0}'.";
+        private const string MessageFormat = "Change this unsigned type to '{0}'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

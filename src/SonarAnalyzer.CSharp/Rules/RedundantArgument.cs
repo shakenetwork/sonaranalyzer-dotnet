@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class RedundantArgument : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3254";
-        internal const string MessageFormat = "Remove this default value assigned to parameter '{0}'.";
+        private const string MessageFormat = "Remove this default value assigned to parameter '{0}'.";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly DiagnosticDescriptor rule =

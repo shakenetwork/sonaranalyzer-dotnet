@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class RedundantPropertyNamesInAnonymousClass : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3441";
-        internal const string MessageFormat = "Remove the redundant '{0} ='.";
+        private const string MessageFormat = "Remove the redundant '{0} ='.";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly DiagnosticDescriptor rule =

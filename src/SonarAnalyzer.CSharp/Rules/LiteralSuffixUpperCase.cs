@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class LiteralSuffixUpperCase : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S818";
-        internal const string MessageFormat = "Upper case this literal suffix.";
+        private const string MessageFormat = "Upper case this literal suffix.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager)

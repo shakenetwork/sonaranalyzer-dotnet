@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ToStringNoNull : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2225";
-        internal const string MessageFormat = "Return empty string instead.";
+        private const string MessageFormat = "Return empty string instead.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

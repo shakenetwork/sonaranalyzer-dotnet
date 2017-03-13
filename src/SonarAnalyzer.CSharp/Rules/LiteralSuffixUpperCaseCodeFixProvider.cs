@@ -47,14 +47,14 @@ namespace SonarAnalyzer.Rules.CSharp
             return WellKnownFixAllProviders.BatchFixer;
         }
 
-        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
+        protected sealed override Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var literal = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true) as LiteralExpressionSyntax;
             if (literal == null)
             {
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             var newLiteral = SyntaxFactory.Literal(
@@ -74,6 +74,8 @@ namespace SonarAnalyzer.Rules.CSharp
                         }),
                     context.Diagnostics);
             }
+
+            return TaskHelper.CompletedTask;
         }
     }
 }

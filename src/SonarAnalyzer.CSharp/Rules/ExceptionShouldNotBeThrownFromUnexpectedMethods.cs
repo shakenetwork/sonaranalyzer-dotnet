@@ -35,7 +35,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ExceptionShouldNotBeThrownFromUnexpectedMethods : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3877";
-        internal const string MessageFormat = "Remove this 'throw' statement.";
+        private const string MessageFormat = "Remove this 'throw' statement.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

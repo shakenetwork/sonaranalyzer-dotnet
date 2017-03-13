@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class SillyBitwiseOperation : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2437";
-        internal const string MessageFormat = "Remove this silly bit operation.";
+        private const string MessageFormat = "Remove this silly bit operation.";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
         internal const string IsReportingOnLeftKey = "IsReportingOnLeft";
 

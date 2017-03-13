@@ -18,9 +18,9 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+using System;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using SonarAnalyzer.Helpers.FlowAnalysis.Common;
-using System;
 
 namespace SonarAnalyzer.Helpers.FlowAnalysis.CSharp
 {

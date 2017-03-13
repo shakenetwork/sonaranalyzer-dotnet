@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
     public class ArrayCreationLongSyntax : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2355";
-        internal const string MessageFormat = "Use an array literal here instead.";
+        private const string MessageFormat = "Use an array literal here instead.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

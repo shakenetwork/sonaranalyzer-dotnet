@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
     public class StringConcatenationWithPlus : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1645";
-        internal const string MessageFormat = "Switch this use of the '+' operator to the '&'.";
+        private const string MessageFormat = "Switch this use of the '+' operator to the '&'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

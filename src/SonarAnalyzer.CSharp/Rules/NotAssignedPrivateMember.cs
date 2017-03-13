@@ -42,7 +42,7 @@ namespace SonarAnalyzer.Rules.CSharp
         */
 
         internal const string DiagnosticId = "S3459";
-        internal const string MessageFormat = "Remove unassigned {0} '{1}', or set its value.";
+        private const string MessageFormat = "Remove unassigned {0} '{1}', or set its value.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

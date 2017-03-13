@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class EqualityOnModulus : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2197";
-        internal const string MessageFormat = "The result of this modulus operation may not be {0}.";
+        private const string MessageFormat = "The result of this modulus operation may not be {0}.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

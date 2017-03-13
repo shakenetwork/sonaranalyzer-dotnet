@@ -48,7 +48,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
         public sealed override FixAllProvider GetFixAllProvider() => DocumentBasedFixAllProvider.Instance;
 
-        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
+        protected sealed override Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
@@ -57,7 +57,7 @@ namespace SonarAnalyzer.Rules.CSharp
             RedundantDeclaration.RedundancyType diagnosticType;
             if (!Enum.TryParse(diagnostic.Properties[RedundantDeclaration.DiagnosticTypeKey], out diagnosticType))
             {
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             CodeAction action;
@@ -65,6 +65,8 @@ namespace SonarAnalyzer.Rules.CSharp
             {
                 context.RegisterCodeFix(action, context.Diagnostics);
             }
+
+            return TaskHelper.CompletedTask;
         }
 
         private static bool TryGetRedundantLambdaParameterAction(SyntaxNode syntaxNode, SyntaxNode root,

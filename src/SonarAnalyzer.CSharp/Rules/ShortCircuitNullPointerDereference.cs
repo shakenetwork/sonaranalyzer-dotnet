@@ -37,7 +37,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ShortCircuitNullPointerDereference : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1697";
-        internal const string MessageFormat =
+        private const string MessageFormat =
             "Either reverse the equality operator in the '{0}' null test, or reverse the logical operator that follows it.";
 
         private static readonly DiagnosticDescriptor rule =

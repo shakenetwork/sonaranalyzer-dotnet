@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class MethodOverloadOptionalParameter : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3427";
-        internal const string MessageFormat =
+        private const string MessageFormat =
             "This method signature overlaps the one defined on line {0}{1}, the default parameter value {2}.";
 
         private static readonly DiagnosticDescriptor rule =
@@ -112,7 +112,7 @@ namespace SonarAnalyzer.Rules.CSharp
                         c.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, syntax.GetLocation(),
                             hidingMethodSyntax.GetLocation().GetLineSpan().StartLinePosition.Line + 1,
                             isOtherFile
-                                ? $" in file \"{new FileInfo(hidingMethodSyntax.SyntaxTree.FilePath).Name}\""
+                                ? $" in file '{new FileInfo(hidingMethodSyntax.SyntaxTree.FilePath).Name}'"
                                 : string.Empty,
                             defaultCanBeUsed
                                 ? "can only be used with named arguments"

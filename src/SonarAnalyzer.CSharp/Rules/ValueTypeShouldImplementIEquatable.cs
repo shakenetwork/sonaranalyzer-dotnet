@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ValueTypeShouldImplementIEquatable : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3898";
-        internal const string MessageFormat = "Implement 'IEquatable<T>' in value type '{0}'.";
+        private const string MessageFormat = "Implement 'IEquatable<T>' in value type '{0}'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

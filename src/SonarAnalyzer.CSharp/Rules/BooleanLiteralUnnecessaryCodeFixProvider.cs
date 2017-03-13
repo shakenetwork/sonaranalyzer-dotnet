@@ -49,14 +49,14 @@ namespace SonarAnalyzer.Rules.CSharp
             return WellKnownFixAllProviders.BatchFixer;
         }
 
-        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
+        protected sealed override Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var syntaxNode = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true) as ExpressionSyntax;
             if (syntaxNode == null)
             {
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             var parent = syntaxNode.Parent;
@@ -66,48 +66,50 @@ namespace SonarAnalyzer.Rules.CSharp
             if (binary != null)
             {
                 RegisterBinaryExpressionReplacement(context, root, syntaxNode, binary);
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             var conditional = syntaxNode as ConditionalExpressionSyntax;
             if (conditional != null)
             {
                 RegisterConditionalExpressionRemoval(context, root, conditional);
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             var literal = syntaxNode as LiteralExpressionSyntax;
             if (literal == null)
             {
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             if (parent is PrefixUnaryExpressionSyntax)
             {
                 RegisterBooleanInversion(context, root, literal);
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             var conditionalParent = parent as ConditionalExpressionSyntax;
             if (conditionalParent != null)
             {
                 RegisterConditionalExpressionRewrite(context, root, literal, conditionalParent);
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             var binaryParent = parent as BinaryExpressionSyntax;
             if (binaryParent != null)
             {
                 RegisterBinaryExpressionRemoval(context, root, literal, binaryParent);
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             var forStatement = parent as ForStatementSyntax;
             if (forStatement != null)
             {
                 RegisterForStatementConditionRemoval(context, root, forStatement);
-                return;
+                return TaskHelper.CompletedTask;
             }
+
+            return TaskHelper.CompletedTask;
         }
 
         private static void RegisterForStatementConditionRemoval(CodeFixContext context, SyntaxNode root, ForStatementSyntax forStatement)

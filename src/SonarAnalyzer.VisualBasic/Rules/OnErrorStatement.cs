@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
     public class OnErrorStatement : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2359";
-        internal const string MessageFormat = "Remove this use of 'OnError'.";
+        private const string MessageFormat = "Remove this use of 'OnError'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

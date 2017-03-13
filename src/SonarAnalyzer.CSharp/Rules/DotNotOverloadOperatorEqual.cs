@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class DotNotOverloadOperatorEqual : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3875";
-        internal const string MessageFormat = "Remove this overload of 'operator =='.";
+        private const string MessageFormat = "Remove this overload of 'operator =='.";
 
         private static readonly ISet<KnownType> InterfacesRelyingOnOperatorEqualOverload = new HashSet<KnownType>
         {

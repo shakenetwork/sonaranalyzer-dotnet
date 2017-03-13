@@ -35,7 +35,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ForLoopCounterCondition : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1994";
-        internal const string MessageFormat = "{0}";
+        private const string MessageFormat = "{0}";
         internal const string MessageFormatNotEmpty =
             "This loop's stop condition tests {0} but the incrementer updates {1}.";
         internal const string MessageFormatEmpty =

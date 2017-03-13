@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class IfConditionalAlwaysTrueOrFalse : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1145";
-        internal const string MessageFormat = "Remove this useless {0}.";
+        private const string MessageFormat = "Remove this useless {0}.";
         private const string ifStatementLiteral = "'if' statement";
         private const string elseClauseLiteral = "'else' clause";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;

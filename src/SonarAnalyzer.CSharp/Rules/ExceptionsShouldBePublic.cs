@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ExceptionsShouldBePublic : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3871";
-        internal const string MessageFormat = "Make this exception 'public'.";
+        private const string MessageFormat = "Make this exception 'public'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

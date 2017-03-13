@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class UseStringIsNullOrEmpty : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3256";
-        internal const string MessageFormat =
+        private const string MessageFormat =
             "Use 'string.IsNullOrEmpty()' instead of comparing to empty string.";
 
         private static readonly DiagnosticDescriptor rule =

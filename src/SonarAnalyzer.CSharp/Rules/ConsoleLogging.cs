@@ -18,15 +18,14 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+using System.Collections.Generic;
 using System.Collections.Immutable;
-using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
 using SonarAnalyzer.Helpers;
-using System.Collections.Generic;
 
 namespace SonarAnalyzer.Rules.CSharp
 {
@@ -35,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ConsoleLogging : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2228";
-        internal const string MessageFormat = "Remove this logging statement.";
+        private const string MessageFormat = "Remove this logging statement.";
 
         private static readonly ISet<string> BannedConsoleMembers = ImmutableHashSet.Create("WriteLine", "Write");
 

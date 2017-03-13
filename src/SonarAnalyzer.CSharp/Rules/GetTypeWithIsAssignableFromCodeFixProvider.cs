@@ -41,7 +41,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
         public sealed override FixAllProvider GetFixAllProvider() => WellKnownFixAllProviders.BatchFixer;
 
-        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
+        protected sealed override Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
@@ -50,13 +50,13 @@ namespace SonarAnalyzer.Rules.CSharp
             var binary = syntaxNode as BinaryExpressionSyntax;
             if (invocation == null && binary == null)
             {
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             SyntaxNode newRoot;
             if (!TryGetNewRoot(root, diagnostic, invocation, binary, out newRoot))
             {
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             context.RegisterCodeFix(
@@ -64,6 +64,8 @@ namespace SonarAnalyzer.Rules.CSharp
                     Title,
                     c => Task.FromResult(context.Document.WithSyntaxRoot(newRoot))),
                 context.Diagnostics);
+
+            return TaskHelper.CompletedTask;
         }
 
         private static bool TryGetNewRoot(SyntaxNode root, Diagnostic diagnostic, InvocationExpressionSyntax invocation, BinaryExpressionSyntax binary, out SyntaxNode newRoot)

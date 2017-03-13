@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
     public class CommentLineEnd : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S139";
-        internal const string MessageFormat = "Move this trailing comment on the previous empty line.";
+        private const string MessageFormat = "Move this trailing comment on the previous empty line.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager)

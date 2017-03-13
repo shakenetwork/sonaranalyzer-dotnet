@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ExceptionRethrow : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3445";
-        internal const string MessageFormat = "Consider using 'throw;' to preserve the stack trace.";
+        private const string MessageFormat = "Consider using 'throw;' to preserve the stack trace.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
@@ -67,7 +67,7 @@ namespace SonarAnalyzer.Rules.CSharp
                     foreach (var @throw in throws)
                     {
                         var thrown = c.SemanticModel.GetSymbolInfo(@throw.Expression).Symbol as ILocalSymbol;
-                        if (object.Equals(thrown, exceptionIdentifier))
+                        if (Equals(thrown, exceptionIdentifier))
                         {
                             c.ReportDiagnostic(Diagnostic.Create(Rule, @throw.GetLocation()));
                         }

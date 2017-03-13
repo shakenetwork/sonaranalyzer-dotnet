@@ -36,7 +36,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class StreamReadStatement : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2674";
-        internal const string MessageFormat =
+        private const string MessageFormat =
             "Check the return value of the '{0}' call to see how many bytes were read.";
 
         private static readonly DiagnosticDescriptor rule =

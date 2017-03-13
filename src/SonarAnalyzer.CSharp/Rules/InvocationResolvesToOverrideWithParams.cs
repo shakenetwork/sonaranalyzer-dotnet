@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class InvocationResolvesToOverrideWithParams : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3220";
-        internal const string MessageFormat = "Review this call, which partially matches an overload without 'params'. The partial match is '{0}'.";
+        private const string MessageFormat = "Review this call, which partially matches an overload without 'params'. The partial match is '{0}'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

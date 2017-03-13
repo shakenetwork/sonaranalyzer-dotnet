@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class DelegateSubtraction : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3172";
-        internal const string MessageFormat = "Review this subtraction of a chain of delegates: it may not work as you expect.";
+        private const string MessageFormat = "Review this subtraction of a chain of delegates: it may not work as you expect.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

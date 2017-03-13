@@ -36,7 +36,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class CollectionQuerySimplification : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2971";
-        internal const string MessageFormat = "{0}";
+        private const string MessageFormat = "{0}";
         internal const string MessageUseInstead = "Use {0} here instead.";
         internal const string MessageDropAndChange = "Drop '{0}' and move the condition into the '{1}'.";
         internal const string MessageDropFromMiddle = "Drop '{0}' from the middle of the call chain.";

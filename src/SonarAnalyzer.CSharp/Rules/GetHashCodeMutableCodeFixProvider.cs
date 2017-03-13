@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     [ExportCodeFixProvider(LanguageNames.CSharp)]
     public class GetHashCodeMutableCodeFixProvider : SonarCodeFixProvider
     {
-        internal const string Title = "Make field \"readonly\"";
+        internal const string Title = "Make field 'readonly'";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
             get

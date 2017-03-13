@@ -46,7 +46,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
             return WellKnownFixAllProviders.BatchFixer;
         }
 
-        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
+        protected sealed override Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
@@ -56,13 +56,13 @@ namespace SonarAnalyzer.Rules.VisualBasic
             if (variableDeclarator == null ||
                 variableDeclarator.Names.Count != 1)
             {
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             var simpleAsClause = variableDeclarator.AsClause as SimpleAsClauseSyntax;
             if (simpleAsClause == null)
             {
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             context.RegisterCodeFix(
@@ -94,6 +94,8 @@ namespace SonarAnalyzer.Rules.VisualBasic
                         return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                     }),
                 context.Diagnostics);
+
+            return TaskHelper.CompletedTask;
         }
     }
 }

@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class MethodOverrideChangedDefaultValue : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1006";
-        internal const string MessageFormat = "{0} the default parameter value {1}.";
+        private const string MessageFormat = "{0} the default parameter value {1}.";
         internal const string MessageAdd = "defined in the overridden method";
         internal const string MessageRemove = "to match the signature of overridden method";
         internal const string MessageUseSame = "defined in the overridden method";

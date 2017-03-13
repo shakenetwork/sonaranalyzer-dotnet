@@ -31,7 +31,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class GotoStatement : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S907";
-        internal const string MessageFormat = "Remove this use of 'goto'.";
+        private const string MessageFormat = "Remove this use of 'goto'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

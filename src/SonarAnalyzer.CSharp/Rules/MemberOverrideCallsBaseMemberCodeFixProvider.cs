@@ -46,7 +46,7 @@ namespace SonarAnalyzer.Rules.CSharp
             return DocumentBasedFixAllProvider.Instance;
         }
 
-        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
+        protected sealed override Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
@@ -54,7 +54,7 @@ namespace SonarAnalyzer.Rules.CSharp
             var member = root.FindNode(diagnosticSpan) as MemberDeclarationSyntax;
             if (member == null)
             {
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             context.RegisterCodeFix(
@@ -66,6 +66,8 @@ namespace SonarAnalyzer.Rules.CSharp
                         return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                     }),
                 context.Diagnostics);
+
+            return TaskHelper.CompletedTask;
         }
     }
 }

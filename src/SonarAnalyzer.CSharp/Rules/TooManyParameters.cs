@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class TooManyParameters : ParameterLoadingDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S107";
-        internal const string MessageFormat = "{2} has {1} parameters, which is greater than the {0} authorized.";
+        private const string MessageFormat = "{2} has {1} parameters, which is greater than the {0} authorized.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager)

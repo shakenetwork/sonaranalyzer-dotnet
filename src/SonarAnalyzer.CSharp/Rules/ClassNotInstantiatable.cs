@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ClassNotInstantiatable : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3453";
-        internal const string MessageFormat = "This class can't be instantiated; make {0} 'public'.";
+        private const string MessageFormat = "This class can't be instantiated; make {0} 'public'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

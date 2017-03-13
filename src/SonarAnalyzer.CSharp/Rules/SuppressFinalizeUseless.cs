@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class SuppressFinalizeUseless : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3234";
-        internal const string MessageFormat = "Remove this useless call to 'GC.SuppressFinalize'.";
+        private const string MessageFormat = "Remove this useless call to 'GC.SuppressFinalize'.";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly DiagnosticDescriptor rule =

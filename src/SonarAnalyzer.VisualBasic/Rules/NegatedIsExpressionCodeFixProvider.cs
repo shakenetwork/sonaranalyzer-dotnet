@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
     [ExportCodeFixProvider(LanguageNames.VisualBasic)]
     public class NegatedIsExpressionCodeFixProvider : SonarCodeFixProvider
     {
-        internal const string Title = "Replace \"Not...Is...\" with \"IsNot\".";
+        internal const string Title = "Replace 'Not...Is...' with 'IsNot'.";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
             get
@@ -47,7 +47,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
             return WellKnownFixAllProviders.BatchFixer;
         }
 
-        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
+        protected sealed override Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
@@ -57,7 +57,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
             if (isExpression == null ||
                 !isExpression.IsKind(SyntaxKind.IsExpression))
             {
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             context.RegisterCodeFix(
@@ -65,6 +65,8 @@ namespace SonarAnalyzer.Rules.VisualBasic
                     Title,
                     c => ChangeToIsNotAsync(context.Document, unary, isExpression, c)),
                 context.Diagnostics);
+
+            return TaskHelper.CompletedTask;
         }
 
         private static async Task<Document> ChangeToIsNotAsync(Document document, UnaryExpressionSyntax unary, BinaryExpressionSyntax isExpression,

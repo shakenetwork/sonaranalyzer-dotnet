@@ -38,7 +38,7 @@ namespace SonarAnalyzer.Rules.Common
 
         public override FixAllProvider GetFixAllProvider() => DocumentBasedFixAllProvider.Instance;
 
-        protected override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
+        protected override Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
@@ -46,7 +46,7 @@ namespace SonarAnalyzer.Rules.Common
             if (expression == null ||
                 !IsCandidateExpression(expression))
             {
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             context.RegisterCodeFix(
@@ -54,6 +54,8 @@ namespace SonarAnalyzer.Rules.Common
                     Title,
                     c => ReplaceExpression(expression, root, context.Document)),
                 context.Diagnostics);
+
+            return TaskHelper.CompletedTask;
         }
 
         internal abstract bool IsCandidateExpression(TBinaryExpression expression);

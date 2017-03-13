@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
     public class ExitStatementUsage : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3385";
-        internal const string MessageFormat = "Remove this 'Exit' statement.";
+        private const string MessageFormat = "Remove this 'Exit' statement.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class SwitchCasesMinimumThree : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1301";
-        internal const string MessageFormat = "Replace this 'switch' statement with 'if' statements to increase readability.";
+        private const string MessageFormat = "Replace this 'switch' statement with 'if' statements to increase readability.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

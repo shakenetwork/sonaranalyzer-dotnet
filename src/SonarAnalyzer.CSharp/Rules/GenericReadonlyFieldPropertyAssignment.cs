@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class GenericReadonlyFieldPropertyAssignment : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2934";
-        internal const string MessageFormat =
+        private const string MessageFormat =
             "Restrict '{0}' to be a reference type or remove this assignment of '{1}'; it is useless if '{0}' " +
             "is a value type.";
 

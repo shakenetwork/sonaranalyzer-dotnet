@@ -35,7 +35,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class StringFormatWithNoArgument : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3457";
-        internal const string MessageFormat = "Remove this formatting call and simply use the input string.";
+        private const string MessageFormat = "Remove this formatting call and simply use the input string.";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly DiagnosticDescriptor rule =

@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
     public class NegatedIsExpression : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2358";
-        internal const string MessageFormat = "Replace this use of 'Not...Is...' with 'IsNot'.";
+        private const string MessageFormat = "Replace this use of 'Not...Is...' with 'IsNot'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

@@ -39,7 +39,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
         public sealed override FixAllProvider GetFixAllProvider() => DocumentBasedFixAllProvider.Instance;
 
-        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
+        protected sealed override Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
@@ -47,7 +47,7 @@ namespace SonarAnalyzer.Rules.CSharp
             var anonymousObjectCreation = nameEquals?.Parent?.Parent as AnonymousObjectCreationExpressionSyntax;
             if (anonymousObjectCreation == null)
             {
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             context.RegisterCodeFix(
@@ -67,6 +67,8 @@ namespace SonarAnalyzer.Rules.CSharp
                         return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                     }),
                 context.Diagnostics);
+
+            return TaskHelper.CompletedTask;
         }
 
         private static SyntaxNodeOrToken GetNewSyntaxListItem(SyntaxNodeOrToken item)

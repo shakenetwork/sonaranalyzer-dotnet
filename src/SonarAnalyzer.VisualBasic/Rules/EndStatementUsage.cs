@@ -31,7 +31,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
     public class EndStatementUsage : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1147";
-        internal const string MessageFormat = "Remove this call to 'End' or ensure it is really required.";
+        private const string MessageFormat = "Remove this call to 'End' or ensure it is really required.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

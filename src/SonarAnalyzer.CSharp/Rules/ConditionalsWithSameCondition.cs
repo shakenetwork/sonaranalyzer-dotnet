@@ -36,7 +36,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ConditionalsWithSameCondition : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2760";
-        internal const string MessageFormat = "This condition was just checked on line {0}.";
+        private const string MessageFormat = "This condition was just checked on line {0}.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

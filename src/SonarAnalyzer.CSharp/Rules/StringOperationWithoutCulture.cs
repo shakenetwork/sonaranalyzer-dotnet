@@ -35,7 +35,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class StringOperationWithoutCulture : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1449";
-        internal const string MessageFormat = "{0}";
+        private const string MessageFormat = "{0}";
         internal const string MessageDefineLocale = "Define the locale to be used in this string operation.";
         internal const string MessageChangeCompareTo = "Use 'CompareOrdinal' or 'Compare' with the locale specified instead of 'CompareTo'.";
 

@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class RedundantParentheses : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3235";
-        internal const string MessageFormat = "Remove these redundant parentheses.";
+        private const string MessageFormat = "Remove these redundant parentheses.";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly DiagnosticDescriptor rule =

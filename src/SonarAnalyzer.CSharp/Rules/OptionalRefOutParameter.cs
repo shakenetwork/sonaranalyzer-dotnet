@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class OptionalRefOutParameter : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3447";
-        internal const string MessageFormat = "Remove the 'Optional' attribute, it cannot be used with '{0}'.";
+        private const string MessageFormat = "Remove the 'Optional' attribute, it cannot be used with '{0}'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

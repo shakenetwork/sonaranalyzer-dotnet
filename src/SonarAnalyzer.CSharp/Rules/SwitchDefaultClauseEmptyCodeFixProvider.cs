@@ -32,19 +32,19 @@ namespace SonarAnalyzer.Rules.CSharp
     [ExportCodeFixProvider(LanguageNames.CSharp)]
     public class SwitchDefaultClauseEmptyCodeFixProvider : SonarCodeFixProvider
     {
-        internal const string Title = "Remove empty \"default\" clause";
+        internal const string Title = "Remove empty 'default' clause";
         public sealed override ImmutableArray<string> FixableDiagnosticIds => ImmutableArray.Create(SwitchDefaultClauseEmpty.DiagnosticId);
 
         public sealed override FixAllProvider GetFixAllProvider() => WellKnownFixAllProviders.BatchFixer;
 
-        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
+        protected sealed override Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var syntaxNode = root.FindNode(diagnosticSpan) as SwitchSectionSyntax;
             if (syntaxNode == null)
             {
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             context.RegisterCodeFix(
@@ -56,6 +56,8 @@ namespace SonarAnalyzer.Rules.CSharp
                         return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                     }),
                 context.Diagnostics);
+
+            return TaskHelper.CompletedTask;
         }
     }
 }

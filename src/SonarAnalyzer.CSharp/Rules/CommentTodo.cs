@@ -32,8 +32,8 @@ namespace SonarAnalyzer.Rules.CSharp
         protected override string Word => "TODO";
 
         internal const string DiagnosticId = "S1135";
-        internal const string MessageFormat =
-            "Complete the task associated to this \"TODO\" comment.";
+        private const string MessageFormat =
+            "Complete the task associated to this 'TODO' comment.";
 
         internal static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager)

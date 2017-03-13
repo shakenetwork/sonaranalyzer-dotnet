@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class IfCollapsible : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1066";
-        internal const string MessageFormat = "Merge this if statement with the enclosing one.";
+        private const string MessageFormat = "Merge this if statement with the enclosing one.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

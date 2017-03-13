@@ -35,7 +35,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ImplementIDisposableCorrectly : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3881";
-        internal const string MessageFormat = "Fix this implementation of IDisposable to conform to the dispose pattern.";
+        private const string MessageFormat = "Fix this implementation of IDisposable to conform to the dispose pattern.";
 
         private const string DisposeName = nameof(IDisposable.Dispose);
         private const string SuppressFinalizeName = nameof(GC.SuppressFinalize);

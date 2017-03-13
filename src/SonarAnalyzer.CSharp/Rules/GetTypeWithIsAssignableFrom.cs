@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class GetTypeWithIsAssignableFrom : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2219";
-        internal const string MessageFormat = "Use {0} instead.";
+        private const string MessageFormat = "Use {0} instead.";
         internal const string MessageIsOperator = "the 'is' operator";
         internal const string MessageIsInstanceOfType = "the 'IsInstanceOfType()' method";
         internal const string MessageNullCheck = "a 'null' check";
@@ -179,22 +179,17 @@ namespace SonarAnalyzer.Rules.CSharp
                 return;
             }
 
-            if (memberAccess.Expression is TypeOfExpressionSyntax)
-            {
-                context.ReportDiagnostic(Diagnostic.Create(rule, invocation.GetLocation(),
+            context.ReportDiagnostic(memberAccess.Expression is TypeOfExpressionSyntax
+                ? Diagnostic.Create(rule, invocation.GetLocation(),
                     ImmutableDictionary<string, string>.Empty
                         .Add(UseIsOperatorKey, true.ToString())
                         .Add(ShouldRemoveGetType, true.ToString()),
-                    MessageIsOperator));
-            }
-            else
-            {
-                context.ReportDiagnostic(Diagnostic.Create(rule, invocation.GetLocation(),
+                    MessageIsOperator)
+                : Diagnostic.Create(rule, invocation.GetLocation(),
                     ImmutableDictionary<string, string>.Empty
                         .Add(UseIsOperatorKey, false.ToString())
                         .Add(ShouldRemoveGetType, true.ToString()),
                     MessageIsInstanceOfType));
-            }
         }
     }
 }

@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     [ExportCodeFixProvider(LanguageNames.CSharp)]
     public class SwitchCaseFallsThroughToDefaultCodeFixProvider : SonarCodeFixProvider
     {
-        internal const string Title = "Remove useless \"case\"";
+        internal const string Title = "Remove useless 'case'";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
             get
@@ -47,7 +47,7 @@ namespace SonarAnalyzer.Rules.CSharp
             return DocumentBasedFixAllProvider.Instance;
         }
 
-        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
+        protected sealed override Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
@@ -55,7 +55,7 @@ namespace SonarAnalyzer.Rules.CSharp
 
             if (syntaxNode == null)
             {
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             context.RegisterCodeFix(
@@ -67,6 +67,8 @@ namespace SonarAnalyzer.Rules.CSharp
                         return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                     }),
                 context.Diagnostics);
+
+            return TaskHelper.CompletedTask;
         }
     }
 }

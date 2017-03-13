@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class SecurityPInvokeMethodShouldNotBeCalled : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3884";
-        internal const string MessageFormat = "Refactor the code to remove this use of '{0}'.";
+        private const string MessageFormat = "Refactor the code to remove this use of '{0}'.";
         private const string InteropDllName = "ole32.dll";
 
         private static readonly ISet<string> InvalidMethods = new HashSet<string>

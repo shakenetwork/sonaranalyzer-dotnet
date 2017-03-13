@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     [ExportCodeFixProvider(LanguageNames.CSharp)]
     public class FieldShouldBeReadonlyCodeFixProvider : SonarCodeFixProvider
     {
-        internal const string Title = "Add \"readonly\" keyword";
+        internal const string Title = "Add 'readonly' keyword";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
             get
@@ -46,7 +46,7 @@ namespace SonarAnalyzer.Rules.CSharp
             return WellKnownFixAllProviders.BatchFixer;
         }
 
-        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
+        protected sealed override Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
@@ -56,7 +56,7 @@ namespace SonarAnalyzer.Rules.CSharp
             var variableDeclaration = variableDeclarator?.Parent as VariableDeclarationSyntax;
             if (variableDeclaration == null)
             {
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             if (variableDeclaration.Variables.Count == 1)
@@ -64,7 +64,7 @@ namespace SonarAnalyzer.Rules.CSharp
                 var fieldDeclaration = variableDeclaration.Parent as FieldDeclarationSyntax;
                 if (fieldDeclaration == null)
                 {
-                    return;
+                    return TaskHelper.CompletedTask;
                 }
 
                 context.RegisterCodeFix(
@@ -79,6 +79,8 @@ namespace SonarAnalyzer.Rules.CSharp
                         }),
                     context.Diagnostics);
             }
+
+            return TaskHelper.CompletedTask;
         }
     }
 }

@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ClassWithOnlyStaticMember : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1118";
-        internal const string MessageFormat = "{0}";
+        private const string MessageFormat = "{0}";
         internal const string MessageFormatConstructor = "Hide this public constructor by making it '{0}'.";
         internal const string MessageFormatStaticClass =
             "Add a '{0}' constructor or the 'static' keyword to the class declaration.";

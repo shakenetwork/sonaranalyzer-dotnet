@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     [ExportCodeFixProvider(LanguageNames.CSharp)]
     public class OrderByRepeatedCodeFixProvider : SonarCodeFixProvider
     {
-        internal const string Title = "Change \"OrderBy\" to \"ThenBy\"";
+        internal const string Title = "Change 'OrderBy' to 'ThenBy'";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
             get
@@ -46,7 +46,7 @@ namespace SonarAnalyzer.Rules.CSharp
             return WellKnownFixAllProviders.BatchFixer;
         }
 
-        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
+        protected sealed override Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
@@ -57,6 +57,8 @@ namespace SonarAnalyzer.Rules.CSharp
                     Title,
                     c => ChangeToThenByAsync(context.Document, syntaxNode, c)),
                 context.Diagnostics);
+
+            return TaskHelper.CompletedTask;
         }
 
         private static async Task<Document> ChangeToThenByAsync(Document document, SyntaxNode syntaxNode, CancellationToken cancellationToken)

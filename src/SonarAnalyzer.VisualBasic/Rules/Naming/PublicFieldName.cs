@@ -31,7 +31,7 @@ namespace SonarAnalyzer.Rules.VisualBasic
     public sealed class PublicFieldName : FieldNameChecker
     {
         internal const string DiagnosticId = "S2369";
-        internal const string MessageFormat = "Rename '{0}' to match the regular expression: '{1}'.";
+        private const string MessageFormat = "Rename '{0}' to match the regular expression: '{1}'.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager)

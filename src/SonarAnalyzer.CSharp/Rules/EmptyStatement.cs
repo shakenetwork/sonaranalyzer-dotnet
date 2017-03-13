@@ -31,7 +31,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class EmptyStatement : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1116";
-        internal const string MessageFormat = "Remove this empty statement.";
+        private const string MessageFormat = "Remove this empty statement.";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly DiagnosticDescriptor rule =

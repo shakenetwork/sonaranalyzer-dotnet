@@ -32,7 +32,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class OptionalParameterNotPassedToBaseCall : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3466";
-        internal const string MessageFormat = "Pass the missing user-supplied parameter value{0} to this 'base' call.";
+        private const string MessageFormat = "Pass the missing user-supplied parameter value{0} to this 'base' call.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

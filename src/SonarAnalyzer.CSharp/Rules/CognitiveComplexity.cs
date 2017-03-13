@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class CognitiveComplexity : ParameterLoadingDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3776";
-        internal const string MessageFormat = "Refactor this {0} to reduce its Cognitive Complexity from {1} to the {2} allowed.";
+        private const string MessageFormat = "Refactor this {0} to reduce its Cognitive Complexity from {1} to the {2} allowed.";
         private const int DefaultThreshold = 15;
         private const int DefaultPropertyThreshold = 3;
 

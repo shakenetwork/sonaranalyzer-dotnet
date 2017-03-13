@@ -33,18 +33,18 @@ namespace SonarAnalyzer.Rules.CSharp
     [ExportCodeFixProvider(LanguageNames.CSharp)]
     public class StringFormatWithNoArgumentCodeFixProvider : SonarCodeFixProvider
     {
-        internal const string Title = "Remove useless \"string.Format\" call";
+        internal const string Title = "Remove useless 'string.Format' call";
         public sealed override ImmutableArray<string> FixableDiagnosticIds => ImmutableArray.Create(StringFormatWithNoArgument.DiagnosticId);
         public sealed override FixAllProvider GetFixAllProvider()  => DocumentBasedFixAllProvider.Instance;
 
-        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
+        protected sealed override Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var invocation = root.FindNode(diagnosticSpan).Parent as InvocationExpressionSyntax;
             if (invocation == null)
             {
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             context.RegisterCodeFix(
@@ -59,6 +59,8 @@ namespace SonarAnalyzer.Rules.CSharp
                         return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                     }),
                 context.Diagnostics);
+
+            return TaskHelper.CompletedTask;
         }
     }
 }

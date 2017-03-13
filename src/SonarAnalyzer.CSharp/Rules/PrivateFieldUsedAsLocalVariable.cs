@@ -36,7 +36,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class PrivateFieldUsedAsLocalVariable : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1450";
-        internal const string MessageFormat = "Remove the '{0}' field and declare it as a local variable in the relevant methods.";
+        private const string MessageFormat = "Remove the '{0}' field and declare it as a local variable in the relevant methods.";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly DiagnosticDescriptor rule =

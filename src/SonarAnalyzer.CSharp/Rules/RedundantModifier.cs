@@ -36,7 +36,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class RedundantModifier : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2333";
-        internal const string MessageFormat = "'{0}' is {1} in this context.";
+        private const string MessageFormat = "'{0}' is {1} in this context.";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly DiagnosticDescriptor rule =

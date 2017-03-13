@@ -33,7 +33,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class PartialMethodNoImplementation : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3251";
-        internal const string MessageFormat = "Supply an implementation for {0} partial method{1}.";
+        private const string MessageFormat = "Supply an implementation for {0} partial method{1}.";
         internal const string MessageAdditional = ", otherwise this call will be ignored";
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 

@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     [ExportCodeFixProvider(LanguageNames.CSharp)]
     public class RedundancyInConstructorDestructorDeclarationCodeFixProvider : SonarCodeFixProvider
     {
-        internal const string TitleRemoveBaseCall = "Remove \"base()\" call";
+        internal const string TitleRemoveBaseCall = "Remove 'base()' call";
         internal const string TitleRemoveConstructor = "Remove constructor";
         internal const string TitleRemoveDestructor = "Remove destructor";
 
@@ -47,7 +47,7 @@ namespace SonarAnalyzer.Rules.CSharp
         }
         public sealed override FixAllProvider GetFixAllProvider() => DocumentBasedFixAllProvider.Instance;
 
-        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
+        protected sealed override Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
@@ -56,7 +56,7 @@ namespace SonarAnalyzer.Rules.CSharp
             if (initializer != null)
             {
                 RegisterActionForBaseCall(context, root, initializer);
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             var method = syntaxNode.FirstAncestorOrSelf<BaseMethodDeclarationSyntax>();
@@ -64,13 +64,15 @@ namespace SonarAnalyzer.Rules.CSharp
             if (method is ConstructorDeclarationSyntax)
             {
                 RegisterActionForConstructor(context, root, method);
-                return;
+                return TaskHelper.CompletedTask;
             }
 
             if (method is DestructorDeclarationSyntax)
             {
                 RegisterActionForDestructor(context, root, method);
             }
+
+            return TaskHelper.CompletedTask;
         }
 
         private static void RegisterActionForDestructor(CodeFixContext context, SyntaxNode root, BaseMethodDeclarationSyntax method)

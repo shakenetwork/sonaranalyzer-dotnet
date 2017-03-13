@@ -34,7 +34,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class CommentedOutCode : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S125";
-        internal const string MessageFormat = "Remove this commented out code.";
+        private const string MessageFormat = "Remove this commented out code.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);

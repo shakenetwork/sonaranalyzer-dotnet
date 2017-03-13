@@ -36,7 +36,7 @@ namespace SonarAnalyzer.Rules.CSharp
     public class ConditionalSimplification : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3240";
-        internal const string MessageFormat = "Use the '{0}' operator here.";
+        private const string MessageFormat = "Use the '{0}' operator here.";
 
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
