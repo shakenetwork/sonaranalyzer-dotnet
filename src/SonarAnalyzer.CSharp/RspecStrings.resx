@@ -2601,6 +2601,30 @@
   <data name="S2387_Title" xml:space="preserve">
     <value>Child class fields should not shadow parent class fields</value>
   </data>
+  <data name="S2436_Category" xml:space="preserve">
+    <value>Sonar Code Smell</value>
+  </data>
+  <data name="S2436_Description" xml:space="preserve">
+    <value>A method or class with too many type parameters has likely aggregated too many responsibilities and should be split.</value>
+  </data>
+  <data name="S2436_IsActivatedByDefault" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="S2436_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S2436_RemediationCost" xml:space="preserve">
+    <value>20min</value>
+  </data>
+  <data name="S2436_Severity" xml:space="preserve">
+    <value>Major</value>
+  </data>
+  <data name="S2436_Tags" xml:space="preserve">
+    <value>brain-overload</value>
+  </data>
+  <data name="S2436_Title" xml:space="preserve">
+    <value>Generic types should not have too many parameters</value>
+  </data>
   <data name="S2437_Category" xml:space="preserve">
     <value>Sonar Bug</value>
   </data>
