@@ -5073,6 +5073,30 @@
   <data name="S3902_Title" xml:space="preserve">
     <value>"Assembly.GetExecutingAssembly" should not be called</value>
   </data>
+  <data name="S3903_Category" xml:space="preserve">
+    <value>Sonar Bug</value>
+  </data>
+  <data name="S3903_Description" xml:space="preserve">
+    <value>Types are declared in namespaces in order to prevent name collisions and as a way to organize them into the object hierarchy. Types that are defined outside any named namespace are in a global namespace that cannot be referenced in code.</value>
+  </data>
+  <data name="S3903_IsActivatedByDefault" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="S3903_Remediation" xml:space="preserve">
+    <value>Constant/Issue</value>
+  </data>
+  <data name="S3903_RemediationCost" xml:space="preserve">
+    <value>5min</value>
+  </data>
+  <data name="S3903_Severity" xml:space="preserve">
+    <value>Major</value>
+  </data>
+  <data name="S3903_Tags" xml:space="preserve">
+    <value />
+  </data>
+  <data name="S3903_Title" xml:space="preserve">
+    <value>Types should be defined in named namespaces</value>
+  </data>
   <data name="S3904_Category" xml:space="preserve">
     <value>Sonar Bug</value>
   </data>
