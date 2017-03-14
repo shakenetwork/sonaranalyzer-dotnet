@@ -31,7 +31,7 @@ namespace SonarAnalyzer.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [Rule(DiagnosticId)]
-    public class $DiagnosticClassName$ : SonarDiagnosticAnalyzer
+    public class $DiagnosticClassName$ : ParameterLoadingDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "$DiagnosticId$";
         private const string MessageFormat = "";
@@ -39,8 +39,16 @@ namespace SonarAnalyzer.Rules.CSharp
         private static readonly DiagnosticDescriptor rule =
             DiagnosticDescriptorBuilder.GetDescriptor(DiagnosticId, MessageFormat, RspecStrings.ResourceManager);
         protected sealed override DiagnosticDescriptor Rule => rule;
+		
+		private const int MyParamDefaultValue = 42;
+        [RuleParameter(
+            key: "myParam",
+            type: PropertyType.Integer,
+            description: "",
+            defaultValue: MyParamDefaultValue)]
+        public int MyParam { get; set; } = MyParamDefaultValue;
 
-        protected override void Initialize(SonarAnalysisContext context)
+        protected override void Initialize(ParameterLoadingAnalysisContext context)
         {
 			throw new NotImplementedException();
         }

@@ -21,7 +21,10 @@ param (
     $ruleKey,
     [Parameter(HelpMessage="The name of the rule class.", Position=2)]
     [string]
-    $className
+    $className,
+	[Parameter(HelpMessage="Specify whether or not the rule has parameters.", Position=3)]
+    [bool]
+    $isParameterizedRule = $false
 )
 
 if ((-Not $env:rule_api_path) -Or (-Not (Test-Path $env:rule_api_path)))
@@ -198,7 +201,8 @@ function GenerateRuleClasses()
     $csharpRuleTestsFolder = "${PSScriptRoot}\\..\\src\\Tests\\SonarAnalyzer.UnitTest\\Rules"
     $csharpRuleTestCasesFolder = "${PSScriptRoot}\\..\\src\\Tests\\SonarAnalyzer.UnitTest\\TestCases"
 
-    (Get-Content "${ruleTemplateFolder}\\CSharpRuleTemplate.cs") -replace '\$DiagnosticClassName\$', $className -replace '\$DiagnosticId\$', $ruleKey | 
+	$classToCopy = if ($isParameterizedRule) { "CSharpParameterizedRuleTemplate" } else { "CSharpRuleTemplate" }
+    (Get-Content "${ruleTemplateFolder}\\${classToCopy}.cs") -replace '\$DiagnosticClassName\$', $className -replace '\$DiagnosticId\$', $ruleKey | 
         Set-Content "${csharpRulesFolder}\\${className}.cs"
 
     (Get-Content "${ruleTemplateFolder}\\CSharpTestTemplate.cs") -replace '\$DiagnosticClassName\$', $className | 
