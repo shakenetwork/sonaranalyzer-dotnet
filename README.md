@@ -1,3 +1,5 @@
+#This repository is deprecated, code has been migrated to a submodule of [sonar-csharp](https://github.com/SonarSource/sonar-csharp/tree/master/sonaranalyzer-dotnet)
+
 # SonarAnalyzer for C# and Visual Basic .NET
 
 [![Build status](https://ci.appveyor.com/api/projects/status/7k0q64nckn92t87g/branch/master?svg=true)](https://ci.appveyor.com/project/SonarSource/sonarlint-vs/branch/master) | [Issue tracker](https://jira.sonarsource.com/browse/SLVS)
