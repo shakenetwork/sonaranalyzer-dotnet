@@ -1,4 +1,4 @@
-#This repository is deprecated, code has been migrated to a submodule of [sonar-csharp](https://github.com/SonarSource/sonar-csharp/tree/master/sonaranalyzer-dotnet)
+# This repository is deprecated, code has been migrated to a submodule of [sonar-csharp](https://github.com/SonarSource/sonar-csharp/tree/master/sonaranalyzer-dotnet)
 
 # SonarAnalyzer for C# and Visual Basic .NET
 
